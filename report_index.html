@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国智算市场周报 | 第16期</title>
+    <style>
+
+/* === 首页样式 === */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+/* === Header === */
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
+.header-period { font-size: 0.8em; opacity: 0.7; letter-spacing: 2px; margin-bottom: 12px; font-weight: 300; }
+.header h1 { font-size: 1.9em; font-weight: 700; margin-bottom: 6px; letter-spacing: 2px; }
+.header-subtitle { font-size: 0.85em; opacity: 0.65; margin-bottom: 18px; letter-spacing: 1px; font-style: italic; }
+.header-modules { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
+.header-module { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 14px; font-size: 0.78em; color: rgba(255,255,255,0.88); white-space: nowrap; cursor: default; }
+.header-module.active { background: rgba(102,126,234,0.5); border-color: rgba(102,126,234,0.8); color: white; }
+.header-period-bottom { font-size: 0.78em; opacity: 0.6; letter-spacing: 1px; }
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+.kpi-card { background: white; border-radius: 10px; padding: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
+.kpi-card .kpi-label { font-size: 0.85em; color: #888; margin-bottom: 8px; }
+.kpi-card .kpi-value { font-size: 1.6em; font-weight: bold; margin-bottom: 4px; }
+.kpi-card .kpi-unit { font-size: 0.75em; color: #aaa; }
+.summary-box { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 20px; }
+.summary-box h2 { color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-bottom: 14px; font-size: 1.1em; }
+.summary-text { font-size: 0.9em; line-height: 2.2; color: #444; }
+.toc-box { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 20px; }
+.toc-box h2 { color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-bottom: 14px; font-size: 1.1em; }
+.toc-list { list-style: none; }
+.toc-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.toc-item:last-child { border-bottom: none; }
+.toc-item a { display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: #333; font-size: 1em; padding: 4px 0; }
+.toc-item a:hover { color: #0ea5e9; }
+.toc-item .toc-num { color: #667eea; font-weight: bold; margin-right: 8px; }
+.toc-item .toc-arrow { color: #ccc; font-size: 0.9em; }
+.toc-item:hover .toc-arrow { color: #667eea; }
+.footer { text-align: center; color: #aaa; font-size: 0.8em; padding: 20px 0; }
+.data-note { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 12px 18px; margin-bottom: 20px; border-radius: 4px; font-size: 0.85em; color: #333; }
+
+    </style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+    <div class="header-period">第 16 期 · 2026.04.22</div>
+    <h1>🖥️ 中国智能算力市场深度分析周报</h1>
+    <div class="header-subtitle">China AI Computing Market Intelligence Weekly</div>
+    <div class="header-modules">
+        <span class="header-module">🏛️ 政策环境</span>
+        <span class="header-module">📊 市场规模</span>
+        <span class="header-module">🗺️ 区域算力</span>
+        <span class="header-module">⚔️ 竞争格局</span>
+        <span class="header-module">⚡ 技术趋势</span>
+        <span class="header-module">🔧 供应商</span>
+        <span class="header-module">💡 应用场景</span>
+        <span class="header-module">🎯 结论建议</span>
+    </div>
+    <div class="header-period-bottom">数据周期：2026.04.13 — 2026.04.22</div>
+</div>
+
+<div class="data-note">
+    <strong>数据说明：</strong>本报告数据来自Tavily权威检索，政府公告及权威媒体。KPI卡片数据取自各章节提取，如需最新数据请查阅各章节详情。
+</div>
+
+<div class="kpi-grid">
+
+        <div class="kpi-card">
+            <div class="kpi-label">智能算力总规模</div>
+            <div class="kpi-value" style="color:#667eea">1090</div>
+            <div class="kpi-unit">EFLOPS</div>
+            
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">算力市场规模</div>
+            <div class="kpi-value" style="color:#0ea5e9">2800</div>
+            <div class="kpi-unit">亿元</div>
+            
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">国产AI芯片份额</div>
+            <div class="kpi-value" style="color:#10b981">41</div>
+            <div class="kpi-unit">%</div>
+            <div style="font-size:0.75em;color:#888;margin-top:4px;">持续替代中</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">DeepSeek相关Token</div>
+            <div class="kpi-value" style="color:#f59e0b">120</div>
+            <div class="kpi-unit">万亿Token/日</div>
+            <div style="font-size:0.75em;color:#888;margin-top:4px;">↑，+20%（</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">AI应用市场规模</div>
+            <div class="kpi-value" style="color:#8b5cf6">200</div>
+            <div class="kpi-unit">亿元</div>
+            <div style="font-size:0.75em;color:#888;margin-top:4px;">应用场景参考值</div>
+        </div>
+        <div class="kpi-card">
+            <div class="kpi-label">万卡智算集群</div>
+            <div class="kpi-value" style="color:#ef4444">深圳昇腾万卡集群</div>
+            <div class="kpi-unit"></div>
+            
+        </div>
+</div>
+
+<div class="summary-box">
+    <h2>📋 执行摘要</h2>
+    <p class="summary-text">【政策层面重磅信号密集释放】国家发改委明确"十五五"期间投向AI基础设施的1.755万亿元资金将在6月底前基本下达完毕，算力政策正式进入"资金兑现期"；工信部同步启动城域"毫秒用算"专项行动，推动绿色电力与算力协同布局，全国20余省市密集落地算力券政策（最高补贴30%，上海达80%）；Stanford HAI报告揭示中美AI模型性能差距收窄至2.7%，外部压力与自主创新进入深度博弈阶段。【市场全面扩张，涨价周期确立】全国智能算力规模达1090 EFLOPS，周环比增长2.3%；AI日均词元调用量突破140万亿，较三个月前增长40%，较两年前增长超千倍；H100年租价格升至每GPU小时2.35美元，阿里云、腾讯云、百度云集体涨价5%至34%，廉价算力时代正式终结，算力正从"卖资源"转向"卖词元"的价值重估阶段。【区域建设提速，西部枢纽提质升级】内蒙古一季度算力规模较去年底增长18%，和林格尔与乌兰察布启动"绿电—绿色算力—绿色词元"全链路战略；韶关粤港澳万卡集群正式上线；晶科科技245亿元签约中卫1GW超大型算力中心；中国移动长三角（芜湖）数据中心二期竣工验收，总投资60亿元、规划8万架机柜。【国产算力生态实现关键突破】DeepSeek V4宣布100%运行于华为昇腾950PR芯片，推理速度提升35倍，字节、阿里、腾讯已预订数十万颗，国产AI芯片从"能用"迈入"好用"阶段，英伟达CEO罕见警告此举对美国AI技术栈构成"可怕后果"。【推理主导格局确立，技术路线加速分化】AI推理算力占总算力需求比例突破70%临界点（本周72.6%）；元川微完成数亿元融资成为国内首家LPU芯片创业公司，曦望累计融资40亿元成为首家百亿推理GPU独角兽；液冷技术从可选项升级为新建智算中心标配，英维克单日股价大涨15.2%。【供应链涨价向下游传导，存储大国博弈加剧】三星与SK海力士全面放弃短期合同，转向3至5年长期供应协议，DRAM首季同比翻倍，HBM市场规模2025年已达350亿美元；英伟达罕见请求三星在测试完成前先行供货HBM4，全球存储产业从"乙方"跃升为"超级乙方"。【应用多点突破，商业化元年开启】小鹏发布量产Robotaxi原型车GX，将3000TOPS算力与L4级安全冗余嵌入消费级SUV；特斯拉Cybercab当月量产；国务院发文明确支持采购大模型与智能体服务，AI应用月活用户规模三个月增长43%达4.46亿；L2+级自动驾驶渗透率升至70%，医疗AI覆盖机构超6000家。</p>
+</div>
+
+<div class="toc-box">
+    <h2>📑 报告目录</h2>
+    <ul class="toc-list">
+
+        <li class="toc-item">
+            <a href="政策环境分析报告.html">
+                <span><span class="toc-num">01.</span>一、政策环境分析 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="市场规模发展分析报告.html">
+                <span><span class="toc-num">02.</span>二、市场规模分析 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="区域算力发展分析报告.html">
+                <span><span class="toc-num">03.</span>三、区域算力发展分析 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="竞争格局发展分析报告.html">
+                <span><span class="toc-num">04.</span>四、竞争格局分析 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="技术趋势发展分析报告.html">
+                <span><span class="toc-num">05.</span>五、技术趋势分析 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="供应商与产业格局分析报告.html">
+                <span><span class="toc-num">06.</span>六、供应商与产业格局 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="应用场景分析报告.html">
+                <span><span class="toc-num">07.</span>七、应用场景分析 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+        <li class="toc-item">
+            <a href="结论与建议报告.html">
+                <span><span class="toc-num">08.</span>八、结论与建议 <span style="color:#aaa;font-size:0.85em;">第16期</span></span>
+                <span class="toc-arrow">→</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="footer">
+    中国智算市场周报 · 第16期 · 每周三更新 · 数据截至 2026-04-22
+</div>
+
+</div>
+</body>
+</html>
