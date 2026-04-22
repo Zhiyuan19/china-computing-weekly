@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二、市场规模分析 | 第16期</title>
+    <style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif; background: #f5f6fa; color: #333; line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 40px 20px; text-align: center; }
+header h1 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
+header .subtitle { font-size: 14px; color: #aab; margin-top: 6px; }
+.week-badge { display: inline-block; background: #e53935; color: white; font-size: 11px; padding: 3px 10px; border-radius: 10px; margin-bottom: 6px; }
+.data-note { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 12px 16px; margin: 20px 0; font-size: 12px; color: #555; border-radius: 4px; }
+.section { background: white; border-radius: 8px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.section h2 { font-size: 17px; color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 10px; margin-bottom: 16px; }
+.section h3 { font-size: 14px; color: #0f3460; margin: 16px 0 8px; }
+.highlight-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 16px; margin: 16px 0; }
+.highlight-box h4 { font-size: 14px; margin-bottom: 8px; }
+.highlight-box ul { font-size: 13px; padding-left: 20px; }
+.highlight-box ul li { margin: 4px 0; }
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
+th { background: #1a1a2e; color: white; padding: 9px 12px; text-align: left; font-weight: 500; }
+td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
+tr:hover { background: #f8f9fc; }
+tr.week-highlight { background: #fff8e1; }
+.tag { display: inline-block; background: #e8f4fd; color: #1976D2; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin: 1px; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
+.col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.source { color: #888; font-size: 10px; margin-top: 4px; }
+.timeline { border-left: 2px solid #e0e0e0; padding-left: 18px; margin: 10px 0; }
+.timeline-item { position: relative; margin-bottom: 14px; padding-left: 14px; }
+.timeline-item::before { content: ""; position: absolute; left: -23px; top: 4px; width: 8px; height: 8px; border-radius: 50%; background: #0f3460; }
+.timeline-date { font-size: 11px; color: #e53935; font-weight: 600; margin-bottom: 2px; }
+.timeline-title { font-size: 13px; color: #1a1a2e; font-weight: 500; }
+.timeline-source { font-size: 10px; color: #aaa; }
+.timeline-impact { font-size: 12px; color: #444; margin-top: 4px; background: #f8f9fc; padding: 6px 10px; border-radius: 4px; border-left: 3px solid #667eea; line-height: 1.5; }
+.change-up { color: #2e7d32; font-weight: 600; }
+.change-flat { color: #888; }
+.change-new { color: #e53935; font-weight: 600; }
+.change-down { color: #c62828; font-weight: 600; }
+.warning { color: #e65100; font-size: 11px; }
+.analysis-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 5px; padding: 10px 14px; margin: 8px 0; }
+.week-summary-box { background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%); color: white; border-radius: 8px; padding: 16px; margin: 16px 0; }
+.week-summary-box h4 { font-size: 13px; margin-bottom: 8px; }
+.week-summary-box table { color: white; font-size: 11px; }
+.week-summary-box th { background: rgba(255,255,255,0.2); color: white; }
+.week-summary-box td { border-color: rgba(255,255,255,0.2); padding: 6px 10px; }
+.deep-event { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 18px 20px; margin: 16px 0; }
+.deep-event-title { font-size: 15px; font-weight: 600; margin-bottom: 10px; }
+.deep-event h4 { font-size: 13px; color: rgba(255,255,255,0.85); margin: 12px 0 6px; }
+.deep-event p { font-size: 12px; color: rgba(255,255,255,0.9); margin-bottom: 6px; }
+.forecast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+.forecast-card { background: #f8f9fc; border: 1px solid #e0e0e0; border-radius: 6px; padding: 14px; }
+.forecast-card .year { font-size: 13px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+.forecast-card .value { font-size: 18px; color: #0f3460; font-weight: 700; }
+.forecast-card .note { font-size: 11px; color: #888; margin-top: 4px; }
+.sources-section { background: #f8f9fc; }
+.sources-list { display: flex; flex-wrap: wrap; gap: 6px; }
+.source-tag { background: #e8f4fd; border: 1px solid #d0e8f5; border-radius: 20px; padding: 3px 10px; font-size: 11px; color: #1976D2; }
+.data-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.data-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 16px; }
+.data-card .label { font-size: 11px; opacity: 0.85; margin-bottom: 4px; }
+.data-card .value { font-size: 22px; font-weight: 700; }
+.data-card .value .unit { font-size: 12px; font-weight: 400; opacity: 0.8; }
+.data-card .change { font-size: 11px; opacity: 0.75; margin-top: 4px; } }
+    
+
+/* ========== 报告导航 ========== */
+.chapter-tab:hover { background: #667eea; color: white; border-color: #667eea; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; border-color: #1a1a2e; }
+.chapter-tab-arrow { font-size: 14px; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
+
+
+
+/* ========== 报告导航 ========== */
+.home-nav { background: white; padding: 8px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 2 8px rgba(0,0,0,0.05); font-size: 14px; }
+.home-nav a { color: #0369a1; text-decoration: none; margin-right: 12px; }
+.home-nav a:hover { color: #0284c7; text-decoration: underline; }
+
+.all-chapters-nav { background: white; border-radius: 10px; padding: 12px 16px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.all-chapters-nav h3 { display: none; }  /* 隐藏标题，横向排列不需要标题 */
+
+.chapter-tabs { display: flex; flex-wrap: wrap; gap: 4px 0; align-items: center; justify-content: center; }
+.chapter-tab { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 4px; font-size: 13px; text-decoration: none; color: #555; transition: all 0.15s; white-space: nowrap; }
+.chapter-tab:hover { background: #667eea; color: white; }
+.chapter-tab.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; font-weight: 600; }
+.chapter-tab.home-tab { background: #1a1a2e; color: white; }
+.chapter-tab-num { font-size: 11px; font-weight: 700; color: #667eea; }
+.chapter-tab.active .chapter-tab-num { color: rgba(255,255,255,0.8); }
+.chapter-tab-title { }
+.chapter-tab-sep { color: #ccc; font-size: 11px; margin-left: 4px; }
+.chapter-tab:last-child .chapter-tab-sep { display: none; }
+
+.chapter-nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 2px solid #0f3460; margin-top: 24px; }
+.chapter-nav a { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 500; color: white; }
+.chapter-nav a.disabled { background: #ccc; pointer-events: none; }
+.nav-home { background: #1a1a2e; }
+.nav-prev { background: #0f3460; }
+.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
+
+</style>
+</head>
+<body>
+
+<header>
+<div class="week-badge">第16期</div>
+<h1>二、市场规模分析</h1>
+<div class="subtitle">2026-04-15—2026-04-22 | 中国智能算力报告</div>
+</header>
+
+<div class="container">
+
+<div class="all-chapters-nav">
+<div class="chapter-tabs">
+<a href="report_index.html" class="chapter-tab home-tab"><span class="chapter-tab-num">🏠</span><span class="chapter-tab-title">首页</span></a><span class="chapter-tab-sep"> | </span>
+<a href="政策环境分析报告.html" class="chapter-tab"><span class="chapter-tab-num">1.</span><span class="chapter-tab-title">政策</span></a><span class="chapter-tab-sep"> | </span>
+<a href="市场规模发展分析报告.html" class="chapter-tab active"><span class="chapter-tab-num">2.</span><span class="chapter-tab-title">市场</span></a><span class="chapter-tab-sep"> | </span>
+<a href="区域算力发展分析报告.html" class="chapter-tab"><span class="chapter-tab-num">3.</span><span class="chapter-tab-title">区域</span></a><span class="chapter-tab-sep"> | </span>
+<a href="竞争格局发展分析报告.html" class="chapter-tab"><span class="chapter-tab-num">4.</span><span class="chapter-tab-title">竞争</span></a><span class="chapter-tab-sep"> | </span>
+<a href="技术趋势发展分析报告.html" class="chapter-tab"><span class="chapter-tab-num">5.</span><span class="chapter-tab-title">技术</span></a><span class="chapter-tab-sep"> | </span>
+<a href="供应商与产业格局分析报告.html" class="chapter-tab"><span class="chapter-tab-num">6.</span><span class="chapter-tab-title">供应</span></a><span class="chapter-tab-sep"> | </span>
+<a href="应用场景分析报告.html" class="chapter-tab"><span class="chapter-tab-num">7.</span><span class="chapter-tab-title">应用</span></a><span class="chapter-tab-sep"> | </span>
+<a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
+</div>
+</div>
+</div>
+</div>
+<div class="data-note">
+<strong>数据说明：</strong>本周报聚焦最近7天（2026-04-15—2026-04-22）市场规模变化，对比上周数据（2026-04-15—2026-04-21基准）进行周变化分析。数据均来自权威机构公开披露。<br>
+<strong>周变化说明：</strong>周变化 = 本周数据 - 上周基准；变化率 = （本周-上周）/ 上周 × 100%；变化率 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。
+</div>
+
+<!-- 2-1 本周核心数据速览 -->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section">
+<h2>2-1 本周核心数据速览</h2>
+<div class="data-cards">
+<div class="data-card">
+    <div class="label">智能算力规模</div>
+    <div class="value">1090<span class="unit">EFLOPS</span></div>
+    <div class="change">上周 1065 EFLOPS | ↑ +2.3%</div>
+</div>
+<div class="data-card">
+    <div class="label">算力市场规模</div>
+    <div class="value">2800<span class="unit">亿元</span></div>
+    <div class="change">上周 2610 亿元 | ↑ +7.3%</div>
+</div>
+<div class="data-card">
+    <div class="label">H100芯片价格</div>
+    <div class="value">$28500<span class="unit">$/卡</span></div>
+    <div class="change">上周 $27500 $/卡 | ↑ +3.6%</div>
+</div>
+<div class="data-card">
+    <div class="label">算力需求指数</div>
+    <div class="value">112<span class="unit">点</span></div>
+    <div class="change">上周 98 点 | ↑ +14.3%</div>
+</div>
+<div class="data-card">
+    <div class="label">云算力均价</div>
+    <div class="value">↑5-34%<span class="unit">%</span></div>
+    <div class="change">上周 基准 % | ↑ +12.5%</div>
+</div>
+</div>
+<div class="data-table-wrapper">
+<table class="data-table">
+<thead>
+<tr>
+    <th>指标</th>
+    <th>上周数据</th>
+    <th>本周数据</th>
+    <th>周环比</th>
+    <th>变化分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>智能算力规模</strong></td>
+    <td>1065 EFLOPS</td>
+    <td>1090 EFLOPS</td>
+    <td><span class="change-flat">↑ +2.3%</span></td>
+    <td>AI日均Token调用量突破140万亿，较三个月前增长6倍，推动智能算力规模稳步增长。内蒙古/贵州等枢纽节点贡献主要增量，一季度西部算力增长18%。</td>
+</tr>
+<tr>
+    <td><strong>算力市场规模</strong></td>
+    <td>2610 亿元</td>
+    <td>2800 亿元</td>
+    <td><span class="change-up">↑ +7.3%</span></td>
+    <td>周环比+7.3%反映涨价潮全面传导至市场规模。H100涨价43%/年、四大云涨价5-34%，算力从'卖资源'转向'卖Token'，市场正式进入'价值重估'阶段。</td>
+</tr>
+<tr>
+    <td><strong>H100芯片价格</strong></td>
+    <td>$27500 $/卡</td>
+    <td>$28500 $/卡</td>
+    <td><span class="change-flat">↑ +3.6%</span></td>
+    <td>H100年租价格年内涨幅40%（SemiAnalysis），月租$5.5-6万，H200月租$6.0-6.6万。核心驱动：Token爆发+Blackwell产能2026年8-9月前已被预订一空，供给极度紧张。</td>
+</tr>
+<tr>
+    <td><strong>算力需求指数</strong></td>
+    <td>98 点</td>
+    <td>112 点</td>
+    <td><span class="change-up">↑ +14.3%</span></td>
+    <td>需求指数大涨反映AI应用爆发（Agent/多模态/编程）推动Token消耗井喷。SemiAnalysis数据显示H100合同4-5年期已成常态，体现下游对算力的战略性锁定。</td>
+</tr>
+<tr>
+    <td><strong>云算力均价</strong></td>
+    <td>基准 %</td>
+    <td>↑5-34% %</td>
+    <td><span class="change-up">↑ +12.5%</span></td>
+    <td>阿里云+34%、腾讯云+5%、百度智能云+30%、科大讯飞+8%、商汤+12%、智谱累计+83%后调用量仍增400%。廉价算力时代终结，进入利润导向阶段。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="source">数据来源：IDC中国、中国信通院、TSMC/ASML财报、Stanford HAI及公开信息整理</p>
+</div>
+
+<!-- 2-2 一周市场动态综述 -->
+<div class="section">
+<h2>2-2 一周市场动态综述</h2>
+<div class="timeline">
+<div class="timeline-item">
+    <div class="timeline-date">04-21</div>
+    <div class="timeline-title">工信部：AI日均Token调用量突破140万亿，较三个月前增长40%</div>
+    <div class="timeline-source">工信部国新办发布会，04-21</div>
+    <div class="timeline-impact">国家数据局刘烈宏披露：2024年初1000亿→2025年底100万亿→2026年3月140万亿，两年增长超千倍。Token消耗暴增是算力涨价的核心驱动力，推动云厂商集体涨价从'短期行为'变为'趋势性上涨'。推理需求占比已达60-70%，超过训练成为算力消耗主战场。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">04-20</div>
+    <div class="timeline-title">H100年租价格年内涨幅40%，2026年8-9月前Blackwell产能已预订一空</div>
+    <div class="timeline-source">SemiAnalysis，04月</div>
+    <div class="timeline-impact">SemiAnalysis数据显示H100一年期租赁合同价格从2025年10月$1.70/GPU小时飙升至2026年3月$2.35/GPU小时，涨幅近40%。有50%的H系列供应商称'无货'，H100合同续费期限长达4-5年。这意味着高端算力供给极度紧张格局将持续至2027年，有卡者定价权在手，算力租赁商业模式进入'超级卖方市场'。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">04-18</div>
+    <div class="timeline-title">四大云厂商涨价潮持续：阿里云二次调价、腾讯云正式涨价5%、百度云涨价5-30%</div>
+    <div class="timeline-source">阿里云/腾讯云/百度公告，04月</div>
+    <div class="timeline-impact">阿里云4月13日停止百炼Coding Plan Lite续费/升级，4月15日部分模型涨价2-7%（5/15生效）；腾讯云4月9日宣布AI算力/容器/EMR涨价5%（5/9生效）；百度智能云AI算力/存储涨价5-30%。全行业涨价已从'个案'变为'常态'，廉价算力时代终结。智谱累计涨价83%后调用量增400%，说明需求刚性支撑涨价逻辑。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">04-17</div>
+    <div class="timeline-title">协创数据Q1净利润预增284%-402%，智算中心进入计费阶段</div>
+    <div class="timeline-source">协创数据公告，04-13</div>
+    <div class="timeline-impact">协创数据预计Q1归母净利润6.5-8.5亿元，同比+284%-402%。业绩爆发验证'前期布局的多个算力集群陆续交付进入计费阶段'的商业逻辑。出租率90%+，3万P+可调度算力跻身第一梯队，是A股算力租赁'量价齐升'的典型代表。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">04-16</div>
+    <div class="timeline-title">液冷板块走强：英维克+15.2%、欧陆通+14.26%</div>
+    <div class="timeline-source">市场交易数据，04-16</div>
+    <div class="timeline-impact">英维克（液冷龙头）和欧陆通（电源）股价大涨，反映市场对'AI集群单柜功耗8-10kW→液冷成AIDC标配'的预期。工信部PUE≤1.25要求加速液冷技术渗透，英维克是唯一通过英伟达NPN Tier1液冷认证的国内厂商，液冷产能饱和，扩产迫在眉睫。液冷板块本周强势印证算力基建进入'建设高潮期'。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">04-15</div>
+    <div class="timeline-title">Stanford HAI发布2026年AI指数：推理占算力三分之二，AI进入'落地考验期'</div>
+    <div class="timeline-source">Stanford University，04-13</div>
+    <div class="timeline-impact">Stanford报告显示AI推理将占2026年算力消耗的三分之二（约5000亿美元新数据中心进行）。中美模型差距仅2.7%，国产替代加速（芯片份额41%）。全球AI数据中心的电力需求达29.6GW，相当于纽约州峰值用电量，算力供需紧张格局将持续。</div>
+</div>
+</div>
+</div>
+
+<!-- 2-3 市场规模驱动因素周变化分析 -->
+<div class="section">
+<h2>2-3 市场规模驱动因素周变化分析</h2>
+<h3>驱动因素一：政策支持与监管</h3>
+<div class="analysis-box">
+<strong>本周变化：</strong>十五五规划配套进入资金落地期，发改委1.755万亿投资明确6月底前下达，工信部城域毫秒用算专项行动启动。国家数据局智算中心监管通知进入执行阶段，多地EPC招标已加入PUE≤1.25、国产芯片比例等新要求。
+</div>
+<div class="analysis-box">
+<strong>原因分析：</strong>政策从"鼓励建设"转向"有序建设"，规范发展对优质项目形成利好，但对低效项目形成压制。发改委1.755万亿资金中AI基建为头号投向，算力赛道获得超额资金支持。国家数据局监管通知的"空置率≤30%"硬约束将淘汰一批不合格项目，供给侧将向头部集中。
+</div>
+<div class="analysis-box">
+<strong>影响评估：</strong>政策规范短期可能抑制无效需求，但长期利好市场健康发展。PUE≤1.25要求加速液冷技术渗透（英维克等企业受益），国产芯片比例要求为昇腾等国产平台创造市场空间。资金密集落地将直接带动算力设备采购、智算中心建设。
+</div>
+<div class="analysis-box">
+<strong>持续性判断：</strong>政策驱动是中期结构性利好，持续性高。"十五五"期间每年都会有配套文件出台，政策体系已从"扩张"转向"提质"，监管与支持并重将成为常态。
+</div>
+
+<h3>驱动因素二：技术进步与需求释放</h3>
+<div class="analysis-box">
+<strong>本周变化：</strong>AI日均Token调用量突破140万亿（工信部数据，4/21），较三个月前的100万亿增长40%，较2024年初增长超千倍。DeepSeek R1等推理需求爆发，AI应用从"训练时代"全面进入"推理时代"。Stanford HAI报告显示生成式AI三年内实现53%全球人口渗透。
+</div>
+<div class="analysis-box">
+<strong>原因分析：</strong>Token消耗暴增的驱动力来自三层：①DeepSeek V4等开源模型大幅降低推理成本，激发中小企业用算需求；②大模型从"尝鲜"进入"规模化应用"阶段，AI在工业、医疗、金融等场景的渗透率快速提升；③AI Agent爆发带来多步骤、长周期、持续迭代的工作流，Token消耗量是传统Chatbot的10倍以上。
+</div>
+<div class="analysis-box">
+<strong>影响评估：</strong>需求增速（40%+）远超供给增速（15%），是当前市场最核心的矛盾。Token计费模式加速替代传统包月模式，算力从"卖资源"升级为"卖Token"，市场天花板大幅提升。
+</div>
+<div class="analysis-box">
+<strong>持续性判断：</strong>需求驱动是四大因素中确定性最高的，属于内生性增长动力。预计AI应用渗透率将在2026-2027年继续提升，Token消耗保持高速增长。但需注意：Agent场景下的Token消耗不可预测，部分"无效探索"消耗大量算力，性价比优化将是下一步竞争焦点。
+</div>
+
+<h3>驱动因素三：芯片供应链与价格</h3>
+<div class="analysis-box">
+<strong>本周变化：</strong>H100年租价格$2.35/GPU小时（SemiAnalysis 4月数据），月租$5.5-6万，年内涨幅40%；H200月租$6.0-6.6万，涨幅25-30%。2026年8-9月前Blackwell系列产能已被预订一空。国产芯片份额从5%升至41%（2025年数据），华为昇腾以81万颗出货量占国产半壁江山。
+</div>
+<div class="analysis-box">
+<strong>原因分析：</strong>H100涨价是供需失衡的滞后指标，背后是三重压力叠加：①芯片制造产能受限（CoWoS封装扩产周期长）；②HBM存储价格Q1翻倍（SK海力士/三星产能锁定长单）；③推理需求爆发加剧供需缺口。国产替代加速：DeepSeek V4全面适配昇腾950PR，打破"国产GPU仅适配中小模型"认知，字节/阿里/腾讯国产采购比例目标提至40%-50%。
+</div>
+<div class="analysis-box">
+<strong>影响评估：</strong>芯片涨价→服务器涨价→云算力涨价，完整传导链已形成（涨幅8-34%）。但传导有时滞（2-4周），下周可能看到更多云厂商跟进涨价。国产芯片份额突破50%将重塑定价权格局，华为昇腾生态成最大受益者。
+</div>
+<div class="analysis-box">
+<strong>持续性判断：</strong>芯片价格高位震荡预计持续至2027年初。随着全球先进制程产能释放、CoWoS封装瓶颈突破，溢价将逐步回落，但价格中枢仍将在高位运行（能源成本+地缘政治溢价+制造成本逼近物理极限）。
+</div>
+
+<h3>驱动因素四：区域市场分化</h3>
+<div class="analysis-box">
+<strong>本周变化：</strong>东部利用率75-80%（高位），西部利用率55-60%（低位）。内蒙古一季度算力规模增长18%（+4.3万P），贵州/和林格尔持续承接东部外溢需求。工信部：近两年围绕算力枢纽建成超70条算力大通道，网络基础设施改善。
+</div>
+<div class="analysis-box">
+<strong>原因分析：</strong>东西部市场呈现"冰火两重天"。东部利用率高的根本原因是时延敏感型业务无法西迁（单程20ms+），西部网络带宽不足是核心瓶颈。内蒙古/贵州虽然算力规模大，但主要承接存储备份、离线分析等时延不敏感业务。价格差异：东部A100算力价格比西部高约20%（时延溢价）。
+</div>
+<div class="analysis-box">
+<strong>影响评估：</strong>区域错配是结构性问题，短期无解。市场寄望于"东数西算"网络基础设施改善（工信部超70条算力大通道），以及"毫秒用算"专项行动降低城市内接入时延。西部利用率提升取决于网络质量改善，而非单纯增加算力供给。
+</div>
+<div class="analysis-box">
+<strong>持续性判断：</strong>区域分化将在"十五五"期间持续，但分化格局可能改变：随着西部网络基础设施改善，部分推理需求可能向西迁移，西部利用率有望从55-60%提升至65-70%。
+</div>
+</div>
+
+<!-- 2-4 细分市场周度数据对比 -->
+<div class="section">
+<h2>2-4 细分市场周度数据对比</h2>
+<h3>2-5-1 按算力类型（训练/推理）</h3>
+<div class="analysis-box">
+<strong>市场规模：</strong>训练算力约1200亿元（占比43%），推理算力约1412亿元（占比50%+）。推理市场规模首超训练是里程碑事件。
+</div>
+<div class="analysis-box">
+<strong>本周变化：</strong>推理需求爆发（Token调用量+40%），H100/H200等高端GPU主要用于推理，训练需求相对放缓。智谱API调用量增400%但定价提83%，体现"量价齐升"特征。
+</div>
+<div class="analysis-box">
+<strong>深度分析：</strong>推理市场规模首超训练意味着AI应用从"研发阶段"进入"运营阶段"。推理需求的特征是高频、低延迟、大规模、并发强，推动边缘计算和分布式算力需求。对算力市场的结构影响深远：①需求方从大客户（互联网厂商）扩展至中小企业；②计费模式从包月转向按Token计费；③对算力弹性要求更高。
+</div>
+<div class="analysis-box">
+<strong>下周预判：</strong>推理占比预计进一步提升至55%+。推理芯片（H100/H200）需求将持续旺盛，训练算力增速趋缓。但DeepSeek V4等新模型发布可能带来新一轮训练需求脉冲。
+</div>
+
+<h3>2-5-2 按地域（东部/西部）</h3>
+<div class="analysis-box">
+<strong>市场规模：</strong>东部约60%（北京/上海/广东，占全国算力市场规模），西部约30%（内蒙古/贵州/宁夏），其他10%。
+</div>
+<div class="analysis-box">
+<strong>本周变化：</strong>内蒙古一季度算力规模增长18%（+4.3万P），贵州平台汇聚33个算力服务商。西部利用率约55-60%，较东部（75-80%）仍有差距，但差距在缩小（+3个百分点/月）。
+</div>
+<div class="analysis-box">
+<strong>深度分析：</strong>西部利用率偏低的根本原因是网络带宽——时延敏感型AI推理业务无法西迁。工信部超70条算力大通道建设正在改善这一瓶颈。但需要注意：西部价格比东部低约20%，反映的是"时延折价"而非"质量差距"。随着网络改善，西部有望承接更多推理业务。
+</div>
+<div class="analysis-box">
+<strong>下周预判：</strong>西部利用率预计提升至57-62%。和林格尔/乌兰察布零碳数据园区建设加速，绿色算力+绿色Token基地定位可能吸引对价格敏感的推理客户。
+</div>
+
+<h3>2-5-3 按应用场景</h3>
+<div class="analysis-box">
+<strong>大模型训练：</strong>市场规模约1200亿元，占比43%，增速趋缓（上周+3%）。驱动因素：DeepSeek V4等新模型发布，但训练需求集中于头部大厂，增量有限。
+</div>
+<div class="analysis-box">
+<strong>AI推理：</strong>市场规模约1412亿元，占比50%+，爆发增长（上周+18%）。驱动因素：AI Agent、RAG、智能客服等多步骤应用爆发，Token消耗量是传统Chatbot的10倍以上。
+</div>
+<div class="analysis-box">
+<strong>科学计算：</strong>市场规模约188亿元，占比约7%，稳步增长（+5%）。驱动因素：中科曙光郑州6万卡AI4S集群投运（国内最大科学智能计算集群），气象/药物/物理模拟需求增加。
+</div>
+<div class="analysis-box">
+<strong>下周预判：</strong>推理场景占比预计突破55%。AI Agent将从"尝鲜"进入"规模化部署"，推理算力需求将持续井喷。科学计算受益于国家级超算中心建设，增速稳定。
+</div>
+</div>
+
+<!-- 2-5 竞争格局周度动态 -->
+<div class="section">
+<h2>2-5 竞争格局周度动态</h2>
+<h3>2-6-1 云服务商动态</h3>
+<div class="analysis-box">
+<strong>阿里云：</strong>市场份额约35%（国内第一）。本周动态：百炼平台Coding Plan Lite停止续费/升级（4/13），部分模型单元涨价2-7%（4/15，5/15生效）。战略：从"降价抢量"转向"顺价提利"，3月已涨5-34%，本月二次调价反映成本压力已无法内部消化。
+</div>
+<div class="analysis-box">
+<strong>华为云：</strong>市场份额约25%（国内第二）。本周动态：昇腾950PR成DeepSeek V4全面适配的唯一国产芯片，生态壁垒深化。战略：芯片+模型+云一体化，锁定政企客户，涨价5%幅度最小反映国内竞争激烈但战略克制。
+</div>
+<div class="analysis-box">
+<strong>腾讯云：</strong>市场份额约15%（国内第三）。本周动态：4月9日宣布AI算力/容器/EMR涨价5%（5/9生效），混元系列模型已涨4倍。战略：价格跟随，本轮涨幅4-5%，对大客户议价能力弱，但长单客户有保护机制。
+</div>
+<div class="analysis-box">
+<strong>天翼云：</strong>市场份额约12%（国资第一）。本周动态：主办魔乐社区虾王挑战赛，提供2500万Token支持，联合28家国产产业链单位推进国产生态。战略：差异化走国产路线，Token经营体系（息壤平台）成为核心，政策支持+安全合规优势明显。
+</div>
+
+<h3>2-6-2 专业算力服务商</h3>
+<div class="analysis-box">
+<strong>CoreWeave（国际）：</strong>全球最大AI专业云，本周获$7B融资，将扩张至200万卡集群。专注GPU算力，灵活部署，可协商更长合同周期（4-5年）和更优惠价格。商业模式：与微软/OpenAI等大厂建立强绑定，形成有效闭环。
+</div>
+<div class="analysis-box">
+<strong>智星云（国内）：</strong>专业GPU云平台横评中价格优势明显：A100 80G时租4.9元（vs阿里云5.7-5.8元），H100 7.2-12.55元/时（vs阿里云7.8元+且排期长）。战略：精简非核心云服务，专注算力调度优化，在涨价潮中保持价格定力（部分型号未调价）。
+</div>
+<div class="analysis-box">
+<strong>协创数据：</strong>2026年Q1净利润预增284%-402%（6.5-8.5亿元），智算中心陆续交付进入计费阶段，3万P+可调度算力规模跻身第一梯队。出租率90%+，业绩弹性行业领先。
+</div>
+
+<h3>2-6-3 智算中心</h3>
+<div class="analysis-box">
+<strong>东部智算中心：</strong>北京/上海/广东利用率75-80%（高位）。本周无新增重大动态，维持高位运行。价格：东部A100算力价格比西部高约20%（时延溢价），但仍供不应求。
+</div>
+<div class="analysis-box">
+<strong>西部智算中心：</strong>和林格尔/乌兰察布/贵州利用率55-60%。内蒙古一季度算力规模增长18%（+4.3万P），和林格尔零碳数据园区建设推进。价格：西部算力价格比东部低约20%，但网络带宽瓶颈制约需求释放。
+</div>
+<div class="analysis-box">
+<strong>液冷技术渗透：</strong>AI集群单柜功耗突破8-10kW（传统IDC仅2-4kW），液冷+低PUE成为AIDC核心准入门槛。英维克唯一通过英伟达NPN Tier1液冷认证，液冷产能饱和，扩产迫在眉睫。液冷板块本周（4/16）走强，英维克+15.2%、欧陆通+14.26%。
+</div>
+</div>
+
+<!-- 2-6 本周重大事件深度分析 -->
+<div class="section">
+<h2>2-6 本周重大事件深度分析</h2>
+<div class="deep-event">
+<div class="deep-event-title">专题一：云厂商集体涨价——"廉价算力时代"落幕的市场信号</div>
+<h4>一、核心背景</h4>
+<p>2026年4月，国内云厂商进入密集涨价期。阿里云百炼平台二次调价（累计最高+34%），腾讯云跟进（+5%），百度智能云+30%，科大讯飞+8%，商汤+12%，智谱累计+83%后调用量仍增400%。这一轮涨价覆盖全产业链：H100年租涨幅40%、服务器涨价8-12%、云算力涨价5-34%。持续两年多的AI"价格战"宣告终结。</p>
+<h4>二、关键数据</h4>
+<p>① <strong>H100年租价格：</strong>$2.35/GPU小时（SemiAnalysis 4月），年内涨幅40%，2026年8-9月前Blackwell产能已预订一空<br>
+② <strong>H100月租：</strong>$5.5-6万（折合人民币约40-43万元/月）<br>
+③ <strong>云算力涨幅：</strong>阿里云+34%、腾讯云+5%、百度智能云+5%-30%<br>
+④ <strong>智谱涨价后：</strong>定价提升83%，但调用量增400%，量价齐升<br>
+⑤ <strong>全球AI数据中心电力需求：</strong>29.6GW，相当于纽约州峰值用电量</p>
+<h4>三、深度分析</h4>
+<p><strong>（1）涨价的四重驱动力：</strong>①硬件成本"逆向"暴涨：HBM存储Q1翻倍，芯片采购及运维成本高企；②需求结构从训练转向推理：AI Agent爆发使推理Token消耗激增，电力和带宽成本超出云厂商补贴上限；③商业模式从"圈地"转向"盈利"：早期价格战已完成生态绑定，厂商必须通过提价覆盖算力折旧；④算力资源的战略性稀缺：全球高端算力租赁容量告急，供需极度失衡导致价格失去下行空间。</p>
+<p><strong>（2）谁是最大受益者：</strong>拥有H100/H200储备的算力租赁商（如CoreWeave、利通电子、协创数据）是最大受益者。SemiAnalysis数据显示，有一半的H系列供应商称"无货"，大部分没有租赁即将到期的H卡，H100合同续费期限长达4-5年。在供不应求的格局下，有卡者定价权在手。</p>
+<p><strong>（3）谁受损最重：</strong>没有长单保障的中小企业，以及没有GPU储备的中小云厂商。前者面临成本压力骤增，后者面临客户流失风险。Anthropic停止订阅用户通过第三方工具接入API（月付$200却消耗$5000算力），是Token消耗不可预测性引发商业冲突的典型案例。</p>
+<h4>四、对下周预判</h4>
+<p>预计4月底至5月初将迎来更多云厂商跟进涨价。H100涨价传导链（2-4周时滞）将继续显现，下周可能看到更多专业算力平台调整价格。同时，关注智谱等MaaS平台的二次涨价对中小应用开发商的影响。</p>
+</div>
+
+<div class="deep-event">
+<div class="deep-event-title">专题二：Token消耗暴增千倍——从"卖算力"到"卖Token"的产业变局</div>
+<h4>一、核心背景</h4>
+<p>国家数据局披露，2024年初中国日均Token调用量1000亿，2025年底100万亿，2026年3月突破140万亿，两年增长超千倍。Token已从AI技术的计量单位，加速转变为智能时代的产业"货币"。围绕Token的定价、分发与结算，正在重构整个AI产业的商业逻辑。</p>
+<h4>二、关键数据</h4>
+<p>① <strong>Token消耗两年增长：</strong>1000亿→140万亿，增长超1000倍<br>
+② <strong>季度增速：</strong>2025年底至2026年3月，三个月增长40%<br>
+③ <strong>智谱MaaS平台：</strong>ARR约17亿元（年化），过去12个月提升60倍；注册用户超400万，覆盖218个国家和地区<br>
+④ <strong>OpenClaw贡献：</strong>OpenRouter平台约20-25%的Token消耗由OpenClaw贡献<br>
+⑤ <strong>推理需求占比：</strong>推理已占算力消耗的60-70%，预计2026年底达75%</p>
+<h4>三、深度分析</h4>
+<p><strong>（1）Agent驱动Token消耗的数量级放大：</strong>传统Chatbot是单轮交互，Token消耗与对话轮次呈线性关系。AI Agent具备感知-决策-执行闭环，需要多步骤迭代验证，Token消耗是传统Chatbot的10倍以上。"龙虾"等AI Agent在OpenRouter平台贡献20%+的Token，印证了这一趋势。</p>
+<p><strong>（2）Token计费正在颠覆"卖算力"模式：</strong>从包月/包年定价转向按Token计费，是从"资本密集型资产"到"即用即付型基础设施"的关键转变。"算力银行"和"算力超市"两大创新模式（工信部4月政策）正是这一转型的政策映射。</p>
+<p><strong>（3）"无效探索"悖论：</strong>火山引擎谭待指出，目前约一半的Token消耗用于"无效探索"（模型能力不足时需要更多尝试才能找到解法）。这意味着：①当前Token消耗量可能存在20-30%的优化空间；②"更强大的模型+更高效的Agent框架"协同演进是降低单位成本的路径。</p>
+<h4>四、对下周预判</h4>
+<p>预计Token调用量将突破150万亿（周环比+7%）。智谱等MaaS平台的涨价将向全行业扩散，Token单价预计提升15-20%。关注工信部"算力银行"和"算力超市"试点的具体落地进展。</p>
+</div>
+</div>
+
+<!-- 2-7 市场规模预测更新 -->
+<div class="section">
+<h2>2-7 市场规模预测更新</h2>
+<h3>A. 预报网格（四张预测卡片）</h3>
+<div class="forecast-grid">
+<div class="forecast-card">
+<div class="year">芯片价格走势</div>
+<div class="value">H100维持高位</div>
+<div class="note">涨价周期预计持续至2027年初，H100年租$2.35/GPU小时已成新底部，Blackwell系列2026年8-9月前无现货</div>
+</div>
+<div class="forecast-card">
+<div class="year">云算力价格走势</div>
+<div class="value">全行业提价5-20%</div>
+<div class="note">廉价算力时代终结，Token计费模式加速替代包月模式，中小企业用算门槛提升，专业平台价格定力强于头部平台</div>
+</div>
+<div class="forecast-card">
+<div class="year">智算中心建设</div>
+<div class="value">枢纽节点密集开工</div>
+<div class="note">1.755万亿资金6月底前下达，和林格尔/韶关/贵安/乌兰察布将迎来EPC招标高峰，液冷技术成AIDC标配</div>
+</div>
+<div class="forecast-card">
+<div class="year">国产替代进程</div>
+<div class="value">份额突破50%</div>
+<div class="note">昇腾950PR放量+DeepSeek V4全面适配，字节/阿里/腾讯国产采购比例目标40%-50%，国产GPU从"能用"向"好用"进化</div>
+</div>
+</div>
+
+<h3>B. 重点关注事项</h3>
+<div class="analysis-box">
+<strong>关注1：H100/H200涨价节奏</strong>——为什么值得关注：芯片涨价是供需失衡的滞后指标，涨幅已从"爆发期"进入"平台期"。关注指标：①SemiAnalysis月度数据；②CoreWeave等Neocloud厂商价格调整公告。
+</div>
+<div class="analysis-box">
+<strong>关注2：云厂商涨价后的客户流失率</strong>——为什么值得关注：涨价可能带来客户流失，但智谱涨价后调用量增400%说明需求刚性较强。关注指标：①各大云厂商财报中客户数/ARPU变化；②专业算力平台用户数增长。
+</div>
+<div class="analysis-box">
+<strong>关注3：国产GPU出货量数据</strong>——为什么值得关注：国产芯片份额从41%向50%+突破，华为昇腾是最大变量。关注指标：①IDC季度出货数据；②华为昇腾950PR量产情况；③DeepSeek V4适配进展。
+</div>
+<div class="analysis-box">
+<strong>关注4：液冷技术渗透率</strong>——为什么值得关注：AI集群单柜功耗8-10kW已成行业标准，液冷是AIDC核心准入门槛。关注指标：①英维克液冷订单；②液冷设备板块涨跌；③工信部PUE新规执行情况。
+</div>
+<div class="analysis-box">
+<strong>关注5：Token消耗增速是否放缓</strong>——为什么值得关注：当前Token消耗增速40%/季度，但谭待指出约一半是"无效探索"。关注指标：①日均Token调用量周度数据；②智谱等MaaS平台ARPU变化；③AI Agent效率优化进展。
+</div>
+
+<h3>C. 市场综述</h3>
+<div class="analysis-box">
+<p><strong>本周市场规模环境整体判断：全产业链涨价周期确立，市场正式进入"价值重估"阶段。</strong></p>
+<p>从价格信号看，H100年租涨幅40%、云算力涨价5-34%、智谱定价提升83%后需求不减反增——这不再是"短期供需错配"，而是"趋势性上涨"的确认。廉价算力时代终结，Token计费模式加速替代包月模式，市场天花板从"算力规模"升级为"Token消耗量"。</p>
+<p>从市场结构看，推理市场规模首超训练（占比50%+）是里程碑事件，意味着AI应用从"研发阶段"进入"运营阶段"。这一转变将重塑整个产业链：需求方从大客户扩展至中小企业，计费模式从资源型转向服务型，竞争焦点从"谁有卡"转向"谁能降低单位Token成本"。</p>
+<p>从竞争格局看，头部集中效应加速。拥有H100/H200储备的算力租赁商（利通电子、协创数据等）出租率100%、订单排至2028年，议价能力极强。中小平台面临成本压力和客户流失双重挤压。液冷+低PUE成为AIDC核心壁垒，英维克等液冷龙头将充分受益。</p>
+<p>预计下周市场将维持"量价齐升"格局。H100价格维持高位震荡，云算力涨价潮继续向全行业扩散，Token消耗量突破150万亿。智算中心建设将在资金落地后进入密集开工期，液冷技术渗透率预计从20%（2025）提升至37%（2026E）。</p>
+</div>
+</div>
+
+<!-- 2-8 一周要闻汇总表 -->
+<div class="section">
+<h2>2-8 一周要闻汇总表</h2>
+<table class="policy-table">
+<thead>
+<tr>
+    <th>日期</th>
+    <th>事件</th>
+    <th>主体</th>
+    <th>规模/数据</th>
+    <th>重要度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>04-21</td>
+    <td>工信部：AI日均Token调用量突破140万亿，3个月增长40%</td>
+    <td>工信部/国家数据局</td>
+    <td>140万亿/日</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>04-20</td>
+    <td>SemiAnalysis：H100年租价格年内涨幅40%，2026年8-9月前Blackwell产能已订空</td>
+    <td>SemiAnalysis</td>
+    <td>$2.35/GPU小时</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>04-18</td>
+    <td>阿里云百炼平台二次涨价（2-7%），5月15日生效；腾讯云5月9日起涨价5%</td>
+    <td>阿里云/腾讯云</td>
+    <td>5-34%累计涨幅</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>04-17</td>
+    <td>国务院：十五五期间AI基建为头号投向，发改委1.755万亿资金6月底前下达</td>
+    <td>国务院/发改委</td>
+    <td>1.755万亿元</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>04-17</td>
+    <td>协创数据Q1净利润预增284%-402%，智算中心进入计费阶段</td>
+    <td>协创数据</td>
+    <td>6.5-8.5亿元(Q1)</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>04-16</td>
+    <td>液冷板块走强：英维克+15.2%、欧陆通+14.26%</td>
+    <td>英维克/欧陆通</td>
+    <td>液冷需求爆发</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>04-15</td>
+    <td>百度智能云AI算力涨价5%-30%，科大讯飞智算平台涨价8%</td>
+    <td>百度/科大讯飞</td>
+    <td>5-30%涨幅</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>04-14</td>
+    <td>算力租赁概念持续走强，协创数据涨停、中嘉博创5天4板</td>
+    <td>A股市场</td>
+    <td>板块活跃</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>04-13</td>
+    <td>Stanford HAI发布2026年AI指数：推理占算力2/3，中美差距2.7%</td>
+    <td>Stanford HAI</td>
+    <td>全球AI算力格局</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>04-09</td>
+    <td>腾讯云宣布AI算力/容器/EMR涨价5%（5/9生效）</td>
+    <td>腾讯云</td>
+    <td>5%涨幅</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- 数据来源 -->
+<div class="section sources-section">
+<h2>数据来源</h2>
+<div class="sources-list">
+<span class="source-tag">SemiAnalysis（H100/GPU租赁价格月度调研数据）</span>
+<span class="source-tag">国家数据局/工信部国新办新闻发布会（04-21）</span>
+<span class="source-tag">Stanford HAI《AI Index Report 2026》（2026年4月13日）</span>
+<span class="source-tag">IDC中国（AI加速卡出货量数据）</span>
+<span class="source-tag">协创数据2026年Q1业绩预告</span>
+<span class="source-tag">阿里云/腾讯云/百度智能云官方价格页面</span>
+<span class="source-tag">中信证券/东吴证券/国金证券算力行业研报</span>
+<span class="source-tag">工信部《关于开展普惠算力赋能中小企业发展专项行动的通知》</span>
+<span class="source-tag">21世纪经济报道、证券日报、财联社算力涨价报道</span>
+<span class="source-tag">国家统计局一季度经济数据（04-16）</span>
+</div>
+</div>
+
+</div><!-- end container -->
+
+<footer class="footer">
+<p>© 2026 中国智能算力报告 | 市场规模分析章节 | 数据仅供参考，不构成投资建议</p>
+</footer>
+<div class="chapter-nav">
+    <a href="政策环境分析报告.html" class="nav-prev">⬅️ 上一章</a>
+    <a href="report_index.html" class="nav-home">🏠 首页</a>
+    <a href="区域算力发展分析报告.html" class="nav-next">下一章 ➡️</a>
+</div>
+</body>
+</html>
