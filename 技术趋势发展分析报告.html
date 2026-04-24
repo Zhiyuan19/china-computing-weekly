@@ -6,9 +6,9 @@
 <title>第五章 技术趋势分析 - 中国智能算力报告 第16期</title>
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Roboto, sans-serif; line-height:2.0; color:#2c3e50; background:#f5f7fa; }
-.container { max-width:1200px; margin:0 auto; padding:20px; }
-header { background:linear-gradient(135deg,#0c1929 0%,#1a365d 50%,#0ea5e9 100%); color:white; padding:35px 30px; text-align:center; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
 header h1 { font-size:1.7em; }
 header p { margin-top:8px; opacity:0.9; font-size:0.95em; }
 section { background:white; margin:12px 0; padding:22px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
@@ -153,6 +153,12 @@ tr:hover td { background:#e8f4fd; }
 .nav-home { background: #1a1a2e; }
 .nav-prev { background: #0f3460; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
+.overview-text strong { color: #0f3460; }
+.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
+
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
 </style>
@@ -177,13 +183,12 @@ tr:hover td { background:#e8f4fd; }
 <a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
 </div>
 </div>
+<!-- 本章关键概述 -->
+<div class="chapter-overview">
+<div class="overview-title">📋 本章关键概述</div>
+<div class="overview-text">本周是<span style="color:#e53935;font-weight:700">国产算力生态破局</span>的历史性节点，核心特征是"适配-融资-液冷"三条主线。<strong>适配突破</strong>，DeepSeek V4全面适配华为昇腾950PR，国产芯片从"单卡可用"升级为"集群好用"，字节/阿里/腾讯国产采购比例目标提至40-50%，<em>AI算力"美国制造"的垄断牢笼出现裂缝</em>。<strong>资本涌入</strong>，曦望宣布完成超10亿元新融资，元川微完成数亿元天使轮融资，推理专用芯片（LPU）赛道持续吸金，国产AI芯片创业潮持续升温。<strong>液冷拐点</strong>，液冷概念板块走强，AI集群单柜功耗8-10kW成行业标准，PUE≤1.25要求加速液冷技术渗透，英维克扩产迫在眉睫，液冷渗透率预计从20%（2025）跃升至37%（2026E）。</div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <div class="section">
 <h2>⏱️ 本周技术时间线</h2>
 <div class="timeline">
@@ -363,22 +368,25 @@ tr:hover td { background:#e8f4fd; }
 </table>
 </div>
   </div>
-
-  </div>
 <div class="section">
     <h2>📚 数据来源</h2>
     <ul>
       <li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">路透社/The Information - DeepSeek V4适配昇腾950PR报道</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">证券时报 - 特斯拉AI5芯片流片及英特尔Terafab项目</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">果壳网 - 元川微LPU芯片融资报道（2026-04-21）</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">电子工程专辑 - 曦望融资及国产GPU进展报道</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">财联社VIP - 液冷概念板块分析（2026-04-20）</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">摩根士丹利 - 2026年全球AI芯片格局报告（2026-04-16）</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">36氪/财经 - DeepSeek V4发布预期及黄仁勋访谈</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">IDC - 2025年中国AI加速卡市场份额数据</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">JPR - AI芯片初创公司市场预测</li><li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">钛媒体 - AI芯片初创公司淘汰赛分析</li>
     </ul>
   </div>
-</div>
+</section>
+
 <footer>
   <p>中国智能算力报告 · 技术趋势分析 · 第16期 · 2026-04-22</p>
 </footer>
+
 <div class="chapter-nav">
     <a href="竞争格局发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="供应商与产业格局分析报告.html" class="nav-next">下一章 ➡️</a>
 </div>
+
+</div><!-- end container -->
+
 </body>
 </html>
