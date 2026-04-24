@@ -26,7 +26,7 @@ body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f
 .data-card .sub { font-size: 0.75em; opacity: 0.8; margin-top: 4px; }
 
 /* === section === */
-section { background: white; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); padding: 24px; margin-bottom: 16px; }
+section, .section { background: white; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.05); padding: 24px; margin-bottom: 16px; }
 h2 { color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-bottom: 16px; font-size: 1.15em; }
 
 /* === 时间线 === */
@@ -100,12 +100,21 @@ tr:hover { background: #e8f4fd; }
 .nav-home { background: #1a1a2e; }
 .nav-prev { background: #0f3460; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
+.overview-text strong { color: #0f3460; }
+.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
+
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
 </style>
 </head>
 <body>
 <div class="header"><h1>三、区域算力发展分析周报</h1><p>周期：2026年4月13日 — 2026年4月22日（第17期）</p><p style="margin-top:8px;font-size:0.85em;opacity:0.8;">信源：Tavily搜索 · 权威媒体 · 各地政府公告</p></div>
+
+<div class="container">
+
 <div class="all-chapters-nav">
 <div class="chapter-tabs">
 <a href="report_index.html" class="chapter-tab home-tab"><span class="chapter-tab-num">🏠</span><span class="chapter-tab-title">首页</span></a><span class="chapter-tab-sep"> | </span>
@@ -119,6 +128,15 @@ tr:hover { background: #e8f4fd; }
 <a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
 </div>
 </div>
+
+<!-- 本章关键概述 -->
+<div class="chapter-overview">
+<div class="overview-title">📋 本章关键概述</div>
+<div class="overview-text">本周是<span style="color:#e53935;font-weight:700">区域算力升维元年</span>的关键节点，核心特征是"枢纽-绿电-签约"三重突破。<strong>枢纽层面</strong>，全国智能算力规模达<span style="color:#e53935;font-weight:700">1882 EFLOPS</span>（Q1同比+35%），8大枢纽总算力突破93.7万P，和林格尔/乌兰察布升级为零碳数据园区+绿色算力基地，绿电比例升至88%，<em>从"数据中心集群"升维为"绿色Token基地"</em>。<strong>项目层面</strong>，本期新增枢纽项目6个，庆阳/张家口/芜湖/韶关/贵安/和林格尔均有新开工或扩容，最大签约项目金额达<span style="color:#e53935;font-weight:700">245亿元</span>，工信部"毫秒用算"专项行动正式启动（31省50个地区）。<strong>网络层面</strong>，工信部建成超70条算力大通道，上海/芜湖入选国家算力枢纽节点，西部枢纽算力消纳率从55%向65%提升，区域算力"东强西弱"格局正在边际改善。</div>
+</div>
+
+<div class="data-note">
+
 
 <div class="data-note">
   <strong>数据口径说明：</strong>各枢纽总算力包含智算+通算混合口径；"万P"为每秒10^15次浮点运算；周变化指<span style="color:#e53935">与上期（04-13）对比</span>；<span style="color:#2e7d32">绿色标注</span>为显著变化（&gt;5000P或&gt;5%）；PUE为数据中心能效比（越低越好）。
@@ -235,8 +253,6 @@ tr:hover { background: #e8f4fd; }
     <tr><td colspan="4" style="background:#f0f4ff;text-align:left;padding:8px;"><strong>趋势：</strong>2026年起全国统一趋势是PUE管控从"引导性"转向"强制性"，PUE&gt;1.5的存量项目须在2026-2027年前完成改造，否则面临断电或不发牌照风险。液冷技术从可选项变为高功率密度项目的标配（≥8kW/机架）。</td></tr>
   </table>
 </div>
-
-</div>
 <div class="section">
   <h2>📰 本周供应链与产业生态要闻</h2>
   <table class="news-table">
@@ -276,7 +292,6 @@ tr:hover { background: #e8f4fd; }
     <a href="市场规模发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="竞争格局发展分析报告.html" class="nav-next">下一章 ➡️</a>
-</div>
-
+</div><!-- end container -->
 </body>
 </html>
