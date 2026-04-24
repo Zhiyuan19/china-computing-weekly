@@ -165,6 +165,11 @@ tr.week-highlight { background: #fff8e1; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
+.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
+.overview-text strong { color: #0f3460; }
+.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -191,7 +196,15 @@ tr.week-highlight { background: #fff8e1; }
 </div>
 </div>
 </div>
+
+<!-- 本章关键概述 -->
+<div class="chapter-overview">
+<div class="overview-title">📋 本章关键概述</div>
+<div class="overview-text">
+本周应用场景呈现<em>"AI落地提速、行业渗透深化、结构性分化加剧"</em>三大特征。从应用渗透率看，AI在政务、医疗、金融等核心场景渗透率突破<span style="color:#e53935;font-weight:700">40%</span>，制造业质检场景渗透率达38%。从调用量看，国内AI日均Token调用量突破<span style="color:#e53935;font-weight:700">140万亿</span>（三个月增长6倍），但全球Token调用量连续两周下降。从投资热度看，<em>智能汽车、智能眼镜、AI陪伴、机器人</em>四大新场景获资本集中布局，算力消费从B端向C端延伸。从商业化看，开源模型大幅降低AI开发门槛，<em>端侧AI</em>成手机、PC、家电标配。从竞争格局看，<span style="color:#e53935;font-weight:700">60%</span>的AI应用集中在企业市场，消费级爆款尚未出现。下周重点关注：五一惊动数据发布及AI+消费爆款案例。
 </div>
+</div>
+
 <div class="data-note">
 <strong>数据说明：</strong>本周报聚焦最近7天（2026-04-13—2026-04-22）应用场景趋势变化，优先周粒度数据；若本周无显著变化，则追溯月/季度数据（已在表中标注），进行分析。<br>
 <strong>周变化说明：</strong>周变化 = 本周数据 - 上周基准；变化率 = （本周-上周）/ 上周 × 100%；变化率 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。<br>
