@@ -11,17 +11,12 @@ body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
 /* === 头部 === */
-.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
+.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 40px 20px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
 .header h1 { font-size: 1.8em; margin-bottom: 8px; }
 .header p { font-size: 0.95em; opacity: 0.9; }
 
 /* === 数据说明 === */
 .data-note { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 12px 18px; margin-bottom: 20px; border-radius: 4px; font-size: 0.85em; color: #333; }
-.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
-.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
-.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
-.overview-text strong { color: #0f3460; }
-.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
 
 /* === 数据卡片 === */
 .data-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
@@ -125,8 +120,6 @@ tr:hover { background: #e8f4fd; }
 </div>
 </div>
 
-<div class="chapter-overview"><div class="overview-title">📋 本章关键概述</div><div class="overview-text">本章围绕中国智能算力「<strong>八大国家算力枢纽</strong>」展开系统性分析，覆盖<span style="color:#e53935;font-weight:700">内蒙古·宁夏·贵州·甘肃</span>四大清洁能源枢纽与<span style="color:#e53935;font-weight:700">长三角·粤港澳·成渝·京津冀</span>四大产业聚集枢纽。政策层面，国家「<em>东数西算</em>」工程持续推进，西部枢纽享受土地绿电政策倾斜，吸引华为云、阿里云等头部厂商<span style="color:#e53935;font-weight:700">6个新建项目</span>落地。市场层面，<span style="color:#e53935;font-weight:700">韶关、乌兰察布、中卫、庆阳、芜湖、上海</span>六大节点周内密集公布扩建计划，全国总算力规模逼近<span style="color:#e53935;font-weight:700">1900 EFLOPS</span>。竞争格局上，<em>算力券补贴</em>与<em>算力互联互通</em>成为各地政策新焦点，宁夏中卫率先发放<span style="color:#e53935;font-weight:700">6000万元算力补贴</span>，算力调度平台建设从规划进入<span style="color:#e53935;font-weight:700">实测阶段</span>。</div></div>
-
 <div class="data-note">
   <strong>数据口径说明：</strong>各枢纽总算力包含智算+通算混合口径；"万P"为每秒10^15次浮点运算；周变化指<span style="color:#e53935">与上期（04-13）对比</span>；<span style="color:#2e7d32">绿色标注</span>为显著变化（&gt;5000P或&gt;5%）；PUE为数据中心能效比（越低越好）。
 </div>
@@ -138,7 +131,7 @@ tr:hover { background: #e8f4fd; }
   <div class="data-card"><div class="label">枢纽总算力合计</div><div class="value">93.7万P</div><div class="sub">八枢纽合计（估算/部分待核实）</div></div>
 </div>
 
-<section id="timeline">
+<div class="section" id="timeline">
   <h2>⏱️ 本周重大时间线（2026-04-13 ~ 04-22）</h2>
   <div class="timeline">
     <div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">上海发布《国家数字经济创新发展试验区实施方案》</div><div class="timeline-source">来源：上海市人民政府，04-21发布</div><div class="timeline-impact">7大方面30条措施，推动算力互联互通，部署国产智算集群，10亿算力券定向扶持。</div></div>
@@ -151,9 +144,9 @@ tr:hover { background: #e8f4fd; }
     <div class="timeline-item"><div class="timeline-date">04-15</div><div class="timeline-title">芜湖A6/B1/C4设计招标完成，总投资7.8亿元</div><div class="timeline-source">来源：芜湖日报，04-14</div><div class="timeline-impact">三个数据中心项目进入实质建设，总投资7.8亿元，芜湖智算规模后续有望进一步提升。</div></div>
     <div class="timeline-item"><div class="timeline-date">04-13</div><div class="timeline-title">韶关真武万卡集群正式上线运营</div><div class="timeline-source">来源：DTData，04-04</div><div class="timeline-impact">中国电信+阿里云联合建设，粤港澳大湾区首个"真武"万卡集群在广州上线，推动韶关集群+0.5万P至19.0万P。</div></div>
   </div>
-</section>
+</div>
 
-<section id="summary">
+<div class="section" id="summary">
   <h2>📊 八大枢纽周变化汇总表（2026-04-22 vs 04-13）</h2>
   <table>
     <tr><th>枢纽</th><th>上期（万P）</th><th>本期（万P）</th><th>周变化</th><th>变化率</th><th>绿电%</th><th>主要驱动</th></tr>
@@ -170,9 +163,9 @@ tr:hover { background: #e8f4fd; }
     <h3>📈 深度分析：周变化特征</h3>
     <p><strong>本周变化集中于西部枢纽（韶关/中卫）的小幅扩容，</strong>但和林格尔绿电比例提升（86%→88%）是能效优化的积极信号。最大增量来自晶科科技245亿签约中卫，若三期建成，中卫总规模将从当前22.72万P向50万P以上跃升（2030年目标），本周变化率虽仅3.3%，但长期驱动力极强。韶关在真武万卡+广州双引擎驱动下，十万卡扩容目标（至30万P以上）路径清晰。庆阳/芜湖处于建设周期，当前规模稳定，实质性放量预计在2026Q3-Q4。</p>
   </div>
-</section>
+</div>
 
-<section id="detail">
+<div class="section" id="detail">
   <h2>📍 重点枢纽深度分析</h2>
 
   <h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:16px 0 10px;">3-1. 和林格尔：十五五升维，零碳数据园区+绿色Token基地</h3>
@@ -226,9 +219,9 @@ tr:hover { background: #e8f4fd; }
     <tr><td>华为云</td><td>300万台服务器（规划）</td><td>持续推进</td><td>CloudMatrix 384超节点（300 PFlops）已上线</td></tr>
     <tr><td>2027目标</td><td>6万P+</td><td>持续</td><td>十四五规划目标</td></tr>
   </table>
-</section>
+</div>
 
-<section id="policy">
+<div class="section" id="policy">
   <h2>📋 政策动态：全国PUE政策全景图</h2>
   <p style="font-size:0.85em;margin-bottom:12px;">本周重要政策进展：工信部宣布近两年围绕算力枢纽建成<span style="color:#0f3460;font-weight:bold;">超70条算力大通道</span>；2026年政府工作报告首次将"算电协同"纳入新基建工程；西部PUE红线明确为≤1.20，东部≤1.25。全国各地PUE管控呈趋严态势。</p>
   <table>
@@ -241,9 +234,10 @@ tr:hover { background: #e8f4fd; }
     <tr><td>芜湖（安徽/长三角）</td><td>≤1.25</td><td>液冷推广</td><td>算力券1亿元/年</td></tr>
     <tr><td colspan="4" style="background:#f0f4ff;text-align:left;padding:8px;"><strong>趋势：</strong>2026年起全国统一趋势是PUE管控从"引导性"转向"强制性"，PUE&gt;1.5的存量项目须在2026-2027年前完成改造，否则面临断电或不发牌照风险。液冷技术从可选项变为高功率密度项目的标配（≥8kW/机架）。</td></tr>
   </table>
-</section>
+</div>
 
-<section>
+</div>
+<div class="section">
   <h2>📰 本周供应链与产业生态要闻</h2>
   <table class="news-table">
     <tr><th style="width:60px;">日期</th><th style="width:180px;">事件</th><th>涉及主体</th><th style="width:80px;">重要性</th></tr>
@@ -257,7 +251,7 @@ tr:hover { background: #e8f4fd; }
     <tr><td>04-14</td><td>芜湖A6/B1/C4设计招标完成，总投资7.8亿</td><td>芜湖市数据资源管理局</td><td style="color:#f59e0b">★★★</td></tr>
     <tr><td>04-16</td><td>乌兰察布2026年目标20万P（已有10.87万P），DeepSeek首次当地招聘</td><td>乌兰察布市政府、DeepSeek</td><td style="color:#f59e0b">★★★</td></tr>
   </table>
-</section>
+</div>
 
 <div id="sources" class="sources">
   <h3 style="margin-bottom:8px;">📚 数据来源</h3>
