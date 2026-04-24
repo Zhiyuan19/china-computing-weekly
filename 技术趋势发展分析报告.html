@@ -155,6 +155,12 @@ tr:hover td { background:#e8f4fd; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
+
+.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
+.overview-text strong { color: #0f3460; }
+.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
 </style>
 </head>
 <body>
@@ -178,12 +184,15 @@ tr:hover td { background:#e8f4fd; }
 </div>
 </div>
 </div>
+
+<!-- 本章关键概述 -->
+<div class="chapter-overview">
+<div class="overview-title">📋 本章关键概述</div>
+<div class="overview-text">
+本周技术趋势围绕<span style="color:#e53935;font-weight:700">推理芯片崛起、国产替代加速、液冷技术渗透</span>三条主线展开。推理芯片从"可选"变为"必选"，<em>训练与推理结构已从80:20转变为20:80</em>，推理算力租赁价格半年涨幅近40%。国产替代取得突破性进展，DeepSeek V4将<span style="color:#e53935;font-weight:700">100%运行在昇腾950PR上</span>，推理速度提升35倍，字节/阿里/腾讯已下单数十万颗，<em>打破依赖英伟达的惯例</em>。中国移动启动<span style="color:#e53935;font-weight:700">20.6亿元AI超节点集采</span>，全部采用华为CANN生态方案，标志着国产算力生态从备选升格为主选。液冷技术从"可选"变"必选"，英维克区间最高涨15.2%，GB200/GB300采用85%液冷，Vera Rubin NVL72将100%液冷。芯片架构层面，<em>LPU作为推理新架构</em>崛起，元川微获数亿元天使轮融资，英伟达200亿美元收购Groq推理技术，推理基础设施控制权争夺战打响。下周重点关注：DeepSeek V4正式发布及昇腾950PR量产进展。
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 <section>
 <h2>⏱️ 本周技术时间线</h2>
 <div class="timeline">
