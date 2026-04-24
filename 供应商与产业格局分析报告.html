@@ -7,9 +7,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Roboto, sans-serif; line-height: 2.0; color: #2c3e50; background: #f5f7fa; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
+header { background: linear-gradient(135deg, #0c1929 0%, #1a365d 50%, #0ea5e9 100%); color: white; padding: 35px 30px; text-align: center; }
 header h1 { font-size: 1.7em; }
 header p { margin-top: 8px; opacity: 0.9; }
 section { background: white; margin: 12px 0; padding: 22px; border-radius: 10px; box-shadow: 0 2 12px rgba(0,0,0,0.05); }
@@ -149,13 +149,6 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
-.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
-.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
-.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
-.overview-text strong { color: #0f3460; }
-.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
-@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
-
 </style>
 </head>
 <body>
@@ -178,27 +171,29 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <a href="应用场景分析报告.html" class="chapter-tab"><span class="chapter-tab-num">7.</span><span class="chapter-tab-title">应用</span></a><span class="chapter-tab-sep"> | </span>
 <a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
 </div>
-<div class="chapter-overview">
-<div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">本周供应商与产业格局呈现"<em>存储为王、散热当道、长期合约锁定供应</em>"三大特征。<strong>存储芯片</strong>成为最紧缺环节，HBM市场规模将从2025年<span style="color:#e53935;font-weight:700">350亿美元</span>增至2028年预测<span style="color:#e53935;font-weight:700">1000亿美元</span>，年复合增长率超<span style="color:#e53935;font-weight:700">40%</span>；DRAM价格Q1季度涨幅已达<span style="color:#e53935;font-weight:700">100%</span>，存储器短缺预计持续至2027-2028年。三星与海力士两大韩系巨头转向<span style="color:#e53935;font-weight:700">3-5年LTA长期合约</span>，放弃短期议价灵活性，锁定大客户关系。<strong>散热方案</strong>成产业新蓝海，液冷服务器市场规模2026年预计从89亿美元飙升至<span style="color:#e53935;font-weight:700">170亿美元</span>，同比激增<span style="color:#e53935;font-weight:700">91%</span>，国产供应链加速出海。<strong>服务器整机</strong>2026年预测市场规模<span style="color:#e53935;font-weight:700">7560亿美元</span>，同比增长75%，美国银行预测2030年将达<span style="color:#e53935;font-weight:700">1.5万亿美元</span>，AI服务器营收占比将突破83%。在供应端，<em>PMIC交期35-40周、BMC交期21-26周</em>，零部件瓶颈制约通用服务器出货；三星HBM4E样品5月发布，带宽达4.0TB/s，向英伟达送样；远见智存发布首款自研HBM3/3e芯片，实现国内HBM全栈自主设计突破。<em>云厂商集体涨价</em>5%-34%，算力正从廉价基础设施转变为稀缺硬通货。</div>
 </div>
 </div>
+</div>
+</div></div>
 
-<section>
+</div>
+</div>
+</div>
+<div class="section">
 <h2>📊 本周供应商数据速览</h2>
 <div class="data-cards">
 <div class="data-card"><div class="label">HBM市场规模（2025）</div><div class="value">350亿美元</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">+40% CAGR至2028</div></div><div class="data-card"><div class="label">HBM市场规模（2028E）</div><div class="value">1000亿美元</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">突破千亿</div></div><div class="data-card"><div class="label">液冷市场（2026E）</div><div class="value">170亿美元</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">同比+91%</div></div><div class="data-card"><div class="label">服务器市场（2026E）</div><div class="value">7560亿美元</div><div class="tag up">季变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">同比+75%</div></div><div class="data-card"><div class="label">DRAM价格涨幅（Q1）</div><div class="value">+100%</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">同比</div></div><div class="data-card"><div class="label">服务器出货增幅</div><div class="value">+13%</div><div class="tag flat">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">TrendForce下调</div></div>
 </div>
-</section>
+</div>
 
-<section>
+<div class="section">
 <h2>⏱️ 本周供应商时间线</h2>
 <div class="timeline">
 <div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">特斯拉4月DRAM供应量激增3倍</div><div class="timeline-source">来源：财联社</div><div class="timeline-impact">三星电子向特斯拉月度供应8GB GDDR6 DRAM较Q1增长3倍，满足车载信息娱乐和自动驾驶存储需求</div></div><div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">存储器短缺或持续至2027年</div><div class="timeline-source">来源：日经中文网</div><div class="timeline-impact">Counterpoint Research指出存储供应年增率需达12%才能解决短缺，但目前仅7.5%，预计2028年才能全面恢复</div></div><div class="timeline-item"><div class="timeline-date">04-21</div><div class="timeline-title">远见智存发布自研HBM3/3e芯片</div><div class="timeline-source">来源：中国日报</div><div class="timeline-impact">推出24GB与12GB两款产品，带宽819GB/s，国内企业首次实现HBM全栈自主设计，摆脱国外IP依赖</div></div><div class="timeline-item"><div class="timeline-date">04-20</div><div class="timeline-title">三星海力士转向3-5年长期合约</div><div class="timeline-source">来源：凤凰网</div><div class="timeline-impact">两大存储巨头放弃短期合同模式，全面转向LTA长约，DRAM价格或已临近上行顶点，市场格局重塑</div></div><div class="timeline-item"><div class="timeline-date">04-18</div><div class="timeline-title">液冷服务器市场规模将翻倍</div><div class="timeline-source">来源：21世纪经济报道</div><div class="timeline-impact">摩根大通预测2026年全球AI服务器液冷系统市场从89亿美元飙升至170亿美元，国产供应链加速出海</div></div><div class="timeline-item"><div class="timeline-date">04-17</div><div class="timeline-title">国内云厂商集体上调AI服务价格</div><div class="timeline-source">来源：证券日报</div><div class="timeline-impact">阿里云/腾讯云/百度智能云等涨价5%-34%，智谱AI两个月内三度提价，算力从廉价基础设施变为稀缺硬通货</div></div><div class="timeline-item"><div class="timeline-date">04-17</div><div class="timeline-title">美银预测服务器市场2030年达1.5万亿美元</div><div class="timeline-source">来源：财联社</div><div class="timeline-impact">AI服务器营收占比将达83%，2026年AI服务器出货同比增28%，ODM厂商占AI服务器出货量84%</div></div><div class="timeline-item"><div class="timeline-date">04-16</div><div class="timeline-title">TrendForce下调2026年服务器出货增幅至13%</div><div class="timeline-source">来源：IT之家</div><div class="timeline-impact">AI服务器需求旺盛挤占通用服务器零部件产能，PMIC交期35-40周，BMC交期21-26周</div></div><div class="timeline-item"><div class="timeline-date">04-15</div><div class="timeline-title">三星电子HBM4E样品5月发布</div><div class="timeline-source">来源：CFM闪存市场</div><div class="timeline-impact">采用4nm制程+1c DRAM，带宽4.0TB/s，计划下半年将HBM4良率提升至接近完工水平，向英伟达送样</div></div><div class="timeline-item"><div class="timeline-date">04-13</div><div class="timeline-title">英伟达请求三星提前供货HBM4</div><div class="timeline-source">来源：朝鲜日报</div><div class="timeline-impact">英伟达因AMD/谷歌加速追赶，请求跳过品质测试先行供应HBM4，韩国存储企业已成'超级乙方'</div></div>
 </div>
-</section>
+</div>
 
-<section>
+<div class="section">
 <h2>6.1 智能算力供应链全景</h2>
 
 <h3>6.1.1 供应链结构概述</h3>
@@ -247,9 +242,9 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>本周供应链数据显示，智能算力产业链呈现"上游涨价向下游传导"的结构性特征。存储方面，三星/SK海力士全面转向3-5年LTA长约，DRAM Q1同比涨100%、Q2环比再涨30%，HBM市场至2028年将突破1000亿美元（CAGR 40%），英伟达罕见请求三星跳过测试提前供货HBM4，韩国存储企业已从"乙方"跃升为"超级乙方"。服务器方面，AI服务器需求旺盛挤占通用服务器产能，TrendForce下调全球服务器出货增幅至13%，PMIC交期拉长至35-40周，液冷市场从89亿飙升至170亿美元，国产供应商正加速出海切入英伟达/谷歌供应链。中游云厂商在成本压力下集体涨价5%-34%，算力正从廉价基础设施转变为稀缺硬通货。</p>
 </div>
 
-</section>
+</div>
 
-<section>
+<div class="section">
 <h2>6.2 上游供应链：核心硬件供应态势</h2>
 
 <h3>6.2.1 AI芯片供应格局</h3>
@@ -322,9 +317,9 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>HBM技术正经历史上最密集的升级周期。从性能演进看，带宽从HBM2的256GB/s跃升至HBM4E的4TB/s，三年内增长超过15倍。从竞争格局看，SK海力士在HBM4市场预计占54%份额（三星28%），但在HBM4E上三星正加速追赶——其采用1c DRAM+4nm制程，5月将发首批样品，性能提升46%达11.7Gbps。从产能看，三大厂商合计占据全球逾95%市场，但扩产周期长达3年，短期内无法缓解供需紧张。远见智存发布自研HBM3/3e芯片虽在带宽（819GB/s）上接近JEDEC标准，但与海力士/三星仍有代际差距，量产经济性和客户认可度仍待验证。长期来看，HBM市场的供不应求格局将至少持续至2027-2028年，价格上行趋势难以逆转。</p>
 </div>
 
-</section>
+</div>
 
-<section>
+<div class="section">
 <h2>6.3 中游：算力服务商竞争格局</h2>
 
 <h3>6.3.1 综合云厂商</h3>
@@ -393,9 +388,9 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>算力服务市场正经历从"资源稀缺"到"价值重构"的深刻转变。综合云厂商通过涨价将硬件成本压力转嫁，而专业算力租赁平台则凭借灵活性抢占中小企业市场——协创数据Q1净利润预增284%-402%印证了算力租赁的高景气。MaaS平台格局呈现"大厂主导、创业公司差异化"特征：阿里/腾讯/百度/华为/字节凭借资金和生态优势占据主体市场，智谱AI则通过API调用量激增（2月三度提价）验证了技术立身路径。工信部"算力银行/算力超市"政策将加速算力普惠化，中小企业获取高端算力的门槛降低，有利于整体AI产业健康发展，但也将加剧中游服务商的竞争烈度，具备成本优势和客户资源者将胜出。</p>
 </div>
 
-</section>
+</div>
 
-<section>
+<div class="section">
 <h2>6.4 供应链对智能算力建设的影响</h2>
 
 <h3>6.4.1 当前供应链挑战</h3>
@@ -465,9 +460,9 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>国产化替代在算力供应链各环节呈现"梯度推进、局部突破"特征。在芯片设计环节，寒武纪/海光/华为已具备量产能力，但在高端HBM领域仍存在代际差距——远见智存自研HBM3/3e的发布虽具里程碑意义（819GB/s带宽，全栈IP自主），但与SK海力士/三星的HBM4E（4TB/s）仍有明显差距，量产成熟度有待验证。在液冷设备环节，国产厂商已实现"反向出海"——英维克CDU通过谷歌认证、高澜股份进入英伟达GB300核心认证体系，标志着技术实力获得全球顶级客户认可。液冷产业链优势在于交付能力和非标定制响应速度，"两个月内完成设备安装测试"的能力是海外竞争对手难以匹配的。展望2026-2027年，在英伟达供应链开放（GB300允许ODM自选供应商）和终端CSP对性价比重视的双重驱动下，国产液冷/散热供应商有望在北美市场抢占可观份额。</p>
 </div>
 
-</section>
+</div>
 
-<section>
+<div class="section">
 <h2>6.5 供应商动态与产业格局变化</h2>
 <h4>本周供应商重要动态</h4>
 <table>
@@ -499,9 +494,10 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>本周供应商动态揭示三大结构性变化：①存储定价权从"买方主导"转向"卖方主导"——三星/SK海力士放弃短期合同全面转向3-5年LTA长约，DRAM价格Q1同比涨100%仍订单售罄，英伟达罕见请求提前供货，韩国存储企业已从"乙方"跃升为"超级乙方"；②液冷市场爆发拐点已至——2026年市场规模从89亿飙至170亿美元（+91%），英维克CDU通过谷歌认证、高澜股份进入英伟达GB300核心体系，国产液冷供应商正加速出海；③OpenAI加入HBM争夺战——HBM需求95%集中于英伟达/AWS/谷歌/AMD，随着OpenAI自研芯片（Titan）加速，产能竞争将进一步加剧。三星HBM4E样品5月发布（带宽4TB/s，性能提升46%）将率先满足英伟达 Rubin需求，SK海力士则押注台积电3nm工艺差异化竞争。</p>
 </div>
 
-</section>
+</div>
 
-<section>
+</div>
+<div class="section">
 <h2>6.6 本周供应链深度分析专题</h2>
 <h4>本周最具影响力事件：存储巨头战略转型——从"乙方"到"超级乙方"</h4>
 
@@ -535,7 +531,7 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>三星/SK海力士全面转向3-5年LTA长约，是本周最具影响力的供应链事件。它揭示了三个关键信号：①存储产业从"强周期性"转向"高确定性"——长约模式平滑业绩波动，但也意味着产能分配权力向头部厂商集中，中小客户获取资源难度加大；②价格见顶预期升温——若厂商看涨未来，不会以当前价锁定3-5年供应，长约模式或暗示DRAM价格已接近本轮周期顶点；③"超级乙方"时代来临——英伟达请求跳过测试提前供货HBM4、韩国存储企业议价能力空前提升，全球AI供应链权力格局正在重构。对中国产业而言，在HBM等关键环节受制于人的背景下，加速国产替代（远见智存HBM3/3e只是起点）、深化与SK海力士/三星的战略合作、构建自主可控的存储产业链，将是长期战略必选项。</p>
 </div>
 
-</section>
+</div>
 
 <div class="data-source">
 <p>📌 <strong>数据来源：</strong></p>
