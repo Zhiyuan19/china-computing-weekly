@@ -7,9 +7,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei', Roboto, sans-serif; line-height: 2.0; color: #2c3e50; background: #f5f7fa; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-header { background: linear-gradient(135deg, #0c1929 0%, #1a365d 50%, #0ea5e9 100%); color: white; padding: 35px 30px; text-align: center; }
+header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
 header h1 { font-size: 1.7em; }
 header p { margin-top: 8px; opacity: 0.9; }
 section { background: white; margin: 12px 0; padding: 22px; border-radius: 10px; box-shadow: 0 2 12px rgba(0,0,0,0.05); }
@@ -38,10 +38,8 @@ tr:hover td { background: #e8f4fd; }
 .data-card { background: white; border-radius: 8px; padding: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-top: 3px solid #0ea5e9; }
 .data-card .label { color: #64748b; font-size: 0.75em; margin-bottom: 4px; }
 .data-card .value { font-size: 1.4em; font-weight: bold; color: #0f172a; }
-.data-card .tag { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; margin-top: 6px; }
-.data-card .tag.up { background: #c8e6c9; color: #1b5e20; }
-.data-card .tag.down { background: #ffcdd2; color: #c62828; }
-.data-card .tag.flat { background: #f5f5f5; color: #616161; }
+.data-card .tag-change { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; margin-top: 6px; background: #c8e6c9; color: #1b5e20; }
+.data-card .tag-note { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7em; margin-top: 4px; background: #e8f4fd; color: #1565C0; }
 .timeline { border-left: 2px solid #e2e8f0; margin-left: 10px; padding-left: 20px; }
 .timeline-item { position: relative; margin-bottom: 15px; }
 .timeline-item::before { content: ''; position: absolute; left: -26px; top: 5px; width: 10px; height: 10px; background: #0ea5e9; border-radius: 50%; }
@@ -147,6 +145,12 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 .nav-home { background: #1a1a2e; }
 .nav-prev { background: #0f3460; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
+.overview-text strong { color: #0f3460; }
+.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
+
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
 </style>
@@ -157,6 +161,7 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p style="margin-top:8px;opacity:0.9;">智能算力产业链供应链深度解析 | 2026-04-15 — 2026-04-22</p>
 <p style="margin-top:4px;opacity:0.7;font-size:0.85em;">第16期 | 数据更新周期：2026-04-22</p>
 </header>
+
 <div class="container">
 
 <div class="all-chapters-nav">
@@ -171,20 +176,52 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <a href="应用场景分析报告.html" class="chapter-tab"><span class="chapter-tab-num">7.</span><span class="chapter-tab-title">应用</span></a><span class="chapter-tab-sep"> | </span>
 <a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
 </div>
-</div>
-</div>
-</div>
-</div></div>
+</div><!-- end chapter-tabs + all-chapters-nav -->
 
+<!-- 本章关键概述 -->
+<div class="chapter-overview">
+<div class="overview-title">📋 本章关键概述</div>
+<div class="overview-text">本周是<span style="color:#e53935;font-weight:700">存储器供应链深度重组</span>的预警节点，核心特征是"HBM-液冷-合约"三重变化。<strong>存储层面</strong>，HBM市场规模2025年350亿美元→2028年预计1000亿美元，DRAM价格Q1涨幅100%，特斯拉4月DRAM供应量激增3倍，存储器短缺格局可能持续至2027年，<em>"从现货市场转向3-5年长约"</em>成为行业新常态。<strong>液冷层面</strong>，液冷市场2026年预计达170亿美元，服务器市场7560亿美元，液冷设备产能饱和，英维克/欧陆通扩产紧迫。<strong>合约层面</strong>，三星/海力士转向3-5年长期合约锁定客户，远见智存发布自研HBM3/3e芯片，HBM4/HBM4E成为下一代竞争焦点，上游供应链从"供过于求"快速切换至"供不应求"轨道。</div>
 </div>
+
+<div class="data-note" style="background:#e8f4fd;border-left:4px solid #2196F3;padding:12px 16px;margin:20px 0;font-size:12px;color:#555;border-radius:4px;">
+  📌 <strong>数据周期：</strong>2026-04-15 — 2026-04-22　|　<strong>数据来源：</strong>各厂商官网、CFM闪存市场、IDC、TrendForce、证券时报、财联社等　|　<strong>置信度：</strong>高
 </div>
-</div>
-<div class="section">
-<h2>📊 本周供应商数据速览</h2>
+
 <div class="data-cards">
-<div class="data-card"><div class="label">HBM市场规模（2025）</div><div class="value">350亿美元</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">+40% CAGR至2028</div></div><div class="data-card"><div class="label">HBM市场规模（2028E）</div><div class="value">1000亿美元</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">突破千亿</div></div><div class="data-card"><div class="label">液冷市场（2026E）</div><div class="value">170亿美元</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">同比+91%</div></div><div class="data-card"><div class="label">服务器市场（2026E）</div><div class="value">7560亿美元</div><div class="tag up">季变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">同比+75%</div></div><div class="data-card"><div class="label">DRAM价格涨幅（Q1）</div><div class="value">+100%</div><div class="tag up">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">同比</div></div><div class="data-card"><div class="label">服务器出货增幅</div><div class="value">+13%</div><div class="tag flat">周变化</div><div class="tag" style="background:#e8f4fd;color:#0369a1;margin-left:4px;">TrendForce下调</div></div>
+  <div class="data-card">
+    <div class="label">HBM 市场规模（2025）</div>
+    <div class="value">350 亿美元</div>
+    <div class="tag-change">周变化</div><div class="tag-note">+40% CAGR 至 2028</div>
+  </div>
+  <div class="data-card">
+    <div class="label">HBM 市场规模（2028E）</div>
+    <div class="value">1000 亿美元</div>
+    <div class="tag-change">周变化</div><div class="tag-note">突破千亿</div>
+  </div>
+  <div class="data-card">
+    <div class="label">液冷市场（2026E）</div>
+    <div class="value">170 亿美元</div>
+    <div class="tag-change">周变化</div><div class="tag-note">同比 +91%</div>
+  </div>
+  <div class="data-card">
+    <div class="label">服务器市场（2026E）</div>
+    <div class="value">7560 亿美元</div>
+    <div class="tag-change">季变化</div><div class="tag-note">同比 +75%</div>
+  </div>
+  <div class="data-card">
+    <div class="label">DRAM 价格涨幅（Q1）</div>
+    <div class="value">+100%</div>
+    <div class="tag-change">周变化</div><div class="tag-note">+100% 同比</div>
+  </div>
+  <div class="data-card">
+    <div class="label">服务器出货增幅</div>
+    <div class="value">+13%</div>
+    <div class="tag-change">周变化</div><div class="tag-note">TrendForce 下调</div>
+  </div>
 </div>
-</div>
+
+
 
 <div class="section">
 <h2>⏱️ 本周供应商时间线</h2>
@@ -240,8 +277,6 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <div class="analysis-box">
 <h4>📊 供应链全景分析</h4>
 <p>本周供应链数据显示，智能算力产业链呈现"上游涨价向下游传导"的结构性特征。存储方面，三星/SK海力士全面转向3-5年LTA长约，DRAM Q1同比涨100%、Q2环比再涨30%，HBM市场至2028年将突破1000亿美元（CAGR 40%），英伟达罕见请求三星跳过测试提前供货HBM4，韩国存储企业已从"乙方"跃升为"超级乙方"。服务器方面，AI服务器需求旺盛挤占通用服务器产能，TrendForce下调全球服务器出货增幅至13%，PMIC交期拉长至35-40周，液冷市场从89亿飙升至170亿美元，国产供应商正加速出海切入英伟达/谷歌供应链。中游云厂商在成本压力下集体涨价5%-34%，算力正从廉价基础设施转变为稀缺硬通货。</p>
-</div>
-
 </div>
 
 <div class="section">
@@ -317,8 +352,6 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <p>HBM技术正经历史上最密集的升级周期。从性能演进看，带宽从HBM2的256GB/s跃升至HBM4E的4TB/s，三年内增长超过15倍。从竞争格局看，SK海力士在HBM4市场预计占54%份额（三星28%），但在HBM4E上三星正加速追赶——其采用1c DRAM+4nm制程，5月将发首批样品，性能提升46%达11.7Gbps。从产能看，三大厂商合计占据全球逾95%市场，但扩产周期长达3年，短期内无法缓解供需紧张。远见智存发布自研HBM3/3e芯片虽在带宽（819GB/s）上接近JEDEC标准，但与海力士/三星仍有代际差距，量产经济性和客户认可度仍待验证。长期来看，HBM市场的供不应求格局将至少持续至2027-2028年，价格上行趋势难以逆转。</p>
 </div>
 
-</div>
-
 <div class="section">
 <h2>6.3 中游：算力服务商竞争格局</h2>
 
@@ -386,8 +419,6 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <div class="analysis-box">
 <h4>📊 算力服务商格局分析</h4>
 <p>算力服务市场正经历从"资源稀缺"到"价值重构"的深刻转变。综合云厂商通过涨价将硬件成本压力转嫁，而专业算力租赁平台则凭借灵活性抢占中小企业市场——协创数据Q1净利润预增284%-402%印证了算力租赁的高景气。MaaS平台格局呈现"大厂主导、创业公司差异化"特征：阿里/腾讯/百度/华为/字节凭借资金和生态优势占据主体市场，智谱AI则通过API调用量激增（2月三度提价）验证了技术立身路径。工信部"算力银行/算力超市"政策将加速算力普惠化，中小企业获取高端算力的门槛降低，有利于整体AI产业健康发展，但也将加剧中游服务商的竞争烈度，具备成本优势和客户资源者将胜出。</p>
-</div>
-
 </div>
 
 <div class="section">
@@ -458,8 +489,6 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <div class="analysis-box">
 <h4>📊 供应链国产化趋势分析</h4>
 <p>国产化替代在算力供应链各环节呈现"梯度推进、局部突破"特征。在芯片设计环节，寒武纪/海光/华为已具备量产能力，但在高端HBM领域仍存在代际差距——远见智存自研HBM3/3e的发布虽具里程碑意义（819GB/s带宽，全栈IP自主），但与SK海力士/三星的HBM4E（4TB/s）仍有明显差距，量产成熟度有待验证。在液冷设备环节，国产厂商已实现"反向出海"——英维克CDU通过谷歌认证、高澜股份进入英伟达GB300核心认证体系，标志着技术实力获得全球顶级客户认可。液冷产业链优势在于交付能力和非标定制响应速度，"两个月内完成设备安装测试"的能力是海外竞争对手难以匹配的。展望2026-2027年，在英伟达供应链开放（GB300允许ODM自选供应商）和终端CSP对性价比重视的双重驱动下，国产液冷/散热供应商有望在北美市场抢占可观份额。</p>
-</div>
-
 </div>
 
 <div class="section">
@@ -540,10 +569,11 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 </ul>
 </div>
 
+
+</div><!-- end container -->
 <footer>
 <p>© 2026 中国智能算力周报 | 第16期 | 数据更新：2026-04-22</p>
 </footer>
-</div>
 <div class="chapter-nav">
     <a href="技术趋势发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
