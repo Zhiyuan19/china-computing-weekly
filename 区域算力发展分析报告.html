@@ -17,6 +17,11 @@ body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f
 
 /* === 数据说明 === */
 .data-note { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 12px 18px; margin-bottom: 20px; border-radius: 4px; font-size: 0.85em; color: #333; }
+.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
+.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
+.overview-text strong { color: #0f3460; }
+.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
 
 /* === 数据卡片 === */
 .data-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }
@@ -119,6 +124,8 @@ tr:hover { background: #e8f4fd; }
 <a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
 </div>
 </div>
+
+<div class="chapter-overview"><div class="overview-title">📋 本章关键概述</div><div class="overview-text">本章围绕中国智能算力「<strong>八大国家算力枢纽</strong>」展开系统性分析，覆盖<span style="color:#e53935;font-weight:700">内蒙古·宁夏·贵州·甘肃</span>四大清洁能源枢纽与<span style="color:#e53935;font-weight:700">长三角·粤港澳·成渝·京津冀</span>四大产业聚集枢纽。政策层面，国家「<em>东数西算</em>」工程持续推进，西部枢纽享受土地绿电政策倾斜，吸引华为云、阿里云等头部厂商<span style="color:#e53935;font-weight:700">6个新建项目</span>落地。市场层面，<span style="color:#e53935;font-weight:700">韶关、乌兰察布、中卫、庆阳、芜湖、上海</span>六大节点周内密集公布扩建计划，全国总算力规模逼近<span style="color:#e53935;font-weight:700">1900 EFLOPS</span>。竞争格局上，<em>算力券补贴</em>与<em>算力互联互通</em>成为各地政策新焦点，宁夏中卫率先发放<span style="color:#e53935;font-weight:700">6000万元算力补贴</span>，算力调度平台建设从规划进入<span style="color:#e53935;font-weight:700">实测阶段</span>。</div></div>
 
 <div class="data-note">
   <strong>数据口径说明：</strong>各枢纽总算力包含智算+通算混合口径；"万P"为每秒10^15次浮点运算；周变化指<span style="color:#e53935">与上期（04-13）对比</span>；<span style="color:#2e7d32">绿色标注</span>为显著变化（&gt;5000P或&gt;5%）；PUE为数据中心能效比（越低越好）。
