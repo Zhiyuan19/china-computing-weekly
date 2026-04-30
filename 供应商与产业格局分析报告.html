@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>六、供应商与产业格局 - 中国智能算力周报</title>
+<title>六、供应商与产业格局 | 第17期</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
+
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
@@ -153,13 +155,15 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
+
+
 </style>
 </head>
 <body>
 <header>
 <h1>🏭 六、供应商与产业格局</h1>
-<p style="margin-top:8px;opacity:0.9;">智能算力产业链供应链深度解析 | 2026-04-15 — 2026-04-22</p>
-<p style="margin-top:4px;opacity:0.7;font-size:0.85em;">第16期 | 数据更新周期：2026-04-22</p>
+<p style="margin-top:8px;opacity:0.9;">智能算力产业链供应链深度解析 | 2026-04-22 — 2026-04-29</p>
+<p style="margin-top:4px;opacity:0.7;font-size:0.85em;">第17期 | 数据更新周期：2026-04-29</p>
 </header>
 
 <div class="container">
@@ -181,52 +185,55 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">本周是<span style="color:#e53935;font-weight:700">存储器供应链深度重组</span>的预警节点，核心特征是"HBM-液冷-合约"三重变化。<strong>存储层面</strong>，HBM市场规模2025年350亿美元→2028年预计1000亿美元，DRAM价格Q1涨幅100%，特斯拉4月DRAM供应量激增3倍，存储器短缺格局可能持续至2027年，<em>"从现货市场转向3-5年长约"</em>成为行业新常态。<strong>液冷层面</strong>，液冷市场2026年预计达170亿美元，服务器市场7560亿美元，液冷设备产能饱和，英维克/欧陆通扩产紧迫。<strong>合约层面</strong>，三星/海力士转向3-5年长期合约锁定客户，远见智存发布自研HBM3/3e芯片，HBM4/HBM4E成为下一代竞争焦点，上游供应链从"供过于求"快速切换至"供不应求"轨道。</div>
+<div class="overview-text">本周(04-22至04-29)中国智能算力供应链迎来多重变局：超聚变完成IPO辅导、液冷龙头英维克一季报净利润暴跌82%引发板块震荡、存储芯片涨价向下游传导催生云服务20年首轮集体涨价、国产算力适配DeepSeek-V4加速落地。供应链正从国产替代单一叙事，转向技术代际跨越+全球供应链博弈双轨并行的新阶段。</div>
 </div>
 
 <div class="data-note" style="background:#e8f4fd;border-left:4px solid #2196F3;padding:12px 16px;margin:20px 0;font-size:12px;color:#555;border-radius:4px;">
-  📌 <strong>数据周期：</strong>2026-04-15 — 2026-04-22　|　<strong>数据来源：</strong>各厂商官网、CFM闪存市场、IDC、TrendForce、证券时报、财联社等　|　<strong>置信度：</strong>高
+  📌 <strong>数据周期：</strong>2026-04-22 — 2026-04-29　|　<strong>数据来源：</strong>各厂商官网、CFM闪存市场、IDC、TrendForce、证券时报、财联社等　|　<strong>置信度：</strong>高
 </div>
 
 <div class="data-cards">
-  <div class="data-card">
-    <div class="label">HBM 市场规模（2025）</div>
-    <div class="value">350 亿美元</div>
-    <div class="tag-change">周变化</div><div class="tag-note">+40% CAGR 至 2028</div>
-  </div>
-  <div class="data-card">
-    <div class="label">HBM 市场规模（2028E）</div>
-    <div class="value">1000 亿美元</div>
-    <div class="tag-change">周变化</div><div class="tag-note">突破千亿</div>
-  </div>
-  <div class="data-card">
-    <div class="label">液冷市场（2026E）</div>
-    <div class="value">170 亿美元</div>
-    <div class="tag-change">周变化</div><div class="tag-note">同比 +91%</div>
-  </div>
-  <div class="data-card">
-    <div class="label">服务器市场（2026E）</div>
-    <div class="value">7560 亿美元</div>
-    <div class="tag-change">季变化</div><div class="tag-note">同比 +75%</div>
-  </div>
-  <div class="data-card">
-    <div class="label">DRAM 价格涨幅（Q1）</div>
-    <div class="value">+100%</div>
-    <div class="tag-change">周变化</div><div class="tag-note">+100% 同比</div>
-  </div>
-  <div class="data-card">
-    <div class="label">服务器出货增幅</div>
-    <div class="value">+13%</div>
-    <div class="tag-change">周变化</div><div class="tag-note">TrendForce 下调</div>
-  </div>
+<div class="data-card">
+    <div class="label">超聚变估值</div>
+    <div class="value">610亿元</div>
+    <div class="tag up">周变化(本周)</div>    <div class="tag-note">4月25日完成IPO辅导，估值89.2亿美元</div>
+</div>
+<div class="data-card">
+    <div class="label">英维克Q1净利润</div>
+    <div class="value">866万元</div>
+    <div class="tag down">周变化(本周)</div>    <div class="tag-note">同比-81.97%，连续两日跌停</div>
+</div>
+<div class="data-card">
+    <div class="label">DRAM合同价</div>
+    <div class="value">35-40美元</div>
+    <div class="tag up">周变化(本周)</div>    <div class="tag-note">4月创历史新高，HBM挤占通用DRAM产能</div>
+</div>
+<div class="data-card">
+    <div class="label">液冷渗透率</div>
+    <div class="value">37%</div>
+    <div class="tag up">月变化</div>    <div class="tag-note">中国液冷服务器渗透率预计2026年达37%</div>
+</div>
+<div class="data-card">
+    <div class="label">云厂商调价</div>
+    <div class="value">最高34%</div>
+    <div class="tag up">周变化(本周)</div>    <div class="tag-note">阿里云、百度云、腾讯云AI算力涨价5%-34%</div>
 </div>
 
-
+</div>
 
 <div class="section">
 <h2>⏱️ 本周供应商时间线</h2>
 <div class="timeline">
-<div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">特斯拉4月DRAM供应量激增3倍</div><div class="timeline-source">来源：财联社</div><div class="timeline-impact">三星电子向特斯拉月度供应8GB GDDR6 DRAM较Q1增长3倍，满足车载信息娱乐和自动驾驶存储需求</div></div><div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">存储器短缺或持续至2027年</div><div class="timeline-source">来源：日经中文网</div><div class="timeline-impact">Counterpoint Research指出存储供应年增率需达12%才能解决短缺，但目前仅7.5%，预计2028年才能全面恢复</div></div><div class="timeline-item"><div class="timeline-date">04-21</div><div class="timeline-title">远见智存发布自研HBM3/3e芯片</div><div class="timeline-source">来源：中国日报</div><div class="timeline-impact">推出24GB与12GB两款产品，带宽819GB/s，国内企业首次实现HBM全栈自主设计，摆脱国外IP依赖</div></div><div class="timeline-item"><div class="timeline-date">04-20</div><div class="timeline-title">三星海力士转向3-5年长期合约</div><div class="timeline-source">来源：凤凰网</div><div class="timeline-impact">两大存储巨头放弃短期合同模式，全面转向LTA长约，DRAM价格或已临近上行顶点，市场格局重塑</div></div><div class="timeline-item"><div class="timeline-date">04-18</div><div class="timeline-title">液冷服务器市场规模将翻倍</div><div class="timeline-source">来源：21世纪经济报道</div><div class="timeline-impact">摩根大通预测2026年全球AI服务器液冷系统市场从89亿美元飙升至170亿美元，国产供应链加速出海</div></div><div class="timeline-item"><div class="timeline-date">04-17</div><div class="timeline-title">国内云厂商集体上调AI服务价格</div><div class="timeline-source">来源：证券日报</div><div class="timeline-impact">阿里云/腾讯云/百度智能云等涨价5%-34%，智谱AI两个月内三度提价，算力从廉价基础设施变为稀缺硬通货</div></div><div class="timeline-item"><div class="timeline-date">04-17</div><div class="timeline-title">美银预测服务器市场2030年达1.5万亿美元</div><div class="timeline-source">来源：财联社</div><div class="timeline-impact">AI服务器营收占比将达83%，2026年AI服务器出货同比增28%，ODM厂商占AI服务器出货量84%</div></div><div class="timeline-item"><div class="timeline-date">04-16</div><div class="timeline-title">TrendForce下调2026年服务器出货增幅至13%</div><div class="timeline-source">来源：IT之家</div><div class="timeline-impact">AI服务器需求旺盛挤占通用服务器零部件产能，PMIC交期35-40周，BMC交期21-26周</div></div><div class="timeline-item"><div class="timeline-date">04-15</div><div class="timeline-title">三星电子HBM4E样品5月发布</div><div class="timeline-source">来源：CFM闪存市场</div><div class="timeline-impact">采用4nm制程+1c DRAM，带宽4.0TB/s，计划下半年将HBM4良率提升至接近完工水平，向英伟达送样</div></div><div class="timeline-item"><div class="timeline-date">04-13</div><div class="timeline-title">英伟达请求三星提前供货HBM4</div><div class="timeline-source">来源：朝鲜日报</div><div class="timeline-impact">英伟达因AMD/谷歌加速追赶，请求跳过品质测试先行供应HBM4，韩国存储企业已成'超级乙方'</div></div>
+<div class="timeline-item"><div class="timeline-date">04-28</div><div class="timeline-title">英伟达H200对华交付不确定 英媒称中国拒收</div><div class="timeline-source">来源：路透社/HK01</div><div class="timeline-impact">中国海关阻止H200进入，供应商已暂停生产；H200性能约为H20六倍，若落地将重塑中国AI芯片供应格局</div></div>
+<div class="timeline-item"><div class="timeline-date">04-27</div><div class="timeline-title">超聚变IPO辅导完成 估值610亿元冲刺A股</div><div class="timeline-source">来源：界面新闻/证监会</div><div class="timeline-impact">脱胎华为的算力独角兽完成上市辅导，2025年营收目标600亿元，液冷服务器市占率连续两年第一</div></div>
+<div class="timeline-item"><div class="timeline-date">04-25</div><div class="timeline-title">SK海力士美国HBM封装厂动工 投资38.7亿美元</div><div class="timeline-source">来源：TrendForce/集邦咨询</div><div class="timeline-impact">2028年下半年投产HBM4E/HBM5，SK海力士全球HBM市场份额约50%，在美国本土扩产减少对中国市场依赖</div></div>
+<div class="timeline-item"><div class="timeline-date">04-24</div><div class="timeline-title">高盛上调存储涨幅预期 DRAM看涨280%</div><div class="timeline-source">来源：财联社/高盛</div><div class="timeline-impact">AI服务器需求+供给收缩+低库存三重共振，存储紧缺周期延长至2027年，HBM产能优先导致传统DRAM更紧缺</div></div>
+<div class="timeline-item"><div class="timeline-date">04-24</div><div class="timeline-title">生益电子AI算力产品营收同比增长242%</div><div class="timeline-source">来源：证券时报</div><div class="timeline-impact">PCB/ABF载板受益AI服务器升级，AI算力相关产品已形成规模化量产，收入利润双爆发</div></div>
+<div class="timeline-item"><div class="timeline-date">04-23</div><div class="timeline-title">英维克连续跌停 液冷龙头Q1净利润下滑82%</div><div class="timeline-source">来源：中国经营报/维科网</div><div class="timeline-impact">液冷行业从概念炒作进入业绩兑现期，英维克增收不增利暴露行业价格战+重资产模式的盈利困境</div></div>
+<div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">英维克跌停 净利润同比下降81.97%</div><div class="timeline-source">来源：证券时报</div><div class="timeline-impact">财务费用大涨+IDC建设节奏变慢+坏账增加，液冷龙头财务压力凸显，引发板块估值回调</div></div>
+<div class="timeline-item"><div class="timeline-date">04-22</div><div class="timeline-title">中国移动启动2026年PC服务器集采 ARM占比65%</div><div class="timeline-source">来源：中国经营报</div><div class="timeline-impact">ARM架构占比从追赶变为主流，国产供应链围绕ARM生态加速成熟，运营商集采重构服务器竞争格局</div></div>
+<div class="timeline-item"><div class="timeline-date">04-21</div><div class="timeline-title">Omdia上调2026年半导体预测至增长62.7%</div><div class="timeline-source">来源：Omdia/BusinessWire</div><div class="timeline-impact">AI驱动存储超级周期，HBM挤占通用DRAM供给，计算与存储板块2026年增长90%，紧缺持续至2027年下半年</div></div>
+<div class="timeline-item"><div class="timeline-date">04-20</div><div class="timeline-title">存储超级周期进入业绩兑现期 Q1多家厂商盈利超去年全年</div><div class="timeline-source">来源：上海证券报</div><div class="timeline-impact">佰维存储Q1净利润为去年全年3.3倍，AI服务器对DRAM需求是传统服务器8倍，存储企业进入结构性增长阶段</div></div>
 </div>
 </div>
 
@@ -244,335 +251,282 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <tr><td><strong>下游</strong></td><td>大模型训练、AI应用、数字化转型</td><td>互联网企业、政企客户、科研机构</td><td><span class="time-dim">持续</span></td></tr>
 </table>
 
-<h4>供应链上游：芯片与存储</h4>
-<table>
-<tr><th>供应商</th><th>主营产品</th><th>本周动态</th><th>时间维度</th></tr>
-<tr><td>SK海力士</td><td>HBM3E/HBM4</td><td>正与谷歌洽谈5年期DRAM长约；HBM4市占率预计54%</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>三星电子</td><td>HBM4/HBM4E</td><td>5月发布首批HBM4E样品；已量产HBM4</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>美光科技</td><td>HBM3E</td><td>2027年在爱达荷州和新加坡生产HBM；资本支出上调至200亿美元</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>台积电</td><td>先进制程代工</td><td>魏哲家表示不会剧烈调价，坚持长期稳定原则</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>远见智存</td><td>HBM3/3e</td><td>发布自研HBM3/3e芯片（24GB/12GB），带宽819GB/s</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-</table>
-
-<h4>供应链中游：服务器与集成</h4>
-<table>
-<tr><th>供应商</th><th>市场地位</th><th>本周动态</th><th>时间维度</th></tr>
-<tr><td>浪潮信息</td><td>全球液冷服务器龙头（60%+份额）</td><td>4月斩获字节跳动百亿级AI订单，液冷占比超85%</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>工业富联</td><td>全球AI服务器代工之王（30%+份额）</td><td>GB200/GB300独家代工，订单排至2028年</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>英维克</td><td>精密温控龙头</td><td>CDU通过谷歌认证；入选英伟达Blackwell平台40家核心供应商</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>高澜股份</td><td>液冷双路线霸主</td><td>英伟达GB300核心认证供应商；在手订单14.56亿元</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>曙光数创</td><td>浸没式液冷国家队</td><td>兆瓦级相变浸没液冷，PUE降至1.04以下</td><td><span class="time-dim">持续</span></td></tr>
-</table>
-
-<h4>供应链下游：云服务与算力租赁</h4>
-<table>
-<tr><th>供应商</th><th>服务类型</th><th>本周动态</th><th>时间维度</th></tr>
-<tr><td>阿里云</td><td>公有云/AI服务</td><td>百炼平台价格上调2%-7%</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>腾讯云</td><td>公有云/AI服务</td><td>AI算力等产品5月9日起涨价5%</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>百度智能云</td><td>公有云/AI服务</td><td>相关服务价格上调5%-30%</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>硅基流动</td><td>专业算力租赁</td><td>推理服务需求激增，产能紧张</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>协创数据</td><td>算力租赁</td><td>预计Q1净利润6.5-8.5亿元，同比增284%-402%</td><td><span class="time-dim">月变化</span></td></tr>
-</table>
+<h3>6.1.2 本周供应链关键变化</h3>
+<p>本周中国智能算力供应链呈现「上游涨价传导+中游洗牌加速+国产替代深化」三重特征。存储芯片方面，DRAM合约价创历史新高（35-40美元区间），HBM产能优先挤占通用DRAM供给，涨价压力向下游云服务传导；服务器领域，超聚变完成IPO辅导、ARM架构在中国移动集采中占比达65%，国产化率持续提升；液冷赛道英维克净利润暴跌82%引发板块震荡，行业竞争逻辑正从「技术壁垒」向「规模效应+供应链准入」切换。</p>
 
 <div class="analysis-box">
-<h4>📊 供应链全景分析</h4>
-<p>本周供应链数据显示，智能算力产业链呈现"上游涨价向下游传导"的结构性特征。存储方面，三星/SK海力士全面转向3-5年LTA长约，DRAM Q1同比涨100%、Q2环比再涨30%，HBM市场至2028年将突破1000亿美元（CAGR 40%），英伟达罕见请求三星跳过测试提前供货HBM4，韩国存储企业已从"乙方"跃升为"超级乙方"。服务器方面，AI服务器需求旺盛挤占通用服务器产能，TrendForce下调全球服务器出货增幅至13%，PMIC交期拉长至35-40周，液冷市场从89亿飙升至170亿美元，国产供应商正加速出海切入英伟达/谷歌供应链。中游云厂商在成本压力下集体涨价5%-34%，算力正从廉价基础设施转变为稀缺硬通货。</p>
+本周末供应链核心变化集中在三个维度：<strong>第一</strong>，全球存储芯片供应紧张已传导至云服务价格端，阿里云、百度云、腾讯云集体调价5%-34%，为近20年来首次涨价潮；<strong>第二</strong>，超聚变IPO辅导完成，中国算力基础设施赛道迎来价值重估窗口；<strong>第三</strong>，液冷行业经历从概念到业绩验证的转折点，英维克一季度财务压力暴露行业痛点，价格竞争尚未见底。
+</div>
 </div>
 
 <div class="section">
 <h2>6.2 上游供应链：核心硬件供应态势</h2>
 
 <h3>6.2.1 AI芯片供应格局</h3>
-<h4>AI芯片供应格局</h4>
-<table>
-<tr><th>厂商</th><th>产品</th><th>市场份额/地位</th><th>时间维度</th></tr>
-<tr><td>英伟达</td><td>H100/H200/GB200/GB300</td><td>全球AI训练市场绝对主导，HBM需求占全球95%</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>AMD</td><td>MI300X/MI400X</td><td>GPU市场份额约10%-15%，ASIC MI350推进中</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>英特尔</td><td>Gaudi 3</td><td>以价格竞争力争夺推理市场份额</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>谷歌</td><td>TPU v7</td><td>自研芯片，2026年出货目标600万颗（+50%）</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>亚马逊</td><td>Trainium/Interentia</td><td>自研ASIC，TRN3为下一代AI训练芯片</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>微软</td><td>Maia 100/200</td><td>自研AI ASIC，液冷部署优先选项</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>Meta</td><td>MTIA T</td><td>自研推理芯片，液冷部署</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>华为</td><td>昇腾910B/910C</td><td>国产替代主力，液冷服务器核心供应商</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>寒武纪</td><td>思元系列</td><td>国产AI芯片设计，政务/电信领域渗透</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>海光信息</td><td>DCU系列</td><td>国产GPU，替代英伟达H800的主流选择</td><td><span class="time-dim">持续</span></td></tr>
-</table>
+<p>2026年4月，中国AI芯片供应格局呈现「海外高端受限+国产加速替代」的双轨态势。英伟达H200对华交付不确定性骤增，中国海关阻止H200进入，供应商已暂停相关生产；国内厂商寒武纪、华为昇腾加速规模化部署，DeepSeek-V4已全面适配昇腾生态。</p>
 
-<h4>AI服务器供应格局</h4>
+<h4>AI芯片供应格局对比</h4>
 <table>
-<tr><th>供应商</th><th>定位</th><th>竞争优势</th><th>时间维度</th></tr>
-<tr><td>浪潮信息</td><td>全球液冷服务器龙头</td><td>国内60%/全球50%+份额；700+液冷专利；英伟达GB300全系列认证</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>工业富联</td><td>全球AI服务器代工之王</td><td>30%+全球代工份额；GB200/GB300独家代工；订单排至2028年</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>戴尔</td><td>OEM最大受益者</td><td>2026年AI服务器收入约600亿美元（12%份额）；高端GPU配置比例高</td><td><span class="time-dim">季变化</span></td></tr>
-<tr><td>HPE惠与</td><td>差异化路线</td><td>专注网络业务；AI服务器营收65亿美元（平稳）</td><td><span class="time-dim">季变化</span></td></tr>
-<tr><td>超微电脑</td><td>定制化能力强</td><td>快速响应；但面临利润率压力和治理风险</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>宁畅</td><td>国产服务器新锐</td><td>液冷+AI服务器积极布局</td><td><span class="time-dim">持续</span></td></tr>
+<tr><th>厂商</th><th>产品</th><th>适用场景</th><th>市场份额（2025）</th><th>时间维度</th></tr>
+<tr><td><strong>英伟达</strong></td><td>H100/H200/H20</td><td>大模型训练/推理</td><td>国内约60%（受限）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>华为昇腾</strong></td><td>昇腾910B/910C/950</td><td>训练/推理全国产</td><td>约20%（快速提升）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>寒武纪</strong></td><td>思元370/270</td><td>推理为主</td><td>约8%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>AMD</strong></td><td>MI300X/MI350</td><td>训练/推理</td><td>约5%</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>百度昆仑</strong></td><td>昆仑芯2/3代</td><td>推理/边缘</td><td>约4%</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>其他国产</strong></td><td>燧原/天数/海光</td><td>推理/训练</td><td>约3%</td><td><span class="time-dim">持续</span></td></tr>
 </table>
-
-<div class="box">
-<strong>📌 关键数据：</strong>TrendForce下调2026年服务器出货增幅至13%（原为+20%），主因AI服务器挤占通用服务器零部件产能。AI服务器对DRAM需求是普通服务器8倍、对NAND需求是3倍，HBM已成为AI芯片"标配"。
-</div>
 
 <div class="analysis-box">
-<h4>📊 芯片供应格局分析</h4>
-<p>当前AI芯片格局呈现"英伟达主导、ASIC崛起、国产替代加速"三重特征。从市场份额看，英伟达及AWS/谷歌/AMD四家占据HBM需求95%，话语权空前集中。从产品趋势看，2026年主流产品从HBM3e向HBM4过渡，堆叠从8层向12层演进。从供应链看，三星已量产HBM4并计划5月发布HBM4E样品，SK海力士HBM4市占率预计达54%，美光HBM产能将在2027年开始释放。国产方面，寒武纪/海光/华为在政策推动下加速渗透政务电信领域，但高端芯片仍受制于先进制程产能瓶颈。服务器整机环节，ODM厂商占AI服务器出货量84%/收入80%，戴尔凭借高端GPU配置成为OEM最大受益者，浪潮信息则以液冷技术壁垒稳坐全球液冷服务器龙头。</p>
+本周最大变量在于英伟达H200对华交付不确定性骤增。据英媒报道，中国海关阻止H200进入，供应商已暂停生产。若H200最终无法落地，中国AI算力缺口将进一步扩大，华为昇腾、寒武纪等国产芯片将承担更重要的补位角色。值得注意的是，百度、阿里已开始使用自研芯片训练部分模型，英伟达在财报会上承认「竞争已至」，国产替代从被动补位走向主动替换。
 </div>
 
+<h3>6.2.2 服务器供应格局</h3>
+<p>本周服务器市场最大变量来自中国移动2026年PC服务器集采，ARM架构占比达65%，国产服务器生态迎来关键节点。超聚变完成IPO辅导、估值610亿元，液冷服务器市占率连续两年第一，成为国产服务器阵营的核心玩家。</p>
 
-<h3>6.2.2 HBM技术代际演进</h3>
-<h4>HBM技术代际演进时间线</h4>
+<h4>中国x86服务器整机市场份额（2025）</h4>
 <table>
-<tr><th>代数</th><th>单引脚速度</th><th>带宽</th><th>主要厂商</th><th>时间维度</th></tr>
-<tr><td>HBM2</td><td>2.0Gbps</td><td>256GB/s</td><td>三星/SK海力士/美光</td><td><span class="time-dim">年变化</span></td></tr>
-<tr><td>HBM2E</td><td>3.2Gbps</td><td>460GB/s</td><td>三星/SK海力士</td><td><span class="time-dim">年变化</span></td></tr>
-<tr><td>HBM3</td><td>6.4Gbps</td><td>819GB/s</td><td>SK海力士（率先量产）</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>HBM3E</td><td>8.0-9.6Gbps</td><td>1.2-1.6TB/s</td><td>SK海力士（主流）/三星/美光</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>HBM4</td><td>11.7Gbps</td><td>—</td><td>三星（已量产）/SK海力士（2026年）</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>HBM4E</td><td>16Gbps</td><td>4.0TB/s</td><td>三星（5月样品）/SK海力士（研发中）</td><td><span class="time-dim">周变化（本周）</span></td></tr>
+<tr><th>排名</th><th>厂商</th><th>市场份额（2025）</th><th>同比变化</th><th>时间维度</th></tr>
+<tr><td>1</td><td><strong>浪潮信息</strong></td><td>31.3%</td><td>+3.5pp</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>2</td><td><strong>超聚变</strong></td><td>12.7%</td><td>-1.1pp</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>3</td><td><strong>新华三</strong></td><td>12.5%</td><td>-0.5pp</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td>4</td><td><strong>联想</strong></td><td>10.7%</td><td>+0.8pp</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td>5</td><td><strong>中兴通讯</strong></td><td>8.5%</td><td>+0.3pp</td><td><span class="time-dim">持续</span></td></tr>
 </table>
-
-<h4>三大厂商HBM4/HBM4E进展对比</h4>
-<table>
-<tr><th>厂商</th><th>HBM4进展</th><th>HBM4E规划</th><th>制程/工艺</th><th>时间维度</th></tr>
-<tr><td>SK海力士</td><td>2026年开始量产8层/12层HBM4</td><td>2026年起陆续推出8/12/16层HBM4E及定制HBM4E</td><td>优先采用台积电3nm逻辑芯片</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>三星电子</td><td>2026年2月已宣布HBM4量产并交付商用</td><td>计划5月发布首批HBM4E样品；下半年将HBM4良率提至接近完工</td><td>1c DRAM + 4nm制程</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>美光科技</td><td>路线图中，2027年释放产能</td><td>规划中</td><td>1c DRAM工艺</td><td><span class="time-dim">月变化</span></td></tr>
-</table>
-
-<div class="box yellow">
-<strong>⚠️ 供应链预警：</strong>存储短缺或持续至2027年。Counterpoint Research指出要解决存储器短缺，年增率需达12%，但目前仅7.5%，预计2028年才能全面恢复。SK集团会长崔泰源表示"供应短缺可能持续到2030年"。
-</div>
-
-<div class="box">
-<strong>📌 HBM涨价动态：</strong>2025年底三星/SK海力士已将2026年HBM3e供应价格上调近20%；长江证券预计2026年Q2 HBM合约价格环比上涨30%-50%；下半年涨幅将趋于收敛。
-</div>
 
 <div class="analysis-box">
-<h4>📊 HBM技术代际分析</h4>
-<p>HBM技术正经历史上最密集的升级周期。从性能演进看，带宽从HBM2的256GB/s跃升至HBM4E的4TB/s，三年内增长超过15倍。从竞争格局看，SK海力士在HBM4市场预计占54%份额（三星28%），但在HBM4E上三星正加速追赶——其采用1c DRAM+4nm制程，5月将发首批样品，性能提升46%达11.7Gbps。从产能看，三大厂商合计占据全球逾95%市场，但扩产周期长达3年，短期内无法缓解供需紧张。远见智存发布自研HBM3/3e芯片虽在带宽（819GB/s）上接近JEDEC标准，但与海力士/三星仍有代际差距，量产经济性和客户认可度仍待验证。长期来看，HBM市场的供不应求格局将至少持续至2027-2028年，价格上行趋势难以逆转。</p>
+超聚变完成IPO辅导是本周服务器市场最重要事件。这家脱胎华为的算力独角兽2025年营收目标600亿元，液冷服务器市占率43%连续两年第一，但x86整体份额出现下滑1.1pp，说明在ARM架构替代趋势下，通用x86市场正在被侵蚀。中国移动集采ARM占比65%印证了这一趋势——运营商和云厂商正在主动重构服务器供应链架构，ARM生态的成熟度已成为选型的关键变量。
+</div>
+
+<h3>6.2.3 HBM技术代际演进</h3>
+<p>HBM（高带宽存储）是AI大模型训练的核心器件，全球HBM市场由SK海力士、三星、美光三家主导。2026年4月，SK海力士宣布在美国印第安纳州投资38.7亿美元建设先进封装工厂，计划2028年下半年投产HBM4E/HBM5；与此同时，存储厂商对扩产HBM的热情出现降温，传统DRAM的盈利能力已优于HBM。</p>
+
+<h4>全球HBM供应商技术代际对比</h4>
+<table>
+<tr><th>厂商</th><th>主要HBM产品</th><th>量产进度</th><th>产能占比</th><th>时间维度</th></tr>
+<tr><td><strong>SK海力士</strong></td><td>HBM3E（12层）/HBM4</td><td>HBM3E已量产，HBM4开发中</td><td>约50%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>三星电子</strong></td><td>HBM3E（12层）</td><td>已量产，良率改善中</td><td>约35%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>美光</strong></td><td>HBM3E</td><td>已量产，供货英伟达</td><td>约15%</td><td><span class="time-dim">持续</span></td></tr>
+</table>
+
+<h4>DRAM价格走势（2026年4月）</h4>
+<table>
+<tr><th>产品</th><th>价格区间</th><th>季度涨幅</th><th>历史位置</th><th>时间维度</th></tr>
+<tr><td>16Gb DDR5现货</td><td>约38.5美元</td><td>环比+20%+</td><td>过去25年最高</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>16Gb DDR4现货</td><td>约63.9美元</td><td>持续上涨</td><td>历史高位</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>DRAM合同价</td><td>35-40美元</td><td>Q1+80%，Q4+200%</td><td>历史新高</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>NAND合同价</td><td>约30美元</td><td>季度上涨</td><td>历史高位</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+</table>
+
+<div class="analysis-box">
+本周HBM领域最关键的变化不是技术，而是市场逻辑转向——存储厂商扩产HBM的热情降温，资本开支正加速回流传统DRAM。这一转向的核心原因有三：其一，传统DRAM（以LPDDR5为主）的利润率已显著优于HBM；其二，HBM4订单增速边际放缓；其三，基于NAND的KV缓存内存在AI推理场景中正快速增长，对HBM形成替代压力。Omdia大幅上调2026年半导体市场预测至增长62.7%，核心驱动力正是存储涨价，高盛更是将DRAM涨幅预期上调至250%-280%，存储超级周期已进入业绩兑现期，佰维存储Q1净利润已是去年全年的3.3倍。
+</div>
 </div>
 
 <div class="section">
 <h2>6.3 中游：算力服务商竞争格局</h2>
 
-<h3>6.3.1 综合云厂商</h3>
-<h4>国内综合云厂商AI服务价格调整</h4>
+<h3>6.3.1 综合云厂商对比</h3>
+<p>2026年3-4月，国内云服务市场迎来近20年来首次集体涨价潮，阿里云、百度智能云、腾讯云相继调价，背后核心逻辑是存储芯片涨价传导+Token消耗量爆发+供应链成本上升。本轮涨价主要针对AI算力类产品，涨幅5%-34%，标志着云厂商从「成本加成定价」向「价值定价」的战略升级。</p>
+
+<h4>中国头部云厂商AI算力调价对比（2026年3-4月）</h4>
 <table>
-<tr><th>厂商</th><th>调价产品</th><th>涨幅</th><th>生效时间</th><th>时间维度</th></tr>
-<tr><td>阿里云</td><td>百炼平台MU模型单元</td><td>2%-7%</td><td>4月15日</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>腾讯云</td><td>AI算力/容器服务/大数据分析工具</td><td>5%</td><td>5月9日</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>百度智能云</td><td>相关服务</td><td>5%-30%</td><td>—</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>科大讯飞</td><td>智算平台AI推理服务</td><td>8%</td><td>3月底</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>商汤科技</td><td>SenseCore大模型训练</td><td>12%</td><td>—</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>智谱AI</td><td>API价格</td><td>10%（2月以来第三次）</td><td>4月8日</td><td><span class="time-dim">周变化（本周）</span></td></tr>
+<tr><th>云厂商</th><th>调价时间</th><th>涨幅</th><th>主要涉及产品</th><th>时间维度</th></tr>
+<tr><td><strong>阿里云</strong></td><td>3月18日/4月</td><td>5%-34%</td><td>平头哥算力卡+文件存储智算版</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>百度智能云</strong></td><td>4月18日</td><td>5%-30%</td><td>AI算力+并行文件存储</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>腾讯云</strong></td><td>4月9日/5月9日</td><td>5%+</td><td>AI算力+容器服务+EMR</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>智谱AI</strong></td><td>4月8日</td><td>10%+</td><td>GLM-5.1模型API</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 </table>
 
-<h4>Token调用量爆发数据</h4>
+<h4>中国云计算厂商竞争格局（2026年Q1）</h4>
 <table>
-<tr><th>指标</th><th>数据</th><th>时间维度</th></tr>
-<tr><td>国内日均词元调用量（3月）</td><td>突破140万亿，比上年末增长超40%</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>中国AI词元调用量（3月第三周）</td><td>连续第三周超越美国</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>顶尖模型周词元调用量（2025年3月）</td><td>1.62T</td><td><span class="time-dim">年变化</span></td></tr>
-<tr><td>顶尖模型周词元调用量（2026年3月）</td><td>18T（近一年增幅1011%）</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>HBM价格（2026年Q1）</td><td>同比翻倍</td><td><span class="time-dim">季变化</span></td></tr>
-<tr><td>服务器市场（2026年）</td><td>7560亿美元（同比+75%）</td><td><span class="time-dim">季变化</span></td></tr>
-<tr><td>AI服务器市场（2026年）</td><td>4957亿美元（同比+104%）</td><td><span class="time-dim">季变化</span></td></tr>
+<tr><th>梯队</th><th>厂商</th><th>核心优势</th><th>时间维度</th></tr>
+<tr><td><strong>第一梯队</strong></td><td>阿里云、腾讯云、华为云</td><td>全栈云+AI算力+规模优势</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>第二梯队</strong></td><td>天翼云、移动云、金山云</td><td>运营商资源+政企渠道</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>第三梯队</strong></td><td>浪潮云、京东云、曙光云、优刻得</td><td>细分市场+差异化</td><td><span class="time-dim">持续</span></td></tr>
 </table>
-
-<div class="box red">
-<strong>⚠️ 廉价算力时代终结：</strong>此前两年多云厂商以"烧钱换市场"持续降价，Token成本压至每百万不到1元。但随着AI应用从"玩具"向"工具"转型，推理Token调用量激增导致电力/带宽/硬件折旧成本超出补贴上限，集体提价标志着算力从"圈地竞争"转向"商业可持续"。
-</div>
 
 <div class="analysis-box">
-<h4>📊 云厂商竞争格局分析</h4>
-<p>本周最显著的变化是算力服务价格的全面上涨。阿里云/腾讯云/百度智能云集体调价5%-34%，智谱AI两个月内三度提价，本质是成本压力向下游传导。四大涨价驱动因素：①HBM等硬件成本暴涨（Q1存储价格翻倍）；②推理Token调用量爆发（18T/周，同比增1011%）；③商业模式从"圈地"转向"盈利"；④全球高端算力租赁容量告急。这一轮涨价将加速行业出清——具备自研芯片的厂商（华为云、阿里云）可凭借成本优势进一步挤压二线厂商，而缺乏差异化能力的中小云服务商将面临生存压力。从长期看，算力价格上涨周期尚未结束，只有能创造实际商业价值的AI应用才能支撑更高的算力成本。</p>
+本轮云服务涨价的底层逻辑是AI算力需求井喷导致的「内存墙」危机。2026年Q1常规DRAM合约价涨幅高达90%-95%，服务器内存价格近乎翻倍。三星、SK海力士、美光三大存储巨头将超过70%的产能优先分配给HBM，通用DRAM供给大幅压缩，直接推高云厂商运营成本。更深层的变化在于：AI Agent（如OpenClaw）的普及使推理端算力需求爆发式增长，Token消耗量持续攀升，云厂商正将紧缺算力资源向Token业务倾斜，这加速了行业从「规模竞争」向「价值竞争」的转型。
 </div>
 
+<h3>6.3.2 专业算力租赁平台竞争格局</h3>
+<p>在全球算力慌背景下，专业算力租赁平台（硅基流动、蓝耘科技、AutoDL、并行科技等）成为AI开发者的重要选择。本周数据显示，头部算力租赁厂商算力规模已超万匹，涨价周期中业绩弹性显著。</p>
 
-<h3>6.3.2 专业算力租赁平台</h3>
-<h4>专业算力租赁平台对比</h4>
+<h4>中国专业算力租赁平台对比（算力规模超万P）</h4>
 <table>
-<tr><th>平台</th><th>定位</th><th>优势</th><th>时间维度</th></tr>
-<tr><td>硅基流动</td><td>专业推理算力租赁</td><td>高端GPU资源整合；灵活计费模式</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>蓝耘科技</td><td>GPU算力租赁</td><td>价格竞争力强；客户服务灵活</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>AutoDL</td><td>深度学习平台</td><td>性价比高；社区活跃</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>并行科技</td><td>超算/智算服务</td><td>HPC技术积累深厚；国家超算中心资源</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>协创数据</td><td>智能算力服务</td><td>Q1净利润预增284%-402%；核心业务爆发</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>宏景科技</td><td>算力租赁</td><td>股价屡创新高；获资本市场认可</td><td><span class="time-dim">持续</span></td></tr>
+<tr><th>公司</th><th>算力规模</th><th>核心优势</th><th>业绩表现</th><th>时间维度</th></tr>
+<tr><td><strong>协创数据</strong></td><td>约30,000P</td><td>国内第二大SSD制造商+英伟达合作</td><td>Q1净利润同比+284%-402%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>利通电子</strong></td><td>33,000P（含转租18,000P）</td><td>精密金属结构件切入算力</td><td>2025年净利润预增997%-1241%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>润泽科技</strong></td><td>大规模智算中心</td><td>字节跳动数据中心核心供应商</td><td>算力建设提速</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>优刻得</strong></td><td>超10,000P</td><td>第三方云+智谱AI底层算力</td><td>规模增长中</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>首都在线</strong></td><td>10,000P，规划超50,000P</td><td>全球云网一体化</td><td>自建数据中心推进</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>平治信息</strong></td><td>约15,000P</td><td>运营商权益类产品</td><td>2025年净利润预增94%-164%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
 </table>
 
 <h4>MaaS平台格局</h4>
 <table>
-<tr><th>平台</th><th>母公司</th><th>特色</th><th>时间维度</th></tr>
-<tr><td>百炼平台</td><td>阿里云</td><td>模型丰富；调用量国内领先</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>腾讯云MaaS</td><td>腾讯</td><td>混元大模型；企业级服务</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>百度智能云MaaS</td><td>百度</td><td>文心一言；ERINE Bot</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>火山MaaS</td><td>字节跳动</td><td>豆包大模型；TikTok生态</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>华为云MaaS</td><td>华为</td><td>盘古大模型；昇腾算力</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>智谱AI</td><td>智谱华章</td><td>GLM-5-Turbo；API调用量激增</td><td><span class="time-dim">持续</span></td></tr>
+<tr><th>平台</th><th>母公司</th><th>核心能力</th><th>时间维度</th></tr>
+<tr><td><strong>阿里云百炼</strong></td><td>阿里巴巴</td><td>模型训练+推理+API</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>百度智能云千帆</strong></td><td>百度</td><td>DeepSeek-V4 Day0适配</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>华为云ModelArts</strong></td><td>华为</td><td>昇腾+鲲鹏全栈</td><td><span class="time-dim">持续</span></td></tr>
+<tr><td><strong>硅基流动</strong></td><td>独立平台</td><td>高性价比推理服务</td><td><span class="time-dim">持续</span></td></tr>
 </table>
 
-<div class="box green">
-<strong>📌 政策动态：</strong>工信部4月发布《普惠算力赋能中小企业发展专项行动》，推出"算力银行"与"算力超市"两大创新模式——算力银行将散落算力资源化/标准化/金融化，算力超市降低交易门槛。工信部预计日均词元调用量2026年将突破140万亿。
-</div>
-
 <div class="analysis-box">
-<h4>📊 算力服务商格局分析</h4>
-<p>算力服务市场正经历从"资源稀缺"到"价值重构"的深刻转变。综合云厂商通过涨价将硬件成本压力转嫁，而专业算力租赁平台则凭借灵活性抢占中小企业市场——协创数据Q1净利润预增284%-402%印证了算力租赁的高景气。MaaS平台格局呈现"大厂主导、创业公司差异化"特征：阿里/腾讯/百度/华为/字节凭借资金和生态优势占据主体市场，智谱AI则通过API调用量激增（2月三度提价）验证了技术立身路径。工信部"算力银行/算力超市"政策将加速算力普惠化，中小企业获取高端算力的门槛降低，有利于整体AI产业健康发展，但也将加剧中游服务商的竞争烈度，具备成本优势和客户资源者将胜出。</p>
+专业算力租赁平台正在成为本轮算力涨价周期的核心受益者。协创数据Q1净利润同比暴涨284%-402%，利通电子2025年全年净利润预增近10倍，印证了算力供需紧张背景下第三方算力平台的业绩弹性。值得注意的是，Token消耗量爆发正在重构算力定价逻辑——国家数据局数据显示中国日均AI Token使用量已突破140万亿，较2025年末增长超4倍，算力从「资源」升级为「商品」，具备规模化供给能力的平台将持续享受溢价红利。
+</div>
 </div>
 
 <div class="section">
 <h2>6.4 供应链对智能算力建设的影响</h2>
 
 <h3>6.4.1 当前供应链挑战</h3>
-<h4>当前供应链核心挑战</h4>
+<p>2026年4月，中国智能算力供应链面临多重挑战叠加：芯片侧，英伟达H200对华交付不确定性骤增，若最终无法落地将加剧高端算力缺口；存储侧，HBM产能优先挤占通用DRAM，DRAM合约价创历史新高（35-40美元区间），涨价压力逐级传导至云服务和AI应用端；成本侧，液冷、散热、供电等基础设施成本持续上行，IDC建设节奏变慢、项目实施周期拉长，导致坏账准备增加。</p>
+
+<h4>智能算力供应链当前主要挑战</h4>
 <table>
-<tr><th>挑战</th><th>具体表现</th><th>影响程度</th><th>时间维度</th></tr>
-<tr><td>HBM供应短缺</td><td>三大厂商产能已被长期订单锁定；短缺或持续至2027-2028年</td><td>★★★★★</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>通用服务器零部件被挤占</td><td>PMIC交期35-40周（正常8-12周）；BMC交期21-26周（正常11-16周）</td><td>★★★★☆</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>芯片制造产能受限</td><td>光刻机产能无法满足AI需求；8英寸晶圆厂持续关闭</td><td>★★★★☆</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>存储价格暴涨</td><td>DRAM Q1同比+100%、Q2环比+30%；NAND 2026年同比+108%</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>服务器整机涨价</td><td>OEM服务器ASP同比+35%；ODM产品+10%</td><td>★★★★☆</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>汽车等行业"存储荒"</td><td>特斯拉4月DRAM供应量增3倍；福特称内存受限影响产量</td><td>★★★☆☆</td><td><span class="time-dim">周变化（本周）</span></td></tr>
+<tr><th>挑战类型</th><th>具体表现</th><th>影响程度</th><th>时间维度</th></tr>
+<tr><td><strong>高端芯片受限</strong></td><td>H200对华交付不确定，中国海关阻止进口</td><td>高（高端训练算力缺口扩大）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>HBM供应紧张</strong></td><td>三大厂70%+产能供HBM，通用DRAM供给收缩</td><td>高（DRAM涨价向下游传导）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>基础设施成本高企</strong></td><td>液冷设备、冷却液、CDU价格上涨</td><td>中（利润率承压）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>IDC建设节奏放缓</strong></td><td>项目周期拉长、结算回款延迟、坏账增加</td><td>中（财务压力向供应商传导）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>价格竞争加剧</strong></td><td>液冷市场同质化、龙头净利率下滑</td><td>中（行业出清前奏）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>汇率波动风险</strong></td><td>人民币升值导致海外业务汇兑损失</td><td>低-中（英维克Q1财务费用大涨）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 </table>
-
-<h4>供应链涨价传导链条</h4>
-<div class="box">
-<p><strong>上游涨价→中游承压→下游传导：</strong></p>
-<p>① HBM/DDR5等存储芯片涨价（三星/SK海力士全面转向3-5年LTA长约，DRAM价格Q1同比+100%）</p>
-<p>↓</p>
-<p>② 芯片制造/封装产能紧张（CoWoS封装扩产周期长；8英寸晶圆厂持续关闭）</p>
-<p>↓</p>
-<p>③ AI服务器价格暴涨（ASP同比+35%至+50%）</p>
-<p>↓</p>
-<p>④ 云厂商算力服务涨价（5%-34%）</p>
-<p>↓</p>
-<p>⑤ 大模型API涨价（智谱AI三个月三度提价，个别场景价格接近翻倍）</p>
-</div>
-
-<div class="box yellow">
-<strong>⚠️ 产能瓶颈预警：</strong>三星龙仁产业园项目预计2026年下半年开工（总投资360万亿韩元）；SK海力士龙仁工厂力争2027年2月竣工（较原计划提前3个月）；美光广岛厂房2026年5月动工、2028年量产——短期产能释放仍极为有限。
-</div>
 
 <div class="analysis-box">
-<h4>📊 供应链挑战分析</h4>
-<p>当前供应链瓶颈呈现"结构性紧张、短期无法缓解"特征。根本原因是AI算力需求爆发式增长与存储/芯片产能扩张周期之间的错配——存储产能扩张需3年，先进封装扩产需1-2年，而AI需求增速远超供给增速。两大关键信号：①三星/SK海力士放弃短期合同全面转向3-5年LTA长约，表面是锁定客户，实质是对未来2-3年内供需紧张格局的预判；②英伟达罕见请求三星跳过品质测试提前供货HBM4，说明算力短缺已让芯片巨头失去议价耐心。供应链紧张对智能算力建设的影响：①项目交付周期延长（PCB/CPU交期近1年）；②建设成本大幅抬升（服务器ASP涨35%）；③算力稀缺性推高租赁/云服务价格。国产替代是破局关键，但高端芯片/存储的物理壁垒非短期可突破。</p>
+本周最值得关注的供应链挑战并非来自单一节点，而是来自「涨价传导链」的系统性压力。从HBM产能优先→通用DRAM供给收缩→DRAM合约价创历史新高→云服务涨价→AI应用成本上升，这条涨价传导链正在重构整个智算产业的价值分配。英维克净利润暴跌82%只是这一链条的早期症状——当IDC建设方因成本压力放缓建设节奏，上游设备供应商的回款周期拉长、坏账增加，财务压力将沿着供应链逐级传导。高盛预计本轮存储紧缺周期将延长至2027年，中下游厂商需做好「成本高位运行2-3年」的压力测试。
 </div>
 
+<h3>6.4.2 供应链国产化趋势预测</h3>
+<p>2026年，中国智能算力供应链国产化进入深水区。AI芯片国产化率从2025年上半年的35%提升至2025年下半年的46%，预计2026年进一步提升。DeepSeek-V4全面适配华为昇腾、寒武纪等国产芯片，国产算力生态从「可用」走向「好用」。</p>
 
-<h3>6.4.2 供应链国产化趋势</h3>
-<h4>国产化替代进展</h4>
+<h4>中国智算供应链国产化进度（2026年4月）</h4>
 <table>
-<tr><th>领域</th><th>国产代表</th><th>替代进程</th><th>时间维度</th></tr>
-<tr><td>AI芯片设计</td><td>寒武纪、海光信息、华为</td><td>政务/电信领域加速渗透；海光DCU成替代H800主流选择</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>HBM存储</td><td>远见智存（最新突破）</td><td>发布自研HBM3/3e（24GB/12GB），全栈IP自主，摆脱国外IP依赖</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>服务器整机</td><td>浪潮信息、宁畅</td><td>浪潮液冷服务器国内60%+份额；宁畅积极布局AI</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>液冷设备</td><td>英维克、高澜股份、曙光数创、申菱环境</td><td>冷板/浸没全路线覆盖；切入英伟达/谷歌供应链</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>半导体设备</td><td>北方华创、中微公司</td><td>刻蚀/薄膜沉积取得突破；国产化率提升</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>冷却液</td><td>巨化股份</td><td>电子氟化液打破3M垄断；国内唯一量产</td><td><span class="time-dim">持续</span></td></tr>
+<tr><th>环节</th><th>国产化率（2025下半年）</th><th>目标（2028）</th><th>关键突破</th><th>时间维度</th></tr>
+<tr><td><strong>AI芯片</strong></td><td>46%</td><td>65%+</td><td>昇腾950、寒武纪思元370量产</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>服务器整机</strong></td><td>约40%</td><td>65%</td><td>超聚变+浪潮+华为ARM架构</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>液冷设备</strong></td><td>约60%</td><td>80%</td><td>核心部件国产化率超60%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>存储芯片</strong></td><td>约30%</td><td>50%+</td><td>长鑫科技扩产+科创板IPO</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>PCB/ABF载板</strong></td><td>约35%</td><td>55%</td><td>生益电子AI产品增242%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 </table>
 
-<h4>国产供应商出海进展</h4>
+<h4>国产算力生态适配进展</h4>
 <table>
-<tr><th>企业</th><th>产品/合作</th><th>海外客户</th><th>时间维度</th></tr>
-<tr><td>英维克</td><td>CDU通过谷歌认证；入选英伟达Blackwell平台40家核心供应商</td><td>谷歌、英伟达、Meta、英特尔</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>高澜股份</td><td>通过谷歌供应商审厂；获小批量试产订单</td><td>谷歌、英伟达</td><td><span class="time-dim">月变化</span></td></tr>
-<tr><td>曙光数创</td><td>东南亚多个液冷项目落地；北美关键部件供应</td><td>海外CSP</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>申菱环境</td><td>两个月内完成设备安装测试交付；施工交付一体化能力</td><td>华为、谷歌、阿里、Meta</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>鼎通科技</td><td>第二条液冷产线筹备中；第三、四条6月启动</td><td>海外AI服务器厂商</td><td><span class="time-dim">周变化（本周）</span></td></tr>
+<tr><th>模型/平台</th><th>适配芯片</th><th>适配进度</th><th>时间维度</th></tr>
+<tr><td><strong>DeepSeek-V4</strong></td><td>华为昇腾950（已适配）</td><td>全面适配，V4-Pro服务量受限，V4量产需等昇腾950落地</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>DeepSeek-V4</strong></td><td>寒武纪（已适配）</td><td>vLLM推理框架适配，代码已开源</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>DeepSeek-V4</strong></td><td>摩尔线程（已适配）</td><td>FlagOS社区联合优化V4-Flash</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>DeepSeek-V4</strong></td><td>百度千帆（已适配）</td><td>Day0适配，上线API服务</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 </table>
-
-<div class="box green">
-<strong>📌 国产化驱动因素：</strong>①政策推动（"东数西算"、国产替代专项支持）；②国内大厂华为/阿里/字节的算力建设需求；③供应链安全考量；④成本优势（国内供应链体系支撑下的非标定制和快速交付能力）。
-</div>
 
 <div class="analysis-box">
-<h4>📊 供应链国产化趋势分析</h4>
-<p>国产化替代在算力供应链各环节呈现"梯度推进、局部突破"特征。在芯片设计环节，寒武纪/海光/华为已具备量产能力，但在高端HBM领域仍存在代际差距——远见智存自研HBM3/3e的发布虽具里程碑意义（819GB/s带宽，全栈IP自主），但与SK海力士/三星的HBM4E（4TB/s）仍有明显差距，量产成熟度有待验证。在液冷设备环节，国产厂商已实现"反向出海"——英维克CDU通过谷歌认证、高澜股份进入英伟达GB300核心认证体系，标志着技术实力获得全球顶级客户认可。液冷产业链优势在于交付能力和非标定制响应速度，"两个月内完成设备安装测试"的能力是海外竞争对手难以匹配的。展望2026-2027年，在英伟达供应链开放（GB300允许ODM自选供应商）和终端CSP对性价比重视的双重驱动下，国产液冷/散热供应商有望在北美市场抢占可观份额。</p>
+国产算力的核心逻辑已从「被动补位」转向「主动替代」。DeepSeek-V4全面适配昇腾950，说明国产大模型与国产芯片的软硬协同已深入到模型层优化。这种「原生适配」路径通过算法稀疏化和工程级推理框架调优，可在一定程度上弥补物理算力代差。随着下半年昇腾950超节点量产落地，V4-Pro定价有望大幅下调，国产算力的性价比将进一步提升。从产业价值分配看，具备算力调度能力的平台、掌握底层硬件的制造商、持有高价值行业数据的垂直应用开发者，将成为本轮国产化浪潮的核心受益者。
+</div>
 </div>
 
 <div class="section">
 <h2>6.5 供应商动态与产业格局变化</h2>
-<h4>本周供应商重要动态</h4>
+<h3>6.5.1 本周供应商重要动态</h3>
+<p>本周（04-22至04-29）供应商动态集中于IPO、业绩、供应链调整三个维度。超聚变完成A股IPO辅导是最重要事件，寒武纪回应大厂自研芯片影响，英维克一季报净利润暴跌82%引发液冷板块震荡。</p>
+
+<h4>本周供应商重要动态（2026年4月22-29日）</h4>
 <table>
-<tr><th>时间</th><th>公司</th><th>事件</th><th>重要性</th><th>时间维度</th></tr>
-<tr><td>04-22</td><td>三星/特斯拉</td><td>特斯拉4月DRAM供应量激增3倍</td><td>★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>04-21</td><td>远见智存</td><td>发布自研HBM3/3e芯片（国内首次全栈自主）</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>04-20</td><td>三星/SK海力士</td><td>全面放弃短期合同，转向3-5年LTA长约模式</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>04-18</td><td>液冷产业链</td><td>2026年市场规模预测从89亿美元飙升至170亿美元</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>04-17</td><td>阿里云/腾讯云/百度</td><td>集体上调AI服务价格5%-34%</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>04-15</td><td>三星</td><td>HBM4E样品5月发布，带宽4.0TB/s</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
-<tr><td>04-13</td><td>英伟达/三星</td><td>英伟达请求三星跳过测试提前供货HBM4</td><td>★★★★★</td><td><span class="time-dim">周变化（本周）</span></td></tr>
+<tr><th>公司</th><th>事件</th><th>类型</th><th>时间维度</th></tr>
+<tr><td><strong>超聚变</strong></td><td>完成A股IPO辅导，估值610亿元，2025年营收目标600亿元</td><td>IPO</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>英维克</strong></td><td>Q1净利润同比-81.97%，连续两日跌停，市值蒸发超百亿</td><td>业绩</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>寒武纪</strong></td><td>回应互联网大厂自研芯片影响：产品具备较好普适性</td><td>战略</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>生益电子</strong></td><td>2025年净利润同比+343.76%，AI算力产品收入增242%</td><td>业绩</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>软通动力</strong></td><td>软通华方品牌焕新，昇腾/鲲鹏生态全栈布局</td><td>战略</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>绿色云图</strong></td><td>液冷公司融资近亿元，2026年在手订单近2亿元</td><td>融资</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>冰轮环境</strong></td><td>数据中心液冷Q1订单7.1亿元，全年目标30亿元</td><td>业绩</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 </table>
 
-<h4>市场份额变化</h4>
-<table>
-<tr><th>领域</th><th>变化趋势</th><th>时间维度</th></tr>
-<tr><td>HBM4市场</td><td>SK海力士54% / 三星28%（TrendForce预测）</td><td><span class="time-dim">季变化</span></td></tr>
-<tr><td>AI服务器ODM</td><td>ODM占出货量84%、收入80%（美银数据）</td><td><span class="time-dim">季变化</span></td></tr>
-<tr><td>液冷服务器</td><td>浪潮信息全球50%+份额；英维克龙头地位稳固</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>存储市场</td><td>三星/SK海力士/美光三家占DRAM约90%份额</td><td><span class="time-dim">持续</span></td></tr>
-</table>
+<h3>6.5.2 国产替代进展</h3>
+<p>国产替代已从「芯片」单一环节向「全链路」延伸。服务器领域，超聚变、华为、浪潮形成国产阵营；AI芯片领域，寒武纪、昇腾已具备规模化出货能力；存储领域，长鑫科技冲刺科创板IPO，国产DRAM扩产保供；PCB/ABF载板领域，生益电子、科翔股份受益AI服务器升级。</p>
 
-<div class="box">
-<strong>📌 OpenAI加入HBM争夺战：</strong>据韩媒报道，OpenAI正与三星电子接洽，寻求HBM4供应以推进其Titan芯片战略。CFO Sarah Friar访韩期间与三星高管深入讨论产能扩张合作。这意味着英伟达、OpenAI、AMD、谷歌等全球AI巨头将直接争夺三星HBM产能，竞争格局进一步白热化。
-</div>
+<h4>国产替代关键进展（2026年4月）</h4>
+<table>
+<tr><th>领域</th><th>代表厂商</th><th>替代进度</th><th>时间维度</th></tr>
+<tr><td><strong>AI服务器</strong></td><td>超聚变、华为、浪潮信息</td><td>x86市场第二+液冷第一，ARM集采占比65%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>AI芯片</strong></td><td>华为昇腾、寒武纪</td><td>国产化率46%→2026年目标65%+</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>存储芯片</strong></td><td>长鑫科技</td><td>扩产中，科创板IPO募资295亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>PCB/载板</strong></td><td>生益电子、科翔股份</td><td>AI算力产品收入同比增长242%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td><strong>液冷设备</strong></td><td>英维克、高澜股份、曙光数创</td><td>冷板式国产化率60%+，浸没式开始起量</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td><strong>操作系统</strong></td><td>麒麟、统信、华为openEuler</td><td>ARM生态配套成熟度提升</td><td><span class="time-dim">持续</span></td></tr>
+</table>
 
 <div class="analysis-box">
-<h4>📊 供应商动态与产业格局变化分析</h4>
-<p>本周供应商动态揭示三大结构性变化：①存储定价权从"买方主导"转向"卖方主导"——三星/SK海力士放弃短期合同全面转向3-5年LTA长约，DRAM价格Q1同比涨100%仍订单售罄，英伟达罕见请求提前供货，韩国存储企业已从"乙方"跃升为"超级乙方"；②液冷市场爆发拐点已至——2026年市场规模从89亿飙至170亿美元（+91%），英维克CDU通过谷歌认证、高澜股份进入英伟达GB300核心体系，国产液冷供应商正加速出海；③OpenAI加入HBM争夺战——HBM需求95%集中于英伟达/AWS/谷歌/AMD，随着OpenAI自研芯片（Titan）加速，产能竞争将进一步加剧。三星HBM4E样品5月发布（带宽4TB/s，性能提升46%）将率先满足英伟达 Rubin需求，SK海力士则押注台积电3nm工艺差异化竞争。</p>
+本周供应商动态揭示了一个核心趋势：中国智算供应链正在经历从「单点突破」到「系统协同」的升级。超聚变IPO辅导完成代表服务器环节的价值重估，生益电子净利润增343%代表PCB/载板环节的量价齐升，寒武纪回应自研芯片影响代表AI芯片环节的竞争加剧。三条线索共同指向一个结论——国产供应链各环节正在形成正向循环：下游需求爆发→中游产能扩张→上游技术迭代。2026年将成为国产算力从「替代」走向「独立」的关键年份。
+</div>
 </div>
 
-</div>
-
-</div>
 <div class="section">
 <h2>6.6 本周供应链深度分析专题</h2>
-<h4>本周最具影响力事件：存储巨头战略转型——从"乙方"到"超级乙方"</h4>
+<h3>6.6 本周供应链深度分析专题：超聚变IPO——中国算力基础设施赛道的历史性节点</h3>
 
-<p>2026年4月，全球存储芯片市场迎来里程碑式格局调整：三星电子与SK海力士正式全面放弃一年期及以内短期内存供应合同模式，未来仅通过3至5年长期供应协议（LTA）完成产品供应。这一事件的影响远超单纯的价格调整，它标志着全球内存产业底层商业逻辑的根本性变革。</p>
+<p>2026年4月25日，证监会官网披露超聚变数字技术股份有限公司首次公开发行股票并上市辅导工作完成。这家脱胎于华为X86服务器业务的算力新贵，在成立仅四年后便叩开A股大门，成为中国智算供应链发展史上的标志性事件。本专题从产业链视角深度剖析这一里程碑对智能算力格局的深层影响。</p>
 
-<h4>一、事件背景：从"周度定价"到"五年锁量"</h4>
-<p>此前数十年间，存储行业普遍采用年度、季度甚至周度的短期合同模式，PC、移动端等通用内存产品大量依赖现货市场定价，行业受供需波动影响呈现强周期性。然而，2026年4月的最新动态显示：三星已明确从2026年起新签合同最低期限为3年；SK海力士正与谷歌洽谈5年期通用DRAM协议（从最初的3年经内部评估后延长至5年）；同时正与微软谈判价值数十万亿韩元的DDR5内存多年期供应合同。</p>
+<h4>超聚变：从华为剥离到估值610亿的四年路径</h4>
 
-<h4>二、驱动因素：AI产业需求范式的根本转变</h4>
-<p>这一转变的核心驱动力来自AI产业爆发带来的行业底层需求变革。随着谷歌、微软等全球超大规模科技企业持续加码AI技术研发与基础设施建设，高带宽内存（HBM）、大容量DRAM等核心存储产品的需求呈指数级增长。能否锁定稳定的内存供应，直接决定了AI芯片研发与数据中心建设的推进节奏。英伟达CEO黄仁勋在台湾供应链高管晚宴上明确表示："今年需要大量的存储器，因需求太大，整个供应链恐怕都将面临困境。"</p>
+<p>超聚变的发展历程是中国智算供应链演进的一面镜子。2021年，华为因美国制裁将X86服务器业务整体剥离，核心团队、技术专利、产品体系、客户资源整建制平移至新公司，超聚变由此诞生。河南国资委旗下豫信电子科技集团接手控股，中国移动旗下中移资本以15.14%持股成为第二大股东，中国电信、国调基金等「国家队」资本深度参与。</p>
 
-<p>与此同时，英伟达近期请求三星电子在完成可靠性评估和品质评价前先行供应HBM4，当前产品正在最终品质测试阶段，英伟达因AMD、谷歌等竞争对手加速追赶而请求跳过详细测试加急供货。这一罕见举动充分体现了当前存储供应的紧张程度。</p>
+<table>
+<tr><th>年份</th><th>营收</th><th>关键里程碑</th><th>时间维度</th></tr>
+<tr><td>2022年</td><td>破100亿元</td><td>完成战略融资，中移资本、中国电信入股</td><td><span class="time-dim">季变化</span></td></tr>
+<tr><td>2023年</td><td>超280亿元</td><td>x86服务器市场份额中国第二，液冷服务器市占率43%</td><td><span class="time-dim">季变化</span></td></tr>
+<tr><td>2024年</td><td>超400亿元</td><td>全球独角兽估值610亿元，国调基金战投</td><td><span class="time-dim">季变化</span></td></tr>
+<tr><td>2025年H1</td><td>超300亿元</td><td>全年目标500-600亿元</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>2026年4月</td><td>冲刺600亿</td><td>完成A股IPO辅导，叩门资本市场</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+</table>
 
-<h4>三、价格见顶预期还是持续上涨？</h4>
-<p>此次供应模式重大调整也引发了对DRAM价格后续走势的强烈分歧。核心争议在于：若厂商内部预期未来DRAM价格仍有大幅上行空间，绝不会选择以当前价格锁定未来3-5年的供应。数据显示，三星2026年Q1 DRAM价格同比涨幅已达100%，Q2更是再次宣布环比上调30%，但两大巨头全面转向长约的动作，被业界解读为DRAM价格或已临近上行顶点。</p>
+<h4>超聚变的产业卡位：「液冷+ARM+全栈」三重红利叠加</h4>
 
-<p>与此同时，NAND闪存市场的涨价周期预计仍将延续。瑞银最新报告将NAND行业价格峰值预期从此前的2027年Q2推迟至2027年Q3，两大核心支撑因素：①谷歌TurboQuant技术仅能压缩DRAM缓存，对NAND需求无影响；②长江存储正将大量新增产能转向DRAM领域，导致NAND供应端持续紧张。</p>
+<p>超聚变之所以能在四年内跑出惊人增速，核心在于精准卡位三个高景气赛道。</p>
 
-<h4>四、对中国智能算力产业的影响</h4>
-<p>对于中国智能算力产业而言，这一变革既带来挑战也蕴含机遇。挑战方面：HBM等高端存储供应紧张将持续推高AI服务器成本，国内大模型企业获取英伟达H系列芯片的难度加大。机遇方面：①远见智存发布自研HBM3/3e芯片，实现全栈IP自主，国产HBM替代迈出关键一步；②液冷设备等配套环节国产供应商正加速出海，英维克CDU通过谷歌认证切入全球顶级供应链；③存储涨价周期持续，兆易创新等国内存储设计企业有望在细分市场获得增长空间。</p>
+<p><strong>第一，液冷服务器绝对领先。</strong>2023-2024年，超聚变连续两年拿下中国标准液冷服务器市占率第一，2023年份额高达43%，出货近4.2万台，几乎垄断半壁江山。其FusionPoD for AI整机柜方案支持单柜64GPU、105kW高密供电，pPUE低至1.06，适配字节、阿里、运营商等大规模训推集群，成为业绩增长核心引擎。</p>
 
-<h4>五、展望与建议</h4>
-<p>长期来看，随着AI产业对存储需求的持续爆发，更多科技企业或将跟进签订长期供应协议，全球内存市场将逐步告别过去高波动的现货主导模式，转向更稳定、合作绑定更深的长期合作格局。三星与SK海力士的此次战略调整，不仅是两家企业应对行业周期的自保之举，更是全球存储产业伴随AI浪潮发生的一次底层商业逻辑变革。对中国算力产业而言，加速HBM等关键环节的国产替代、深化与非美存储厂商的战略合作、提前锁定长约供应，将是应对这一结构性变化的关键路径。</p>
+<p><strong>第二，ARM架构生态先发优势。</strong>中国移动2026年PC服务器集采ARM占比达65%，超聚变作为华为系背景的服务器厂商，在ARM生态适配上具备天然优势。其FusionPod产品已完成与昇腾、鲲鹏等国产芯片的深度适配，在运营商和政企市场的份额有望进一步提升。</p>
 
-<div class="box purple">
-<strong>💡 核心结论：</strong>存储巨头从"乙方"到"超级乙方"的转变，本质是AI算力需求爆炸重塑供应链话语权的缩影。在这场变革中，谁掌控HBM产能谁就握住了AI时代的"命门"。对于中国算力产业，破解"存储焦虑"既是当务之急，也孕育着国产替代的历史性机遇。
-</div>
+<p><strong>第三，全栈算力基础设施布局。</strong>超聚变不止卖服务器，而是提供从硬件、操作系统、AI开发平台到超融合、HPC、数据库的全栈解决方案。这种「芯片-算力-平台-终端-场景」的完整闭环，使其在运营商、金融、能源等既求稳定又要上AI的客户群体中具备强竞争力。</p>
+
+<h4>超聚变IPO对供应链格局的深层影响</h4>
+
+<p><strong>对服务器市场：</strong>超聚变IPO落地后，将拥有更充足弹药在液冷、AI服务器、国产化多元算力三条主线上与浪潮信息正面对决。IDC数据显示，2025年浪潮信息服务器份额31.3%（同比+3.5pp），超聚变12.7%（同比-1.1pp），双方差距反而在扩大。超聚变需要证明液冷优势和ARM生态能转化为整体份额的增长。</p>
+
+<p><strong>对液冷行业：</strong>超聚变液冷服务器连续两年市占率第一，意味着其与英维克、高澜股份、曙光数创等液冷供应商的议价能力极强。但这也意味着，一旦超聚变自建液冷产能或扶植第二供应商，现有液冷格局将面临重构。</p>
+
+<p><strong>对国产算力生态：</strong>超聚变IPO将成为国产算力产业链价值重估的催化剂。长鑫科技（存储）、生益电子（PCB/载板）、景嘉微（GPU）等产业链公司有望获得更多资本支持和技术验证机会，形成「一核引领、多点支撑」的国产算力矩阵。</p>
 
 <div class="analysis-box">
-<h4>📊 深度分析：存储长约时代的产业变局</h4>
-<p>三星/SK海力士全面转向3-5年LTA长约，是本周最具影响力的供应链事件。它揭示了三个关键信号：①存储产业从"强周期性"转向"高确定性"——长约模式平滑业绩波动，但也意味着产能分配权力向头部厂商集中，中小客户获取资源难度加大；②价格见顶预期升温——若厂商看涨未来，不会以当前价锁定3-5年供应，长约模式或暗示DRAM价格已接近本轮周期顶点；③"超级乙方"时代来临——英伟达请求跳过测试提前供货HBM4、韩国存储企业议价能力空前提升，全球AI供应链权力格局正在重构。对中国产业而言，在HBM等关键环节受制于人的背景下，加速国产替代（远见智存HBM3/3e只是起点）、深化与SK海力士/三星的战略合作、构建自主可控的存储产业链，将是长期战略必选项。</p>
+超聚变IPO辅导完成，本质上是「美国芯片管制→华为被迫剥离→国资接手→国产算力崛起」这一逻辑链的最新注脚。它的上市标志着中国算力基础设施赛道从「主题投资」正式进入「价值重估」新阶段。但风险同样清晰：对x86生态仍有依赖、与浪潮/新华三的价格与份额竞争加剧、长期需在自主架构上持续投入。放在中美算力博弈的大背景下，超聚变的位置几乎不可替代，但能否从「第二」冲击「第一」，还需要时间验证。
 </div>
-
 </div>
 
 <div class="data-source">
 <p>📌 <strong>数据来源：</strong></p>
 <ul>
-<li>CFM闪存市场《2026Q1全球存储市场报告与Q2展望》</li><li>日经中文网《存储器短缺或持续至2027年》2026-04-22</li><li>中国日报《远见智存发布自研HBM3/3e高带宽存储芯片》2026-04-16</li><li>凤凰网《存储价格到顶了？消息称三星海力士转向内存长期合约》2026-04-10</li><li>21世纪经济报道《A股液冷产业链迎爆发：卡位海外、产能扩建》2026-04-18</li><li>证券日报《算力紧缺 国内云厂商集体上调AI服务价格》2026-04-17</li><li>财联社《美银：2030年全球服务器市场将达1.5万亿美元 AI贡献超八成份额》2026-04-17</li><li>IT之家《TrendForce：通用服务器增长受限，下调2026年整体服务器出货增幅预估至+13%》2026-04-16</li><li>朝鲜日报《三星存储成"超级乙方"…英伟达拜托"提前供货"》2026-04-20</li><li>新浪财经《涨价预期强烈！HBM集体走强融资客抢筹8股过亿》2026-04-22</li><li>证券时报《机构：预计算力需求保持高景气度》2026-04-22</li><li>新华网《Token爆发 AI算力全链涨价 开启"能效竞争"时代》2026-04-16</li><li>ODCC算电协同公共服务平台发布 2026-04-20</li>
+<li>证券时报（2026-04-20/24）</li>
+<li>财联社（2026-04-23）</li>
+<li>上海证券报（2026-04-24）</li>
+<li>华尔街见闻（2026-04-27）</li>
+<li>界面新闻（2026-04-27）</li>
+<li>TrendForce集邦咨询（2026-04-22）</li>
+<li>Omdia（2026-04-21）</li>
+<li>高盛全球存储技术周报（2026-04-24）</li>
+<li>花旗银行英维克研报（2026-04）</li>
+<li>IDC中国服务器市场报告（2025）</li>
+<li>中国经营报（2026-04-27）</li>
+<li>中华工商时报（2026-04-27）</li>
+<li>华为官网/寒武纪官网</li>
+<li>超聚变数字技术股份有限公司公告</li>
+<li>英维克（002837.SZ）2026年一季报</li>
 </ul>
 </div>
 
-
 </div><!-- end container -->
 <footer>
-<p>© 2026 中国智能算力周报 | 第16期 | 数据更新：2026-04-22</p>
+<p>© 2026 中国智能算力周报 | 第17期 | 数据更新：2026-04-29</p>
 </footer>
 <div class="chapter-nav">
     <a href="技术趋势发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
