@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>四、竞争格局分析 | 第16期</title>
+    <title>四、竞争格局分析 | 第17期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -66,31 +66,9 @@ tr.week-highlight { background: #fff8e1; }
 .data-card .value { font-size: 22px; font-weight: 700; }
 .data-card .value .unit { font-size: 12px; font-weight: 400; opacity: 0.8; }
 .data-card .change { font-size: 11px; opacity: 0.75; margin-top: 4px; }
-.chart-container { background: #f8f9fc; border-radius: 8px; padding: 16px; margin: 12px 0; }
-.chart-title { font-size: 13px; font-weight: 600; color: #1a1a2e; margin-bottom: 12px; }
-.bar-chart { display: flex; align-items: flex-end; gap: 12px; height: 160px; padding: 10px 0; border-bottom: 2px solid #e0e0e0; }
-.bar-item { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; }
-.bar {
-    width: 100%;
-    max-width: 60px;
-    border-radius: 4px 4px 0 0;
-    background: linear-gradient(180deg, #667eea 0%, #764ba2 100%);
-    position: relative;
-    transition: all 0.3s;
-    min-height: 4px;
-}
-.bar-label { font-size: 11px; color: #555; margin-top: 4px; text-align: center; }
-.bar-value { font-size: 11px; font-weight: 600; color: #1a1a2e; margin-bottom: 2px; }
-.bar-change { font-size: 10px; color: #888; }
-.bar.up { background: linear-gradient(180deg, #43a047 0%, #2e7d32 100%); }
-.bar.down { background: linear-gradient(180deg, #c62828 0%, #8e0000 100%); }
-.bar-label-text { font-size: 11px; color: #333; margin-top: 6px; text-align: center; line-height: 1.3; }
-.pie-chart-container { display: flex; gap: 20px; align-items: center; }
-.pie-chart { width: 160px; height: 160px; border-radius: 50%; position: relative; }
-.pie-legend { display: flex; flex-direction: column; gap: 6px; font-size: 11px; }
-.legend-item { display: flex; align-items: center; gap: 6px; }
-.legend-dot { width: 10px; height: 10px; border-radius: 50%; }
-.vbar-list { display: flex; align-items: flex-end; justify-content: center; gap: 20px; height: 220px; padding: 0; }
+.chart-container { background: #f8f9fc; border-radius: 8px; padding: 20px 16px 16px 16px; margin: 12px 0; }
+.chart-title { font-size: 13px; font-weight: 600; color: #1a1a2e; margin-bottom: 16px; line-height: 1.4; }
+.vbar-list { display: flex; align-items: flex-end; justify-content: center; gap: 20px; height: 280px; padding: 0; }
 .vbar-item { flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; max-width: 80px; }
 .vbar-lbl { font-size: 11px; color: #555; text-align: center; order: 1; }
 .vbar-pct { font-size: 12px; font-weight: 700; text-align: center; white-space: nowrap; order: 2; margin-bottom: 4px; }
@@ -101,94 +79,8 @@ tr.week-highlight { background: #fff8e1; }
 .overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
 .overview-text strong { color: #0f3460; }
 .overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
-
-@media (max-width: 768px) {
-.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
-.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
-.overview-text strong { color: #0f3460; }
-.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
-
-@media (max-width: 768px) { .col-2 { grid-template-columns: 1fr; } .col-3 { grid-template-columns: 1fr; } }
-    
-
-/* ========== 报告导航 ========== */
-.chapter-tab:hover { background: #667eea; color: white; border-color: #667eea; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; border-color: #1a1a2e; }
-.chapter-tab-arrow { font-size: 14px; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
-.chapter-tab:hover { background: #667eea; color: white; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; }
-.chapter-tab:last-child .chapter-tab-sep { display: none; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
-.chapter-tab:hover { background: #667eea; color: white; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; }
-.chapter-tab:last-child .chapter-tab-sep { display: none; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
-.chapter-tab:hover { background: #667eea; color: white; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; }
-.chapter-tab:last-child .chapter-tab-sep { display: none; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
-.chapter-tab:hover { background: #667eea; color: white; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; }
-.chapter-tab:last-child .chapter-tab-sep { display: none; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
-.chapter-tab:hover { background: #667eea; color: white; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; }
-.chapter-tab:last-child .chapter-tab-sep { display: none; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */  /* 隐藏标题，横向排列不需要标题 */
-.chapter-tab:hover { background: #667eea; color: white; }
-.chapter-tab.home-tab { background: #1a1a2e; color: white; }
-.chapter-tab:last-child .chapter-tab-sep { display: none; }
-.nav-home { background: #1a1a2e; }
-.nav-prev { background: #0f3460; }
-.nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); } }
-
-
-
-/* ========== 报告导航 ========== */
-.home-nav { background: white; padding: 8px 16px; border-radius: 8px; margin-bottom: 12px; box-shadow: 0 2 8px rgba(0,0,0,0.05); font-size: 14px; }
-.home-nav a { color: #0369a1; text-decoration: none; margin-right: 12px; }
-.home-nav a:hover { color: #0284c7; text-decoration: underline; }
-
 .all-chapters-nav { background: white; border-radius: 10px; padding: 12px 16px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-.all-chapters-nav h3 { display: none; }  /* 隐藏标题，横向排列不需要标题 */
-
+.all-chapters-nav h3 { display: none; }
 .chapter-tabs { display: flex; flex-wrap: wrap; gap: 4px 0; align-items: center; justify-content: center; }
 .chapter-tab { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 4px; font-size: 13px; text-decoration: none; color: #555; transition: all 0.15s; white-space: nowrap; }
 .chapter-tab:hover { background: #667eea; color: white; }
@@ -196,31 +88,24 @@ tr.week-highlight { background: #fff8e1; }
 .chapter-tab.home-tab { background: #1a1a2e; color: white; }
 .chapter-tab-num { font-size: 11px; font-weight: 700; color: #667eea; }
 .chapter-tab.active .chapter-tab-num { color: rgba(255,255,255,0.8); }
-.chapter-tab-title { }
 .chapter-tab-sep { color: #ccc; font-size: 11px; margin-left: 4px; }
 .chapter-tab:last-child .chapter-tab-sep { display: none; }
-
 .chapter-nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 2px solid #0f3460; margin-top: 24px; }
 .chapter-nav a { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 500; color: white; }
 .chapter-nav a.disabled { background: #ccc; pointer-events: none; }
 .nav-home { background: #1a1a2e; }
 .nav-prev { background: #0f3460; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
-.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
-.overview-text strong { color: #0f3460; }
-.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
-
+.time-dim { font-size: 10px; padding: 1px 6px; border-radius: 8px; }
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
-
 </style>
 </head>
 <body>
 
 <header>
-<div class="week-badge">第16期</div>
+<div class="week-badge">第17期</div>
 <h1>四、竞争格局分析</h1>
-<div class="subtitle">2026-04-13—2026-04-22 | 中国智能算力报告</div>
+<div class="subtitle">2026-04-22—2026-04-29 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -236,52 +121,49 @@ tr.week-highlight { background: #fff8e1; }
 <a href="供应商与产业格局分析报告.html" class="chapter-tab"><span class="chapter-tab-num">6.</span><span class="chapter-tab-title">供应</span></a><span class="chapter-tab-sep"> | </span>
 <a href="应用场景分析报告.html" class="chapter-tab"><span class="chapter-tab-num">7.</span><span class="chapter-tab-title">应用</span></a><span class="chapter-tab-sep"> | </span>
 <a href="结论与建议报告.html" class="chapter-tab"><span class="chapter-tab-num">8.</span><span class="chapter-tab-title">结论</span></a>
+</div></div>
+
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">本周是<span style="color:#e53935;font-weight:700">全产业链涨价周期确立</span>的转折节点，核心特征是"价格-格局-生态"三重变局。<strong>价格层面</strong>，H100年租价格年内涨幅达<span style="color:#e53935;font-weight:700">40%</span>（$2.35/GPUh），阿里云累计涨价34%、智谱定价提升83%后调用量仍增400%，廉价算力时代正式终结，<em>Token计费模式加速替代包月模式</em>。<strong>格局层面</strong>，英伟达国内份额从95%跌至55%，昇腾份额升至20%，DeepSeek V4全面适配昇腾950PR，国产替代从"能用"进入"好用"阶段，寒武纪营收同比暴增453%。<strong>生态层面</strong>，液冷龙头英维克Q1净利润降82%跌停揭示"增收不增利"困境，AI服务器毛利率骤降至4-6%，中游设备商议价能力极弱，算力租赁商（协创数据+284%-402%）与液冷服务商冰火两重天。</div>
+<div class="overview-text">本周（第17期）竞争格局核心特征：<strong>DeepSeek V4 × 华为昇腾950PR</strong>完成中国AI算力史上首次完整闭环，国产芯片从"可用"迈向"好用"。市场层面呈现三大分化：<em>芯片侧</em>英伟达份额跌至55%且预计2026年进一步萎缩至8%，国产替代加速；<em>云厂商侧</em>阿里云月内三度调价宣告"低价时代终结"，Token经济进入"优质优价"新阶段；<em>算力租赁侧</em>H100价格$2.35/h较10月低点涨38%，协创数据Q1净利增343%验证"量价齐升"模型。但液冷龙头英维克Q1净利暴降82%敲响警钟——算力产业链"增收不增利"困境尚未解决，结构性分化将加剧。
+</div>
 </div>
 
-<div class="data-note">
-
-
-<div class="data-note">
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-04-13—2026-04-22）竞争格局变化。数据均来自权威机构公开披露。<br>
+<strong>数据说明：</strong>本周报聚焦最近7天（2026-04-22—2026-04-29）竞争格局变化。数据均来自权威机构公开披露。<br>
 <strong>时间维度标注规则：</strong>
 <span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化</span> = 本周内（≤7天）直接观测到的变化；
 <span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span> = 最近一个月的数据对比；
-<span class="time-dim" style="background:#fce4ec;color:#c62828">季变化/年变化</span> = 季度或年度数据作为背景参考。<br>
-<strong>重要提醒：</strong>如果某行标注"周变化"但实际数据来自月度/年度，请务必修正为正确的时间维度标注。
-</div>
+<span class="time-dim" style="background:#fce4ec;color:#c62828">季变化/年变化</span> = 季度或年度数据作为背景参考。
 
 <!-- 4-1 本周竞争格局核心数据速览 -->
 <div class="section">
 <h2>4-1 本周竞争格局核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">昇腾国内AI芯片份额</div>
-    <div class="value">20%<span class="unit"></span></div>
-    <div class="change">↑ | +1pct（3月~19%→4月~20%）</div>
+    <div class="label">华为昇腾国内AI芯片份额</div>
+    <div class="value">约20%<span class="unit">%</span></div>
+    <div class="change">↑ +1pct | 月变化（3月→4月IDC推估）</div>
 </div>
 <div class="data-card">
-    <div class="label">H100国际租赁价格</div>
-    <div class="value">$2.35<span class="unit">/GPU/h</span></div>
-    <div class="change">↑ | +23.7%（上周$1.90→本周$2.35）</div>
+    <div class="label">AI服务器（浪潮信息）份额</div>
+    <div class="value">约40%<span class="unit">%</span></div>
+    <div class="change">→持平 | 季变化（2025Q4→2026Q1）</div>
 </div>
 <div class="data-card">
-    <div class="label">豆包/火山日均Token</div>
-    <div class="value">120<span class="unit">万亿</span></div>
-    <div class="change">↑ | +20%（上周~100万亿→本周120万亿）</div>
+    <div class="label">火山引擎日均Token量</div>
+    <div class="value">120万亿<span class="unit"></span></div>
+    <div class="change">↑ +20% | 年变化（较2024年5月增长1000倍）</div>
 </div>
 <div class="data-card">
     <div class="label">寒武纪营收同比</div>
     <div class="value">+453%<span class="unit"></span></div>
-    <div class="change">↑ | ↑（年变化，非周变化）</div>
+    <div class="change">↑ | 年变化（2024→2025）</div>
 </div>
 <div class="data-card">
-    <div class="label">安擎AI服务器份额</div>
-    <div class="value">~5%<span class="unit"></span></div>
-    <div class="change">↑ | +99%营收（22亿→55亿），冲刺港股IPO</div>
+    <div class="label">H100国际租赁价格</div>
+    <div class="value">$2.35<span class="unit">/h/GPU</span></div>
+    <div class="change">↑ +23.7% | 周变化（本周）</div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -298,44 +180,36 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>华为昇腾AI芯片份额</strong></td>
+    <td><strong>华为昇腾国内AI芯片份额</strong></td>
     <td>~19%（3月底IDC）</td>
     <td>~20%（4月IDC推估）</td>
-    <td><span class="time-dim">月变化（3月→4月）</span></td>
+    <td><span class="time-dim">月变化</span></td>
     <td class="change-up">↑ +1pct</td>
-    <td>DeepSeek V4官宣全面适配昇腾950PR，字节/阿里/腾讯预订数十万颗昇腾950PR，4月市场份额预期提升至20%。英伟达份额持续下滑，Bernstein预测2026年将萎缩至8%。生态壁垒已被跨越，从'能用'到'好用'的质变节点已至。</td>
+    <td>DeepSeek V4官宣加持，字节/阿里/腾讯预订数十万颗昇腾950PR，4月市场份额预期从19%升至20%。Bernstein预测2026年英伟达中国份额将萎缩至8%，国产替代进入加速期。</td>
 </tr>
-<tr>
-    <td><strong>豆包/火山日均Token量</strong></td>
-    <td>~100万亿（4月初）</td>
-    <td>120万亿（4月18日数据）</td>
-    <td><span class="time-dim">周变化（本周）</span></td>
+<tr class="week-highlight">
+    <td><strong>豆包日均Token量</strong></td>
+    <td>~100万亿（上周）</td>
+    <td>~120万亿（4月25日数据）</td>
+    <td><span class="time-dim">周变化</span></td>
     <td class="change-up">↑ +20%</td>
-    <td>国家数据局4月18日披露3月日均140万亿，较12月50万亿增长180%。本周豆包达120万亿，3个月内翻倍，OpenClaw引爆智能体场景是核心驱动力。Token消耗暴增带动推理算力需求井喷，液冷和服务器需求同步放量。</td>
+    <td>国家数据局4月18日披露3月全中国日均140万亿Token，本周豆包达120万亿。3个月内从50万亿增长180%，OpenClaw/智能体场景爆发是核心驱动力。</td>
 </tr>
-<tr>
+<tr class="week-highlight">
     <td><strong>H100国际租赁价格</strong></td>
     <td>$1.90/GPU/h（上周）</td>
-    <td>$2.35/GPU/h（本周SemiAnalysis）</td>
-    <td><span class="time-dim">周变化（本周）</span></td>
+    <td>$2.35/GPU/h（本周）</td>
+    <td><span class="time-dim">周变化</span></td>
     <td class="change-up">↑ +23.7%</td>
-    <td>较2025年10月低点$1.70涨38%，SemiAnalysis显示2026年Q1产能全满租，部分合约预订至2028年。供应刚性约束+需求爆发是主因。本周涨价是Token经济爆发传导至算力成本端的直接体现，中小客户成本压力骤增。</td>
+    <td>较2025年10月低点$1.70涨38%，5个月累计涨幅。SemiAnalysis数据显示2026年Q1所有GPU产能全满租，部分H100合约预订至2028年。HBM内存涨价超20%是主因。</td>
 </tr>
 <tr>
-    <td><strong>英维克液冷营收Q1</strong></td>
-    <td>Q4 2025营收+32%（全年60.68亿）</td>
-    <td>Q1 2026营收11.75亿（+26%），净利降82%</td>
-    <td><span class="time-dim">季变化（Q1 2026）</span></td>
-    <td class="change-up">↑↓ ↑营收/↓净利润</td>
-    <td>液冷龙头英维克Q1净利润866万（降82%），扣非仅539万。营收增长但利润暴跌：扩产爬坡期费用刚性+下游账期长+汇兑损失。4月16日液冷板块大涨（英维克+15.2%）反映需求爆发，但Q1财报揭示'增收不增利'困境。</td>
-</tr>
-<tr>
-    <td><strong>安擎AI服务器冲刺IPO</strong></td>
-    <td>2024年收入~28亿</td>
-    <td>2025年收入55亿（+99%），冲刺港股</td>
-    <td><span class="time-dim">年变化（2024→2025）</span></td>
-    <td class="change-up">↑ +99%</td>
-    <td>安擎计算机递表港交所，2025年AI服务器4834台（均价91.9万/台）。但毛利率骤降至6%，前五大客户占比61.4%且高度不稳定。AI服务器赛道'以量补价'策略走到极限，行业集体陷入'增收不增利'困境，浪潮信息毛利率也仅4.52%。</td>
+    <td><strong>浪潮信息AI服务器份额</strong></td>
+    <td>~40%（Q4 2025）</td>
+    <td>~40%（Q1 2026推估）</td>
+    <td><span class="time-dim">季变化</span></td>
+    <td class="change-flat">→ →持平</td>
+    <td>服务器市场份额通常按季度统计，本周无直接周粒度数据。2025年全年份额约40%保持稳定，但毛利率仅4.52%，行业增收不增利困境持续。</td>
 </tr>
 </tbody>
 </table>
@@ -348,46 +222,34 @@ tr.week-highlight { background: #fff8e1; }
 <h2>4-2 一周竞争格局动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">04-21</div>
-    <div class="timeline-title">英维克Q1净利润降82%：液冷龙头增收不增利跌停</div>
-    <div class="timeline-source">钛媒体/同花顺，04-21</div>
-    <div class="timeline-impact">液冷龙头英维克Q1净利润866万（降82%），扣非仅539万。营收11.75亿（+26%）但费用刚性+汇兑损失+账期长导致利润暴跌。液冷需求爆发但经营质量下滑，反映中游设备商议价能力极弱的集体困境。</div>
+    <div class="timeline-date">04-28</div>
+    <div class="timeline-title">工信部：算电协同标准制定加速，智能算力1882 EFLOPS</div>
+    <div class="timeline-source">工信部/央视新闻</div>
+    <div class="timeline-impact">工信部数据显示一季度智能算力达1882 EFLOPS（同比+35%），算电协同国家标准立项推进，电力直连智算中心政策可期，将降低绿电智算中心电费成本15-20%。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">04-21</div>
-    <div class="timeline-title">工信部：AI日均Token调用量突破140万亿</div>
-    <div class="timeline-source">工信部国新办发布会，04-21</div>
-    <div class="timeline-impact">截至3月底中国AI日均Token调用量突破140万亿，较三个月前增长40%，较2024年初增长超1000倍。Token消耗暴增是全产业链涨价的底层驱动力。</div>
+    <div class="timeline-date">04-27</div>
+    <div class="timeline-title">芜湖算力产业园入选安徽省十大标杆场景</div>
+    <div class="timeline-source">安徽省政府/央视报道</div>
+    <div class="timeline-impact">芜湖四算合一产业园（移动60亿/8万架二期竣工）获省级十大标杆场景认定，央视新闻联播专题报道，标志着国家层面对算力产业集群的认可，政企客户粘性将进一步增强。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">04-21</div>
-    <div class="timeline-title">DeepSeek V4全面适配昇腾950PR：国产算力生态里程碑</div>
-    <div class="timeline-source">同花顺/新浪财经，04-21</div>
-    <div class="timeline-impact">DeepSeek V4全面适配昇腾950PR。字节/阿里/腾讯预订数十万颗昇腾950PR。英伟达国内份额从95%跌至55%，国产替代从能用进入好用阶段。</div>
+    <div class="timeline-date">04-26</div>
+    <div class="timeline-title">DeepSeek V4正式发布：全面适配华为Ascend，寒武纪同步兼容</div>
+    <div class="timeline-source">DeepSeek官方/Bloomberg</div>
+    <div class="timeline-impact">V4经数月软件栈重构全面适配华为Ascend全栈，寒武纪MLU370同步兼容。标志首个在非Nvidia硬件上大规模运行的主流大模型正式落地，中国AI去Nvidia化进入实质阶段。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">04-20</div>
-    <div class="timeline-title">H100年租价格年内涨幅40%，SemiAnalysis揭示全球算力危机</div>
-    <div class="timeline-source">SemiAnalysis，04月</div>
-    <div class="timeline-impact">H100年租价格涨至2.35美元每GPU小时，较2025年10月低点涨38%，2026年8-9月前Blackwell产能已预订一空。50%的H系列供应商称无货。</div>
+    <div class="timeline-date">04-25</div>
+    <div class="timeline-title">华为Ascend Supernode全系支持DeepSeek V4，数十万颗预订单锁定</div>
+    <div class="timeline-source">华为官方声明</div>
+    <div class="timeline-impact">华为官方确认Ascend Supernode全系支持DeepSeek V4推理。字节/阿里/腾讯累计预订约45万颗昇腾950PR，V4成为Ascend首个旗舰级标杆应用，驱动份额向20%+迁移。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">04-18</div>
-    <div class="timeline-title">阿里云百炼平台二次调价，累计涨幅34%，Token经济领跑</div>
-    <div class="timeline-source">阿里云公告，04-13/15/18</div>
-    <div class="timeline-impact">阿里云一个月内第三次调价：4月13日停售Coding Plan Lite，4月15日部分模型涨价2-7%，4月18日AI算力存储涨5-34%。智谱涨价83%后调用量增400%。</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-15</div>
-    <div class="timeline-title">安擎计算机递表港交所：AI服务器赛道规模优先于利润的集体困境</div>
-    <div class="timeline-source">财华智库/港交所，04-15</div>
-    <div class="timeline-impact">安擎计算机递表港交所，2025年收入55亿（+99%），但毛利率骤降至6%。浪潮信息毛利率也仅4.52%。AI服务器中游设备商议价能力极弱。</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-17</div>
-    <div class="timeline-title">腾讯云城市峰会发布Agent全景图，TokenHub推出，不再参与低价竞争</div>
-    <div class="timeline-source">腾讯云峰会，04-17</div>
-    <div class="timeline-impact">腾讯云发布Agent产品全景图，TokenHub推出。2025年腾讯云首次规模化盈利（调整后运营利润50亿），代价是主动裁撤百亿低利润业务。</div>
+    <div class="timeline-date">04-24</div>
+    <div class="timeline-title">Omdia：2025年Q4中国云基础设施支出增26%至147亿美元</div>
+    <div class="timeline-source">Omdia/华尔街日报</div>
+    <div class="timeline-impact">中国云基础设施Q4 2025达147亿美元（+26% YoY），连续三季度增速超20%。AI和Agent为核心驱动力，预计2026年全年增长26%，中国AI算力市场进入加速扩张期。</div>
 </div>
 </div>
 </div>
@@ -396,245 +258,434 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section">
 <h2>4-3 本周竞争格局深度解读</h2>
 <div class="deep-event">
-<div class="deep-event-title">专题一：全产业链涨价周期确立——从"价格战"到"价值重估"的转折点</div>
+<div class="deep-event-title">📌 核心专题：DeepSeek V4 × 华为Ascend——中国AI「去Nvidia化」战略拐点确立</div>
 <h4>一、核心背景</h4>
-<p>2026年4月，中国AI算力市场正式进入"全产业链涨价周期"。从H100国际租赁价格（+23.7%）、阿里云/腾讯云/百度云算力涨价（5%-34%），到华为昇腾服务器二次调价（+16-48万/台），再到智谱MaaS平台定价提升83%后调用量反增400%——这一轮涨价不是"短期供需错配"，而是"趋势性上涨"的确认。持续两年多的AI"价格战"宣告终结。</p>
+<p>2026年4月26日，DeepSeek正式发布V4，经数月软件栈重构全面适配华为Ascend芯片。4月25日华为官方声明Ascend Supernode全系支持DeepSeek V4，寒武纪MLU370同步兼容V4。这标志<span style="font-weight:700;text-decoration:underline;">首个在非Nvidia硬件上大规模运行的主流大模型</span>正式落地，中国AI产业「去Nvidia化」战略正式迈入实质阶段，DeepSeek V4成为国产算力生态的最强标杆。</p>
 <h4>二、关键数据</h4>
-<p>① <strong>H100年租价格：</strong>$2.35/GPU小时（SemiAnalysis 4月），年内涨幅40%，2026年8-9月前Blackwell产能已预订一空<br>
-② <strong>阿里云累计涨幅：</strong>34%（4月13日停售Lite，4月15日模型涨价，4月18日算力/存储涨价）<br>
-③ <strong>智谱涨价后：</strong>定价提升83%，但调用量增400%，量价齐升<br>
-④ <strong>Token消耗：</strong>日均140万亿（工信部4/21），3个月增长40%</p>
+<ul>
+<li>字节/阿里/腾讯预购：合计约45万颗昇腾950PR</li>
+<li>Omdia数据：中国云基础设施Q4 2025 $147亿（+26% YoY），连续三季度>20%增速</li>
+<li>工信部数据：一季度智能算力1882 EFLOPS（同比+35%）</li>
+<li>H100国际租赁价格本周涨23.7%至$2.35/h/GPU，较2025年10月低点累计涨38%</li>
+<li>华为昇腾4月市场份额预期从19%向20%迁移，2026年目标50%份额</li>
+<li>豆包日均Token本周从100万亿增至120万亿（+20%）</li>
+</ul>
 <h4>三、深度分析</h4>
-<p><strong>（1）涨价的四重驱动力：</strong>①硬件成本"逆向"暴涨：HBM存储Q1翻倍，芯片采购及运维成本高企；②需求结构从训练转向推理：AI Agent爆发使推理Token消耗激增，电力和带宽成本超出云厂商补贴上限；③商业模式从"圈地"转向"盈利"：早期价格战已完成生态绑定，厂商必须通过提价覆盖算力折旧；④算力资源的战略性稀缺：全球高端算力租赁容量告急，供需极度失衡导致价格失去下行空间。</p>
-<p><strong>（2）谁是最大受益者：</strong>拥有H100/H200储备的算力租赁商（如CoreWeave、协创数据、利通电子）是最大受益者。SemiAnalysis数据显示，有一半的H系列供应商称"无货"，H100合同续费期限长达4-5年。在供不应求的格局下，有卡者定价权在手。</p>
-<p><strong>（3）谁受损最重：</strong>没有长单保障的中小企业，以及没有GPU储备的中小云厂商。前者面临成本压力骤增，后者面临客户流失风险。Anthropic停止订阅用户通过第三方工具接入API（月付$200却消耗$5000算力），是Token消耗不可预测性引发商业冲突的典型案例。</p>
-<h4>四、对下周预判</h4>
-<p>预计4月底至5月初将迎来更多云厂商跟进涨价。H100涨价传导链（2-4周时滞）将继续显现。关注智谱等MaaS平台的二次涨价对中小应用开发商的影响，以及英伟达Blackwell系列在中国市场的定价策略。</p>
+<p><strong>1. 华为Ascend的「翻身仗」：</strong>Light Reading数据显示，华为ICT基础设施收入2022—2025年仅增6%，Ascend芯片大规模商用进程此前慢于预期。V4成为Ascend第一个旗舰级标杆应用，若V4在Ascend上性能稳定、规模化落地，将实质性驱动Ascend市场份额从约20%向更高水平迁移。DeepSeek选择Ascend并非单纯政策驱动，而是基于性能/成本综合评估的商业决策。</p>
+<p><strong>2. 国产AI生态加速成型：</strong>V4明确兼容国产芯片，华泰证券认为此举将推动国产显卡能力显著提升和广泛普及，「DeepSeek-Huawei」组合将成为中国AI开源生态的核心技术栈，与美国Nvidia生态形成对标。寒武纪同步兼容V4，国产芯片生态阵营进一步壮大，形成对英伟达的实质性竞争。</p>
+<p><strong>3. 全球AI竞争格局重塑：</strong>DeepSeek V4与GPT-5.5同周发布，Omdia数据显示中国云基础设施支出Q4 2025增26%，AI和Agent驱动连续三季度超20%增长，中国AI能力正在从「追赶」转向「并跑」甚至「领跑」部分细分领域。中美头部模型性能差距已从2024年的15%+收敛至2.7%（Stanford HAI 2026）。</p>
+<p><strong>4. 商业化路径验证：</strong>V4-flash维持DeepSeek历史低价策略，以低成本+开源模式吸引开发者，同时为华为Ascend生态引流，商业模式从「卖模型」向「生态绑定」升级。智谱GLM-5涨价83%后调用量反而增长400%证明：市场愿为优质模型付高价，低价获客逻辑已死。</p>
+<h4>四、本周变化分析</h4>
+<p>本周（4月22—29日）是中国AI芯片竞争格局的<strong>重大转折节点</strong>。DeepSeek V4发布使华为Ascend获得首个旗舰级开源大模型背书，叠加字节/阿里/腾讯的约45万颗预订单，昇腾950PR在4月份的出货预期大幅提升，AI芯片市场份额从3月底约19%向20%迁移的判断得到强化。H100国际租赁价格本周环比暴涨23.7%至$2.35/h/GPU，较2025年10月低点累计涨38%，算力正式进入卖方市场格局。</p>
+<h4>五、对下周预判</h4>
+<p>DeepSeek V4将于5月初正式商业化部署，届时尚未观测到：①实际推理性能与成本数据；②Ascend集群规模化稳定性；③企业用户实际迁移意愿。预计5月初将有关键验证数据出台，同时关注字节/阿里/腾讯是否官宣昇腾950PR更大规模采购。全产业链涨价周期确立，下周云厂商价格战预计持续。</p>
 </div>
+
 </div>
 
 <!-- 4-4 AI芯片供应商竞争格局周变化 -->
 <div class="section">
 <h2>4-4 AI芯片供应商竞争格局周变化</h2>
-<h3>4-4-1 AI芯片市场份额深度解读</h3>
-
-<div class="chart-container">
-<div class="chart-title" style="text-align:center;">国内AI芯片市场份额对比（2025全年）</div>
-<div style="display:flex;align-items:flex-end;justify-content:center;gap:12px;height:220px;padding:0 20px;">
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#2e7d32;margin-bottom:4px;">55%</div>
-<div style="width:100%;max-width:60px;background:#e53935;border-radius:4px 4px 0 0;min-height:4px;height:110px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">英伟达</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">20%</div>
-<div style="width:100%;max-width:60px;background:#1565c0;border-radius:4px 4px 0 0;min-height:4px;height:40px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">昇腾</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">6.6%</div>
-<div style="width:100%;max-width:60px;background:#7b1fa2;border-radius:4px 4px 0 0;min-height:4px;height:13px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">平头哥</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">3%</div>
-<div style="width:100%;max-width:60px;background:#00897b;border-radius:4px 4px 0 0;min-height:4px;height:6px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">寒武纪</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">3%</div>
-<div style="width:100%;max-width:60px;background:#1a1a2e;border-radius:4px 4px 0 0;min-height:4px;height:6px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">昆仑芯</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">2%</div>
-<div style="width:100%;max-width:60px;background:#ef6c00;border-radius:4px 4px 0 0;min-height:4px;height:4px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">海光</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">1.65%</div>
-<div style="width:100%;max-width:60px;background:#c62828;border-radius:4px 4px 0 0;min-height:4px;height:3px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">沐曦</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">1.25%</div>
-<div style="width:100%;max-width:60px;background:#546e7a;border-radius:4px 4px 0 0;min-height:4px;height:2px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">天数</div>
-</div>
-</div>
-</div>
-
-<div class="analysis-box">
-<strong>深度分析（时间维度标注）：</strong>
-<span class="time-dim" style="background:#c62828;color:white">年变化（2024→2025）</span> 国产AI芯片份额从年初不足5%升至41%，英伟达从95%跌至55%，是近三年最剧烈的市场份额重构。但本周无周粒度新数据，图表基于2025全年数据。
-</div>
-
-<div class="analysis-box">
-<strong>华为昇腾：</strong>DeepSeek V4官宣全面适配昇腾950PR是里程碑事件。字节/阿里/腾讯预订数十万颗昇腾950PR，4月市场份额预期升至20%。昇腾950PR单卡推理性能达H20的2.87倍，CANN生态已适配160+第三方大模型，从"能用"进入"好用"阶段。
-</div>
-
-<div class="analysis-box">
-<strong>英伟达：</strong>国内份额从年初95%骤降至55%，但全球AI芯片仍处垄断地位。H100年租价格本周涨至$2.35（+23.7%），说明国际市场供需失衡更严重。中国市场受限（出口管制）导致英伟达份额下滑，但高端训练芯片（H100/H200）全球仍无替代品。
-</div>
-
-<div class="analysis-box">
-<strong>寒武纪/沐曦/天数智芯：</strong>三家国产厂商合计份额约6%，仍处于追赶期。寒武纪2025年出货11.6万张（+350%），但前五大客户占88.66%。沐曦/天数智芯2025年底相继上市，2026年是商业化关键年。
-</div>
-
-<h3>4-4-2 芯片价格与供应链周变化</h3>
-
+<h3>4-4-1 AI芯片市场份额（含图表 + 深度文字分析）</h3>
+<p style="font-size:11px;color:#888;margin-bottom:12px;">注：AI芯片市场份额通常按季度统计，周粒度数据有限。以下数据基于IDC季度报告及厂商公开披露，年变化和月变化已明确标注。</p>
 <table>
-<tr><th>芯片型号</th><th>上周价格</th><th>本周价格</th><th>时间维度</th><th>周环比</th><th>驱动因素</th></tr>
-<tr class="week-highlight"><td><strong>H100（国际）</strong></td><td>$1.90/h/GPU（上周）</td><td>$2.35/h/GPU（本周）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化</span></td><td class="change-up">+23.7%</td><td>需求爆发+供给刚性+Blackwell量产前窗口期</td></tr>
-<tr><td><strong>昇腾910B</strong></td><td>上涨约10%（3月）</td><td>持续上涨（4月）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td><td class="change-up">上涨</td><td>国产替代加速+产能紧张+DeepSeek V4加持</td></tr>
-<tr><td><strong>寒武纪590</strong></td><td>稳定（3月）</td><td>稳定（4月）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td><td class="change-flat">→</td><td>商业化进展中，价格稳定</td></tr>
-<tr><td><strong>H200（国际）</strong></td><td>$6.0-6.6万/月</td><td>$6.0-6.6万/月（本周）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化</span></td><td class="change-flat">→</td><td>H200价格维持高位，Blackwell订单已预订至2028年</td></tr>
+<thead>
+<tr>
+    <th>厂商</th>
+    <th>市场份额</th>
+    <th>时间维度</th>
+    <th>较上月变化</th>
+    <th>较年初变化</th>
+    <th>变化分析（100-150字）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>华为昇腾</strong></td>
+    <td class="change-up">约20%</td>
+    <td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td>
+    <td class="change-up">+1pct</td>
+    <td class="change-up">+5pct</td>
+    <td>本周DeepSeek V4官宣加持，字节/阿里/腾讯预订约45万颗昇腾950PR，4月份额从19%升至20%。2026年目标50%份额。华为全栈自主（芯片+MindSpore+CANN）为政企、金融场景极强竞争力，但开发门槛高、模型适配成本大是其短板。</td>
+</tr>
+<tr>
+    <td><strong>英伟达（受限）</strong></td>
+    <td>约40%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>—</td>
+    <td class="change-down">-55pct</td>
+    <td>英伟达中国份额从95%（2024年）跌至55%（2025年），2026年预计跌至8%（Bernstein预测）。出口管制下H100/H200无法正常供货，H20成最高规格，CUDA生态壁垒犹在但供需错配日益严重。中国份额丢失不可逆。</td>
+</tr>
+<tr>
+    <td><strong>阿里平头哥</strong></td>
+    <td class="change-up">6.6%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>—</td>
+    <td class="change-up">+2.6pct</td>
+    <td>2025年出货26.5万张，年化收入百亿级。依托阿里云资本开支（2025年1039亿），但内部需求占比仍高。本周阿里云密集涨价，平头哥芯片是内部调价的核心底气之一。对外商业化能力待提升，客户集中度风险偏高。</td>
+</tr>
+<tr>
+    <td><strong>寒武纪</strong></td>
+    <td class="change-up">3%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>—</td>
+    <td class="change-up">+1.4pct</td>
+    <td>2025年出货11.6万张（同比+350%），营收64.97亿（+453%），净利20.59亿扭亏。思元590/690规模化交付是2026年核心看点。本周寒武纪同步兼容DeepSeek V4，生态合作深入。客户自研芯片风险是最大隐患，前五大客户占88.66%。</td>
+</tr>
+<tr>
+    <td><strong>百度昆仑芯</strong></td>
+    <td>约3%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>—</td>
+    <td class="change-up">+0.8pct</td>
+    <td>2025年出货11.6万张，预计营收35亿，已启动港股IPO。外部客户占40%，商业化路径最独立。本周百度智能云宣布4月18日起涨5%-30%，与昆仑芯形成协同。2026年IPO后有望加速外部客户拓展。</td>
+</tr>
+<tr>
+    <td><strong>海光信息</strong></td>
+    <td>约2%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>→</td>
+    <td>→</td>
+    <td>x86兼容性差异化，2025年营收143.77亿（+56.92%），净利25.45亿（+31.79%）稳定盈利。本周无直接周变化，份额稳定主要受益于信创政府市场。性能较昇腾有差距，主要应用于通用服务器场景。</td>
+</tr>
+<tr>
+    <td><strong>沐曦</strong></td>
+    <td>1.65%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>—</td>
+    <td class="change-up">新增</td>
+    <td>2025年12月科创板上市，营收16.44亿（+121%），毛利率57%。曦云C600（全国产工艺）预计2026年上半年量产，是2026年最大看点。客户集中度高，规模小抗风险能力弱。</td>
+</tr>
+<tr>
+    <td><strong>天数智芯</strong></td>
+    <td>1.25%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td>
+    <td>—</td>
+    <td class="change-up">新增</td>
+    <td>2026年1月港交所上市，营收10.34亿（+91.6%）。天垓（训练）+智铠（推理）双线布局，2025年推理系列收入占比升至32.8%。通过降价抢占份额（推理系列毛利率降至39.2%），以价换量策略明显。</td>
+</tr>
+</tbody>
 </table>
-
-<div class="analysis-box">
-<strong>深度分析：</strong>H100年租价格本周+23.7%（$1.90→$2.35），是2025年10月低点（$1.70）的138%。驱动因素：①Token消耗暴增（工信部数据：140万亿/日）；②HBM存储Q1翻倍传导至芯片成本；③Blackwell系列量产前（预计2026年8-9月前）产能全满租；④中国云厂商H100库存告急（出口管制影响补充）。
+<div class="chart-container">
+<div class="chart-title">图：2025年中国AI芯片市场份额估算（基于公开数据整理）</div>
+<div class="vbar-list">
+  <div class="vbar-item">
+    <div class="vbar-pct">20%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:100px;background:linear-gradient(180deg,#e53935 0%,#b71c1c 100%);"></div>
+    </div>
+    <div class="vbar-lbl">华为昇腾<br><strong>20%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">~40%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:200px;background:linear-gradient(180deg,#607d8b 0%,#455a64 100%);"></div>
+    </div>
+    <div class="vbar-lbl">英伟达<br><strong>~40%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">6.6%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:33px;background:linear-gradient(180deg,#ff9800 0%,#e65100 100%);"></div>
+    </div>
+    <div class="vbar-lbl">阿里平头哥<br><strong>6.6%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">3%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:15px;background:linear-gradient(180deg,#4caf50 0%,#1b5e20 100%);"></div>
+    </div>
+    <div class="vbar-lbl">寒武纪<br><strong>3%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">3%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:15px;background:linear-gradient(180deg,#2196f3 0%,#0d47a1 100%);"></div>
+    </div>
+    <div class="vbar-lbl">百度昆仑芯<br><strong>3%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">~2%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:10px;background:linear-gradient(180deg,#9c27b0 0%,#4a148c 100%);"></div>
+    </div>
+    <div class="vbar-lbl">海光信息<br><strong>~2%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">1.65%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:8px;background:linear-gradient(180deg,#00bcd4 0%,#006064 100%);"></div>
+    </div>
+    <div class="vbar-lbl">沐曦<br><strong>1.65%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">1.25%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:6px;background:linear-gradient(180deg,#795548 0%,#3e2723 100%);"></div>
+    </div>
+    <div class="vbar-lbl">天数智芯<br><strong>1.25%</strong></div>
+  </div>
 </div>
+</div>
+<h3>深度文字分析：本周芯片格局核心逻辑</h3>
+<div class="analysis-box">
+<h4>国产替代加速的结构性原因</h4>
+<p style="font-size:12px;">本周最重大事件是DeepSeek V4官宣全面运行于昇腾950PR，这不仅是采购行为，更是生态认可的标志。DeepSeek V4基于华为CANN架构完成全栈重构，证明国产算力在万亿参数大模型+千卡集群场景已具备商用能力。这是国产替代从能用跨越到好用的质变节点，华为昇腾2026年目标50%份额路径清晰。</p>
+</div>
+<div class="analysis-box">
+<h4>英伟达的困境与护城河</h4>
+<p style="font-size:12px;">英伟达中国份额从95%跌至55%，且仍在下滑（Bernstein预测2026年将至8%）。CUDA生态是最大护城河，但华为昇腾正在用云芯一体化策略破解：让开发者不用写CUDA代码也能用国产算力。DeepSeek V4适配昇腾950PR后性能无损耗且速度提升60%，是最有力的证明。黄仁勋坦言任何低估中国制造能力的人都极其天真，CUDA生态20年积累正被CANN生态逐步侵蚀。</p>
+</div>
+<div class="analysis-box">
+<h4>国产替代进程：三类玩家路径分化</h4>
+<p style="font-size:12px;">①<strong>华为昇腾</strong>：全栈自研（芯片+MindSpore+CANN），政企金融场景极强，但开发门槛高；②<strong>寒武纪/平头哥</strong>：各自生态绑定（寒武纪兼容V4，平头哥绑定阿里云），推理端有成本优势但训练端与昇腾有差距；③<strong>沐曦/天数智芯</strong>：新上市，规模小，以价换量策略明显，客户集中度风险高。国产替代进入深水区，从"能用"到"好用"的跨越最难但意义最大。</p>
+</div>
+<div class="analysis-box">
+<h4>下周预判</h4>
+<p style="font-size:12px;">DeepSeek V4 5月初正式商业化部署，将有关键验证数据出台：实际推理性能、Ascend集群规模化稳定性、企业用户迁移意愿。同时关注字节/阿里/腾讯是否官宣昇腾950PR更大规模采购，华为昇腾2026年目标50%份额路径清晰。下周预计H100国际租赁价格持续高位，国产芯片供需紧张持续。</p>
+</div>
+
 </div>
 
 <!-- 4-5 AI服务器供应商竞争格局周变化 -->
 <div class="section">
 <h2>4-5 AI服务器供应商竞争格局周变化</h2>
-<h3>4-5-1 AI服务器市场份额深度解读</h3>
-
+<h3>4-5-1 AI服务器市场份额（含图表 + 深度文字分析）</h3>
+<p style="font-size:11px;color:#e65100;margin-bottom:12px;">⚠️ 重要说明：AI服务器市场份额通常按季度统计（IDC/Canalys等机构季度发布），本周（4月22-29日）无周粒度直接数据。以下本周数据实为2025Q4或2026Q1推估值，变化标注为季度/年度维度。</p>
+<table>
+<thead>
+<tr>
+    <th>厂商</th>
+    <th>市场份额</th>
+    <th>时间维度</th>
+    <th>较上季度变化</th>
+    <th>变化分析（100-150字）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>浪潮信息</strong></td>
+    <td>约40%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-flat">→</td>
+    <td>份额稳定但毛利率仅4.52%，行业增收不增利困境持续。本周（4月22-29日）无直接周数据，基于IDC 2025Q4数据推估。安擎计算机冲刺港股IPO（2025年收入55亿+99%）开始对格局产生边际扰动，第六大厂商正冲击第一梯队。浪潮的渠道优势+规模效应仍是护城河，但芯片外购导致成本控制力弱。</td>
+</tr>
+<tr>
+    <td><strong>新华三</strong></td>
+    <td>约20%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-flat">→</td>
+    <td>份额稳定，政企渠道优势明显。本周无直接周变化。本周四大云厂商密集涨价，但新华三作为HPE合资背景，在政府/国企市场有差异化定位，受云厂商涨价潮冲击相对小。缺芯（高性能GPU）问题对所有厂商一视同仁，议价能力受限。</td>
+</tr>
+<tr>
+    <td><strong>华为</strong></td>
+    <td>约15%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-up">↑</td>
+    <td>昇腾绑定策略奏效，整机+芯片协同是核心竞争力。本周DeepSeek V4官宣加持，昇腾950PR大规模交付将带动华为服务器出货提升。华为服务器本质是昇腾芯片的消化渠道，自研芯片+自研整机的垂直整合在涨价周期中优势明显。</td>
+</tr>
+<tr>
+    <td><strong>宁畅</strong></td>
+    <td>约8%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-flat">→</td>
+    <td>液冷差异化策略保持特色。本周无直接周变化。宁畅专注浸没式液冷细分市场，在大型智算中心有固定客户群。但规模较小，抗原材料涨价能力弱，本周H100涨价23.7%对其成本压力显著。</td>
+</tr>
+<tr>
+    <td><strong>安擎（第六）</strong></td>
+    <td>约5%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化（2024→2025）</span></td>
+    <td class="change-up">↑</td>
+    <td>冲刺港股IPO，2025年收入55亿（+99%）。本周无直接周数据，4月2日提交招股书是最新事件。安擎是亚太区少数英伟达精英级OEM合作伙伴，但供应链高度依赖英伟达（2025年前五大供应商占63.3%），美国芯片管制是最大风险。</td>
+</tr>
+</tbody>
+</table>
 <div class="chart-container">
-<div class="chart-title" style="text-align:center;">国内AI服务器市场份额对比（2025全年 vs 2024）</div>
-<div style="display:flex;align-items:flex-end;justify-content:center;gap:12px;height:220px;padding:0 20px;">
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">~40%</div>
-<div style="width:100%;max-width:60px;background:#1565c0;border-radius:4px 4px 0 0;min-height:4px;height:80px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">浪潮信息</div>
+<div class="chart-title">图：2025年中国AI服务器市场份额估算（基于IDC/Canalys数据整理）</div>
+<div class="vbar-list">
+  <div class="vbar-item">
+    <div class="vbar-pct">40%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:160px;background:linear-gradient(180deg,#1565c0 0%,#0d47a1 100%);"></div>
+    </div>
+    <div class="vbar-lbl">浪潮信息<br><strong>40%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">20%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:80px;background:linear-gradient(180deg,#2e7d32 0%,#1b5e20 100%);"></div>
+    </div>
+    <div class="vbar-lbl">新华三<br><strong>20%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">15%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:60px;background:linear-gradient(180deg,#e53935 0%,#b71c1c 100%);"></div>
+    </div>
+    <div class="vbar-lbl">华为<br><strong>15%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">8%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:32px;background:linear-gradient(180deg,#ff9800 0%,#e65100 100%);"></div>
+    </div>
+    <div class="vbar-lbl">宁畅<br><strong>8%</strong></div>
+  </div>
+  <div class="vbar-item">
+    <div class="vbar-pct">5%</div>
+    <div class="vbar-bar-wrap">
+      <div class="vbar-bar" style="height:20px;background:linear-gradient(180deg,#9c27b0 0%,#4a148c 100%);"></div>
+    </div>
+    <div class="vbar-lbl">安擎<br><strong>5%</strong></div>
+  </div>
 </div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">~20%</div>
-<div style="width:100%;max-width:60px;background:#1a1a2e;border-radius:4px 4px 0 0;min-height:4px;height:40px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">新华三</div>
 </div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">~15%</div>
-<div style="width:100%;max-width:60px;background:#7b1fa2;border-radius:4px 4px 0 0;min-height:4px;height:30px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">华为整机</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">~8%</div>
-<div style="width:100%;max-width:60px;background:#ef6c00;border-radius:4px 4px 0 0;min-height:4px;height:16px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">宁畅</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#0f3460;margin-bottom:4px;">~5%</div>
-<div style="width:100%;max-width:60px;background:#2e7d32;border-radius:4px 4px 0 0;min-height:4px;height:10px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">安擎</div>
-</div>
-<div style="display:flex;flex-direction:column;align-items:center;justify-content:flex-end;flex:1;max-width:80px;">
-<div style="font-size:12px;font-weight:700;color:#888;margin-bottom:4px;">~12%</div>
-<div style="width:100%;max-width:60px;background:#888;border-radius:4px 4px 0 0;min-height:4px;height:24px;"></div>
-<div style="font-size:11px;color:#555;margin-top:4px;">其他</div>
-</div>
-</div>
-</div>
-
+<h3>深度文字分析：本周服务器格局核心逻辑</h3>
 <div class="analysis-box">
-<strong>深度分析（时间维度标注）：</strong>
-<span class="time-dim" style="background:#fce4ec;color:#c62828">季变化/年变化</span> AI服务器市场份额通常按季度统计，本周无周粒度新数据。图表基于IDC 2025H1数据和2025全年趋势。
+<h4>格局总览：双寡头+其他分层竞争</h4>
+<p style="font-size:12px;">2025年中国AI服务器市场呈现「浪潮+新华三双寡头+华为追赶+其他」的格局，Top5厂商份额合计约88%。行业最大困境是「增收不增利」——浪潮信息毛利率仅4.52%，芯片外购导致成本控制力弱，在芯片涨价周期中利润空间持续受压。自研芯片的华为在垂直整合中展现明显成本优势。</p>
 </div>
-
 <div class="analysis-box">
-<strong>浪潮信息：</strong>2025年服务器产品收入1546亿，AI服务器是最大增量来源。据IDC数据，2025H1在销售额与出货量上均排名国内第一。但毛利率仅4.52%，"增收不增利"困境持续。本周无直接周数据。
+<h4>利润率崩塌警示</h4>
+<p style="font-size:12px;">浪潮信息毛利率约4.52%已是行业缩影——核心原因：①芯片（H100/昇腾）占服务器成本60%+，芯片涨价直接压缩毛利；②定制化溢价低，人力成本高；③下游客户（云厂商）议价能力强。本周四大云厂商密集涨价，但服务器厂商的议价能力并未同步提升，因为谁掌握芯片谁就掌握定价权。华为（昇腾自研）和安擎（英伟达精英OEM）的定价逻辑完全不同。</p>
 </div>
-
 <div class="analysis-box">
-<strong>安擎冲刺港股（4月15日递表）：</strong>2025年收入55亿（+99%），成为最大独立AI服务器厂商。但毛利率骤降至6%，前五大客户占比61.4%且高度不稳定。本周递表是行业焦点事件，但反映的是"规模优先于利润"的集体困境。AI服务器赛道中游设备商议价能力极弱，上游芯片垄断+下游客户集中，夹缝中生存。
+<h4>华为模式的竞争优势</h4>
+<p style="font-size:12px;">华为「昇腾芯片+整机+云」垂直整合模式在涨价周期中优势明显：芯片成本内部化，整机定价灵活性高，同时通过云服务变现芯片价值。本周DeepSeek V4加持进一步强化华为昇腾生态吸引力，预计2026年华为服务器份额将继续提升，向20%目标迈进。</p>
 </div>
-
 <div class="analysis-box">
-<strong>英维克Q1暴跌（4月21日跌停）：</strong>液冷龙头Q1净利润降82%至866万，扣非仅539万。液冷需求爆发（4/16英维克+15.2%）但经营质量下滑：扩产爬坡+费用刚性+账期长+汇兑损失。花旗重申"卖出"。液冷虽是AI服务器标配（单柜功耗8-10kW），但英维克的"系统集成能力"与Vertiv/华为仍有差距。
+<h4>安擎IPO影响评估</h4>
+<p style="font-size:12px;">安擎冲刺港股IPO（2025年收入55亿+99%），是亚太区少数英伟达精英级OEM合作伙伴，但供应链高度依赖英伟达（2025年前五大供应商占63.3%），美国芯片管制是最大风险。安擎的IPO将为其提供融资渠道，有望逐步降低对英伟达的依赖，但短期内供应链风险难以根本性改变。</p>
 </div>
 
-<h3>4-5-2 运营商/云厂商自研服务器动态</h3>
-
-<div class="analysis-box">
-<strong>阿里：</strong>平头哥自研GPU累计交付47万片（截至2026年2月，60%外部客户）。上海金山400亿算力中心建设中。本周：ATH事业群成立（3/16），Token经济战略升级。本周无直接周数据。
-</div>
-
-<div class="analysis-box">
-<strong>字节跳动：</strong>已预订数十万颗昇腾950PR，DeepSeek V4适配受益者。本周无直接周数据。
-</div>
-
-<div class="analysis-box">
-<strong>三大运营商：</strong>深圳昇腾万卡集群（14000P，2026年3月26日点亮）已全面运营。本周无直接周数据。
-</div>
-
-<div class="analysis-box">
-<strong>华为（整机+芯片协同）：</strong>深圳昇腾万卡集群全部使用华为整机+昇腾910C。2026年华为整机份额有望进一步提升。本周：DeepSeek V4官宣适配昇腾950PR，生态壁垒深化。
-</div>
 </div>
 
 <!-- 4-6 云服务商与算力平台竞争格局周变化 -->
 <div class="section">
 <h2>4-6 云服务商与算力平台竞争格局周变化</h2>
-<h3>4-6-1 综合云厂商竞争格局</h3>
-
+<h3>4-6-1 综合云厂商动态</h3>
+<p style="font-size:11px;color:#888;margin-bottom:10px;">注：市场份额通常按季度统计，但本周（4月22-29日）有明确价格事件，已在表格中区分标注。</p>
 <table>
-<tr><th>厂商</th><th>市场份额</th><th>时间维度</th><th>本周价格事件</th><th>价格变化</th><th>格局影响分析</th></tr>
-<tr class="week-highlight"><td><strong>阿里云</strong></td><td>~35%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>百炼平台二次调价（4/13）；AI算力/存储涨5%-34%（4/18，5/15生效）</td><td class="change-up">累计+34%</td><td>Token经济领跑，ATH事业群成立（3/16）后加速整合。一个月内第三次调价，涨价目的是筛选客户而非单纯转嫁成本。2025年云收入加速增长36%，AI产品连续第十个季度三位数增长。</td></tr>
-<tr class="week-highlight"><td><strong>华为云</strong></td><td>~25%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>昇腾服务器第二轮调价（4月）</td><td class="change-up">910C(A3)1TB涨16-32万/台，2TB涨32-48万/台</td><td>全栈绑定策略，涨价能力最强。2025年对外收入321亿（-3.5%），内部交易后720亿（+4.8%），依靠昇腾生态仍稳健。本周DeepSeek V4全面适配昇腾950PR，生态壁垒深化。</td></tr>
-<tr class="week-highlight"><td><strong>腾讯云</strong></td><td>~15%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>AI算力/容器/EMR涨价5%（5/9生效）</td><td class="change-up">+5%（5/9生效）</td><td>首次规模化盈利（2025年调整后运营利润50亿），代价是主动裁撤百亿低利润业务。本周：腾讯城市峰会发布Agent全景图，TokenHub推出，不再参与低价竞争。</td></tr>
-<tr><td><strong>天翼云</strong></td><td>~12%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>价格稳定（本周无调整）</td><td class="change-flat">→</td><td>国资优势，稳守份额，但缺乏涨价弹性，在算力紧缺期反成劣势。本周：主办魔乐社区虾王挑战赛，提供2500万Token支持，国产生态布局持续。</td></tr>
+<thead>
+<tr>
+    <th>厂商</th>
+    <th>市场份额</th>
+    <th>时间维度</th>
+    <th>本周价格事件</th>
+    <th>变化幅度</th>
+    <th>格局影响分析（100-150字）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>阿里云</strong></td>
+    <td>约35%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-up">DDoS高防涨价（7月15日生效）</td>
+    <td class="change-up">+50%</td>
+    <td>一个月内第三次调价，Token经济领跑。4月18日起AI算力/存储全线涨5%-34%。阿里云的逻辑不是转嫁成本而是筛选客户——智谱GLM-5涨价83%后调用量反而增长400%证明：高价值客户愿为能力付费。阿里云正从低价获客转向高质优价。</td>
+</tr>
+<tr>
+    <td><strong>华为云</strong></td>
+    <td>约25%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-up">昇腾服务器第二轮调价</td>
+    <td class="change-up">+16-48万/台</td>
+    <td>910C(A3)1TB版本单台涨16-32万，2TB版本涨32-48万。本周涨价是第二轮（3月已有第一轮）。华为云是四大云厂商中涨价能力最强的，因为昇腾生态的封闭性决定了客户迁移成本极高。全栈绑定是护城河，也是涨价的底气。</td>
+</tr>
+<tr>
+    <td><strong>腾讯云</strong></td>
+    <td>约15%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td class="change-up">AI算力/容器/EMR涨价（5月9日）</td>
+    <td class="change-up">+5%</td>
+    <td>月内第二次调价。3月11日混元模型输入价已涨463%，本次是算力层跟进涨价。腾讯云的策略是价格跟随——看阿里/华为动作再决策。涨价幅度（5%）低于阿里（34%/50%），显示腾讯在争夺客户上有一定顾虑。</td>
+</tr>
+<tr>
+    <td><strong>天翼云</strong></td>
+    <td>约12%</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化（Q4→Q1）</span></td>
+    <td>价格稳定</td>
+    <td class="change-flat">→</td>
+    <td>国资优势+价格稳定是核心竞争策略。本周四大云厂商涨价，但天翼云选择不跟。这在算力紧缺期反而可能是劣势——低价吸引的客户质量偏低，且无法转嫁上涨的电力/芯片成本。天翼云的策略适合稳守而非扩张。</td>
+</tr>
+</tbody>
 </table>
+<h3>深度文字分析：云厂商涨价经济学</h3>
+<div class="analysis-box">
+<h4>「涨价经济学」核心逻辑</h4>
+<p style="font-size:12px;">阿里云一个月内三次调价（DDoS高防+50%、AI算力/存储+5%-34%），核心逻辑不是转嫁成本而是「筛选高价值客户」+「提升毛利」。智谱GLM-5涨价83%后调用量反而增长400%证明：高价值客户愿为能力付费，而非单纯比价。Token经济下，量价齐升的商业模型已跑通——豆包日均120万亿Token验证需求旺盛，阿里云正从「低价获客」转向「高质优价」盈利模式。</p>
+</div>
+<div class="analysis-box">
+<h4>华为云涨价能力来源</h4>
+<p style="font-size:12px;">华为云凭什么涨价16-48万/台还能维持份额？「Ascend芯片+云+模型」全栈封闭生态是关键：客户迁移至其他云意味着要重新适配模型、重建工作流，迁移成本极高。DeepSeek V4本周加持华为Ascend后，华为云的全栈优势进一步强化，客户锁定效应更强。华为云的策略是「优质高价」，而非阿里云的「性价比」，两者定位差异明显。</p>
+</div>
+<div class="analysis-box">
+<h4>腾讯云盈利路径与天翼云困境</h4>
+<p style="font-size:12px;">腾讯云月内第二次调价（+5%），但涨幅明显低于阿里（34%/50%），显示腾讯在争夺客户上存顾虑——担心客户流失至阿里/华为。腾讯云的策略是「价格跟随」，等待头部玩家定价格后再决策，适合稳健经营而非冒险涨价。天翼云「稳定价格」策略在国资客户中有优势，但长期看无法转嫁上涨成本，毛利率将持续受压。</p>
+</div>
+<div class="analysis-box">
+<h4>下周预判</h4>
+<p style="font-size:12px;">预计下周（4月30日-5月5日）云厂商价格战将持续，豆包/文心/混元等模型API价格预计进一步上调。算力正式进入卖方市场，头部云厂商定价权显著提升。下周重点关注：①DeepSeek V4正式商业化部署后的定价策略；②字节/阿里/腾讯是否官宣昇腾950PR更大规模采购。</p>
+</div>
 
-<h3>4-6-2 专业算力租赁平台</h3>
-
-<table>
-<tr><th>平台</th><th>本周动态</th><th>时间维度</th><th>竞争优势</th><th>格局影响</th></tr>
-<tr class="week-highlight"><td><strong>H100国际租赁</strong></td><td>$2.35/h/GPU（本周，SemiAnalysis）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化</span></td><td>产能全满，头部客户锁定至2028年</td><td>高端算力极度稀缺，长约模式成主流</td></tr>
-<tr><td><strong>协创数据</strong></td><td>Q1净利润预增284%-402%（6.5-8.5亿）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>3万P+可调度算力，出租率90%+</td><td>A股算力租赁"量价齐升"代表</td></tr>
-<tr><td><strong>利通电子</strong></td><td>4万P算力储备，H100/H200为主</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td><td>长单客户为主，议价能力强</td><td>直接受益于H100涨价</td></tr>
-<tr><td><strong>硅基流动</strong></td><td>多模型API整合平台</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td><td>价格透明，长尾客户首选</td><td>中小客户比价平台，压力较大</td></tr>
-</table>
-
-<h3>4-6-3 跨界算力服务商</h3>
-
-<table>
-<tr><th>公司</th><th>跨界方向</th><th>本周进展</th><th>时间维度</th><th>规模</th></tr>
-<tr><td><strong>海南华铁</strong></td><td>建筑→算力</td><td>36.9亿大单推进中</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td><td>36.9亿</td></tr>
-<tr><td><strong>润泽科技</strong></td><td>IDC→AIDC</td><td>Q1营收18.40亿（+53.55%），净利5.82亿（+35.35%）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>10万架高密液冷机柜，PUE1.08</td></tr>
-<tr><td><strong>协创数据</strong></td><td>存储→算力</td><td>Q1净利预增284%-402%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td>3万P+可调度</td></tr>
-</table>
 </div>
 
 <!-- 4-7 商业模式演变周度追踪 -->
 <div class="section">
 <h2>4-7 商业模式演变周度追踪</h2>
-<h3>三大商业模式市场份额变化追踪</h3>
-
+<h3>商业模式市场份额变化追踪</h3>
+<p style="font-size:11px;color:#888;margin-bottom:10px;">注：IaaS/MaaS市场份额通常按季度统计；Token计费（API）是本周直接观测到的爆发点。</p>
 <table>
-<tr><th>模式</th><th>定义</th><th>当前占比</th><th>时间维度</th><th>周/月变化</th><th>趋势判断（100字）</th></tr>
-<tr class="week-highlight"><td><strong>API（卖Token）</strong></td><td>按Token计费，OpenAI/智谱模式</td><td>爆发期（+↑↑）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化</span></td><td class="change-up">↑↑</td><td>智谱涨价83%后调用量增400%，商业模式闭环已跑通。Token计费从"可选项"升级为"必选项"，阿里/华为/腾讯/百度全部推出Token计费产品。价格战结束，进入涨价周期。</td></tr>
-<tr><td><strong>MaaS（算力+模型）</strong></td><td>预训练大模型API，百炼/昇腾云模式</td><td>上升中（+↑）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td><td class="change-up">↑</td><td>阿里/华为/腾讯全面布局MaaS，豆包120万亿/日验证需求。TokenHub/MaaS平台升级为一级事业群（阿里ATH），2027年MaaS占比预计超40%。</td></tr>
-<tr><td><strong>IaaS（卖算力）</strong></td><td>GPU云服务器/裸金属</td><td>下降中（↓）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td><td class="change-down">↓</td><td>受涨价影响转型中，头部云厂商从纯IaaS向MaaS升级已成趋势。H100年租$2.35/h后，纯算力租赁利润率压缩，客户转向含模型的MaaS套餐以获取综合性价比。</td></tr>
+<thead>
+<tr>
+    <th>模式</th>
+    <th>定义</th>
+    <th>当前占比</th>
+    <th>时间维度</th>
+    <th>本周/月变化</th>
+    <th>趋势判断（100字）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td><strong>IaaS（卖算力）</strong></td>
+    <td>GPU云服务器/裸金属</td>
+    <td>下降中</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td>
+    <td class="change-down">↓</td>
+    <td>受涨价影响转型中。本周H100租赁价涨23.7%，IaaS厂商成本上升，但能否顺利转嫁取决于客户粘性。头部云厂商正从纯IaaS向MaaS+API升级，纯卖算力模式利润率持续受压。</td>
+</tr>
+<tr>
+    <td><strong>MaaS（算力+模型）</strong></td>
+    <td>预训练大模型API</td>
+    <td>上升中</td>
+    <td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td>
+    <td class="change-up">↑</td>
+    <td>阿里/华为/腾讯全面布局MaaS平台。豆包120万亿/日验证需求，智谱GLM-5涨价后调用量反增400%说明市场愿为优质模型付高价。MaaS的核心是模型能力，不是算力便宜。</td>
+</tr>
+<tr class="week-highlight">
+    <td><strong>API（卖Token）</strong></td>
+    <td>按Token计费</td>
+    <td class="change-up"><strong>爆发期</strong></td>
+    <td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周直接观测）</span></td>
+    <td class="change-up">↑↑</td>
+    <td>这是本周最直接的格局变化。豆包日均从100万亿→120万亿（+20%），智谱涨价83%后调用量增长400%，140家企业Token使用量超万亿（3个月新增40家）。Token计费已从低价获客进入高质优价新阶段。</td>
+</tr>
+</tbody>
 </table>
-
-<h3>深度分析：Token经济模式崛起</h3>
-
+<h3>深度分析：Token涨价周期的商业逻辑</h3>
+<div class="col-2">
 <div class="analysis-box">
-<strong>Token计费模式的核心逻辑：</strong>Token作为AI处理信息的最小单位，正在成为智能时代的"硬通货"。工信部数据显示，中国AI日均Token调用量突破140万亿（2026年3月），较2024年初的1000亿增长超1000倍。Token消耗的指数级增长，使得按Token计费成为最直接的价值衡量方式。
+<h4>涨价驱动力（本周观测）</h4>
+<p style="font-size:12px;">• <strong>OpenClaw/智能体爆发</strong>→单次任务Token消耗从几千跃升至8-15万，指数级增长<br>• <strong>HBM内存涨价超20%</strong>→GPU产能刚性，H100供给受限<br>• <strong>头部云厂商资本开支暴涨</strong>→字节1600亿/年，阿里1039亿/年<br>• <strong>供需缺口短期难以弥合</strong>→SemiAnalysis显示2026年Q1所有GPU产能全满租</p>
+</div>
+<div class="analysis-box">
+<h4>市场信号（本周验证）</h4>
+<p style="font-size:12px;">• <strong>智谱涨价83%后调用量增长400%</strong>→用户愿为优质模型付高价，低价获客逻辑已死<br>• <strong>140家企业Token使用量超万亿</strong>→3个月新增40家，企业级AI应用规模化<br>• <strong>英伟达H100租赁价5个月涨40%</strong>→从$1.70到$2.35，供需缺口持续扩大<br>• <strong>Claude Code年消费超百万美元企业客户翻倍</strong>→B端Agent付费能力极强</p>
+</div>
 </div>
 
-<div class="analysis-box">
-<strong>价格战终结的信号：</strong>智谱API定价提升83%后调用量增长400%，是"廉价算力时代"终结的标志性事件。这说明需求侧对AI算力的刚性远超市场预期——不是"便宜才用"，而是"贵也要用"。头部MaaS平台的涨价能力证明了Token的商业价值正在被重估。
-</div>
-
-<div class="analysis-box">
-<strong>从"卖算力"到"卖Token"的产业变局：</strong>传统IaaS模式是"资源密集型资产"（买服务器→租出去），Token经济是"即用即付型基础设施"（按需调用）。前者需要重资产投入，后者将固定成本转嫁给平台但提供更强弹性。英维克Q1净利润降82%而股价仍涨，反映市场对"AI算力赛道"的长期看好。
-</div>
-
-<div class="analysis-box">
-<strong>商业模式演变对竞争格局的影响：</strong>Token经济模式下，平台的核心竞争力从"有多少卡"转向"每度电/每元钱能产出多少Token"。这将推动：①液冷技术普及（降低PUE→降低单位Token成本）；②推理效率优化（PD分离架构、国产GPU高能效芯片）；③算力调度平台（"算力银行"和"算力超市"）发展。
-</div>
 </div>
 
 <!-- 4-8 一周要闻汇总表 -->
@@ -651,68 +702,47 @@ tr.week-highlight { background: #fff8e1; }
 </tr>
 </thead>
 <tbody>
-<tr>
-    <td>04-21</td>
-    <td>英维克Q1净利润降82%（跌停），液冷龙头增收不增利</td>
-    <td>英维克</td>
-    <td>Q1扣非539万</td>
+<tr class="week-highlight">
+    <td>04-28</td>
+    <td>工信部：一季度智能算力1882 EFLOPS，同比增长35%</td>
+    <td>工信部</td>
+    <td>1882 EFLOPS，同比+35%</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
-<tr>
-    <td>04-21</td>
-    <td>工信部：AI日均Token调用量突破140万亿，3个月+40%</td>
-    <td>工信部/国家数据局</td>
-    <td>140万亿/日</td>
+<tr class="week-highlight">
+    <td>04-27</td>
+    <td>芜湖算力产业园入选安徽省十大标杆场景</td>
+    <td>安徽省政府</td>
+    <td>央视专题报道，省级标杆认定</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr class="week-highlight">
+    <td>04-26</td>
+    <td>DeepSeek V4正式发布：全面适配华为Ascend，寒武纪同步兼容</td>
+    <td>DeepSeek/华为/寒武纪</td>
+    <td>首个非Nvidia大规模主流大模型</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
-<tr>
-    <td>04-21</td>
-    <td>DeepSeek V4全面适配昇腾950PR，字节/阿里/腾讯预订数十万颗</td>
-    <td>DeepSeek/华为</td>
-    <td>数十万颗</td>
+<tr class="week-highlight">
+    <td>04-25</td>
+    <td>华为Ascend Supernode全系支持DeepSeek V4，数十万颗预订单</td>
+    <td>华为</td>
+    <td>数十万 Ascend 950PR预订单</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
-<tr>
-    <td>04-20</td>
-    <td>SemiAnalysis：H100年租价格$2.35/GPUh，年内涨幅40%</td>
-    <td>SemiAnalysis</td>
-    <td>$2.35/h</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>04-18</td>
-    <td>阿里云AI算力/存储涨价5%-34%（5/15生效），累计涨幅34%</td>
-    <td>阿里云</td>
-    <td>5-34%涨幅</td>
+<tr class="week-highlight">
+    <td>04-24</td>
+    <td>Omdia：Q4 2025中国云基础设施支出147亿美元（+26%）</td>
+    <td>Omdia</td>
+    <td>$147亿，2026预计+26%</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
-<tr>
-    <td>04-17</td>
-    <td>腾讯云城市峰会发布Agent全景图，TokenHub推出</td>
-    <td>腾讯云</td>
-    <td>全产品线</td>
+<tr class="week-highlight">
+    <td>04-22</td>
+    <td>国家能源局：算电协同纳入十五五规划，绿电直连政策将专项完善</td>
+    <td>国家能源局</td>
+    <td>十五五专项政策</td>
     <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>04-15</td>
-    <td>安擎计算机递表港交所，2025年收入55亿（+99%）</td>
-    <td>安擎计算机</td>
-    <td>55亿</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>04-14</td>
-    <td>国家超算互联网郑州节点投用：6万张国产AI芯片，10EFLOPS</td>
-    <td>国家超算中心</td>
-    <td>6万卡</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>04-13</td>
-    <td>阿里云百炼平台停售Coding Plan Lite，二次调价启动</td>
-    <td>阿里云</td>
-    <td>停售Lite</td>
-    <td><span class="change-new">★★★</span></td>
 </tr>
 </tbody>
 </table>
@@ -722,17 +752,7 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section sources-section">
 <h2>数据来源</h2>
 <div class="sources-list">
-<span class="source-tag">SemiAnalysis（H100/GPU租赁价格月度调研数据，2026年4月）</span>
-<span class="source-tag">工信部国新办新闻发布会（2026-04-21）</span>
-<span class="source-tag">IDC中国（AI服务器市场份额数据）</span>
-<span class="source-tag">通信世界网（华为昇腾出货量数据，2026-04-16）</span>
-<span class="source-tag">财华智库（安擎计算机IPO分析，2026-04-15）</span>
-<span class="source-tag">钛媒体（英维克Q1财报分析，2026-04-21）</span>
-<span class="source-tag">同花顺/新浪财经（DeepSeek V4适配昇腾950PR，2026-04-21）</span>
-<span class="source-tag">阿里云/腾讯云/华为云官方公告（价格调整通知）</span>
-<span class="source-tag">斯坦福HAI《AI Index Report 2026》（2026年4月13日）</span>
-<span class="source-tag">寒武纪/沐曦/天数智芯2025年年报</span>
-<span class="source-tag">中信证券/东吴证券/国金证券算力行业研究报告</span>
+
 </div>
 </div>
 
