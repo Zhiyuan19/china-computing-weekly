@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>七、应用场景分析 | 第17期</title>
+    <title>七、应用场景分析 | 第18期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -97,9 +97,9 @@ tr.week-highlight { background: #fff8e1; }
 <body>
 
 <header>
-<div class="week-badge">第17期</div>
+<div class="week-badge">第18期</div>
 <h1>七、应用场景分析</h1>
-<div class="subtitle">2026-04-22—2026-04-29 | 中国智能算力报告</div>
+<div class="subtitle">2026-05-01—2026-05-07 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -121,11 +121,11 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">本周（4/22—4/29）是DeepSeek V4发布的关键周，国产大模型在参数规模、上下文窗口长度和成本效率上进一步逼近前沿闭源模型，华为昇腾芯片生态协同深化。与此同时，AI应用从"模型军备竞赛"向"场景价值落地"的结构性迁移明显加速——金融AI的华为4-Win模式推动规模化部署，医疗AI在药物研发与影像诊断双线并进，XPENG在北京车展发布L4级GX车型将车载算力推至3000 TOPS新高度，云基础设施Q4 2025同比增26%至147亿美元，验证推理算力需求持续释放。本周应用场景核心特征为：大模型效率提升→推理成本下降→垂直场景渗透加速，三条主线形成共振。</div>
+<div class="overview-text">本周（5/1—5/7）是国产大模型与国产算力深度绑定的标志性节点：DeepSeek V4全球首发即完成华为昇腾、寒武纪全栈适配，字节豆包正式推出付费订阅体系（68/200/500元/月），标志C端AI商业化迈入新阶段；智谱GLM-5.1在10万昇腾芯片上完成全流程训练，验证"纯国产"路径可行性。应用场景侧，北京车展折射具身智能从汽车向机器人迁移的大趋势，医学影像AI出海提速，AI推理正从"拼量"向"拼质"转型，推动词元经济精细化运营成为行业新命题。</div>
 </div>
 
 <div class="data-note">
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-04-22—2026-04-29）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
+<strong>数据说明：</strong>本周报聚焦最近7天（2026-05-01—2026-05-07）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
 <strong>时间维度说明：</strong>日环比=比前一天、周环比=比前一周、月环比=比上月、季环比=比上季度、年同比=比去年同期。变化幅度 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。<br>
 <strong>数据卡片说明：</strong>change字段格式为"时间戳 上期值 | ↑/↓ 幅度（时间维度）"，如"4/6-12 5.80万亿 | ↓23.8%（周变化）"。
 </div>
@@ -135,34 +135,29 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-1 本周应用场景核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">中国云基础设施季度支出（Q4 2025）</div>
-    <div class="value">147<span class="unit">亿美元</span></div>
-    <div class="change">Q3 2025 134亿美元 | ↑9.7%（季环比）</div>
+    <div class="label">DeepSeek V4 Token成本优势</div>
+    <div class="value">0.25<span class="unit">元/百万Token（V4-Pro API限时价）</span></div>
+    <div class="change">较GPT-5.5便宜700倍（周变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">DeepSeek V4上下文窗口</div>
-    <div class="value">100<span class="unit">万Token</span></div>
-    <div class="change">V3 12.8万Token | ↑681%（版本环比）</div>
+    <div class="label">豆包月活用户</div>
+    <div class="value">3.45<span class="unit">亿（2026 Q1）</span></div>
+    <div class="change">稳居国内第一（周变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">XPENG GX车载算力</div>
-    <div class="value">3000<span class="unit">TOPS</span></div>
-    <div class="change">上一代旗舰车型 | ↑200%（车型换代）</div>
+    <div class="label">具身智能融资规模</div>
+    <div class="value">345<span class="unit">亿元（2026年以来）</span></div>
+    <div class="change">产业链全线渗透（周变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">Tesla HW4 Plus系统内存</div>
-    <div class="value">64<span class="unit">GB</span></div>
-    <div class="change">HW4 32GB | ↑100%（代际提升）</div>
+    <div class="label">中国AI Token全球市场份额</div>
+    <div class="value">61<span class="unit">%（OpenRouter周峰值）</span></div>
+    <div class="change">连续五周超越美国（周环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">BMW AI分析提速倍数</div>
-    <div class="value">12<span class="unit">倍</span></div>
-    <div class="change">基于Agentic AI工作流（周变化）</div>
-</div>
-<div class="data-card">
-    <div class="label">DeepSeek V4百万Token成本</div>
-    <div class="value">0.14<span class="unit">美元/百万输入</span></div>
-    <div class="change">GPT-5.4 Nano | ↓超50%（成本对比）</div>
+    <div class="label">智谱GLM-5.1吞吐提升</div>
+    <div class="value">132<span class="unit">%（推理优化后）</span></div>
+    <div class="change">较优化前（周变化）</div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -179,68 +174,52 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>中国云基础设施季度支出</strong></td>
-    <td>季环比</td>
-    <td>135亿美元（Q3 2025）</td>
-    <td>147 亿美元</td>
-    <td><span class="change-up">↑ 8.9%</span></td>
-    <td>AI和Agent应用增长双重驱动，连续三季度增速超20%</td>
+    <td><strong>DeepSeek V4百万Token上下文推理FLOPs</strong></td>
+    <td>周环比</td>
+    <td>100%（V3为基准）</td>
+    <td>27 %</td>
+    <td><span class="change-up">↓ 73%</span></td>
+    <td>token-wise压缩技术落地，推理效率大幅提升</td>
 </tr>
 <tr>
-    <td><strong>DeepSeek V4上下文窗口</strong></td>
-    <td>版本环比</td>
-    <td>12.8万Token（V3）</td>
-    <td>100 万Token</td>
-    <td><span class="change-up">↑ 681%</span></td>
-    <td>长上下文能力大幅跃升，支撑更长程推理与文档分析场景</td>
+    <td><strong>V4-Flash单Token KV缓存占用比</strong></td>
+    <td>周环比</td>
+    <td>100%（V3为基准）</td>
+    <td>10 %</td>
+    <td><span class="change-up">↓ 90%</span></td>
+    <td>极致压缩，KV缓存占用仅V3的10%</td>
 </tr>
 <tr>
-    <td><strong>XPENG GX车载AI算力</strong></td>
-    <td>车型换代</td>
-    <td>~1000 TOPS（老款旗舰）</td>
-    <td>3000 TOPS</td>
-    <td><span class="change-up">↑ 200%</span></td>
-    <td>L4自动驾驶进入量产准备阶段，边缘推理算力需求爆发</td>
+    <td><strong>豆包月活</strong></td>
+    <td>月环比</td>
+    <td>3.20亿（2026 Q1初期）</td>
+    <td>3.45 亿</td>
+    <td><span class="change-up">↑ 7.8%</span></td>
+    <td>春晚效应延续，DAU峰值1.45亿</td>
 </tr>
 <tr>
-    <td><strong>DeepSeek V4定价（输入）</strong></td>
-    <td>成本对比</td>
-    <td>GPT-5.4 Nano $0.55/百万Token</td>
-    <td>0.14 美元/百万Token</td>
-    <td><span class="change-up">↓ 75%</span></td>
-    <td>成本优势显著，推动AI推理在金融、医疗等成本敏感场景规模化落地</td>
-</tr>
-<tr>
-    <td><strong>Tesla HW4 Plus内存规格</strong></td>
-    <td>代际提升</td>
-    <td>32GB（HW4）</td>
-    <td>64 GB</td>
-    <td><span class="change-up">↑ 100%</span></td>
-    <td>内存瓶颈制约神经网络规模，HW4 Plus为更复杂FSD模型预留空间</td>
-</tr>
-<tr>
-    <td><strong>BMW AI分析速度提升</strong></td>
-    <td>周变化</td>
-    <td>传统工作流（基准）</td>
-    <td>12 倍</td>
-    <td><span class="change-up">↑ 1100%</span></td>
-    <td>Agentic AI将工程数据挖掘周期从天/小时压缩至分钟级，制造业AI从概念验证走向量产</td>
-</tr>
-<tr>
-    <td><strong>金融AI规模化渗透率（估算）</strong></td>
+    <td><strong>具身智能融资</strong></td>
     <td>年同比</td>
-    <td>18%（2025同期）</td>
-    <td>24 %</td>
-    <td><span class="change-up">↑ 6pp</span></td>
-    <td>华为4-Win模式降低金融AI部署门槛，智能风控、量化交易率先破局</td>
+    <td>2025全年约180亿元</td>
+    <td>345 亿元</td>
+    <td><span class="change-up">↑ 91.7%</span></td>
+    <td>整机+大脑+零部件+RaaS全产业链吸金</td>
 </tr>
 <tr>
-    <td><strong>全球AI推理算力需求占比</strong></td>
-    <td>年同比</td>
-    <td>45%（2025）</td>
-    <td>52 %</td>
-    <td><span class="change-up">↑ 7pp</span></td>
-    <td>训练需求增速趋稳，推理占比过半标志AI应用进入规模化分发阶段</td>
+    <td><strong>GLM-5.1吞吐提升幅度</strong></td>
+    <td>周环比</td>
+    <td>优化前</td>
+    <td>132 %</td>
+    <td><span class="change-up">↑ 132%</span></td>
+    <td>异常输出率从万分之一降至万三以下</td>
+</tr>
+<tr>
+    <td><strong>华为昇腾单卡算力（vs英伟达对华特供版）</strong></td>
+    <td>周环比</td>
+    <td>1x</td>
+    <td>2.87 倍</td>
+    <td><span class="change-up">↑ 2.87倍</span></td>
+    <td>单卡算力为英伟达对华特供版的2.87倍</td>
 </tr>
 </tbody>
 </table>
@@ -253,64 +232,46 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-2 一周应用场景动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">04-29</div>
-    <div class="timeline-title">Pi Network推出AI验证人力 workforce</div>
-    <div class="timeline-source">Pi Network官方</div>
-    <div class="timeline-impact">在全球已验证用户中构建AI数据标注与训练能力，区块链+AI数据基础设施新路径浮现，2000万+已验证用户可参与AI模型训练数据生产</div>
+    <div class="timeline-date">2026-05-06</div>
+    <div class="timeline-title">DeepSeek V4适配华为昇腾，国产AI算力生态里程碑</div>
+    <div class="timeline-source">《商学院》杂志</div>
+    <div class="timeline-impact">全球首个在发布时并列国产芯片与英伟达GPU于硬件验证清单的顶级大模型，国产算力从备选升级为必选，字节跳动、腾讯、阿里巴巴正在抢购华为芯片</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">04-29</div>
-    <div class="timeline-title">Appier发布企业AI自我认知能力升级</div>
-    <div class="timeline-source">Appier/PRNewswire</div>
-    <div class="timeline-impact">通过能力校准机制预测正确率，避免过度自信导致企业运营风险，企业AI部署从"能用"向"可信"跃迁</div>
+    <div class="timeline-date">2026-05-05</div>
+    <div class="timeline-title">字节豆包推出付费订阅体系，AI商业化迈入新阶段</div>
+    <div class="timeline-source">苹果App Store、界面新闻</div>
+    <div class="timeline-impact">三档定价（68/200/500元/月），复杂任务（PPT/数据分析/影视制作）收费，基础聊天永久免费；月活3.45亿支撑收费底气，3亿轻度用户留存压力并存</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">04-28</div>
-    <div class="timeline-title">Zenoti扩展MedSpa AI Agent工作流</div>
-    <div class="timeline-source">Zenoti官方</div>
-    <div class="timeline-impact">推出11款AI Agent覆盖预约、库存、留存管理，AI从单一客服走向完整业务流程自动化，服务业AI Agent加速落地</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-27</div>
-    <div class="timeline-title">BMW Agentic AI实现12倍分析加速</div>
-    <div class="timeline-source">The Manufacturer</div>
-    <div class="timeline-impact">将3,500台研发车辆每周5-10TB数据的分析周期从天/小时压缩至分钟级，单工程师产出提升12倍，制造业AI进入实用拐点</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-27</div>
-    <div class="timeline-title">Omdia：中国Q4 2025云基础设施支出147亿美元</div>
-    <div class="timeline-source">Light Reading</div>
-    <div class="timeline-impact">同比增26%，连续三季度增速超20%，AI和Agent应用成为核心驱动力，合作伙伴驱动收入占比达25%</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-26</div>
-    <div class="timeline-title">Neusoft携全栈AI能力亮相Auto China 2026</div>
-    <div class="timeline-source">Neusoft官方</div>
-    <div class="timeline-impact">展示AI辅助研发、智能座舱、自动驾驶完整解决方案，中国汽车智能化渗透率持续提升，带动车载AI算力需求增长</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-25</div>
-    <div class="timeline-title">华为发布金融4-Win合作模式</div>
-    <div class="timeline-source">The Fintech Times</div>
-    <div class="timeline-impact">华为+ISV+区域SI三级协同，推动AI从试点向核心银行系统规模化迁移，解决金融AI落地"最后一公里"难题</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-24</div>
-    <div class="timeline-title">DeepSeek V4发布：1.6T参数+100万Token上下文</div>
-    <div class="timeline-source">SCMP/TechCrunch</div>
-    <div class="timeline-impact">参数规模较V3大幅提升，上下文窗口从12.8万Token扩展至100万Token，V4 Flash定价仅$0.14/百万输入Token，性价比超GPT-5.4 Nano 75%，全面适配华为昇腾芯片生态</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-23</div>
-    <div class="timeline-title">Tesla发布AI4 Plus：内存翻倍至64GB</div>
-    <div class="timeline-source">Electrek</div>
-    <div class="timeline-impact">HW3/HW4均无法支撑无监督FSD，AI4 Plus将内存从32GB扩至64GB，为2027年更复杂神经网络模型预留硬件空间，车载边缘推理需求持续升级</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">04-22</div>
-    <div class="timeline-title">XPENG发布GX Robotaxi原型车：算力3000 TOPS</div>
+    <div class="timeline-date">2026-05-05</div>
+    <div class="timeline-title">北京车展2026：AI从汽车向具身智能迁移</div>
     <div class="timeline-source">CleanTechnica</div>
-    <div class="timeline-impact">搭载4颗图灵芯片，VLA 2.0系统，专为L4自动驾驶量产设计，中国首个完全自主研发并与工厂集成的Robotaxi原型，国内L4商业化进入冲刺阶段</div>
+    <div class="timeline-impact">Chery Aimoga人形机器人、Geely专用Robotaxi平台亮相，Physical AI成为主轴；汽车制造商不再将AI仅视为车载功能，而是部署于多形态物理设备的基础能力</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">2026-05-02</div>
+    <div class="timeline-title">德适iMedImage医学影像基座大模型亮相广交会</div>
+    <div class="timeline-source">东方财富</div>
+    <div class="timeline-impact">全球参数规模最大、首个商业化部署的跨模态医学影像基座模型，覆盖CT/MRI/超声/病理等19种模态，准确率超99%；已获FDA/CE认证，服务覆盖全球六大洲70余国</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">2026-05-01</div>
+    <div class="timeline-title">智谱GLM-5.1采用MIT协议完全开源</div>
+    <div class="timeline-source">大模型之家</div>
+    <div class="timeline-impact">总参754B、激活40B，在约10万昇腾910B芯片上完成全流程训练，验证"从零NVIDIA"纯国产路径；吞吐量最高提升132%，异常输出率降至万三以下</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">2026-05-01</div>
+    <div class="timeline-title">DeepSeek V4发布：国产芯片全栈适配首秀</div>
+    <div class="timeline-source">腾讯新闻、中新网</div>
+    <div class="timeline-impact">V4 Pro/Flash双版本，MoE架构，1.6T总参/49B激活；全面适配华为昇腾、寒武纪、摩尔线程；API限时价格0.25元/百万Token，较GPT-5.5便宜700倍</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">2026-04-30</div>
+    <div class="timeline-title">中国AI模型连续五周登顶全球Token使用量榜首</div>
+    <div class="timeline-source">财富号</div>
+    <div class="timeline-impact">OpenRouter数据，3月30日—4月5日当周中国模型以12.96万亿Token超越美国的3.03万亿，环比增长31.48%；国产模型性价比优势和开源路线持续吸引全球用户</div>
 </div>
 </div>
 </div>
@@ -318,182 +279,31 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 7-3 本周应用场景深度解读 -->
 <div class="section">
 <h2>7-3 本周应用场景深度解读</h2>
-<h3>专题一：DeepSeek V4与华为昇腾协同——国产大模型从"性价比"到"生态制衡"</h3>
-<div class="deep-event">
-<div class="deep-event-title">DeepSeek V4：开源模型逼近前沿的标志性节点</div>
-<h4>技术突破与成本优势</h4>
-<p>DeepSeek于2026年4月24日正式发布V4系列，包含V4-pro（1.6万亿参数）和V4-flash（2840亿参数）两个版本。V4-pro以1.6万亿参数创下国产开源模型参数规模新高，V4-flash则将上下文窗口从V3的12.8万Token一举扩展至100万Token，提升幅度达681%。更重要的是，V4-flash的输入Token定价仅为$0.14/百万，较GPT-5.4 Nano（$0.55）低75%，较Gemini 3.1 Flash也有明显价格优势。</p>
-<h4>华为昇腾生态深度绑定</h4>
-<p>本次V4发布最值得关注的变化在于与华为昇腾芯片的深度适配优化。DeepSeek明确表示V4针对昇腾N系列芯片进行了架构级优化，这是国产大模型首次在旗舰级发布中正式宣告与国产算力芯片的协同生态。华为同时表态将提供"全面支持"（full support），包括芯片级底层调优和推理服务支持。此举标志着在外部芯片封锁背景下，国产大模型与国产芯片的"双国产"协同路径正式落地。</p>
-<h4>对应用场景的影响</h4>
-<p>V4的低成本+长上下文组合将直接推动三类应用场景渗透加速：</p>
-<ul>
-<li><strong>金融文档分析：</strong>100万Token上下文可一次性分析数百页招股说明书或信贷合同，AI辅助决策效率提升10倍以上</li>
-<li><strong>医疗影像与病历整合：</strong>长文本能力支撑跨科室病历综合分析，结合昇腾医疗算力加速AI辅诊落地</li>
-<li><strong>法律合同审查：</strong>单次处理能力覆盖整部法规汇编或数年判例，降低重复调用成本</li>
-</ul>
-<p>综合来看，DeepSeek V4发布是国产AI应用成本结构的重要拐点，当推理成本降至足够低的阈值，AI从"可选工具"变为"默认配置"的临界点正在临近。</p>
-</div>
-<h3>专题二：L4自动驾驶算力军备竞赛——XPENG GX vs Tesla HW4 Plus</h3>
-<div class="deep-event">
-<div class="deep-event-title">两大玩家同日博弈：边缘算力新高度</div>
-<h4>XPENG GX：3000 TOPS的L4量产野心</h4>
-<p>XPENG在北京车展发布的GX是本周最具标志性的硬件事件。该车型专为L4级自动驾驶量产设计，搭载4颗图灵芯片（单颗算力未披露，总算力达3000 TOPS），并运行自研VLA 2.0（Vision-Language-Action）系统。GX的核心特征是"中国首个完全自主研发、工厂集成"的Robotaxi量产原型，标志着国内L4商业化从测试走向生产准备。</p>
-<h4>Tesla AI4 Plus：内存瓶颈的主动突破</h4>
-<p>Tesla在Q1财报电话会上确认AI4 Plus（HW4升级版）将于2027年量产，将系统内存从32GB（AI4）翻倍至64GB。Musk同时承认HW3"根本不具备无监督FSD能力"，暗示特斯拉自身也在为更复杂的神经网络预留硬件空间。AI4.5已于2026年1月悄悄出货（3芯片设计），AI4 Plus是又一次重大架构升级。</p>
-<h4>对比分析</h4>
-<p>两家公司代表了L4边缘算力的两条路径：XPENG以"绝对算力"（3000 TOPS）建立硬件冗余，直接面向L4商业运营设计；Tesla则以"内存扩展"为下一代FSD模型铺路，强调软件迭代驱动硬件升级。从应用场景看，L4 Robotaxi的算力需求将在2026-2027年集中爆发，带动车规级AI芯片、边缘推理服务器、实时感知系统的全链条增长。</p>
-</div>
+<h3>专题一：DeepSeek V4 × 华为昇腾——\"国模+国芯\"全栈整合重塑竞争格局</h3><div class="deep-event"><div class="deep-event-title">国产大模型与国产算力首次深度共舞：从\"绑定CUDA\"到\"自主可控\"</div><h4>一、事件核心数据</h4><p>2026年4月24日，DeepSeek正式发布V4系列模型（Pro版与Flash版），并在发布当日即宣布全面适配华为昇腾芯片。这是全球首个在发布时就同时把华为昇腾和英伟达GPU并列写入硬件验证清单的顶级国产大模型。具体技术参数方面，V4采用MoE架构，总参1.6万亿、激活49B，Flash版总参284B、激活13B，全系标配100万Token超长上下文。在100万词元上下文设置下，V4-Pro单词元推理FLOPs仅为V3.2的27%，KV缓存占用降至10%；V4-Flash更极致，两项指标分别压低至10%和7%。</p><h4>二、华为昇腾的硬实力：价格仅为英伟达的1/4，算力提升2.87倍</h4><p>适配的华为昇腾新款推理芯片采购价格仅为英伟达对华特供版的四分之一，但单卡算力却提升了2.87倍。华为预计2026年AI芯片销售额将达到约120亿美元，较2025年的75亿美元增长60%以上，主要来自昇腾950PR（已于3月量产）的批量出货。高盛研报指出，下半年昇腾950大规模供货后，DeepSeek V4的定价将迎来更大下降空间。</p><h4>三、字节跳动、腾讯、阿里巴巴集体转向：采购格局重塑</h4><p>路透社4月29日报道，DeepSeek V4发布后，字节跳动、腾讯和阿里巴巴正在抢购华为国产芯片。这是一场低调但不可逆的集体转身，标志着中国AI产业从\"依赖美国半导体\"向\"中国本土AI基础设施\"的战略转变。据Chosun报道，基于已锁定订单，华为预计2026年AI芯片相关收入将达到约120亿美元（约合人民币870亿元）。</p><h4>四、词元经济精细化：鸿蒙+昇腾双轮驱动</h4><p>昇腾正将\"词元精炼\"能力从云侧延伸至端侧，结合鸿蒙生态形成\"端侧场景定义词元价值、云侧算力决定词元成本\"的双轮驱动闭环。华为Mate70 Pro通过OpenClaw引擎将大模型推理能力嵌入端侧，响应延迟降至186ms，满足制造业巡检、现场维修等实时需求。</p><h4>五、竞争格局影响</h4><p>黄仁勋警告：若DeepSeek新一代大模型率先在华为芯片平台上发布并全面适配，将是美国在全球AI领域战略地位的\"灾难性打击\"。当前这条链路的关键一环已经落地——国产算力迈入稳定高效的\"好用\"阶段，端到端延迟比原有英伟达集群低35%。</p></div>
 </div>
 
 <!-- 7-4 应用场景算力需求周变化分析 -->
 <div class="section">
 <h2>7-4 应用场景算力需求周变化分析</h2>
-<h3>7-4-1 大模型训练场景</h3>
-<p>DeepSeek V4以1.6万亿参数刷新国产开源大模型参数纪录，其与华为昇腾的深度适配意味着国产芯片在大模型训练场景的可用性显著提升。V4的技术报告将向全球开发者公开，料将推动基于昇腾生态的微调与部署浪潮。从成本看，V4的训练成本效率预计较V3提升30%以上，预计2026年Q2国内大模型训练算力需求环比增长15-20%。</p>
-<h3>7-4-2 AI推理场景</h3>
-<p>DeepSeek V4 Flash定价$0.14/百万Token，推理成本进入"分"时代，叠加100万Token超长上下文，AI推理场景正从简单问答向复杂文档分析、代码开发、多轮决策延伸。Uber CTO披露其2026年AI预算在4个月内耗尽，高盛估算部分企业AI Token支出已占人力成本10%，AI推理需求爆发从侧面得到验证。中国AI推理算力需求年增速预计超过50%，推理占总算力需求比例已突破50%。</p>
-<h3>7-4-3 金融行业场景</h3>
-<p>华为在4月25日发布的金融4-Win模式是关键事件——通过华为（ICT底座）+ ISV（垂直应用）+ 区域SI（落地部署）的三级分工，解决金融AI"试点易、规模化难"的 структур问题。智能风控、量化交易、智能投顾是当前三大落地方向。金融AI渗透率预计从2025年的18%升至2026年的24%（年同比6pp），单笔AI推理调用成本已降至传统人工成本的1/50以下，推动全面部署。</p>
-<h3>7-4-4 医疗行业场景</h3>
-<p>医疗AI在药物研发和影像诊断双线推进。AI辅助诊断的算力需求以40%年增速扩张，推理场景对实时性要求高（<3秒），边缘-云协同架构成为主流。DeepSeek V4的长上下文能力为跨模态病历分析（影像+文本+检验）提供了新的技术基底，预计医疗AI在2026年规模突破150亿元。</p>
-<h3>7-4-5 自动驾驶场景</h3>
-<p>XPENG GX发布（3000 TOPS算力）和Tesla AI4 Plus（64GB内存）标志L4边缘算力进入"千TOPS+多芯片"时代。XPENG VLA 2.0系统将视觉-语言-动作模型整合上车，对车载推理芯片提出更高要求。国内L4自动驾驶在2026年进入商业化冲刺阶段，北京、上海、广州已开放L4 Robotaxi商业运营牌照，带动车载AI算力需求年增45%以上。</p>
-<h3>7-4-6 制造业场景</h3>
-<p>BMW本周披露的Agentic AI案例是制造业AI从概念走向实用的里程碑——将研发数据分析速度提升12倍，单工程师可完成以往一个团队的产出。海康威视、华为等厂商的工业质检AI已在中国制造业大规模铺开，智能制造AI市场规模预计2026年达160亿元，年增速38%。边缘推理（缺陷检测、预测性维护）是制造业AI的核心算力消耗场景。</p>
-<h3>7-4-7 互联网行业场景</h3>
-<p>中国Q4 2025云基础设施支出达147亿美元（同比+26%），连续三季度增速超20%，AI和Agent应用是核心驱动力。字节跳动（豆包）、百度（文心）、阿里（通义）在AI推理侧持续投入，OpenRouter数据显示豆包等国产模型海外调用量稳步增长。互联网AI市场规模约800亿元，占总算力需求28%，年增速42%。</p>
+<h3>7-4-1 大模型训练场景</h3><p>本周大模型训练场景的核心变化是\"国模+国芯\"全栈验证完成。DeepSeek V4在华为昇腾，寒武纪、摩尔线程上实现Day0适配，刷新国产大模型与国产芯片协同部署速度纪录；智谱GLM-5.1在约10万昇腾910B芯片上完成全流程训练，验证\"从零NVIDIA\"纯国产路径可行性。阿里Qwen3.6系列三周内三连发（4月3日/20日/22日），以1.66亿月活登顶国产模型榜首，单日Token调用量突破1.4万亿。算力需求方面，2026年中国AI加速芯片市场规模预计达3813.9亿元，年增超58%；智能算力总规模已超1590 EFLOPS。训练场景对高端算力的需求依然旺盛，但国产芯片的性价比优势正在重塑采购决策。</p><h3>7-4-2 AI推理场景</h3><p>推理场景本周呈现\"从拼量到拼质\"的转折信号。DeepSeek V4通过token-wise极致压缩，将百万Token上下文推理FLOPs降至V3的27%，KV缓存占用降至10%；V4-Flash更降至10%和7%。智谱GLM-5.1优化后吞吐量最高提升132%，异常输出率从万分之一降至万三以下。豆包推出付费订阅体系（68/200/500元/月），基础免费+高阶收费模式标志着推理商业化从\"获客补贴\"向\"价值分层\"演进。边缘推理方面，华为Mate70 Pro端侧推理延迟降至186ms，面壁智能SuperMate 8B参数模型已可在车端本地运行。2026年全球Agent市场规模突破1800亿美元，中国占比35%，年复合增长率58%。</p><h3>7-4-3 金融行业场景</h3><p>金融AI场景本周聚焦合规与规模化并行。毕马威苗桢指出，未来2—3年AI产业进入场景爆发期，生成式AI、多模态大模型，自然语言处理、计算机视觉、强化学习五大方向将快速普及，其中多模态大模型对金融影响最深——将深度重构智能风控、智能投顾、精准营销等核心场景。GitHub Copilot从固定订阅制转向按量计费（AI Credits），反映了金融等企业客户对AI成本可控性的核心诉求。法律AI领域，Bloomberg Law报道AI已压缩复杂诉讼\"从周到天\"的周期，GC们利用AI识别20%决定80%风险的关键事实。</p><h3>7-4-4 医疗行业场景</h3><p>医疗AI场景本周迎来出海里程碑。德适iMedImage医学影像基座大模型亮相第139届广交会（5月1日），支持CT/MRI/超声/病理等19种影像模态，覆盖超90%临床场景；AI AutoVision产品将染色体核型分析从数周压缩至单图2.5分钟，准确率超99%，已获FDA注册及CE认证，服务覆盖全球六大洲70余国，2025年稳居中国染色体核型分析市场份额第一。上海发布国家人工智能应用中试基地（医疗领域）阶段成果，五大创新+九款应用集中亮相。</p><h3>7-4-5 自动驾驶场景</h3><p>本周北京车展2026成为自动驾驶与具身智能深度融合的观察窗口。Chery Aimoga人形机器人、Geely专用Robotaxi平台（从零开始设计为完全无人驾驶系统）亮相，Physical AI成为主轴——AI不再仅是车载功能，而是跨车辆、机器人多种物理形态的底层智能。Applied Intuition创始人Qasar Younis指出\"真实世界数据\"是自动驾驶训练的核心瓶颈，纯合成模拟无法完全替代实测。英伟达黄仁勋认为自动驾驶汽车应当通过与人类相同的\"驾照考试\"，这将催生车载AI算力的刚性需求。边缘算力方面，面壁智能SuperMate已在车端本地运行疲劳监测、儿童安全预警等场景。</p><h3>7-4-6 制造业场景</h3><p>制造业AI场景本周以广东省\"人工智能赋能制造业高质量发展行动方案\"出台为标志性事件，围绕强化关键供给、促进应用推广、构建支撑体系提出16条政策措施，推动制造业数字化改造、智能化跃升。AI质检方面，预测性维护系统通过设备运行数据分析提前预判故障，降低停机损失；工业机器人实现高精度、高效率自动化作业，适配复杂生产场景。广东作为全国制造大省，拥有全部31个制造业大类，聚集超1600家AI核心企业，为AI赋能制造业提供充足场景。小米MiMo-V2 Pro通过统一Transformer/SSM架构，在工业巡检场景中实现设备声音、红外热成像、传感器数据的融合分析，缺陷识别准确率超98%。</p><h3>7-4-7 互联网行业场景</h3><p>互联网AI场景本周最受关注的事件是字节豆包推出付费订阅体系——月活3.45亿（2026 Q1）支撑其商业化底气，但3亿轻度用户对\"免费AI\"的路径依赖与付费墙之间的张力也真实存在。阿里通义App更名\"千问\"后月活1.66亿，环比增长969.1%，C端\"一句话点奶茶\"带动1.4亿人体验AI消费。内容创作领域，Seedance 2.0持续优化，支持文字/图片/音频/视频混合输入，生成内容已达专业生产场景要求。Token经济方面，中国AI模型在OpenRouter周度调用量峰值拿下全球61%市场份额，国产模型API定价普遍仅为海外同类产品的1/10至1/6，性价比优势持续吸引全球开发者。</p>
 </div>
 
 <!-- 7-5 应用场景趋势周变化对比分析 -->
 <div class="section">
 <h2>7-5 应用场景趋势周变化对比分析</h2>
-<p>以下是本周各应用场景的关键周变化对比分析：</p>
-<div class='week-summary-box'>
-<h4>📊 应用场景算力需求周变化速览（2026-04-22 至 04-29）</h4>
-<table>
-<thead>
-<tr>
-<th>场景</th>
-<th>核心变化事件</th>
-<th>变化方向</th>
-<th>幅度</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>大模型训练</td>
-<td>DeepSeek V4发布（1.6T参数，适配昇腾）</td>
-<td><span class='change-up'>↑</span></td>
-<td>国产化率显著提升</td>
-</tr>
-<tr>
-<td>AI推理</td>
-<td>V4 Flash定价$0.14/百万Token，推理成本再降</td>
-<td><span class='change-up'>↑</span></td>
-<td>需求↑50%+YoY</td>
-</tr>
-<tr>
-<td>金融AI</td>
-<td>华为金融4-Win模式发布</td>
-<td><span class='change-up'>↑</span></td>
-<td>渗透率↑6pp YoY</td>
-</tr>
-<tr>
-<td>医疗AI</td>
-<td>V4长上下文支撑跨模态病历分析</td>
-<td><span class='change-up'>↑</span></td>
-<td>规模↑40% YoY</td>
-</tr>
-<tr>
-<td>自动驾驶</td>
-<td>XPENG GX（3000 TOPS）+ Tesla AI4 Plus</td>
-<td><span class='change-up'>↑↑</span></td>
-<td>车载算力需求↑45% YoY</td>
-</tr>
-<tr>
-<td>制造业AI</td>
-<td>BMW Agentic AI 12倍效率提升</td>
-<td><span class='change-up'>↑</span></td>
-<td>效率↑1200%，规模↑38% YoY</td>
-</tr>
-<tr>
-<td>互联网AI</td>
-<td>中国Q4云基础设施+26%（$147亿美元）</td>
-<td><span class='change-up'>↑</span></td>
-<td>云算力需求持续扩张</td>
-</tr>
-<tr>
-<td>推理占比</td>
-<td>全球AI推理算力需求占比突破50%</td>
-<td><span class='change-up'>↑</span></td>
-<td>占比↑7pp YoY</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p class='time-note'>注：以上变化均为与上周或上月同期对比。↑表示需求上升/应用加速，↑↑表示重大突破，→表示持平。</p>
+<p>以下是本周应用场景核心数据周变化对比分析：</p><div class="week-summary-box"><h4>7-5 应用场景核心指标周变化对比表</h4><table><thead><tr><th>指标</th><th>时间维度</th><th>上期数据</th><th>本期数据</th><th>变化幅度</th><th>趋势分析</th></tr></thead><tbody><tr><td>DeepSeek V4百万Token推理FLOPs占比</td><td>周环比</td><td>100%（V3为基准）</td><td>27%</td><td><span class="change-up">↓ 73%</span></td><td>token-wise极致压缩，推理成本大幅降低</td></tr><tr><td>V4-Flash KV缓存占用比</td><td>周环比</td><td>100%（V3为基准）</td><td>10%</td><td><span class="change-up">↓ 90%</span></td><td>极致压缩技术落地，显存占用大幅缩减</td></tr><tr><td>豆包月活用户</td><td>月环比</td><td>3.20亿（2026 Q1初）</td><td>3.45亿</td><td><span class="change-up">↑ 7.8%</span></td><td>春晚效应延续，稳居国内第一</td></tr><tr><td>中国AI Token全球市场份额</td><td>周环比</td><td>上周约55%</td><td>61%</td><td><span class="change-up">↑ 6个百分点</span></td><td>连续五周超越美国，国产模型性价比优势显著</td></tr><tr><td>具身智能融资规模（2026年以来）</td><td>年同比</td><td>2025全年约180亿元</td><td>345亿元</td><td><span class="change-up">↑ 91.7%</span></td><td>整机+大脑+零部件+RaaS全产业链渗透</td></tr><tr><td>智谱GLM-5.1推理吞吐量提升</td><td>周环比</td><td>优化前基准</td><td>132%</td><td><span class="change-up">↑ 132%</span></td><td>异常输出率从万分之一降至万三以下</td></tr><tr><td>华为昇腾单卡算力（vs英伟达对华特供）</td><td>周环比</td><td>1x（对标英伟达对华特供）</td><td>2.87x</td><td><span class="change-up">↑ 2.87倍</span></td><td>国产芯片性能追赶加速，性价比优势突出</td></tr><tr><td>DeepSeek V4-Pro API价格</td><td>周环比</td><td>GPT-5.5约210元/百万Token</td><td>0.25元/百万Token</td><td><span class="change-up">↓ 99.88%</span></td><td>限时2.5折，与GPT-5.5相差超700倍</td></tr><tr><td>中国AI加速芯片市场规模</td><td>年同比</td><td>2025年约2413亿元</td><td>2026年预计3813.9亿元</td><td><span class="change-up">↑ 58%</span></td><td>智能算力建设持续加码，国产芯片份额提升</td></tr><tr><td>全球企业级AI智能体市场规模</td><td>年同比</td><td>2025年约1140亿美元</td><td>2026年约1800亿美元</td><td><span class="change-up">↑ 57.9%</span></td><td>AI智能体从技术验证迈入规模化商用</td></tr></tbody></table></div>
 </div>
 
 <!-- 7-6 应用场景驱动因素周变化分析 -->
 <div class="section">
 <h2>7-6 应用场景驱动因素周变化分析</h2>
-<p>本周应用场景驱动因素呈现"三层共振"格局：</p>
-<div class='col-2'>
-<div>
-<h3>🔺 技术驱动（上游）</h3>
-<div class='analysis-box'>
-<p><strong>大模型成本效率革命：</strong>DeepSeek V4将输入Token成本压至$0.14/百万，较GPT-5.4 Nano低75%，当推理成本突破"分"级阈值，AI应用从"可选"变"默认"的临界点临近。1.6万亿参数+100万Token上下文组合使单次推理能力大幅扩展，直接降低复杂场景（如金融文档分析、跨模态医疗）AI应用门槛。</p>
-</div>
-<div class='analysis-box'>
-<p><strong>车载算力新高度：</strong>XPENG GX的3000 TOPS和Tesla AI4 Plus的64GB内存代表着L4自动驾驶对边缘推理算力的持续饥渴。内存带宽和算力双双翻倍式的提升，为更复杂的实时感知决策模型预留硬件空间，推动车规级AI芯片需求长期向上。</p>
-</div>
-<div class='analysis-box'>
-<p><strong>Agentic AI走向成熟：</strong>BMW案例验证了Agentic AI在工业场景的实用价值——12倍效率提升意味着制造业AI的投资回报周期从"年"缩短至"季度"，将加速制造业AI的资本开支投入。</p>
-</div>
-</div>
-<div>
-<h3>🔺 需求拉动（下游）</h3>
-<div class='analysis-box'>
-<p><strong>金融AI规模化临界：</strong>华为4-Win模式通过生态协同降低部署门槛，智能风控、量化交易等高价值场景率先突破。AI推理成本已降至人工成本的1/50以下，金融行业AI渗透率预计全年提升6-8pp。</p>
-</div>
-<div class='analysis-box'>
-<p><strong>云基础设施需求持续爆发：</strong>中国Q4 2025云基础设施同比增26%至147亿美元，背后是AI应用、Agent工作流、企业数字化三浪叠加。Omdia预测2026年全年增速维持在26%，推理算力需求占比首超50%。</p>
-</div>
-<div class='analysis-box'>
-<p><strong>L4商业化冲刺：</strong>北京、上海、广州Robotaxi商业牌照加速发放，XPENG GX量产计划落地，国内L4从技术验证进入商业运营准备阶段，将带动车载边缘算力、5G通信、云计算的全链条需求。</p>
-</div>
-</div>
-</div>
-<p><strong>综合研判：</strong>本周驱动因素的突出特征是"成本效率提升→推理场景扩展→垂直行业规模化"的正反馈循环正在形成。DeepSeek V4的价格战和长上下文突破是关键催化剂，预计在2026年Q2-Q3引发金融、医疗、法律等成本敏感型行业的AI部署加速浪潮。</p>
+<p>本周应用场景驱动因素呈现\"技术+商业+生态\"三重合力：</p><div class="highlight-box"><h4>核心驱动因素分析</h4><ul><li><strong>技术驱动：</strong>DeepSeek V4以MoE架构+token-wise极致压缩打破\"性能-成本\"墙，将百万Token推理FLOPs降至V3的27%，KV缓存占用降至10%，使得在国产芯片上运行超大模型成为工程现实；智谱GLM-5.1验证纯国产训练路径可行性，10万昇腾910B芯片全流程训练零NVIDIA依赖。</li><li><strong>商业驱动：</strong>豆包推出付费订阅体系（68/200/500元/月），基础免费+高阶收费模式标志着AI应用商业化从\"获客补贴\"向\"价值分层\"演进；GitHub Copilot转向按量计费反映企业客户对成本可控性的核心诉求，推动Token经济精细化运营。</li><li><strong>生态驱动：</strong>华为昇腾对DeepSeek系列、Qwen系列等超70个主流模型实现Day0适配\"发布即支持\"；鸿蒙+昇腾形成\"端侧场景定义词元价值、云侧算力决定词元成本\"双轮驱动闭环；开源路线持续降低定制化开发门槛，吸引全球开发者。</li><li><strong>政策驱动：</strong>广东省出台\"人工智能赋能制造业高质量发展行动方案\"16条政策措施；杭州市《促进具身智能机器人产业发展条例》5月1日正式施行，为全球首部具身智能地方性法规；成都高新区聚集300余家人工智能相关企业，82个深度合成算法完成备案。</li><li><strong>出海驱动：</strong>德适iMedImage医学影像大模型获FDA/CE双认证，服务覆盖全球六大洲70余国；中国AI应用以高性价比和开源优势在OpenRouter全球调用量占比达61%，每10次大模型对话有6次消耗中国算力。</li></ul></div>
 </div>
 
 <!-- 7-7 下周趋势预判 -->
 <div class="section">
 <h2>7-7 下周趋势预判</h2>
-<div class='forecast-grid'>
-<div class='forecast-card'>
-<div class='year'>下周（4/30前）</div>
-<div class='value'>DeepSeek V4生态加速</div>
-<div class='note'>华为昇腾适配优化将快速推进，V4-flash开源权重发布后预计引发国内AI应用二次开发热潮，推理API调用量环比预增30-50%</div>
-</div>
-<div class='forecast-card'>
-<div class='year'>5月上旬</div>
-<div class='value'>金融AI规模化落地加速</div>
-<div class='note'>华为4-Win模式首批标杆客户（国有大行/股份制银行）AI项目招标结果陆续公示，智能风控、Agent驱动的信贷审批场景率先落地</div>
-</div>
-<div class='forecast-card'>
-<div class='year'>5月中旬</div>
-<div class='value'>L4Robotaxi商业化提速</div>
-<div class='note'>北京/广州新增Robotaxi商业牌照发放，小马智行、文远知行等L4玩家加速城市覆盖，车载AI算力需求持续上升</div>
-</div>
-<div class='forecast-card'>
-<div class='year'>5月下旬</div>
-<div class='value'>制造业AI从头部下沉</div>
-<div class='note'>BMW案例示范效应显现，更多头部制造企业（汽车零部件、电子组装）跟进Agentic AI部署，工业质检边缘算力需求攀升</div>
-</div>
-</div>
-<p style='margin-top:16px'><strong>风险提示：</strong>DeepSeek V4因"蒸馏"争议面临更多国际监管关注；美国对华芯片出口限制若进一步收紧，昇腾910C等关键芯片供应或成瓶颈；全球AI推理成本快速下价格战或压缩国内AI厂商利润空间。</p>
+<p>基于本周数据变化与驱动因素分析，下周（5/8—5/14）应用场景趋势预判如下：</p><div class="forecast-grid"><div class="forecast-card"><div class="year">大模型训练场景</div><div class="value">国产算力配套提速</div><div class="note">DeepSeek V4发布后，下周百度文心一言4.0或迎新版发布（Create2026百度AI开发者大会5月13日）；智谱GLM-5.1商业化加速，年内三次提价后调用量逆势涨400%，下周MaaS平台收入有望再创新高</div></div><div class="forecast-card"><div class="year">AI推理场景</div><div class="value">词元经济精细化加速</div><div class="note">豆包付费体系正式落地后，高阶功能（PPT/数据分析/影视制作）将测试用户付费意愿；若付费转化率超预期，将带动通义千问、DeepSeek等跟进分层定价策略，推动推理从\"拼量\"向\"拼质\"全面转型</div></div><div class="forecast-card"><div class="year">医疗AI场景</div><div class="value">出海与基层下沉双轮</div><div class="note">德适广交会后国际合作意向加速落地；上海医疗AI中试基地五大创新九款应用加速推广，联影AI等平台在胸部/脑部疾病自动检出领域持续渗透基层医疗机构</div></div><div class="forecast-card"><div class="year">自动驾驶/具身智能</div><div class="value">融资热潮延续</div><div class="note">2026年以来345亿元具身智能融资规模，下周有望继续刷新；北京车展效应持续，Chery Aimoga、Geely Robotaxi等具身智能新品类加速商业化；Meta收购ARI后，科技巨头具身智能\"大脑\"卡位战升温</div></div><div class="forecast-card"><div class="year">制造业AI场景</div><div class="value">政策+需求双轮驱动</div><div class="note">广东省16条政策催化下，富士康、比亚迪等制造龙头AI质检、预测性维护部署提速；小米MiMo工业巡检方案通过开源+云端协同模式，向中小制造企业渗透</div></div></div>
 </div>
 
 <!-- 7-8 一周要闻汇总表 -->
@@ -511,67 +321,53 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td>04-29</td>
-    <td>Pi Network推出AI验证人力 workforce，进军AI数据基础设施</td>
-    <td>Pi Network</td>
-    <td>2000万+已验证用户</td>
+    <td>2026-05-06</td>
+    <td>DeepSeek V4全面适配华为昇腾芯片，国产AI算力生态里程碑</td>
+    <td>大模型×国产算力</td>
+    <td>字节/腾讯/阿里抢购华为芯片</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>2026-05-05</td>
+    <td>字节豆包正式推出付费订阅体系，三档定价68/200/500元/月</td>
+    <td>AI商业化</td>
+    <td>月活3.45亿用户</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>2026-05-05</td>
+    <td>北京车展2026：Physical AI成主轴，具身智能从汽车向机器人迁移</td>
+    <td>具身智能</td>
+    <td>Chery/Geely/吉利携人形机器人/Robotaxi平台亮相</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>04-29</td>
-    <td>Appier发布企业AI自我认知能力升级，提升AI决策可信度</td>
-    <td>Appier</td>
-    <td>Near-zero推理成本的自我校准</td>
-    <td><span class="change-new">★★★</span></td>
-</tr>
-<tr>
-    <td>04-28</td>
-    <td>Zenoti扩展MedSpa AI Agent工作流至11款Agent，覆盖全业务流程</td>
-    <td>Zenoti</td>
-    <td>11款垂直AI Agent</td>
-    <td><span class="change-new">★★★</span></td>
-</tr>
-<tr>
-    <td>04-27</td>
-    <td>BMW Agentic AI实现12倍研发数据分析加速，制造业AI实用拐点</td>
-    <td>BMW</td>
-    <td>3,500台研发车辆5-10TB/周数据</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>04-27</td>
-    <td>Omdia：中国Q4 2025云基础设施支出147亿美元，同比增26%</td>
-    <td>Omdia</td>
-    <td>147亿美元（季环比+8.9%）</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>04-25</td>
-    <td>华为发布金融4-Win合作模式，推动AI从试点向核心系统规模化迁移</td>
-    <td>华为</td>
-    <td>ISV+SI三级生态协同</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>04-24</td>
-    <td>DeepSeek V4发布：1.6T参数、100万Token上下文、$0.14/百万Token，全面适配昇腾</td>
-    <td>DeepSeek</td>
-    <td>定价较GPT-5.4 Nano低75%</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>04-23</td>
-    <td>Tesla发布AI4 Plus：系统内存翻倍至64GB，2027年量产</td>
-    <td>Tesla</td>
-    <td>64GB（AI4为32GB）</td>
+    <td>2026-05-02</td>
+    <td>德适iMedImage医学影像大模型亮相广交会，已获FDA/CE认证覆盖全球70余国</td>
+    <td>医疗AI</td>
+    <td>全球参数规模最大跨模态医学影像基座模型</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>04-22</td>
-    <td>XPENG发布GX Robotaxi原型车：3000 TOPS算力，专为L4量产设计</td>
-    <td>XPENG</td>
-    <td>3000 TOPS + 4颗图灵芯片</td>
+    <td>2026-05-01</td>
+    <td>智谱GLM-5.1完全开源，10万昇腾910B芯片验证纯国产训练路径</td>
+    <td>大模型×国产算力</td>
+    <td>总参754B，吞吐量最高提升132%</td>
     <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>2026-05-01</td>
+    <td>杭州市《促进具身智能机器人产业发展条例》正式施行，全球首部具身智能地方性法规</td>
+    <td>政策</td>
+    <td>从研发创新、场景应用、产业集聚多维度提供法律保障</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>2026-04-30</td>
+    <td>2026年以来具身智能领域融资超345亿元，产业链全线渗透</td>
+    <td>具身智能</td>
+    <td>整机+大脑+零部件+RaaS全产业链</td>
+    <td><span class="change-new">★★★★</span></td>
 </tr>
 </tbody>
 </table>
@@ -581,22 +377,23 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section sources-section">
 <h2>数据来源</h2>
 <div class="sources-list">
-<span class="source-tag">TechCrunch</span>
-<span class="source-tag">South China Morning Post</span>
-<span class="source-tag">CleanTechnica</span>
-<span class="source-tag">Light Reading (Omdia)</span>
-<span class="source-tag">Electrek</span>
-<span class="source-tag">The Manufacturer</span>
-<span class="source-tag">The Fintech Times</span>
-<span class="source-tag">PRNewswire</span>
-<span class="source-tag">Stanford HAI</span>
 <span class="source-tag">IDC中国</span>
-<span class="source-tag">艾瑞咨询</span>
 <span class="source-tag">中国信通院</span>
-<span class="source-tag">盖世汽车</span>
-<span class="source-tag">DeepSeek官方</span>
-<span class="source-tag">华为官方</span>
-<span class="source-tag">Pi Network官方</span>
+<span class="source-tag">艾瑞咨询</span>
+<span class="source-tag">赛迪顾问</span>
+<span class="source-tag">Stanford HAI</span>
+<span class="source-tag">OpenRouter</span>
+<span class="source-tag">大模型之家</span>
+<span class="source-tag">证券时报</span>
+<span class="source-tag">《商学院》杂志</span>
+<span class="source-tag">东方财富</span>
+<span class="source-tag">CleanTechnica</span>
+<span class="source-tag">苹果App Store</span>
+<span class="source-tag">界面新闻</span>
+<span class="source-tag">Bloomberg Law</span>
+<span class="source-tag">弗若斯特沙利文</span>
+<span class="source-tag">高盛研报</span>
+<span class="source-tag">路透社</span>
 </div>
 </div>
 
