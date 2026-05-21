@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>七、应用场景分析 | 第19期</title>
+    <title>七、应用场景分析 | 第20期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -97,9 +97,9 @@ tr.week-highlight { background: #fff8e1; }
 <body>
 
 <header>
-<div class="week-badge">第19期</div>
+<div class="week-badge">第20期</div>
 <h1>七、应用场景分析</h1>
-<div class="subtitle">2026-05-08—2026-05-14 | 中国智能算力报告</div>
+<div class="subtitle">2026.05.15—2026.05.21 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -121,11 +121,11 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">本周（5/8-14）是AI应用从流量扩张向价值变现的结构性转变节点。豆包启动付费订阅测试，标志着持续两年的免费狂欢走向终结，日均120万亿Token消耗的算力账单倒逼商业模式重构；DeepSeek完成500亿元融资、估值3500亿元，6月V4.1发布在即，大模型竞争进入耐心赛阶段。中国日均Token调用量已突破180万亿，两年增长超千倍，AI推理算力需求增速已显著超过训练需求。Token经济从卖算力向卖智能转型，中国移动、阿里云等平台推动Token计量计费成为行业标准。政策层面，广州开放450个AI场景、深圳宝安具身智能港落地，工信部启动AI伦理审查先导计划。整体来看，AI应用的叙事主线正从技术竞赛切换到场景为王，谁能以更低成本在更多场景创造真实商业价值，谁就能赢得下一阶段。</div>
+<div class="overview-text">本周（5/15-5/21）AI应用场景进入<b>商业化加速与智能体规模化落地</b>的关键转折周。豆包在5月初宣布推出付费订阅版本（标准版68元/月、加强版200元/月、专业版500元/月），标志中国大模型"免费时代"正式终结；DeepSeek V4以"地板价"开源策略（V4-Flash输入1元/百万Token，缓存命中后0.02元）重塑全球API定价体系；智谱年内第三次涨价（GLM-5.1提价10%，累计涨幅83%），国产模型价格首次对齐海外顶级水平。五一前后短短一周，中国大模型行业完成<b>"一家收费、一家降价、一群涨价"</b>的分化格局。<br><br>与此同时，<b>智能体（Agent）从概念验证全面迈入价值交付阶段</b>。科创板31家AI公司业绩会（5/20）一致认定"2026年为AI智能体规模化落地元年"，智能体自主任务量从2025年日均1.2亿次飙升至8.7亿次（年增7倍）。联发科MMDC 2026大会（5/13）发布天玑AI智能体化引擎2.0，推动端侧AI从"被动响应"走向"主动感知驱动"，OPPO、小米、vivo等头部厂商已完成系统级Agent集成。中国日均Token消耗突破140万亿量级，其中推理算力占比持续攀升，豆包日均Token调用量达120万亿（截至3月），较2025年12月翻倍。<br><br><b>本周核心主题：</b><em>商业化路径分化（豆包收费vs DeepSeek降价）、智能体规模落地（8.7亿次日均任务）、端侧AI生态加速（联发科天玑2.0+华为鸿蒙6+小米小米Claw）、Token经济学重塑算力定价（云厂商集体涨价）。</em></div>
 </div>
 
 <div class="data-note">
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-05-08—2026-05-14）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
+<strong>数据说明：</strong>本周报聚焦最近7天（2026-05-15—2026-05-21）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
 <strong>时间维度说明：</strong>日环比=比前一天、周环比=比前一周、月环比=比上月、季环比=比上季度、年同比=比去年同期。变化幅度 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。<br>
 <strong>数据卡片说明：</strong>change字段格式为"时间戳 上期值 | ↑/↓ 幅度（时间维度）"，如"4/6-12 5.80万亿 | ↓23.8%（周变化）"。
 </div>
@@ -135,29 +135,34 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-1 本周应用场景核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">全国日均Token调用量</div>
-    <div class="value">180<span class="unit">万亿</span></div>
-    <div class="change">5/1-7 160万亿 | ↑12.5%（周变化）</div>
-</div>
-<div class="data-card">
-    <div class="label">中国AI应用月活用户</div>
-    <div class="value">4.46<span class="unit">亿</span></div>
-    <div class="change">Q1 3.11亿 | ↑43.4%（季环比）</div>
-</div>
-<div class="data-card">
-    <div class="label">豆包日均Token消耗</div>
+    <div class="label">豆包日均Token调用量</div>
     <div class="value">120<span class="unit">万亿</span></div>
-    <div class="change">3月 60万亿 | ↑100%（季环比）</div>
+    <div class="change">12月 50万亿 | ↑140%（季环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">豆包月活用户</div>
+    <div class="label">中国日均Token调用量</div>
+    <div class="value">140+<span class="unit">万亿</span></div>
+    <div class="change">2025.6 30万亿 | ↑367%（年同比）</div>
+</div>
+<div class="data-card">
+    <div class="label">智能体日自主任务量</div>
+    <div class="value">8.7<span class="unit">亿次</span></div>
+    <div class="change">2025年 1.2亿次 | ↑625%（年同比）</div>
+</div>
+<div class="data-card">
+    <div class="label">豆包MAU（Q1）</div>
     <div class="value">3.45<span class="unit">亿</span></div>
-    <div class="change">3月 3.32亿 | ↑3.9%（月环比）</div>
+    <div class="change">2025.12 2.26亿 | ↑52.7%（季环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">DeepSeek最新估值</div>
-    <div class="value">3500<span class="unit">亿元</span></div>
-    <div class="change">2025年未披露 | 融资后飙升</div>
+    <div class="label">AI推理算力占比(预测)</div>
+    <div class="value">72.6<span class="unit">%</span></div>
+    <div class="change">2023年 58.7% | ↑13.9pp（趋势）</div>
+</div>
+<div class="data-card">
+    <div class="label">智算中心平均利用率</div>
+    <div class="value">~35<span class="unit">%</span></div>
+    <div class="change">2024年 ~30% | ↑5pp（年同比）</div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -174,52 +179,60 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>全国日均Token调用量</strong></td>
-    <td>周环比</td>
-    <td>5/1-7 160万亿</td>
-    <td>180 万亿</td>
-    <td><span class="change-up">↑ 12.5%</span></td>
-    <td>AI推理需求持续爆发，豆包/DeepSeek等头部应用带动</td>
+    <td><strong>豆包大模型日均Token调用量</strong></td>
+    <td>季环比</td>
+    <td>50万亿（2025年12月）</td>
+    <td>120 万亿</td>
+    <td><span class="change-up">↑ 140%</span></td>
+    <td>豆包接入抖音商城、一句话购物等功能推动调用量激增，春节红包战（百度5亿/腾讯元宝10亿/阿里30亿免单）加速C端渗透</td>
 </tr>
 <tr>
-    <td><strong>豆包月活用户</strong></td>
-    <td>月环比</td>
-    <td>3月 3.32亿</td>
-    <td>3.45 亿</td>
-    <td><span class="change-up">↑ 3.9%</span></td>
-    <td>付费订阅测试未影响增长，免费基础服务保留</td>
-</tr>
-<tr>
-    <td><strong>讯飞开放平台大模型日均Token调用</strong></td>
+    <td><strong>中国日均Token消耗总量</strong></td>
     <td>年同比</td>
-    <td>2025同期基数极低</td>
-    <td>4241 %</td>
-    <td><span class="change-up">↑ 4241%</span></td>
-    <td>三方开发者爆发式增长，星辰MaaS底座拉动</td>
+    <td>30万亿（2025年6月）</td>
+    <td>140+ 万亿</td>
+    <td><span class="change-up">↑ 367%</span></td>
+    <td>智能体多步骤任务推高单次会话Token消耗（从数千跃升至8-15万），推理Token首次超越训练Token消耗量</td>
 </tr>
 <tr>
-    <td><strong>智谱AI API调用量</strong></td>
+    <td><strong>AI智能体日均自主任务量</strong></td>
+    <td>年同比</td>
+    <td>1.2亿次（2025年）</td>
+    <td>8.7 亿次</td>
+    <td><span class="change-up">↑ 625%</span></td>
+    <td>联发科MMDC 2026大会确认数据；OpenClaw/Hermes等Agent框架推动从被动响应到主动执行范式转变</td>
+</tr>
+<tr>
+    <td><strong>豆包App月活跃用户（MAU）</strong></td>
     <td>季环比</td>
-    <td>2025Q4 基准</td>
-    <td>400 %</td>
-    <td><span class="change-up">↑ 400%</span></td>
-    <td>年内三度提价仍供不应求，定价提升83%后调用量仍涨</td>
+    <td>2.26亿（2025年12月）</td>
+    <td>3.45 亿</td>
+    <td><span class="change-up">↑ 52.7%</span></td>
+    <td>QuestMobile Q1 2026数据；豆包与DeepSeek形成'双寡头'格局，断层式领跑全行业</td>
 </tr>
 <tr>
-    <td><strong>H100年租价格</strong></td>
-    <td>月环比</td>
-    <td>2026年3月 $2.1/卡时</td>
-    <td>2.35 美元/卡时</td>
-    <td><span class="change-up">↑ 12%</span></td>
-    <td>全球AI算力供需紧张，高端GPU租金持续上涨</td>
+    <td><strong>DeepSeek-V4 API定价（V4-Flash输入）</strong></td>
+    <td>环比变化</td>
+    <td>1元/百万Token（V3时期）</td>
+    <td>0.02(缓存命中)/1 元/百万Token</td>
+    <td><span class="change-down">↓ 80%+</span></td>
+    <td>4/24发布V4预览版，MIT开源协议；4/26全系列缓存命中价格永久降至1/10；全球性价比标杆</td>
 </tr>
 <tr>
-    <td><strong>中国智算中心平均出租率</strong></td>
-    <td>季环比</td>
-    <td>2025Q4 76%</td>
-    <td>82 %</td>
-    <td><span class="change-up">↑ 6ppt</span></td>
-    <td>大模型训练需求强劲，国产算力出租率明显改善</td>
+    <td><strong>智谱GLM-5系列API累计涨幅</strong></td>
+    <td>累计变化</td>
+    <td>基准价格（2025年）</td>
+    <td>+83 %</td>
+    <td><span class="change-up">↑ 83%</span></td>
+    <td>2/12 GLM-5涨30% → 3/16 GLM-5-Turbo涨20% → 4/8 GLM-5.1涨10%；缓存价对齐Claude Sonnet 4.6</td>
+</tr>
+<tr>
+    <td><strong>智算中心平均算力利用率</strong></td>
+    <td>年同比</td>
+    <td>~30%（2024年，浪潮AI研究院测算）</td>
+    <td>~35 %</td>
+    <td><span class="change-up">↑ 5pp</span></td>
+    <td>推理需求增加（多批次短任务）推动利用率提升；但全国近150个已投运智算中心仍有大量闲置资源</td>
 </tr>
 </tbody>
 </table>
@@ -232,46 +245,46 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-2 一周应用场景动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">5月9日</div>
-    <div class="timeline-title">中国移动发布Token运营体系</div>
-    <div class="timeline-source">2026移动云大会</div>
-    <div class="timeline-impact">MoMA平台接入300+款模型，首创Token集约化运营，5元/250万Token普惠套餐触达10亿用户</div>
+    <div class="timeline-date">5月20日</div>
+    <div class="timeline-title">科创板31家AI公司集体业绩会：一致认定2026年为AI智能体规模化落地元年</div>
+    <div class="timeline-source">科创板日报</div>
+    <div class="timeline-impact">金山办公、云从科技、当虹科技等企业明确向'订阅+运营'模式转型；AI安全、具身智能、端侧工业视觉成布局重点；供应链波动（存储芯片涨价）成短期挑战</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">5月8日</div>
-    <div class="timeline-title">DeepSeek完成500亿元首轮融资，估值3500亿元</div>
-    <div class="timeline-source">网易/公开报道</div>
-    <div class="timeline-impact">梁文锋拟出资200亿元占40%，V4.1定档6月发布，加快企业商业化落地</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">5月8日</div>
-    <div class="timeline-title">深圳宝安具身智能港重磅亮相</div>
-    <div class="timeline-source">深圳政府在线</div>
-    <div class="timeline-impact">四大国家级公共服务平台落地，腾讯/自变量/银河通用等标杆企业汇聚</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">5月4日</div>
-    <div class="timeline-title">豆包启动付费订阅测试，标志免费时代终结</div>
-    <div class="timeline-source">36氪/苹果App Store</div>
-    <div class="timeline-impact">标准版68元/加强版200元/专业版500元三档，付费功能聚焦重算力场景，日均Token消耗已突破120万亿</div>
+    <div class="timeline-date">5月13-14日</div>
+    <div class="timeline-title">联发科MMDC 2026：天玑AI智能体化引擎2.0发布，端侧Agent走向主动感知驱动</div>
+    <div class="timeline-source">智东西/新浪科技</div>
+    <div class="timeline-impact">SensingClaw技术实现低功耗全时感知；OPPO小布Claw、小米miclaw等已落地系统级Agent；端侧AI模型部署效率提升50%，压缩率达58%</div>
 </div>
 <div class="timeline-item">
     <div class="timeline-date">5月13日</div>
-    <div class="timeline-title">中铝集团率先完成DeepSeek V4全国产化部署</div>
-    <div class="timeline-source">中国铝业报</div>
-    <div class="timeline-impact">DeepSeek V4 Flash版在坤安AI中台完成全栈国产环境部署，有色金属行业智能化升级提速</div>
+    <div class="timeline-title">Create 2026百度AI开发者大会：全面转向'智能体优先'战略，提出DAA新度量衡</div>
+    <div class="timeline-source">腾讯云开发者社区</div>
+    <div class="timeline-impact">百度提出'每日活跃智能体（DAA）'替代DAU作为行业新度量衡；全栈AI云重构基础设施；文心大模型深度融合搜索与智能体能力</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">5月12日</div>
-    <div class="timeline-title">广州发布AI产业2026年工作要点</div>
-    <div class="timeline-source">广州市政府</div>
-    <div class="timeline-impact">明确450个AI应用场景开放目标，聚焦智能制造70个、医疗50个场景，打造垂类模型之都</div>
+    <div class="timeline-date">5月9日</div>
+    <div class="timeline-title">腾讯云宣布AI算力产品服务价格上调5%</div>
+    <div class="timeline-source">腾讯云公告</div>
+    <div class="timeline-impact">阿里云此前取消百炼平台基础套餐AI算力最高涨价34%；云厂商算力定价全面上移，推理算力供需紧张已成结构性趋势</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">5月11日</div>
-    <div class="timeline-title">工信部启动AI科技伦理审查先导计划</div>
-    <div class="timeline-source">工信部</div>
-    <div class="timeline-impact">依托国家AI产业创新应用先导区率先推进伦理审查，智能体规范应用与创新发展实施意见出台</div>
+    <div class="timeline-date">5月6日</div>
+    <div class="timeline-title">算力芯片板块集体走强：海光信息涨停市值破8200亿，寒武纪涨超9%</div>
+    <div class="timeline-source">证券时报/开源证券</div>
+    <div class="timeline-impact">豆包收费消息刺激资本市场；东吴证券定调'2026年是国产AI算力全线兑现元年'；Token消耗从成本中心转向收入中心</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">5月4日</div>
+    <div class="timeline-title">豆包App Store页面新增付费订阅：标准版68元/月，专业版500元/月</div>
+    <div class="timeline-source">澎湃新闻/凤凰网科技</div>
+    <div class="timeline-impact">中国大模型'免费时代'终结标志；付费聚焦PPT生成/数据分析/影视制作等高消耗场景；3.45亿MAU的1%付费转化即可带来23.7亿年收入</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">4月24-26日</div>
+    <div class="timeline-title">DeepSeek V4预览版上线：1.6T参数MIT开源，API定价'地板价'全球最低</div>
+    <div class="timeline-source">DeepSeek官方/36氪</div>
+    <div class="timeline-impact">V4-Pro 1.6T参数/V4-Flash 284B；MIT协议任意商用；4/26全系列缓存命中价永久降至1/10；预计昇腾950上市后Pro价格再大幅下调</div>
 </div>
 </div>
 </div>
@@ -279,29 +292,40 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 7-3 本周应用场景深度解读 -->
 <div class="section">
 <h2>7-3 本周应用场景深度解读</h2>
-<h3>专题一：大模型厂商变现长征——豆包付费背后的AI商业模式重构</h3>
+<h3>专题一：大模型商业化路径大分化——一家收费、一家降价、一群涨价</h3>
 <div class="deep-event">
-<div class="deep-event-title">豆包付费订阅：国内AI免费时代落幕的标志性事件</div>
-<p>2026年5月4日，字节跳动旗下豆包在苹果App Store悄然更新付费订阅方案：标准版68元/月、加强版200元/月、专业版500元/月。三档价格如同三枚信号弹，划破了中国AI大模型行业持续两年的免费狂欢。豆包背后是3.5亿月活用户（QuestMobile 2026Q1数据）的国内第一AI原生应用，其商业化宣告意味着整个行业的游戏规则正在发生根本性转变。</p>
-<h4>1. 豆包付费的背景：算力账单压顶，免费模式不可持续</h4>
-<p>豆包日均Token调用量已突破120万亿，相比2024年5月首次发布时增长1000倍，三个月翻一倍。字节跳动2025年净利润同比下滑超过70%，浙商证券测算其资本开支约1600亿元，其中900亿元用于AI算力采购。以豆包Seed 2.0 lite版本API定价估算，全部商业化转化每日亿元级别营收，但成本同样高达数千万元量级。</p>
-<h4>2. 行业背景：大模型厂商集体走向变现</h4>
-<p>豆包的付费测试并非孤立事件——OpenAI发布GPT-5.5，价格比上一代贵一倍；智谱AI年内三度提价，输入价格累计上调逾40%；Kimi输入价格上涨58%；阿里云全线产品价格上涨最高34%。即便如此，智谱2026年一季度定价提升83%后，调用量反而增长400%。</p>
-<h4>3. 商业逻辑转变：从边际成本趋近于零到边际成本恒定甚至递增</h4>
-<p>AI智能体为完成复杂任务需要自主规划、搜索、调用工具、执行步骤并反复验证，单次任务的Token消耗量是普通聊天的10到100倍。当AI从会聊天的工具变成会干活的数字员工，海量并发调用让算力消耗呈指数级增长。</p>
-<h4>4. 对算力需求的影响</h4>
-<p>豆包付费收入对其算力支出的覆盖只是杯水车薪——全部商业化日收入约720万元，月收入约2.16亿元；而字节单月算力采购费用超120亿元。这说明大模型的商业化仍需要多管齐下：API调用收费、增值服务、企业级解决方案、股权融资等缺一不可。</p>
+<div class="deep-event-title">🔍 一周之内，中国大模型行业完成定价路径选择</div>
+<p>2026年4月底至5月初，短短一周时间，中国大模型行业出现了历史性的定价路线分化：<b>豆包宣布付费订阅（收费）、DeepSeek V4以地板价开源（降价）、智谱/阿里云/腾讯云集体调高价格（涨价）</b>。这三件事同时发生，标志着行业从"免费抢用户"阶段正式进入"差异化变现"阶段。</p>
+
+<h4>一、豆包收费：3.45亿月活撑起的商业化尝试</h4>
+<p>5月4日，豆包在App Store页面新增三档付费订阅：标准版68元/月、加强版200元/月、专业版500元/月。免费服务继续保留，付费聚焦PPT生成、深度数据分析、影视制作等高Token消耗场景。豆包MAU已达3.45亿（Q1 2026），与DeepSeek（1.35亿）形成"双寡头"格局。据火山引擎数据，截至2026年3月，豆包日均Token调用量已突破<b>120万亿</b>，较2025年12月（50万亿）翻倍，较2024年5月发布时增长1000倍。累计Token使用量超万亿的企业客户从100家增至140家。高昂的算力成本（单次推理硬件折旧占58%、电力29%）使得免费模式不可持续，按1%付费转化率估算，仅标准版年收入即可达23.7亿元，成为资本市场认可C端盈利的关键临界点。</p>
+
+<h4>二、DeepSeek降价：用"地板价"做AI基础设施</h4>
+<p>4月24日，DeepSeek V4预览版悄然上线HuggingFace，无发布会、无预热。V4-Pro 1.6T参数、V4-Flash 284B参数，百万级上下文、384K最大输出、<b>MIT开源协议</b>，任何企业可免费商用。定价方面：V4-Flash输入1元/百万Token、输出2元、缓存命中仅0.02元；V4-Pro输入12元、输出24元（4/25起2.5折至5/31）。比较全球定价：处理同样100万输入+100万输出Token，GPT-5.5需35美元，Claude Opus 4.7需30美元，DeepSeek V4-Flash仅<b>0.42美元（不到前两者的2%）</b>。4月26日，全系列API输入缓存命中价格永久降至原价1/10。梁文锋坚持"不贴钱也不赚暴利"的定价哲学。V4技术报告明确"在英伟达GPU和华为昇腾NPU双平台验证细粒度EP方案"，预计下半年昇腾950超节点批量上市后Pro版价格将进一步大幅下调。</p>
+
+<h4>三、涨价阵营：智谱三次累计涨83%，云厂商集体上调</h4>
+<p>智谱年内完成三次涨价：2/12 GLM-5 Coding Plan涨30%起；3/16 GLM-5-Turbo涨20%；4/8 GLM-5.1再涨10%，累计涨幅83%。调价后缓存命中价格0.475美元/百万Token已对齐Claude Sonnet 4.6的0.5美元。涨价底气来自业绩：2025年MaaS API平台ARR达17亿元（同比增60倍），毛利率从3.3%飙升至18.9%，摩根大通定性为"关键拐点"。云厂商层面，阿里云取消百炼平台基础套餐AI算力最高涨价34%，腾讯云5/9起上调5%。涨价背后是Token经济学的结构性变化：智能体多步骤任务使单任务Token消耗从数千跃升至8-15万个，算力供需被Agent彻底改写。</p>
+
+<h4>四、路径选择背后的战略逻辑</h4>
+<p>三条路通向不同的商业模式：豆包走"流量入口"路线——通过电商生态（抖音商城+AI购物）和付费订阅双轨变现；DeepSeek走"基础设施"路线——开源+低价让所有开发者用得起，靠规模效应盈利；智谱走"价值定价"路线——"我能干Claude的活，凭什么不能收Claude的钱"。每一家都清晰亮出战略底牌，行业从混沌进入有序分化阶段。资本市场已作出反应：5/6算力芯片板块集体走强（海光信息涨停市值破8200亿），东吴证券定调"2026年是国产AI算力全线兑现元年"。</p>
 </div>
-<h3>专题二：Token经济爆发——从卖算力到卖智能的结构性转型</h3>
+
+<h3>专题二：智能体规模化落地元年——从概念验证到价值交付</h3>
 <div class="deep-event">
-<div class="deep-event-title">Token：中国AI产业新度量衡崛起</div>
-<p>随着大模型应用遍地开花，以Token消耗量为标志的AI产业算力指数正迎来爆发式增长。国家数据局数据显示，截至2026年3月，中国日均Token调用量已突破140万亿，两年间增长超千倍；进入5月已攀升至180万亿。AI竞争已从谁的模型更聪明变成谁能组织更便宜、更稳定、更大规模的算力。</p>
-<h4>1. Token计费：从硬件租用时间到智能实际消耗</h4>
-<p>九章云极DataCanvas创始人方磊指出：行业正在经历根本性转变——从为硬件租用时间付费，转向为智能的实际消耗付费。Token计费模式的出现，标志着算力供给正式进入更精细、更公平的新阶段。以九章云极Token Factory为例，一家制造企业接入后AI质检系统的算力综合成本下降高达55%。</p>
-<h4>2. 中国移动Token运营体系：10亿用户的AI普惠实验</h4>
-<p>中国移动在2026移动云大会上正式发布Token运营体系，MoMA平台已接入300多款业界主流AI模型。江苏移动5元/250万Token的Lite套餐、北京移动5.99元起的算力次包，已经把AI算力的使用门槛拉到一杯奶茶的水平。</p>
-<h4>3. 算力租赁：从卖服务器到卖Token套餐</h4>
-<p>OpenRouter测算显示，截至2026年4月初，全球AI大模型Token总调用量达27万亿，环比增长18.9%，中国AI大模型Token调用量已连续五周超越美国。H100 GPU一年期租赁价格从2025年10月每卡每小时1.70美元急升至2026年3月的2.35美元，涨幅接近40%。</p>
+<div class="deep-event-title">🤖 2026年5月，AI智能体进入"落地决胜期"</div>
+<p>5月AI智能体赛道集中释放了强烈的规模化信号。科创板31家AI公司业绩会（5/20）一致认定"2026年为AI智能体规模化落地元年"，联发科MMDC 2026（5/13）发布天玑AI智能体化引擎2.0，百度Create大会（5/13-14）提出DAA新度量衡全面转向"智能体优先"战略。智能体正从"数字工具"进化为"数字员工"，深度重构企业生产力和个人生活方式。</p>
+
+<h4>一、数据印证：智能体进入爆发增长通道</h4>
+<p>联发科MMDC 2026大会公布的数据显示，全球AI智能体自主任务量从2025年日均<b>1.2亿次</b>飙升至2026年的<b>8.7亿次</b>，年增长7倍。中国日均Token消耗突破<b>140万亿</b>，其中智能体多步骤任务（编程、数据分析、自动化工作流）是主要增长驱动力。编程场景Token占比从2025年初的11%增至50%以上（OpenRouter & a16z联合报告），标志着应用模式从"问答式"向"智能体（Agent）模式"根本性切换。</p>
+
+<h4>二、端侧AI加速：从被动响应到主动感知驱动</h4>
+<p>联发科天玑AI智能体化引擎2.0的核心升级在于<b>主动感知驱动</b>——通过SensingClaw技术实现低功耗全时感知（视觉/听觉/方位），让Agent从"用户驱动"升级为"Always-On主动服务"。关键落地案例：OPPO小布Claw可根据用户体检报告制定每周健身计划并导入日历；小米miclaw实现跨设备全屋智能联动（一句话调节灯光/窗帘/音箱/净化器）。天玑AI开发套件3.0将端侧LLM部署耗时从5天缩短至半天（降90%），模型压缩率达58%，执行速度提升400%。</p>
+
+<h4>三、生态竞争：六大厂商形成差异化格局</h4>
+<p>国内六大厂商5月智能体布局呈现清晰分化：<b>百度</b>提出DAA（每日活跃智能体）新度量衡，构建全栈AI云基础设施；<b>阿里</b>通义千问深度融合淘宝/支付宝电商全链路，企业级智能体平台"悟空"开启商业化放量；<b>腾讯</b>依托微信与小程序生态探索差异化路径，AI补短板已见成效（Q1财报）；<b>字节</b>夯实全模态底座，火山引擎智能路由方案支持多模型动态选择；<b>华为</b>软硬协同深耕工业制造（鸿蒙6设备超6000万）与终端双场景；<b>360</b>以安全+普惠模式推动全员AI赋能。竞争焦点从"模型参数竞赛"全面转向"场景价值交付与全栈生态构建"。</p>
+
+<h4>四、商业化拐点：从项目制到订阅制</h4>
+<p>多家AI公司在业绩会上明确向"订阅+运营"模式转型：金山办公WPS AI个人业务量价齐升，B端WPS 365高增速；云从科技推进"订阅+运营"模式，打造AI Agent时代的商业模式；奇安信成立AI子公司，将AI安全定义为"刚需底座"。行业经营拐点逐步显现——奇安信Q1 2026多项指标创上市以来最佳，云从科技亏损收窄、现金流改善。但金山办公邹涛也指出两大挑战：用户AI使用习惯培育需周期，企业非结构化数据向知识资产转化工作复杂。</p>
 </div>
 </div>
 
@@ -309,65 +333,104 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section">
 <h2>7-4 应用场景算力需求周变化分析</h2>
 <h3>7-4-1 大模型训练场景</h3>
-<p>本周大模型训练算力需求保持高位。DeepSeek完成500亿元首轮融资，估值达3500亿元，计划6月发布V4.1版本；中铝集团率先完成DeepSeek V4全国产化部署，验证国产算力承载万亿参数模型的技术可行性。科大讯飞在华为昇腾910B集群上训练效率提升至84%-93%，星火X2-Flash采用MoE架构（30B参数）在智能体常用任务上接近万亿参数模型水平。算力需求特征：单次预训练任务需要千卡乃至万卡集群连续运行数周，国产算力占比提升，超节点架构优化成为弥补单芯片差距的关键路径。</p>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>DeepSeek V4的发布（4/24）是大模型训练场景的标志性事件。V4-Pro采用1.6T参数MoE架构，在英伟达GPU和华为昇腾NPU双平台完成训练验证，证明国产算力在超大模型训练上已具备工程化能力。联发科MMDC大会透露，端侧大模型（7B-32B）训练与部署需求快速增长，天玑AI开发套件3.0支持端侧模型部署效率提升50%。训练场景算力需求正从"超大规模集中训练"向"大规模预训练+行业微调+端侧蒸馏"三级体系演进。智谱GLM-5已完全使用华为昇腾芯片完成训练，实现零美国硬件依赖，标志着国产训练算力生态闭环初步形成。</p>
+<p><strong>算力需求变化：</strong>训练端算力占比从2023年的58.7%持续下降至约35-40%，但绝对规模仍在增长。中国信通院数据显示，2024年全球AI IaaS训练服务规模40.96亿美元，推理服务33.51亿美元。但推理服务增速（173.4%）已大幅超越训练（123.7%）。</p>
+<p><span class="tag">训练算力</span><span class="tag">MoE架构</span><span class="tag">国产芯片训练</span></p>
+</div>
+
 <h3>7-4-2 AI推理场景</h3>
-<p>AI推理成为算力消耗的主要增量来源，日均Token调用量本周突破180万亿。豆包日均Token消耗已达120万亿，三个月翻一倍；抖音日均超过60万亿，每三个月增长约50%。AI Agent的普及显著放大推理算力需求——单次任务Token消耗量是普通聊天的10-100倍。H100 GPU年租价格达2.35美元/卡时，环比上涨12%，阿里云、腾讯云、智谱AI相继提价后仍供不应求。</p>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>推理场景正在成为AI算力消耗的绝对主体。Digital Realty预测2026年将成为"推理反转"元年——推理处理Token数正式超越训练。OpenRouter平台数据显示，编程场景Token占比从11%飙升至50%+，智能体多步骤任务单次会话Token消耗从数千跃升至8-15万。豆包日均120万亿Token调用中绝大部分为推理消耗。火山引擎智能模型路由方案的推出（支持豆包/DeepSeek/Qwen/Kimi多模型动态选择），标志着推理场景进入"成本优化+效果最大化"的精细化运营阶段。</p>
+<p><strong>算力需求变化：</strong>IDC & 浪潮信息预测，中国AI服务器推理算力占比将从2023年的41.3%持续攀升至2027年的72.6%。推理型AI服务器采购加速：中国移动2026年初AI通用计算设备集采超50亿元（7499台推理型AI服务器），华为昇腾系厂商斩获34亿元份额。推理芯片对高端封装（CoWoS）和高带宽内存（HBM）的依赖度低于训练芯片，为国产芯片（寒武纪/摩尔线程/沐曦等）提供了结构性窗口。</p>
+<p><span class="tag">推理算力</span><span class="tag">Token经济学</span><span class="tag">推理芯片窗口</span></p>
+</div>
+
 <h3>7-4-3 金融行业场景</h3>
-<p>金融AI场景算力需求本周保持快速增长。天润云2026年Q1 AI业务收入同比增长105%，AI生产力平台ZENAVA的Token调用量在3月较12月增长60%，成功拓展至消费、教育及制造等多个行业头部客户。金融AI的核心应用包括智能投研分析、量化交易策略生成、风控模型实时运算、保险理赔自动化等，付费意愿强是AI变现最清晰的垂直领域之一。</p>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>金融AI正从辅助工具升级为核心生产力。腾讯Q1财报显示AI在金融风控、智能客服等场景深度落地。智谱GLM-5的Coding Plan涨价底气部分来自金融科技客户的强劲需求（量化交易、合规审查、产业链图谱）。恒为科技的DeepSeek一体机已在金融行业部署。金山办公WPS AI在金融行业积累标杆客户。金融场景对低延迟推理要求极高（<10ms），推动边缘算力和专用推理芯片需求增长。</p>
+<p><strong>算力需求变化：</strong>金融AI算力需求集中在实时推理（高频交易/风控）和安全合规（私有化部署），推动一体机（训推一体/纯推理）采购增长。金融行业AI应用渗透率持续领先其他传统行业。</p>
+<p><span class="tag">金融AI</span><span class="tag">智能风控</span><span class="tag">DeepSeek一体机</span></p>
+</div>
+
 <h3>7-4-4 医疗行业场景</h3>
-<p>医疗AI算力需求稳步增长，广州发布AI+医疗服务将发布不少于50个应用场景，聚焦筛查、诊断、治疗、公共卫生等方向。讯飞基于X2底座的医疗大模型在智能健康分析、报告解读等任务中达到/超越国际主流模型水平。全国首个区域医疗大模型宝医数智已在深圳宝安落地运行。医疗AI对推理准确率要求极高，影像分析、病理识别等任务需要GPU加速。</p>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>广东"粤医智影"AI医学影像辅助诊断系统已接入2146家公立医疗机构实现全省基层全覆盖，2秒生成诊断报告、准确率98%。迈瑞医疗"启元"重症医疗大模型已在国内18家医院装机，能提前6小时预警脓毒性休克，5秒出诊疗建议，1分钟生成病历效率提升30倍。阿里健康"氢离子"AI产品针对临床和科研医生，严重幻觉率与国际领先的OpenEvidence相当。智谱AI与医疗行业合作推进AI辅助药物研发。</p>
+<p><strong>算力需求变化：</strong>医疗AI对推理精度和可靠性要求极高，幻觉率控制是关键指标。影像AI需高吞吐量推理（单次CT扫查数百张影像），重症监护需24/7实时推理。医疗数据标注正从劳动密集转向知识密集，高质量行业数据集成为核心壁垒。</p>
+<p><span class="tag">医疗AI</span><span class="tag">医学影像</span><span class="tag">重症大模型</span></p>
+</div>
+
 <h3>7-4-5 自动驾驶场景</h3>
-<p>自动驾驶算力需求保持强劲。百度智能云支持超过2000万辆L2级车辆；芯擎科技发布5nm车规级AI座舱芯片龍鹰二号，AI算力达200 TOPS，原生支持7B+多模态大模型。Uber向Aurora投资5亿美元并计划采购至少3.5万辆robotaxi。小马智行L4级自动驾驶率先在深圳宝安街头穿梭。自动驾驶对实时推理要求极高（毫秒级），车载端侧+云端仿真协同是主要算力形态。</p>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>联发科MMDC 2026展示天玑车用平台AI算力最高400 TOPS，与全球20+家头部车企深度合作（190+在手项目，累计出货3500万套）。智能驾驶从L2+向L3/L4加速演进，端到端自动驾驶模型对算力需求持续攀升。国家超算互联网郑州核心节点已有超70%国产新能源汽车在此进行流体和碰撞仿真实验。</p>
+<p><strong>算力需求变化：</strong>自动驾驶算力需求分云端训练（海量路测数据标注与仿真）和车端推理（<20ms实时决策）两个层面。端侧推理芯片（如天玑车用平台）需兼顾高算力与低功耗。预计2026年车载AI芯片市场规模将超过300亿元。</p>
+<p><span class="tag">自动驾驶</span><span class="tag">端侧推理</span><span class="tag">车规芯片</span></p>
+</div>
+
 <h3>7-4-6 制造业场景</h3>
-<p>制造业AI算力需求快速增长，成为AI落地最活跃的场景之一。软通动力与金盘科技联合发布智能制造整体解决方案，在产线优化、缺陷检测、排产协同等场景实现效率提升与成本下降。广州明确AI+智能制造将发布不少于70个应用场景。具身智能港落地深圳宝安，腾讯、自变量科技、银河通用、鹿明机器人等标杆企业加速汇聚。工业质检、柔性制造、预测性维护等场景以中频推理为主，覆盖工序多，总量规模大。</p>
-<h3>7-4-7 互联网行业场景</h3>
-<p>互联网是AI算力消耗最大的行业，豆包日均120万亿、抖音60万亿的Token消耗占全国日均180万亿的大部分。腾讯云AI算力相关产品价格5月9日起上调5%，阿里云全线涨价最高34%。字节跳动2025年AI资本开支约1600亿元，2026年AI芯片采购预算达850亿元。互联网AI以大规模并发推理为主，AI搜索、AI推荐、AI内容生成为核心应用场景，Token消耗量与用户活跃度直接挂钩。</p>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>制造业AI渗透持续深化。美的荆州洗衣机工厂获全球首个多场景覆盖智能体工厂WRCA认证——38个已上线智能体场景覆盖研发/生产/质检/设备/物流等全链路，排产响应提升90%、整体效率提升80%。广东发布23个"AI+"典型案例，酷特智能、思谋科技（IndustryGPT工业多模态大模型）等成为制造AI标杆。工信部"人工智能+制造"专项行动推动AI在设计/中试/生产/服务/运营全环节落地，目标到2027年推广500个典型应用场景。</p>
+<p><strong>算力需求变化：</strong>制造业AI算力需求呈现从"中心云"向"云边端协同"演进的趋势。生产制造环节AI应用比例从2024年的19.9%提升至2025年的25.9%。工业质检需低延迟边缘推理（<50ms），工业大模型需兼顾通用性与行业专精度。</p>
+<p><span class="tag">制造业AI</span><span class="tag">智能质检</span><span class="tag">工业大模型</span></p>
+</div>
+
+<h3>7-4-7 互联网与电商场景</h3>
+<div class="analysis-box">
+<p><strong>本周动态：</strong>互联网行业是AI应用渗透率最高的领域。豆包接入抖音商城实现"一句话购物"闭环——AI识别需求→推荐→生成商品卡→应用内支付；千问"AI办事"接入东方航空，用户自然语言订机票选座位。淘宝天猫已推出6款AI导购应用（AI万能搜/AI帮我挑/AI试衣等）。字节跳动CEO梁汝波将豆包定位为"通过AI助手整合已有业务"。AI正推动消费从"需求牵引供给"到"供给定义需求"转变。</p>
+<p><strong>算力需求变化：</strong>互联网AI算力需求集中在推荐系统推理（千亿级参数）、AIGC内容生成（视频/图像/文案）、智能客服和智能搜索。火山引擎在大模型服务调用量市场份额达49.2%（IDC 2025上半年数据）。C端爆发驱动算力需求日峰值/均值比持续拉大，对算力弹性调度提出更高要求。</p>
+<p><span class="tag">电商AI</span><span class="tag">智能推荐</span><span class="tag">AIGC</span></p>
+</div>
 </div>
 
 <!-- 7-5 应用场景趋势周变化对比分析 -->
 <div class="section">
 <h2>7-5 应用场景趋势周变化对比分析</h2>
-<h3>核心应用场景周变化对比</h3>
 <div class="week-summary-box">
-<h4>主要应用场景算力需求周变化汇总（5/8-14）</h4>
+<h4>📊 应用场景关键指标周变化（第20期 vs 第19期）</h4>
+<p style="font-size:11px;opacity:0.85;margin-bottom:8px;">⚠️ 说明：部分指标因数据发布周期（月度/季度）无周粒度变化，标注为"最近可获取数据"</p>
 <table>
-<tr><th>应用场景</th><th>算力需求趋势</th><th>本周变化</th><th>驱动因素</th></tr>
-<tr><td>大模型训练</td><td><span class="change-up">↑ 上升</span></td><td>持续高投入</td><td>DeepSeek V4.1即将发布，中铝集团全国产化部署</td></tr>
-<tr><td>AI推理</td><td><span class="change-up">↑↑ 显著上升</span></td><td>日均Token达180万亿</td><td>Agent应用爆发，单任务Token消耗量10-100倍</td></tr>
-<tr><td>金融AI</td><td><span class="change-up">↑ 上升</td><td>Q1同比+105%</td><td>天润云ZENAVA平台爆发，多行业头部客户拓展</td></tr>
-<tr><td>医疗AI</td><td><span class="change-up">↑ 稳定上升</span></td><td>50+应用场景发布</td><td>广州政策推动，宝医数智区域医疗大模型落地</td></tr>
-<tr><td>自动驾驶</td><td><span class="change-up">↑ 上升</span></td><td>2000万辆L2+</td><td>百度智能云规模化，芯擎龍鹰二号发布</td></tr>
-<tr><td>制造业AI</td><td><span class="change-up">↑↑ 快速上升</span></td><td>70+场景开放</td><td>广州政策+具身智能港落地，软通动力解决方案发布</td></tr>
-<tr><td>互联网AI</td><td><span class="change-up">↑ 持续增长</span></td><td>180万亿/日</td><td>豆包+抖音双引擎，字节资本开支1600亿</td></tr>
+<thead><tr><th>场景</th><th>时间维度</th><th>上期数据</th><th>本期数据</th><th>变化</th><th>趋势判断</th></tr></thead>
+<tbody>
+<tr><td>大模型商业化</td><td>周变化</td><td>全免费模式（5/4前）</td><td>豆包宣布付费订阅（5/4）</td><td><span class="change-up">↑ 历史转折</span></td><td>免费时代终结，付费模式验证中</td></tr>
+<tr><td>Agent日均任务量</td><td>年同比</td><td>1.2亿次（2025年）</td><td>8.7亿次（2026年）</td><td><span class="change-up">↑ 625%</span></td><td>进入指数增长通道，Agent原年已至</td></tr>
+<tr><td>豆包日均Token</td><td>季环比</td><td>50万亿（2025.12）</td><td>120万亿（2026.3）</td><td><span class="change-up">↑ 140%</span></td><td>电商+Agent双引擎驱动，Q2有望破200万亿</td></tr>
+<tr><td>中国日均Token</td><td>半年同比</td><td>30万亿（2025.6）</td><td>140+万亿（2026.5）</td><td><span class="change-up">↑ 367%</span></td><td>推理Token超越训练，Agent推高单任务消耗</td></tr>
+<tr><td>大模型API定价</td><td>周变化</td><td>V3.2定价体系</td><td>V4地板价+涨价潮并存</td><td><span class="change-up">↑↓ 严重分化</span></td><td>DeepSeek降80% vs 智谱涨83%，路线分野明朗</td></tr>
+<tr><td>豆包MAU</td><td>季环比</td><td>2.26亿（2025.12）</td><td>3.45亿（2026.Q1）</td><td><span class="change-up">↑ 52.7%</span></td><td>双寡头格局稳固，下沉+银发用户双向延伸</td></tr>
+<tr><td>云端算力定价</td><td>周变化</td><td>优惠/补贴阶段（5/9前）</td><td>腾讯云涨5%/阿里云涨34%</td><td><span class="change-up">↑ 结构性上涨</span></td><td>算力供需关系生变，云厂商重新定价</td></tr>
+<tr><td>端侧AI部署</td><td>月环比</td><td>联发科引擎1.0（被动驱动）</td><td>天玑引擎2.0（主动感知）</td><td><span class="change-up">↑ 代际升级</span></td><td>从被动响应到主动感知，Agent OS时代来临</td></tr>
+<tr><td>AI应用商业模式</td><td>趋势变化</td><td>项目制/一次性交付为主</td><td>订阅+Token运营模式转型加速</td><td><span class="change-up">↑ 模式升级</span></td><td>云从/金山/罗普特等集体转向订阅制</td></tr>
+<tr><td>算力芯片估值</td><td>周变化</td><td>平稳（4月底）</td><td>5/6海光涨停/寒武纪+9%</td><td><span class="change-up">↑ 板块爆发</span></td><td>资本市场确认"Token经济学"定价逻辑</td></tr>
+</tbody>
 </table>
 </div>
-<h3>周度变化分析</h3>
 <div class="analysis-box">
-<p><strong>总体判断：</strong>本周AI应用场景算力需求呈现两端加速、中间稳健的分化格局。大模型训练和AI推理场景受益于技术突破（DeepSeek V4.1定档、Agent应用普及）持续放量；金融、医疗等垂直领域需求稳步增长但尚未进入爆发期；互联网作为算力消耗主体维持高位但增速平稳。这反映出AI应用正从技术驱动向场景驱动过渡——谁能将AI嵌入真实生产流程，谁就能获得下一阶段增长。</p>
-<p><strong>关键趋势：</strong>推理算力需求增速已显著超过训练算力需求增速。豆包日均Token三个月翻一倍、抖音每三个月增长约50%，这种增速远超新模型发布带来的训练需求增量。Agent应用的普及是核心驱动。这意味着推理侧的算力基础设施将成为下一阶段投资的重点方向。</p>
+<p><strong>周变化核心趋势总结：</strong>本周（5/15-5/21）AI应用场景呈现<b>三大结构性变化</b>——（1）商业化拐点：豆包付费订阅打开C端变现之门，DeepSeek地板价锁定基础设施路线，智谱涨价验证价值定价可行性，三大路线各有逻辑；（2）Agent规模化：从概念到落地的临界点已过，日均8.7亿次自主任务量证明Agent不再是小众实验，而是正在成为主流生产力工具；（3）算力定价重构：从"免费烧钱"到"按Token计费"，云厂商集体涨价确认算力稀缺性，资本市场以板块涨停回应"Token经济学"的确立。这三个变化彼此强化：Agent场景爆发推高Token消耗→Token消耗倒逼免费模式不可持续→商业化路径分化确认行业进入成熟早期阶段。</p>
 </div>
 </div>
 
 <!-- 7-6 应用场景驱动因素周变化分析 -->
 <div class="section">
 <h2>7-6 应用场景驱动因素周变化分析</h2>
-<h3>技术驱动因素</h3>
 <div class="analysis-box">
-<p><strong>MoE架构成熟：</strong>DeepSeek V4、Kimi K2.6、讯飞星火X2-Flash等主流模型均采用MoE架构，总参数量虽大但激活参数少，大幅降低单次推理成本。MoE架构的普及使大模型推理成本可控，推动推理场景爆发。</p>
-<p><strong>Agent能力跃升：</strong>豆包、DeepSeek、Kimi等头部厂商密集升级Agent能力。单个Agent完成复杂任务需要多次模型调用和多工具协同，Token消耗量是传统聊天的10-100倍，也为厂商创造更多变现机会。</p>
-<p><strong>上下文窗口拓展：</strong>DeepSeek V4支持百万字超长上下文，Gemini 3.1 Pro在科学研究中展现100万Token可靠性。超长上下文需要更大显存和带宽，推高单次推理成本，但也催生高价值应用场景。</p>
+<p><strong>一、Token经济学从理论走向实践——算力稀缺性被价格机制确认</strong></p>
+<p>本周最核心的驱动因素变化是<b>Token经济学从抽象概念变为产业定价基础</b>。黄仁勋在GTC大会阐述的"Token是新商品"逻辑，正以三种方式在中国市场兑现：（1）豆包高昂的免费成本（日均120万亿Token的背后是GPU折旧+电力+散热+人力）迫使免费模式终结；（2）DeepSeek将Token成本压至物理极限（V4-Flash 0.02元/百万Token缓存命中），证明中国电力（0.2-0.3元/度 vs 欧美1-1.5元）和MoE架构带来的结构性成本优势；（3）云厂商集体涨价标志着算力供需关系的持久性变化——单任务Token消耗因Agent多步骤特性从数千跃升至8-15万，需求曲线发生结构性上移。</p>
 </div>
-<h3>政策驱动因素</h3>
 <div class="analysis-box">
-<p><strong>地方政府AI场景开放提速：</strong>广州明确2026年开放450个AI应用场景（智能制造70+、医疗50+、养老20+等）；上海发布人工智能+百团百项，支持大模型在自动驾驶、医疗、金融等垂直领域示范；深圳宝安具身智能港落地，四大国家级公共服务平台支撑产业规模化。</p>
-<p><strong>AI伦理治理进入实操：</strong>工信部启动AI科技伦理审查先导计划，智能体规范应用与创新发展实施意见出台，为AI大规模落地提供制度保障，同时规范行业发展边界。</p>
-<p><strong>普惠算力政策落地：</strong>工信部印发《普惠算力赋能中小企业发展专项行动》，支持算力银行、算力超市等创新业务，降低中小企业AI应用门槛，推动算力需求从头部向下渗透。</p>
+<p><strong>二、Agent从"玩具"到"工具"——多步骤任务驱动算力消耗指数级增长</strong></p>
+<p>Agent模式对算力消耗的根本性改变在于：传统对话模式下用户停止提问则Token停止消耗；Agent模式下，AI在后台持续执行多步骤任务（编写代码→运行测试→识别报错→自我修正→再次运行），每次调用携带完整对话历史，使单次会话Token吞吐量呈几何级数增长。OpenClaw、Hermes等Agent框架的火爆（2026年初密集发布），推动了编程场景Token占比从11%飙升至50%以上。联发科天玑AI引擎2.0的主动感知能力让Agent实现Always-On，将进一步放大这一效应。</p>
 </div>
-<h3>市场驱动因素</h3>
 <div class="analysis-box">
-<p><strong>Token计费模式普及：</strong>中国移动、阿里云、腾讯云、OpenRouter等平台推动算力从按硬件时长计费转向按Token消耗计费，让算力需求方更关注产出而非投入，促进需求进一步释放。</p>
-<p><strong>变现压力加速商业化：</strong>豆包、智谱、Kimi等头部厂商集体走向付费/提价，说明AI免费时代正在终结。付费模式验证后将激励更多厂商从规模扩张转向价值变现，推动行业进入健康增长轨道。</p>
-<p><strong>资本开支持续扩张：</strong>字节跳动2026年AI芯片采购预算850亿元，Meta/谷歌/微软/亚马逊全球合计7250亿美元AI资本开支，为算力需求提供坚实支撑。</p>
+<p><strong>三、端侧AI从"可用"到"好用"——芯片+工具+生态三位一体降低落地门槛</strong></p>
+<p>联发科MMDC 2026展示了一条清晰的端侧AI加速路径：芯片层（天玑9400/9500，最高400 TOPS NPU）→系统层（智能体化引擎2.0，SensingClaw主动感知）→开发生态（开发套件3.0，部署耗时降90%）。芯片厂商从单纯的算力供应商转型为AI基础设施提供商，通过标准化开发工具降低碎片化安卓/IoT生态的适配成本。OPPO/小米/vivo的系统级Agent落地证明"芯片+工具+生态"模式正在加速端侧AI从实验室走向消费者。华为鸿蒙6设备数超6000万，构建自有的端侧Agent生态。</p>
+</div>
+<div class="analysis-box">
+<p><strong>四、国产算力闭环加速形成——训练+推理+芯片+框架全链路自主可控</strong></p>
+<p>从GLM-5完全用华为昇腾芯片训练，到DeepSeek V4在英伟达GPU和昇腾NPU双平台验证，再到中国移动50亿集采中华为昇腾系获34亿份额（占68%），国产算力从"能用"迈向"好用"。寒武纪2025年营收增长453%至64.97亿元首次年度盈利，国产芯片厂商集体进入盈利拐点。推理端对高端封装（CoWoS）和HBM依赖度低于训练端，为国产芯片提供结构性替代窗口。国家超算互联网郑州节点3万张国产加速卡实际运营，验证了国产算力基础设施的工程化能力。</p>
+</div>
+<div class="analysis-box">
+<p><strong>五、数据要素价值加速释放——高质量行业数据集成为竞争壁垒</strong></p>
+<p>随着模型能力趋同，行业高质量数据集的重要性日益凸显。国家数据局推动7个城市数据标注基地建设，已形成超500个高质量数据集（医疗/工业/教育），带动数据标注产值163亿元（截至2025 Q3）。广东"粤医智影"系统能在2146家医疗机构实现98%准确率，关键支撑是高质量的医学影像标注数据。合成数据技术正成为突破数据瓶颈的新方向——当现实数据难以获取或涉及隐私，AI生成符合物理规律和业务逻辑的训练数据。</p>
 </div>
 </div>
 
@@ -376,20 +439,39 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-7 下周趋势预判</h2>
 <div class="forecast-grid">
 <div class="forecast-card">
-<div class="year">下周（5/15-21）</div>
-<div class="value">AI推理需求继续放量</div>
-<div class="note">DeepSeek V4.1发布预期升温，V4 Pro API优惠延至5/31可能刺激一波调用量；豆包付费订阅正式上线后用户留存情况值得关注；北京亦庄AI+产业大会5/19开幕，AI最佳场景渗透案例揭晓。</div>
+    <div class="year">📱 C端付费转化</div>
+    <div class="value">关键验证期</div>
+    <div class="note">豆包订阅转化率（目标>1%）将在未来2-4周初步显现；千问可能跟进推出"AI购物会员"等差异化付费方案；C端付费习惯养成仍需6-12个月。</div>
 </div>
 <div class="forecast-card">
-<div class="year">中长期（1-3个月）</div>
-<div class="value">推理算力占比持续提升</div>
-<div class="note">Agent应用普及将使推理Token消耗增速继续超过训练需求增速；H100/H200租金持续上涨趋势不变；国产算力在政策扶持下出租率有望进一步改善。</div>
+    <div class="year">🤖 Agent生态</div>
+    <div class="value">加速扩张</div>
+    <div class="note">联发科天玑引擎2.0将推动OPPO/小米/vivo在6-8月推出系统级Agent更新；华为鸿蒙6 Agent生态设备数有望突破1亿；Agent自主任务量有望在Q3突破15亿次/日。</div>
 </div>
 <div class="forecast-card">
-<div class="year">风险提示</div>
-<div class="value">变现压力持续</div>
-<div class="note">豆包付费订阅若用户流失超预期，可能引发行业价格战再次升温；全球AI芯片供应链紧张延续，HBM产能瓶颈尚未缓解；国产算力生态差距短期难以弥补。</div>
+    <div class="year">💰 Token经济学</div>
+    <div class="value">全面重构</div>
+    <div class="note">腾讯云/阿里云涨价后，其他云厂商可能跟进；豆包付费模式若验证成功将引发全行业跟进；DeepSeek V4优惠期（至5/31）到期后Pro版价格走势值得关注。</div>
 </div>
+<div class="forecast-card">
+    <div class="year">🔬 大模型发布</div>
+    <div class="value">密集窗口期</div>
+    <div class="note">GPT-6、Claude 5 "Fennec"预计Q2-Q3发布；阿里千问下一版本（Qwen3.6）可能在5-6月亮相；端侧小模型（1-3B）将迎来发布潮，适配手机/汽车/IoT场景。</div>
+</div>
+<div class="forecast-card">
+    <div class="year">🏭 行业落地</div>
+    <div class="value">制造/医疗提速</div>
+    <div class="note">"AI+制造"专项行动首批典型场景（500个目标）加速落地；医疗AI在影像诊断之外将向药物研发、基因组学等前沿领域拓展；工业Agent从单点质检走向全链路自动化。</div>
+</div>
+<div class="forecast-card">
+    <div class="year">⚡ 算力供需</div>
+    <div class="value">持续紧张</div>
+    <div class="note">AMD苏姿丰预测数据中心CPU市场年增>35%，可能出现"极其严重的产能短缺"；国产推理芯片（寒武纪/海光/昇腾）Q2-Q3订单有望加速放量。</div>
+</div>
+</div>
+<div class="analysis-box" style="margin-top:16px;">
+<p><strong>下周三（5/28）重点关注：</strong>（1）阿里Q1财报（5/14已发布后续市场反应）——千问商业化路径和云业务AI收入占比；（2）豆包付费订阅的实际转化数据——决定中国C端AI付费可行性的关键信号；（3）智谱下一轮定价调整——年内第四次涨价是否落地；（4）联发科天玑引擎2.0的OEM厂商适配进展——端侧Agent规模化的硬件基础；（5）DeepSeek V4优惠期临近到期（5/31）后的价格策略——是否延长优惠或推出新的计费模式。</p>
+<p><strong>1个月预判（至6月中旬）：</strong>AI应用商业化从"零散试点"进入"系统性推进"，预计将有2-3家头部大模型厂商跟进豆包推出C端付费方案；Agent自主任务量有望突破10亿次/日；国产推理芯片出货量Q2环比增长50%+；云厂商AI算力价格仍有5-10%的上调空间。</p>
 </div>
 </div>
 
@@ -408,52 +490,59 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td>5月9日</td>
-    <td>中国移动发布Token运营体系</td>
-    <td>中国移动</td>
-    <td>接入300+模型、5元/250万Token普惠套餐</td>
+    <td>5月20日</td>
+    <td>科创板31家AI公司集体业绩会：2026年为AI智能体规模化落地元年，金山办公/云从科技/奇安信等明确订阅制转型路径</td>
+    <td>科创板AI企业</td>
+    <td>31家参会企业覆盖AI安全/具身智能/端侧工业视觉</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>5月8日</td>
-    <td>DeepSeek完成500亿元首轮融资</td>
-    <td>DeepSeek</td>
-    <td>估值3500亿元，梁文锋出资200亿</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>5月8日</td>
-    <td>深圳宝安具身智能港正式亮相</td>
-    <td>深圳宝安区</td>
-    <td>四大国家级平台，近20个重点项目签约</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>5月4日</td>
-    <td>豆包启动付费订阅测试</td>
-    <td>字节跳动/豆包</td>
-    <td>68/200/500元三档，专业版年费5088元</td>
+    <td>5月14日</td>
+    <td>联发科MMDC 2026发布天玑AI智能体化引擎2.0，SensingClaw主动感知技术推动端侧Agent从被动响应到主动服务</td>
+    <td>联发科</td>
+    <td>全球20+车企/OPPO/小米/vivo合作，智能体日任务量8.7亿次</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
     <td>5月13日</td>
-    <td>中铝集团完成DeepSeek V4全国产化部署</td>
-    <td>中铝集团/DeepSeek</td>
-    <td>首个万亿参数全栈国产化案例</td>
+    <td>Create 2026百度AI开发者大会全面转向'智能体优先'战略，提出DAA（每日活跃智能体）新度量衡替代DAU</td>
+    <td>百度</td>
+    <td>全栈AI云重构基础设施</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>5月9日</td>
+    <td>腾讯云宣布AI算力产品服务价格上调5%，继阿里云取消百炼平台套餐（最高涨价34%）后云厂商集体调整定价</td>
+    <td>腾讯云/阿里云</td>
+    <td>全行业算力定价上移</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>5月6日</td>
+    <td>算力芯片板块集体爆发：海光信息涨停市值破8200亿，寒武纪涨超9%，东吴证券定调'2026年为国产AI算力全线兑现元年'</td>
+    <td>资本市场监管</td>
+    <td>算力芯片板块单日涨幅显著</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>5月4日</td>
+    <td>豆包App Store新增三档付费订阅（标准版68元/加强版200元/专业版500元/月），中国大模型'免费时代'正式终结</td>
+    <td>字节跳动/豆包</td>
+    <td>3.45亿MAU的C端变现验证开始</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>5月12日</td>
-    <td>广州发布AI产业2026年工作要点</td>
-    <td>广州市政府</td>
-    <td>450个场景、40个垂类大模型、2个平台</td>
+    <td>4月24-26日</td>
+    <td>DeepSeek V4预览版上线——V4-Pro 1.6T参数/V4-Flash 284B，MIT开源协议，API缓存命中价永久降至原价1/10</td>
+    <td>DeepSeek/深度求索</td>
+    <td>全球API定价体系重塑，V4-Flash成本仅为GPT-5.5的2%</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>5月11日</td>
-    <td>工信部启动AI科技伦理审查先导计划</td>
-    <td>工信部</td>
-    <td>覆盖十大国家AI创新应用先导区</td>
+    <td>4月8日</td>
+    <td>智谱年内第三次涨价——GLM-5.1提价10%，累计涨幅83%，缓存命中价格0.475美元/百万Token对齐Claude Sonnet 4.6</td>
+    <td>智谱AI</td>
+    <td>国产模型价格首次对齐海外顶级</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 </tbody>
@@ -464,19 +553,23 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section sources-section">
 <h2>数据来源</h2>
 <div class="sources-list">
-<span class="source-tag">36氪</span>
-<span class="source-tag">新浪财经</span>
-<span class="source-tag">证券时报</span>
-<span class="source-tag">广州市政府官网</span>
-<span class="source-tag">深圳政府在线</span>
-<span class="source-tag">CSDN</span>
-<span class="source-tag">工信部官网</span>
-<span class="source-tag">IDC中国</span>
-<span class="source-tag">艾瑞咨询</span>
-<span class="source-tag">OpenRouter</span>
-<span class="source-tag">QuestMobile</span>
-<span class="source-tag">国家数据局</span>
+<span class="source-tag">QuestMobile 2026 Q1 AI应用报告</span>
+<span class="source-tag">火山引擎/字节跳动官方披露</span>
+<span class="source-tag">DeepSeek官方API文档</span>
+<span class="source-tag">智谱AI官方公告</span>
+<span class="source-tag">澎湃新闻/凤凰网科技</span>
+<span class="source-tag">科创板日报</span>
+<span class="source-tag">智东西/新浪科技</span>
+<span class="source-tag">OpenRouter & a16z联合报告</span>
+<span class="source-tag">IDC中国/浪潮信息</span>
 <span class="source-tag">中国信通院</span>
+<span class="source-tag">Digital Realty 2026 AI预测</span>
+<span class="source-tag">证券时报/开源证券/东吴证券</span>
+<span class="source-tag">摩根大通研报</span>
+<span class="source-tag">联发科MMDC 2026官方</span>
+<span class="source-tag">百度Create 2026官方</span>
+<span class="source-tag">经济观察报</span>
+<span class="source-tag">腾讯云/阿里云官方公告</span>
 </div>
 </div>
 
