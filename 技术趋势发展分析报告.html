@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>五、技术趋势分析 | 第26期</title>
+    <title>五、技术趋势分析 | 第27期</title>
     <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -126,218 +126,148 @@ tr:hover td { background:#e8f4fd; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><strong>2026年7月2日</strong> 第26期中国智算市场<em>技术趋势发展分析报告</em>聚焦<strong>2026年6月26日—7月2日</strong>一周内AI芯片、超节点、液冷、CPO/光模块、推理场景五大维度的最新变化。本周三大事件形成核心叙事：<em>(1) OpenAI×博通Jalapeño推理芯片首发</em>，标志头部大模型厂商自研芯片正式进入<em>Day-0商用阶段</em>；<em>(2) 华为官宣WAIC 2026将首次展出Atlas 950 SuperPoD真机</em>(2026 Q4上市，FP8算力8 EFLOPS，对标NVL144达<strong>56.8×卡规模、6.7×总算力、62×互联带宽</strong>)；<em>(3) 黄仁勋在NVIDIA 2026股东大会重申『AI工厂+Token经济』长周期判断</em>并公布<em>Vera Rubin NVL4 Q4起供货</em>。本周<strong>推理侧算力爆发</strong>(豆包日均Token破180万亿、Google Gemini 3.5 Pro延期打磨Token效率)与<strong>超节点国产化深水区推进</strong>(燧原过会后陆续启动量产、国产先进封装通富微电78亿追加)形成正反馈，<em>液冷、CPO与浸没式散热</em>从『可选项』加速向『标配』过渡。</div>
+<div class="overview-text"><p><strong>本周（2026-07-03 至 2026-07-09）是中国智算技术演进的一个历史性拐点窗口。</strong>7月7日上海市政府正式官宣WAIC 2026（7.17-7.20）将首次展出<em>华为Atlas 950 SuperPoD真机</em>——以单柜64卡为基本单元、最大8192张NPU高速互联、FP8算力达8 EFLOPS的业界最大规模国产超节点即将进入公众视野，标志着国产算力从"规格发布"迈入"实物首展+订单兑现"双轨兑现期。</p><p>同期，<em>彭博行业研究7月8日</em>发布的报告披露中国企业AI加速器预算中投向国产芯片的比例已从30%跃升至46%——<strong>国产AI芯片首次在企业预算口径上反超海外品牌</strong>；新浪财经同日证实<em>DeepSeek自研AI芯片</em>工作已低调启动约一年，正与设计/代工/存储伙伴接洽，国产阵营从"集成创新"延伸至"IDM级垂直整合"。集邦咨询数据显示2026年中国AI服务器芯片市场国产份额将攀升至56%（华为+寒武纪合计），英伟达从34%骤降至21%。</p><p><strong>技术维度三条主线明确：</strong>（1）<em>推理侧</em>已超越训练成为AI芯片的主战场——2025年中国AI服务器工作负载中推理占比已达67%，2028年将升至73%；<em>万卡级超节点+全液冷</em>成为推理与训练双线标配，2026年中国液冷数据中心投资规模将达765.5亿元（同比+14%）；（3）<em>国产替代</em>从"可用"迈向"好用"——华为昇腾Atlas 350单卡算力已达英伟达H20的2.87倍，海光DCU深算三号适配365款主流模型、覆盖全球99%非闭源大模型。Q3展望：WAIC首展催化国产超节点订单兑现+边缘推理芯片量产+阿里磐久AI Infra 2.0 AL128进入大规模交付期。</p><p>海外侧<em>英伟达Kyber NVL144因PCB中板制造难题推迟至2028年</em>，AI算力瓶颈首次从芯片端转向板级制造端；SK海力士HBM份额58%、AI推理工厂平均利润率突破50%，全球HBM+先进封装产能持续吃紧。本周国内技术演进与全球供应链瓶颈形成鲜明反差——<strong>国产芯片正以"系统级创新+工艺协同"替代"单点性能比拼"</strong>。</p></div>
 </div>
 
-<div class="data-note"><strong>数据说明：</strong>本章聚焦最近7天（2026-06-26—2026-07-02）技术趋势变化，对比上月/季度数据（<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>）及年度数据（<span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span>）进行对照分析。时间维度标注：绿色=本周有直接数据；黄色=月内数据；灰色=季度/年度数据。</div>
+<div class="data-note"><strong>数据说明：</strong>本章聚焦最近7天（2026-07-03—2026-07-09）技术趋势变化，对比上月/季度数据（<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>）及年度数据（<span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span>）进行对照分析。时间维度标注：绿色=本周有直接数据；黄色=月内数据；灰色=季度/年度数据。</div>
 
 <!-- TIMELINE -->
 <section>
 <h2>⏱️ 本周技术时间线</h2>
 <div class="timeline">
-<div class="timeline-item"><div class="timeline-date">07-01</div><div class="timeline-title">国产先进封装大扩产，通富微电豪掷78亿加码HBM/Chiplet/CPO封测</div><div class="timeline-source">来源：半导体前沿/eet-china</div><div class="timeline-impact">通富微电官宣投资78亿元建设上海临港高端封测基地，全年资本开支100亿元，重点布局HBM高带宽存储、芯粒异构集成、光电共封装，标志国产先进封装进入300亿+扩产通道，2026年合计A股上市公司投资超300亿元</div></div>
-<div class="timeline-item"><div class="timeline-date">06-28</div><div class="timeline-title">黄仁勋NVIDIA 2026股东大会：本轮AI基建周期长达数十年</div><div class="timeline-source">来源：钛媒体/InterGPT</div><div class="timeline-impact">黄仁勋重申AI工厂叙事+Token经济，明确Rubin GPU与Vera CPU已流片，Vera Rubin NVL4系统Q4起供货；强调类似电网/交通/互联网级别的关键基础设施，未来5年超节点液冷/CPO/800VDC全面发力</div></div>
-<div class="timeline-item"><div class="timeline-date">06-27</div><div class="timeline-title">OpenAI×博通Jalapeño推理芯片首发，从模型到芯片全栈整合</div><div class="timeline-source">来源：第一财经/InterGPT</div><div class="timeline-impact">OpenAI联合博通发布首款定制AI推理芯片Jalapeño，从设计到流片仅9个月，推理能效比显著优于行业，计划2026年底规模化部署；标志OpenAI从纯软件模型厂商向模型+芯片全栈转型，头部大模型厂商集体下场造芯</div></div>
-<div class="timeline-item"><div class="timeline-date">06-27</div><div class="timeline-title">AI一周大事盘点：GPT-5.6/Gemini 3.5 Pro延期/英伟达AI基建定调/DeepSeek开源推理框架</div><div class="timeline-source">来源：InterGPT/智能体开发者社区</div><div class="timeline-impact">本周(6.21-6.27)全球AI监管收紧、竞争下沉、落地提速；国际OpenAI GPT-5.6受美监管限发只向本土合作伙伴开放，Goolge Gemini 3.5 Pro延期至7月主打Token效率打磨</div></div>
-<div class="timeline-item"><div class="timeline-date">06-27</div><div class="timeline-title">国产半导体深度：AI算力驱动下的国产替代、扩产周期与产业链重估</div><div class="timeline-source">来源：东方财富/中信证券</div><div class="timeline-impact">深度报告指出2026年中国AI GPU可服务市场约500亿美元，本土AI芯片自给率2024年的33%→2030年的76%；中国AI加速卡出货400万张/华为单家约81.2万张、份额约20.25%，国产替代已从被动替补进入主动扩张阶段</div></div>
-<div class="timeline-item"><div class="timeline-date">06-25</div><div class="timeline-title">GPT-5.6三档系列上线，受美监管限制仅定向开放</div><div class="timeline-source">来源：OpenAI/InterGPT</div><div class="timeline-impact">GPT-5.6含旗舰Sol/均衡Terra/经济Luna三档，因美国监管要求仅向本土合规合作伙伴开放访问；OpenAI在模型层继续维持封闭生态+芯片层开启半定制的双轨路径</div></div>
-<div class="timeline-item"><div class="timeline-date">06-24</div><div class="timeline-title">华为官宣WAIC 2026将首次展出业界最大规模Atlas 950 SuperPoD真机</div><div class="timeline-source">来源：IT之家/搜狐/百度百科</div><div class="timeline-impact">WAIC 2026(7.17-7.20)华为昇腾将以2号馆A101为核心展台，Atlas 950 SuperPoD基于Ascend 950DT芯片，8192张昇腾卡无收敛全互联，FP8算力8 EFLOPS/互联带宽16PB/s，全液冷+全光互联架构</div></div>
-<div class="timeline-item"><div class="timeline-date">06-24</div><div class="timeline-title">黄仁勋股东大会：Vera Rubin NVL4 Q4起供货/七芯片全部在产</div><div class="timeline-source">来源：TweakTown/TSPA</div><div class="timeline-impact">Rubin GPU/Vera CPU/CX9 SuperNIC/NVLink 144/Spectrum-X/Silicon Photonics六大芯片均已进入fab阶段，2H 2026量产；Rubin单GPU集成288GB HBM4/22 TB/s带宽(为Blackwell的2.8×)，Q4起开始向客户交付NVL4方案</div></div>
+<div class="timeline-item"><div class="timeline-date">07-09</div><div class="timeline-title">华为联合产业伙伴发起OPEN NPO项目，Cerebras大涨7%拓展欧洲业务</div><div class="timeline-source">来源：钛媒体快讯</div><div class="timeline-impact">国产开放光互连NPO生态破局——华为不再闭门造芯，联合英特尔/AMD等推动800G光模块/CPO共封装标准；Cerebras单日大涨7%印证推理侧定制芯片需求强劲。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-08</div><div class="timeline-title">彭博：中国企业AI加速器预算46%投向国产芯片（从30%跃升）</div><div class="timeline-source">来源：彭博行业研究</div><div class="timeline-impact">预算口径首次反转——46% vs 30%的代际跨越意味着2026Q3起国产AI芯片将获得稳定的内生现金流，不再依赖政策强推，是国产替代从政策驱动走向市场驱动的里程碑。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-08</div><div class="timeline-title">集邦咨询：2026年中国AI服务器芯片国产份额将升至56%，英伟达降至21%</div><div class="timeline-source">来源：快科技/TrendForce</div><div class="timeline-impact">国产AI服务器芯片份额历史性反超——华为+寒武纪合计份额从46%跃升至56%，英伟达从34%腰斩至21%，叠加互联网大厂自研ASIC 23%占比，"后两类主体2026年合计近80%份额"。国产芯片进入"主导市场"阶段。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-07</div><div class="timeline-title">上海官宣WAIC 2026：华为Atlas 950 SuperPoD真机首展（7.17-7.20）</div><div class="timeline-source">来源：上海市政府新闻/东方财富</div><div class="timeline-impact">国产超节点真机首展催化——Atlas 950以单柜64卡/最大8192卡/FP8 8 EFLOPS规格，叠加华为灵衢协议开放+CANN开源，国产算力集群正式从"纸面规格"进入"实物可验+订单可签"兑现期。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-07</div><div class="timeline-title">DeepSeek自研AI芯片计划曝光：已与设计/代工/存储伙伴接洽约一年</div><div class="timeline-source">来源：新浪财经/路透社</div><div class="timeline-impact">国产AI大模型厂商首次跨界IDM——DeepSeek从"开源+适配昇腾"升级至"自研芯片+垂直整合"，与OpenAI×博通Jalapeño路径同形，但绑定国产供应链，标志着国产AI产业从"模型-芯片解耦"走向"模型-芯片共设计"。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-07</div><div class="timeline-title">工信部：2026人形机器人整机产量有望突破10万台，AI应用普及率超30%</div><div class="timeline-source">来源：新华社/工信部</div><div class="timeline-impact">具身智能+边缘推理需求爆发——10万台人形机器人出货将拉动端侧推理芯片1000万颗级新增需求，云天励飞/地平线/爱芯/燧原等边缘SoC厂商打开第二增长曲线。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-04</div><div class="timeline-title">武汉国际数据中心液冷技术展览会公告：中部算力规模5274P、规划冷板/浸没/喷淋三大路线</div><div class="timeline-source">来源：scholat.org</div><div class="timeline-impact">液冷技术从"可选配置"升级为"基础架构"——武汉5274P高性能算力位居中部第一，叠加《GB38597-2025》将液冷列为一級能效必备配置，工信部要求新建数据中心液冷渗透率≥60%，2026年液冷市场进入千亿规模元年。</div></div>
+<div class="timeline-item"><div class="timeline-date">07-03</div><div class="timeline-title">2026中国智算产业生态发展年会（深圳）：国产芯片份额首次突破50%</div><div class="timeline-source">来源：量子位/科智咨询</div><div class="timeline-impact">2026年中国智算芯片市场国产份额首破50%——华为昇腾+阿里平头哥+昆仑芯等出货持续攀升，制造/EU/EDA/HBM/CUDA"四大困境"短期难解但国产替代窗口已实质性打开。</div></div>
 </div>
 </section>
 
 <!-- CONTENT_5_1 -->
 <section>
 <h2>5-1 AI芯片技术发展趋势</h2>
-<h3>5-1-1 训练 vs 推理 vs 训推一体：国产推理芯片迎来"出货量爆量+毛利率修复"双拐点</h3>
-<p>2026年Q1，<strong>寒武纪营收28.85亿元/+159.56%</strong>，<strong>海光信息营收40.34亿元/+68.06%</strong>，<strong>摩尔线程营收7.38亿元/+155.35%</strong>(首次季度盈利)，<strong>沐曦股份营收5.62亿元/+75.37%</strong>(大幅减亏)——四家国产AI芯片龙头集体迎来"业绩兑现+规模化交付"双重拐点，标志着国产AI芯片正式从"替代可用"跨越至"自主好用"的商业兑现期。<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>(基于Q1 2026财报披露日)。</p>
-
-<h3>5-1-2 推理算力占比持续抬升——IDC预测2027年推理将占智能算力需求70%+</h3>
-<p>IDC中国副总裁周震刚在2026 ICT市场趋势论坛上明确表示：<strong>"到2027年，推理将占智能算力需求的70%以上，边缘基础设施的增速将超过核心数据中心。"</strong>全球加速计算服务器市场到2029年将超1万亿美元，年复合增长率超30%。豆包2.1披露"日均Token调用量180万亿、过去一年增长超10倍"的数据进一步印证了这一判断——AI竞争优势已从"谁拥有最强算力"转向"以最低Token成本将AI转化为可持续业务"。<span class="time-dim" style="background:#fce4ec;color:#c62828">月变化</span>（IDC年度预测）。</p>
-
-<h3>5-1-3 模型厂商自研芯片开启第二战线——头部"Day-0定制推理芯片"成新标配</h3>
-<p>2026年6月24-25日，<strong>OpenAI联合博通发布Jalapeño定制AI推理芯片</strong>，从设计到流片仅9个月，早期测试显示推理能效比显著优于行业，计划2026年底规模化部署。第一财经评论指出："定制芯片是OpenAI自建AI基础设施的核心一步，<strong>头部大模型厂商纷纷下场造芯，AI竞争维度正从模型层下沉至硬件层</strong>"。Groq 6.5亿美元融资亦指向"加速扩建AI推理云、2027年底达200兆瓦"的推理侧产能扩张目标。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>。</p>
-
+<h3>5-1-1 训练/推理/训推一体的三层结构</h3>
 <table>
-<tr><th>技术方向</th><th>代表事件</th><th>关键数据</th><th>时间维度</th></tr>
-<tr><td>训练芯片</td><td>华为Atlas 950 SuperPoD基于Ascend 950DT</td><td>FP8算力8 EFLOPS/8192卡无收敛</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><th>类型</th><th>代表产品</th><th>关键参数</th><th>时间维度</th></tr>
+<tr><td>训练芯片</td><td>华为Atlas 950 SuperPoD基于Ascend 950DT</td><td>FP8算力8 EFLOPS/8192卡无收敛/2TB/s互联</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 <tr><td>推理芯片</td><td>华为Ascend 950PR/Atlas 350推理加速卡</td><td>FP4算力1.56 PFLOPS/112GB HBM/600W</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>训推一体</td><td>燧原科技L600/摩尔线程MTT S5000/沐曦曦云C600</td><td>144GB显存/FP8低精度/MoE适配</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>定制推理芯片</td><td>OpenAI×博通Jalapeño</td><td>9个月流片/2026年底规模化部署</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>训推一体</td><td>燧原L600/摩尔线程MTT S5000/沐曦曦云C600</td><td>144GB显存/FP8低精度/MoE适配</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>定制推理</td><td>OpenAI×博通Jalapeño（持续跟踪）</td><td>9个月流片/2026年底规模化部署</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
 </table>
-
-<div class="analysis-box">
-<h4>驱动力（推理+定制芯片双爆发）</h4>
-<p>本周DeepSeek-V4 Day-0全栈适配8家国产芯片+OpenAI×博通Jalapeño首发共同表明：<strong>推理算力已取代训练算力成为新一轮AI竞争的胜负手</strong>。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>OpenAI从模型厂商向"模型+芯片"全栈战略转型，叠加黄仁勋在NVIDIA 2026股东大会重申"AI工厂+Token经济"长周期判断，意味着AI算力市场进入"硬件定制化+推理优化+生态开源"三轨并进的新阶段。字节跳动梁汝波将"勇攀高峰"列为2026年度关键词、火山引擎豆包2.1披露"日均Token 180万亿、过去一年增长10倍"——国产阵营推理侧的需求拐点已经形成。</p>
-</div>
+<div class="analysis-box"><h4>驱动：推理算力占比突破67%，反超训练成为主战场</h4>
+<p>本周DeepSeek V4-DeepSeek自研芯片计划曝光、彭博46%预算口径反转、集邦英伟达腰斩21%三事件共同表明：<strong>AI算力需求结构已发生不可逆迁移</strong>。IDC数据显示2024年中国AI服务器工作负载中推理已占65%、2025年升至67%、2028年将达73%，推理侧从\"训练副产品\"升级为\"独立主流赛道\"。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>推理芯片优先关注能效比/单位Token成本/HBM带宽/低延迟，而非训练芯片的峰值算力与互联规模。</p></div>
 </section>
 
 <!-- CONTENT_5_2 -->
 <section>
 <h2>5-2 国际AI芯片厂商产品矩阵（2025-2026年最新）</h2>
-<h3>5-2-1 国际AI芯片厂商产品矩阵（NVIDIA新世代Rubin已2H 2026量产）</h3>
-<p>2026年6月24-28日，NVIDIA官方多次确认<strong>Rubin平台六款芯片已在fab阶段</strong>：Rubin GPU、Vera CPU、CX9 SuperNIC、NVLink 144 scale-up switch、Spectrum-X scale-out/scale-across switch、Silicon Photonics Processor，均将在<strong>2H 2026量产</strong>，<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>。Rubin单GPU集成<strong>288GB HBM4</strong>，<strong>22 TB/s内存带宽</strong>(为Blackwell 8TB/s的2.8×、H100 3.35TB/s的6.6×)；Micron HBM4 36GB 12H已率先在1Q26量产，专为NVIDIA Vera Rubin设计。</p>
-
+<h3>5-2-1 NVIDIA/AMD/博通 国际AI芯片产品矩阵（2025-2026年最新）</h3>
 <table>
-<tr><th>厂商</th><th>产品/平台</th><th>关键参数</th><th>状态</th><th>时间维度</th></tr>
-<tr><td>NVIDIA</td><td>Rubin R200 GPU</td><td>288GB HBM4/22TB/s/336B晶体管</td><td>2H 2026量产</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>NVIDIA</td><td>Vera Rubin NVL72</td><td>推理性能为GB300的3.3×</td><td>2H 2026首批交付</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>NVIDIA</td><td>Vera Rubin NVL4</td><td>超算/HPC融合，单系统7+EFLOPS</td><td>Q4起供货</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><th>厂商</th><th>产品</th><th>关键规格</th><th>上市/交付</th><th>时间维度</th></tr>
+<tr><td>NVIDIA</td><td>Rubin R200 GPU</td><td>288GB HBM4/22TB/s/336B晶体管</td><td>2H 2026量产</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>NVIDIA</td><td>Vera Rubin NVL72</td><td>推理性能为GB300的3.3×</td><td>2H 2026首批交付</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>NVIDIA</td><td>Kyber NVL144机架</td><td>PCB制造难题推迟至2028年</td><td>从2027年初延至2028年</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
 <tr><td>NVIDIA</td><td>GB200 NVL72</td><td>72颗B200/液冷/FP4 20petaflops</td><td>已大规模出货</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
 <tr><td>AMD</td><td>MI355X/MI400X</td><td>288GB HBM3e/FP6+FP4精度</td><td>2026下半年量产</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>博通</td><td>OpenAI定制Jalapeño</td><td>9个月流片/推理能效比领先</td><td>2026年底部署</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-
-<h3>5-2-2 中国特供芯片与国产AI芯片全矩阵：DeepSeek V4 Day-0全栈适配8家厂商</h3>
-<p>本周最重要的国产芯片动态——<strong>DeepSeek V4 Day-0 适配了8家国产AI芯片</strong>（华为昇腾、寒武纪、海光、沐曦、摩尔线程FP8、昆仑芯、平头哥真武、天数智芯）以及英伟达。这是大模型产业首次实现"Day-0"级别全栈适配，<strong>DeepSeek首次将国产芯片与英伟达GPU并列写入硬件验证清单</strong>。昇腾950PR在英伟达GPU和华为昇腾NPU两个平台上验证细粒度EP方案，<strong>通用推理任务实现1.50-1.73倍加速，延迟敏感场景最高1.96倍</strong>。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>。</p>
-
+<tr><td>博通</td><td>OpenAI定制Jalapeño</td><td>9个月流片/推理能效领先</td><td>2026年底部署</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+</table><h3>5-2-2 中国特供芯片 vs 国产芯片全矩阵</h3>
 <table>
-<tr><th>国产芯片厂商</th><th>主力产品/平台</th><th>关键参数</th><th>适配/出货进展</th><th>时间维度</th></tr>
-<tr><td>华为昇腾</td><td>Atlas 950 SuperPoD/Atlas 350加速卡</td><td>950DT:FP8 1PFLOPS/2TB/s互联；950PR:FP4 1.56PFLOPS/112GB</td><td>2026 Q4 SuperPoD上市；DeepSeek V4-Pro/Flash全适配</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>寒武纪</td><td>思元590(MLU590)</td><td>FP8原生/适配365款主流模型</td><td>Q1 2026营收28.85亿/+159.56%；字节搜索/广告推荐系统部署</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>海光信息</td><td>深算三号(DCU)</td><td>100-300 TFLOPS FP16/HBM2e</td><td>Q1 2026营收40.34亿；适配DeepSeek/Qwen3等365款模型</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>摩尔线程</td><td>MTT S5000/夸娥集群</td><td>全功能GPU/FP4-FP64全精度/6.6亿元智算集群大单</td><td>Q1 2026营收7.38亿/+155%；首款国产GPU上市公司扭亏</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>沐曦股份</td><td>曦云C600/曦思N/曦彩G</td><td>144GB HBM3e/MXMACA兼容CUDA/全国产工艺</td><td>Q1 2026营收5.62亿/+75.37%；C600 2026上半年量产</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>燧原科技</td><td>L600训推一体</td><td>144GB/3.6TB/s/FP8低精度</td><td>2026.06.15科创板过会/募资60亿</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>昆仑芯(百度)</td><td>P800/P800万卡集群</td><td>百度自研二代/2025点亮万卡</td><td>金融/能源/制造客户广泛采购</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>天数智芯</td><td>通用GPU</td><td>12nm/LPDDR替代HBM</td><td>2025年营收10.34亿/+91.6%；港股已上市</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>壁仞科技</td><td>BR104光互连训练芯片</td><td>2048卡光互连超节点</td><td>2025全年营收10.3亿/+207%/港股IPO在即</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><th>厂商</th><th>代表产品</th><th>关键规格</th><th>出货/适配进展</th><th>时间维度</th></tr>
+<tr><td>NVIDIA特供</td><td>H20/L20/L4</td><td>96GB HBM3/FP8受限版</td><td>中国市场份额从95%腰斩至21%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>华为昇腾</td><td>Atlas 950 SuperPoD/Atlas 350</td><td>950DT:FP8 1PFLOPS/2TB/s；950PR:FP4 1.56PFLOPS/112GB</td><td>DeepSeek V4 Pro/Flash全适配；Atlas 350算力为H20的2.87×</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>寒武纪</td><td>思元590(MLU590)</td><td>FP8原生/适配365款主流模型</td><td>Q1营收28.85亿/+159.56%/首季经营现金流转正</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>海光信息</td><td>DCU深算三号</td><td>深算三号适配365款模型/99%非闭源</td><td>Q1营收40.34亿/+68.06%；信创底座</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>阿里平头哥</td><td>真武810E</td><td>2026.2累计部署47万片</td><td>60%+服务于外部商业化客户</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>摩尔线程</td><td>MTT S5000/夸娥集群</td><td>FP4-FP64全精度/支持千卡万卡</td><td>Q1营收7.38亿/+155.35%/首次季度盈利</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>沐曦股份</td><td>曦云C600/C500</td><td>2026H1实现量产销售/全国产工艺</td><td>Q1营收5.62亿/+75.37%/减亏57.49%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>百度昆仑芯</td><td>天池超节点M系列</td><td>最高512卡极速互联/万亿模型训练</td><td>6月启动500亿美元港股IPO</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>燧原科技</td><td>ESL32/64超节点</td><td>腾讯联合深度优化/微信会议广告部署</td><td>Q1营收2.87亿/+1474%/三年CAGR 81.32%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
 </table>
-
-<div class="analysis-box">
-<h4>驱动力（NVIDIA Rubin量产+国产芯片业绩兑现）</h4>
-<p>本周NVIDIA Rubin六芯片全部量产进入倒计时，<strong>最强变量是黄仁勋在6.25股东大会公布的"AI基建长达数十年"</strong>+ Vera Rubin NVL4 Q4起供货，标志着Rubin将以每18个月一代的节奏接替Blackwell。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>国产阵营以Q1 2026业绩集体爆发+DeepSeek V4 Day-0适配8家厂商进入"双线作战"：一方面推理性能对标英伟达H20(H20已被美国列入出口管制，国产替代窗口持续打开)，另一方面用超节点架构(下节详述)在总体算力规模上系统级超越。<strong>国产AI芯片公司"业绩兑现+生态闭环"双拐点已确认成立</strong>，从"替代可用"迈向"自主好用"。</p>
-</div>
+<div class="analysis-box"><h4>驱动力：国产AI芯片份额突破50%，预算口径反转</h4>
+<p>本周集邦咨询+彭博行业研究双重确认：<strong>国产AI芯片从\"替代可用\"进入\"主导市场\"</strong>。中国AI服务器芯片市场2026年国产份额将升至56%（华为43%+寒武纪11%+昆仑/平头/海光等），英伟达从34%腰斩至21%；彭博企业预算口径反转——AI加速器预算46%投向国产（vs 当前30%）。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>华为昇腾Atlas 350单卡算力已达H20的2.87倍，叠加海光/沐曦/摩尔线程Q1 2026业绩全线兑现（营收+68%至+159%、首季经营现金流/季度盈利双突破），国产AI芯片已进入\"性能+生态+订单\"三正反馈期。</p></div>
 </section>
 
 <!-- CONTENT_5_3 -->
 <section>
 <h2>5-3 超节点技术演进</h2>
-<h3>5-3-1 国际主流超节点：NVIDIA Vera Rubin NVL72/NVL144/NVL576阶梯推进</h3>
-<p>NVIDIA Rubin超节点架构本周再获里程碑——<strong>NVL144将在2H 2026量产，NVL576将在2027上市</strong>，NVL72已交付超算/HPC融合场景，对比同时期华为Atlas 950 SuperPoD的卡规模、总算力、内存容量、互联带宽分别为<strong>56.8×、6.7×、15×和62×</strong>。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>Rubin NVL72推理性能为Blackwell Ultra GB300的3.3×，引入Disaggregated AI Factories方案，NVL144 CPX Prefill节点带宽达到1.7 PB/s，专门为超大规模长上下文推理场景设计。</p>
-
+<h3>5-3-1 国际超节点 vs 国产超节点（2026年最新）</h3>
 <table>
-<tr><th>超节点</th><th>规模</th><th>总算力</th><th>互联带宽</th><th>状态</th><th>时间维度</th></tr>
-<tr><td>GB200 NVL72</td><td>72 GPU/柜</td><td>FP4约20 PFLOPS</td><td>NVLink 5 1.8TB/s</td><td>已规模化出货</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>Vera Rubin NVL72</td><td>72 GPU/柜</td><td>为GB300推理3.3×</td><td>NVLink 6 3.6TB/s</td><td>2H 2026量产</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>Vera Rubin NVL144</td><td>144 GPU/柜</td><td>FP8 单柜破10PFLOPS</td><td>NVLink + Spectrum-X</td><td>2H 2026量产</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>DGX SuperPOD</td><td>256-1024+</td><td>InfiniBand组网</td><td>800Gbps/卡</td><td>持续迭代</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>Vera Rubin NVL576</td><td>576 GPU/柜</td><td>Scale-up最强</td><td>2027上市</td><td>规划中</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><th>厂商</th><th>超节点产品</th><th>卡数/互联</th><th>散热/能效</th><th>时间维度</th></tr>
+<tr><td>NVIDIA</td><td>GB200 NVL72</td><td>72颗B200/NVLink 1.8TB/s</td><td>全液冷/FP4 20 PFLOPS</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+<tr><td>NVIDIA</td><td>Vera Rubin NVL72</td><td>72颗Rubin/推理性能3.3×GB300</td><td>2H 2026首批交付</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>NVIDIA</td><td>Kyber NVL144</td><td>144颗Rubin Ultra/PCB中介板</td><td>2027延至2028年</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>华为</td><td>Atlas 950 SuperPoD</td><td>8192卡Ascend 950DT/灵衢协议</td><td>全液冷/FP8 8 EFLOPS/2TB/s</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>华为</td><td>Atlas 850E 风冷超节点</td><td>Agentic推理优化/高吞吐低时延</td><td>WAIC 2026首展同台</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>阿里</td><td>磐久AI Infra 2.0 AL128</td><td>128-144颗GPU/350kW供电</td><td>冷板液冷/500kW散热</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>百度</td><td>天池256/512超节点</td><td>512卡极速互联/万亿模型训练</td><td>冷板液冷/CDU天玑1.0</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>腾讯</td><td>ETH-X 超节点</td><td>64卡/204.8Tbps互联</td><td>RoCE开放架构/风液双支持</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+<tr><td>字节</td><td>大禹超节点</td><td>内部定制/集成GPU+自研AI芯片</td><td>整机柜冷板式液冷</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+<tr><td>沐曦</td><td>耀龙S8000 G2</td><td>首创3D Mesh互连</td><td>冷板液冷/规模化交付</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
 </table>
-
-<h3>5-3-2 国产超节点矩阵：华为Atlas全液冷超大节点+燧原ESL+中科曙光scaleX40</h3>
-<p>本周华为在2026年6月24日官宣，<strong>WAIC 2026(7.17-7.20)将首次展出Atlas 950 SuperPoD真机</strong>——这是昇腾有史以来规模最大的超节点单品的首次公开亮相，标志着华为"集群+超节点"架构正式进入商用前夕。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>同时披露的还有Atlas 850E风冷超节点(支持8-1024卡灵活扩展，面向Agentic推理场景提供高吞吐低时延)以及TaiShan 950通算超节点。</p>
-
+<div class="analysis-box"><h4>驱动力：万卡+液冷+开放协议，国产超节点迎来真机兑现</h4>
+<p>本周WAIC官宣华为Atlas 950 SuperPoD真机首展——以<strong>单柜64卡基本单元、最大8192卡高速互联、FP8算力8 EFLOPS</strong>的规格成为业界最大规模国产超节点，叠加灵衢（UnifiedBus）协议开放+CANN 2025.12开源，国产算力集群正式从\"纸面发布\"进入\"实物可验+协议开放+生态共建\"三重兑现期。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>对比英伟达Kyber NVL144因PCB中板制造难题被迫推迟至2028年（延期超12个月），国产超节点在\"系统架构创新+板级制造协同\"层面已形成差异化路径。截至2025年底华为昇腾384超节点规模部署500+套，集群训练性能提升3×、推理性能提升4×。</p></div><h3>5-3-2 超节点工程化三大挑战</h3>
 <table>
-<tr><th>国产超节点</th><th>规模</th><th>总算力</th><th>互联带宽/拓扑</th><th>状态</th><th>时间维度</th></tr>
-<tr><td>华为Atlas 900(CloudMatrix 384)</td><td>384卡</td><td>BF16 300 PFLOPS</td><td>灵衢1.0/UB-Mesh</td><td>已部署300+套</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>华为Atlas 950 SuperPoD</td><td>8192卡</td><td>FP8 8 EFLOPS/FP4 16 EFLOPS</td><td>16PB/s灵衢2.0+全光</td><td>2026 Q4上市</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>华为Atlas 950 SuperCluster</td><td>52万卡</td><td>FP8 524 EFLOPS</td><td>灵衢2.0/UBoE+RoCE</td><td>2026 Q4同步上市</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>华为Atlas 960 SuperPoD</td><td>15488卡</td><td>FP8 30 EFLOPS/FP4 60 EFLOPS</td><td>34PB/s</td><td>2027 Q4上市</td><td><span class="time-dim" style="background:#888;color:#fff">规划中</span></td></tr>
-<tr><td>华为Atlas 850E</td><td>8-1024卡</td><td>风冷超节点/Agentic推理</td><td>升级VCE散热</td><td>WAIC 2026首展</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>燧原ESL32/64</td><td>32/64卡</td><td>训推一体集群</td><td>自研互联</td><td>已规模化</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>中科曙光scaleX40</td><td>40卡/节点</td><td>28 PFLOPS/HBM 5TB</td><td>正交无线缆一级互连</td><td>2026.03发布</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>百度天池256/512</td><td>512卡</td><td>万亿模型训练</td><td>自研互联</td><td>2026下半年上市</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>阿里磐久128</td><td>128卡</td><td>智算超节点</td><td>自研互联</td><td>2025.09发布</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+<tr><th>挑战</th><th>具体表现</th><th>应对路径</th><th>时间维度</th></tr>
+<tr><td>板级制造</td><td>英伟达Kyber NVL144因PCB中介板推迟12个月</td><td>Chiplet+CoWoS-S/国产供应链替代</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>供电架构</td><td>单机柜从10kW跃升至200kW+</td><td>800V直流+SST固态变压器+弹性直流一体柜</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>协议开放</td><td>NVLink私有/CUDA锁定</td><td>RoCE/灵衢/CANN开源+第三方芯片接入</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
 </table>
-
-<div class="analysis-box">
-<h4>驱动力（万卡超节点国产+真机首展倒计时）</h4>
-<p>本周最具标志性的超节点事件是<strong>华为官宣WAIC 2026首次展出Atlas 950 SuperPoD真机</strong>——这款基于Ascend 950DT、8192张昇腾卡无收敛全互联、全液冷+全光互联的超节点，将在国内首次向公众展示"FP8算力8 EFLOPS/内存1152TB/互联带宽16PB/s"的全球领先规模。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>对比黄仁勋NVIDIA Vera Rubin NVL72量产时点，Atlas 950 SuperPoD在卡规模、总算力、内存容量、互联带宽上分别领先NVL144达56.8×、6.7×、15×和62×——即便与2027年NVL576相比仍保持全面领先。国产超节点正从"概念引领"走向"商用兑现"。</p>
-</div>
 </section>
 
 <!-- CONTENT_5_4 -->
 <section>
 <h2>5-4 数据中心冷却技术：液冷 vs 风冷</h2>
-<h3>5-4-1 三种冷却技术对比：风冷 → 冷板式液冷 → 浸没式液冷的演进路径</h3>
-<p>2026年AI芯片功耗持续抬升，<strong>GB200单颗功耗达1000W、Rubin预计突破1500W、Ascend 950DT 600W+</strong>，传统风冷已无法承载超节点高密度散热需求，<strong>液冷从"可选项"加速向"标配"过渡</strong>。<span class="time-dim" style="background:#888;color:#fff">持续</span>。国海证券将液冷定义为"AI算力链条的卖水人"，认为液冷即将复制光模块/PCB的路径，<strong>国内冷板式液冷市占率超50%</strong>(英维克Coolinside方案进入英伟达白名单)、<strong>浸没式液冷以中科曙光子公司曙光数创国内市占率第一</strong>。</p>
-
+<h3>5-4-1 风冷 vs 冷板式液冷 vs 浸没式液冷对比</h3>
 <table>
-<tr><th>冷却方案</th><th>PUE</th><th>单柜密度</th><th>典型部署</th><th>经济性</th><th>时间维度</th></tr>
-<tr><td>传统风冷</td><td>1.4-1.6</td><td>≤30kW/柜</td><td>通用机房</td><td>低成本</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>冷板式液冷</td><td>1.15-1.25</td><td>40-80kW/柜</td><td>GB200/Rubin/GB300</td><td>中等成本</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>浸没式液冷</td><td>1.05-1.10</td><td>≥100kW/柜</td><td>Atlas 950 SuperPoD/超节点</td><td>较高成本</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>冷板+浸没混合</td><td>1.08-1.18</td><td>60-120kW/柜</td><td>曙光scaleX40</td><td>较高成本</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><th>冷却方式</th><th>PUE区间</th><th>单机柜功率</th><th>典型场景</th><th>渗透率/规模</th><th>时间维度</th></tr>
+<tr><td>传统风冷</td><td>1.3-1.5</td><td>10-30kW</td><td>中小数据中心/边缘节点</td><td>存量主流/新增受限</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+<tr><td>冷板式液冷</td><td>1.10-1.20</td><td>30-80kW</td><td>AI训练/推理通用方案</td><td>2025年中国投资433亿/+14%</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
+<tr><td>浸没式液冷（单相）</td><td>1.05-1.08</td><td>80-200kW</td><td>超算/万卡集群/高密场景</td><td>2025年中国投资332.5亿/+30%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>喷淋式液冷</td><td>1.06-1.10</td><td>40-100kW</td><td>边缘/特定高密场景</td><td>应用起步/占比小</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
 </table>
-
-<h3>5-4-2 本周液冷/光模块动态：黄仁勋确认800VDC推迟，国产液冷供应链进入兑现期</h3>
-<p>2026年6月9日<strong>SemiAnalysis发布报告</strong>指出<strong>800VDC延迟至2028年后</strong>、CPO规模量产可能推迟至2028-2029年；黄仁勋在6.25股东大会回应"内存供应确实紧张，我们必须在所有系统中更聪明地使用它"。摩根士丹利测算2027年全球光引擎出货600-700万颗(低于市场2000-3000万颗预期)，<strong>CPO延迟 = 可插拔/NPO/LPO窗口期拉长</strong>。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>另一方面，华为Atlas 950 SuperPoD本周官宣<strong>"全液冷+全光互联"</strong>架构：正交架构零线缆、浮动盲插零漏液、光模块可靠性翻倍，灵衢2.0协议16PB/s互联带宽——是中国液冷产业链的标杆示范工程。</p>
-
+<h3>5-4-2 本周液冷技术动态</h3>
 <table>
-<tr><th>液冷/光模块厂商</th><th>产品/技术</th><th>关键突破</th><th>本周进展</th><th>时间维度</th></tr>
-<tr><td>中科曙光(曙光数创)</td><td>浸没式液冷</td><td>国内市占率第一/PUE≤1.05</td><td>scaleX40无线缆超节点</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>英维克</td><td>Coolinside冷板式</td><td>国内市占率>50%/进入英伟达白名单</td><td>受益GB300液冷服务器订单</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>申菱环境</td><td>CDU/液冷分配</td><td>华为/字节战略伙伴</td><td>华为Atlas 950配套受益</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>中石科技</td><td>液冷板材料</td><td>英伟达A100/H100独家</td><td>GB300液冷板订单增加</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>飞龙股份</td><td>液冷泵</td><td>华为昇腾服务器独家</td><td>英伟达GB200/GB300认证</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>中际旭创/新易盛</td><td>1.6T/3.2T可插拔光模块</td><td>800G/1.6T深度绑定英伟达谷歌</td><td>NPO窗口期拉长</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>天孚通信</td><td>CPO光源引擎/FAU</td><td>独家供应英伟达CPO光源</td><td>面向CPO配套稳定交付</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>通富微电</td><td>CPO/Chiplet封测</td><td>本周上海临港78亿扩产</td><td>2026国产先进封装>300亿投资</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><th>事件</th><th>主体</th><th>影响</th><th>时间维度</th></tr>
+<tr><td>《GB38597-2025》将液冷列为一級能效数据中心必备配置</td><td>国家市场监管总局</td><td>强制液冷渗透</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>工信部要求新建数据中心液冷渗透率≥60%</td><td>工信部</td><td>新增液冷硬约束</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>武汉数据中心液冷展公告：5274P规划三大路线</td><td>武汉</td><td>中部算力PUE≤1.2</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>华为Atlas 950 SuperPoD出厂即全液冷</td><td>华为</td><td>国产超节点标配液冷</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>中科氟源10万吨浸没冷却液项目</td><td>雅安/中科氟源</td><td>国产冷却液自主可控</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
 </table>
-
-<div class="analysis-box">
-<h4>驱动力（CPO延迟+全液冷标配+国产先进封装大扩产）</h4>
-<p>本周最重要的散热领域新闻有三：<strong>(1) SemiAnalysis报告导致CPO概念股集体调整</strong>（6.10-6.11），但对国内800G/1.6T可插拔模块反而是利好（窗口期拉长）；<strong>(2) 华为Atlas 950 SuperPoD全液冷方案WAIC 2026真机首展倒计时</strong>，标志国产超大节点散热体系成熟；<strong>(3) 通富微电本周公告78亿元上海临港高端封测基地</strong>重点布局HBM/Chiplet/CPO，国产封测链2026年A股投资合计>300亿，进入"扩产大年"。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>液冷产业链正从"概念"走向"业绩兑现"。</p>
-</div>
+<div class="analysis-box"><h4>驱动力：液冷从可选升级为基础架构，2026年千亿规模元年</h4>
+<p>本周工信部+GB38597-2025双重强制液冷政策叠加WAIC华为Atlas 950出厂即全液冷，<strong>液冷从\"可选配置\"升级为基础架构能力</strong>。2025年中国液冷数据中心投资规模765.5亿元（同比+14%），冷板式433亿+浸没式332.5亿，<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>叠加《\"东数西算\"2026工作要点》枢纽节点新建超大型数据中心PUE≤1.2且70%用液冷、上海按30%投资补贴最高1亿元、成渝最高2000万元、上海/欧盟2026年1月强制液冷生效，液冷已从政策合规走向产业刚需。华为Atlas 950采用机柜级CDU+EPDM软管+浮动接头架构，服务器每颗NPU独立冷板，是国产超节点中液冷工程化最完整的范本。</p></div>
 </section>
 
 <!-- CONTENT_5_5 -->
 <section>
 <h2>5-5 推理场景深度分析与芯片选择</h2>
-<h3>5-5-1 推理芯片按场景选型决策树</h3>
-<p>2026年下半年推理算力需求进入"井喷期"——豆包2.1披露日均Token 180万亿、过去一年增长10倍，DeepSeek V4已成为国产推理工作负载代表。<strong>国产推理芯片已从"可选项"变为"对标H20/A100主力选项"</strong>，尤其在Token成本优化能力上对英伟达H20具备显著优势。<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>。本周OpenAI×博通Jalapeño推理芯片(9个月流片)、黄仁勋AI工厂+Token经济叙事，则在国际侧打开了"模型+芯片"垂直整合的新路径。</p>
-
+<h3>5-5-1 五类推理场景深度分析与芯片选择</h3>
 <table>
-<tr><th>推理场景</th><th>典型指标要求</th><th>芯片选型</th><th>国产替代理由</th><th>时间维度</th></tr>
-<tr><td>云端大模型推理(Prefill+Decode)</td><td>高HBM容量/低时延/高Token/s</td><td>华为Ascend 950PR(Atlas 350加速卡)</td><td>FP4 1.56PFLOPS/112GB HBM/对标H20 2.87×</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>AI Agent/长上下文场景</td><td>高带宽/低开销/MoE扩展</td><td>华为Atlas 950 SuperPoD+DeepSeek V4</td><td>DeepSeek V4 Day-0全栈适配/EP方案1.50-1.73×加速</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>多模态/视频生成</td><td>高带宽/高推理吞吐/SEEDANCE类</td><td>燧原L600/摩尔线程MTT S5000</td><td>训推一体144GB HBM/FP8低精度</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>边缘推理/智能体</td><td>低功耗/灵活扩展/小批量</td><td>寒武纪MLU590/海光深算三号</td><td>适配365款主流模型/出货稳定</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>垂直行业(金融/政务/能源)</td><td>安全可控/全国产供应链</td><td>沐曦曦云C600(全国产工艺)/天数智芯</td><td>国产供应链闭环/合规优势</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><th>推理场景</th><th>算力特征</th><th>推荐芯片</th><th>国产对位</th><th>时间维度</th></tr>
+<tr><td>云端大模型推理</td><td>高吞吐/低延迟/HBM大带宽</td><td>NVIDIA H200/B200、博通Jalapeño</td><td>华为Atlas 350（2.87×H20）/平头哥真武810E</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>AI Agent/Token工厂</td><td>长上下文/KV Cache/调度优化</td><td>NVIDIA RTX PRO/AMD MI355X</td><td>华为Atlas 850E/燧原ESL64/摩尔线程S5000</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>多模态实时推理</td><td>FP8/FP16混合/视觉编码器</td><td>NVIDIA L40S/A100</td><td>海光深算三号（适配365款）/寒武纪思元590</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
+<tr><td>边缘推理（机器人/工业视觉）</td><td>低功耗8-32 TOPS/视频优先/异构SoC</td><td>NVIDIA Jetson、高通AI Engine</td><td>云天励飞/地平线/爱芯元智/燧原L600</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
+<tr><td>垂直行业推理（金融/医疗/政务）</td><td>私有化部署/安全合规/信创优先</td><td>NVIDIA L4/L40S</td><td>海光CPU+DCU双栈/华为Atlas/摩尔线程MUSA兼容CUDA</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
 </table>
-
-<h3>5-5-2 推荐工作负载场景：Atlas 950 SuperPoD + DeepSeek V4 重塑推理底座</h3>
-<p>本周最值得关注的推理工作负载组合——<strong>Atlas 950 SuperPoD(2026 Q4上市) + DeepSeek V4</strong>。前者凭借8192张昇腾卡无收敛全互联、FP8算力8 EFLOPS、互联带宽16PB/s，可支撑百万Token级长上下文推理；后者凭借CSA/HCA混合注意力机制(FLOPs降至V3.2的27%、KV缓存压缩至10%)使推理成本大幅下降。<strong>高盛预测2026下半年昇腾950批量供货后V4 Pro价格将迎来大幅下调</strong>。OpenRouter数据显示中国大模型周调用18.81万亿Token已连续八周全球第一，叠加豆包日均Token 180万亿——<strong>"推理侧国产算力"已具备成本、供给、生态三维优势</strong>。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>。</p>
-
-<div class="analysis-box">
-<h4>驱动力（推理工作负载向国产倾斜+模型垂直整合定制芯片）</h4>
-<p>本周两大推理侧拐点同步确立：<strong>(1) IDC预测2027年推理占智能算力需求70%+</strong>(年变化)，叠加Google Gemini 3.5 Pro延期主打Token效率打磨，<strong>推理优化已成为头部大模型厂商的核心竞赛点</strong>；<strong>(2) OpenAI×博通Jalapeño(9个月流片能效比领先)+昇腾950PR(对标H20 2.87×)+ DeepSeek V4(国产8家Day-0适配)</strong>三条主线同步发力，"推理工作负载国产化"已从可能变为现实。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>在这场推理侧的产业深度重构中，<strong>华为昇腾凭借"芯片+超节点+模型+云"四合一闭环暂时领跑</strong>，但随着更多国产芯片厂商的适配跟进，市场竞争将更趋激烈。</p>
-</div>
+<div class="analysis-box"><h4>驱动力：推理场景分化加剧，国产芯片逐场景突围</h4>
+<p>本周推理侧呈现明显的\"<strong>场景分化+国产突围</strong>\"双重特征。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>（1）云端大模型：华为Atlas 350算力达H20的2.87倍，已可对位特供芯片顶级性能；（2）AI Agent：华为Atlas 850E风冷超节点专为Agentic推理优化，对位英伟达RTX PRO；（3）边缘推理：工信部官宣2026人形机器人产量突破10万台，端侧SoC将迎来1000万颗级增量需求；（4）多模态：海光深算三号适配365款主流模型覆盖99%非闭源大模型，已成信创推理首选。IDC预测2024-2030年中国AI推理芯片市场CAGR 39.1%，2030年规模将达11664亿元，国产推理生态正从\"点状突破\"走向\"全场景覆盖\"。</p></div>
 </section>
 
 <!-- CONTENT_5_6 -->
 <section>
 <h2>5-6 本周技术深度分析专题</h2>
 <div class="deep-event">
-<div class="deep-event-title">🎯 本周深度专题：从OpenAI×博通Jalapeño，看"模型厂商垂直整合芯片"的产业拐点</div>
-
-<p><strong>事件回放：</strong>2026年6月24-25日(美东)，OpenAI联合博通(Broadcom)正式发布<strong>首款定制AI推理芯片Jalapeño</strong>，从设计到流片仅用时9个月，早期测试显示<strong>推理能效比显著优于行业现有水平</strong>，计划2026年底规模化部署。同日黄仁勋在NVIDIA 2026股东大会重申"AI工厂+Token经济"长周期判断；6月25日GPT-5.6系列上线但受美监管限制仅向本土合规合作伙伴开放；6月25日Google Gemini 3.5 Pro官宣延期至7月主打Token效率打磨。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></p>
-
-<h4>三大趋势共振：推理优化 + 模型自研芯片 + 算力资本市场重构</h4>
-
-<p><strong>趋势一：模型厂商正从"调用第三方算力"向"自建AI基础设施"加速转型。</strong>OpenAI此次Jalapeño芯片由博通基于其Tomahawk/Bailly交换芯片的硅光能力合作开发，是OpenAI从纯软件模型厂商向"<strong>模型+芯片</strong>"全栈方向战略转型的第一步。第一财经评论指出：<strong>"定制芯片是OpenAI自建AI基础设施的核心一步，头部大模型厂商纷纷下场造芯，AI竞争维度正从模型层下沉至硬件层。"</strong>无独有偶，谷歌TPU自研、亚马逊Trainium/Inferentia、Meta MTIA均沿着相同路径推进——<strong>通用GPU"一招鲜"时代正在被打破</strong>。</p>
-
-<p><strong>趋势二：推理侧算力优化是下一轮主战场。</strong>IDC预测2027年推理将占智能算力需求的70%以上，<strong>豆包2.1披露日均Token调用量180万亿、过去一年增长10倍</strong>，OpenRouter数据显示中国大模型周调用18.81万亿Token已连续八周全球第一。这些数字共同印证：<strong>"谁拥有最强训练算力"已不再是核心问题，"谁能以最低Token成本提供最稳定推理"才是新胜负手</strong>。</p>
-
-<p><strong>趋势三：算力资本市场重构。</strong>本周黄仁勋首次以"<strong>这轮建设将以数十年为尺度来衡量</strong>"形容AI基建周期，类似电网/交通/互联网级别的基础设施投入；<strong>2026年6月以来，NVIDIA市值破5万亿美元、工业富联市值1.5万亿元超茅台、寒武纪市值7168亿元、SK海力士22年来首超三星</strong>——资本市场正在用真金白银为"<strong>AI算力=新基建</strong>"叙事定价。</p>
-
-<h4>对国产芯片的影响：DeepSeek V4 Day-0全栈适配 8 家厂商=对标生态战略</h4>
-
-<p><strong>OpenAI×博通路径与国产阵营形成镜像竞争：</strong>本周DeepSeek同步宣布V4模型在英伟达GPU和<strong>华为昇腾NPU等8家国产芯片Day-0全栈适配</strong>，包括华为昇腾、寒武纪、海光、沐曦、摩尔线程(FP8)、昆仑芯、平头哥真武、天数智芯——这是大模型产业首次实现"Day-0"级别全栈适配。<strong>DeepSeek首次将国产芯片与英伟达GPU并列写入硬件验证清单</strong>，确立对等地位。</p>
-
-<p>更重要的是<strong>DeepSeek在英伟达GPU和华为昇腾NPU两个平台上验证了细粒度EP(专家并行)方案，通用推理任务实现1.50-1.73倍加速，延迟敏感场景最高1.96倍</strong>。昇腾950PR针对V4的深度适配：原生硬件加速支持MXFP8与MXFP4低精度格式、融合kernel与多流并行加速混合注意力计算、MoE模块中路由专家与共享专家的计算重叠——这一系列深度优化使<strong>万亿参数模型在国产硬件上也能高效平稳运行</strong>。</p>
-
-<h4>对竞争格局的影响：推理芯片价格/性能/生态三维竞争</h4>
-
-<p>本周形成的"<strong>三足鼎立</strong>"竞争格局：</p>
-<ul>
-<li><strong>国际第一阵营：</strong>OpenAI×博通Jalapeño(9个月流片/推理能效比领先)；NVIDIA Vera Rubin NVL4(Q4起供货/Token经济叙事)；谷歌TPU v7(继续打磨Token效率)；Meta MTIA v3(亚1纳米超低功耗)。</li>
-<li><strong>国际第二阵营：</strong>Anthropic + 谷歌Sophon、xAI Groq(6.5亿美元融资/2027年底200MW推理云)、Marvell定制AI XPU。</li>
-<li><strong>国产阵营：</strong>华为昇腾950PR/Atlas 350 + DeepSeek V4 Day-0适配；寒武纪MLU590 + 海光深算三号 + 摩尔线程MTT S5000 + 沐曦曦云C600 + 燧原L600 + 昆仑芯P800 + 平头哥真武 + 天数智芯 8家完成Day-0全栈适配。</li>
-</ul>
-
-<p><strong>格隆汇判断："DeepSeek全面适配国产芯片，表明AI算力底座正朝多样化路径发展，这一过程本身对AI产业发展具有推动作用。"</strong><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>中信证券预计<strong>2026年国产算力芯片出货量至少实现翻倍以上增长</strong>。本周是<strong>"国芯+国模"闭环生态</strong>形成的标志性节点——从"国产芯片跑得通"到"国产芯片跑得好"的临界点已经迈过。</p>
+<div class="deep-event-title">🌟 深度专题：WAIC 2026华为Atlas 950真机首展+DeepSeek自研芯片+彭博46%预算反转——国产AI芯片进入"实物+订单+生态"三重兑现期</div>
+<p>本周（2026-07-03至07-09）三件标志性事件共同标志中国AI芯片产业完成从"政策驱动替代"向"市场驱动主导"的关键跃迁。</p>
+<p><strong>第一，WAIC官宣华为Atlas 950 SuperPoD真机首展。</strong>7月7日上海市政府新闻发布会上正式确认7月17-20日WAIC 2026将展出华为Atlas 950 SuperPoD真机——以单柜64卡为基本单元、最大8192张NPU高速互联、FP8算力8 EFLOPS、互联带宽2TB/s的规格成为业界最大规模国产超节点；同步展出Atlas 850E风冷超节点专为Agentic推理优化。华为集群计算解决方案总监林永琪披露，截至2025年底昇腾384超节点规模部署500+套，集群训练性能3×、推理性能4×于业界方案；华为自研灵衢（UnifiedBus）协议+CANN 2025.12开源，正式将\"系统架构+协议开放+生态共建\"三维开放。同一周华为联合产业伙伴发起OPEN NPO项目推动800G光模块/CPO标准，标志国产算力从"芯片自研"扩展至"光互连标准定义"。</p>
+<p><strong>第二，DeepSeek自研芯片计划曝光，国产大模型进入"模型-芯片共设计"时代。</strong>7月7日新浪财经/路透社报道DeepSeek自研AI芯片工作约一年前已启动，与外部设计、代工、存储伙伴接洽，与OpenAI×博通Jalapeño路径同形但绑定国产供应链。结合此前DeepSeek V4预览版4月发布时将华为昇腾与英伟达GPU并列写入硬件验证清单、FlagOS完成8家国产芯片全量适配、信通院启动DeepSeek V4国产化适配测试，DeepSeek正在构建\"开源模型+国产芯片+垂直整合\"的完整闭环。</p>
+<p><strong>第三，彭博行业研究确认企业预算口径反转——AI加速器预算46%投向国产。</strong>7月8日彭博发布的报告指出：未来12个月中国企业AI加速器预算中投向国产产品的比例将从当前30%跃升至46%，80%受访高管表示今年AI基础设施投入超预算。叠加集邦咨询7月8日数据——2026年中国AI服务器芯片市场国产份额从46%升至56%（华为+寒武纪），英伟达从34%腰斩至21%——<strong>国产AI芯片已从"替代叙事"转向"主导市场"</strong>。</p>
+<p><strong>第四，海外侧供应链瓶颈反衬国产突围。</strong>英伟达Kyber NVL144机架因PCB中介板制造工艺难度过高，量产时间从2027年初延至2028年（延期超12个月），AI算力瓶颈首次从芯片端转向板级制造端。Rubin Ultra四芯片版本取消、800V直流供电推迟至2028年、单机架功耗五年翻15倍至600kW——硬件迭代节奏首次被物理极限截停。SK海力士Q1营业利润率72%超英伟达、HBM份额58%，HBM+先进封装持续吃紧。</p>
+<p><strong>结论：2026Q3是国产AI芯片从"纸面发布"进入"实物+订单+生态"三重兑现期的关键窗口。</strong>WAIC首展将成为下半年国产超节点订单签约的导火索；DeepSeek自研芯片将开启国产大模型厂商IDM化先河；彭博46%预算口径反转将带动Q3国产芯片出货量级跃升；液冷/超节点/推理优化三大技术线同步进入规模化兑现期。建议关注：①WAIC首展现场华为Atlas 950订单签约；②DeepSeek自研芯片流片进度；③中芯N+2产能分配变化（华为43%、寒武纪11%格局）；④SK海力士HBM4与国产HBM替代节奏；⑤CPO/光互连/800V直流三大基础设施演进。</p>
 </div>
 </section>
 
@@ -347,18 +277,16 @@ tr:hover td { background:#e8f4fd; }
 <div class="news-table">
 <table>
 <tr><th>日期</th><th>事件</th><th>涉及主体</th><th>重要性</th></tr>
-<tr><td>07-01</td><td>通富微电投资78亿元上海临港高端封测基地，重点布局HBM/Chiplet/CPO</td><td>通富微电/封测产业链</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>07-01</td><td>2026国产先进封装A股上市公司合计投资超300亿元</td><td>半导体先进封装</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>06-28</td><td>黄仁勋NVIDIA 2026股东大会定调AI基建长周期，Vera Rubin NVL4 Q4供货</td><td>NVIDIA/英伟达</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>06-27</td><td>OpenAI×博通首款定制AI推理芯片Jalapeño发布，9个月流片能效比领先</td><td>OpenAI/博通</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>06-27</td><td>国产半导体深度报告：2030年中国AI芯片自给率或达76%</td><td>中信证券/产业研究</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>06-26</td><td>火山引擎豆包2.1发布+Seedance2.5 7月初上线，日均Token破180万亿</td><td>字节跳动</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>06-25</td><td>GPT-5.6三档系列上线，受美监管限制仅定向开放</td><td>OpenAI</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>06-25</td><td>Google Gemini 3.5 Pro官宣延期至7月，主打Token效率优化</td><td>谷歌</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>06-25</td><td>WAIC 2026倒计时30天发布会召开，1100家企业3000余项展品</td><td>上海/AI大会</td><td style="color:#f59e0b">★★★</td></tr>
-<tr><td>06-24</td><td>华为官宣WAIC 2026首次展出Atlas 950 SuperPoD真机+Atlas 850E风冷超节点</td><td>华为昇腾</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>06-24</td><td>英伟达确认Rubin全平台六芯片在fab，2H 2026量产</td><td>英伟达</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>06-23</td><td>苹果因AI芯片成本上调终端售价，硬件成本压力传导</td><td>苹果</td><td style="color:#f59e0b">★★</td></tr>
+<tr><td>07-09</td><td>华为联合产业伙伴发起OPEN NPO项目，Cerebras涨7%拓展欧洲业务</td><td>华为/Cerebras</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>07-08</td><td>彭博：中国企业AI加速器预算46%投向国产芯片（从30%跃升）</td><td>中国互联网大厂/彭博</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>07-08</td><td>集邦咨询：2026年中国AI服务器芯片国产56%、英伟达降至21%</td><td>TrendForce/华为/寒武纪</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>07-07</td><td>上海官宣WAIC 2026：华为Atlas 950 SuperPoD真机首展7.17-7.20</td><td>华为/上海市政府</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>07-07</td><td>DeepSeek自研AI芯片曝光：约一年前启动，正与设计/代工/存储伙伴接洽</td><td>DeepSeek/路透社</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>07-07</td><td>工信部：2026人形机器人产量有望突破10万台、AI应用普及率超30%</td><td>工信部</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>07-07</td><td>数字芯片设计Q1归母净利润同比+517.74%，首轮涨价10%落地</td><td>华福证券/数字芯片板块</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>07-04</td><td>武汉国际数据中心液冷技术展览会公告：中部算力5274P、规划冷板/浸没/喷淋</td><td>武汉/液冷厂商</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>07-03</td><td>2026中国智算产业生态发展年会（深圳）：国产芯片份额首破50%</td><td>科智咨询/信通院</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>07-03</td><td>OpenAI×博通Jalapeño推理芯片2026年底规模化部署（持续跟踪）</td><td>OpenAI/博通</td><td style="color:#f59e0b">★★★</td></tr>
 </table>
 </div>
 </section>
@@ -367,18 +295,16 @@ tr:hover td { background:#e8f4fd; }
 <section>
 <h2>📚 数据来源</h2>
 <ul>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">NVIDIA 官方/2026 GTC大会主旨演讲(2026.03)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">华为轮值董事长徐直军/HC 2025主题发言 + WAIC 2026预热(2025.09 + 2026.06.24)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">黄仁勋NVIDIA 2026股东大会发言(2026.06.25-28)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">SemiAnalysis报告『Powered Down, Lights Out. 800VDC Pushout and CPO Delays』(2026.06.09)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">OpenAI联合博通Jalapeño推理芯片发布(2026.06.24-25)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">IDC中国研究经理索引/Q1 2026季度数据(2026.04.27 + 2026.05.02)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">寒武纪/海光信息/摩尔线程/沐曦股份Q1 2026季报(2026.04.30)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">中信证券《科技行业2026年展望》、东方证券半导体设备深度报告(2026.02)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">国海/东方/开源证券《液冷、AI算力新一极》深度报告(2025.08)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">DeepSeek-V4技术报告与国产芯片适配全名单(2026.04.24-27)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">通富微电上海临港78亿元封测投资公告(2026.06.24)</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">Frost & Sullivan + Bernstein Research + TrendForce集邦咨询数据(2026.Q1)</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">彭博行业研究《中国企业转向本土AI芯片》2026年7月8日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">集邦咨询（TrendForce）中国AI服务器芯片市场份额报告2026年7月8日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">上海市政府新闻发布会/WAIC 2026官方公告2026年7月7日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">新浪财经/路透社《DeepSeek正在推进自主研发AI芯片》2026年7月7日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">工信部科技司副司长甘小斌WAIC 2026新闻发布会发言2026年7月7日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">IDC《2026 China Semiannual Intelligent Computing Infrastructure Tracker》</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">财联社《国产AI芯片龙头集体迎来业绩兑现》2026年5月2日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">每日经济新闻《算力需求爆发，AI能否驱动芯片设计利润修复？》2026年7月7日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">量子位《2026中国智算产业生态发展年会》现场报道2026年7月2日</li>
+<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">钛媒体Edge AI Daily早报2026年7月7日</li>
 </ul>
 </section>
 
@@ -391,7 +317,7 @@ tr:hover td { background:#e8f4fd; }
 </div>
 
 <footer>
-  <p>中国智能算力报告 · 技术趋势分析 · 第26期 · 2026-07-02</p>
+  <p>中国智能算力报告 · 技术趋势分析 · 第27期 · 2026-07-09</p>
 </footer>
 
 </body>
