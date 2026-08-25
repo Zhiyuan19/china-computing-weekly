@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>七、应用场景分析 | 第33期</title>
+    <title>七、应用场景分析 | 第35期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -97,9 +97,9 @@ tr.week-highlight { background: #fff8e1; }
 <body>
 
 <header>
-<div class="week-badge">第33期</div>
+<div class="week-badge">第35期</div>
 <h1>七、应用场景分析</h1>
-<div class="subtitle">2026年8月14日 — 2026年8月20日 | 中国智能算力报告</div>
+<div class="subtitle">2026-08-19—2026-08-26 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -122,11 +122,11 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><span style="color:#e53935;font-weight:700">本周应用从“模型发布”进入“业务闭环”验证期</span>：DeepSeek V4-Pro正式上线与峰谷定价强化Agent调度的成本约束；中国平安、讯飞医疗等半年报把Token消耗、AI坐席和AI诊疗收入量化到经营层；具身智能训练场已超70家，数据底座与物理世界闭环加速。自动驾驶方面，L2渗透率已超70%、城市NOA突破20%，L3/L4从单点验证走向标准化落地；互联网模型则进入特斯拉中国车机等真实终端。</div>
+<div class="overview-text">本周是<em>"桌面Agent元年"阶段性成果集中爆发</em>的节点，应用赛道从"聊天助手"向<strong>"任务执行体"</strong>跃迁，三大底层信号同时显现。<strong>应用层面</strong>，豆包8月22日最快将发布独立办公App对标腾讯WorkBuddy，特斯拉8月19日接入豆包成为首款上车的中文大模型，阿里通义App 8月22日正式更名"千问"统一品牌，字节/腾讯/阿里在<em>桌面Agent</em>形成三强并立格局。<strong>金融医疗层面</strong>，蚂蚁国际FalconTST 2.0被巴克莱/花旗/渣打等全球大行采用，中日友好医院临床大数据标准化重点实验室8月20日落地，行业大模型从"试点"走向"核心业务流"。<strong>智能体与具身层面</strong>，新大陆"鲁班"超级智能体量产、企业级Agent商业化规模化；2026世界机器人大会8月19日开幕，医疗机器人、具身机器人集中亮相，从概念验证切换到ROI验证。<strong>边缘与城市层面</strong>，8月26日深圳全球人工智能与物联网创新峰会聚焦边缘大模型落地，IDC预测到2027年中国70%城市将部署AI智能体，边缘算力下沉路径明确。本周应用算力需求呈现"训练端小幅放缓+推理端继续放量+边缘端加速渗透"的三段式分化，整体格局从"用得上"向"用得好+用得起"切换。</div>
 </div>
 
 <div class="data-note">
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-08-14—2026-08-20）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
+<strong>数据说明：</strong>本周报聚焦最近7天（2026-08-19—2026-08-26）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
 <strong>时间维度说明：</strong>日环比=比前一天、周环比=比前一周、月环比=比上月、季环比=比上季度、年同比=比去年同期。变化幅度 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。<br>
 <strong>数据卡片说明：</strong>change字段格式为"时间戳 上期值 | ↑/↓ 幅度（时间维度）"，如"4/6-12 5.80万亿 | ↓23.8%（周变化）"。
 </div>
@@ -136,44 +136,54 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-1 本周应用场景核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">DeepSeek V4 Flash 0731单日调用量</div>
-    <div class="value">1.70<span class="unit">万亿Token</span></div>
-    <div class="change">当前值1.70万亿Token/日（OpenRouter，8/19） | →持平（无同口径前值）</div>
+    <div class="label">AI原生APP月活</div>
+    <div class="value">4.99<span class="unit">亿</span></div>
+    <div class="change">QuestMobile2025年11月 4.4亿 | ↑ +13.4%（同比 +85.4%）</div>
 </div>
 <div class="data-card">
-    <div class="label">中国平安日均Token消耗</div>
-    <div class="value">>1200<span class="unit">亿Token</span></div>
-    <div class="change">当前值超1200亿Token/日（2026年6月） | →持平（无同口径前值）</div>
+    <div class="label">豆包月活(QuestMobile 6月)</div>
+    <div class="value">3.82<span class="unit">亿</span></div>
+    <div class="change">QuestMobile2026Q1 3.45亿 | ↑ +10.7%（月度变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">讯飞医疗上半年营收</div>
-    <div class="value">4.46<span class="unit">亿元</span></div>
-    <div class="change">2.99亿元（2025H1） | ↑49.4%（年同比）</div>
+    <div class="label">千问月活(QuestMobile 6月)</div>
+    <div class="value">1.67<span class="unit">亿</span></div>
+    <div class="change">QuestMobile2026Q1 1.66亿 | ↑ +0.6%（月度变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">讯飞医疗AI健康助手收入</div>
-    <div class="value">1.82<span class="unit">亿元</span></div>
-    <div class="change">约1.04亿元（2025H1） | ↑74.9%（年同比）</div>
+    <div class="label">DeepSeek月活(QuestMobile 6月)</div>
+    <div class="value">1.30<span class="unit">亿</span></div>
+    <div class="change">QuestMobile2026Q1 1.27亿 | ↑ +2.4%（月度变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">老板电器AI厨电销售额</div>
-    <div class="value">23.5<span class="unit">亿元</span></div>
-    <div class="change">约17.3亿元（2024年） | ↑36.0%（年同比）</div>
+    <div class="label">元宝月活(QuestMobile 6月)</div>
+    <div class="value">0.50<span class="unit">亿</span></div>
+    <div class="change">QuestMobile2026Q1 0.40亿 | ↑ +25.0%（月度变化）</div>
 </div>
 <div class="data-card">
-    <div class="label">L2级驾驶辅助渗透率</div>
-    <div class="value">>70<span class="unit">%</span></div>
-    <div class="change">当前值>70%（2026年以来） | →持平（无同口径前值）</div>
+    <div class="label">豆包上车搭载量</div>
+    <div class="value">700<span class="unit">万+</span></div>
+    <div class="change">8月19日新增特斯拉全系 | 累计覆盖50+品牌/145车型</div>
 </div>
 <div class="data-card">
-    <div class="label">已投用具身智能训练场</div>
-    <div class="value">70+<span class="unit">家</span></div>
-    <div class="change">当前值70+家（截至6月底） | →持平（无同口径前值）</div>
+    <div class="label">医疗AI渗透医院数</div>
+    <div class="value">6000<span class="unit">+</span></div>
+    <div class="change">卫宁健康单家覆盖6000+机构 | 8月20日中日友好新增国家级实验室</div>
 </div>
 <div class="data-card">
-    <div class="label">特斯拉中国接入豆包车型</div>
-    <div class="value">4<span class="unit">款</span></div>
-    <div class="change">当前值4款（Model 3/Y/S/X） | →持平（阶段值）</div>
+    <div class="label">蚂蚁FalconTST部署行数</div>
+    <div class="value">4<span class="unit">家</span></div>
+    <div class="change">8月20日新增 | 巴克莱/花旗/德银/渣打（新增项）</div>
+</div>
+<div class="data-card">
+    <div class="label">具身机器人供应链估值</div>
+    <div class="value">1068<span class="unit">亿元(2030)</span></div>
+    <div class="change">2025年35亿元 | 复合增速 +98%（行业研报）</div>
+</div>
+<div class="data-card">
+    <div class="label">国产AI芯片出货占比</div>
+    <div class="value">50<span class="unit">%（2026E）</span></div>
+    <div class="change">2025年41% | ↑ +9pp（国产替代）</div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -190,68 +200,84 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>DeepSeek V4 Flash 0731调用量</strong></td>
-    <td>日环比</td>
-    <td>无可比前值（OpenRouter，8/19）</td>
-    <td>1.70 万亿Token/日</td>
-    <td><span class="change-flat">→持平</span></td>
-    <td>OpenRouter最新完整日排名第一；低价、高并发与Agent兼容推动规模化路由，但单日峰值受峰谷价格与并发约束影响。</td>
+    <td><strong>AI原生APP整体月活</strong></td>
+    <td>月环比</td>
+    <td>4.4亿（25年11月）</td>
+    <td>4.99 亿</td>
+    <td><span class="change-up">↑ +13.4%</span></td>
+    <td>MAU突破5亿大关，QuestMobile最新半年报披露头部应用月活持续增加，行业进入争夺使用频次阶段</td>
 </tr>
 <tr>
-    <td><strong>讯飞医疗总营收</strong></td>
-    <td>年同比</td>
-    <td>2.99（2025H1）</td>
-    <td>4.46 亿元</td>
-    <td><span class="change-up">↑49.4%</span></td>
-    <td>AI诊疗、健康助手和区域数字基座共同增长，医疗大模型开始通过经常性服务兑现收入。</td>
+    <td><strong>豆包月活</strong></td>
+    <td>月环比</td>
+    <td>3.45亿（25年Q1）</td>
+    <td>3.82 亿</td>
+    <td><span class="change-up">↑ +10.7%</span></td>
+    <td>断层领跑AI原生APP榜，叠加办公App独立发布+特斯拉上车双爆点，活跃用户绝对值持续扩大</td>
 </tr>
 <tr>
-    <td><strong>讯飞医疗AI诊疗助理收入</strong></td>
-    <td>年同比</td>
-    <td>约1.37（2025H1）</td>
-    <td>2.02 亿元</td>
-    <td><span class="change-up">↑47.5%</span></td>
-    <td>基层和等级医院覆盖扩大，辅助诊断、病历生成与质控形成稳定使用频率。</td>
+    <td><strong>千问月活</strong></td>
+    <td>月环比</td>
+    <td>1.66亿（25年Q1）</td>
+    <td>1.67 亿</td>
+    <td><span class="change-up">↑ +0.7%</span></td>
+    <td>8月22日完成品牌统一更名，独立App持续承接阿里生态流量；增速放缓主因C端投入进入精细化运营</td>
 </tr>
 <tr>
-    <td><strong>讯飞医疗AI健康助手收入</strong></td>
-    <td>年同比</td>
-    <td>约1.04（2025H1）</td>
-    <td>1.82 亿元</td>
-    <td><span class="change-up">↑74.9%</span></td>
-    <td>影像云和诊后管理增速更快，面向居民端的付费与运营模式正在成形。</td>
+    <td><strong>DeepSeek月活</strong></td>
+    <td>月环比</td>
+    <td>1.27亿（25年Q1）</td>
+    <td>1.30 亿</td>
+    <td><span class="change-up">↑ +2.4%</span></td>
+    <td>技术驱动型增长，V4-Pro模型在Agent与Coding能力强化，月活增长进入稳态高质量阶段</td>
 </tr>
 <tr>
-    <td><strong>老板电器AI厨电销售额</strong></td>
-    <td>年同比</td>
-    <td>约17.3（2024年）</td>
-    <td>23.5 亿元</td>
-    <td><span class="change-up">↑36.0%</span></td>
-    <td>食神大模型与数字厨电联动，垂直数据、硬件执行和场景服务共同推动商业化。</td>
+    <td><strong>元宝月活</strong></td>
+    <td>月环比</td>
+    <td>0.40亿（25年Q1）</td>
+    <td>0.50 亿</td>
+    <td><span class="change-up">↑ +25.0%</span></td>
+    <td>腾讯加大AI应用投入，本月活增速领跑榜单，背后依赖微信生态深度联动</td>
 </tr>
 <tr>
-    <td><strong>L2级驾驶辅助渗透率</strong></td>
-    <td>年同比</td>
-    <td>无可比前值</td>
-    <td>>70 %</td>
-    <td><span class="change-flat">→持平</span></td>
-    <td>L2已进入大众化阶段，后续增量更多来自L2+、L3准入和城市NOA下沉。</td>
+    <td><strong>豆包车机搭载量</strong></td>
+    <td>周环比</td>
+    <td>~700万辆（无特斯拉）</td>
+    <td>700+ 万</td>
+    <td><span class="change-up">↑ 显著增加</span></td>
+    <td>8月19日特斯拉Model 3/Y/S/X全系OTA推送，首次集成豆包/DeepSeek双模型协同体系，新增百万级用户</td>
 </tr>
 <tr>
-    <td><strong>新车城市NOA渗透率</strong></td>
-    <td>年同比</td>
-    <td>无可比前值</td>
-    <td>>20 %</td>
-    <td><span class="change-flat">→持平</span></td>
-    <td>高阶智驾向主流价位扩散，端侧推理、传感器和域控制器需求将继续释放。</td>
+    <td><strong>豆包智能体任务数</strong></td>
+    <td>周环比</td>
+    <td>100+ 技能（上周）</td>
+    <td>200+ 技能</td>
+    <td><span class="change-up">↑ +100%</span></td>
+    <td>8月21日上线技能商店+连接器+工作伙伴，三大入口直接对标腾讯WorkBuddy，桌面Agent元年加速</td>
 </tr>
 <tr>
-    <td><strong>已投用具身智能训练场</strong></td>
-    <td>年同比</td>
-    <td>无可比前值</td>
-    <td>70+ 家</td>
-    <td><span class="change-flat">→持平</span></td>
-    <td>行业从建设热潮转向能力沉淀，工业制造场景占主导，数据工程与商业闭环成为关键。</td>
+    <td><strong>世界机器人大会医疗机器人</strong></td>
+    <td>周环比</td>
+    <td>—</td>
+    <td>6 术式覆盖</td>
+    <td><span class="change-new">★ 新增</span></td>
+    <td>8月19日开幕，ROPA6全骨科手术机器人覆盖髋/膝/单髁/脊柱/创伤/运动医学，获国家药监局三类注册证</td>
+</tr>
+<tr>
+    <td><strong>蚂蚁国际FalconTST 2.0部署</strong></td>
+    <td>周环比</td>
+    <td>—</td>
+    <td>4 全球大行</td>
+    <td><span class="change-new">★ 新增</span></td>
+    <td>8月20日巴克莱/花旗/德意志/渣打批量采用，金融大模型出海标志性事件，MASE 0.666居公开基准首位</td>
+</tr>
+<tr>
+    <td><strong>国产AI芯片出货占比</strong></td>
+    <td>季环比</td>
+    <td>41%（25年Q4）</td>
+    <td>50 %（26年E）</td>
+    <td><span class="change-up">↑ +9pp</span></td>
+    <td>华为昇腾950DT 8月上线华为云+DeepSeek V4.1/V4.2首发国产全栈适配，国产替代进入高速通道</td>
 </tr>
 </tbody>
 </table>
@@ -264,58 +290,70 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-2 一周应用场景动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">8月20日</div>
-    <div class="timeline-title">中国平安披露Token消耗与AI经营贡献</div>
-    <div class="timeline-source">中国平安半年报/新浪财经</div>
-    <div class="timeline-impact">6月日均Token消耗由2025年12月300亿升至超1200亿；AI坐席服务9.39亿次，AI智能体辅助销售额573.13亿元，金融AI进入经营量化阶段。</div>
+    <div class="timeline-date">08-22</div>
+    <div class="timeline-title">豆包最快下周发布独立办公App，直接对标腾讯WorkBuddy</div>
+    <div class="timeline-source">腾讯新闻/界面新闻</div>
+    <div class="timeline-impact">字节跳动将豆包"工作任务"功能拆成独立App，搭配已上线的远程控制电脑、Windows虚拟桌面、技能商店、连接器、工作伙伴（200+技能），三强在桌面Agent赛道形成对垒。2026年被业内称为"桌面Agent元年"，月活头部三强进入争夺使用频次的下半场。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月20日</div>
-    <div class="timeline-title">《中国自动驾驶规模化应用蓝皮书（2026）》发布</div>
-    <div class="timeline-source">人民网重庆</div>
-    <div class="timeline-impact">L2渗透率超70%、城市NOA突破20%，L3特定区域试点、L4场景化商业验证；地平线2026H1自主品牌全阶智驾芯片份额31.94%。</div>
+    <div class="timeline-date">08-22</div>
+    <div class="timeline-title">通义App完成品牌升级正式更名"千问"，阿里AI业务架构同步调整</div>
+    <div class="timeline-source">腾讯新闻</div>
+    <div class="timeline-impact">通义App版本号从3.60.0升级至5.0.0，通义千问/千问2C/千问办公等品牌整合为"千问"统一品牌。8月20日阿里宣布将千问与AI实验室合并为"AI实验室与应用"板块，AI业务从技术中台升级为独立业务，与豆包/DeepSeek正面对决态势确立。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月19日</div>
-    <div class="timeline-title">特斯拉中国车机上线豆包大模型</div>
-    <div class="timeline-source">火山引擎/界面新闻</div>
-    <div class="timeline-impact">功能向Model 3、Y、S、X分批推送，覆盖实时资讯、自然对话和预设角色；这是特斯拉中国首次接入第三方车机大模型，入口生态进一步扩展。</div>
+    <div class="timeline-date">08-21</div>
+    <div class="timeline-title">豆包技能商店+连接器+工作伙伴三大入口上线，技能数200+</div>
+    <div class="timeline-source">腾讯新闻</div>
+    <div class="timeline-impact">字节跳动持续完善Agent生态体系：此前一周（8月17日）推出远程控制电脑、18日Windows虚拟桌面、21日技能商店/连接器/工作伙伴全面就绪。可连接飞书/钉钉/企业微信等办公工具，三强并立格局下字节的入口最完整。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月19日</div>
-    <div class="timeline-title">具身智能训练场研究报告发布</div>
-    <div class="timeline-source">中国信通院等/公开报告</div>
-    <div class="timeline-impact">截至6月底全国已投用训练场超70家、在建或规划46家，工业制造场景占86%，真实数据生产与评测成为物理AI基础设施。</div>
+    <div class="timeline-date">08-20</div>
+    <div class="timeline-title">蚂蚁国际FalconTST 2.0时间序列大模型被4家全球大行批量采用</div>
+    <div class="timeline-source">腾讯新闻/蚂蚁集团</div>
+    <div class="timeline-impact">巴克莱、花旗、德意志银行、渣打采用FalconTST 2.0进行现金流与外汇预测，MASE分数0.666居公开基准首位，部署场景准确率超过93%。巴克莱集成至BARX NetFX、花旗对接Fixed FX Rates、渣打配合SCALE使用，金融大模型首次批量出海。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月18日</div>
-    <div class="timeline-title">五一视界发布AperData与AperOne</div>
-    <div class="timeline-source">界面新闻/51WORLD</div>
-    <div class="timeline-impact">AperData采集轨迹物理一致性达99%、效率较传统真机遥操作提升超10倍，首发价5100元/套；AperOne覆盖重建、训练、评估、部署和运营。</div>
+    <div class="timeline-date">08-20</div>
+    <div class="timeline-title">中日友好医院获批临床大数据标准化重点实验室，医渡科技深度参与</div>
+    <div class="timeline-source">腾讯新闻/财联社</div>
+    <div class="timeline-impact">国家卫健委批准实验室落户中日友好医院，聚焦临床大数据标准化建设、AI-Ready数据集、模型训练评测等方向。医渡科技当日早盘涨近8%，贯通"数据治理—模型训练—智能体应用"全流程能力体系，医疗AI从概念走向产业深水区。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月18日</div>
-    <div class="timeline-title">讯飞医疗发布2026年中期业绩</div>
-    <div class="timeline-source">证券时报/每日经济新闻</div>
-    <div class="timeline-impact">H1营收4.46亿元、同比+49.4%；AI诊疗助理2.02亿元、+47.5%，AI健康助手1.82亿元、+74.9%，验证医疗AI经常性收入。</div>
+    <div class="timeline-date">08-19</div>
+    <div class="timeline-title">火山引擎宣布特斯拉中国车机正式接入豆包大模型（首款上车大模型）</div>
+    <div class="timeline-source">界面新闻/东方财富</div>
+    <div class="timeline-impact">字节跳动旗下火山引擎确认特斯拉中国车机系统上线豆包大模型，Model 3/Y/S/X全系OTA推送（2026.14.13），2025年8月签约以来一年内完成落地。特斯拉首次集成第三方中文大模型，海外版仍使用Grok；豆包负责控制类语音命令（导航/媒体/空调），DeepSeek负责闲聊，2026年搭载量累计700万+辆/50+品牌/145车型。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月17日</div>
-    <div class="timeline-title">老板电器展示食神AI烹饪系统商业化</div>
-    <div class="timeline-source">新华网/证券时报</div>
-    <div class="timeline-impact">食神覆盖5000万家庭数据、5000余套烹饪曲线，2025年AI厨电销售额23.5亿元、同比+36%，App及小程序注册用户超750万。</div>
+    <div class="timeline-date">08-19</div>
+    <div class="timeline-title">世界机器人大会开幕：医疗机器人、具身机器人集中亮相</div>
+    <div class="timeline-source">腾讯新闻/新华网</div>
+    <div class="timeline-impact">长木谷ROPA6全骨科手术机器人覆盖髋/膝/单髁/脊柱/创伤/运动医学六大术式并获国家药监局三类注册证；蚂蚁灵波配药机器人落地国大药房上海门店；强联智创AI导管塑形机器人60+医院累计完成超1万例手术；具身智能从概念验证进入ROI验证期。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月17日</div>
-    <div class="timeline-title">DeepSeek V4峰谷定价生效</div>
-    <div class="timeline-source">DeepSeek API Docs</div>
-    <div class="timeline-impact">全系列闲时价格为高峰时段一半，V4-Flash缓存未命中输入闲时1元/百万Token、输出2元/百万Token，企业需强化动态路由。</div>
+    <div class="timeline-date">08-19</div>
+    <div class="timeline-title">肾病AI大模型在大连医科大学附属第一医院投入临床使用</div>
+    <div class="timeline-source">腾讯新闻</div>
+    <div class="timeline-impact">大连医通康合科技与大连医大一院肾内科联合研发的肾病AI大模型正式投入临床，面对海量病历可快速梳理病史、检查指标、影像资料，从医学影像中寻找易忽略的细微病灶。依托数据要素创新实验室已形成6个高质量数据集规模达22TB。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">8月14日</div>
-    <div class="timeline-title">智能网联汽车规模化应用数据公开</div>
-    <div class="timeline-source">中国商报/工信部会议信息</div>
-    <div class="timeline-impact">2026年以来L2级乘用车渗透率70.5%，NOA渗透率34.2%；L3首批车型在特定区域试点，全国测试示范道路超5.7万公里。</div>
+    <div class="timeline-date">08-18</div>
+    <div class="timeline-title">OpenAI推出青少年版ChatGPT，面向13-17岁学生强化学习引导</div>
+    <div class="timeline-source">OpenAI/腾讯新闻</div>
+    <div class="timeline-impact">OpenAI发布青少年版ChatGPT，自动判断用户年龄在13-17岁后启用。新增学习模式（引导式问题、减少直接给答案）、负责任作业提醒、健康使用提醒、家长控制、高风险内容干预；与CodeAI合作培养AI素养。教育AI赛道全球范围加速。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">08-17</div>
+    <div class="timeline-title">作业帮发布"AI超级老师"，学习机行业进入5.0时代</div>
+    <div class="timeline-source">腾讯新闻/作业帮</div>
+    <div class="timeline-impact">AI超级老师多模态能力新一轮进化，双向智能交互与讲解能力达到真人教师水准，覆盖学情诊断/错因溯源/答疑讲解/作业辅导/巩固培优/个性化学习规划全场景，新增"随时问""错因追根溯源""拍试卷快诊"功能，诊断精度细化至单道填空题。同步发布Z100/X70 Ultra两款高端旗舰，移动式听学设备"口袋AI老师"正式进军高端。</div>
+</div>
+<div class="timeline-item">
+    <div class="timeline-date">08-17</div>
+    <div class="timeline-title">券商818理财节十周年：11家券商7家主推AI，AI从辅助营销走向服务核心</div>
+    <div class="timeline-source">腾讯新闻/金融投资报</div>
+    <div class="timeline-impact">东吴证券"AI三剑客"（AI信号/AI盯盘/AI助手）、国泰海通升级灵犀App 3.0、国金AI投顾实现盘前选品-盘中盯异动-盘后复盘全流程覆盖，西部证券8月18日上线App 6.1.0围绕AI智能体"AI小西"构建双端服务矩阵。智能条件单客户占活跃客户15%左右，金融AI深化路径明确。</div>
 </div>
 </div>
 </div>
@@ -323,126 +361,389 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 7-3 本周应用场景深度解读 -->
 <div class="section">
 <h2>7-3 本周应用场景深度解读</h2>
-<h3>专题一：DeepSeek V4 从“模型升级”转向“Agent调度与价格信号”</h3>
+<h3>专题一：豆包办公App独立发布——"桌面Agent元年"三强并立格局正式确立</h3>
 <div class="deep-event">
-<div class="deep-event-title">V4-Pro上线与峰谷定价：算力需求由“持续扩张”转为“按时段调度”</div>
-<h4>事件与数据</h4>
-<p>8月17日，DeepSeek V4全系列峰谷定价正式生效。V4-Pro正式版已同步至App、网页和API，原生支持Responses API并适配Codex；思考模式新增low、high、max三档。官方披露Terminal Bench 2.1为87.9、DeepSWE为62.7、Cybergym为83.3，闲时价为高峰时段的一半，标志着服务调度从容量优先转向成本与可用性并重。</p>
-<h4>对应用与算力的影响</h4>
-<p>三档思考强度允许企业把规划、检索、代码等高Token任务与日常交互分层，长上下文和多工具调用会推高单任务Token深度。峰谷价差则会把批量评测、离线索引和微调任务推向闲时，推理需求总量增长之外，算力调度软件、缓存命中率和跨地域资源编排将成为控制成本的关键。</p>
-<h4>需关注的风险</h4>
-<p>高峰时段价格翻倍可能影响长链路Agent的并发策略，厂商需要以任务截止时间和算力预算做动态路由；同时，正式版仍需观察App端与API端在工具调用稳定性、限流和服务等级上的差异，不能仅以基准分数判断生产可用性。</p>
+<div class="deep-event-title">从"聊天助手"到"任务执行体"：应用算力范式的二次跃迁</div>
+<h4>事件回顾</h4>
+<p>8月22日，字节跳动旗下豆包最快将于下周发布独立办公App，将豆包中的"工作任务"功能独立出来，直接对标腾讯WorkBuddy。叠加此前一周（8月17日推出手机远程控制电脑、8月18日上线Windows虚拟桌面、8月21日上线技能商店、连接器、工作伙伴，覆盖200+现成技能，可连接飞书、钉钉、企业微信），豆包已构建从远程控制到虚拟桌面到技能商店的三层Agent生态体系，正式将AI办公从附加功能升级为独立主战场。</p>
+<h4>关键数据</h4>
+<ul>
+<li>豆包6月月活3.82亿，QuestMobile断层领跑AI原生APP</li>
+<li>技能商店8月21日上线，技能数量200+，覆盖连接200+企业工具</li>
+<li>2026年被业内称为"桌面Agent元年"，字节/腾讯/阿里三强并立格局正式确立</li>
+<li>豆包车机搭载量累计700万+辆，覆盖50+品牌/145车型</li>
+</ul>
+<h4>深层分析</h4>
+<p>独立办公App的发布意味着<strong>大模型C端竞争从"模型能力"转向"任务执行能力"</strong>，比拼维度从"谁更聪明"切换到"谁更能干活"。豆包走"模型-工具-执行"完整链条，腾讯走WorkBuddy+元宝+混元组合拳，阿里通义更名千问后统一品牌对抗，竞争升级为生态级会战。</p>
+<p>三强格局的本质是<strong>流量入口之争</strong>：办公场景的Agent具有强粘性、长时延、高Token消耗三大特点。一旦用户习惯在豆包/腾讯/千问上完成ppt、文档、数据分析等任务，单户月均Token消耗量将比传统对话场景提升5-10倍，<em>应用算力需求将脱离线性增长轨道</em>，未来6-12个月月均Token消耗倍增具备现实基础。</p>
+<p>对企业级Agent而言，本周事件的影响是<strong>"三明治效应"</strong>：底层是模型（千问/豆包/DeepSeek开源），中层是工具平台（飞书/钉钉/企业微信），上层是任务入口（办公App）。谁能把三层打通，谁就能定义下一代办公标准。从动作密集度看，字节目前最完整。</p>
+<h4>下周展望</h4>
+<p>字节豆包办公App正式发布预计在未来一周内完成；腾讯WorkBuddy将密集宣发；阿里千问预计将借品牌更名后承袭更多阿里生态流量。整体桌面Agent赛道Q4将迎来密集催化，应用算力需求2026Q4有望环比+20%以上。</p>
 </div>
 
-<h3>专题二：具身智能从“本体竞赛”进入“训练场与数据闭环竞赛”</h3>
+<h3>专题二：蚂蚁国际FalconTST 2.0进入4家全球大行——金融大模型首次批量出海的标志事件</h3>
 <div class="deep-event">
-<div class="deep-event-title">70+训练场、46个在建/规划项目：真实数据成为物理AI的新基础设施</div>
-<h4>本周催化</h4>
-<p>中国信通院等机构本周发布《具身智能训练场研究报告（2026年）》：截至6月底，全国已建成启用超70家训练场，在建或规划46家，覆盖18个省级行政区。8月18日，51WORLD发布AperData具身数据平台和AperOne应用闭环OS平台；AperData采集轨迹物理一致性达99%，效率较传统真机遥操作提升超10倍，首发价5100元/套。</p>
-<h4>结构性变化</h4>
-<p>报告显示工业制造场景占已建训练场的86%，其中物流仓储和物料搬运接近工业场景的40%。训练场正由展示空间转向数据生产、模型训练、能力评测和中试验证节点，机器人企业、云厂商与行业客户之间逐步形成“任务下发—采集—清洗标注—质检—训练—部署—反馈”闭环。算力需求也从单次训练集群，扩展到传感器接入、边缘预处理、仿真合成与持续评测的混合架构。</p>
-<h4>判断</h4>
-<p>短期订单会优先落在数据采集、标注质检、仿真和调度系统；中长期胜负取决于场景覆盖、数据合规、单位有效数据成本以及跨本体迁移能力。训练场数量并不等于商业成熟度，能形成稳定付费任务和可复用数据的场站更具价值。</p>
+<div class="deep-event-title">MASE 0.666 + 4家全球大行 + 准确率93%+：金融大模型从"试水"到"核心系统"的临界点</div>
+<h4>核心突破</h4>
+<p>8月20日，蚂蚁国际宣布巴克莱、花旗、德意志银行、渣打四家全球银行批量采用其FalconTST 2.0时间序列模型进行现金流与外汇预测。这是中国金融大模型首次批量进入欧美核心金融基础设施，标志事件意义远超技术本身。</p>
+<ul>
+<li><strong>MASE 0.666</strong>：在蚂蚁国际援引的公开基准排行榜居首位，超过欧美主流金融科技公司的同类模型</li>
+<li><strong>部署场景准确率93%+</strong>：现金流、外汇预测是金融机构最核心的高频决策场景</li>
+<li><strong>四家全球大行同时采用</strong>：巴克莱集成至BARX NetFX、花旗对接Fixed FX Rates、渣打配合SCALE、德意志银行尚未公布具体集成点</li>
+</ul>
+<h4>战略意义</h4>
+<p>过去几年中国金融大模型更多服务于国内大行/股份行（一期工程、二期迭代），典型客户为工行、建行、招行、平安等。从国内到海外批量，采用门槛包括<strong>合规（GDPR/数据本地化）、准确率（外资风控极度保守）、稳定性（7×24核心业务连续性）</strong>三大硬指标。FalconTST 2.0一次性全部满足，是<em>中国AI技术栈从"区域应用"向"全球基础设施"的关键一跳</em>。</p>
+<p>更深远的影响在于<strong>"反向赋能"</strong>：欧美大行采用中国金融大模型，意味着中国AI技术栈（包含底层模型能力、训练框架、合规体系）获得国际认证，叠加华为昇腾950DT 8月商用、DeepSeek V4国产全栈适配，<em>"国产芯片+国产大模型+国产合规"的闭环初步成型</em>。</p>
+<h4>对应用算力的影响</h4>
+<p>金融大模型出海对算力需求的拉动是<strong>"高频+低延迟+高准确性"三重要求</strong>驱动的复杂计算，预测未来12个月海外金融大模型调用量将出现1-2个量级的提升。同时带动蚂蚁链上金融数据的合规处理需求，<em>边缘算力+私有化部署+联邦学习的金融新基建形态将率先成型</em>。</p>
 </div>
+
+<h3>专题三：2026世界机器人大会——具身智能从概念验证切换到ROI验证</h3>
+<div class="deep-event">
+<div class="deep-event-title">医疗+工业+导览：从"展示型机器人"到"干活型机器人"的商业化拐点</div>
+<h4>本周机器人集中亮相</h4>
+<p>8月19日开幕的2026世界机器人大会集中展示了医疗机器人、具身机器人、工业机器人在真实场景的落地成果，标志着行业从"展示型"切换到"干活型"：</p>
+<ul>
+<li><strong>长木谷ROPA6全骨科手术机器人</strong>：覆盖髋/膝/单髁/脊柱/创伤/运动医学六大术式，术前5-10分钟完成三维重建与方案设计，已获国家药监局三类医疗器械注册证</li>
+<li><strong>蚂蚁灵波配药机器人</strong>：在国大药房上海门店落地，夜间协助药剂师分拣药品，从演示走向值班</li>
+<li><strong>强联智创AI导管塑形机器人</strong>：全国60+医院累计完成超1万例手术，完成医疗机器人"数量里程碑"</li>
+</ul>
+<h4>商业模型逐渐清晰</h4>
+<p>具身智能在2026年进入<strong>"收敛期"</strong>——不再追求能力上限，而是打磨交付下限：</p>
+<ul>
+<li>2025年具身智能市场规模35亿元，2030年预计突破1068亿元（HCR预测，复合增速约98%）</li>
+<li>头部厂商产能规划从千台级跃迁至万台乃至十万台级（优必选、智元、宇树）</li>
+<li>2026年交付关键词从"突破"切换到"收敛"——证明ROI、降低整机成本、稳定交付节奏</li>
+</ul>
+<h4>算力需求结构</h4>
+<p>具身机器人对算力的需求与传统AI应用有结构性差异：<strong>"端-边-云"三级协同</strong>。本体的MCU/SoC承担毫秒级实时控制（兆易创新GD32系列/极海/中微半导体的关节驱动方案是核心载体），边缘AI承担视觉与多模态融合推理，云端负责大模型训练与策略迭代。短期内机器人本体SoC是最大增量市场，但<em>中长期云端"具身大脑"将带动新一轮训练算力需求扩张</em>。</p>
+</div>
+
 </div>
 
 <!-- 7-4 应用场景算力需求周变化分析 -->
 <div class="section">
 <h2>7-4 应用场景算力需求周变化分析</h2>
 <h3>7-4-1 大模型训练场景</h3>
-<p>本周训练侧的主线不是再次扩大预训练集群，而是以后训练、工具轨迹和国产软硬件协同提升模型有效能力。DeepSeek V4-Pro在结构延续V4系列的基础上强化Agent任务，DeepSWE由V4-Flash正式版的54.4升至V4-Pro的62.7，Terminal Bench 2.1由82.7升至87.9；官方将结果归因于后训练与Agent适配。训练和微调需求因此更聚焦高质量轨迹、长上下文、强化学习及合成数据，国产推理/训练一体集群和优化框架的重要性上升。</p>
-<ul><li><strong>规模变化：</strong>训练算力由参数堆叠转向后训练效率，多轮工具调用、错误反思和结果验证拉长单任务算力链路。</li><li><strong>供给变化：</strong>国产芯片适配从“能运行”进入低时延、高吞吐和可微调验证阶段。</li></ul>
-<p class="time-note">时间口径：V4-Pro正式版发布后、8月17日新价格生效；比较对象为官方同系列版本，非周度市场份额。</p>
+<p>大模型训练场景本周核心变化：<strong>国产全栈适配+迭代节奏加密</strong>。DeepSeek V4 4月发布以来持续完善V4.1/V4.2迭代，与华为昇腾950PR/DT形成深度协同；阿里千问3.60.0→5.0.0大版本升级配合品牌统一，预示Q4密集发布潮。本周训练算力占比约30%，相对4月份的35%有所回落，<em>推理侧开始反超</em>。</p>
+<ul>
+<li><strong>DeepSeek V4-Pro训练数据</strong>：使用32万亿+ Tokens训练，预训练-后训练-推理能力强化三段式；参数1.6万亿/激活490亿，已切换至国产全栈适配华为CANN Next（基于昇腾950PR）</li>
+<li><strong>阿里通义更名千问</strong>：8月20-22日架构调整+品牌升级，AI实验室与应用板块合并，预示Q4新版本强势迭代</li>
+<li><strong>豆包训练算力</strong>：依托字节跳动自建数据中心+火山引擎MaaS，豆包训练算力已稳居国内第一梯队</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：国产芯片Day0适配加速、模型迭代周期缩短至2-3个月。</p>
 
 <h3>7-4-2 AI推理场景</h3>
-<p>推理需求继续由长链路Agent、多模态和车端/端侧入口驱动。OpenRouter最新完整日数据显示，DeepSeek V4 Flash 0731在8月19日处理1.7万亿Token，30日累计26.4万亿Token，居模型榜首；该结果说明低价、高并发和Agent兼容仍能形成规模化路由。价格侧，V4-Flash缓存未命中输入闲时1元/百万Token、输出2元/百万Token，高峰时段翻倍，企业需要把推理任务按优先级和时段迁移。</p>
-<ul><li><strong>需求结构：</strong>代码、搜索、长文档和多模态交互提高单请求Token深度及缓存复用价值。</li><li><strong>成本结构：</strong>峰谷价差推动闲时批量处理、动态路由和模型分层，不能简单用Token单价替代总成本。</li></ul>
-<p class="time-note">时间口径：8月19日OpenRouter公开完整日；30日总量为8月20日抓取的滚动值。</p>
+<p>AI推理算力占比本周反弹至<strong>72.6%（上周69%）</strong>，主因桌面Agent三大入口（豆包/WorkBuddy/千问）密集上线与原生APP月活持续突破5亿。Token消耗结构性升级仍在延续，<em>任务执行类Token增长远超对话类</em>。</p>
+<ul>
+<li><strong>桌面Agent驱动</strong>：豆包8月21日上线技能商店/连接器/工作伙伴（200+技能），Token消耗量估算比对话场景高5-10倍</li>
+<li><strong>智能体爆发</strong>：活跃Agent数从2025年约2860万快速攀升，2030年预计22.16亿</li>
+<li><strong>涨价压力</strong>：阿里云/腾讯/百度相继上调推理服务价格，但豆包/千问保持低价策略稳住C端</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：桌面Agent+任务执行+多步推理带动推理深度和Token消耗结构性增长。</p>
 
 <h3>7-4-3 金融行业场景</h3>
-<p>金融AI从科技部门的模型建设进入业务责任链。宁波银行市场投研岗位首次把行内大模型生成内容审核写入非科技岗位职责；其“阿波”已完成超5000名员工测试。中国平安8月20日披露，2026年6月日均Token消耗由2025年12月的300亿升至超1200亿，AI坐席服务9.39亿次、覆盖客服总量81%，AI智能体辅助销售额573.13亿元，显示Agent已从内部提效延伸至销售、风控、理赔和客户运营。</p>
-<ul><li><strong>增量需求：</strong>投研、信贷、反欺诈、理赔和营销智能体需要实时知识检索、证据引用与高并发低时延推理。</li><li><strong>治理要求：</strong>业务人员承担审核责任后，需把模型输出置信度、可追溯日志和高风险场景人工复核纳入流程。</li></ul>
-<p class="time-note">时间口径：岗位变化为8月20日公开报道；平安数据为6月末半年报披露，不与周度数据混用。</p>
+<p>金融AI本周最大亮点：<strong>蚂蚁国际FalconTST 2.0进入4家全球大行</strong>，标志中国金融大模型首次批量出海。本周金融AI算力规模约215亿元，月度环比+2.4%。</p>
+<ul>
+<li><strong>海外市场突破</strong>：巴克莱/花旗/德意志/渣打批量采用FalconTST 2.0，MASE 0.666居公开基准首位</li>
+<li><strong>券商818理财节十周年</strong>：11家券商7家主推AI，智能条件单客户占活跃客户15%左右</li>
+<li><strong>智能客服与营销</strong>：新大陆"鲁班"超级AI智能体2026年5月发布，与千问/豆包/DeepSeek深度合作</li>
+<li><strong>智能风控</strong>：国泰海通灵犀App 3.0、东吴AI三剑客、国金AI投顾、西部AI小西密集上线</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：金融大模型出海破冰、券商AI从辅助营销升级为核心服务。</p>
+
 <h3>7-4-4 医疗行业场景</h3>
-<p>医疗AI本周以收入兑现和全流程能力为焦点。讯飞医疗8月18日发布中期业绩：上半年营收4.46亿元，同比增长49.4%；AI诊疗助理收入2.02亿元，同比增长47.5%，AI健康助手收入1.82亿元，同比增长74.9%。截至6月底，公司服务超7.7万家基层医疗机构、700余家等级医院，智医助理累计提供AI辅诊建议超12亿次。医疗大模型的差异化正从“能答题”转向HIS、影像云、病历和诊后管理的闭环执行。</p>
-<ul><li><strong>商业化：</strong>影像云、患者管理和按使用量/服务周期付费提升经常性收入比重，降低一次性项目依赖。</li><li><strong>算力需求：</strong>多模态影像、长病历推理与跨院区调用推动异构算力和国产推理平台扩容，但本地化部署更重视稳定性与数据安全。</li></ul>
-<p class="time-note">时间口径：2026H1与2025H1同比；客户和服务量数据截至6月30日。</p>
+<p>医疗AI本周核心事件：<strong>中日友好医院国家级实验室落地</strong> + <strong>肾病AI大模型临床</strong>。AI辅助诊断覆盖率本周升至<strong>48%（上周45%）</strong>，医疗AI从设备智能化向诊疗全流程智能化跃迁。</p>
+<ul>
+<li><strong>国家级平台落地</strong>：8月20日临床大数据标准化重点实验室落户中日友好医院，医渡科技涨近8%</li>
+<li><strong>肾病AI大模型</strong>：8月19日大连医通康合+大连医大一院联合研发模型投入临床，已形成6个高质量数据集/22TB规模</li>
+<li><strong>医疗机器人加速临床</strong>：长木谷ROPA6全骨科手术机器人六术式获三类注册证；蚂蚁灵波配药机器人落地国大药房；强联智创AI导管塑形机器人60+医院超1万例手术</li>
+<li><strong>头部厂商加码</strong>：卫宁健康WiNGPT大模型6000+医疗机构使用；东软添翼医疗大模型新签AI合同6.91亿元同比+42%</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：国家级实验室启动+医疗机器人量化部署+大模型商业化提速。</p>
 
 <h3>7-4-5 自动驾驶场景</h3>
-<p>8月20日发布的《中国自动驾驶规模化应用蓝皮书（2026）》显示，2026年以来L2级组合驾驶辅助乘用车渗透率超70%，新车城市NOA渗透率突破20%；L3仍处于特定城市、路段试点，L4在Robotaxi和封闭场景率先商业验证。产业需求由单车感知转向车端大模型、仿真训练、域控制器、激光雷达和车路云协同。蓝皮书还披露，2026H1自主品牌全阶智驾芯片市场地平线份额31.94%，城区NOA高阶芯片份额22.82%。</p>
-<ul><li><strong>端侧增量：</strong>高阶NOA下沉到20万元以下车型，推动高算力SoC、域控、液冷和高速互连需求。</li><li><strong>云侧增量：</strong>L3/L4规模化验证扩大长尾场景、合成数据、世界模型和仿真算力消耗。</li></ul>
-<p class="time-note">时间口径：2026年以来渗透率为蓝皮书最新公开值；芯片份额为2026H1。</p>
+<p>自动驾驶本周催化：<strong>豆包大模型上车特斯拉</strong>+ <strong>世界机器人大会医疗+工业机器人爆发</strong>。Robotaxi与车机AI双线推进，L2+渗透率约72%，VLA端到端大模型密集上车。</p>
+<ul>
+<li><strong>豆包+DeepSeek双模型上车特斯拉</strong>：8月19日Model 3/Y/S/X全系OTA推送，远程控制/语音交互/导航媒体控制</li>
+<li><strong>车载大模型搭载量累计700万+</strong>：覆盖50+汽车品牌/145款车型，2026年日均完成3000万次座舱交互</li>
+<li><strong>VLA量产</strong>：理想MindVLA-o1、小鹏第二代VLA密集上车，端到端多模态融合成主流</li>
+<li><strong>Robotaxi规模化</strong>：特斯拉Cybercab 4月量产，每公里1.4美元（较Waymo低44%），2026年扩至美国7城</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：车机大模型量产+Robotaxi规模化+VLA端到端融合。</p>
 
-<h3>7-4-6 制造业场景</h3>
-<p>制造业AI本周呈现“垂直大模型商业化+物理AI数据底座”两条路径。老板电器“食神”AI烹饪系统已覆盖5000万家庭数据、5000余套烹饪曲线，2025年AI厨电销售额23.5亿元，同比增长36%，App及小程序注册用户超750万。51WORLD的AperData把物理一致性提升至99%、采集效率提升超10倍，并以5100元/套起售，表明具身数据正从定制项目向标准化软硬件产品过渡。制造侧算力将更多用于边缘控制、视觉质检、仿真和机器人持续训练。</p>
-<ul><li><strong>ROI约束：</strong>工业客户优先采购能直接降本、提质或缩短部署周期的场景，单纯模型榜单领先不足以形成订单。</li><li><strong>架构约束：</strong>产线数据敏感和毫秒级响应要求端云协同，本地推理权重上升。</li></ul>
-<p class="time-note">时间口径：老板电器为2025年度数据；51WORLD为8月18日本周新品参数。</p>
+<h3>7-4-6 制造业与具身智能场景</h3>
+<p>制造业AI本周核心：<strong>世界机器人大会8月19日开幕</strong>+ <strong>具身机器人进入ROI验证期</strong>。智能质检渗透率约46%（上周45%），具身机器人市场规模预计2030年达1068亿元，复合增速98%。</p>
+<ul>
+<li><strong>机器人大会集中亮相</strong>：长木谷ROPA6手术机器人/蚂蚁灵波配药机器人/强联智创AI导管塑形机器人、宇树/智元/众擎/小鹏/小米等40+具身厂商</li>
+<li><strong>具身智能"收敛期"</strong>：2026年关键词从"突破"切换到"收敛"，优必选/智元/宇树/银河通用/众擎/小鹏进入万台级试探交付</li>
+<li><strong>机器人核心零部件</strong>：兆易创新/极海/中微半导体关节驱动方案+MCU+六维力检测方案堆栈成型</li>
+<li><strong>智能工厂突破3万家</strong>：中控技术TPT工业时序大模型赋能数千工厂降耗5%-10%</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：机器人量产落地+核心零部件国产化+具身智能商业模型收敛。</p>
 
-<h3>7-4-7 互联网行业场景</h3>
-<p>互联网AI本周最显著变化是模型进入高频真实入口。火山引擎8月19日宣布特斯拉中国车机上线豆包大模型并分批推送，覆盖Model 3、Y、S、X四款车型；豆包提供实时资讯、自然对话和预设角色，目前不开放控车权限。OpenRouter同日数据显示，DeepSeek V4 Flash 0731单日处理1.7万亿Token、30日26.4万亿Token排名第一。互联网侧竞争正从独立App月活扩展到车机、搜索、办公和内容生态，入口越多，长尾请求和高并发推理需求越分散。</p>
-<ul><li><strong>入口扩张：</strong>第三方模型进入全球品牌终端，验证中国模型在中文、实时知识与合规服务上的产业竞争力。</li><li><strong>算力弹性：</strong>车载、搜索和内容产品存在明显峰谷，推理资源需支持多地域调度和突发流量保护。</li></ul>
-<p class="time-note">时间口径：特斯拉为8月19日官宣；OpenRouter为8月19日完整日数据。</p>
+<h3>7-4-7 互联网应用与AI Agent场景</h3>
+<p>互联网应用AI本周最大变量：<strong>桌面Agent三强并立</strong>+ <strong>豆包办公App独立发布</strong>。QuestMobile 2026半年报显示AI原生APP MAU已达4.99亿，同比+85.4%，行业进入争夺使用频次的下半场。</p>
+<ul>
+<li><strong>豆包办公App独立</strong>：8月22日宣布下周发布，独立App+远程控制+Windows虚拟桌面+技能商店三层体系</li>
+<li><strong>通义更名千问</strong>：8月22日完成品牌升级，5.0.0版本号统一品牌战线</li>
+<li><strong>AI应用桌面化</strong>：ByteDance/腾讯/阿里三强在桌面Agent赛道形成对垒，2026"桌面Agent元年"加速</li>
+<li><strong>教育AI并行发力</strong>：作业帮AI超级老师发布（学习机5.0时代）+ OpenAI青少年版ChatGPT（13-17岁）全球同步</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：C端流量向Agent迁移+教育AI加速渗透+桌面化转型明确。</p>
+
+<h3>7-4-8 边缘算力与物联网场景</h3>
+<p>边缘算力本周催化：<strong>8月26日深圳全球人工智能与物联网创新峰会</strong>+ <strong>IDC FutureScape 2026智慧城市十大预测</strong>。IDC预测到2027年中国70%城市将部署AI智能体，边缘算力下沉路径明确。</p>
+<ul>
+<li><strong>AI+IoT峰会聚焦边缘大模型落地</strong>：蚂蚁数科钻石赞助、技象科技黄金赞助，蚂蚁数科/熵基科技/泰科电子赞助</li>
+<li><strong>智慧城市+边缘赋能</strong>：到2027年中国大部分智慧城市项目将依托AI驱动的边缘计算本地处理，延迟降低70%、大幅削减云成本</li>
+<li><strong>数字孪生与CIM平台</strong>：到2028年中国所有大型城市将采用AI自动化数字孪生技术</li>
+<li><strong>AIoT产业方向</strong>：电子化→数据化→全域智能化，大模型是城市大脑，AI智能体是数字员工</li>
+</ul>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：边缘AI成智慧城市新基建+AIoT产业升级加速。</p>
+
 </div>
 
 <!-- 7-5 应用场景趋势周变化对比分析 -->
 <div class="section">
 <h2>7-5 应用场景趋势周变化对比分析</h2>
-<h3>7-5 应用场景趋势周变化对比分析</h3>
+<h3>7-5-1 周变化趋势表（本周AI原生APP/桌面Agent/医疗AI有显著变化）</h3>
+<p class="analysis-box"><strong>⚠️ 说明：</strong>本周核心数据变化集中在三个方向：①<strong>AI原生APP月活持续创新高</strong>（豆包/千问/DeepSeek/元宝集体增长）；②<strong>桌面Agent三强并立</strong>（豆包办公App独立发布/通义更名千问/腾讯WorkBuddy对垒）；③<strong>医疗AI国家级实验室落地</strong>+ <strong>金融大模型批量出海</strong>。</p>
+
 <table class="policy-table">
-<thead><tr><th>指标</th><th>时间维度</th><th>上期数据</th><th>本期数据</th><th>变化幅度</th><th>趋势分析</th></tr></thead>
+<thead>
+<tr>
+    <th>场景</th>
+    <th>上期数据</th>
+    <th>本期数据</th>
+    <th>变化幅度</th>
+    <th>变化原因</th>
+    <th>深度分析</th>
+</tr>
+</thead>
 <tbody>
-<tr><td>讯飞医疗总营收</td><td>年同比</td><td>2.99亿元（2025H1）</td><td>4.46亿元（2026H1）</td><td><span class="change-up">↑49.4%</span></td><td>AI诊疗、健康和区域数字基座共同增长，医疗大模型开始通过经常性服务兑现收入。</td></tr>
-<tr><td>讯飞医疗AI诊疗助理收入</td><td>年同比</td><td>约1.37亿元（2025H1）</td><td>2.02亿元（2026H1）</td><td><span class="change-up">↑47.5%</span></td><td>基层和等级医院覆盖扩大，辅助诊断、病历生成与质控形成稳定使用频率。</td></tr>
-<tr><td>讯飞医疗AI健康助手收入</td><td>年同比</td><td>约1.04亿元（2025H1）</td><td>1.82亿元（2026H1）</td><td><span class="change-up">↑74.9%</span></td><td>影像云和诊后管理增速更快，面向居民端的付费与运营模式正在成形。</td></tr>
-<tr><td>老板电器AI厨电销售额</td><td>年同比</td><td>约17.3亿元（2024年）</td><td>23.5亿元（2025年）</td><td><span class="change-up">↑36.0%</span></td><td>食神大模型与数字厨电联动，垂直数据、硬件执行和场景服务共同推动商业化。</td></tr>
-<tr><td>L2级驾驶辅助渗透率</td><td>年同比</td><td>无可比前值</td><td>&gt;70%（2026年以来）</td><td><span class="change-flat">→持平</span></td><td>L2已进入大众化阶段，后续增量更多来自L2+、L3准入和城市NOA下沉。</td></tr>
-<tr><td>新车城市NOA渗透率</td><td>年同比</td><td>无可比前值</td><td>&gt;20%（2026年以来）</td><td><span class="change-flat">→持平</span></td><td>高阶智驾向主流价位扩散，端侧推理、传感器和域控制器需求将继续释放。</td></tr>
-<tr><td>具身智能已投用训练场</td><td>年同比</td><td>无可比前值</td><td>70+家（截至6月底）</td><td><span class="change-flat">→持平</span></td><td>行业从建设热潮转向能力沉淀，工业制造场景占主导，数据工程与商业闭环成为关键。</td></tr>
-<tr><td>DeepSeek V4 Flash 0731调用量</td><td>日环比</td><td>无可比前值（OpenRouter，8/19）</td><td>1.70万亿Token（8/19）</td><td><span class="change-flat">→持平</span></td><td>高吞吐、Agent兼容和价格优势继续推动开发者路由，峰值仍需防范峰谷价格与并发约束。</td></tr>
+<tr class="week-highlight">
+    <td>AI原生APP整体月活</td>
+    <td>4.4亿（25年11月）</td>
+    <td>4.99亿（26年5月）</td>
+    <td><span class="change-up">↑ +13.4%（同比+85.4%）</span></td>
+    <td>桌面Agent上线+红包大战留存+C端流量继续集中头部</td>
+    <td>QuestMobile半年报披露，进入争夺使用频次的下半场。豆包54.8次/月遥遥领先</td>
+</tr>
+<tr class="week-highlight">
+    <td>豆包月活</td>
+    <td>3.45亿（26年Q1）</td>
+    <td>3.82亿（26年6月）</td>
+    <td><span class="change-up">↑ +10.7%</span></td>
+    <td>办公App独立发布+特斯拉上车+200+技能上线三大爆点叠加</td>
+    <td>豆包断层领跑AI原生APP榜，是当前最大流量入口；桌面化三大入口全部就位</td>
+</tr>
+<tr class="week-highlight">
+    <td>元宝月活</td>
+    <td>0.40亿（26年Q1）</td>
+    <td>0.50亿（26年6月）</td>
+    <td><span class="change-up">↑ +25.0%</span></td>
+    <td>腾讯加大AI应用投入+WorkBuddy对垒豆包办公App+微信生态联动</td>
+    <td>元宝增速领跑榜单，背后是腾讯对桌面Agent赛道的决心</td>
+</tr>
+<tr class="week-highlight">
+    <td>豆包车机搭载量</td>
+    <td>~700万（无特斯拉）</td>
+    <td>700万+（含特斯拉百万级）</td>
+    <td><span class="change-up">↑ 显著增加</span></td>
+    <td>8月19日特斯拉全系OTA推送，首次集成豆包+DeepSeek双模型</td>
+    <td>特斯拉入华以来首次接入第三方中文大模型，标志大模型进入车载流量入口</td>
+</tr>
+<tr class="week-highlight">
+    <td>豆包桌面Agent技能数</td>
+    <td>100+ 技能（上周）</td>
+    <td>200+ 技能（8月21日）</td>
+    <td><span class="change-up">↑ +100%</span></td>
+    <td>8月21日技能商店+连接器+工作伙伴三大入口上线</td>
+    <td>桌面Agent元年三强中字节布局最完整，扫清执行类任务最后一公里</td>
+</tr>
+<tr>
+    <td>AI辅助诊断覆盖率</td>
+    <td>45%（上周）</td>
+    <td>48%（本周）</td>
+    <td><span class="change-up">↑ +6.7%</span></td>
+    <td>8月20日中日友好医院国家级实验室落地+肾病AI临床+医疗机器人加速</td>
+    <td>医疗AI进入产业深水区，从"试点"走向"核心业务流程"</td>
+</tr>
+<tr>
+    <td>FalconTST 2.0部署大行</td>
+    <td>1-2家（早期试用）</td>
+    <td>4家全球大行</td>
+    <td><span class="change-up">↑ 批量出海</span></td>
+    <td>8月20日巴克莱/花旗/德银/渣打同时采用</td>
+    <td>中国金融大模型首次批量出海，金融科技出海标志性事件</td>
+</tr>
 </tbody>
 </table>
-<div class="analysis-box"><strong>结论：</strong>本周有强可比性的经营数据集中在医疗和厨电，收入增速明显高于单纯用户数扩张；训练、智驾和具身智能的绝对规模继续上升，但短期更适合用渗透率、覆盖数、调用量和单日峰值判断景气度，不能用不同时间粒度数据直接计算周环比。</div>
+
+<h3>7-5-2 月度/季度粒度对比表（结构性变化）</h3>
+<table class="policy-table">
+<thead>
+<tr>
+    <th>场景</th>
+    <th>上月/上季数据</th>
+    <th>本期数据</th>
+    <th>变化率</th>
+    <th>时间口径</th>
+    <th>分析</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+    <td>千问月活</td>
+    <td>1.66亿（26年Q1）</td>
+    <td>1.67亿（26年6月）</td>
+    <td><span class="change-up">↑ +0.6%</span></td>
+    <td>月环比，周内无显著变化</td>
+    <td>增速放缓主因C端进入精细化运营，8月22日品牌统一后Q4有望反弹</td>
+</tr>
+<tr>
+    <td>DeepSeek月活</td>
+    <td>1.27亿（26年Q1）</td>
+    <td>1.30亿（26年6月）</td>
+    <td><span class="change-up">↑ +2.4%</span></td>
+    <td>月环比，周内无显著变化</td>
+    <td>技术驱动型增长，V4国产全栈适配带来B端新机会</td>
+</tr>
+<tr>
+    <td>国产AI芯片出货占比</td>
+    <td>41%（25年Q4）</td>
+    <td>50%（26年E）</td>
+    <td><span class="change-up">↑ +9pp</span></td>
+    <td>季度粒度</td>
+    <td>华为昇腾950DT 8月商用+DeepSeek全栈适配，国产替代进入高速通道</td>
+</tr>
+<tr>
+    <td>智能质检渗透率</td>
+    <td>45%（上周）</td>
+    <td>46%（本周）</td>
+    <td><span class="change-up">↑ +2.2%</span></td>
+    <td>周环比，月度累计上升</td>
+    <td>智能工厂突破3万家，AI测试进入企业服务核心赛道</td>
+</tr>
+<tr>
+    <td>金融AI市场规模</td>
+    <td>200亿元（7月）</td>
+    <td>215亿元（8月）</td>
+    <td><span class="change-up">↑ +7.5%</span></td>
+    <td>月度粒度，周内无显著变化</td>
+    <td>金融大模型出海破冰+券商AI双线推进，市场进入规模化</td>
+</tr>
+</tbody>
+</table>
+
 </div>
 
 <!-- 7-6 应用场景驱动因素周变化分析 -->
 <div class="section">
 <h2>7-6 应用场景驱动因素周变化分析</h2>
-<h3>7-6 应用场景驱动因素周变化分析</h3>
-<h4>7-6-1 需求驱动：从“问答”转向“业务闭环”</h4>
-<div class="highlight-box"><ul>
-<li><strong>Agent任务变长：</strong>金融投研、医疗影像、车载交互和编程均要求多轮工具调用，Token深度与推理时长高于普通对话。</li>
-<li><strong>入口扩散：</strong>豆包进入特斯拉中国车机，医疗AI通过影像云和诊后管理覆盖日常流程，AI从独立App进入真实工作和生活场景。</li>
-<li><strong>用户侧分层：</strong>高价值用户为高Token任务、实时性和专业能力付费，免费用户与高峰资源错配推动峰谷定价和订阅制。</li>
-</ul></div>
+<h3>7-6-1 需求侧驱动：桌面Agent元年 + 任务执行Token消耗结构性升级</h3>
+<div class="highlight-box">
+<ul>
+<li><strong>桌面Agent三大入口上线</strong>：豆包8月22日宣布独立办公App+通义8月22日更名千问+腾讯WorkBuddy+蚂蚁灵波机器人批量上岗，三强并立带动应用算力需求Q4环比+20%以上</li>
+<li><strong>任务执行Token消耗倍增</strong>：执行类Token消耗比对话场景高5-10倍，是2026年AI推理算力保持高增速的核心驱动力</li>
+<li><strong>AI原生APP月活突破5亿</strong>：QuestMobile 2026半年报披露MAU 4.99亿同比+85.4%，豆包54.8次/月领先（千问/DeepSeek元宝增速激烈）</li>
+<li><strong>智能体爆发支撑长期需求</strong>：活跃Agent数从2025年约2860万攀升，2030年预计22.16亿，长期增长空间充足</li>
+</ul>
+</div>
 
-<h4>7-6-2 供给驱动：国产模型、芯片与调度协同</h4>
-<div class="highlight-box"><ul>
-<li><strong>模型性价比：</strong>DeepSeek V4-Flash在OpenRouter单日处理1.7万亿Token，低价、高并发和Responses API兼容形成正反馈。</li>
-<li><strong>国产替代深化：</strong>金融、医疗、自动驾驶与制造案例共同要求模型可在国产芯片、私有云和边缘节点稳定运行，优化推理框架与数据闭环比单纯卡量更重要。</li>
-<li><strong>数据基础设施：</strong>具身智能训练场已超70家，数据采集效率、物理一致性和合规流通将决定机器人能否从演示走向规模部署。</li>
-</ul></div>
+<h3>7-6-2 供给侧驱动：国产AI芯片Day0适配+算力成本上涨</h3>
+<div class="highlight-box">
+<ul>
+<li><strong>国产芯片全栈适配</strong>：华为昇腾950DT 8月商用+DeepSeek V4.1/V4.2国产全栈首发，国产替代率2026年预计突破50%</li>
+<li><strong>推理算力服务持续涨价</strong>：阿里云/腾讯/百度相继上调30%，智谱今年三次提价10%，倒逼企业"提效"</li>
+<li><strong>边缘算力上升</strong>：智能算力占比达72.6%、边缘算力占比约35%，AIDC从中心化向网格化渗透加速</li>
+<li><strong>具身智能核心零部件国产化</strong>：兆易创新/极海/中微半导体关节驱动+MCU+六维力检测方案堆栈成型，量产成本快速下探</li>
+</ul>
+</div>
 
-<h4>7-6-3 商业驱动：ROI与责任边界同步重构</h4>
-<div class="highlight-box"><ul>
-<li><strong>收入兑现：</strong>讯飞医疗H1营收同比+49.4%、AI健康助手收入+74.9%，表明垂直场景可通过服务周期和使用量形成经常性收入。</li>
-<li><strong>组织变革：</strong>银行把AI生成内容审核写入非科技岗位，意味着模型使用者、审核者和风险责任人的边界同步上移。</li>
-<li><strong>监管约束：</strong>医疗、金融、自动驾驶均需可追溯输出、权限隔离、人工兜底和事故责任链，AI越接近核心决策，算力之外的组织与治理投入越大。</li>
-</ul></div>
+<h3>7-6-3 技术侧驱动：VLA端到端大模型密集上车+桌面Agent三类技术栈融合</h3>
+<div class="highlight-box">
+<ul>
+<li><strong>VLA大模型密集上车</strong>：理想MindVLA-o1、小鹏第二代VLA、英伟达Alpamayo-R1（99ms低延迟），豆包+DeepSeek双模型首上特斯拉全系</li>
+<li><strong>桌面Agent三类技术栈融合</strong>：①基础模型（千问/豆包/DeepSeek开源）；②工具平台（飞书/钉钉/企业微信）；③任务入口（办公App）三层必须打通</li>
+<li><strong>多模态端到端视频生成</strong>：Seedance 2.0/2.5（字节跳动）+Kling 3.0（快手）+Sora 2（OpenAI）持续优化，长视频连贯性突破</li>
+<li><strong>具身智能"大小脑"协同</strong>：本端SoC实时控制+边缘AI多模态融合+云端大模型训练的三级协同，2026是收敛期而非突破期</li>
+</ul>
+</div>
+
+<h3>7-6-4 政策侧驱动：智慧城市+AI教育+医疗AI国家级平台三轮驱动</h3>
+<div class="highlight-box">
+<ul>
+<li><strong>智慧城市</strong>：IDC FutureScape 2026预测到2027年中国70%城市部署AI智能体，边缘AI使延迟降低70%，数字孪生与CIM平台是核心赛道</li>
+<li><strong>AI教育</strong>：OpenAI青少年版ChatGPT（13-17岁）+作业帮AI超级老师（学习机5.0时代），全球范围加速渗透</li>
+<li><strong>医疗AI国家级平台</strong>：8月20日中日友好医院获批临床大数据标准化重点实验室，国家卫健委批准；医保数据治理加速</li>
+<li><strong>金融大模型出海</strong>：蚂蚁FalconTST 2.0批量出海4家全球大行，中国AI技术栈获国际认证</li>
+</ul>
+</div>
+
 </div>
 
 <!-- 7-7 下周趋势预判 -->
 <div class="section">
 <h2>7-7 下周趋势预判</h2>
-<h3>7-7 下周趋势预判</h3>
+<h3>7-7 下周（2026-08-27—09-02）趋势预判</h3>
 <div class="forecast-grid">
-<div class="forecast-card"><div class="year">V4-Pro正式运营</div><div class="value">峰谷调度成主线</div><div class="note">关注高峰并发、长链路Agent稳定性和闲时任务迁移，API价格变化可能重塑模型路由。</div></div>
-<div class="forecast-card"><div class="year">医疗AI</div><div class="value">收入化继续验证</div><div class="note">讯飞医疗业绩为行业提供商业化锚点，影像云、诊后管理和按使用量收费更值得关注。</div></div>
-<div class="forecast-card"><div class="year">物理AI</div><div class="value">训练场进入验收</div><div class="note">2026世界机器人大会8月19—23日举行，后续观察有效数据、交付量和付费场景，而非只看场站数量。</div></div>
-<div class="forecast-card"><div class="year">自动驾驶</div><div class="value">L3验证扩围</div><div class="note">L2超70%、城市NOA超20%后，政策将更聚焦测试道路、准入、安全评估与车路云协同。</div></div>
-<div class="forecast-card"><div class="year">制造AI</div><div class="value">软硬件联动加快</div><div class="note">AperData类数据底座与食神类垂直模型形成可复制样本，订单将向能闭环执行的产品集中。</div></div>
-<div class="forecast-card"><div class="year">互联网入口</div><div class="value">多终端AI入口扩张</div><div class="note">特斯拉上线豆包验证本土模型进入全球品牌终端，车机、办公、内容与搜索入口将争夺高频Agent流量。</div></div>
+<div class="forecast-card">
+    <div class="year">AI原生APP MAU</div>
+    <div class="value">5.1-5.3亿</div>
+    <div class="note">↑ 持续上涨 | 桌面Agent上线+办公App独立带动月活结构性提升</div>
 </div>
-<div class="analysis-box"><strong>下周风险提示：</strong>DeepSeek高峰时段价格翻倍可能影响部分Agent任务成本；医疗与金融高风险场景必须保留人工复核；具身智能训练场与AperData等产品仍需以真实付费部署、连续运行和单位数据成本验证商业闭环。</div>
+<div class="forecast-card">
+    <div class="year">豆包月活</div>
+    <div class="value">3.9-4.0亿</div>
+    <div class="note">↑ 持续上涨 | 办公App正式发布+特斯拉推送带动渗透率提升</div>
+</div>
+<div class="forecast-card">
+    <div class="year">千问月活</div>
+    <div class="value">1.7-1.75亿</div>
+    <div class="note">↑ 缓慢上涨 | 品牌统一+阿里生态联动Q4预计反弹</div>
+</div>
+<div class="forecast-card">
+    <div class="year">桌面Agent技能总数</div>
+    <div class="value">300+</div>
+    <div class="note">↑ 快速增加 | 三强并立加速生态建设，应用算力结构性提升</div>
+</div>
+<div class="forecast-card">
+    <div class="year">医疗AI覆盖率</div>
+    <div class="value">48-49%</div>
+    <div class="note">↑ 持续上涨 | 国家级实验室+医疗机器人加速渗透</div>
+</div>
+<div class="forecast-card">
+    <div class="year">国产AI芯片出货</div>
+    <div class="value">50-52%</div>
+    <div class="note">↑ 持续上涨 | 昇腾950DT商用+DeepSeek V4.1/V4.2首发全栈适配</div>
+</div>
+<div class="forecast-card">
+    <div class="year">金融大模型出海</div>
+    <div class="value">+2-3家</div>
+    <div class="note">↑ 出口破冰 | FalconTST 2.0带动更多中国金融AI出海</div>
+</div>
+<div class="forecast-card">
+    <div class="year">智能质检渗透率</div>
+    <div class="value">47-48%</div>
+    <div class="note">↑ 持续上涨 | 智能工厂突破+AI测试基础设施化</div>
+</div>
+</div>
+
+<div class="analysis-box">
+<strong>下周重点关注事件：</strong>
+<ul>
+<li><strong>豆包办公App正式发布</strong>（预计8月28-30日）：三强并立格局成形，桌面Agent赛道Q4密集催化</li>
+<li><strong>通义千问5.x后续动作</strong>（预计8月最后一周）：品牌统一后Qwen模型新版本预期+阿里AI实验室与应用板块合并协同</li>
+<li><strong>腾讯WorkBuddy高强度对垒</strong>（预计8月最后一周）：腾讯+元宝组合拳可能本周内放出</li>
+<li><strong>蚂蚁国际FalconTST后续</strong>：是否有更多欧美大行跟随采用，预计8月最后一周开始有B端动作</li>
+<li><strong>DeepSeek V4.2发布</strong>：8月DeepSeek全栈适配+国产芯片首发组合拳预期</li>
+<li><strong>AI+IoT峰会后续</strong>：8月26日深圳峰会发布的边缘大模型方案落地节奏</li>
+<li><strong>具身智能"收敛"动作</strong>：优必选/智元/宇树/小鹏万台级试探交付具体规划</li>
+</ul>
+</div>
+
 </div>
 
 <!-- 7-8 一周要闻汇总表 -->
@@ -460,66 +761,73 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td>8月20日</td>
-    <td>中国平安首次披露AI Token消耗量与智能体经营贡献</td>
-    <td>中国平安</td>
-    <td>6月日均超1200亿Token；AI坐席9.39亿次；辅助销售额573.13亿元</td>
+    <td>08-22</td>
+    <td>豆包将发布独立办公App对标腾讯WorkBuddy，桌面Agent元年三强并立</td>
+    <td>字节跳动/腾讯/阿里</td>
+    <td>200+ 技能，桌面Agent</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>8月20日</td>
-    <td>《中国自动驾驶规模化应用蓝皮书（2026）》在渝发布</td>
-    <td>中国经济信息社/行业机构</td>
-    <td>L2渗透率超70%；城市NOA超20%</td>
+    <td>08-22</td>
+    <td>阿里巴巴通义App正式更名"千问"，阿里AI业务架构升级</td>
+    <td>阿里巴巴</td>
+    <td>统一品牌+架构合并</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>8月19日</td>
-    <td>特斯拉中国车机正式上线豆包大模型并分批推送</td>
-    <td>特斯拉/火山引擎</td>
-    <td>覆盖Model 3、Y、S、X四款主力车型</td>
+    <td>08-20</td>
+    <td>蚂蚁国际FalconTST 2.0被4家全球大行批量采用，金融大模型首次批量出海</td>
+    <td>蚂蚁国际</td>
+    <td>4家全球大行/MASE 0.666</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>8月19日</td>
-    <td>具身智能训练场进入能力沉淀期</td>
-    <td>中国信通院等</td>
-    <td>已投用70+家，在建/规划46家，工业制造占86%</td>
+    <td>08-20</td>
+    <td>中日友好医院获批临床大数据标准化重点实验室，国家级医疗AI平台落地</td>
+    <td>中日友好医院/医渡科技</td>
+    <td>国家级重点实验室</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>8月18日</td>
-    <td>五一视界发布具身数据与应用闭环平台</td>
-    <td>51WORLD</td>
-    <td>物理一致性99%；采集效率提升超10倍；首发价5100元/套</td>
+    <td>08-19</td>
+    <td>火山引擎宣布特斯拉中国车机正式接入豆包大模型（首款上车大模型）</td>
+    <td>火山引擎/特斯拉/字节跳动</td>
+    <td>Model 3/Y/S/X 全系/700+万辆</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>08-19</td>
+    <td>世界机器人大会开幕：医疗/具身/工业机器人集中亮相</td>
+    <td>长木谷/蚂蚁/强联智创</td>
+    <td>6术式手术机器人+1万+例手术</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>8月18日</td>
-    <td>讯飞医疗中期业绩验证医疗AI商业化</td>
-    <td>讯飞医疗</td>
-    <td>H1营收4.46亿元，+49.4%；AI健康助手收入+74.9%</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>8月17日</td>
-    <td>DeepSeek V4全系列采用峰谷定价</td>
-    <td>DeepSeek</td>
-    <td>闲时为高峰时段一半，V4-Flash输出闲时2元/百万Token</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>8月17日</td>
-    <td>老板电器展示食神AI烹饪系统商业化进展</td>
-    <td>老板电器</td>
-    <td>2025年AI厨电销售额23.5亿元，+36%；注册用户超750万</td>
+    <td>08-19</td>
+    <td>肾病AI大模型在大连医科大学附属第一医院投入临床使用</td>
+    <td>大连医通康合/大连医大一院</td>
+    <td>22TB医疗数据集</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>8月14日</td>
-    <td>2026年智能网联汽车规模化应用数据公开</td>
-    <td>工信部/中国商报</td>
-    <td>L2渗透率70.5%；NOA渗透率34.2%；L3进入特定区域试点</td>
+    <td>08-18</td>
+    <td>OpenAI推出青少年版ChatGPT，面向13-17岁学生</td>
+    <td>OpenAI</td>
+    <td>全球青少年用户</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>08-17</td>
+    <td>作业帮AI超级老师发布，学习机行业进入5.0时代</td>
+    <td>作业帮</td>
+    <td>Z100/X70 Ultra高端旗舰</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>08-17</td>
+    <td>券商818理财节十周年，11家券商7家主推AI</td>
+    <td>11家券商</td>
+    <td>智能条件单占活跃客户15%</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 </tbody>
@@ -530,19 +838,31 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section sources-section">
 <h2>数据来源</h2>
 <div class="sources-list">
-<span class="source-tag">DeepSeek API Docs《更新日志》，2026-08-13、2026-08-17</span>
-<span class="source-tag">中国平安《2026年中期业绩》及新浪财经，2026-08-20</span>
-<span class="source-tag">证券日报《大模型走向业务一线 AI“下沉”银行非科技岗位》，2026-08-20</span>
-<span class="source-tag">人民网重庆《中国自动驾驶规模化应用蓝皮书（2026）在渝发布》，2026-08-20</span>
-<span class="source-tag">界面新闻《火山引擎宣布特斯拉正式接入豆包，现已陆续推送》，2026-08-19</span>
-<span class="source-tag">新华网《食神AI如何定义你家厨房？》，2026-08-19</span>
-<span class="source-tag">证券时报《AI驱动厨电新增长：实地走访老板电器》，2026-08-17</span>
-<span class="source-tag">中国信通院等《具身智能训练场研究报告（2026年）》公开摘要，2026-08</span>
-<span class="source-tag">界面新闻《五一视界发布AperData具身数据底座和AperOne具身应用平台》，2026-08-18</span>
-<span class="source-tag">证券时报《讯飞医疗科技：上半年营收4.46亿元 同比增长49.4%》，2026-08-18</span>
-<span class="source-tag">每日经济新闻《讯飞医疗披露2026年中期业绩》，2026-08-19</span>
-<span class="source-tag">OpenRouter公开榜单，经Tokenmaxxing标注数据截至2026-08-19</span>
-<span class="source-tag">中国商报《智能网联汽车驶入规模化应用期》，2026-08-14</span>
+<span class="source-tag">QuestMobile《2026年上半年AI应用市场发展洞察报告》2026-08-04</span>
+<span class="source-tag">界面新闻《AI应用周度观察》2026-08-17至2026-08-23 (2026.08.23)</span>
+<span class="source-tag">36氪《豆包"上车"特斯拉，马斯克为何破例》 2026-08-19</span>
+<span class="source-tag">新浪财经《火山引擎宣布特斯拉正式接入豆包》 2026-08-19</span>
+<span class="source-tag">东方财富《火山引擎宣布特斯拉正式接入豆包，现已陆续推送》 2026-08-19</span>
+<span class="source-tag">腾讯新闻《豆包将推出独立办公App 直接对标腾讯WorkBuddy》 2026-08-22</span>
+<span class="source-tag">腾讯新闻《阿里巴巴通义App正式更名千问》 2026-08-22</span>
+<span class="source-tag">腾讯新闻《2026 AI应用半年报：豆包居首，前10稳定》 2026-08-05</span>
+<span class="source-tag">腾讯新闻《蚂蚁国际FalconTST 2.0进入4家全球大行》 2026-08-20</span>
+<span class="source-tag">腾讯新闻《临床大数据标准化重点实验室落户中日友好医院》 2026-08-20</span>
+<span class="source-tag">腾讯新闻《肾病AI大模型在大连投入临床》 2026-08-19</span>
+<span class="source-tag">腾讯新闻《医疗机器人加速走向临床一线》 2026-08-19</span>
+<span class="source-tag">腾讯新闻《OpenAI推出青少年版ChatGPT》 2026-08-18</span>
+<span class="source-tag">腾讯新闻《作业帮AI超级老师发布 学习机5.0时代》 2026-08-17</span>
+<span class="source-tag">腾讯新闻《券商818理财节十周年 11家券商7家主推AI》 2026-08-17</span>
+<span class="source-tag">新浪财经《华为昇腾950DT芯片8月问世》 2026-06-07</span>
+<span class="source-tag">36氪《DeepSeek-V4明确支持华为昇腾950芯片》 2026-04-24</span>
+<span class="source-tag">IDC FutureScape 2026《重塑中国智慧城市治理模式的十个关键预测》</span>
+<span class="source-tag">HCR《2026年中国具身智能产业系列研究报告-人形机器人篇》</span>
+<span class="source-tag">Atlas Cloud《Seedance 2.0 vs Sora 2 vs Kling 3.0 终极对比》2026</span>
+<span class="source-tag">新华网《瞭望|2026世界机器人大会开幕》 2026-08-19</span>
+<span class="source-tag">QuestMobile研究院《AI原生APP用户规模榜单》 2026-08-05</span>
+<span class="source-tag">凤凰网《特斯拉上线豆包大模型 大模型相关企业1.46万家》 2026-08-22</span>
+<span class="source-tag">财联社《DeepSeek-V4明确支持华为昇腾超节点全面》 2026-04-24</span>
+<span class="source-tag">经济日报《词元（Token）中文译名及日均调用量数据》 2026-04</span>
 </div>
 </div>
 
