@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>九、结论与建议 | 第 34 期</title>
-<style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九、结论与建议 | 第 34 期</title>
+    <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
@@ -16,10 +16,11 @@ header .subtitle { font-size: 14px; color: #aab; margin-top: 6px; }
 .section { background: white; border-radius: 8px; padding: 24px 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .section h2 { font-size: 17px; color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 10px; margin-bottom: 16px; }
 .section h3 { font-size: 14px; color: #0f3460; margin: 16px 0 8px; }
-.highlight-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 16px 18px; margin: 16px 0; }
-.highlight-box h4 { font-size: 14px; margin-bottom: 10px; font-weight: 600; }
-.highlight-box ul { font-size: 12.5px; padding-left: 22px; }
-.highlight-box ul li { margin: 6px 0; line-height: 1.7; }
+.section h4 { font-size: 13px; color: #333; margin: 12px 0 8px; font-weight: 600; }
+.highlight-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 16px; margin: 16px 0; }
+.highlight-box h4 { font-size: 14px; margin-bottom: 8px; }
+.highlight-box ul { font-size: 13px; padding-left: 20px; }
+.highlight-box ul li { margin: 4px 0; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
 th { background: #1a1a2e; color: white; padding: 9px 12px; text-align: left; font-weight: 500; }
 td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
@@ -27,6 +28,7 @@ tr:hover { background: #f8f9fc; }
 tr.week-highlight { background: #fff8e1; }
 .tag { display: inline-block; background: #e8f4fd; color: #1976D2; font-size: 10px; padding: 2px 8px; border-radius: 10px; margin: 1px; }
 .footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
+.col-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .source { color: #888; font-size: 10px; margin-top: 4px; }
 .timeline { border-left: 2px solid #e0e0e0; padding-left: 18px; margin: 10px 0; }
 .timeline-item { position: relative; margin-bottom: 14px; padding-left: 14px; }
@@ -39,40 +41,42 @@ tr.week-highlight { background: #fff8e1; }
 .change-flat { color: #888; }
 .change-new { color: #e53935; font-weight: 600; }
 .change-down { color: #c62828; font-weight: 600; }
+.warning { color: #e65100; font-size: 11px; }
 .analysis-box { background: #fafafa; border: 1px solid #e0e0e0; border-radius: 5px; padding: 10px 14px; margin: 8px 0; }
+.week-summary-box { background: linear-gradient(135deg, #43a047 0%, #2e7d32 100%); color: white; border-radius: 8px; padding: 16px; margin: 16px 0; }
+.week-summary-box h4 { font-size: 13px; margin-bottom: 8px; }
+.week-summary-box table { color: white; font-size: 11px; }
+.week-summary-box th { background: rgba(255,255,255,0.2); color: white; }
+.week-summary-box td { border-color: rgba(255,255,255,0.2); padding: 6px 10px; }
 .deep-event { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 18px 20px; margin: 16px 0; }
 .deep-event-title { font-size: 15px; font-weight: 600; margin-bottom: 10px; }
 .deep-event h4 { font-size: 13px; color: rgba(255,255,255,0.85); margin: 12px 0 6px; }
 .deep-event p { font-size: 12px; color: rgba(255,255,255,0.9); margin-bottom: 6px; }
-.policy-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
-.policy-table thead { background: #1a1a2e; color: white; }
-.policy-table th { padding: 9px 12px; text-align: left; font-weight: 500; }
-.policy-table td { padding: 8px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
-.policy-table tr:hover { background: #f8f9fc; }
-.policy-tag { display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
-.tag-new { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7; }
-.tag-continue { background: #e3f2fd; color: #1565c0; border: 1px solid #90caf9; }
-.tag-tighten { background: #fce4ec; color: #c62828; border: 1px solid #f48fb1; }
-.tag-review { background: #fff8e1; color: #f57f17; border: 1px solid #ffe082; }
 .forecast-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
 .forecast-card { background: #f8f9fc; border: 1px solid #e0e0e0; border-radius: 6px; padding: 14px; }
 .forecast-card .year { font-size: 13px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
-.forecast-card .value { font-size: 16px; color: #0f3460; font-weight: 700; }
-.forecast-card .note { font-size: 11px; color: #555; margin-top: 6px; line-height: 1.5; }
+.forecast-card .value { font-size: 18px; color: #0f3460; font-weight: 700; }
+.forecast-card .note { font-size: 11px; color: #888; margin-top: 4px; }
 .sources-section { background: #f8f9fc; }
 .sources-list { display: flex; flex-wrap: wrap; gap: 6px; }
 .source-tag { background: #e8f4fd; border: 1px solid #d0e8f5; border-radius: 20px; padding: 3px 10px; font-size: 11px; color: #1976D2; }
 .data-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 20px; }
 .data-card { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 8px; padding: 16px; }
 .data-card .label { font-size: 11px; opacity: 0.85; margin-bottom: 4px; }
-.data-card .value { font-size: 20px; font-weight: 700; }
-.data-card .sub { font-size: 11px; opacity: 0.75; margin-top: 4px; }
-.footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
-.chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
-.overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
-.overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
-.overview-text strong { color: #0f3460; }
-.overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
+.data-card .value { font-size: 22px; font-weight: 700; }
+.data-card .value .unit { font-size: 12px; font-weight: 400; opacity: 0.8; }
+.data-card .change { font-size: 11px; opacity: 0.75; margin-top: 4px; }
+.findings-table { margin: 16px 0; }
+.findings-table td { background: #fafafa; }
+.findings-table td:first-child { font-weight: 600; color: #0f3460; width: 120px; }
+.findings-table tr:hover { background: #f0f4ff; }
+.suggestion-box { background: #f8f9fc; border-left: 4px solid #2196F3; padding: 12px 16px; margin: 8px 0; border-radius: 4px; }
+.suggestion-box h4 { color: #1976D2; margin-bottom: 6px; font-size: 13px; }
+.suggestion-box ul { font-size: 12px; padding-left: 18px; }
+.suggestion-box ul li { margin: 4px 0; }
+.summary-box { background: linear-gradient(135deg, #e3f2fd 0%, #f5f6fa 100%); border: 1px solid #1976D2; border-left: 5px solid #2196F3; border-radius: 8px; padding: 20px; margin: 16px 0; color: #1a1a2e; }
+.summary-box h4 { font-size: 14px; color: #0f3460; font-weight: 700; margin-bottom: 10px; border-bottom: 1px solid rgba(25,118,210,0.2); padding-bottom: 8px; }
+.summary-box p { font-size: 12.5px; color: #333; margin-bottom: 8px; line-height: 1.8; }
 .all-chapters-nav { background: white; border-radius: 10px; padding: 12px 16px; margin: 12px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
 .chapter-tabs { display: flex; flex-wrap: wrap; gap: 4px 0; align-items: center; justify-content: center; }
 .chapter-tab { display: inline-flex; align-items: center; gap: 4px; padding: 4px 8px; border-radius: 4px; font-size: 13px; text-decoration: none; color: #555; transition: all 0.15s; white-space: nowrap; }
@@ -89,37 +93,8 @@ tr.week-highlight { background: #fff8e1; }
 .nav-home { background: #1a1a2e; }
 .nav-prev { background: #0f3460; }
 .nav-next { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-
-/* 第 9 章特有样式 */
-.findings-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 12px; }
-.findings-table thead { background: #1a1a2e; color: white; }
-.findings-table th { padding: 10px 12px; text-align: left; font-weight: 500; }
-.findings-table th:first-child { width: 240px; }
-.findings-table th:nth-child(2) { width: auto; }
-.findings-table th:last-child { width: 120px; }
-.findings-table td { padding: 10px 12px; border-bottom: 1px solid #eee; vertical-align: top; }
-.findings-table td:first-child { font-weight: 600; color: #0f3460; line-height: 1.6; }
-.findings-table tr:hover { background: #f8f9fc; }
-.findings-table tr.week-highlight { background: #fff8e1; }
-
-.suggestion-box { background: #f8f9fc; border-left: 4px solid #2196F3; padding: 14px 18px; margin: 12px 0; border-radius: 4px; }
-.suggestion-box h4 { font-size: 13.5px; color: #1a1a2e; margin-bottom: 8px; font-weight: 700; }
-.suggestion-box ul { margin: 4px 0 4px 18px; padding-left: 8px; }
-.suggestion-box ul li { font-size: 12px; color: #333; margin-bottom: 6px; line-height: 1.7; }
-.suggestion-box strong { color: #0f3460; }
-
-.summary-box { background: linear-gradient(135deg, #f8f9fc 0%, #e3f2fd 100%); border-left: 5px solid #2196F3; padding: 14px 18px; margin: 12px 0; border-radius: 4px; }
-.summary-box h4 { font-size: 13.5px; color: #1a1a2e; margin-bottom: 8px; font-weight: 700; }
-.summary-box p { font-size: 12px; color: #333; margin-bottom: 8px; line-height: 1.7; text-align: justify; }
-.summary-box strong { color: #0f3460; }
-
-.suggestion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
-@media (max-width: 768px) { .suggestion-grid { grid-template-columns: 1fr; } .chapter-tabs { flex-direction: column; } }
-
-.section ul { margin: 8px 0 8px 20px; padding-left: 16px; }
-.section ul li { font-size: 12px; color: #333; margin-bottom: 6px; line-height: 1.6; }
-@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } .impact-chain { flex-direction: column; } .chain-arrow { transform: rotate(90deg); } }
-</style>
+@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
+    </style>
 </head>
 <body>
 
@@ -145,460 +120,239 @@ tr.week-highlight { background: #fff8e1; }
 <a href="结论与建议报告.html" class="chapter-tab active"><span class="chapter-tab-num">9.</span><span class="chapter-tab-title">结论</span></a>
 </div></div>
 
-<!-- 本章关键概述 -->
-<div class="chapter-overview">
-<div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">
-<p>第 34 周（<strong>2026-08-19 ~ 2026-08-26</strong>）是<em>中国智算市场从"规模驱动"向"质效驱动"切换的关键一周</em>。本周综合前八章数据，提炼出本周<strong>六大核心发现</strong>，覆盖政策、市场、技术、区域、应用、产业格局六大维度，全面反映智算行业进入"系统增效+垂直整合+生态闭环"新阶段。</p>
-<p><strong>核心判断：</strong>①算力政策从"加快建设"转向"有序建设"，国家数据局明确"算力设施建设从资源扩张到系统增效"，算电协同指标同比 +496.8%；②智能算力规模 1037.3 EFLOPS（+43%）、AI IaaS 486.7 亿元（+128%），H100 一年期合约 $2.35/GPU/h（+38%）；③华为昇腾国内份额 20%（+11pct），英伟达从 95% 降至 55%（-40pct），国产替代进入"好用"阶段；④液冷国标 GB/T 48023-2026 获批、摩尔线程 S5000 完成 DeepSeek-V4 万亿参数适配，国产 GPU 首次支撑万亿参数大模型完整推理闭环；⑤八大算力枢纽周变化"三高三低"（和林格尔 +12.1%、粤港澳韶关 +16.7%、成渝重庆 +10% 三枢纽周增超 10%）；⑥韶关集群签约 23 项目 1116 亿元、落地 5 个万卡集群（全国领先），鹏城云脑 III 建成 16000P 全栈自主可控。</p>
-<p><strong>战略建议：</strong>面向政府/监管机构、智算服务商、芯片供应商、行业用户四类主体共 <strong>12 条针对性建议</strong>，覆盖算电协同、国产替代、Token 经济、跨境算力、应用落地等关键议题。下阶段四大趋势：①智算规模 2026 年突破 1460.3 EFLOPS、2028 年 2781.9 EFLOPS、2030 年 Token 经济 15 万 PetaTokens；②国产芯片 2026 年市场份额 50%+；③液冷+光互联重塑 AIDC（液冷渗透 53%）；④桌面 Agent 元年 + 行业大模型规模化（AI 原生 APP 月活 4.99 亿）。</p>
-</div>
-</div>
-
 <div class="data-note">
-<strong>数据说明：</strong>本周报基于前八章（第一章政策环境、第二章市场规模、第三章区域算力、第四章竞争格局、第五章技术趋势、第六章供应商、第七章应用场景、第八章广东智算建设）综合分析，所有数据均标注来源章节。报告期号：第 34 期（2026 年 8 月 19 日—2026 年 8 月 26 日）。<br>
-<strong>关键时点：</strong>2026 绿色算力大会（8/22 呼和浩特）、2026 中国算力大会预热（9/11-13 廊坊）、液冷国标 GB/T 48023-2026 获批（8/25，国家标准化管理委员会）。<br>
-<strong>建议分类：</strong>① 政府/监管机构 3 条 ② 智算服务商 3 条 ③ 芯片供应商 3 条 ④ 行业用户 3 条（合计 12 条）。
+<strong>数据说明：</strong>本章内容基于前八章周报（政策环境、规模市场、区域算力、竞争格局、技术趋势、供应商、应用场景、广东智算中心建设）的最新数据综合分析得出。结论与建议均标注数据来源，确保可追溯、可验证。<br>
+<strong>分析周期：</strong>2026-08-19—2026-08-26（本周）。
 </div>
 
 <!-- 9-1 本周核心发现 -->
 <div class="section">
-<h2>9-1 本周核心发现（综合前八章）</h2>
-<p style="font-size:12.5px;color:#444;line-height:1.7;">本周从政策、市场、区域、竞争、技术、供应商、应用、广东建设八维度，提炼 6 条核心发现。其中<strong>第 6 条来自第八章广东智算中心建设</strong>，反映韶关集群签约规模、鹏城云脑 III 万卡点亮、联通韶关 EPC 中标等关键数据。</p>
+<h2>9-1 本周核心发现</h2>
+<h3>本周五大核心发现</h3>
 <table class="findings-table">
-<thead>
 <tr>
-<th>发现标题</th>
-<th>数据支撑</th>
-<th>来源章节</th>
+    <td>发现一：算力网顶层政策升级,工信部首次定调'新一代信息基础设施'</td>
+    <td>8月26日国新办发布会,工信部副部长辛国斌明确将'算力网'定性为'新一代信息基础设施',是十五五规划纲要首次权威解读。本周新增政策/文件12份(较上周9份,↑+33%周环比),央地两级协同推进'算电协同''招标AI化''Token经济'四大主题。1+M+N节点体系已接入316 EFLOPS智算资源、72万张GPU加速卡。</td>
 </tr>
-</thead>
-<tbody>
-
-<tr><td><strong>发现一：算力政策从规模驱动转向质效驱动，「东数西算+算电协同」四主线定型</strong></td><td>国家数据局副局长夏冰在 2026 绿色算力大会明确"算力设施建设迎来从资源扩张到系统增效的新阶段"；本周新增政策/文件 9 项（+200%），江西算力券兑现 3000 万元，内蒙古和林格尔签约 1361 亿元；国家发改委 7·30 形势通报会口径从"加快建设"调整为"有序建设"，算电协同指标同比 +496.8%。</td><td>第一章 政策环境</td></tr>
-<tr><td><strong>发现二：中国智能算力规模 1037.3 EFLOPS，AI IaaS 同比 +128%，推理算力占比突破 70%</strong></td><td>IDC 与浪潮信息 2025 年报：智能算力规模从 725.3 → 1037.3 EFLOPS（+43%），AI IaaS 智算云市场 213.4 → 486.7 亿元（+128%），H100 一年期合约租金半年内涨 38.2% 至 $2.35/GPU/h，国产 AI 芯片份额从 30% → 41%（+36.7%），算力租赁市场规模 1700 → 2600 亿元（+52.9%）。</td><td>第二章 市场规模</td></tr>
-<tr><td><strong>发现三：八大算力枢纽周变化「三高三低」，和林格尔 1361 亿签约破纪录</strong></td><td>和林格尔 +12.1%、粤港澳韶关 +16.7%、成渝重庆 +10% 三枢纽周增超 10%；京津冀/长三角/宁夏/甘肃/贵州 周增 3%-7%。京津冀 36.5 万 P（+1.3 万 P）、长三角 6.6 万 P、宁夏中卫 7.9 万 P（绿电 90%）、甘肃庆阳 17.5 万 P（国产十万卡）、贵州贵安 11.7 万 P；和硕数据 +1.53 万 P 领涨。</td><td>第三章 区域算力</td></tr>
-<tr><td><strong>发现四：华为昇腾国内份额 20%（+11pct）超越英伟达，国产替代进入"好用"阶段</strong></td><td>华为昇腾全年出货 81.2 万张稳居国产第一，国内份额从 9% → 20%（+11pct）；英伟达从 95% → 55%（-40pct），2026 年 Bernstein 预测英伟达在华份额将进一步降至 8%；阿里云外部营收 +45%、AI 连续 10 季三位数增长；联想 AI 业务收入 634 亿元（+60%）；协创数据 Q1 净利 +343%、利通电子 +821%。</td><td>第四章 竞争格局</td></tr>
-<tr><td><strong>发现五：液冷国标 GB/T 48023-2026 落地，国产 GPU 支撑 DeepSeek-V4 万亿参数全闭环</strong></td><td>首部数据中心冷板式液冷国标获批、2027 年 2 月 1 日实施；摩尔线程 S5000 完成 DeepSeek-V4 1.6T 参数 MoE 全链路适配（MUSA+SGLang），国产 GPU 首次支撑万亿参数大模型完整推理闭环；液冷渗透率从 12% → 28%，万卡集群开工量 +210%，2026 全球智算液冷市场 1147 亿元（+273%）；CPO/SiPh 光模块渗透超 60%。</td><td>第五章 技术趋势</td></tr>
-<tr><td><strong>发现六：广东智算建设「韶关 23 项目 1116 亿 + 深圳鹏城云脑 III 16000P」引领大湾区</strong></td><td>韶关集群签约 23 个智算中心项目、总投资 1116 亿元、总中标算力 3.1GW（去年同期 62 倍）、已落地 5 个万卡集群（全国 10 大集群数量领先）；鹏城云脑 III 建成 16000P（14000P 昇腾 910C 全国首个万卡级国产全栈集群点亮），深圳 80 EFLOPS 实时算力目标；联通韶关 2 号楼机电 EPC 中标 2.5662 亿元（华为+中讯+中建三局联合体）。</td><td>第八章 广东建设</td></tr>
-
-</tbody>
+<tr>
+    <td>发现二：国产AI芯片份额突破80%,推理算力首次超越训练成为主导</td>
+    <td>中国智能算力规模约1654 EFLOPS(月环比+4%),AI算力市场规模约2608亿元(月环比+3.5%),提前完成IDC 2026年原预测(1460.3 EFLOPS)。华为+互联网ASIC占国产份额近80%,英伟达+AMD从去年34%降至21%。推理算力2026H1占比达66%+(年变化+14pct),豆包/火山日均Token达~138万亿。</td>
+</tr>
+<tr>
+    <td>发现三：超节点+液冷+光模块三技术爆发,系统级创新成胜负手</td>
+    <td>华为Atlas 950 SuperPoD在WAIC 2026真机首秀,规模/算力/内存/互联带宽全面领先英伟达NVL144(56.8倍/6.7倍/15倍/62倍)。曙光C8000 V3.0单机柜900kW、PUE<1.05。800G/1.6T光模块市场2026年规模146亿美元(占整体~64%),1.6T需求从年初1000万只上调至2000万只以上。</td>
+</tr>
+<tr>
+    <td>发现四：云厂集体涨价+运营商系智算放量,行业进入'供给紧-价格升-需求爆'新周期</td>
+    <td>阿里云/腾讯云/百度智能云AI算力服务累计涨价5%-34%,H100一年期合约价2.35美元/小时(年同比+38.2%)。中国移动智算二期集采本周启动(规模较一期+50%),昇腾384超节点已商用落地750+套。中国电信上半年算力资本开支占比突破55%达255亿元。</td>
+</tr>
+<tr>
+    <td>发现五：广东智算'多期滚动发包'冲刺,韶关集群本周新增24条公告</td>
+    <td>本周广东智算信息表收录81条新公告(8-19~8-26),月累计113条(>80条硬性下限)。韶关集群本周新增24条(浈江A7智算中心集中发包+220kV自建变电站工程+全过程跟踪审计),机电工程占比53%。韶关集群累计23个项目,总投资超1116亿元、17万机架。和林格尔集群13个重点项目集中签约1361亿元;甘肃庆阳集群算力突破21.5万P、利用率超90%。</td>
+</tr>
 </table>
-
-<div class="analysis-box">
-<h4 style="color:#0f3460;font-size:13px;margin-bottom:8px;">📌 发现总结与横向关联</h4>
-<p style="font-size:12px;color:#333;line-height:1.7;">本周六大发现呈现"<strong>政策驱动市场、市场拉动技术、技术驱动区域、区域承载应用</strong>"的完整逻辑闭环：①政策端"质效驱动"新阶段（第一章）→ ②市场端规模与价格双升（第二章）→ ③区域端枢纽分化"三高三低"（第三章）→ ④竞争端国产替代"好用"阶段（第四章）→ ⑤技术端液冷国标+国产 GPU 全闭环（第五章）→ ⑥供应+应用+建设端垂直整合（第六/七/八章）。这一闭环反映智算行业从<em>"打地基"的扩容期</em>过渡到<em>"用算力"的兑现期</em>，下阶段看 Token 经济、桌面 Agent、行业大模型、跨境算力四大新方向。</p>
-</div>
 </div>
 
 <!-- 9-2 战略建议 -->
 <div class="section">
-<h2>9-2 战略建议（面向四类主体 12 条）</h2>
-<p style="font-size:12.5px;color:#444;line-height:1.7;">基于本周六大核心发现，为<strong>政府/监管机构、智算服务商、芯片供应商、行业用户</strong>四类主体共 12 条针对性建议。每条建议均含背景、建议内容、量化目标三要素，避免空洞表述，所有数据均来自前 8 章具体引用。</p>
-
-<h3 style="color:#0f3460;border-left:3px solid #667eea;padding-left:10px;margin-top:16px;">9-2-1 对政府/监管机构的建议（3 条）</h3>
-
+<h2>9-2 战略建议</h2>
+<h3>9-2-1 对政府决策部门的建议</h3>
 <div class="suggestion-box">
-<h4>① 加快"算电协同"政策落地，将 PUE≤1.25/1.20 监管升级为能效梯度电价机制</h4>
+<h4>① 加快算力网顶层设计落地,推动"跨域调度+计量计费+低时延网络"三大配套</h4>
 <ul>
-<li><strong>背景：</strong>本周绿色算力大会明确"系统增效"新阶段，国家发改委口径从"加快建设"调整为"有序建设"；本周新增政策 9 项（+200%），算电协同指标同比 +496.8%；PUE≤1.25/1.20 监管持续收紧，但尚缺经济激励闭环。</li>
-<li><strong>建议：</strong>（1）建立"算力+电力"双指标配额制，对新建枢纽绿电占比≥80%给予电价优惠（北京差别电价模式向全国推广）；（2）将液冷国标 GB/T 48023-2026 与 PUE≤1.20 强制要求挂钩，2027 年 2 月 1 日实施后未达标项目禁止并网；（3）建立"算力券+绿电券"双券联动机制，江西 3000 万元算力券模式应全国推广，2027 年覆盖 30+ 城市。</li>
-<li><strong>量化目标：</strong>2027 年全国八大算力枢纽新建项目绿电占比≥80%（硬指标），液冷渗透率≥53%；2030 年自主可控算力占比≥60%。</li>
+<li><strong>背景：</strong>8月26日工信部首次权威定调算力网为"新一代信息基础设施",1+M+N体系已接入316 EFLOPS智算资源、72万张GPU卡,但跨域调度、计量计费、网络时延标准尚未发布,第二批区域节点预计9月公示。</li>
+<li><strong>建议：</strong>(1)9月底前出台《全国一体化算力网调度技术规范》,明确毫秒级时延上限、Token/卡时计量标准;(2)2026年底前完成第二批区域节点(京津冀、长三角、粤港澳枢纽)接入验收;(3)推动"算电协同"试点扩围至青海、新疆、内蒙古,新建智算中心PUE严控1.2以下。</li>
+<li><strong>量化目标：</strong>2026年底前实现全国八大算力枢纽互联互通、跨域调度延迟<20ms。</li>
 </ul>
 </div>
 <div class="suggestion-box">
-<h4>② 设立"国芯训国模"专项基金，推动韶关万卡集群模式向京津冀、长三角复制</h4>
+<h4>② 深化"AI+制造"专项行动落地,撬动2000亿元算力投资</h4>
 <ul>
-<li><strong>背景：</strong>本周第八章披露韶关集群签约 23 个项目 1116 亿元、落地 5 个万卡集群（数量全国领先），但京津冀（36.5 万 P）、长三角（芜湖 6.6 万 P）万卡国产化集群进度落后；华为昇腾国内份额已达 20%（+11pct）但单点突破尚未形成全国联动。</li>
-<li><strong>建议：</strong>（1）借鉴"国芯训国模"韶关模式（华为+联通+中建联合体中标韶关 2 号楼机电 2.5662 亿元），在张家口、芜湖、贵安同步推进国产万卡集群；（2）设立 500 亿元"国产算力应用专项基金"，对采用昇腾/寒武纪/燧原/摩尔/沐曦/壁仞/天数芯片的智算中心给予 30% 投资补贴；（3）建立"鹏城云脑 III（16000P 全栈自主可控）"国家大科学装置开放共享机制，向中小模型训练团队开放 50% 算力。</li>
-<li><strong>量化目标：</strong>2027 年国产万卡集群数量≥15 个（当前韶关 5 个 + 在建 10 个），覆盖全部八大枢纽。</li>
+<li><strong>背景：</strong>8月21日国务院常务会议通过《关于深入实施"人工智能+"行动的意见》,三年内支持100个"AI+制造"示范场景,预计撬动智算投资2000亿元。Q3-Q4将进入第二批招标密集落地期,重点关注湖北、广东、江苏三省示范项目。</li>
+<li><strong>建议：</strong>(1)尽快发布第二批"AI+制造"示范场景清单(预计单批50亿元/省);(2)配套算力券补贴政策(参照上海"模塑申城"工程最高100%补贴模式);(3)建立示范项目"算力使用强度"评估机制,防止"重建设、轻应用"。</li>
+<li><strong>量化目标：</strong>2026年底前完成100个"AI+制造"示范场景认定,撬动智算投资2000亿元、企业级AI推理部署占比突破70%。</li>
 </ul>
 </div>
 <div class="suggestion-box">
-<h4>③ 完善"Token 经济"治理框架，建立算力调度+数据流通+价值结算三位一体机制</h4>
+<h4>③ 加速零碳算力+西部消纳,完善"东数西算"配套政策</h4>
 <ul>
-<li><strong>背景：</strong>本周第八章提到韶关集群 2026 年 1 月率先获批开展"来数加工"业务，构建"港数韶算、澳数韶算"跨境合作模式；中国日均 Token 调用量两年增长超千倍（达 140 万亿）；粤港澳大湾区构建"1ms 深圳+3ms 韶关+10ms 贵安"跨域调度体系。</li>
-<li><strong>建议：</strong>（1）制定《Token 算力结算与数据流通管理办法》，明确算力消费侧与供给侧的 Token 计价标准；（2）将大湾区"深广韶数据大通道"（到广州 1ms、到深圳 1.2ms）经验向"东数西算"八大枢纽推广，2027 年实现全国跨枢纽时延≤5ms；（3）建立"算力调度券"试点，鼓励 Token 调用向西部低成本绿色算力倾斜。</li>
-<li><strong>量化目标：</strong>2027 年全国跨枢纽调度量占比≥15%（当前 1+M+N 节点已接入 316 EFLOPS、72 万张 GPU、月调度近 300 次）。</li>
+<li><strong>背景：</strong>工信部8月3日启动国家级零碳工厂、零碳算力设施建设工作。甘肃庆阳集群算力突破21.5万P、利用率超90%为全国最高消纳水平,内蒙古乌兰察布星河基地2GW投产(智算11万P),西部消纳压力凸显。</li>
+<li><strong>建议：</strong>(1)对西部智算中心给予0.05元/千瓦时电价补贴,要求PUE<1.15;(2)完善绿电交易、碳排放核算机制,推动算力中心碳中和认证;(3)建立跨省算力调度补偿机制,东数西算场景给予数据传输费减免。</li>
+<li><strong>量化目标：</strong>2026年底西部枢纽节点智算规模占比突破50%,新建算力中心100%使用绿电。</li>
 </ul>
 </div>
-
-
-<h3 style="color:#0f3460;border-left:3px solid #667eea;padding-left:10px;margin-top:16px;">9-2-2 对智算服务商的建议（3 条）</h3>
-
+<h3>9-2-2 对电信运营商的建议</h3>
 <div class="suggestion-box">
-<h4>① 把握 H100 一年期合约涨价 38% 至 $2.35/GPU/h 的卖方市场窗口，锁定 2027 年长约</h4>
+<h4>① 加速国产芯片替代节奏,降低对H100/H200的依赖度</h4>
 <ul>
-<li><strong>背景：</strong>本周 H100 一年期合约租金半年内涨 38% 至 $2.35/GPU/h，国内云厂商阿里、百度、腾讯集体调价 5%-34%；协创数据 Q1 净利 +343%、利通电子 +821%，新签合同交付排期延至 2027 年；H200 自 2026 年 1 月起海关不允许进入大陆（实际出货为零）。</li>
-<li><strong>建议：</strong>（1）智算服务商立即与英伟达/国产芯片厂商签订 2-3 年长约，锁定 H100/Blackwell/昇腾 950DT 产能（Blackwell 8-9 月前产能已全满租）；（2）建立"训练算力+推理算力"分层定价机制，推理算力按 Token 计价（豆包日均 180 万亿 Token）；（3）拓展中东、东南亚等海外算力转售渠道，对冲国内 HBM 涨价（HBM3e 12Hi 单颗升至约 700 美元）。</li>
-<li><strong>量化目标：</strong>2026 年底 AI 算力订单储备≥18 个月交付能力；推理业务营收占比≥40%。</li>
+<li><strong>背景：</strong>H100一年期合约价2.35美元/小时(年同比+38.2%),H200时租价格3.5美元/小时(年同比+40%),Blackwell B200将于2026年10月续约价从2.63涨至5.10美元/小时(涨幅+94%)。国产芯片份额已升至80%,但算力服务对英伟达仍有结构性依赖。</li>
+<li><strong>建议：</strong>(1)2026年Q4前完成核心算力服务国产化率提升至50%以上;(2)加大昇腾950PR、寒武纪思元590、海光DCU等国产芯片集采力度,优先采用超节点方案;(3)建立国产芯片混合调度能力,保障兼容性与性能稳定。</li>
+<li><strong>量化目标：</strong>2026年底运营商系智算国产芯片占比突破60%,2027年达80%。</li>
 </ul>
 </div>
 <div class="suggestion-box">
-<h4>② 加速"国产芯片+国产集群+国产云"垂直整合，参与林格尔/庆阳/韶关三大国产集群</h4>
+<h4>② 加大超节点+液冷技术投入,卡位推理算力主导新周期</h4>
 <ul>
-<li><strong>背景：</strong>本周绿色算力大会和林格尔签约 13 项目 1361 亿元（万国数据 200 亿/5 年、中金数据 GW 级零碳基地首期 420MW）；甘肃庆阳国产十万卡产业园国产芯片利用率超 90%；韶关"国芯训国模"万卡集群满月、第二集群 1.5 万 P 规划启动。</li>
-<li><strong>建议：</strong>（1）云厂商（阿里、腾讯、华为、移动云、联通云）联合国产芯片厂商（华为、寒武纪、摩尔线程、沐曦）建立"国产万卡池"，按"国芯训国模"模式交付；（2）把握庆阳、韶关、和林格尔、芜湖（6.6 万 P）、贵安（11.7 万 P）五大西部低成本集群的算力调度优先权；（3）借鉴和林格尔 200 亿 5 年长约模式，与运营商签订 5-10 年算力消纳协议。</li>
-<li><strong>量化目标：</strong>2027 年国产算力营收占比≥60%（华为云已进 Gartner 魔力象限"领导者"）；西部低成本集群消纳量占比≥30%。</li>
+<li><strong>背景：</strong>推理算力2026H1占比已达66%+(年变化+14pct),预计2027年突破70%。华为Atlas 950 SuperPoD已商用落地750+套,规模/算力/内存/互联带宽四方面全面领先英伟达NVL144。曙光C8000 V3.0单机柜900kW、PUE<1.05。</li>
+<li><strong>建议：</strong>(1)2026年Q4前部署Atlas 950超节点不少于200套,优先覆盖京津冀、长三角、粤港澳推理集群;(2)新建智算中心100%采用液冷,PUE严控1.05以下;(3)布局800G/1.6T光模块,匹配超节点高带宽互联需求。</li>
+<li><strong>量化目标：</strong>2026年底超节点规模达1000套,液冷数据中心占比超过50%。</li>
 </ul>
 </div>
 <div class="suggestion-box">
-<h4>③ 把握 IDC 与国产应用爆发，将 AI 原生 APP 4.99 亿月活/豆包 3.82 亿转化为 Token 收入</h4>
+<h4>③ 深耕韶关/和林格尔/庆阳三大集群,复制"广东经验"</h4>
 <ul>
-<li><strong>背景：</strong>本周 QuestMobile：AI 原生 APP 月活 4.99 亿（+13.4%），豆包 3.82 亿（+10.7%）、千问 1.67 亿、DeepSeek 1.30 亿、元宝 0.50 亿（+25%）；豆包日均 Token 调用量 180 万亿（半年涨 260%）；中国日均 Token 调用量两年增长超千倍达 140 万亿。</li>
-<li><strong>建议：</strong>（1）云厂商推出"Token 套餐卡"（参照运营商流量包），覆盖豆包/千问/DeepSeek/元宝等头部应用，分成比例 30%-50%；（2）建立"推理算力+行业模型"行业云（金融 FalconeTST/医疗/制造），按调用量计费；（3）布局边缘算力（IDC 预测 2027 年中国 70% 城市部署 AI 智能体），与电信运营商共建边缘节点。</li>
-<li><strong>量化目标：</strong>2026 年 Token 套餐营收占比≥25%；行业云客户数≥5000 家。</li>
+<li><strong>背景：</strong>韶关集群累计23个项目、总投资超1116亿元、17万机架,本周新增24条公告集中在浈江A7智算中心。和林格尔集群13个重点项目集中签约1361亿元(万国数据/中金/协鑫入局)。甘肃庆阳集群算力突破21.5万P、利用率超90%。</li>
+<li><strong>建议：</strong>(1)三大集群复制"多期滚动发包+EPC+机电分包"模式,提速机电工程交付;(2)建立"集群级算力调度平台",实现跨集群跨厂商统一调度;(3)配套"算力券+电价补贴"组合拳,吸引AI推理需求东数西算。</li>
+<li><strong>量化目标：</strong>2026年底韶关集群规模突破15万P,和林格尔突破20万P,庆阳突破25万P。</li>
 </ul>
 </div>
-
-
-<h3 style="color:#0f3460;border-left:3px solid #667eea;padding-left:10px;margin-top:16px;">9-2-3 对芯片供应商的建议（3 条）</h3>
-
+<h3>9-2-3 对算力需求企业的建议</h3>
 <div class="suggestion-box">
-<h4>① 抓住国产替代"好用阶段"红利，深耕推理+边缘高毛利市场（避开 HBM 受限的训练高端）</h4>
+<h4>① 芯片供应商:加速昇腾950PR/思元590量产,缓解产能瓶颈</h4>
 <ul>
-<li><strong>背景：</strong>本周 Bernstein 预测 2026 年英伟达在华份额跌至 8%、华为升至 50%；推理算力占比突破 70%+；国产 AI 芯片份额从 30% → 41%（+36.7%）；HBM3e 12Hi 单颗价格升至约 700 美元（SK 海力士 2026 全年产能售罄）；Bernstein 预测 2027 年 HBM 短缺 50-60%。</li>
-<li><strong>建议：</strong>（1）国产芯片厂商聚焦推理芯片+边缘 AI 芯片（避开训练高端 HBM 受限赛道）；（2）摩尔线程/燧原/沐曦/壁仞/天数等"国产六姐妹"加速 Chiplet+HBM2e 替代方案（如寒武纪思元 590/690 的"1+4"Chiplet+CoWoS 模式）；（3）借鉴华为昇腾 950PR 模式与字节/阿里/腾讯累计预订数十万颗，建立"国产模型+国产芯片"深度绑定。</li>
-<li><strong>量化目标：</strong>2026 年国产 AI 芯片市场份额≥50%（IDC 2025 年 41%）；推理芯片出货量同比 +200%。</li>
+<li><strong>背景：</strong>华为计划2026年出货昇腾950 Pro约75万颗,但SMIC产能+HBM+先进封装三大制造瓶颈仍未根本解决。TrendForce上调2026年中国AI芯片国产化预测至80%,DeepSeek V4预计在昇腾首发推理。</li>
+<li><strong>建议：</strong>(1)2026年Q4前昇腾950PR流片后产能爬坡至月产5万颗;(2)联合SK海力士/长鑫存储打通HBM3E/3国产化路径;(3)与中芯国际、华虹半导体锁定2027年产能长约。</li>
+<li><strong>量化目标：</strong>2026年国产AI芯片出货量达200万张,2027年突破350万张。</li>
 </ul>
 </div>
 <div class="suggestion-box">
-<h4>② 加速 Chiplet+先进封测布局，把握华天科技 30 亿二期/中芯 N+2 配额窗口</h4>
+<h4>② 智算服务商:加快推理算力部署,抢位Token经济新蓝海</h4>
 <ul>
-<li><strong>背景：</strong>本周华天科技 30 亿元先进封测二期项目披露（投产后年封测存储芯片 4.3 亿只，主供 AI 算力/服务器）；ICDIA 2026 设立"先进封装与 3D 芯片"专题；国产芯片涨价核心矛盾已从 HBM/DDR5 转向"中芯 N+2 配额"（华为 43% 拿走大半、寒武纪 9-11% 紧随）。</li>
-<li><strong>建议：</strong>（1）国产芯片厂商与华天科技、长电科技、通富微电深度绑定 2.5D/3DIC/Chiplet 封测产能；（2）争取中芯 N+2 配额+国产 HBM 替代（长鑫存储/武汉新芯）；（3）布局 SiPh/CPO 光模块，配套超节点互联（华为 CloudMatrix 384 已落地）。</li>
-<li><strong>量化目标：</strong>2026 年国产 Chiplet 封装产能≥50 万片/月；国产 HBM 在国产 AI 芯片中渗透率≥30%。</li>
+<li><strong>背景：</strong>日均Token调用量约147万亿/月环比+11.4%,企业级AI推理部署占比突破66%。腾讯TokenHub日Token调用量突破25万亿(2个月增5倍),OpenRouter 4月数据显示中国AI大模型贡献12.96万亿Token(连续5周超美国)。</li>
+<li><strong>建议：</strong>(1)2026年Q4前推理算力占比提升至75%以上;(2)推出"Token计费+按需弹性"商业化方案,降低中小客户使用门槛;(3)布局API聚合生态,接入OpenRouter/Wildcard等海外平台抢占AI出海红利。</li>
+<li><strong>量化目标：</strong>2026年底推理算力收入占比超60%,中小客户留存率提升至85%。</li>
 </ul>
 </div>
 <div class="suggestion-box">
-<h4>③ 把握"国产 GPU 支撑国产大模型"工程化拐点，深耕垂直行业解决方案</h4>
+<h4>③ 行业用户:把握豆包上车/金融智能体/具身智能三大应用场景红利</h4>
 <ul>
-<li><strong>背景：</strong>本周摩尔线程 S5000 完成 DeepSeek-V4 1.6T 参数 MoE 全链路适配（MUSA+SGLang），是国产 GPU 首次支撑万亿参数大模型完整推理闭环；蚂蚁 FalconTST 2.0 被巴克莱/花旗/渣打/德银采用（4 家全球大行）；新大陆"鲁班"超级智能体量产。</li>
-<li><strong>建议：</strong>（1）国产芯片厂商联合大模型厂商（DeepSeek/豆包/千问/元宝）发布"芯片+模型"行业解决方案（金融/医疗/制造/政务）；（2）针对具身智能（2026 世界机器人大会 8 月 19 日开幕，2030 供应链估值 1068 亿元）推出低功耗推理芯片；（3）参与医疗 AI（卫宁健康覆盖 6000+ 机构）、教育（云南"AI+教育"行动方案）等行业大模型共建。</li>
-<li><strong>量化目标：</strong>2026 年行业大模型解决方案营收占比≥35%；具身智能芯片出货量同比 +500%。</li>
+<li><strong>背景：</strong>豆包月活3.82亿(月环比+3.8%),8/19上线特斯拉中国车机(M3/Y/S/X全系)为第三方大模型首发;蚂蚁Agentar专家团+阿里点金平台+20家头部基金公司平台化部署;国家电网68亿元采购8500台机器人。</li>
+<li><strong>建议：</strong>(1)金融行业优先布局智能体平台,接入蚂蚁/阿里/腾讯金融智能体生态;(2)制造业关注"AI+具身智能"示范场景,对接国家电网/宇树/智平方等产业链;(3)消费品行业关注豆包上车/千问独立板块带来的车载AI入口红利。</li>
+<li><strong>量化目标：</strong>2026年底企业级AI推理部署占比突破70%,金融/制造/汽车三大场景AI渗透率分别达40%/30%/25%。</li>
 </ul>
 </div>
-
-
-<h3 style="color:#0f3460;border-left:3px solid #667eea;padding-left:10px;margin-top:16px;">9-2-4 对算力需求企业（行业用户）的建议（3 条）</h3>
-
-<div class="suggestion-box">
-<h4>① 把握算力租赁"量价齐升"红利，长约锁定 H100/Blackwell/昇腾 950DT 产能</h4>
-<ul>
-<li><strong>背景：</strong>本周 H100 一年期合约租金半年内涨 38% 至 $2.35/GPU/h；新签合同交付排期延至 2027 年；Blackwell 8-9 月前产能预订一空；阿里云外部营收 +45%、AI 连续 10 季三位数增长；联想 AI 业务 634 亿元（+60%）。</li>
-<li><strong>建议：</strong>（1）AI 需求企业立即与云厂商签订 18-24 个月长约，锁定 H100/Blackwell B200/B300/昇腾 950DT 等稀缺算力；（2）建立"核心训练用国产+辅助推理用英伟达"双轨混合架构，对冲供应链风险；（3）参与运营商"Token 套餐"（参照豆包 180 万亿日调用量场景），降低推理成本。</li>
-<li><strong>量化目标：</strong>2026 年底算力长约覆盖 12 个月用量；推理成本下降 30%。</li>
-</ul>
-</div>
-<div class="suggestion-box">
-<h4>② 把握智算中心 PUE≤1.25 监管收紧与算力券政策红利，提前布局低成本算力</h4>
-<ul>
-<li><strong>背景：</strong>本周江西算力券兑现 3000 万元（单家最高 150 万元）、全国算力券试点扩大；新建枢纽绿电占比≥80% 硬指标；PUE≤1.25/1.20 监管收紧，Tier2 以下"投机型"项目面临淘汰；本周智算中心累计投资前 7 月 1130 亿元（+18%）。</li>
-<li><strong>建议：</strong>（1）AI 企业优先选择西部低成本集群（和林格尔 14.2 万 P、庆阳 17.5 万 P、贵安 11.7 万 P、芜湖 6.6 万 P、中卫 7.9 万 P），算力成本降低 40%-60%；（2）申请各省算力券（江西、湖南、北京、上海），降低 10%-30% 算力采购成本；（3）布局国产芯片+液冷（液冷国标 GB/T 48023-2026 2027 年 2 月实施），符合监管要求。</li>
-<li><strong>量化目标：</strong>2026 年西部集群算力采购占比≥40%；PUE≤1.25 集群使用占比≥80%。</li>
-</ul>
-</div>
-<div class="suggestion-box">
-<h4>③ 聚焦桌面 Agent+行业大模型，把握 AI 原生应用爆发（豆包 3.82 亿/月活）窗口</h4>
-<ul>
-<li><strong>背景：</strong>本周桌面 Agent 元年阶段性成果集中爆发：豆包 8/22 发布独立办公 App 对标腾讯 WorkBuddy、特斯拉 8/19 接入豆包成为首款上车中文大模型、阿里通义 App 8/22 更名"千问"；AI 原生 APP 月活 4.99 亿（+13.4%）；FalconTST 2.0 部署 4 家全球大行；具身机器人供应链 2030 估值 1068 亿元（2025 年 35 亿元）。</li>
-<li><strong>建议：</strong>（1）金融/医疗/制造企业优先采用国产行业大模型（蚂蚁 FalconTST/卫宁健康 6000+ 机构/海光"4C 模型"），快速搭建业务流 AI；（2）参与 2026 世界机器人大会、字节/腾讯/阿里桌面 Agent 三强并立格局，部署 Agent 提升员工效率；（3）布局边缘 AI（IDC 预测 2027 年中国 70% 城市部署 AI 智能体），降低时延与成本。</li>
-<li><strong>量化目标：</strong>2026 年企业内 AI Agent 渗透率≥30%；行业大模型应用率≥40%。</li>
-</ul>
-</div>
-
 </div>
 
 <!-- 9-3 未来发展展望 -->
 <div class="section">
-<h2>9-3 未来发展展望（市场规模/技术/产业）</h2>
-
-<h3>9-3-1 市场规模预测（未来 5 年）</h3>
+<h2>9-3 未来发展展望</h2>
+<h3>9-3-1 市场规模预测（未来5年）</h3>
 <div class="forecast-grid">
-<div class="forecast-card"><div class="year">2026 年</div><div class="value">智算规模 1460.3 EFLOPS</div><div class="note">中国智能算力规模预计达 1460.3 EFLOPS（IDC），相当于 2024 年的 2 倍；AI IaaS 智算云市场规模将突破千亿元；算力租赁市场达 3000+ 亿元。</div></div><div class="forecast-card"><div class="year">2027 年</div><div class="value">国产替代率破 60%</div><div class="note">国产 AI 芯片份额预计突破 50%（IDC 2026 预测 50%、2027 进一步加速）；万卡集群全国数量≥15 个；推理算力占比突破 75%。</div></div><div class="forecast-card"><div class="year">2028 年</div><div class="value">智算规模 2781.9 EFLOPS</div><div class="note">中国智能算力规模突破 2781.9 EFLOPS（五年复合增速 46.2%）；四川 2028 年智算规模 240 EFLOPS、占比超 90%（四川发改委规划）。</div></div><div class="forecast-card"><div class="year">2030 年</div><div class="value">Token 经济 15 万 PetaTokens</div><div class="note">全球 Token 年消耗量预计从 2025 年 0.0005 PetaTokens 暴增至 2030 年 15 万 PetaTokens（复合增速 3000%+）；具身机器人供应链估值 1068 亿元（2025 年 35 亿元）。</div></div>
+<div class="forecast-card">
+    <div class="year">2026年</div>
+    <div class="value">市场规模</div>
+    <div class="note">中国AI算力市场规模约2608亿元(月环比+3.5%),全年大概率提前完成IDC原预测337亿美元(2400亿元);智能算力规模约1654 EFLOPS(月环比+4%)。</div>
 </div>
-
+<div class="forecast-card">
+    <div class="year">2027年</div>
+    <div class="value">推理主导</div>
+    <div class="note">推理算力占比突破70%临界点,豆包/DeepSeek V4/千问三强格局确认;Token经济规模化进入加速期。</div>
+</div>
+<div class="forecast-card">
+    <div class="year">2028年</div>
+    <div class="value">国产芯片</div>
+    <div class="note">国产AI芯片市场份额突破90%,华为昇腾950PR/思元590成为推理算力主力,英伟达+AMD合计份额降至10%以内。</div>
+</div>
+<div class="forecast-card">
+    <div class="year">2030年</div>
+    <div class="value">超节点+液冷</div>
+    <div class="note">超节点规模超1万套,液冷数据中心占比超70%,PUE普遍低于1.05;800G/1.6T光模块市场达200亿美元。</div>
+</div>
+<div class="forecast-card">
+    <div class="year">2030年</div>
+    <div class="value">应用爆发</div>
+    <div class="note">全球Token年消耗量从2025年0.0005PetaTokens暴增至15万PetaTokens(CAGR超3000%);金融/制造/汽车三大场景AI渗透率超50%。</div>
+</div>
+</div>
 <h3>9-3-2 技术发展趋势</h3>
-
 <div class="highlight-box">
-<h4>🔬 四大技术趋势（基于第五章技术趋势报告）</h4>
+<h4>三大技术趋势</h4>
 <ul>
-<li><strong>趋势一：推理算力主导化（占比突破 70%+）</strong> — 中国 AI 服务器 2025 年交付 400 万颗 AI GPU，国产占比已达 41%；推理算力占比正向 70%+ 迈进，驱动国产推理芯片（寒武纪思元 690、摩尔线程 S5000、燧原 L600）爆发，2026 年国产 AI 芯片出货占比将达 50%（IDC）。</li>
-<li><strong>趋势二：国产 GPU 支撑国产大模型工程化闭环</strong> — 摩尔线程 S5000 完成 DeepSeek-V4 1.6T 参数 MoE 全链路适配（MUSA+SGLang），国产 GPU 首次支撑万亿参数大模型完整推理闭环；寒武纪思元 590 拿到字节 250 亿元订单，标志着"国产芯片+国产模型"垂直整合拐点。</li>
-<li><strong>趋势三：液冷+光互联重塑 AIDC（液冷国标 GB/T 48023-2026 落地）</strong> — 首部数据中心液冷国标 2027 年 2 月 1 日实施，液冷渗透率从 12% → 28%，2026 全球智算液冷市场 1147 亿元（+273%）；800G/1.6T 光模块进入规模放量，SiPh 渗透率超 60%，CPO/NPO 加速导入 Rubin 平台。</li>
-<li><strong>趋势四：HBM 紧缺倒逼系统级创新（Chiplet+光互联+分层存储）</strong> — SK 海力士 2026 全年 HBM 产能售罄，2027 年预计短缺 50-60%；英伟达测试 3 款 HBM 降配版 Rubin Ultra；国产"Chiplet+HBM2e"路线（华为昇腾、寒武纪思元"1+4"）成为对冲方案；存算一体 SSD 进入 RAG 场景（忆芯科技）。</li>
+<li><strong>趋势一：超节点规模化成胜负手</strong> — 华为Atlas 950 SuperPoD规模/算力/内存/互联带宽四方面全面领先英伟达NVL144(56.8倍/6.7倍/15倍/62倍),2026H2预计超节点落地超1000套,系统级创新成核心变量。</li>
+<li><strong>趋势二：液冷从可选变必选</strong> — 曙光C8000 V3.0单机柜900kW+PUE<1.05带动液冷下沉;新建智算中心100%液冷,PUE严控1.05以下;存量风冷机房通过VCE相变散热技术升级。</li>
+<li><strong>趋势三：1.6T光模块+硅光互联放量</strong> — LightCounting预测2026年800G+1.6T光模块市场146亿美元(占整体~64%),1.6T需求从年初1000万只上调至2000万只以上,英伟达/谷歌/Meta为核心需求方。</li>
 </ul>
 </div>
-
-
 <h3>9-3-3 产业发展趋势</h3>
-
 <div class="highlight-box">
-<h4>🏭 四大产业趋势（基于第六/七/八章供应+应用+建设报告）</h4>
+<h4>三大产业趋势</h4>
 <ul>
-<li><strong>趋势一：「国产芯片+国产集群+国产云」垂直整合（万亿级算力网投资启动）</strong> — 华为昇腾国内份额 20%（+11pct）、英伟达在华份额 55%（-40pct）；韶关"国芯训国模"万卡集群满月、第二集群 1.5 万 P 规划启动；和林格尔 13 项目 1361 亿元签约（万国数据 200 亿/5 年、中金数据 GW 级零碳基地）；阿里云外部营收 +45%、AI 连续 10 季三位数增长。</li>
-<li><strong>趋势二：八大算力枢纽「三高三低」格局固化（西部主训+东部主推+大湾区国产化）</strong> — 内蒙古 +12.1%、粤港澳韶关 +16.7%、成渝重庆 +10% 三枢纽周增超 10%；京津冀 36.5 万 P（9 月中国算力大会预热）、甘肃庆阳 17.5 万 P（国产十万卡）、宁夏中卫 7.9 万 P（绿电 90%）、贵州贵安 11.7 万 P 形成"前店后厂"格局。</li>
-<li><strong>趋势三：桌面 Agent 元年 + 行业大模型规模化（应用从"用得上"到"用得好"）</strong> — AI 原生 APP 月活 4.99 亿（+13.4%）、豆包 3.82 亿、千问 1.67 亿、DeepSeek 1.30 亿；豆包日均 Token 180 万亿（半年涨 260%）；桌面 Agent 三强并立（豆包/WorkBuddy/千问）；FalconTST 2.0 部署巴克莱/花旗/渣打/德银 4 家全球大行；2026 世界机器人大会 8 月 19 日开幕。</li>
-<li><strong>趋势四：算电协同政策落地 + PUE≤1.25 监管收紧（绿电直供成硬指标）</strong> — 国家数据局明确"算力设施建设从资源扩张到系统增效"；宁夏中卫 50 万千瓦绿电直供光伏电站全容量投运（年发电 43 亿 kWh、覆盖园区核心算力机房全部用电）；新建枢纽绿电占比≥80%；液冷国标 GB/T 48023-2026 2027 年实施；Tier2 以下"投机型"项目面临淘汰。</li>
+<li><strong>趋势一：竞争格局进入"垂直分层+头部集中"双轨收敛</strong> — 华为昇腾国内份额~22%(季变化+2pct),寒武纪2026H1营收+612%同比且首度单季净利转正;具备全栈能力的厂商(华为/阿里/中国移动)将拿到增量蛋糕,中型云厂商面临挤压。</li>
+<li><strong>趋势二：Token经济规模化进入加速期</strong> — 日均Token调用量147万亿(月环比+11.4%),腾讯TokenHub日Token调用量突破25万亿(2个月增5倍);OpenRouter连续5周中国AI大模型Token量超美国(12.96万亿/周),AI出海拉动推理算力需求。</li>
+<li><strong>趋势三：广东智算"多期滚动发包"模式全国复制</strong> — 韶关集群本周新增24条公告集中在浈江A7智算中心+220kV自建变电站+全过程跟踪审计;和林格尔集群13个重点项目集中签约1361亿元;甘肃庆阳集群算力突破21.5万P、利用率超90%;西部三大集群成"东数西算"主战场。</li>
 </ul>
 </div>
-
 </div>
 
 <!-- 9-4 本周总结 -->
 <div class="section">
-<h2>9-4 本周总结（4 大维度）</h2>
-
+<h2>9-4 本周总结</h2>
 <div class="summary-box">
 <h4>一、本周结论总述</h4>
-<p>2026 年第 34 周（2026-08-19 ~ 2026-08-26）是中国智算市场从"规模驱动"向"质效驱动"切换的关键一周。政策端，国家数据局明确"算力设施建设从资源扩张到系统增效"，算电协同指标同比 +496.8%；市场端，中国智能算力规模 1037.3 EFLOPS（+43%）、AI IaaS 486.7 亿元（+128%）、H100 一年期合约 $2.35/GPU/h（+38%）、国产 AI 芯片份额 41%（+36.7%）；区域端，八大枢纽周变化呈"三高三低"格局，和林格尔签约 1361 亿元创纪录；技术端，液冷国标 GB/T 48023-2026 获批、摩尔线程 S5000 完成 DeepSeek-V4 万亿参数适配；应用端，桌面 Agent 元年（豆包 3.82 亿/月活）、FalconTST 部署 4 家全球大行；建设端，韶关集群签约 1116 亿元、深圳鹏城云脑 III 16000P 全栈自主可控。本周是从"打地基"向"用算力"切换的兑现期。</p>
+<p>本周（2026-08-19—2026-08-26）中国智算市场呈现"<strong>政策定调、规模放量、技术突破、建设冲刺</strong>"四维共振格局。<em>算力网</em>8月26日首次被工信部定调为"新一代信息基础设施",标志顶层政策进入配套文件密集出台期;<em>市场规模</em>达1654 EFLOPS(月环比+4%)、2608亿元(月环比+3.5%),提前完成IDC 2026原预测;<em>技术突破</em>集中在超节点+液冷+光模块三线,华为Atlas 950四方面领先英伟达NVL144;<em>建设冲刺</em>集中在韶关/和林格尔/庆阳三大集群,广东本周新增81条公告、月累计113条。</p>
+<p>综合前八章数据,本周确认三大拐点:(1)<em>推理算力首次超越训练</em>(占比66%+);(2)<em>国产AI芯片份额突破80%</em>(从2025年55%跃升);(3)<em>算力网上升为新一代信息基础设施</em>。三拐点叠加将持续影响云厂、芯片厂、智算中心运营商的竞争格局。</p>
 </div>
+
 <div class="summary-box">
 <h4>二、关键数据回顾</h4>
-<p><strong>市场规模：</strong>中国智能算力规模 1037.3 EFLOPS（+43% YoY），AI IaaS 486.7 亿元（+128% YoY），算力租赁 2600 亿元（+52.9% YoY），H100 一年期合约 $2.35/GPU/h（+38.2% 周环比）。</p>
-<p><strong>国产替代：</strong>华为昇腾国内份额 20%（+11pct），英伟达在华份额 55%（-40pct，Bernstein 预测 2026 年降至 8%），国产 AI 芯片总份额 41%（+36.7% YoY），推理算力占比突破 70%+。</p>
-<p><strong>竞争格局：</strong>阿里云外部营收 +45%、AI 连续 10 季三位数增长，联想 AI 业务 634 亿元（+60%），华为云进 Gartner 云 AI 基础设施"领导者"魔力象限。</p>
-<p><strong>区域格局：</strong>和林格尔 14.2 万 P（+12.1%/周）、粤港澳韶关 1.05 万 P（+16.7%）、京津冀 36.5 万 P、甘肃庆阳 17.5 万 P（国产十万卡）、宁夏中卫 7.9 万 P（绿电 90%）。</p>
-<p><strong>技术突破：</strong>液冷国标 GB/T 48023-2026 获批、摩尔线程 S5000 支撑 DeepSeek-V4 1.6T 参数 MoE 全闭环、液冷渗透率 28%（+16pp）、2026 全球智算液冷市场 1147 亿元（+273%）。</p>
-<p><strong>应用落地：</strong>AI 原生 APP 月活 4.99 亿（+13.4%）、豆包 3.82 亿、千问 1.67 亿、DeepSeek 1.30 亿，豆包日均 Token 180 万亿（半年涨 260%），桌面 Agent 三强并立。</p>
-<p><strong>广东建设：</strong>韶关集群签约 23 项目 1116 亿元、3.1GW 算力（去年同期 62 倍）、落地 5 个万卡集群（全国 10 大集群数量领先）；鹏城云脑 III 建成 16000P；联通韶关 2 号楼机电 EPC 中标 2.5662 亿元（华为+中讯+中建三局联合体）。</p>
+<p><strong>市场规模：</strong>智能算力规模约1654 EFLOPS(月环比+4%),AI算力市场约2608亿元(月环比+3.5%),日均Token调用量147万亿/月环比+11.4%,国产AI芯片份额约80%(年同比+45.5%)。</p>
+<p><strong>竞争格局：</strong>华为昇腾国内份额~22%(季变化+2pct),寒武纪2026H1营收+612%同比,昇腾950PR Plus流片成功;阿里云/腾讯云/百度智能云累计涨价5%-34%。</p>
+<p><strong>技术突破：</strong>华为Atlas 950 SuperPoD四方面领先英伟达NVL144;曙光C8000 V3.0单机柜900kW+PUE<1.05;1.6T光模块需求上调至2000万只以上。</p>
+<p><strong>区域建设：</strong>韶关集群本周新增24条公告+浈江A7智算中心集中发包;和林格尔13个重点项目签约1361亿元;庆阳集群21.5万P、利用率超90%。</p>
+<p><strong>应用场景：</strong>豆包月活3.82亿(月环比+3.8%),8/19上线特斯拉中国车机;金融智能体元年(蚂蚁Agentar+阿里点金);具身智能商业化(国家电网68亿元采购8500台)。</p>
 </div>
+
 <div class="summary-box">
 <h4>三、下周重点关注</h4>
-<p><strong>① 昇腾 950DT 训练芯片正式发布（预计 8 月末/9 月初）</strong>（来源：第 6 章 6-1/第二章 2-7）：华为云首发，性能达 H100 的 80%，将标志国产 AI 芯片正式进入训练旗舰赛道，单卡 FP8 算力 1P、推理性能约为英伟达 H20 的 2.87 倍。</p>
-<p><strong>② 2026 中国算力大会（9 月 11-13 日，廊坊）</strong>（来源：第 3 章 3-1/政策环境第 1 章）：主题"共织算力网·智启新未来"，首次设立算力首创首发发布会，聚焦京津冀协同+算电协同+太空算力+Token 新经济。</p>
-<p><strong>③ 云厂商 Q2 财报集中披露期</strong>（来源：第 4 章 4-1）：阿里云外部营收增速 +45%、AI 业务连续 10 季三位数增长；联想 AI 业务 634 亿元（+60%）；华为云进入 Gartner"领导者"象限后营收披露；移动/联通/电信运营商云业务占比。</p>
-<p><strong>④ 算力券第二批试点城市公布</strong>（来源：第 1 章 1-7）：江西 3000 万元首批兑现，预计 9 月公布第二批试点城市名单（湖南、上海、北京、福建等候选）。</p>
-<p><strong>⑤ 贵州贵安联通 6 栋新机房规划落地 + 大湾区 2T 直连光纤扩容</strong>（来源：第 3 章 3-1）：贵安新区算力 160 EFLOPS、智算占比超 98%，互联网出省带宽 6.114 万 Gbps。</p>
-<p><strong>⑥ 中金数据中卫零碳基地首期投产 + 中交智数谷一期投产</strong>（来源：第 3 章 3-2）：9 月初将迎两大西部低成本绿色集群并网，西部集群消纳量占比向 30%+ 推进。</p>
+<p><strong>1. 华为全联接大会2026（预计9月初召开）：</strong>昇腾950 PR+Atlas 950新品发布,系统级创新补单点性能路径成胜负手。来源:第二章2-7市场规模预测更新。</p>
+<p><strong>2. 国务院"AI+制造"专项行动第二批招标落地：</strong>三年内支持100个示范场景、撬动2000亿元算力投资,湖北/广东/江苏为重点省份。来源:第二章2-7。</p>
+<p><strong>3. H200/B200到货后的价格曲线：</strong>Blackwell B200将于2026年10月续约价从2.63美元/小时/卡涨至5.10美元/卡(涨幅+94%);GB300集群下半年放量节奏是核心变量。来源:第二章2-7。</p>
+<p><strong>4. 国产芯片产能释放节奏：</strong>华为昇腾950 Pro计划2026年出货75万颗,SMIC产能+HBM+先进封装三大制造瓶颈待解决。来源:第二章2-7。</p>
+<p><strong>5. 工信部第二批算力网区域节点公示：</strong>预计9月公示,京津冀/长三角/粤港澳枢纽为重点。来源:第一章1-7政策趋势预判。</p>
 </div>
+
 <div class="summary-box">
 <h4>四、风险提示</h4>
-<p><strong>① 算力涨价持续超预期（HBM 紧缺 + 中芯 N+2 配额紧张）</strong> — HBM3e 12Hi 单颗价格已升至约 700 美元（较 2025 年初涨近 8 倍），SK 海力士 2026 全年 HBM 产能售罄，2027 年预计短缺 50-60%；H100 一年期合约 $2.35/GPU/h、新签合同交付排期延至 2027 年，国内云厂商阿里/百度/腾讯集体调价 5%-34%，算力使用成本可能继续上行，挤压 AI 中游毛利率（毛利率仅 4-6%）。</p>
-<p><strong>② 国产替代节奏不及预期（生态壁垒 + HBM 国产化滞后）</strong> — 国产 AI 芯片 2025 年份额 41%，Bernstein 预测 2026 年华为升至 50%、英伟达降至 8%，但华为昇腾/寒武纪思元 HBM 仍依赖进口（HBM2e），长鑫存储/武汉新芯 HBM 国产化进度滞后；摩尔线程/燧原/沐曦/壁仞/天数 IPO 后业绩兑现存隐忧。</p>
-<p><strong>③ 政策监管收紧风险（PUE≤1.25 强制 + 数据出境合规）</strong> — 液冷国标 GB/T 48023-2026 2027 年 2 月实施后未达标项目禁止并网，Tier2 以下"投机型"项目面临淘汰压力；韶关"港数韶算、澳数韶算"跨境合作模式数据出境合规审查趋严；算力券兑现节奏可能延迟。</p>
-<p><strong>④ 跨界算力大单兑现存隐忧（订单交付 + 算力消纳）</strong> — 本周披露的"和林格尔 13 项目 1361 亿元"等大单实际落地节奏受集群电力/网络配套制约；粤港湾智算 2026 上半年 AI 算力订单累计新增 150 亿元、在手订单突破 300 亿元，但 Q4 交付集中度风险高。</p>
-<p><strong>⑤ 国际供应链与地缘政治风险（H200/Blackwell 在华销售不确定性）</strong> — H200 自 2026 年 1 月起中国海关不允许进入大陆（实际出货为零）；Blackwell 对华销售尚未明朗；特朗普批准 H200 以 25% 收入分成对华销售但中国政府仍限制企业采购；地缘政治恶化可能进一步收紧芯片供应。</p>
+<p><strong>1. 算力涨价持续,中小客户成本压力：</strong>阿里/腾讯/百度涨价5%-34%已生效2-4个月,中小客户应对策略分化(缩减非核心35%/迁移专业平台25%/转向国产芯片20%/维持原状20%)。建议:跟踪云厂Q2-Q3财报AI客户结构变化。</p>
+<p><strong>2. 国产芯片产能瓶颈,推理市场份额提升放缓：</strong>SMIC+HBM+先进封装三大瓶颈仍未根本解决,若产能释放低于预期,国产推理市场份额提升节奏将放缓2-3个月。建议:跟踪中芯国际/华虹半导体月度产能+长电/通富先进封装产能利用率。</p>
+<p><strong>3. 西部消纳压力与电力约束：</strong>2030年单个AI训练点电力需求或达8GW,西部枢纽节点智算规模快速放量对电网稳定性、绿电供给提出挑战。建议:完善跨省算力调度补偿机制+绿电交易机制。</p>
+<p><strong>4. 国际博弈与算力封锁：</strong>OpenAI GPT-5.6 Sol API价格下调20%+引发国内价格战,国产替代窗口期与海外算力出口管制并存。建议:加速国产替代+提前布局海外合规架构。</p>
+<p><strong>5. HBM与上游配套紧缺：</strong>HBM3E现货价同比+5倍,SK海力士Q1 ASP+65%,NAND ASP+75%;800G/1.6T光模块订单排至2026年底。建议:长约锁定+国产HBM替代路径。</p>
 </div>
-
-</div>
-
-<!-- 综合对比表 - 整合 9-1 与前 8 章关键数据 -->
-<div class="section">
-<h2>9-5 前 8 章关键数据综合对比表</h2>
-<p style="font-size:12.5px;color:#444;line-height:1.7;">以下汇总本周前 8 章关键数据指标，便于横向对比与综合研判。</p>
-<table class="data-table">
-<thead>
-<tr>
-<th>维度</th>
-<th>指标</th>
-<th>本期数据</th>
-<th>变化幅度</th>
-<th>来源章节</th>
-</tr>
-</thead>
-<tbody>
-<tr class="week-highlight">
-<td rowspan="3"><strong>政策</strong></td>
-<td>本周新增政策/文件数</td>
-<td>9 项</td>
-<td><span class="change-up">↑ +200%（周环比）</span></td>
-<td>第一章</td>
-</tr>
-<tr>
-<td>算力券试点城市</td>
-<td>6 省市</td>
-<td>江西 3000 万元首启</td>
-<td>第一章</td>
-</tr>
-<tr>
-<td>智算中心 PUE 监管</td>
-<td>≤1.25/1.20</td>
-<td>持续收紧</td>
-<td>第一章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="5"><strong>市场</strong></td>
-<td>中国智能算力规模</td>
-<td>1037.3 EFLOPS</td>
-<td><span class="change-up">↑ +43% YoY</span></td>
-<td>第二章</td>
-</tr>
-<tr>
-<td>AI IaaS 智算云市场规模</td>
-<td>486.7 亿元</td>
-<td><span class="change-up">↑ +128% YoY</span></td>
-<td>第二章</td>
-</tr>
-<tr>
-<td>智算中心累计投资（前 7 月）</td>
-<td>1130 亿元</td>
-<td><span class="change-up">↑ +18% YoY</span></td>
-<td>第二章</td>
-</tr>
-<tr>
-<td>H100 一年期合约租金</td>
-<td>$2.35/GPU/h</td>
-<td><span class="change-up">↑ +38.2%（半年）</span></td>
-<td>第二章</td>
-</tr>
-<tr>
-<td>国产 AI 芯片市场份额</td>
-<td>41%</td>
-<td><span class="change-up">↑ +36.7% YoY</span></td>
-<td>第二章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="5"><strong>区域</strong></td>
-<td>和林格尔集群算力</td>
-<td>14.2 万 P</td>
-<td><span class="change-up">↑ +12.1%（周）</span></td>
-<td>第三章</td>
-</tr>
-<tr>
-<td>京津冀枢纽算力</td>
-<td>36.5 万 P</td>
-<td><span class="change-up">↑ +3.7%（周）</span></td>
-<td>第三章</td>
-</tr>
-<tr>
-<td>粤港澳韶关集群算力</td>
-<td>1.05 万 P</td>
-<td><span class="change-up">↑ +16.7%（周）</span></td>
-<td>第三章</td>
-</tr>
-<tr>
-<td>甘肃庆阳集群算力</td>
-<td>17.5 万 P</td>
-<td><span class="change-up">↑ +4.2%（周）</span></td>
-<td>第三章</td>
-</tr>
-<tr>
-<td>宁夏中卫集群算力</td>
-<td>7.9 万 P</td>
-<td><span class="change-up">↑ +6.8%（周）</span></td>
-<td>第三章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="3"><strong>竞争</strong></td>
-<td>华为昇腾国内份额</td>
-<td>20%</td>
-<td><span class="change-up">↑ +11pct YoY</span></td>
-<td>第四章</td>
-</tr>
-<tr>
-<td>英伟达中国 AI 芯片份额</td>
-<td>55%</td>
-<td><span class="change-down">↓ -40pct YoY</span></td>
-<td>第四章</td>
-</tr>
-<tr>
-<td>豆包日均 Token 调用量</td>
-<td>180 万亿</td>
-<td><span class="change-up">↑ +260%（半年）</span></td>
-<td>第四章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="3"><strong>技术</strong></td>
-<td>液冷渗透率</td>
-<td>28%</td>
-<td><span class="change-up">↑ +16pp YoY</span></td>
-<td>第五章</td>
-</tr>
-<tr>
-<td>液冷国标</td>
-<td>GB/T 48023-2026</td>
-<td>2027/2/1 实施</td>
-<td>第五章</td>
-</tr>
-<tr>
-<td>万卡集群开工量</td>
-<td>+210%</td>
-<td><span class="change-up">↑ +210% YoY</span></td>
-<td>第五章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="3"><strong>供应</strong></td>
-<td>HBM3e 12Hi 单颗价格</td>
-<td>~$700</td>
-<td><span class="change-up">↑ +8x（较 2025 年初）</span></td>
-<td>第六章</td>
-</tr>
-<tr>
-<td>2026 全球智算液冷市场</td>
-<td>1147 亿元</td>
-<td><span class="change-up">↑ +273% YoY</span></td>
-<td>第六章</td>
-</tr>
-<tr>
-<td>2026 液冷渗透率预测</td>
-<td>53%</td>
-<td>TrendForce 上修</td>
-<td>第六章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="3"><strong>应用</strong></td>
-<td>AI 原生 APP 月活</td>
-<td>4.99 亿</td>
-<td><span class="change-up">↑ +13.4%（同比 +85.4%）</span></td>
-<td>第七章</td>
-</tr>
-<tr>
-<td>豆包月活</td>
-<td>3.82 亿</td>
-<td><span class="change-up">↑ +10.7%（月度）</span></td>
-<td>第七章</td>
-</tr>
-<tr>
-<td>FalconTST 部署全球大行</td>
-<td>4 家</td>
-<td>新增渣打</td>
-<td>第七章</td>
-</tr>
-<tr class="week-highlight">
-<td rowspan="3"><strong>广东建设</strong></td>
-<td>韶关集群签约项目</td>
-<td>23 个</td>
-<td>总投资 1116 亿元</td>
-<td>第八章</td>
-</tr>
-<tr>
-<td>韶关集群总中标算力</td>
-<td>3.1GW</td>
-<td><span class="change-up">↑ 62 倍 YoY</span></td>
-<td>第八章</td>
-</tr>
-<tr>
-<td>鹏城云脑 III 算力</td>
-<td>16000P</td>
-<td>全栈自主可控</td>
-<td>第八章</td>
-</tr>
-</tbody>
-</table>
 </div>
 
 <!-- 数据来源 -->
 <div class="section sources-section">
-<h2>9-6 数据来源</h2>
-<p style="font-size:12.5px;color:#444;line-height:1.7;margin-bottom:12px;">本章所有数据均综合自前八章周报，原始来源如下：</p>
+<h2>数据来源</h2>
 <div class="sources-list">
-<span class="source-tag">IDC 2025 年中国人工智能计算力发展评估报告</span><span class="source-tag">中国信通院《综合算力指数 2026》</span><span class="source-tag">国家数据局《关于加强智算中心建设和运营监管通知》</span><span class="source-tag">工信部《国家级零碳工厂、零碳算力设施建设方案》</span><span class="source-tag">TrendForce 2026 HBM / 液冷 / CPO 产业报告</span><span class="source-tag">SemiAnalysis 2026 年 3 月算力租赁市场报告</span><span class="source-tag">Bernstein Research 2026 AI 芯片市场预测</span><span class="source-tag">Gartner 2026 云 AI 基础设施魔力象限</span><span class="source-tag">财联社实地调研（2026-08-03 韶关集群）</span><span class="source-tag">深圳市发改委《人工智能先锋城市行动计划 2025—2026》</span><span class="source-tag">国家发改委发改高技〔2022〕66 号复函</span><span class="source-tag">国务院《关于深入实施东数西算工程加快构建全国一体化算力网的实施意见》</span><span class="source-tag">国标 GB/T 48023-2026《数据中心冷板式液冷系统技术规范》</span><span class="source-tag">中华网/国家标准化管理委员会（液冷国标获批）</span><span class="source-tag">证券时报/上海证券报（WAIC 2026 超节点液冷升级）</span><span class="source-tag">QuestMobile 2026Q1-2026Q2 AI 原生 APP 月活数据</span><span class="source-tag">字节跳动 2026 年 6 月披露（豆包 Token 调用量）</span><span class="source-tag">蚂蚁集团 2026 年 8 月 20 日披露（FalconTST 2.0 全球大行部署）</span><span class="source-tag">新华网/经济参考报（京津冀算力供给走廊）</span><span class="source-tag">人民网/工业和信息化部（2026 中国算力大会）</span><span class="source-tag">重庆市人民政府网（新型能源算力枢纽方案）</span><span class="source-tag">四川在线/省发改委（算力设施优化布局 2026-2028 方案）</span><span class="source-tag">国家开发银行宁夏分行/央视新闻（中卫云基地绿电直供）</span><span class="source-tag">新华财经/园区世界（和林格尔集群 1361 亿签约）</span><span class="source-tag">2026 绿色算力（人工智能）大会（呼和浩特，2026-08-22）</span><span class="source-tag">AASTOCKS/人民网（粤港澳韶关万卡集群满月）</span><span class="source-tag">海光信息+中国信通院《数智时代企业算力基座建设路径与行业实践研究报告》（2026-08-18）</span><span class="source-tag">新华社/广东省政府门户网（广东智算建设数据）</span>
+<span class="source-tag">国务院新闻办公室（8-26工信部辛国斌发布会）</span>
+<span class="source-tag">国家数据局《数字中国发展报告（2026）》</span>
+<span class="source-tag">国家发改委《关于加快招标投标领域人工智能推广应用的实施意见》</span>
+<span class="source-tag">工信部《深入实施'人工智能+'行动的意见》</span>
+<span class="source-tag">IDC中国《中国人工智能计算力发展评估报告》</span>
+<span class="source-tag">中国信通院《先进计算暨算力发展指数蓝皮书（2025年）》</span>
+<span class="source-tag">TrendForce集邦咨询 2026 Q2市场追踪</span>
+<span class="source-tag">SemiAnalysis H100一年期租赁合约价格指数</span>
+<span class="source-tag">第一章 政策环境分析报告（第 34 期）</span>
+<span class="source-tag">第二章 市场规模分析报告（第 34 期）</span>
+<span class="source-tag">第三章 区域算力发展分析报告（第 34 期）</span>
+<span class="source-tag">第四章 竞争格局分析报告（第 34 期）</span>
+<span class="source-tag">第五章 技术趋势分析报告（第 34 期）</span>
+<span class="source-tag">第六章 供应商与产业格局分析报告（第 34 期）</span>
+<span class="source-tag">第七章 应用场景分析报告（第 34 期）</span>
+<span class="source-tag">第八章 广东智算中心建设分析报告（第 34 期）</span>
 </div>
 </div>
 
-<!-- 章节导航 -->
+</div><!-- end container -->
+
+<footer class="footer">
+<p>&copy; 2026 中国智能算力报告 | 结论与建议章节 | 数据仅供参考，不构成投资建议</p>
+</footer>
 <div class="chapter-nav">
-<a href="report_index.html" class="nav-home">🏠 返回首页</a>
-<a href="广东智算中心建设分析报告.html" class="nav-prev">← 第八章 广东智算建设</a>
-<a href="#" class="nav-next disabled">（已是末章）</a>
-</div>
-
-<div class="footer">
-报告日期：2026-08-26 | 周期：2026-08-19 ~ 2026-08-26 | 中国智能算力市场第 34 期<br>
-© 2026 中国智算市场周报 · 结论与建议（综合前 8 章）
-</div>
-
+    <a href="广东智算中心建设分析报告.html" class="nav-prev">⬅️ 上一章</a>
+    <a href="report_index.html" class="nav-home">🏠 首页</a>
+    <a href="#" class="nav-next disabled">下一章 ➡️</a>
 </div>
 </body>
 </html>
