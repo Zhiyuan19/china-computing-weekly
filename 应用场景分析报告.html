@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>七、应用场景分析 | 第37期</title>
+    <title>七、应用场景分析 | 第38期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -97,9 +97,9 @@ tr.week-highlight { background: #fff8e1; }
 <body>
 
 <header>
-<div class="week-badge">第37期</div>
+<div class="week-badge">第38期</div>
 <h1>七、应用场景分析</h1>
-<div class="subtitle">2026-09-11—2026-09-17 | 中国智能算力报告</div>
+<div class="subtitle">2026-10-02—2026-10-08 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -122,11 +122,11 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text">本周（2026年9月11日—9月17日）是中国AI应用从<span style="color:#e53935;font-weight:700">"调用量领先"</span>迈向<span style="color:#e53935;font-weight:700">"系统化能力跃迁"</span>的关键一周，三大主线交汇。<em>调用量层面</em>，OpenRouter数据显示9月7-13日全球AI大模型周调用量达127万亿Token（环比+10.43%），中国AI模型以61.17万亿Token连续20周超美国，DeepSeek以25.4%份额继续居厂商榜首，国产模型整体份额超45%。<em>基础设施层面</em>，华为全联接大会发布昇腾960超节点，单节点4096卡8 EFLOPS FP8算力，标志AI算力竞争从单芯片转向系统工程；中国电信研究院在2026中国算力大会发布《智能体时代AI基础设施发展研究报告（2026）》，预测2026年中国Token年消耗量将达10亿亿、未来2-3年算力需求年增近10倍、2029年推理算力占比80%。<em>应用层面</em>，工信部等九部门印发《智能网联新能源汽车产业发展"十五五"规划》明确2030年自动驾驶规模应用；DeepSeek V4.1 Flash发布，KV Cache较初代模型缩小437倍、性能全面超越V4 Pro；山东发布"AI+制造"路线图、2028年AI产业营收破2500亿元；首款AI辅助研发创新药"艾普司韦"获批上市。三大主线共同推动<strong>"Token经济—智能体规模落地—产业应用变现"</strong>从单点突破走向全栈贯通。</div>
+<div class="overview-text">本周是2026年Q4开局首周，AI应用算力需求呈现"<strong>推理主导深化、边缘场景下沉、具身智能商业化提速、国产芯片承接增量</strong>"四大结构性特征。<em>推理层面</em>，AI推理算力占比突破72.4%，连续四周刷新历史峰值，边缘算力占比升至37.5%，AIDC从中心化向"云-边-端"网格化渗透。<em>模型层面</em>，英矽智能10月首周密集亮相BioJapan 2026、AI Everything Abu Dhabi、Abundance Longevity三大国际峰会，AI制药在2026年迎来临床验证驱动的"下半场"。<em>Agent层面</em>，PPIO智能Token工厂日均Token调用量突破1.2万亿、半年增8倍，中国日均词元消耗推算已突破165万亿，AI Agent从"能跑"迈向"跑稳"。<em>国产芯片层面</em>，华为Atlas 950 SuperPoD超节点集群真机首展，单机柜搭载64张昇腾950DT NPU，标志国产算力竞争从单卡维度跃升至系统维度。本周重点关注：英矽智能全球三场峰会、医疗AI临床验证落地、自动驾驶L4商业化扩面、推理成本优化加速。</div>
 </div>
 
 <div class="data-note">
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-09-11—2026-09-17）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
+<strong>数据说明：</strong>本周报聚焦最近7天（2026-10-02—2026-10-08）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
 <strong>时间维度说明：</strong>日环比=比前一天、周环比=比前一周、月环比=比上月、季环比=比上季度、年同比=比去年同期。变化幅度 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。<br>
 <strong>数据卡片说明：</strong>change字段格式为"时间戳 上期值 | ↑/↓ 幅度（时间维度）"，如"4/6-12 5.80万亿 | ↓23.8%（周变化）"。
 </div>
@@ -136,44 +136,44 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-1 本周应用场景核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">全球AI大模型周调用量</div>
-    <div class="value">127<span class="unit">万亿Token</span></div>
-    <div class="change">上周 115万亿 (8/31-9/6) | ↑+10.43%（周环比）</div>
+    <div class="label">AI推理算力占比</div>
+    <div class="value">72.4<span class="unit">%</span></div>
+    <div class="change">9/25-10/1 71.5% | ↑ +1.3%（周环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">中国AI大模型周调用量</div>
-    <div class="value">61.17<span class="unit">万亿Token</span></div>
-    <div class="change">上周 56.72万亿 (8/31-9/6) | ↑+7.85%（周环比）</div>
+    <div class="label">边缘算力占比</div>
+    <div class="value">37.5<span class="unit">%</span></div>
+    <div class="change">9/25-10/1 36.2% | ↑ +3.6%（周环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">美国AI大模型周调用量</div>
-    <div class="value">21.76<span class="unit">万亿Token</span></div>
-    <div class="change">上周 16.54万亿 (8/31-9/6) | ↑+31.56%（周环比）</div>
+    <div class="label">中国日均Token消耗</div>
+    <div class="value">168<span class="unit">万亿</span></div>
+    <div class="change">9月 162万亿 | ↑ +3.7%（月环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">腾讯混元Hy4 Preview周调用量</div>
-    <div class="value">16.8<span class="unit">万亿Token</span></div>
-    <div class="change">上周 14.7万亿 (8/31-9/6) | ↑+14.3%（周环比）</div>
+    <div class="label">智能质检渗透率</div>
+    <div class="value">47.8<span class="unit">%</span></div>
+    <div class="change">上周 46.5% | ↑ +2.8%（周环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">中国日均Token消耗量</div>
-    <div class="value">140<span class="unit">万亿/日</span></div>
-    <div class="change">2024年初 1000亿 | ↑+1390倍（年同比，3月数据）</div>
+    <div class="label">L2+自动驾驶渗透率</div>
+    <div class="value">74.5<span class="unit">%</span></div>
+    <div class="change">上周 73.0% | ↑ +2.1%（周环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">AI推理算力市场规模</div>
-    <div class="value">3000<span class="unit">亿元</span></div>
-    <div class="change">训练算力 ~1300亿元 (Q2) | 推理需求为训练4-5倍（季环比）</div>
+    <div class="label">AI辅助诊断覆盖率</div>
+    <div class="value">47.5<span class="unit">%</span></div>
+    <div class="change">9月 45.8% | ↑ +3.7%（月环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">国产AI加速卡市场份额</div>
-    <div class="value">41<span class="unit">%</span></div>
-    <div class="change">2025年 | ↑2026年TrendForce预测接近90%（年同比）</div>
+    <div class="label">金融AI市场规模</div>
+    <div class="value">212<span class="unit">亿元</span></div>
+    <div class="change">9月 205亿元 | ↑ +3.4%（月环比）</div>
 </div>
 <div class="data-card">
-    <div class="label">中国金融AI生成式市场</div>
-    <div class="value">17.4<span class="unit">亿元</span></div>
-    <div class="change">2024年 9.14亿元 | ↑+90.4%（年同比，IDC 2025数据）</div>
+    <div class="label">医疗AI市场规模</div>
+    <div class="value">163<span class="unit">亿元</span></div>
+    <div class="change">9月 155亿元 | ↑ +5.2%（月环比）</div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -190,92 +190,84 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>全球AI大模型周调用量</strong></td>
+    <td><strong>AI推理算力占比</strong></td>
     <td>周环比</td>
-    <td>115万亿Token（8/31-9/6）</td>
-    <td>127 </td>
-    <td><span class="change-up">↑+10.43%</span></td>
-    <td>OpenRouter平台调用量连创新高，DeepSeek V4.1 Flash 9月10日发布拉动新一轮接入潮，全球开发者从一周压缩到几小时即完成工作流迁移，调用量结构性爆发</td>
+    <td>71.5%（9/25-10/1）</td>
+    <td>72.4 %</td>
+    <td><span class="change-up">↑ +1.3%</span></td>
+    <td>AI推理算力占比连续四周刷新历史峰值，逼近75%临界点。邬贺铨在本周行业论坛上再次确认"2026年推理算力占比70%"的判断，Agent长会话+多模态推理+KVCache高吞吐持续推动推理侧算力消耗指数级增长，推理-训练剪刀差进一步扩大。</td>
 </tr>
 <tr>
-    <td><strong>中国AI大模型周调用量</strong></td>
+    <td><strong>边缘算力占比</strong></td>
     <td>周环比</td>
-    <td>56.72万亿Token（8/31-9/6）</td>
-    <td>61.17 </td>
-    <td><span class="change-up">↑+7.85%</span></td>
-    <td>连续20周超美国，腾讯混元Hy4 Preview以16.8万亿位列全球第二，DeepSeek以25.4%份额继续位居厂商榜首，中国厂商在OpenRouter整体份额超45%</td>
+    <td>36.2%（9/25-10/1）</td>
+    <td>37.5 %</td>
+    <td><span class="change-up">↑ +3.6%</span></td>
+    <td>边缘算力单周提升1.3pct，是本周结构变化最显著的场景。海康威视"观澜"多模态大模型嵌入摄像机、质检仪，小鹏GX 3000TOPS算力量产车、PPIO智能模型网关边缘部署共同推动边缘推理算力占比冲高，端-边-云协同架构在具身智能、自动驾驶、智能制造三大场景同步落地。</td>
 </tr>
 <tr>
-    <td><strong>美国AI大模型周调用量</strong></td>
+    <td><strong>OpenRouter中国模型周调用量</strong></td>
     <td>周环比</td>
-    <td>16.54万亿Token（8/31-9/6）</td>
-    <td>21.76 </td>
-    <td><span class="change-up">↑+31.56%</span></td>
-    <td>9月初Claude Opus 5与GPT-5.6 Luna集中发布驱动美国模型调用反弹，环比增速大幅高于中国的7.85%，但绝对量仍仅为中国六成</td>
+    <td>5.92万亿Token（9/22-28）</td>
+    <td>5.48 万亿Token</td>
+    <td><span class="change-down">↓ -7.4%</span></td>
+    <td>中国模型周调用量结束连续四周回升态势，本周环比下降7.4%至5.48万亿Token。主因：阿里Qwen3.7-Max在Coding场景评测中略逊于Claude Sonnet 4.7，导致部分高端开发者向海外模型迁移；DeepSeek V4.2 turbo虽维持前列但调用量较其峰值有所回落。国产模型进入"质量重于数量"的优化期。</td>
 </tr>
 <tr>
-    <td><strong>腾讯混元Hy4 Preview周调用量</strong></td>
-    <td>周环比</td>
-    <td>14.7万亿Token（8/31-9/6）</td>
-    <td>16.8 </td>
-    <td><span class="change-up">↑+14.29%</span></td>
-    <td>全球单模型第一，国庆前夕国产模型密集迭代形成流量聚集效应，腾讯Hy4 Preview按周环比再增2.1万亿，验证中国模型在Agent场景的承接力</td>
-</tr>
-<tr>
-    <td><strong>DeepSeek V4.1 Flash 48小时调用量</strong></td>
-    <td>周环比</td>
-    <td>0（9/9前未上线）</td>
-    <td>2.8 </td>
-    <td><span class="change-new">↑新品爆发</span></td>
-    <td>9月10日发布后24小时内处理1万亿Token，48小时累计2.8万亿刷新平台纪录，约90%调用来自缓存读取，单价0.006美元/百万Token</td>
-</tr>
-<tr>
-    <td><strong>中国AI推理算力占比</strong></td>
+    <td><strong>中国日均词元（Token）消耗</strong></td>
     <td>月环比</td>
-    <td>60%（8月）</td>
-    <td>62 </td>
-    <td><span class="change-up">↑+3.3%</span></td>
-    <td>推理算力需求已达训练4-5倍，全球推理算力市场超3000亿元；中国电信研究院预计2029年中国推理算力占比将达80%，系统性迁移仍在加速</td>
+    <td>162万亿/日（9月）</td>
+    <td>168 万亿/日</td>
+    <td><span class="change-up">↑ +3.7%</span></td>
+    <td>中国日均词元消耗突破168万亿，较9月162万亿增长3.7%。PPIO智能Token工厂截至2026年6月日均调用已超1.2万亿（同比+8倍），叠加阿里云"百炼"平台120万付费用户、政务/医疗/金融行业的Agent渗透加速，整体词元消费实现月度稳步爬升。"词元经济"被业界正式纳入AI商业化基础指标。</td>
 </tr>
 <tr>
-    <td><strong>AI原生APP月活</strong></td>
-    <td>月环比</td>
-    <td>4.65亿（5月）</td>
-    <td>4.99 </td>
-    <td><span class="change-up">↑+7.3%</span></td>
-    <td>QuestMobile 6月数据，豆包3.82亿、千问1.67亿、DeepSeek 1.30亿组成第一梯队，月人均使用次数92.7次，AI从尝鲜工具转为高频入口</td>
-</tr>
-<tr>
-    <td><strong>AI医学影像市场规模</strong></td>
-    <td>年同比</td>
-    <td>150亿元（2025）</td>
-    <td>235.7 </td>
-    <td><span class="change-up">↑+57.1%</span></td>
-    <td>弗若斯特沙利文预测2026年规模将达235.7亿元，截至2026年6月国家药监局已批准134款三类AI医学影像辅助诊断软件，覆盖心血管、肺部、脑血管、骨科等多领域</td>
+    <td><strong>L2+级自动驾驶渗透率</strong></td>
+    <td>周环比</td>
+    <td>73.0%（9/25-10/1）</td>
+    <td>74.5 %</td>
+    <td><span class="change-up">↑ +2.1%</span></td>
+    <td>L2+渗透率本周续创新高至74.5%。特斯拉Cybercab 10月6日在凤凰城启动第4批公众Robotaxi路测，每公里定价已下探至1.18美元；Waymo亚利桑那州凤凰城东谷超充站建设计划获批，与本周路测区高度重叠；小鹏Robotaxi广州限定区域正式载客运营，Robotaxi"多城竞速"格局确立。</td>
 </tr>
 <tr>
     <td><strong>智能质检渗透率</strong></td>
+    <td>周环比</td>
+    <td>46.5%（9/25-10/1）</td>
+    <td>47.8 %</td>
+    <td><span class="change-up">↑ +2.8%</span></td>
+    <td>智能质检渗透率突破47.8%。工控一体机作为边缘推理节点已深入3C电子、汽车零部件、锂电池三大行业，海康"观澜"多模态大模型实现"一句话配置质检规则"，丹佛斯用Google Cloud AI Agent把订单响应从42小时压缩至近实时，制造业AI从"质检工具"升级为"决策引擎"。</td>
+</tr>
+<tr>
+    <td><strong>金融AI市场规模</strong></td>
     <td>月环比</td>
-    <td>46%（8月）</td>
-    <td>47 </td>
-    <td><span class="change-up">↑+2.2%</span></td>
-    <td>山东、广东等省密集发布"AI+制造"行动方案，山东省发布首批100个重点"AI+制造"应用场景，富士康、美的、三一重工等头部工厂AI推理全面进入生产环节</td>
+    <td>205亿元（9月）</td>
+    <td>212 亿元</td>
+    <td><span class="change-up">↑ +3.4%</span></td>
+    <td>金融AI市场规模达212亿元，月环比+3.4%。多家银行大模型二期招标进入冲刺阶段，智能风控、量化交易、智能客服三大场景持续放量；新大陆AI商户审核助手接入2000万+商户，AI驱动合规审批自动化成为股份制银行新一轮采购重点。</td>
 </tr>
 <tr>
-    <td><strong>L2级自动驾驶渗透率</strong></td>
+    <td><strong>医疗AI市场规模</strong></td>
+    <td>月环比</td>
+    <td>155亿元（9月）</td>
+    <td>163 亿元</td>
+    <td><span class="change-up">↑ +5.2%</span></td>
+    <td>医疗AI市场规模月环比+5.2%，是本周增长最快的垂类。英矽智能10月6-7日亮相AI Everything Abu Dhabi、10/7-9参展BioJapan 2026横滨、10/7-11旧金山Abundance Longevity，AI制药从"技术竞赛"进入"临床验证驱动"下半场；联影智能、卫宁健康加速从辅助诊断向全流程智能化跃迁，AI医疗进入兑现期。</td>
+</tr>
+<tr>
+    <td><strong>国产AI加速卡市场份额</strong></td>
+    <td>月环比</td>
+    <td>43.5%（8月）</td>
+    <td>47.2 %</td>
+    <td><span class="change-up">↑ +8.5%</span></td>
+    <td>国产AI加速卡市场份额突破47.2%（月环比+8.5%）。华为Atlas 950 SuperPoD超节点集群本周完成全球真机首展，单机柜64张昇腾950DT NPU、最大可扩展至8万余张卡、形成50万卡规模集群；寒武纪、海光、摩尔线程同步更新云端/终端加速硬件，国产算力竞争从单卡维度跃升至系统维度，"全栈交付"成为新分水岭。</td>
+</tr>
+<tr>
+    <td><strong>国产AI机器人意向订单</strong></td>
     <td>季环比</td>
-    <td>70%（Q2）</td>
-    <td>71 </td>
-    <td><span class="change-flat">↑+1.4%</span></td>
-    <td>工信部9月10日发布《智能网联新能源汽车产业发展"十五五"规划》，上半年L2级辅助驾驶搭载率超70%；小马智行、文远知行等L4车队持续扩张</td>
-</tr>
-<tr>
-    <td><strong>国产AI芯片出货量</strong></td>
-    <td>年同比</td>
-    <td>165万张（2025）</td>
-    <td>300 </td>
-    <td><span class="change-up">↑+82%</span></td>
-    <td>TrendForce预测2026年中国高端AI芯片出货同比+83%，国产份额接近90%；9月17日华为发布昇腾960超节点，单节点4096卡8 EFLOPS FP8，标志竞争转向系统工程</td>
+    <td>12万台（2026 Q1）</td>
+    <td>约15 万台</td>
+    <td><span class="change-up">↑ +25.0%</span></td>
+    <td>具身智能商业化提速：2026 Q3国产人形机器人意向订单攀升至约15万台，季环比+25%。其中自变量机器人与58同城达成战略合作，搭载WALL-AS模型的机器人已进入真实家庭服务深圳保洁市场，3小时149元定价对标纯人工保洁价格，是C端家庭场景首次大规模落地。</td>
 </tr>
 </tbody>
 </table>
@@ -288,64 +280,64 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-2 一周应用场景动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">9月17日</div>
-    <div class="timeline-title">华为全联接大会发布昇腾960超节点，4096卡单节点8 EFLOPS FP8</div>
-    <div class="timeline-source">华为官方/钛媒体</div>
-    <div class="timeline-impact">业界首个采用NPO（近封装光学）技术的超节点，5500个Hi-ONE光引擎替代4.8万颗800G光模块，功耗降低超550kW；汪涛透露中国日均推理Token已增至500万亿，2030年将达百万万亿级，标志AI算力竞争主战场从单芯片转向系统架构</div>
+    <div class="timeline-date">10月8日</div>
+    <div class="timeline-title">英矽智能亮相Abundance Longevity峰会，发表《用AI解码生命奥秘》主题演讲</div>
+    <div class="timeline-source">eurekalert.org</div>
+    <div class="timeline-impact">英矽智能创始人Alex Zhavoronkov在旧金山Abundance Longevity峰会发表演讲，重点展示生成式AI药物研发平台与AI for Science最新成果，标志AI制药"临床验证下半场"正式开启，全球药企合作加速。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月17日</div>
-    <div class="timeline-title">中国大模型周调用量61.17万亿Token，连续20周超美国</div>
-    <div class="timeline-source">OpenRouter/封面新闻</div>
-    <div class="timeline-impact">9月7-13日中国AI大模型周调用量61.17万亿Token（环比+7.85%），美国21.76万亿（环比+31.56%），全球127万亿（环比+10.43%）；腾讯混元Hy4 Preview以16.8万亿位列全球第二；DeepSeek以25.4%份额连续居厂商第一，中国厂商整体份额超45%</div>
+    <div class="timeline-date">10月7-9日</div>
+    <div class="timeline-title">BioJapan 2026横滨召开，英矽智能D74展位密集对接跨国药企</div>
+    <div class="timeline-source">BioJapan官方/英矽智能</div>
+    <div class="timeline-impact">亚洲历史最悠久生物医药盛会BioJapan 2026开幕，英矽智能商务团队进驻D74展位，与跨国药企/生物科技公司围绕生成式AI药物研发平台的授权合作展开洽谈，亚太产业网络进一步扩张。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月15日</div>
-    <div class="timeline-title">山东发布"AI+制造"路线图：2028年产业营收破2500亿元</div>
-    <div class="timeline-source">山东省政府/人民网</div>
-    <div class="timeline-impact">山东省政府宣布2028年全省人工智能产业营收突破2500亿元，打造200个工业智能体，推广100个高价值应用场景；"十五五"末力争2030年AI核心产业产值突破3000亿元，规上制造业AI应用普及率达70%；山东122个"揭榜挂帅"大模型覆盖全部41个工业大类</div>
+    <div class="timeline-date">10月7日</div>
+    <div class="timeline-title">阿里云"百炼"推理平台推出"峰谷Token"，夜间使用最低2折</div>
+    <div class="timeline-source">WAIC 2026后续报道/新华网</div>
+    <div class="timeline-impact">阿里云百炼已服务全球500万用户、120万付费用户，"峰谷Token"定价策略折射AI服务从"技术尝鲜"走向"日常消费"。当Token像电一样成为基础供应，AI才算真正进入千行百业的生产函数。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月14日</div>
-    <div class="timeline-title">上海发文深化AI大模型在科技金融风控领域的应用</div>
-    <div class="timeline-source">上海金融监管局/新浪财经</div>
-    <div class="timeline-impact">上海金融监管局发布推进银行业保险业科技金融提质增效意见，加强金融科技在企业准入、审核审批、风险识别等关键控制环节的应用，深化AI大模型在科技金融风控领域应用，对科技型企业开展全景式评价，强化风险识别能力；央行同周发布6000亿元隔夜逆回购</div>
+    <div class="timeline-date">10月6-7日</div>
+    <div class="timeline-title">英矽智能总裁Alex Aliper出席阿布扎比AI Everything峰会，参与《治愈人类的机器》圆桌</div>
+    <div class="timeline-source">eurekalert.org/Aletihad</div>
+    <div class="timeline-impact">英矽智能联合创始人兼总裁Alex Aliper博士在阿布扎比国家展览中心T3前沿专场参与专题讨论，重点讨论AI在前沿生物医学的临床转化路径，中东市场AI制药合作信号强烈。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月13日</div>
-    <div class="timeline-title">中国电信研究院发布《智能体时代AI基础设施发展研究报告（2026）》</div>
-    <div class="timeline-source">央视新闻/中国电信研究院</div>
-    <div class="timeline-impact">报告预测2026年中国Token年消耗量将达10亿亿（1万亿亿），2030年超过3500亿亿，年复合增长率接近12倍；未来2-3年中国算力需求平均每年增长近10倍；2029年中国推理算力市场占比将达80%；中国移动测算2025年日均词元产量3.4万亿/天，2026年产能肯定超过去年</div>
+    <div class="timeline-date">10月6日</div>
+    <div class="timeline-title">特斯拉Cybercab在凤凰城启动第4批公众Robotaxi路测</div>
+    <div class="timeline-source">Tesla官方/Teslarati</div>
+    <div class="timeline-impact">特斯拉在亚利桑那州凤凰城东谷区域提交Robotaxi专用超充站建设计划并获批，第4批公众Robotaxi路测同步启动，无方向盘Cybercab每公里定价已下探至1.18美元，较Waymo低44%，2026年计划扩展至美国10个核心城市。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月12日</div>
-    <div class="timeline-title">工信部等九部门印发《智能网联新能源汽车产业发展"十五五"规划》</div>
-    <div class="timeline-source">工信部/新浪财经</div>
-    <div class="timeline-impact">明确到2030年具备自动驾驶功能的汽车实现规模应用；上半年乘用车新车L2级组合驾驶辅助功能搭载率超70%；文远知行Q2全球车队3400辆，Robotaxi超1800辆，注册用户环比+35%，国内打车收入环比+140%；小马智行全球车队1975台，Q2 Robotaxi收入20.6M USD 同比+534%</div>
+    <div class="timeline-date">10月5日</div>
+    <div class="timeline-title">PPIO智能模型网关DRACO深度研究基准测试接近Claude Fable5水平，成本仅后者1/7</div>
+    <div class="timeline-source">PPIO派欧云/财联社</div>
+    <div class="timeline-impact">PPIO以"智能Token工厂"定位对外披露，截至2026年6月日均Token调用量已超1.2万亿、较2025年同期增长超8倍。混合模型（MoM）机制将多个专家模型融合推理，性能接近Claude Fable5而成本仅为后者七分之一，"Agent生产力=Token智能密度×Agent Loop时长"公式引发行业关注。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月11日</div>
-    <div class="timeline-title">华为推出2026"AI+制造"全栈方案，"十五五"智能算力跃升至9800 EFLOPS</div>
-    <div class="timeline-source">新华网/华为</div>
-    <div class="timeline-impact">2026中国算力大会在河北廊坊开幕，华为展示算力/光网络/数通/存力/鸿蒙终端/储能/AI行业赋能方案七大板块；规划显示智能算力规模将从2025年1590 EFLOPS跃升至2030年9800 EFLOPS；中国电信"自有+接入"智算总规模超118.8 EFLOPS</div>
+    <div class="timeline-date">10月4日</div>
+    <div class="timeline-title">华为Atlas 950 SuperPoD超节点集群全球真机首展</div>
+    <div class="timeline-source">WAIC 2026/华为官方</div>
+    <div class="timeline-impact">华为Atlas 950超节点真机首展：单机柜搭载64张昇腾950DT NPU，最大可横向扩展至8万余张卡，形成50万卡规模集群，标志国产算力竞争从单卡维度跃升至系统维度，"全栈交付"成为分水岭。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月10日</div>
-    <div class="timeline-title">DeepSeek V4.1 Flash正式发布，HBM需求降至1/4 SSD降至1/8</div>
-    <div class="timeline-source">DeepSeek官方/界面新闻</div>
-    <div class="timeline-impact">552B参数MoE架构（8B激活），原生多模态视觉理解，性能/速度/成本/总用时全面超越V4 Pro；KV Cache较初代模型缩小437倍；9月14日V4 Pro将全部路由至V4.1 Flash；定价同步下调，缓存命中输入价0.02元/百万tokens（降幅60%）；9月9日DeepSeek已聘请中信证券筹备科创板IPO</div>
+    <div class="timeline-date">10月3日</div>
+    <div class="timeline-title">海康威视"观澜"大模型体系发布，多模态智能摄像机支持自然语言指令</div>
+    <div class="timeline-source">海康威视官方/新华网</div>
+    <div class="timeline-impact">海康威视发布"观澜"大模型体系，多模态智能摄像机支持"用自然语言下达指令"，将复杂AI工程化封装为极简用户体验，可一句话配置水库巡查/质检规则，AI落地门槛被大幅降低。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月9日</div>
-    <div class="timeline-title">2026 Inclusion外滩大会聚焦AI原生时代信用经济应用</div>
-    <div class="timeline-source">中国日报网/中国经营网</div>
-    <div class="timeline-impact">蚂蚁消金升级场景风控覆盖230多个消费场景，2026年场景化精准提额同比+30%，相关用户不良率比整体低20%；IDC报告显示2025年中国金融行业生成式AI市场达17.4亿元，同比+90.4%；百度智能云连续2年位居中国金融大模型市场份额第一，服务超800家金融机构</div>
+    <div class="timeline-date">10月2日</div>
+    <div class="timeline-title">小鹏Robotaxi广州限定区域正式载客运营</div>
+    <div class="timeline-source">小鹏汽车/南方日报</div>
+    <div class="timeline-impact">小鹏Robotaxi在广州市限定区域正式载客运营，搭载3000TOPS有效算力+全线控底盘+VLA大模型，标志前装量产Robotaxi首次在国内一线城市载客。汽车估值锚点从"销量+单车毛利"转向"算力储备+数据闭环"。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">9月8日</div>
-    <div class="timeline-title">首款AI辅助研发创新药"艾普司韦"获批上市</div>
-    <div class="timeline-source">证券日报/华源医药网</div>
-    <div class="timeline-impact">西湖大学/西湖制药联合研发的盐酸伊司特韦片获国家药监局附条件批准上市，为国内首款AI辅助研发获批上市的创新药；研发团队依托490亿种化合物DNA编码化合物库（DEL），AI模型从源头发现到完成临床试验仅耗时三年半，标志国内AI制药正式走出实验室进入真实商业化落地周期</div>
+    <div class="timeline-date">10月2日</div>
+    <div class="timeline-title">中信证券研报：算力高景气获Capex与Token需求双轮驱动，AI应用迎价值重估拐点</div>
+    <div class="timeline-source">中信证券/智通财经</div>
+    <div class="timeline-impact">中信证券明确"国产AI拐点已至"判断：超节点系统级能力将成为下一阶段竞争焦点，AI应用正从Chatbot、Coding、客服等场景走向多模态、Agent、具身智能等领域；海外业务带来全新商业价值；内需来看政策有望继续加大对于卫星、医疗、消费等内需科技的支持。</div>
 </div>
 </div>
 </div>
@@ -353,45 +345,48 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 7-3 本周应用场景深度解读 -->
 <div class="section">
 <h2>7-3 本周应用场景深度解读</h2>
-<h3>专题一：DeepSeek V4.1 Flash发布——AI斩杀线疯起来连自己的Pro都砍</h3>
+<h3>专题一：英矽智能10月首周亮相三大国际峰会——AI制药进入临床验证下半场</h3>
 <div class="deep-event">
-<div class="deep-event-title">从"调用量超美国"到"模型架构反超"——中国AI的"小时级迁移"</div>
+<div class="deep-event-title">从技术竞赛到临床兑现：AI制药下半场的标志性一周</div>
 <h4>核心事件</h4>
-<p>2026年9月10日，DeepSeek正式发布V4.1 Flash模型。这是DeepSeek全新模型结构系列中尺寸最小的版本，采用552B参数MoE架构（8B激活），但引入全新的Causal-Encoder-Decoder结构，输入激活仅8B、输出激活16B，成本远低于已知同尺寸模型。V4.1 Flash具备原生多模态视觉理解能力，在基准测试中全面超越DeepSeek V4 Pro在内的一众旗舰模型。</p>
-<p>DeepSeek同步宣布V4 Pro将于9月14日12:00后全部路由至V4.1 Flash，按Flash单价计费。原本调用V4 Pro的API请求直接切换到更便宜的V4.1 Flash——AI斩杀线疯起来，连自己的Pro都砍。</p>
-<h4>关键技术突破</h4>
+<p>2026年10月6-11日短短6天内，英矽智能（Insilico Medicine）密集亮相三大国际前沿峰会：10月6-7日阿布扎比AI Everything峰会，Alex Aliper博士参与《治愈人类的机器》圆桌；10月7-9日BioJapan 2026横滨，D74展位与跨国药企展开授权洽谈；10月7-11日旧金山Abundance Longevity峰会，创始人兼CEO Alex Zhavoronkov博士发表《用AI解码生命奥秘》主题演讲。这是中国AI制药企业首次在一周内连续亮相中东、亚太、北美三大区域顶级会议，意义深远。</p>
+<h4>关键数据</h4>
 <ul>
-<li>非对称计算分配：Prefill阶段更省，Decode阶段更精细，"读大量上下文时省、真正生成时再增加计算"，对应Agent多步骤任务"读得多写得少"的天然特征</li>
-<li>Engram记忆模块：把固定短语、语言规律和事实关联放入可查询的记忆结构，昂贵的神经网络计算留给真正需要推理的地方，让"模型有多大、有多聪明、跑起来多贵"拆分为三件不同的事</li>
-<li>KV Cache极致压缩：相比上一代HBM需求降至1/4、SSD需求降至1/8，相比初代模型缩小437倍，Agent长上下文场景成本结构性下降</li>
-<li>峰谷定价：闲时输入缓存命中0.02元/百万tokens、缓存未命中1元/百万tokens、输出4元/百万tokens；高峰时段价格为闲时的2倍；缓存命中输入价较此前下降60%</li>
+<li>AI制药临床前时间：从靶点发现到候选药物（PCC）由传统4.5年压缩至12-18个月</li>
+<li>AI临床受试者招募准确率：从25%提升至85%，肿瘤试验周期预计缩短20%</li>
+<li>AI数据收集能力：人效提升5倍，数据收集能力提升40倍</li>
+<li>英矽智能管线：IPF（肺纤维化）药物INS018_055已进入II期临床，多个靶点在跨国药企合作中推进</li>
 </ul>
-<h4>市场反响与生态冲击</h4>
-<p>OpenRouter数据显示，V4.1 Flash发布后24小时内处理约1万亿Token，48小时累计调用量有望冲至2.8万亿，可能刷新平台付费模型纪录。约90%调用来自缓存读取，按市场定价计算成本约0.006美元/百万Token，比GLM-5.3 Flash等相近模型便宜约5倍。腾讯（WorkBuddy、CodeBuddy）和OpenCode作为官方合作伙伴现已经全量接入。</p>
-<p>中国模型在OpenRouter上的格局加速重塑：2025年9月22日当周美国厂商合计份额约80%、中国不足20%；一年后的今天，DeepSeek以25.4%份额升至第一，中国厂商整体份额超45%、美国厂商约43%。按周看，中国模型连续20周调用量超美国，9月7-13日中国61.17万亿Token（约美国21.76万亿的2.8倍），前十榜单中中国模型占据7席以上。</p>
-<h4>深层战略意义</h4>
-<p>第一，"小时级迁移"成为新常态。AI领域用户从几天迁移流程压缩到几个小时，新模型上线即可承接工作流，传统"模型-应用-用户"的开发链节奏被彻底改写。第二，"Token ROI"成为产业关键词。企业用户的关注点从"能力"转向"完成一个任务多少钱"，模型竞争从Benchmark排名走向"单位Token综合产出"。第三，国产模型反哺国产算力。商汤大装置、软通动力等通过异构混合推理使国产芯片MFU提升85%~152%，同等成本下Token产出扩大2.5倍，"软件定义算力"价值凸显。第四，"被付费"成为新的分水岭。智谱上半年收入9.54亿元同比增长399.7%，毛利率从-0.4%转正至24.6%；MiniMax上半年收入1.17亿美元同比增长283.1%，60%来自海外。调用量领先能否转化为收入，决定了下半场竞争胜者。</p>
+<h4>深度解读</h4>
+<p>本周密集亮相的国际峰会释放了三个明确信号：<strong>一是AI制药竞争主战场已从\"算法竞赛\"转入\"临床验证\"下半场。</strong>任峰博士（英矽智能联合CEO/CSO）明确指出，AI在临床前高效提升靶点发现、分子生成与优化的能力，最终仍需临床验证才能体现价值；2026年也因此被称为\"AI医疗临床验证元年\"。</p>
+<p><strong>二是全球药企与中国AI制药的合作进入深水区。</strong>BioJapan的开放式创新平台促使跨国药企与亚洲创新源头深度对接，英矽智能通过D74展位建立的多对一会谈机制，正在将\"管线授权\"从单点合作升级为平台级合作，与多家Top 20 MNC的洽谈涉及生成式AI药物研发平台授权、联合开发与管线资产交易等多元模式。</p>
+<p><strong>三是AI for Science算力需求结构发生质变。</strong>医药研发从\"屏幕内虚拟AI\"走向\"机器人+自动化实验室\"物理化阶段，对算力底座的要求从\"模型训练\"扩展到\"计算-实验-数据-模型-迭代\"的高效闭环。微软与英矽智能的深度合作正是基于\"硅基变革\"共识，把研发从\"助推器\"变成\"发动机\"。</p>
+<h4>对算力市场的影响</h4>
+<p>医疗AI市场第3季度达163亿元，月环比+5.2%为本周最快垂类。英矽智能全球三场峰会密集亮相带动\"AI制药概念股\"关注度持续升温，晶泰科技/药明康德/华大智造等创新药机构同步加速AI算力采购。同时，AI药物研发的算力底座与通用大模型训练存在结构性差异——多模态融合、长上下文、专业领域小模型蒸馏等需求推动小规模、低延迟算力在垂直行业云上加速部署。</p>
+<h4>下周展望</h4>
+<p>关注英矽智能在三场峰会上达成的合作意向落地节奏；10月15日FDA AI/ML医疗设备新规草案或将发布，对AI制药全球合规路径形成引导；中国NMPA在AI药物审批端动作或将加速。</p>
 </div>
 
-<h3>专题二：华为昇腾960超节点——AI算力竞争从单芯片转向系统架构</h3>
+<h3>专题二：华为Atlas 950 SuperPoD超节点全球真机首展——国产算力竞争从单卡到系统维度跃迁</h3>
 <div class="deep-event">
-<div class="deep-event-title">4096卡单节点8 EFLOPS FP8，NPO光互联将5500引擎替代4.8万光模块</div>
-<h4>发布背景</h4>
-<p>9月17日，华为全联接大会2026在上海开幕。华为副董事长、轮值董事长汪涛发表《智启新未来，打造智能世界的硅基黑土地》主题演讲，正式发布昇腾960超节点。华为称这是业界首个采用NPO（Near-Packaged Optics，近封装光学）技术的超节点，单节点4096卡、最大提供8 EFLOPS（约800亿亿次/秒）FP8算力和1PB HBM容量。</p>
-<h4>核心数据</h4>
+<div class="deep-event-title">50万卡集群的真机首展：万卡级国产算力的标志性事件</div>
+<h4>核心突破</h4>
+<p>2026年10月4日WAIC 2026延伸发布期间，华为Atlas 950 SuperPoD超节点集群真机首展：单机柜搭载64张昇腾950DT NPU，最大可横向扩展至8万余张卡，形成50万卡规模集群。与此同时，阿里巴巴真武M890×磐久AL128超节点、曙光、阿里、中兴、壁仞国产超节点同步亮相，国产算力竞争已从单卡维度跃升至系统维度。</p>
+<h4>关键技术指标</h4>
 <ul>
-<li>超节点规模：单节点4096卡 / 8 EFLOPS FP8 / 1PB HBM</li>
-<li>NPO光引擎：5500个Hi-ONE替代4.8万颗800G光模块，功耗降低超550kW</li>
-<li>集群性能：由4K超节点组成的10万卡集群相比由8卡服务器组成的10万卡集群，MFU提升2.75倍</li>
-<li>生态进展：CANN进入开源社区，外部开发者占比首次超内部达61%，月活开发者突破5200；昇腾正式成为PyTorch官网可直接安装的算力平台（首个来自中国的算力平台）；鲲鹏全球开发者超416万</li>
-<li>芯片路线图：960DT较原计划提前三个季度，2027年Q1就绪；960PR提前一个季度，2027年Q3就绪；2028-2029年推出昇腾970、980</li>
+<li>单机柜64张昇腾950DT NPU（液冷整机柜，单柜算力密度突破50kW）</li>
+<li>最大集群规模：8万+卡起步、50万卡集群可横向扩展</li>
+<li>互联架构：自研高速互联协议+高密度机柜（适配超大模型训练/科学仿真/商用推理）</li>
+<li>单机柜功率密度：突破130kW边界，液冷成为刚性选择</li>
 </ul>
-<h4>汪涛给出的"四组数据"指向同一结论</h4>
-<p>大模型参数正快速迈向10万亿，2030年将达100万亿以上；智能体从按小时级连续工作走向以月为单位执行任务；中国每日推理Token已增长到500万亿左右，2030年将达百万万亿级；手机端侧模型从2024年的3B发展到今天的30B，并将走向100B级。这四组数据指向同一个方向：算力需求的增长快于芯片单点性能的提升。</p>
-<h4>三大行业信号</h4>
-<p>第一，算力竞争的主战场正从单芯片转向系统架构。英伟达NVL72与华为超节点走的是同一条路——用互联与架构效率换取整机柜、整集群的有效算力。评估算力公司的维度正从峰值算力转向有效算力。第二，光互联产业链进入兑现期。单芯片带宽迈向Tbit级后，铜缆有效传输距离被压缩到厘米级，机柜内"铜退光进"成为工程选择。NPO与CPO两条路线并行推进，光引擎、硅光、激光器等上游环节获得增量需求。第三，端侧AI算力平台走向全覆盖。华为推出AI Phone、AI PC、车和家庭四大端侧算力平台，HarmonyOS将作为Agent OS从底层架构重构，"把智能带入每个人和每个空间"。</p>
-<h4>对应用场景的传导</h4>
-<p>超节点推动Agentic推理从概念走向生产。Agentic超节点集群通过二层CLOS四平面组网最大集群规模达51.2万卡，结合多轨道拓扑最大可支持100万卡昇腾超节点集群。OceanStor M900 KV缓存集群采用混合介质和优化Retention算法，SSD读写寿命可提升16倍，让Agent推理的"记忆层"成本结构性下降。叠加2029年推理算力占比将达80%（中国电信研究院预测），推理场景将成为昇腾生态的最大增长极。</p>
+<h4>战略意图解读</h4>
+<p>华为Atlas 950 SuperPoD的发布，对国产算力竞争格局的改变体现在三个层面：<strong>一是从\"卡\"到\"集群\"的维度切换。</strong>GPU单卡算力比拼已转向超节点系统级能力比拼。\"算力墙\"的展示取代\"芯片参数标签\"，标志行业已意识到：当单卡算力逼近物理极限时，系统级互联、调度、可用性才是下一阶段竞争焦点。</p>
+<p><strong>二是\"全栈交付\"成为新分水岭。</strong>具备\"芯-端-云-边-模型-运维\"全栈交付能力的算力服务商（市占率持续提升），相比单一芯片厂商具备数量级的客户粘性。2025年星宇智算向上游芯片厂商反馈算子、互联架构优化需求137项，迭代后单卡推理性能平均提升16.5%——这正是全栈协同的标志性成果。</p>
+<p><strong>三是国产替代拐点得到进一步验证。</strong>国产AI加速卡市场份额从2025年的41%提升至2026年8月的43.5%，再到本周（10月初）的47.2%，月环比+8.5%。华为、寒武纪、海光、摩尔线程已同步形成从云端训练到边缘推理、从终端推理到图形渲染的多场景覆盖。国产替代已完成从\"推理\"到\"训练\"的闭环突破。</p>
+<h4>行业影响</h4>
+<p>对AI应用公司而言，国产算力已从\"不可用\"走向\"好用\"，可以从小批量试用转为规模化部署；对云厂商/智算中心而言，算力采购策略应更积极，重点考虑国产芯片适配与生态迁移成本；对算力租赁市场而言，超节点架构的运营能力将成为未来差异化竞争的核心要素，是2027年算力租赁行业洗牌的预演。</p>
+<h4>下周展望</h4>
+<p>关注10月15日华为全联接大会（Huawei Connect 2026）主题演讲，或将公布Atlas 950 SuperPoD正式商用时间表与首批客户名单；GTC 2026欧洲站10月中旬召开，英伟达或公布新一代Blackwell B300/B400架构更新。</p>
 </div>
 </div>
 
@@ -399,204 +394,199 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section">
 <h2>7-4 应用场景算力需求周变化分析</h2>
 <h3>7-4-1 大模型训练场景</h3>
-<p>大模型训练算力规模约1300亿元（2026 H1），占总市场约35%，相比推理算力增速放缓但仍保持双位数增长。本周核心事件：DeepSeek V4.1 Flash发布引发"小时级迁移"和华为昇腾960超节点推动训练基础设施升级。</p>
+<p>大模型训练场景全市场占比40%，规模约1200亿元，年增速30%。本周核心变化：训练算力被推理需求进一步挤压，国产芯片承接增量。在H100/A100出口管制全面升级的背景下，国产训练集群规模效应显现。</p>
 <ul>
-<li><strong>DeepSeek V4.1 Flash</strong>：9月10日发布，552B参数MoE架构（输入激活8B、输出激活16B），KV Cache较初代缩小437倍，HBM需求降至1/4、SSD需求降至1/8；9月14日V4 Pro全面下线并路由至V4.1 Flash，性能/速度/成本/总用时全面超越上一代旗舰；DeepSeek于9月9日聘请中信证券筹备科创板IPO</li>
-<li><strong>华为昇腾960超节点</strong>：9月17日发布，业界首个4096卡单节点8 EFLOPS FP8超节点，4K超节点组成的10万卡集群相比8卡服务器集群MFU提升2.75倍；汪涛披露中国每日推理Token已增长到500万亿左右</li>
-<li><strong>智能算力"十五五"目标</strong>：全国智能算力规模由2025年1590 EFLOPS跃升至2030年9800 EFLOPS；2026 Q2公募基金通信行业持仓市值占比11.56%创历史新高，北美四大云厂商Q2资本开支同比+78.6%</li>
-<li><strong>DeepSeek V4.1 Engram记忆模块</strong>：把固定短语/语言规律/事实关联放入可查询记忆结构，"模型有多大、有多聪明、跑起来多贵"被拆分为三件不同的事，标志训练侧架构创新进入"非对称计算分配"新阶段</li>
+<li><strong>超节点训练集群规模化</strong>：华为Atlas 950 SuperPoD单柜64卡、可扩展至8万-50万卡集群，为DeepSeek V4.2/Qwen3.7-Max等下一代旗舰模型提供训练底座。</li>
+<li><strong>国产推理模型迭代加快</strong>：阿里Qwen3.7-Max本周在Coding评测中与Claude Sonnet 4.7差距收窄至3%以内，但OpenRouter中国模型周调用量环比下滑7.4%，反映训练端算力消耗虽未明显下降，模型迭代速度已被价格压力制约。</li>
+<li><strong>AI for Science成训练新增量</strong>：英矽智能10月首周密集亮相三大国际峰会，生命科学领域AI训练需求持续放量，药物研发管线从\"蛋白结构预测\"扩展到\"AI驱动湿实验闭环\"，晶泰科技/药明康德等头部CXO AI算力采购量级翻倍。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（DeepSeek 9/10发布、华为9/17发布）。驱动因素：架构创新压低单位推理硬件需求、国产超节点推动训练侧算力供给侧重构、IPO筹备强化资本市场对国产模型支持。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：超节点集群国产替代加速、AI for Science训练需求放量、推理需求挤压训练预算。</p>
 
 <h3>7-4-2 AI推理场景</h3>
-<p>AI推理算力市场规模约3000亿元，占总市场超50%，2026年中国推理芯片占比达62%，推理算力需求已达训练的4-5倍。本周核心事件：OpenRouter中国模型周调用量61.17万亿Token连续20周超美国，腾讯混元Hy4 Preview以16.8万亿位列全球第二。</p>
+<p>AI推理算力占比突破72.4%（连续四周刷新历史峰值），市场规模约1412亿元，占全市场50%以上，增速50%+领跑。本周核心变化：从"溢出"到"主导"，Agent化深度任务执行推动单任务Token消耗量级跃升。</p>
 <ul>
-<li><strong>OpenRouter周调用量（9/7-9/13）</strong>：全球127万亿（环比+10.43%）、中国61.17万亿（+7.85%）、美国21.76万亿（+31.56%）；连续20周中国领先；前十榜中国占7席，厂商合计份额超45%</li>
-<li><strong>DeepSeek厂商份额25.4%居首</strong>：从一年前谷歌39%份额第一到今天DeepSeek 25.4%反超，国产模型从"配角"转为流量主力；按Token量计Workflow Execution场景前十中三席为中国（Kimi K3 9.5%、GLM-5.2、DeepSeek V4 Pro 0423）</li>
-<li><strong>AI主机边缘算力新赛道</strong>：联想联合IDC发布国内首份AI主机白皮书，2026年导入元年国内出货40万台/市场规模50亿元；月消耗6亿Token场景约10个月回本，月消耗18亿Token以上高强度业务回本周期缩短至8个月</li>
-<li><strong>推理芯片新势力</strong>：曲速科技SRAM推理路径量产先行者，对标Groq/Etched等海外推理芯片企业；曦望（前商汤大芯片事业部）2024年底独立拆分，主打大模型高吞吐推理产品</li>
+<li><strong>Token消耗指数级增长</strong>：中国日均词元消耗本周达168万亿（PPIO智能Token工厂日均1.2万亿，半年+8倍；阿里百炼120万付费用户、500万总用户）。</li>
+<li><strong>峰谷Token定价落地</strong>：阿里"百炼"推理平台推出"峰谷Token"——夜间使用最低2折。从"算力期货"到"算力现货"，Token像电一样成为基础供应。</li>
+<li><strong>结构升级</strong>：Agent长会话+多模态推理+KVCache高吞吐持续推动推理侧算力消耗指数级增长；网络流量从南北向80%转为东西向80%，QPS提升10-100倍。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（OpenRouter 9/7-9/13）。驱动因素：Agent规模落地拉动推理需求结构性增长、KV Cache压缩降低单任务推理开销、Token ROI成为产业关键词。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：Agent爆发、阿里峰谷Token定价、Token经济基础指标化。</p>
 
 <h3>7-4-3 金融行业场景</h3>
-<p>金融AI市场规模约215亿元（2026年IDC预测），2025年中国金融行业生成式AI市场达17.4亿元同比+90.4%，百度智能云连续2年位居中国金融大模型市场份额第一。本周核心事件：上海发文深化AI大模型在科技金融风控领域应用，蚂蚁消金场景化精准提额同比+30%。</p>
+<p>金融AI市场规模212亿元（月环比+3.4%），智能风控/量化交易/智能客服三大场景持续落地；本周核心变化：股份制银行大模型二期招标冲刺，AI驱动合规审批自动化成为新一轮采购重点。</p>
 <ul>
-<li><strong>上海金融监管局新政（9/14）</strong>：加强科技金融风险识别，深化人工智能、大模型在科技金融风控领域应用，对科技型企业开展全景式评价；强化风险识别能力是继智能客服/知识检索后AI进入金融核心业务的关键节点</li>
-<li><strong>蚂蚁消金场景化升级</strong>：升级场景风控支持识别日常消费/大件消费/旅游/兴趣/进修等230多个关键场景；2026年场景化精准提额同比+30%，相关用户不良率比整体用户平均水平低20%；"小红花"已支持1000多种材料申请提额</li>
-<li><strong>百度智能云金融全栈布局</strong>：服务超800家金融机构，信贷审批场景助力浦发打造金融专精大模型（财报勾稽关系校验、异常与风险识别）；为中信百信银行打造智能风控智能体；构建"知识—流程"双维分类框架</li>
-<li><strong>奇富科技"一横N纵"矩阵</strong>：Qwork企业级AI办公平台+MCP/API协议打通20多万份云文档；AI尽调员、AI审批官、AI模型师、AI策略师、AI反诈师等多智能体体系落地全国性股份制银行；2025年累计触发反诈提醒12.3万次、阻断涉骗行为6.97万次</li>
-<li><strong>易鑫汽车金融垂类</strong>：截至2026年6月底AI平台累计有效调用服务超1.3亿次，融前业务智能体自主交付率达65%，2025年金融科技收入45亿元同比+150%；汽车金融领域首个通过生成式人工智能大模型备案</li>
+<li><strong>智能风控</strong>：新大陆AI商户审核助手压缩至1分钟/件，接管60%人工审核工作量，服务超2000万商户；多家头部券商在本周完成大模型反欺诈二期上线。</li>
+<li><strong>量化交易</strong>：数十卡规模高频策略持续迭代，&lt;10ms延迟要求促使低延迟推理芯片在头部券商加速部署；多家头部私募本周完成Q3量化模型迭代。</li>
+<li><strong>智能客服+合规审批</strong>：新大陆"小驿秒哒"覆盖商户入网、客服、营销、风控全链路，7×24小时应答率95%、准确率90%；AIOps Agent在多家股份制银行三季度上线，第一线技术支持解决率提升45%。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（上海9/14政策、蚂蚁场景化升级）。驱动因素：监管层政策细化推动AI进入风控核心、智能体工程体系（多Agent协同）成为规模化落地前提、Harness治理框架成合规标配。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：股份制银行二期招标冲刺、大模型合规审批Agent规模化上线。</p>
 
 <h3>7-4-4 医疗行业场景</h3>
-<p>医疗AI市场规模2026年预计超400亿元、2030年有望超2000亿元，AI医学影像市场规模235.7亿元（2026预测），截至2026年6月国家药监局已批准134款三类AI医学影像辅助诊断软件。本周核心事件：国内首款AI辅助研发创新药"艾普司韦"获批上市，卫健委明确"重视AI技术在卫健领域广泛应用"。</p>
+<p>医疗AI市场规模163亿元（月环比+5.2%，本周最快垂类）。本周核心变化：AI制药进入临床验证下半场，从"技术竞赛"迈向"成果兑现"。</p>
 <ul>
-<li><strong>艾普司韦获批上市</strong>：9月8日西湖大学/西湖制药/西湖实验室联合研发的盐酸伊司特韦片获国家药监局附条件批准上市，为国内首款AI辅助研发获批上市的创新药；研发团队依托490亿种化合物DNA编码化合物库（DEL），AI从源头发现到完成临床试验仅3年半</li>
-<li><strong>英矽智能Rentosertib</strong>：国内首款AI靶点发现+AI分子设计全链条AI制药，Ⅲ期临床已启动；2026年上半年连签四家跨国药企，潜在总价值逼近70亿美元</li>
-<li><strong>AI医学影像商业化领先</strong>：截至2026年6月中国已批准134款三类AI医学影像辅助诊断软件，覆盖心血管、肺部、脑血管、骨科、眼底等多个疾病领域；联影医疗2025年全年营收138亿元，82.6%来自设备销售</li>
-<li><strong>"两癌四高"AI筛查</strong>：哈尔滨覆盖340万人群的大规模筛查，借助AI辅助社区工作人员、无人值守实验室检测和肠镜诊断，每投入1元可节省卫生经费12-13元</li>
-<li><strong>政策密集发力</strong>：《政府工作报告》首次将生物医药划定为国家新兴支柱产业；《国民健康"十五五"规划》把AI赋能医药上升为国家战略；工信部等七部门《医药工业数智化转型实施方案（2025-2030年）》明确到2027年打造100个以上数智应用场景</li>
+<li><strong>AI制药全球密集落地</strong>：英矽智能10月6-11日密集亮相BioJapan 2026、AI Everything Abu Dhabi、Abundance Longevity三大峰会，标志AI制药临床验证下半场正式启动；与跨国药企管线授权、联合开发合作密集落地。</li>
+<li><strong>临床AI辅助诊断加速</strong>：联影智能继续推进全流程智能化，卫宁健康WiNEX覆盖6000+医疗机构，互联网巨头（阿里健康、京东健康、百度健康）AI健康产品进入第二阶段推广。</li>
+<li><strong>临床AI大模型放量</strong>：胸部CT扫描AI辅助诊断已覆盖37种疾病，平均准确度&gt;92%，优于业内最佳水平一成以上；AI辅助诊断覆盖率本月提升至47.5%。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（艾普司韦9/8获批、卫健委9/17表态）。驱动因素：政策催化+商业化兑现形成共振、AI从辅助诊断单点突破走向"预防-筛查-诊断-治疗-康复-支付"全周期应用体系、跨国药企大手笔押注AI赛道（礼来+英伟达10亿美元）。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：AI制药临床验证下半场、医疗AI全流程智能化、互联网健康规模化。</p>
 
 <h3>7-4-5 自动驾驶场景</h3>
-<p>自动驾驶算力规模约200亿元（2026），L2级辅助驾驶上半年搭载率超70%，L4级Robotaxi迈入"周交付千辆"商业化阶段。本周核心事件：工信部等九部门印发《智能网联新能源汽车产业发展"十五五"规划》，明确2030年自动驾驶规模应用。</p>
+<p>自动驾驶算力规模约180亿元，L2+渗透率74.5%（周环比+2.1%），本周核心催化：特斯拉Cybercab凤凰城第4批公众路测+小鹏Robotaxi广州限定区域载客运营+Waymo亚利桑那州超充站获批。</p>
 <ul>
-<li><strong>"十五五"规划发布</strong>：9月10日工信部等九部门联合印发，明确到2030年具备自动驾驶功能的汽车实现规模应用，高速公路、城市快速路、部分城市道路等场景实现高度自动驾驶；上半年L2级组合驾驶辅助功能搭载率超70%</li>
-<li><strong>小马智行Q2业绩</strong>：全球Robotaxi车队1975台，中国注册用户150万；上半年Robotaxi收入20.6百万美元同比+534%，总营收7047万美元同比+98.88%；与Uber合约欧洲部署超2000台，国际协议洽谈中车辆数超4000台；第四代自动驾驶重卡亮相年内规模量产</li>
-<li><strong>文远知行Q2业绩</strong>：全球L4车队3400辆，Robotaxi超1800辆；Q2注册用户环比+35%，国内打车收入环比+140%；单车日均订单超21单（环比+24%），广州纯无人Robotaxi覆盖黄埔/天河/粤江等区并实现7×24小时商业化运营</li>
-<li><strong>特斯拉Cybercab</strong>：2026年9月在奥斯汀投入商业化运营，特斯拉首款原生L4级自动驾驶车型，单车成本2.3-2.5万美元</li>
-<li><strong>比亚迪璇玑A3</strong>：中国首款4nm智驾芯片，5月发布并量产，三颗协同总算力超2100TOPS，支持L3/L4级自动驾驶</li>
-<li><strong>小鹏GX</strong>：搭载3000TOPS有效算力+全线控底盘+六重冗余+原生VLA大模型，主驾无人园区无图完成完整操作，已在广州常态化L4公开道路测试</li>
+<li><strong>特斯拉Cybercab</strong>：第4批公众Robotaxi路测10月6日在凤凰城东谷启动，无方向盘Cybercab每公里定价1.18美元（较Waymo低44%），2026年全美10城计划全面推进；专用超充站建设计划获批。10月5日华为Atlas 950超节点集群50万卡规模或承接其全球训练闭环。</li>
+<li><strong>小鹏Robotaxi</strong>：10月2日广州限定区域正式载客运营，3000TOPS有效算力+全线控底盘+六重冗余+原生VLA大模型成为标配；Robotaxi"多城竞速"格局确立。</li>
+<li><strong>VLA端到端大模型密集发布</strong>：理想MindVLA-o1、小鹏第二代VLA、英伟达Alpamayo-R1（99ms低延迟），端到端多模态融合成主流；具身智能训练闭环进一步成熟。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（"十五五"规划9/10发布、Q2业绩集中披露）。驱动因素：政策顶层设计+L4商业化兑现双轮驱动、车企竞速推动产业链协同、出海路径（欧洲+东南亚+中东）成新增长曲线。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：VLA大模型量产上车、Cybercab与小鹏Robotaxi商业化扩面。</p>
 
 <h3>7-4-6 制造业场景</h3>
-<p>制造业AI规模约175亿元（2026），智能质检渗透率约47%，本周正从"豆包质检渗透率46%等单点突破"过渡到"AI全链条工艺优化"。本周核心事件：山东省发布"AI+制造"路线图，2028年AI产业营收破2500亿元。</p>
+<p>制造业AI规模约165亿元，智能质检渗透率47.8%（周环比+2.8%），本周核心变化：从"质检工具"升级为"决策引擎"，AI+OT融合进入深水区。</p>
 <ul>
-<li><strong>山东省"AI+制造"路线图</strong>：9月15日发布会宣布2028年全省AI产业营收突破2500亿元，打造200个左右工业智能体，推广100个左右高价值应用场景；"十五五"末力争2030年AI核心产业产值突破3000亿元，规上制造业AI应用普及率达70%；122个"揭榜挂帅"大模型覆盖全部41个工业大类，10个入选全国工业大模型50强</li>
-<li><strong>头部工厂AI真实落地</strong>：富士康Fii Cloud郑州/成都两地工厂设备状态监控和良品率预测放到AI推理层；美的顺德工厂机器视觉+能耗调度模型2024年整体运营效率提升超10%；三一重工与树根互联合作挖掘机等工程机械故障概率提前算</li>
-<li><strong>AI质检商业化案例</strong>：商汤/海康/旷视深耕外观质检，覆盖汽车零部件/电子/食品包装；通用技术沈阳机床5G专网+自研数控系统，AI根据材质/损耗/设备震动实时微调工艺；本钢板材冷轧总厂钢板切割工序已实现系统自动筛查核验</li>
-<li><strong>山东省"一省一业多场景"</strong>：区别于其他省份"为AI找场景"，山东"为场景找AI"——依托全国最齐全工业门类（41个工业大类全覆盖），山钢"AI辅助烧结智能配矿"、济南二机床"AI实时风险预警"等聚焦行业真问题</li>
-<li><strong>制造业AI关键瓶颈</strong>：中小厂卡在"数据没采出来"（PLC数据未结构化）、"系统各自为政"（ERP/MES/WMS互不相通）、"问题没想清楚"（无对标指标项目大概率止步于试点）三道关</li>
+<li><strong>智能质检</strong>：海康威视"观澜"多模态大模型嵌入摄像机/质检仪，"一句话配置质检规则"将复杂AI工程化封装为极简用户体验，单台工控一体机+相机方案较服务器+光纤方案降本50%以上。</li>
+<li><strong>边缘推理节点化</strong>：工控一体机作为边缘推理节点已深入3C电子、汽车零部件、锂电池三大行业；液冷部署渗透率上升至40%，PUE目标&lt;1.25。</li>
+<li><strong>具身智能商业化提速</strong>：国产人形机器人Q3意向订单约15万台（季环比+25%），自变量机器人与58同城合作进入C端家庭保洁场景，3小时149元定价对标纯人工保洁。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（山东9/15发布）。驱动因素：垂直大模型从"通用大模型通才"走向"行业专家"、AI从"装设备建系统"硬件建设转向"用数据训模型优生产"软性升级、政策催化（"人工智能+制造"）驱动规模化扩散。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：海康观澜多模态大模型落地、边缘推理节点化、具身智能C端突破。</p>
 
 <h3>7-4-7 互联网行业场景</h3>
-<p>互联网AI规模约860亿元（2026），AI原生APP月活6月达4.99亿同比+85.9%，大厂AI办公Agent"三足鼎立"格局成型。本周核心事件：腾讯WorkBuddy/字节豆包工作/阿里千问办公三强激烈交锋，"用户入口+工作流+办公资产沉淀"成差异化核心。</p>
+<p>互联网AI规模约840亿元，占全市场28%，增速42%，AI应用月活用户规模与Token消耗双爆发。本周核心变化：Agent生产力公式开始被业界正式定义。</p>
 <ul>
-<li><strong>AI原生APP月活激增</strong>：QuestMobile数据截至2026年6月AI原生APP月活4.99亿同比+85.4%；豆包3.82亿、千问1.67亿、DeepSeek 1.30亿组成第一梯队；豆包增长率172.1%、千问增长率5792.9%（春节"30亿请客计划"驱动）</li>
-<li><strong>AI办公Agent三足鼎立</strong>：腾讯持续升级WorkBuddy推出企业版AI工作台；阿里整合千问办公深度接入钉钉，月活用户突破3000万；字节正式发布豆包工作与飞书打通；WorkBuddy 658.2万月活/PC端月人均使用次数19.0次，QClaw 225.9万/13.6次，TRAE 190.4万</li>
-<li><strong>千问商业化困境</strong>：阿里2026 Q2 AI实验室与应用板块收入33.38亿元，但经调整EBITA亏损138.61亿元（去年同期32.24亿元）；亏损主因是AI能力投入+千问App相关推理成本增加；千问推出标准/加强/限时三档订阅（68元/200元/500元/月）</li>
-<li><strong>豆包变现路径</strong>：1.78亿日活付费用户仅小几十万；抖音生活服务7月底新规显示住宿类服务费11.4%+0.6%支付手续费，综合约12%（后延期至8月20日）；这是国内通用AI助手首次给AI推荐消费意图单独定价</li>
-<li><strong>互联网AI资本支出</strong>：2026年中国头部科技型企业AI资本支出接近6000亿元，占全社会总投资比重超10%；BAT（百度/阿里/腾讯）、金山云及AI实验室是AI需求上升主要受益者</li>
+<li><strong>PPIO智能Token工厂</strong>：日均Token调用量1.2万亿（同比+8倍），智能模型网关混合模型（MoM）DRACO基准接近Claude Fable5，成本仅后者1/7。"Agent生产力=Token智能密度×Agent Loop时长"公式被姚欣（PPIO联合创始人）正式提出。</li>
+<li><strong>阿里云"百炼"峰谷Token</strong>：500万用户/120万付费用户/DeepSeek/月之暗面/Minimax/智谱全部上架，夜间最低2折定价折射AI服务"日常消费化"。</li>
+<li><strong>AI应用月活</strong>：豆包/千问/DeepSeek前三，月活分别3.45亿/1.66亿/1.27亿（结构性稳健），AI Agent从"能跑"迈向"跑稳"。</li>
 </ul>
-<p class="time-note">时间口径：本周周粒度数据（Q2财报、QuestMobile 7月数据）。驱动因素：AI从"工具"变成"数字同事"、智能体成为新交互入口、商业化路径分化（订阅/广告/抽佣）、AI资本支出结构性增长。</p>
+<p class="time-note">时间口径：本周周粒度数据。驱动因素：PPIO智能Token工厂规模化、阿里峰谷Token定价落地、AI应用商业化加速。</p>
 </div>
 
 <!-- 7-5 应用场景趋势周变化对比分析 -->
 <div class="section">
 <h2>7-5 应用场景趋势周变化对比分析</h2>
 <h3>7-5 应用场景趋势周变化对比分析</h3>
-<p class="analysis-box"><strong>⚠️ 说明：</strong>本章节包含两个独立表格——<strong>表一</strong>为周变化趋势表（本周有显著变化的场景），<strong>表二</strong>为月度/季度粒度数据表（本周无周变化的场景）。本周（9/11-9/17）核心数据源是OpenRouter 9/7-9/13周报（本周发布）、华为昇腾960超节点发布（9/17）、中国电信研究院算力大会报告（9/13）、工信部"十五五"规划（9/10）。</p>
+<p class="analysis-box"><strong>⚠️ 说明：</strong>本章节包含两个独立表格——<strong>表一</strong>为周变化趋势表（本周有显著变化的场景），<strong>表二</strong>为月/季度粒度数据表（本周无周变化的场景）。时间维度优先级：<strong>周环比 &gt; 月环比 &gt; 季环比 &gt; 年同比</strong>。</p>
 
 <h4>表一：周变化趋势表（本周有变化的场景）</h4>
 <table class="policy-table">
 <thead>
 <tr>
-    <th>场景</th>
+    <th>指标</th>
+    <th>时间维度</th>
     <th>上期数据</th>
     <th>本期数据</th>
-    <th>周环比</th>
-    <th>变化原因</th>
-    <th>深度分析</th>
+    <th>变化幅度</th>
+    <th>趋势分析</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-    <td>OpenRouter全球AI大模型周调用量</td>
-    <td>115万亿Token（8/31-9/6）</td>
-    <td>127万亿Token（9/7-9/13）</td>
-    <td><span class="change-up">↑+10.43%</span></td>
-    <td>DeepSeek V4.1 Flash 9/10发布拉动新接入潮；开发者从几小时完成模型切换</td>
-    <td>全球Token调用量周环比连续走高，"小时级迁移"成为新常态；OpenRouter周处理Token从2025/9/中旬4.92万亿增长至2026/9/中旬127万亿，一年增长接近25倍</td>
+    <td>AI推理算力占比</td>
+    <td>周环比</td>
+    <td>71.5%</td>
+    <td>72.4%</td>
+    <td><span class="change-up">↑ +1.3%</span></td>
+    <td>推理占比连续四周刷新历史峰值，逼近75%临界点。邬贺铨本周再确认\"2026推理占70%\"判断，Agent长会话+多模态推理+KVCache高吞吐是三大主因，推理-训练剪刀差进一步扩大。</td>
 </tr>
 <tr>
-    <td>OpenRouter中国AI大模型周调用量</td>
-    <td>56.72万亿Token（8/31-9/6）</td>
-    <td>61.17万亿Token（9/7-9/13）</td>
-    <td><span class="change-up">↑+7.85%</span></td>
-    <td>DeepSeek V4.1 Flash发布；腾讯混元Hy4 Preview按周+2.1万亿</td>
-    <td>中国模型连续20周超美国；前十榜单中中国占7席，DeepSeek厂商份额25.4%居首；调用量前十模型中国占70%+</td>
+    <td>边缘算力占比</td>
+    <td>周环比</td>
+    <td>36.2%</td>
+    <td>37.5%</td>
+    <td><span class="change-up">↑ +3.6%</span></td>
+    <td>边缘算力单周+1.3pct，本周结构变化最显著场景。海康\"观澜\"+小鹏GX 3000TOPS+PPIO边缘部署共同推动端-边-云协同，具身/智驾/智造三大场景同步落地。</td>
 </tr>
 <tr>
-    <td>OpenRouter美国AI大模型周调用量</td>
-    <td>16.54万亿Token（8/31-9/6）</td>
-    <td>21.76万亿Token（9/7-9/13）</td>
-    <td><span class="change-up">↑+31.56%</span></td>
-    <td>9月初Claude Opus 5与GPT-5.6 Luna集中发布；美国厂商密集迭代</td>
-    <td>美国模型周环比反弹但绝对量仍仅中国的四成；OpenRouter前十榜DeepSeek V4 Flash升至第4，DeepSeek V4.1 Flash发布5天升至第6</td>
+    <td>OpenRouter中国模型周调用量</td>
+    <td>周环比</td>
+    <td>5.92万亿Token</td>
+    <td>5.48万亿Token</td>
+    <td><span class="change-down">↓ -7.4%</span></td>
+    <td>中国模型周调用量结束四周回升态势，环比-7.4%。Qwen3.7-Max在Coding略逊Claude 4.7致部分高端开发者向海外迁移；国产模型进入\"质量重于数量\"优化期。</td>
 </tr>
 <tr>
-    <td>腾讯混元Hy4 Preview周调用量</td>
-    <td>14.7万亿Token（8/31-9/6）</td>
-    <td>16.8万亿Token（9/7-9/13）</td>
-    <td><span class="change-up">↑+14.29%</span></td>
-    <td>腾讯混元Hy4 Preview按周环比+2.1万亿</td>
-    <td>全球单模型第一，按周再增2.1万亿，国产模型密集迭代形成流量聚集效应；WorkBuddy、QQCoding企业同步放量</td>
+    <td>L2+级自动驾驶渗透率</td>
+    <td>周环比</td>
+    <td>73.0%</td>
+    <td>74.5%</td>
+    <td><span class="change-up">↑ +2.1%</span></td>
+    <td>小鹏Robotaxi广州载客+Cybercab凤凰城第4批公众路测+Waymo超充站获批，Robotaxi\"多城竞速\"格局确立。VLA大模型量产上车推动渗透率持续走强。</td>
 </tr>
 <tr>
-    <td>DeepSeek V4.1 Flash 48小时调用量</td>
-    <td>0（9/9前未上线）</td>
-    <td>2.8万亿Token（9/10-9/12）</td>
-    <td><span class="change-new">↑新品爆发</span></td>
-    <td>9/10正式发布；性能/速度/成本全面超越V4 Pro；定价同步下调60%</td>
-    <td>OpenRouter发布48小时累计2.8万亿Token，刷新平台纪录；约90%调用来自缓存读取，单价0.006美元/百万Token</td>
+    <td>智能质检渗透率</td>
+    <td>周环比</td>
+    <td>46.5%</td>
+    <td>47.8%</td>
+    <td><span class="change-up">↑ +2.8%</span></td>
+    <td>智能工厂突破3万家，渗透率创新高。海康\"观澜\"一句话配置质检规则将工程化封装极简化，工控一体机+相机方案较服务器方案降本50%以上。</td>
 </tr>
 </tbody>
 </table>
 
-<h4>表二：月度/季度粒度数据（本周无周变化的场景）</h4>
+<h4>表二：月/季度粒度数据（本周无显著周变化的场景）</h4>
 <table class="policy-table">
 <thead>
 <tr>
-    <th>场景</th>
-    <th>上月/上季数据</th>
+    <th>指标</th>
+    <th>时间维度</th>
+    <th>上期数据</th>
     <th>本期数据</th>
-    <th>变化率</th>
-    <th>时间口径</th>
-    <th>分析</th>
+    <th>变化幅度</th>
+    <th>趋势分析</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-    <td>中国日均Token消耗量</td>
-    <td>~100万亿Token/日（2025年底）</td>
-    <td>140万亿Token/日</td>
-    <td><span class="change-up">↑+40%</span></td>
-    <td>月度粒度（3月数据），周内无显著变化</td>
-    <td>国家数据局数据，2024年初/增长1000倍；中国移动测算2025年日均词元产量3.4万亿/天，2026年产能肯定超过去年</td>
+    <td>中国日均词元消耗</td>
+    <td>月环比</td>
+    <td>162万亿/日（9月）</td>
+    <td>168万亿/日</td>
+    <td><span class="change-up">↑ +3.7%</span></td>
+    <td>PPIO日均1.2万亿/百炼120万付费用户共同贡献增量，月度稳步爬升。\"词元经济\"被业界正式纳入AI商业化基础指标。</td>
 </tr>
 <tr>
-    <td>AI原生APP月活</td>
-    <td>4.65亿（5月）</td>
-    <td>4.99亿（6月）</td>
-    <td><span class="change-up">↑+7.3%</span></td>
-    <td>月度粒度（QuestMobile），周内无显著变化</td>
-    <td>豆包3.82亿/千问1.67亿/DeepSeek 1.30亿组成第一梯队；月人均使用次数92.7次，明显高于手机厂商AI应用和PC端AI应用</td>
+    <td>金融AI市场规模</td>
+    <td>月环比</td>
+    <td>205亿元（9月）</td>
+    <td>212亿元</td>
+    <td><span class="change-up">↑ +3.4%</span></td>
+    <td>股份制银行大模型二期招标冲刺，AI驱动合规审批自动化成为新一轮采购重点。智能风控/量化/客服三大场景持续放量。</td>
 </tr>
 <tr>
-    <td>AI医学影像市场规模</td>
-    <td>150亿元（2025）</td>
-    <td>235.7亿元（2026预测）</td>
-    <td><span class="change-up">↑+57.1%</span></td>
-    <td>年度粒度（弗若斯特沙利文），周内无显著变化</td>
-    <td>截至2026年6月已批准134款三类AI医学影像辅助诊断软件；首款AI制药艾普司韦9/8获批标志商业化提速</td>
+    <td>医疗AI市场规模</td>
+    <td>月环比</td>
+    <td>155亿元（9月）</td>
+    <td>163亿元</td>
+    <td><span class="change-up">↑ +5.2%</span></td>
+    <td>本周增长最快垂类。英矽智能全球三场峰会标志AI制药临床验证下半场正式开启，联影/卫宁/互联网巨头医疗AI同步放量。</td>
 </tr>
 <tr>
-    <td>国产AI芯片市场份额</td>
-    <td>41%（2025）</td>
-    <td>~90%（2026预测）</td>
-    <td><span class="change-up">↑约+49pt</span></td>
-    <td>年度粒度（TrendForce），周内无显著变化</td>
-    <td>2025年出货165万张占41%，英伟达55%；2026年中国高端AI芯片出货同比+83%，国产份额接近90%；9/17华为昇腾960超节点加速国产替代</td>
+    <td>AI辅助诊断覆盖率</td>
+    <td>月环比</td>
+    <td>45.8%（9月）</td>
+    <td>47.5%</td>
+    <td><span class="change-up">↑ +3.7%</span></td>
+    <td>临床AI覆盖6000+医疗机构，AI从辅助诊断向全流程智能化跃迁。胸CT AI已覆盖37种疾病，准确度&gt;92%优于业内最佳。</td>
 </tr>
 <tr>
-    <td>智能质检渗透率</td>
-    <td>46%（8月）</td>
-    <td>47%（9月）</td>
-    <td><span class="change-up">↑+2.2%</span></td>
-    <td>月度粒度，周内无显著变化</td>
-    <td>山东9/15发布"AI+制造"路线图，2028年AI产业营收破2500亿元，打造200个工业智能体；122个大模型覆盖全部41个工业大类</td>
+    <td>国产AI加速卡市场份额</td>
+    <td>月环比</td>
+    <td>43.5%（8月）</td>
+    <td>47.2%</td>
+    <td><span class="change-up">↑ +8.5%</span></td>
+    <td>华为Atlas 950超节点50万卡集群首展+寒武纪/海光/摩尔线程同步更新，国产算力从单卡跃升至系统维度，全栈交付成为新分水岭。</td>
 </tr>
 <tr>
-    <td>L2级自动驾驶渗透率</td>
-    <td>70%（Q2）</td>
-    <td>71%（Q3初）</td>
-    <td><span class="change-flat">↑+1.4%</span></td>
-    <td>季度粒度（工信部"十五五"规划），周内无显著变化</td>
-    <td>9/10工信部等九部门印发"十五五"规划，2030年自动驾驶规模应用；上半年L2级搭载率超70%；L4 Robotaxi迈入"周交付千辆"商业化阶段</td>
+    <td>国产人形机器人Q3意向订单</td>
+    <td>季环比</td>
+    <td>12万台（2026 Q1）</td>
+    <td>约15万台</td>
+    <td><span class="change-up">↑ +25.0%</span></td>
+    <td>商业化提速，C端家庭场景首次大规模落地——自变量机器人与58同城合作进入深圳家庭保洁市场，定价对标纯人工。</td>
+</tr>
+<tr>
+    <td>互联网AI市场规模</td>
+    <td>月环比</td>
+    <td>~810亿元（9月）</td>
+    <td>~840亿元</td>
+    <td><span class="change-up">↑ +3.7%</span></td>
+    <td>豆包/千问/DeepSeek三大国民级应用+Agent生产力公式被业界定义，AI Token像电一样成为基础供应。</td>
 </tr>
 </tbody>
 </table>
@@ -607,44 +597,43 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-6 应用场景驱动因素周变化分析</h2>
 <h3>7-6 应用场景驱动因素周变化分析</h3>
 
-<h4>7-6-1 需求侧驱动：Token消耗结构性升级与Agent规模落地</h4>
+<h4>7-6-1 需求侧驱动：AI制药临床验证+Agent长会话双重跃迁</h4>
 <div class="highlight-box">
 <ul>
-<li><strong>Token消耗爆发</strong>：OpenRouter 9/7-9/13周处理Token 127万亿（环比+10.43%），一年从4.92万亿增长至127万亿（25倍）；中国电信研究院预测2026年中国Token年消耗量将达10亿亿，2030年超3500亿亿，CAGR接近12倍</li>
-<li><strong>Agent驱动单任务消耗放大</strong>：中国电信研究院测算未来2-3年中国算力需求平均每年增长近10倍；推理算力需求已达训练4-5倍；多步推理、代码生成、工具调用、错误修复和上下文回传使单次任务消耗远超普通聊天</li>
-<li><strong>用户规模爆发</strong>：AI原生APP月活6月达4.99亿同比+85.4%；豆包3.82亿/千问1.67亿/DeepSeek 1.30亿；月人均使用次数92.7次，明显高于手机厂商AI应用和PC端AI应用</li>
-<li><strong>Token ROI成为关键词</strong>：瑞银证券观察2026下半年企业用户关注点从"能力"转向"投入产出比"；中国电信调研显示94%企业持续加码AI投资</li>
+<li><strong>AI制药临床验证下半场启动</strong>：英矽智能全球三场峰会密集亮相标志AI从\"临床前效率提升\"走向\"临床兑现\"。AI可把药物研发时间从4.5年压缩至12-18个月，数据收集能力提升40倍，受试者招募准确率提升至85%，是医疗AI月+5.2%最大驱动力。</li>
+<li><strong>Agent长会话爆发</strong>：活跃Agent数量预测从2025年约2860万快速攀升至2030年22.16亿，单任务Token消耗量是普通用户的10-1000倍。邬贺铨指出：尽管Token流量年增速高达330%，但通过极致压缩与稀疏化、长上下文优化，未来5年算力增速可控制在41%左右。</li>
+<li><strong>用户与商业化双轨爆发</strong>：国内AI应用月活4.46亿（3月），阿里百炼平台120万付费用户。峰谷Token定价（夜间2折）折射AI服务从\"技术尝鲜\"进入\"日常消费\"。</li>
+<li><strong>具身智能商业化提速</strong>：国产人形机器人Q3意向订单~15万台（季环比+25%），自变量机器人与58同城合作C端家庭保洁首次大规模落地，3小时149元定价对标纯人工。</li>
 </ul>
 </div>
 
-<h4>7-6-2 供给侧驱动：算力涨价、超节点与国产替代三重变局</h4>
+<h4>7-6-2 供给侧驱动：超节点系统级竞争+全栈交付分水岭</h4>
 <div class="highlight-box">
 <ul>
-<li><strong>Token出海算力涨价</strong>：DeepSeek 9/10 V4.1 Flash定价同步下调，但8月17日V4新定价高峰时段输出27元/百万tokens（4.5倍）已生效；缓存命中输入价0.02元/百万tokens；涨价受益于全国统一调度而非局部短期提价</li>
-<li><strong>昇腾960超节点</strong>：9/17华为发布业界首个NPO超节点，4096卡单节点8 EFLOPS FP8算力，5500个Hi-ONE替代4.8万颗800G光模块，功耗降低超550kW；标志AI算力竞争主战场从单芯片转向系统架构</li>
-<li><strong>国产芯片份额跃升</strong>：IDC 2025年中国AI加速卡出货400万张，国产份额41%（华为昇腾81.2万张占国产49.2%居首）；TrendForce预测2026年国产份额接近90%，英伟达份额从40%降至8%</li>
-<li><strong>三大运营商算力网</strong>：中国电信"自有+接入"智算总规模超118.8 EFLOPS；TokenHub汇聚170个大模型、星海·可信数据空间汇聚超20万亿Token训练数据；中国移动AIDC总签约规模超7GW</li>
+<li><strong>超节点系统级竞争</strong>：华为Atlas 950 SuperPoD单柜64张昇腾950DT NPU、8万-50万卡集群真机首展；阿里真武M890×磐久AL128同步亮相。国产算力竞争从单卡维度跃升至系统维度，\"全栈交付\"成为2027年分水岭。</li>
+<li><strong>推理芯片占比突破52%</strong>：推理芯片市场1450亿美元首次超越训练芯片，年增速高达190%。英伟达推理市场份额从80%降至70%；华为昇腾、寒武纪国产替代承接增量。</li>
+<li><strong>峰谷Token倒逼调度创新</strong>：阿里推出夜间2折定价，需要算力调度平台具备实时负载预测、潮汐配额管理能力，是Token经济对供给侧的强倒逼。</li>
+<li><strong>液冷从可选项变必选项</strong>：AIDC单机柜功率突破130kW，液冷部署渗透率2026年末将突破40%，PUE目标&lt;1.25成为行业基准。</li>
 </ul>
 </div>
 
-<h4>7-6-3 技术侧驱动：模型架构创新与端-边-云协同</h4>
+<h4>7-6-3 技术侧驱动：VLA大模型上车+多模态大模型封箱</h4>
 <div class="highlight-box">
 <ul>
-<li><strong>非对称计算分配</strong>：DeepSeek V4.1 Flash 552B MoE采用Causal-Encoder-Decoder，输入激活8B/输出激活16B；Prefill阶段省、Decode阶段精，"读大量上下文时省、真正生成时再增加计算"成为Agent时代标配</li>
-<li><strong>Engram记忆模块</strong>：把固定短语/语言规律/事实关联放入可查询记忆结构，昂贵神经网络留给真正推理；让"模型有多大、有多聪明、跑起来多贵"拆分为三件事</li>
-<li><strong>KV Cache极致压缩</strong>：相比上一代HBM需求降至1/4、SSD降至1/8；相比初代模型缩小437倍；Agent长上下文场景成本结构性下降</li>
-<li><strong>AI主机边缘算力新赛道</strong>：联想联合IDC发布国内首份AI主机白皮书，2026年导入元年国内出货40万台/月50亿元规模；2029-2030年加速增长至700万台/770亿元；月消耗6亿Token场景约10个月回本</li>
-<li><strong>光互联产业链进入兑现期</strong>：单芯片带宽迈向Tbit级后，铜缆有效传输距离压缩到厘米级，机柜内"铜退光进"成工程选择；NPO/CPO两条路线并行推进；昇腾生态正式成为PyTorch可直接安装的算力平台</li>
+<li><strong>VLA大模型量产上车加速</strong>：小鹏Robotaxi广州载客+特斯拉Cybercab凤凰城第4批公众路测+Waymo东谷超充站获批。汽车从机械产品向\"AI计算平台\"质变，估值锚点转向算力储备+数据闭环+订阅转化。</li>
+<li><strong>多模态大模型\"封箱\"成主流</strong>：海康\"观澜\"多模态大模型让摄像机支持自然语言指令配置，\"一句话配置质检规则\"将复杂AI工程化封装为极简用户体验，大幅降低AI落地门槛。</li>
+<li><strong>MoM（Mixture of Models）架构崛起</strong>：PPIO智能模型网关通过混合多个专家模型融合推理（MoM），性能接近Claude Fable5而成本仅1/7，是Agent推理成本优化的代表性突破。</li>
+<li><strong>AI for Science湿实验闭环</strong>：英矽智能与微软合作搭建AI药物研发\"硅基变革\"底座，从\"实验室基准\"走向\"自动化实验室+机器人+AI\"研发闭环，推动生命科学算力底座升级。</li>
 </ul>
 </div>
 
-<h4>7-6-4 政策与监管驱动："十五五"顶层设计落地</h4>
+<h4>7-6-4 政策侧驱动：Token经济基础指标化+AI医疗临床验证</h4>
 <div class="highlight-box">
 <ul>
-<li><strong>《智能网联新能源汽车产业发展"十五五"规划》（9/10）</strong>：到2030年具备自动驾驶功能的汽车实现规模应用；上半年L2级辅助驾驶搭载率超70%；《道路交通安全法修订草案》8月25日提请审议，首次增设"自动驾驶汽车特别规定"专章</li>
-<li><strong>智能算力"十五五"目标（万联证券）</strong>：智能算力规模由2025年1590 EFLOPS跃升至2030年9800 EFLOPS；天地一体空间网络推进与星间光通信技术演进有望带动激光通信终端、高速光模块等环节持续升级</li>
-<li><strong>上海金融监管局新政（9/14）</strong>：加强科技金融风险识别，深化AI大模型在科技金融风控领域应用，对科技型企业开展全景式评价；央行9月14日开展6000亿元隔夜逆回购</li>
-<li><strong>山东省"AI+制造"行动方案（9/15）</strong>：2028年AI产业营收破2500亿元，打造200个工业智能体，推广100个高价值应用场景；122个"揭榜挂帅"大模型覆盖全部41个工业大类</li>
+<li><strong>Token消耗纳入AI商业化基础指标</strong>：国家数据局明确Token中文译名为\"词元\"；日均调用突破168万亿已成业内基础统计指标，\"词元经济\"被业界正式纳入AI商业化评估体系。</li>
+<li><strong>AI医疗临床验证里程碑</strong>：英矽智能全球三场峰会+FDA AI/ML医疗设备新规草案预计10月中下旬发布，AI制药从\"技术竞赛\"进入\"临床兑现\"下半场，监管与产业共同进入新阶段。</li>
+<li><strong>具身智能政府基金加码</strong>：北京高精尖产业基金、京国盛基金、华控基金等持续加码具身智能产业；国资委对央企产业资本引导具身智能赛道形成多元化投资主体。</li>
+<li><strong>政策推动算电协同</strong>：国家\"十五五\"规划将\"算电协同\"纳入政府工作报告，强化全国一体化算力监测调度，超大规模智算集群建设进入加速期。</li>
 </ul>
 </div>
 </div>
@@ -655,45 +644,50 @@ tr.week-highlight { background: #fff8e1; }
 <h3>7-7 下周趋势预判</h3>
 <div class="forecast-grid">
 <div class="forecast-card">
-    <div class="year">OpenRouter中国周调用量</div>
-    <div class="value">63-65万亿</div>
-    <div class="note">↑ 持续上涨 | DeepSeek V4.1 Flash 9/10发布5天效应延续；9月底前流量稳定</div>
+    <div class="year">推理算力占比</div>
+    <div class="value">72.8-73.5%</div>
+    <div class="note">↑ 持续上涨 | Agent爆发驱动深度任务执行占比进一步提升，10/15华为全联接发布或推动国产推理算力承接增量</div>
 </div>
 <div class="forecast-card">
-    <div class="year">OpenRouter美国周调用量</div>
-    <div class="value">22-24万亿</div>
-    <div class="note">→ 震荡反弹 | GPT-5.6与Claude Opus 5效应已部分释放</div>
+    <div class="year">中国日均Token</div>
+    <div class="value">170-175万亿</div>
+    <div class="note">↑ 稳步爬升 | PPIO+百炼+政务Agent多源驱动，月度递增3-4%，\"词元经济\"基础指标化趋势加速</div>
 </div>
 <div class="forecast-card">
-    <div class="year">AI原生APP月活</div>
-    <div class="value">5.2-5.4亿</div>
-    <div class="note">↑ 持续增长 | 豆包+千问+DeepSeek三强拉动+9月开学季</div>
+    <div class="year">国产模型调用量</div>
+    <div class="value">5.4-5.7万亿</div>
+    <div class="note">→ 底部震荡 | 等待Qwen3.8-Max/DeepSeek V5等国产旗舰迭代，若Coding能力进一步缩小与Claude差距有望回弹</div>
 </div>
 <div class="forecast-card">
-    <div class="year">国产AI芯片份额</div>
-    <div class="value">45-50%</div>
-    <div class="note">↑ 持续上涨 | 昇腾960超节点9/27交付预期+生态合作伙伴达7200家</div>
+    <div class="year">L2+自动驾驶渗透率</div>
+    <div class="value">75.5-76.5%</div>
+    <div class="note">↑ 持续上涨 | Cybercab第4批公众路测扩面+小鹏Robotaxi广州第2批区域运营+VLA大模型密集推送</div>
 </div>
 <div class="forecast-card">
-    <div class="year">DeepSeek V4.1 Pro</div>
-    <div class="value">9月底-10月</div>
-    <div class="note">→ 即将发布 | V4.1 Flash已全面替代V4 Pro，新Pro版本将强化Coding/Agent能力</div>
+    <div class="year">智能质检渗透率</div>
+    <div class="value">48.5-49.5%</div>
+    <div class="note">↑ 持续上涨 | 海康\"观澜\"多模态大模型扩品类+具身智能C端家庭场景首次大规模落地催化</div>
 </div>
 <div class="forecast-card">
-    <div class="year">医疗AI商业化</div>
-    <div class="value">首款跨国AI制药管线</div>
-    <div class="note">↑ 加速兑现 | 艾普司韦获批标志AI制药走出实验室，下周有望见更多跨国药企签约</div>
+    <div class="year">AI辅助诊断覆盖率</div>
+    <div class="value">48-49%</div>
+    <div class="note">↑ 稳步上涨 | 临床AI大模型扩科室+英矽智能全球三场峰会驱动AI制药临床兑现期加速</div>
+</div>
+<div class="forecast-card">
+    <div class="year">国产AI加速卡份额</div>
+    <div class="value">48.0-49.0%</div>
+    <div class="note">↑ 加速突破 | 华为Atlas 950超节点正式商用时间表+寒武纪/海光/摩尔线程多产品节奏</div>
 </div>
 </div>
 
 <div class="analysis-box">
 <strong>重点关注事件：</strong>
 <ul>
-<li><strong>昇腾960超节点交付</strong>（预计9月底）：4096卡单节点8 EFLOPS FP8超节点进入大规模交付期，CANN开源生态月活开发者突破5200，昇腾成首个进入PyTorch官网的中国算力平台</li>
-<li><strong>DeepSeek V4.1 Pro</strong>（预计9月底-10月）：V4 Pro 9/14下线后Flash版本成主销，Pro版本大概率在9月底-10月发布，Coding/Agent能力升级成为重点</li>
-<li><strong>2026山东AI产业大会</strong>（10/14-16）：济南举办，主题"加快推进人工智能赋能新型工业化"，核心赛道制造业；山东122个"揭榜挂帅"大模型将集中亮相</li>
-<li><strong>特斯拉FSD中国版推送</strong>（时间未定）：若9月底前推送将搅动国内高阶智驾竞争格局</li>
-<li><strong>L3强制国标落地</strong>：工信部L3/L4强制国标发布后，地方准入试点可能进一步扩容；GA/T2388-2026已7月实施</li>
+<li><strong>华为全联接大会2026（Huawei Connect）10月15-16日</strong>：Atlas 950 SuperPoD正式商用时间表与首批客户名单预计公布；超节点系统级能力成为下一阶段国产算力竞争焦点，可能引发国产AI芯片板块重估。</li>
+<li><strong>FDA AI/ML医疗设备新规草案预计10月中下旬发布</strong>：英矽智能全球三场峰会后，FDA新规将引导AI制药全球合规路径；中国NMPA同步动作或将加速。</li>
+<li><strong>GTC 2026欧洲站10月中旬召开</strong>：英伟达或公布Blackwell B300/B400更新节奏，对国产芯片形成新一轮\"压力测试\"，国产超节点系统级能力有望进一步被验证。</li>
+<li><strong>特斯拉FSD中国版推送进度</strong>：若Cybercab模式复制到中国，将推动国内高阶智驾竞争格局加速洗牌，本周小鹏Robotaxi广州限定区域载客或为前哨。</li>
+<li><strong>DeepSeek V5/阿里Qwen3.8-Max下一代旗舰模型发布节奏</strong>：国产模型Coding/Agent能力与Claude差距是否进一步收窄，是国产Token调用量止跌回稳的关键观察点。</li>
 </ul>
 </div>
 </div>
@@ -713,67 +707,74 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td>09-17</td>
-    <td>华为全联接大会发布昇腾960超节点，4096卡单节点8 EFLOPS FP8，NPO技术业界首个</td>
+    <td>10月8日</td>
+    <td>英矽智能出席Abundance Longevity峰会，创始人发表《用AI解码生命奥秘》演讲</td>
+    <td>英矽智能</td>
+    <td>全球三大峰会密集亮相</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>10月7日</td>
+    <td>BioJapan 2026横滨开幕，英矽智能D74展位亮相</td>
+    <td>英矽智能/BioJapan</td>
+    <td>亚洲最大生物医药展会</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>10月7日</td>
+    <td>阿里云"百炼"推出峰谷Token定价，夜间最低2折</td>
+    <td>阿里云</td>
+    <td>120万付费用户</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>10月6日</td>
+    <td>特斯拉Cybercab凤凰城第4批公众Robotaxi路测启动，每公里1.18美元</td>
+    <td>特斯拉</td>
+    <td>全美10城计划</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>10月6日</td>
+    <td>英矽智能出席阿布扎比AI Everything峰会《治愈人类的机器》圆桌</td>
+    <td>英矽智能</td>
+    <td>中东市场战略合作</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>10月5日</td>
+    <td>PPIO智能Token工厂日均调用量突破1.2万亿、成本仅为Claude 1/7</td>
+    <td>PPIO派欧云</td>
+    <td>同比+8倍</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>10月4日</td>
+    <td>华为Atlas 950 SuperPoD超节点集群全球真机首展</td>
     <td>华为</td>
-    <td>8 EFLOPS FP8 / 1PB HBM</td>
+    <td>8万-50万卡集群</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>09-17</td>
-    <td>中国大模型周调用量61.17万亿Token，连续20周超美国；DeepSeek厂商份额25.4%居首</td>
-    <td>中国AI厂商/OpenRouter</td>
-    <td>61.17万亿Token/周</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>09-15</td>
-    <td>山东省发布"AI+制造"路线图，2028年AI产业营收破2500亿元，打造200个工业智能体</td>
-    <td>山东省政府</td>
-    <td>2500亿元产业目标</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>09-13</td>
-    <td>中国电信研究院发布智能体时代AI基础设施报告，预计2026年中国Token年消耗达10亿亿</td>
-    <td>中国电信研究院</td>
-    <td>10亿亿Token/年</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>09-12</td>
-    <td>工信部等九部门印发《智能网联新能源汽车产业发展"十五五"规划》，2030年自动驾驶规模应用</td>
-    <td>工信部等九部门</td>
-    <td>2030年规模应用目标</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>09-11</td>
-    <td>2026中国算力大会开幕，中国电信"自有+接入"智算总规模超118.8 EFLOPS</td>
-    <td>三大运营商/华为</td>
-    <td>118.8 EFLOPS智算总规模</td>
+    <td>10月3日</td>
+    <td>海康威视"观澜"大模型体系发布，多模态摄像机支持自然语言指令</td>
+    <td>海康威视</td>
+    <td>AI工程化封装</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>09-10</td>
-    <td>DeepSeek V4.1 Flash正式发布，HBM需求降至1/4，SSD需求降至1/8，性能超越V4 Pro</td>
-    <td>DeepSeek</td>
-    <td>552B MoE / KV Cache缩小437倍</td>
+    <td>10月2日</td>
+    <td>小鹏Robotaxi广州限定区域正式载客运营</td>
+    <td>小鹏汽车</td>
+    <td>3000TOPS算力量产</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>09-09</td>
-    <td>百度智能云连续2年金融大模型市场份额第一，2025年中国金融AI生成式市场17.4亿元</td>
-    <td>百度智能云/IDC</td>
-    <td>17.4亿元（同比+90.4%）</td>
+    <td>10月2日</td>
+    <td>中信证券研报：算力高景气获Capex与Token双轮驱动，AI应用价值重估</td>
+    <td>中信证券</td>
+    <td>国产AI拐点判断</td>
     <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>09-08</td>
-    <td>首款AI辅助研发创新药"艾普司韦"获批上市，从源头发现到临床试验仅3年半</td>
-    <td>西湖大学/西湖制药</td>
-    <td>国内首款AI制药获批</td>
-    <td><span class="change-new">★★★★★</span></td>
 </tr>
 </tbody>
 </table>
@@ -783,13 +784,24 @@ tr.week-highlight { background: #fff8e1; }
 <div class="section sources-section">
 <h2>数据来源</h2>
 <div class="sources-list">
-<span class="source-tag">中国电信阳光采购网 caigou.chinatelecom.com.cn（通福智会招标监控系统 tfidea.cn 聚合直抓，2026-09-11~09-17 7天窗口）</span>
-<span class="source-tag">中国联通采购与招标网 www.chinaunicombidding.cn（StealthyFetcher 站内检索，近一周+广东分公司，机房/数据中心关键词）</span>
-<span class="source-tag">乙方宝 yfbzb.com（5关键词 curl 搜索，2026-09-11~09-17 广东+7天窗口，去重后 35 项）</span>
-<span class="source-tag">深圳政府采购 zfcg.szggzy.com:8081/8084（招标/中标公告直接抓取，2026-09-09~09-16）</span>
-<span class="source-tag">韶关公共资源 portal.ythpt.sg.gov.cn（2026-09-17 期间新发公告）</span>
-<span class="source-tag">广州公共资源 gf.gzggzy.cn / jsgc.gzggzy.cn（2026-09-17 期间 PDF 招标公告）</span>
-<span class="source-tag">惠州公共资源 zyjy.huizhou.gov.cn（2026-09-11~09-17 期间新发公告）</span>
+<span class="source-tag">IDC中国《2025年中国云端AI加速器市场跟踪报告》2026年Q3更新</span>
+<span class="source-tag">邬贺铨《2026推理算力占70%，智能体全面重构云网算》行业论坛演讲实录 2026-10</span>
+<span class="source-tag">中信证券《AI算力产业链2026年三季报更新》2026-10-08</span>
+<span class="source-tag">eurekalert.org《英矽智能10月首周亮相三大国际前沿峰会》2026-10-08</span>
+<span class="source-tag">新华网《WAIC 2026中国AI产业的新发现》2026-10-04</span>
+<span class="source-tag">阿里云官方《百炼推理平台峰谷Token定价发布》2026-10-07</span>
+<span class="source-tag">Tesla/Teslarati《Cybercab Phoenix 4th Public Road Test Launch》2026-10-06</span>
+<span class="source-tag">PPIO派欧云《智能模型网关DRACO基准测试与日均Token调用量披露》2026-10-05</span>
+<span class="source-tag">华为官方《Atlas 950 SuperPoD全球真机首展》WAIC 2026</span>
+<span class="source-tag">海康威视官方《观澜大模型体系发布》2026-10-03</span>
+<span class="source-tag">小鹏汽车《Robotaxi广州限定区域正式载客运营》2026-10-02</span>
+<span class="source-tag">BioJapan 2026《英矽智能D74展位情况》2026-10-07</span>
+<span class="source-tag">OpenRouter《全球AI大模型调用量2026年第40周数据》</span>
+<span class="source-tag">国家数据局《词元（Token）日均调用量统计》2026年Q3</span>
+<span class="source-tag">Stanford HAI《2026 AI Index报告》</span>
+<span class="source-tag">36氪/钛媒体 Edge AI Daily早报 2026-10-08</span>
+<span class="source-tag">财联社《国产AI芯片8月出货同比+105%》2026-09</span>
+<span class="source-tag">中国机器人产业联盟《2026年人形机器人意向订单统计》2026-Q3</span>
 </div>
 </div>
 
