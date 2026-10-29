@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>八、广东智算中心建设 | 第40期</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<title>八、广东智算中心建设 | 第41期</title>
 <style>
 
 
@@ -12,8 +11,10 @@
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
-header h1 { font-size: 1.7em; }
+header h1 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
 header p { margin-top: 8px; opacity: 0.9; }
+header .subtitle { font-size: 14px; color: #aab; margin-top: 6px; }
+.week-badge { display: inline-block; background: #e53935; color: white; font-size: 11px; padding: 3px 10px; border-radius: 10px; margin-bottom: 6px; }
 section { background: white; margin: 12px 0; padding: 22px; border-radius: 10px; box-shadow: 0 2 12px rgba(0,0,0,0.05); }
 section h2 { color: #0f172a; font-size: 1.4em; margin-bottom: 12px; border-bottom: 3px solid #0ea5e9; padding-bottom: 6px; }
 section h3 { color: #1e3a5f; font-size: 1.05em; margin: 20px 0 10px; border-left: 3px solid #38bdf8; padding-left: 8px; }
@@ -24,7 +25,7 @@ section li { margin: 6px 0; }
 .content-body { background: #f8fafc; padding: 16px 20px; border-radius: 8px; margin: 10px 0; border: 1px solid #e8ecf0; }
 .content-body p { color: #334155; text-indent: 0; margin: 8px 0; }
 .content-body h4 { color: #1e3a5f; font-size: 0.95em; margin: 14px 0 6px; }
-.content-body table { font-size: 0.9em; }
+.content-body table { font-size: 0.82em; }
 .content-body ul { margin: 8px 0 8px 20px; }
 .content-body li { margin: 4px 0; }
 .box { background: #f8fafc; padding: 15px; border-radius: 6px; border-left: 4px solid #0ea5e9; margin: 12px 0; }
@@ -38,7 +39,13 @@ section li { margin: 6px 0; }
 .analysis-box p { color: white; text-indent: 0; }
 .time-dim { padding: 2px 6px; border-radius: 3px; font-size: 0.85em; }
 table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.7em; }
-th, td { padding: 6px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+th, td { padding: 6px 5px; text-align: left; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+/* 第8章表格列多（本周/日期/…/相关性 共 9 列）：短列给最小宽度并禁止换行，
+   否则「★」「10月23日」「总承包」会被挤成两行或断成「总承/包」 */
+th:first-child, td:first-child { min-width: 44px; text-align: center; }
+td:nth-child(2), th:nth-child(2) { white-space: nowrap; }
+td:nth-child(4), th:nth-child(4) { white-space: nowrap; }
+td:nth-child(5), th:nth-child(5) { white-space: nowrap; }
 th { background: #0f172a; color: white; }
 tr:nth-child(even) td { background: #f8fafc; }
 tr:hover td { background: #e8f4fd; }
@@ -84,14 +91,184 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
+/* ========== 视觉 v4：柔和莫兰迪（页头与其他章保持一致，仅正文区用柔和配色） ========== */
+body { background: linear-gradient(180deg, #F2F5F9 0%, #F9FBFD 320px); }
 
+header { border-radius: 14px; position: relative; overflow: hidden; }
+header h1 { letter-spacing: 1px; }
+
+section { border: 1px solid #E4EAF1; border-radius: 14px; position: relative; overflow: hidden;
+  box-shadow: 0 3px 12px rgba(50,80,120,.06); }
+section::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #6B8FBA, #8FB8D0 55%, #A89BC8); }
+section h2 { border-bottom: none; padding-bottom: 10px; color: #24384F; position: relative; }
+section h2::after { content: ""; position: absolute; left: 0; bottom: 4px; width: 64px; height: 3px;
+  border-radius: 2px; background: linear-gradient(90deg, #6B8FBA, #8FB8D0); }
+section h3 { border-left: none; padding: 6px 12px; border-radius: 4px; color: #33517A;
+  background: linear-gradient(90deg, #F0F5FA, rgba(240,245,250,0)); }
+
+th { background: linear-gradient(135deg, #3A5A80, #4E749E); font-weight: 600; letter-spacing: .4px; }
+tr:nth-child(even) td { background: #F8FAFD; }
+tr:hover td { background: #EFF5FB; }
+td { border-bottom: 1px solid #ECF1F7; }
+
+.content-body { background: #FCFDFE; border: 1px solid #E8EEF5; }
+.content-body strong { color: #3E6B96; }
+.analysis-box strong { color: #fff; }
+
+.chapter-overview { background: linear-gradient(135deg, #F5F8FC 0%, #FFFFFF 55%); border: 1px solid #DFE9F3; }
+.overview-title { border-bottom-color: #4A6E9C; }
+.overview-text strong { color: #3E6B96; }
+
+.data-card { border: 1px solid #E8EEF5; position: relative; overflow: hidden; }
+.data-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #6B8FBA, #8FB8D0); }
+.data-card .value { color: #33517A; }
+
+/* 环节标签：莫兰迪五色（统一淡底、灰化深字，柔和但可区分） */
+.chip { display: inline-block; padding: 1px 9px; margin: 1px 3px 1px 0; border-radius: 9px;
+  font-size: .95em; font-weight: 500; line-height: 1.6; }
+.chip-land  { background: #EEEBF5; color: #6B5B95; border: 1px solid #DED9EC; }   /* 征地·灰紫 */
+.chip-civil { background: #F7EFE6; color: #96754A; border: 1px solid #EADFD0; }   /* 土建·灰杏 */
+.chip-mep   { background: #E8F0F8; color: #4A6E96; border: 1px solid #D8E4EF; }   /* 机电·灰蓝 */
+.chip-epc   { background: #E9F2EA; color: #5E8C6A; border: 1px solid #D8E8DA; }   /* 总承包·灰绿 */
+.chip-equip { background: #E6F2F2; color: #4E8C8C; border: 1px solid #D5E7E7; }   /* 设备·灰青 */
+
+/* 本周星标列 */
+td.star { color: #B5763E; font-weight: 700; }
+
+/* 「未披露」弱化 */
+td.muted { color: #BCC7D4; }
+
+/* 导航统一主色 */
+.nav-home { background: #22385C; }
+.nav-prev { background: #33557F; }
+.chapter-tab.active { background: linear-gradient(135deg, #33557F, #4A6E9C); }
+.chapter-tab:hover { background: #4A6E9C; }
+
+/* ========== v3：表格/正文层次分离 ========== */
+/* 表格 = 数据面板：独立圆角容器 + 外框 + 轻阴影，与正文文字墙明显区分 */
+table { border-collapse: separate; border-spacing: 0; border: 1px solid #D9E3EF;
+  border-radius: 10px; overflow: hidden; background: #fff;
+  box-shadow: 0 1px 5px rgba(23,55,94,.07); margin: 18px 0; }
+table th { border-bottom: 2px solid #17375E; }
+table tr:last-child td { border-bottom: none; }
+table tr:first-child th:first-child { border-top-left-radius: 9px; }
+table tr:first-child th:last-child { border-top-right-radius: 9px; }
+
+/* 正文容器：左侧竖线，与表格的"框"语言区分 */
+.content-body { border-left: 3px solid #2C6EAB; border-radius: 0 8px 8px 0; }
+
+/* 正文数字锚点（页尾脚本包 span.num）：文字墙里的视觉落点 */
+span.num { color: #14487F; font-weight: 700; font-variant-numeric: tabular-nums; }
+.overview-text span.num, .content-body span.num { color: #14487F; }
+
+/* 数据卡片：轻渐变底 + 悬停上浮 */
+.data-card { background: linear-gradient(180deg, #FDFEFF, #F7FAFD); transition: transform .18s, box-shadow .18s; }
+.data-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(23,55,94,.13); }
+
+/* 节奏：段落与表格间距 */
+section p { margin: 12px 0; }
+section h2 { font-size: 1.45em; margin-bottom: 14px; }
+
+.section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
+
+
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
+
+.section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
 </style>
 </head>
 <body>
 <header>
-<h1>🏗️ 八、广东智算中心建设</h1>
-<p style="margin-top:8px;opacity:0.9;">广东省智算中心征地·土建·机电工程建设规模周更/月更 | 2026-10-16 — 2026-10-22</p>
-<p style="margin-top:4px;opacity:0.7;font-size:0.85em;">第40期 | 数据更新周期：2026-10-22</p>
+<div class="week-badge">第41期</div>
+<h1>八、广东智算中心建设</h1>
+<div class="subtitle">2026-10-23—2026-10-29 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -114,249 +291,158 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><p>本周（2026.1016—2026.1022）广东智算中心建设的主线，是<strong>韶关集群的承载力与订单数据在省级党报层面正式对外确认</strong>。10月17日南方日报刊发《智算之城构筑 算产协同新高地》，披露韶关已建成电信、移动、华韶、国产真武、华为昇腾超节点、移动（腾讯）昆仑芯等<strong>6个万卡智算集群</strong>，上架智能算力达<strong>5.1万P</strong>，为去年6月的10倍；在韶企业签约订单达<strong>3.2GW</strong>，是去年同期的64倍。同期，中国电信韶塘数据中心与深广韶数据大通道（空芯光纤）工程开工，标志韶关集群从"建设期"整体转入"交付与上架期"。</p>
-<p>另一条本周主线来自应用侧：10月16日《广东省备案大模型观察报告（2026）》在广州发布，截至9月全省累计通过备案的大模型达<strong>195款</strong>，约占全国总量两成，另有51款在审。本期信息表共收录<strong>24条</strong>建设与备案动态，其中4条为备案口径（计划总投资）、3条为EPC/机电类招标口径（实际招标价），两者严格分列；另<strong>13条</strong>为经监控台2026-10-23重新聚合检索补录的本周招投标公告（设备/工程招标及询比公告4条、中标结果与中标候选人公示6条、算力设备直接采购公示2条、询比失败公示1条，金额均未在公示环节披露）。</p>
-<p><strong>口径提示：</strong>上版报告曾因三大运营商采购平台聚合通道接口异常，按"未命中"记录本期；2026-10-23经通福智会招标监控系统重新聚合检索，本期实际命中与广东智算中心建设直接相关的公告<strong>13条</strong>，已全部补录进8-2信息表，相关"无公告"表述一并更正。</p>
-</div>
+<div class="overview-text"><p class="ov-lead">本周广东新增16个项目，建设重心转向韶关3万P项目开工与存量改造。</p><ul class="ov-points"><li><a class="src-link" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuvct9388221.shtml" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>土建：</strong>中国移动粤港澳（韶关）数据中心二期项目10月28日启动，总建筑面积9万平方米，拟新增3.2万标准机架、3万P智算能力，计划2027年6月建成交付。</a></li><li><a class="src-link" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191707237958694&type=3&docTypeCode=CompareSelect&securityViewCode=f0f4f93c7ad5d40dafcd51bd643dc8b3" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>机电：</strong>中国电信广州分公司10月27日启动沙溪IDC动环数据升级改造（GDBXWJ20261027012），与佛山、肇庆机房制冷采购共同释放存量机楼能效改造需求。</a></li><li><a class="src-link" href="https://drc.gd.gov.cn/xmgg/content/post_4967642.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>前期：</strong>中国电信创新孵化（南方）基地智算中心10月16日通过节能审查，总投资19.82亿元、规划28452.8个标准机架和26931.904 PFLOPS算力，仍属开工前审批。</a></li></ul><p class="ov-note"><strong>对运营商含义：</strong>本周土建3条、机电5条、总承包6条、设备1条，另有信息安全管理认证1条；征地/前期无新增公开招标。省公司应优先锁定韶关二期液冷及供配电接口，并跟进广州、佛山、肇庆制冷改造。</p></div>
 </div>
 
-<div class="data-note" style="background:#e8f4fd;border-left:4px solid #2196F3;padding:12px 16px;margin:20px 0;font-size:12px;color:#555;border-radius:4px;">
-  📌 <strong>数据周期：</strong>2026-10-16 — 2026-10-22　|　<strong>数据来源：</strong>三大运营商官方采购平台（中国电信阳光采购网、中国移动采购与招标网、中国联通采购与招标网，经通福智会招标监控系统聚合）、中国政府采购网、广东省政府采购中心、全国公共资源交易平台、各市公共资源交易中心、天眼查、建设单位公告等　|　<strong>口径说明：</strong>备案投资为计划总投资口径，中标金额为实际招标价口径，已分别标注
+<div class="data-meta">
+<span class="dm"><b>数据周期</b><span>2026-10-23—2026-10-29（第41期）</span></span>
+<span class="dm"><b>数据来源</b><span>中国电信阳光采购网、中国移动与中国联通采购与招标网、<a data-portal="1" href="http://www.ccgp.gov.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">中国政府采购网</a>、广东省政府采购中心等</span></span>
+<span class="dm"><b>口径说明</b><span>备案投资为计划总投资口径，中标金额为实际招标口径，两者分列；通过节能审查不等于开工，不计入可售算力</span></span>
 </div>
+
 
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">本周建设要闻</div>
-    <div class="value">4条</div>
-    <div class="tag up">周变化（本周）</div>    <div class="tag-note">韶关6个万卡集群/5.1万P上架·广东备案大模型195款·舜通24.75亿备案·浈江/韶塘变电站设备链公告</div>
+    <div class="label">本周新增项目数</div>
+    <div class="value">16个</div>
+    <div class="tag flat">本周新增</div>    <div class="tag-note">按17条本周新增素材合并同一项目多阶段公告后为16个；首期无上周基准</div>
 </div>
 <div class="data-card">
-    <div class="label">信息表收录项目</div>
-    <div class="value">24项</div>
-    <div class="tag up">周变化（本周）</div>    <div class="tag-note">备案4项+EPC3项+开工投运3项+集群统计1项+本周新增招投标公告13项 按日期倒序</div>
+    <div class="label">近一月项目数</div>
+    <div class="value">127条</div>
+    <div class="tag flat">近一月素材</div>    <div class="tag-note">127条近一月素材包含同一项目多轮公告及少量非项目检索结果，不等同于127个独立项目</div>
 </div>
 <div class="data-card">
-    <div class="label">韶关集群上架算力</div>
-    <div class="value">5.1万P</div>
-    <div class="tag up">月变化</div>    <div class="tag-note">已建成6个万卡集群 为去年6月的10倍 在韶签约订单3.2GW</div>
+    <div class="label">前期项目投资</div>
+    <div class="value">19.82亿元</div>
+    <div class="tag flat">近一月披露</div>    <div class="tag-note">首期无上周基准；10月16日节能审查披露投资19.82亿元</div>
 </div>
 <div class="data-card">
-    <div class="label">韶关签约入驻项目</div>
-    <div class="value">26个</div>
-    <div class="tag up">月变化</div>    <div class="tag-note">总投资1116亿元 备案口径 规划标准机架超169万架</div>
+    <div class="label">城市覆盖</div>
+    <div class="value">14个</div>
+    <div class="tag flat">近一月覆盖</div>    <div class="tag-note">首期无上周基准；素材覆盖广州、深圳、韶关、东莞、佛山、惠州等14城</div>
 </div>
 <div class="data-card">
-    <div class="label">全省在用数据中心机架</div>
-    <div class="value">142万架</div>
-    <div class="tag up">年变化</div>    <div class="tag-note">智算规模超70EFLOPS 位居全国第二 2025年口径</div>
+    <div class="label">本周机电动作</div>
+    <div class="value">5条</div>
+    <div class="tag flat">本周新增</div>    <div class="tag-note">首期无上周基准；本周机电相关素材5条</div>
 </div>
 <div class="data-card">
-    <div class="label">覆盖城市</div>
-    <div class="value">6市</div>
-    <div class="tag down">持续</div>    <div class="tag-note">韶关/广州/深圳/惠州/汕头/湛江</div>
+    <div class="label">韶关二期算力</div>
+    <div class="value">3万P</div>
+    <div class="tag flat">项目启动</div>    <div class="tag-note">首期无上周基准；10月28日启动建设，拟新增3万P智算能力</div>
 </div>
 
 </div>
 
 <div class="section">
 <h2>8-1 广东智算中心建设总体态势</h2>
-<div class="content-body"><h4>8-1-1 本周主线：从"建得多"转向"用得上"</h4>
-<p>本周广东智算中心建设的主线，并非新增土建招标公告（设备与配套侧本期经监控台补录新增13条公告，详见8-2表），最重要的仍是一次<strong>官方口径的进度确认</strong>。10月17日南方日报刊发《智算之城构筑 算产协同新高地》，文中援引韶关市权威数据：韶关已建成电信、移动、华韶、国产真武、华为昇腾超节点、移动（腾讯）昆仑芯等6个万卡智算集群，上架智能算力达5.1万P，是去年6月的10倍；在韶企业签约订单达3.2GW，是去年同期的64倍。</p>
-<p>这句话的含金量在于，它把广东算力建设过去一年"机架数量"的叙事，切换到了"上架率与订单"上。5.1万P是存量上架口径，3.2GW是在谈签约口径，二者一个是已建成的实物能力，一个是尚未完全变现的意向，两者必须分开读。</p>
-<h4>8-1-2 韶关集群：从承载力建设转入交付上架期</h4>
-<p>同一篇报道给出了韶关集群的完整进度画像：全市已签约入驻智算中心项目<strong>26个、总投资1116亿元</strong>，规划建设标准机架超<strong>169万架</strong>；其中三大运营商等<strong>7个项目、21万标准机架已建成投用</strong>，腾讯、万国二期、电信二期、电信韶塘、大舜等项目正加快建设，预计年底将形成30万标准机架承载能力。</p>
-<p>这意味着韶关在建的最大变量是"从21万到30万"这9万架的爬坡节奏。需要提示的是，1116亿元为<strong>备案口径的计划总投资</strong>，不等于已经支付的工程款，更不等于已发包的招标金额。</p>
-<h4>8-1-3 能源与网络：广东算力的两项硬约束</h4>
-<p>支撑上述规模的是能源与网络两条底线。能源侧，韶关每年富余电量约100亿千瓦时，新能源已开发装机容量513万千瓦，正在推进石漠化光伏、新丰抽水蓄能等项目，并探索通过投资核电项目获取长期稳定低碳电力。网络侧，韶关距广州约250公里、距深圳与香港不到320公里，到广州、深圳传输骨干机房的单向时延分别低至<strong>1.3毫秒与1.66毫秒</strong>。</p>
-<p>本周期内深广韶数据大通道（空芯光纤）工程开工，建成后到广深时延将再降约30%。需要注意的是，空芯光纤试验线属新兴技术，其对推理业务的实际增益仍需工程投运后才能验证。</p>
-<h4>8-1-4 应用侧数据外溢：本期第二条主线</h4>
-<p>10月16日，粤港澳大湾区生成式人工智能安全发展联合实验室在广州发布《广东省备案大模型观察报告（2026）》：截至2026年9月，全省累计通过备案的大模型已达<strong>195款</strong>，约占全国总量两成，另有51款正在向国家网信办申请备案。从分布看，广州以114款居全省第一，深圳以64款紧随其后，两市合计占比超全省九成。</p>
-<p>195款备案模型的分布高度集中于广深双核，意味着广东的智算需求并非均匀分布，而是由广深的模型研发与推理需求牵引，再向韶关、汕头等成本洼地外溢承接。</p>
-<h4>8-1-5 全省总量口径（年/季维度，非本周数据）</h4>
-<p><span class="time-dim" style="background:#e0e0e0;color:#555">年变化</span> 以下为年度累计口径，<strong>严禁</strong>理解为本周新增：2025年广东人工智能核心产业规模突破3000亿元、同比增长超40%、约占全国四分之一，相关企业68.6万家；截至2025年底122个大模型通过国家备案、430余个行业模型落地。</p>
-<p>算力底座方面，全省已建成智算规模超70 EFLOPS，在用数据中心机架规模达142万架、位居全国第二；截至2026年5月，全省已建、在建智算中心相关项目至少56个。</p>
-<h4>8-1-6 关键发现与本期风险提示</h4>
-<p><strong>发现一：</strong>韶关集群的瓶颈已从"能否建成"转为"能否上架兑现"。21万架已投用对应5.1万P上架，说明单架功率与上架率均已处于高位，后续3.2GW签约订单能否转为实际机柜出租，取决于客户进场速度。</p>
-<p><strong>发现二：</strong>广东新建算力重心在10月继续向两端集中——一端是韶关、汕头这类电价洼地（承接训练与跨境推理），另一端是广州黄埔这类低时延场景（承接推理与行业应用）。中间地带的城市场景相对沉寂。</p>
-<p><strong>风险提示：</strong>上版报告记录"本期聚合通道返回0条且接口异常"；2026-10-23经监控台重新聚合检索，本期实际命中13条公告并已补录（详见8-2表），其中电信浈江/韶塘两园区的变电站设备链与韶塘定制机房机电包是本期最实质的工程信号。新增公告的金额均未在公示环节披露，需待合同公示后补齐口径。</p>
-</div>
+<div class="content-body"><h3>近一月广东智算建设形成“1个超大规模新建、16个本周新增项目、存量机电改造同步扩容”的结构</h3><p>近一个月广东素材共127条，覆盖14个城市；按公告条数观察，项目信息集中于广州、深圳、韶关和佛山，但同一项目往往连续发布招标、候选人公示和中标结果，因此127条不能等同于127个独立项目。近一月明确披露投资额的项目为19.82亿元，另有韶关数据中心二期披露9万平方米建筑面积、78.6兆瓦算力规模和3.2万标准机架等参数。由于多数运营商采购公告未披露预算或中标金额，19.82亿元只能视为公开可确认投资额，不能外推为广东智算产业总投资。</p><p>报告周内按17条新增素材合并同一项目多阶段公告后，形成16个新增项目。结构上，土建3条、机电5条、总承包6条、设备1条，另有信息安全管理认证1条；征地及前期环节本周没有新增公开招标。本周投资端没有新增可核实的金额披露，19.82亿元仍来自10月16日通过节能审查的中国电信创新孵化（南方）基地智算中心。由此可见，广东近期建设增量并非完全由新增机楼拉动，而是“韶关大规模新建拉动土建与配套需求、广州和珠三角存量机楼改造释放机电需求、算力集群采购验证设备需求”三条线并行。</p><h3>8-1-1 新增项目结构：重心落在土建、机电与总承包，设备采购已出现但尚非主力</h3><p>从建设环节看，本周新增项目以总承包和机电为主。总承包6条，占本周已归类项目的最大部分，内容覆盖机房改造、等级认证、结构鉴定、消防施工、监控机房升级以及算力资源扩容集成；这类公告往往对应一个项目的设计、施工、检测或认证拆分，反映存量数据中心从单一设备采购转向综合交付。机电5条，主要集中于制冷、动环数据、电力安全和供电配套，广州沙溪动环升级、佛山和肇庆制冷改造与韶关二期新建形成对照：前者解决既有机楼的可观测性和能效问题，后者提前配置液冷、电力方舱等新建系统接口。</p><p>土建3条集中于茂名局房整治、韶关通信管廊EPC及配套监理审计，表明建设活动已从规划审批进入施工组织阶段。设备环节本周以深圳龙岗国产算力集群集成服务及配套物资框架采购为明确信号，说明国产算力采购开始与机房扩容需求联动，但本周尚未形成服务器、液冷机柜或算力设备的大规模集中招标。信息安全管理认证1条则反映智算中心投入运营前，合规、等级认证和安全管理正在成为与土建机电并行的工作包。</p><p>按城市分布，本周新增公告并非均匀铺开。韶关承接大型新建项目和施工配套，广州集中出现动环、制冷、等级认证及安全管理，佛山、肇庆分别释放制冷系统改造需求，珠海启动IDC改造总承包，汕头、东数和深圳分别出现结构鉴定、扩容物资和国产算力集群采购，茂名则新增局房土建装修及机房整治框架。该结构说明，珠三角城市当前更偏向存量机房提效和算力服务落地，韶关更偏向集群级基础设施建设。</p><h3>8-1-2 建设节奏判断：审批项目与施工项目并行，Q4进入接口锁定和采购转化窗口</h3><p>前期项目仍在等待转化。中国电信创新孵化（南方）基地智算中心于10月16日通过节能审查，总投资19.82亿元，规划28452.8个标准机架、26931.904 PFLOPS算力，总功率71132 kW，PUE为1.198，计划2028年6月投产。该项目已越过节能审查，但不代表进入开工或设备采购阶段。其后续价值在于锁定液冷、供配电、算力网络和运维接口，否则从审批到设备招标的时间可能被压缩。</p><p>施工项目已经形成连续采购信号。10月29日，浈江园区通信管廊工程EPC中标候选人公示；10月23日，珠海通信中心IDC改造一期工程总承包启动；10月28日，茂名局房土建装修及机房整治施工框架启动；同一周内，广州、佛山、肇庆的动环与制冷项目也进入采购或成交阶段。由此判断，广东项目节奏正从单点审批转向“施工总包先行、机电设备跟进、检测认证补齐”的组合推进。</p><p>供电配套仍是不可忽略的前置条件。10月23日，佛山220千伏青云变电站投产，高明区220千伏变电容量增长47.46%；浈江、韶塘园区近期又密集出现220kV变压器、GIS、10kV开关柜及并联电容器采购。对运营商而言，近期资源不应只盯服务器和机柜，应同步核对高可靠供电、液冷容量、动环监控和结构安全接口。韶关二期计划2027年6月建成交付，广州沙溪改造采购于10月31日截止、佛山空调采购于10月29日截止，Q4应优先处理这些近期节点，避免施工、机电和认证工作相互等待。</div>
 </div>
 
 <div class="section">
 <h2>8-2 招标/中标/备案信息表（按日期倒序）</h2>
-<div class="content-body"><h4>8-2-1 全量建设与备案信息表（按日期倒序）</h4>
-<p>下表按事件发生日期由新到旧排列。<strong>金额列严格区分两种口径</strong>：备案类项目标注"计划总投资（备案口径）"，招标与中标类项目标注实际招标价或中标金额，二者不可互相换算、不可加总。</p>
-<table>
-<thead><tr><th>序号</th><th>项目名称</th><th>招标/采购单位</th><th>业主单位</th><th>类型</th><th>金额（中标/预算）</th><th>日期</th><th>城市</th><th>项目规模与备注</th><th>时间维度</th></tr></thead>
-<tbody><tr><td>1</td><td>2026年汕头分公司鮀浦AIDC改造项目二期通信机楼结构安全性检测及鉴定服务采购</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司（汕头分公司）</td><td>AIDC改造结构检测（询比失败公示）</td><td>金额未公示（询比失败）</td><td>2026-10-22</td><td>汕头</td><td>鮀浦机楼AIDC改造项目二期的通信机楼结构安全性检测及鉴定服务询比失败，需重新组织采购；对机楼结构荷载的检测鉴定是高功率机柜上加装改造的前置环节。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>2</td><td>2026-2027年粤港澳大湾区一体化数据中心（A5、A6、D3）机楼消防系统维保及日常维修服务采购项目</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>机电运维询比公告</td><td>金额未公示（询比公告）</td><td>2026-10-22</td><td>韶关（浈江园区）</td><td>覆盖粤港澳大湾区一体化数据中心A5、A6、D3三栋机楼的消防系统维保及日常维修，服务期2026-2027年；公告发布于中国电信阳光采购网。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>3</td><td>2026年肇庆分公司机楼绿色焕新及机架能力提升（一期）项目黄岗机楼制冷系统能效优化工程集成服务采购</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司（肇庆分公司）</td><td>机房改造比选公告</td><td>金额未公示（比选公告）</td><td>2026-10-21</td><td>肇庆</td><td>黄岗机楼制冷系统能效优化工程集成服务询比，属机楼绿色焕新及机架能力提升（一期）项目，反映运营商以制冷改造释放城域机楼机架承载能力的路径。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>4</td><td>粤海集团云信创算力资源扩容项目华为等设备采购项目</td><td>广东亿迅科技有限公司（中国电信体系）</td><td>粤海集团（云信创算力扩容）</td><td>算力设备直接采购（单一来源）</td><td>金额未公示</td><td>2026-10-21</td><td>广州</td><td>单一来源直接采购公示，含华为等品牌算力/网络设备；同项目联想C86服务器采购已于10月19日另公示。属IT设备口径，不计入建设投资。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>5</td><td>中国电信粤港澳大湾区一体化数据中心（韶塘园区）自建220千伏变电站工程10kV框架式并联电容器装置集中采购项目</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>变电站设备招标公告</td><td>金额未公示（招标公告）</td><td>2026-10-20</td><td>韶关</td><td>韶塘园区自建220kV变电站配套无功补偿设备集采，框架期2026-2028年；变电站送电是园区机房可上架的前置条件。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>6</td><td>中国电信粤港澳大湾区一体化数据中心（浈江园区）自建220千伏变电站工程10kV框架式并联电容器装置设备集中采购项目（重新招标）</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>变电站设备招标公告（重新招标）</td><td>金额未公示（招标公告）</td><td>2026-10-20</td><td>韶关</td><td>浈江园区220kV变电站配套10kV框架式并联电容器装置，本次为重新招标；与10月16日GIS设备中标结果同属浈江变电站送电链条。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>7</td><td>广东移动数据中心（湛江、汕头、广州）240V高压直流设备公开招标采购项目</td><td>中国移动通信集团广东有限公司</td><td>广东移动</td><td>电源设备中标候选人公示</td><td>金额未公示（候选人公示）</td><td>2026-10-19</td><td>广州/汕头/湛江</td><td>覆盖湛江、汕头、广州三地数据中心240V高压直流（HVDC）电源设备，中标候选人已公示；与湛江、汕头机电EPC框架（上限9.30亿元）形成电源设备配套。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>8</td><td>2026年深圳电信IDC机房配套电源设备框架采购项目</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司（深圳分公司）</td><td>电源设备中标结果公示</td><td>金额未公示（中标结果公示）</td><td>2026-10-19</td><td>深圳</td><td>深圳电信IDC机房配套电源设备框架采购（2026年）中标结果公示；与移动240V高压直流集采同为数据中心电源设备口径，框架期覆盖2026-2028年相关需求。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>9</td><td>中国电信粤港澳大湾区一体化数据中心（浈江园区）土建项目A3至A4、A8至A11、通信管廊工程、变电站全过程跟踪审计服务采购（标段一/二/三）</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>工程审计中标结果公示</td><td>金额未公示（中标结果公示）</td><td>2026-10-19</td><td>韶关</td><td>覆盖浈江园区土建项目A3至A4、A8至A11楼栋、通信管廊工程及变电站的全过程跟踪审计，三个标段同日公示中标结果；A8至A11楼栋为公示序列首次出现，园区实际在建体量大于此前披露的A3/A4单一工程口径。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>10</td><td>粤海集团云信创算力资源扩容项目联想C86服务器采购项目</td><td>广东亿迅科技有限公司（中国电信体系）</td><td>粤海集团（云信创算力扩容）</td><td>算力设备直接采购（单一来源）</td><td>金额未公示</td><td>2026-10-19</td><td>广州</td><td>单一来源直接采购公示，采购联想C86（国产化）服务器用于算力资源扩容；与10月21日华为等设备采购属同一扩容项目。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>11</td><td>韶关数据中心集群整体建设进度</td><td>韶关市人民政府 / 韶关市发改局</td><td>韶关市政务和数据局等</td><td>集群建设统计</td><td>已签约项目总投资 1116 亿元（备案口径）</td><td>2026-10-17</td><td>韶关</td><td>已签约入驻智算中心项目26个，规划建设标准机架超169万架；7个项目、21万标准机架已建成投用；腾讯、万国二期、电信二期、电信韶塘、大舜在建，年底预计形成30万标准机架承载能力。已建成6个万卡集群，上架智能算力5.1万P，在韶企业签约订单3.2GW。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>12</td><td>中国电信粤港澳大湾区一体化数据中心项目（浈江园区）通信管廊工程监理服务</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>工程监理中标候选人公示</td><td>金额未公示（候选人公示）</td><td>2026-10-16</td><td>韶关</td><td>浈江园区通信管廊工程监理服务中标候选人公示，与土建A3-A4、A8-A11全过程跟踪审计共同构成园区配套工程的监督链。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>13</td><td>中国电信粤港澳大湾区一体化数据中心（韶塘园区）某客户定制机房第一批机电项目分体氟泵风墙空调（SHU）设备集中采购项目</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>机电设备中标结果公示</td><td>金额未公示（中标结果公示）</td><td>2026-10-16</td><td>韶关</td><td>韶塘园区"某客户定制机房"第一批机电项目制冷设备（分体氟泵风墙空调SHU）中标结果公示，定制机房模式意味着机电包随客户订单分批释放。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>14</td><td>中国电信粤港澳大湾区一体化数据中心（浈江园区）自建220千伏变电站工程220kV全封闭组合开关电器（GIS）设备集中采购项目</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>变电站设备中标结果公示</td><td>金额未公示（中标结果公示）</td><td>2026-10-16</td><td>韶关</td><td>浈江园区自建220kV变电站主设备GIS组合电器中标结果公示；变电站设备采购在本期内形成"GIS中标—电容器招标"的接力披露。</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr><tr><td>15</td><td>粤港澳大湾区电算协同一体化智算中心算力基础设施项目（一期）</td><td>广东舜通大数据产业有限公司</td><td>广东舜通大数据产业有限公司</td><td>新建备案（计划总投资）</td><td>计划总投资 24.75 亿元（备案口径）</td><td>2026-10-15</td><td>韶关</td><td>位于韶关高新区ZC0201A-28号地块（犁市镇狮塘路东侧），占地64220㎡、建筑面积112571.8㎡，IT负荷82.5MW（3.3万标准机架）。1.1期7.5亿元/1万架（含1.1.1期3.43亿元3千架、1.1.2期4.07亿元7千架），1.2期17.25亿元/2.3万架；配套室外综合管廊、道路绿化及运维用房。</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr><tr><td>16</td><td>粤东数据中心二期（汕头华侨试验区）</td><td>广东移动汕头分公司</td><td>广东移动粤东数据中心</td><td>数据中心新建/扩容</td><td>总投资 11.9 亿元（非招标价）</td><td>2026-09-30</td><td>汕头</td><td>IT功耗规划45.4MW，2026年9月全面投运，80%机房用电来自海上风电绿电。一期投产机架7499个，二期投产后机柜数量将超2万个。配套汕头国际海缆登陆站（出口带宽占中国大陆一半以上），支撑"词元出海"跨境推理。</td><td><span class="time-dim">持续</span></td></tr><tr><td>17</td><td>广东移动数据中心机电工程EPC框架服务（第二批）</td><td>中国移动通信集团广东有限公司</td><td>广东移动</td><td>机电EPC框架</td><td>中标：14.13亿元（64.5%份额）/14.07亿元（35.5%份额）</td><td>2026-09-20</td><td>广州/惠州</td><td>中兴通讯+华信咨询设计研究院联合体获64.5%份额，华为+广东省电信规划设计院联合体获35.5%份额。框架不含税上限15.3559亿元，服务期至2028-12-31，覆盖电气、通风空调、机房电源、智能化系统、机柜配套与柴油发电机组。</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr><tr><td>18</td><td>中国电信粤港澳大湾区一体化数据中心（浈江园区）2.2期A3A4工程</td><td>中国电信股份有限公司广东分公司</td><td>中国电信广东公司</td><td>土建EPC总承包</td><td>第一候选人报价 4.07 亿元</td><td>2026-09-17</td><td>韶关</td><td>公示中标候选人，第一候选人为广东省电信规划设计院+中建一局联合体。建设A3、A4两栋智算中心，总建筑面积约7.31万㎡，工期297天。属浈江园区多期滚动开发中的一期。</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr><tr><td>19</td><td>中国移动粤港澳（广州）通信机楼二期工程</td><td>中国移动通信集团广东有限公司</td><td>广东移动</td><td>机电EPC框架下属子项目</td><td>项目总投资 20.3 亿元（非招标价）</td><td>2026-06-26</td><td>广州</td><td>位于黄埔区中新知识城九龙工业园区，2026-06-26获广东省能源局节能审查意见。建设3栋数据中心机楼，建成机架7390个、总功率77386kW，达产后形成28224 PFLOPS智算规模，预计2027年12月投产。</td><td><span class="time-dim">持续</span></td></tr><tr><td>20</td><td>粤港澳大湾区（惠州）数据产业园数据中心一期</td><td>中国移动通信集团广东有限公司</td><td>广东移动</td><td>机电EPC框架下属子项目</td><td>项目总投资 约9.057 亿元（非招标价）</td><td>2026-06-24</td><td>惠州</td><td>位于惠东县白花镇粤港澳大湾区（惠州）数据产业园，节能报告2026-06-24获批复。依托四栋已有建筑建设，建成机架4572个、总功率41440kW，达产后形成8496 PFLOPS智算规模，预计2030年12月投产。</td><td><span class="time-dim">持续</span></td></tr><tr><td>21</td><td>广州开发区黄埔区首批4个算力新基建项目</td><td>广州开发区、黄埔区（开工主体分属四家）</td><td>广州移动/广州联通/云下科技/连云大数据</td><td>开工+新建备案</td><td>总投资 48.39 亿元（非招标价）</td><td>2026-04-30</td><td>广州黄埔</td><td>4个项目2026年2月通过国家算力基础设施建设审批、2026年4月集体开工，新增智算规模超4万P。含广州首个单体"万P"级新型智算中心（移动）、中国联通知识城机房数据中心、云下科技汇云（华为910B）、连云大数据二期（100%绿电）。</td><td><span class="time-dim">持续</span></td></tr><tr><td>22</td><td>湛智算畅科（广东）技术有限公司AI智造及数智应用一体化项目</td><td>广东省投资项目在线审批监管平台</td><td>湛智算畅科（广东）技术有限公司</td><td>新建备案（计划总投资）</td><td>计划总投资 25 亿元（备案口径）</td><td>2026-03-31</td><td>湛江</td><td>位于湛江市霞山区，占地10万㎡，建设周期2026年3月至2028年2月。含AI设备与智能机器人生产线、AI算力中心，并与头部科研机构共建AI研究院及技能培训学校，是粤西"算力+装备+场景"一体化代表。</td><td><span class="time-dim">持续</span></td></tr><tr><td>23</td><td>图灵新智运（深圳）科技有限公司推理算力中心建设项目</td><td>广东省投资项目在线审批监管平台</td><td>图灵新智运（深圳）科技有限公司</td><td>新建备案（计划总投资）</td><td>计划总投资 约9.5 亿元（备案口径）</td><td>2026-03-31</td><td>广州黄埔</td><td>占地约9000㎡，规划建设不低于4000 PFlops@FP16 的AI推理算力资源，100%采用国产算力设备并采用UPS不间断电源与液冷散热。属黄埔区推理侧国产化算力代表项目。</td><td><span class="time-dim">持续</span></td></tr><tr><td>24</td><td>广东移动湛江、汕头数据中心机电EPC框架</td><td>中国移动通信集团广东有限公司</td><td>广东移动</td><td>机电EPC框架</td><td>不含税上限 9.30 亿元</td><td>未公示</td><td>湛江/汕头</td><td>粤西与粤东两地数据中心机电工程框架集采，不含税上限9.30亿元。与汕头海上风电绿电直连数据中心路径配套，属广东移动省内多点布局的一部分。</td><td><span class="time-dim">持续</span></td></tr></tbody></table>
-<p style="margin-top:8px;font-size:0.9em;color:#555;">注：日期未公示的项目（广东移动湛江、汕头数据中心机电EPC框架）统一置于表末；其余条目均按事件日期由新到旧排列。</p>
-<div class="analysis-box"><h4>深度分析（按运营商/来源分点）</h4>
-<ol style="margin:8px 0 0 20px;padding:0;line-height:1.9;">
-<li><strong>中国电信（13条）——"浈江园区多期滚动 + 韶塘新建双线推进"</strong><br>
-本期电信侧最值得注意的不是单笔金额，而是<strong>同一运营商在同一集群内的分期滚动开发节奏</strong>。①土建主线：粤港澳大湾区一体化数据中心（浈江园区）2.2期A3A4工程公示候选人，广东省电信规划设计院与中建一局联合体以4.07亿元报价居首，建设A3、A4两栋智算中心、总建筑面积约7.31万㎡、工期297天。②集群部署：此前电信一期已建成投产，本期披露的中国电信韶塘数据中心与深广韶数据大通道在本周内开工，构成浈江园区之外的韶塘支点。③算力侧：电信联合阿里云建设的粤港澳大湾区首个"真武"万卡智算集群（韶关，约9000P级规模）已进入稳定运营期，是电信在韶"建设—上架"闭环的代表。</li>
-<li><strong>中国移动（6条）——"一框架统管粤港澳惠湛汕五地机电"</strong><br>
-移动本期的主线是<strong>用一套框架协议替代逐项目招标</strong>。①框架层：广东移动数据中心机电工程EPC框架服务第二批于9月20日公示，中兴通讯与华信咨询设计研究院联合体获64.5%份额（14.13亿元），华为与广东省电信规划设计院联合体获35.5%份额（14.07亿元），框架不含税上限15.3559亿元，服务期至2028年12月31日。②项目层：该框架直接管辖广州数据中心二期（黄埔中新知识城九龙工业园，总投资20.3亿元、7390机架、达产28224 PFLOPS、2027年12月投产）与惠州数据中心一期（惠东白花镇，总投资约9.057亿元、4572机架、达产8496 PFLOPS、2030年12月投产）。③多点布局：湛江、汕头两地数据中心机电EPC框架不含税上限另达9.30亿元，汕头粤东数据中心二期（11.9亿元、IT功耗45.4MW）亦由移动体系实施。设计采购施工深度绑定，可减少高密度机房方案与现场落地脱节的问题。新增：10月19日公示湛江、汕头、广州三地数据中心240V高压直流设备中标候选人，与湛汕机电EPC框架形成"框架施工+电源设备集采"配套。</li>
-<li><strong>本期新增公告（13条）——"变电站送电链完整披露 + 定制机房机电包随单释放"</strong><br>
-本项为2026-10-23经监控台重新聚合检索补录的本周公告，电信占12条、移动占1条。①变电站送电链：10月16日浈江园区自建220千伏变电站220kV GIS组合电器公示中标，10月20日韶塘、浈江两园区10kV框架式并联电容器装置相继发布招标公告（浈江为重新招标），自建变电站的设备采购在本期内形成"主设备—无功补偿"的接力披露，变电站送电是两园区机房可上架的前置条件。②土建监督链扩容：10月19日浈江园区土建项目全过程跟踪审计三个标段同日公示中标结果，覆盖范围除已披露的A3至A4外，还包含A8至A11楼栋、通信管廊工程与变电站，说明浈江园区实际在建体量大于此前单一工程口径。③定制机房机电包：10月16日韶塘园区"某客户定制机房"第一批机电项目的分体氟泵风墙空调（SHU）设备公示中标，验证"客户订单驱动的机电分批发包"模式。④运维与监理配套：10月22日A5、A6、D3机楼消防系统维保询比公告、10月16日通信管廊工程监理候选人公示相继发布。⑤IT设备口径：粤海集团云信创算力资源扩容项目两条直接采购公示（10月21日华为等设备、10月19日联想C86服务器，采购主体均为广东亿迅），属算力设备采购，不计入建设投资口径。⑥城域机楼与IDC配套：汕头鮀浦AIDC改造项目二期通信机楼结构安全性检测及鉴定服务询比失败公示（10月22日，需重新组织采购，结构检测是高功率机柜加装改造的前置环节）、肇庆黄岗机楼绿色焕新及机架能力提升（一期）制冷系统能效优化询比（10月21日）、深圳IDC机房配套电源设备框架中标结果公示（10月19日）。上述公告金额均未在公示环节披露。</li>
-<li><strong>政府/事业单位及地方平台（5条）——"粤东粤西按备案先行，粤港澳按算力新基建窗口落地"</strong><br>
-非运营商部分呈明显的三段式。①韶关高新区：广东舜通大数据24.75亿元智算中心一期于10月15日备案复核通过，3.3万标准机架、82.5MW，是本期唯一落在10月中下旬的新增备案。②粤西与粤东：湛江霞山25亿元"AI智造及数智应用一体化"、汕头粤东数据中心二期11.9亿元，均为备案或核准后招标的推进方式。③广州黄埔：48.39亿元4个算力新基建已于2026年2月通过国家算力基础设施建设审批、2026年4月开工，另有图灵新智运约9.5亿元推理算力中心（不低于4000 PFlops@FP16、100%国产设备加液冷）。此外，韶关集群26个签约项目、1116亿元备案投资、21万架已投用与5.1万P上架，是政府侧对集群建设进度的总量披露。</li>
-</ol>
-<p style="margin:8px 0 0;">总体看，广东本期建设呈现<strong>"韶关集群主战场 + 广州黄埔低时延应用侧 + 湛江汕头成本外溢点"</strong>的三层结构。韶关以26个签约项目、1116亿元备案投资、169万架规划机架承接训练与批量推理；广州黄埔以48.39亿元四个新基建承接自动驾驶、工业质检等时延敏感场景；湛江与汕头则分别以"算力+智能制造"和"绿电+跨境词元"差异化卡位。值得注意的是，2026-10-23经监控台重新聚合检索，本期实际补录新增公告13条（详见上表新增条目）：电信在韶关浈江/韶塘两园区的变电站设备招标、土建跟踪审计与定制机房机电公示构成当周最实质的建设信号；上版"接口异常未命中"的记录已据此更正。</p></div>
-<p style="margin-top:10px;"><strong>补充说明（非建设类）：</strong>10月16日《广东省备案大模型观察报告（2026）》发布，截至9月全省累计备案大模型195款（广州114款、深圳64款），另有51款在审。该数据属应用侧需求分布口径，<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>，不计入建设投资口径。</p>
-</div>
+<div class="content-body"><h3>近一月招标由浈江园区持续推进、韶关二期启动和珠三角存量改造共同构成，周内新增集中在机电与总承包</h3><table><tr><th>本周</th><th>日期</th><th>项目名称</th><th>地点</th><th>建设环节</th><th>预算或中标金额</th><th>中标方</th><th>来源（运营商公告写编号，政府侧写平台名）</th><th>与电信相关性</th></tr><tr><td>★</td><td>2026-10-29</td><td>浈江园区通信管廊工程EPC总承包中标候选人公示</td><td>韶关</td><td>土建</td><td>未披露金额</td><td>候选人公示</td><td>中国电信采购平台；公告编号—</td><td>核心：核心枢纽通信管廊建设</td></tr><tr><td>★</td><td>2026-10-29</td><td>沙溪等数据中心机房等级认证服务成交候选人公示</td><td>广州</td><td>总承包</td><td>未披露金额</td><td>候选人公示</td><td>中国电信采购平台；公告编号—</td><td>核心：数据中心等级认证</td></tr><tr><td>★</td><td>2026-10-29</td><td>黄岗机楼制冷系统能效优化工程集成服务成交候选人公示</td><td>肇庆</td><td>机电</td><td>未披露金额</td><td>候选人公示</td><td>中国电信采购平台；公告编号—</td><td>配套：存量机楼能效提升</td></tr><tr><td>★</td><td>2026-10-29</td><td>冷冻水型机房专用空调框架采购询比失败公示</td><td>广州</td><td>机电</td><td>未披露金额</td><td>询比失败</td><td>中国电信采购平台；公告编号—</td><td>配套：制冷框架需重新组织供应</td></tr><tr><td>★</td><td>2026-10-29</td><td>鮀浦AIDC改造项目二期通信机楼结构安全性检测及鉴定服务重新采购</td><td>汕头</td><td>总承包</td><td>未披露金额</td><td>采购中</td><td>中国电信采购平台；GDBXWJ20261029027</td><td>配套：改造前结构安全复核</td></tr><tr><td>★</td><td>2026-10-29</td><td>曲江监控机房升级改造及维护服务</td><td>韶关</td><td>总承包</td><td>未披露金额</td><td>采购中</td><td>中国电信采购平台；GDBXWJ20261029010</td><td>弱相关：监控机房改造</td></tr><tr><td>★</td><td>2026-10-28</td><td>茂名局房土建装修及机房整治工程施工服务框架</td><td>茂名</td><td>土建</td><td>未披露金额</td><td>招标中</td><td>中国电信采购平台；GDZBGG20261028006</td><td>弱相关：局房施工框架</td></tr><tr><td>★</td><td>2026-10-28</td><td>广州芳村等机楼动力设施搬迁配套项目空调控制柜采购</td><td>广州</td><td>机电</td><td>未披露金额</td><td>比选中</td><td>中国电信采购平台；GDBXWJ20261028027</td><td>配套：动力设施搬迁配套</td></tr><tr><td>★</td><td>2026-10-28</td><td>东莞农村商业银行IDC租用机房扩容框架外物资采购</td><td>东莞</td><td>总承包</td><td>未披露金额</td><td>成交候选人</td><td>中国电信采购平台；公告编号—</td><td>核心：租用机房扩容</td></tr><tr><td>★</td><td>2026-10-27</td><td>沙溪IDC动环数据升级改造</td><td>广州</td><td>机电</td><td>未披露金额</td><td>比选中</td><td>中国电信采购平台；GDBXWJ20261027012</td><td>核心：存量客户动环升级</td></tr><tr><td>★</td><td>2026-10-26</td><td>佛山机房冷冻水专用空调采购</td><td>佛山</td><td>机电</td><td>未披露金额</td><td>比选中</td><td>中国电信采购平台；GDBXWJ20261026025</td><td>配套：绿色焕新及制冷改造</td></tr><tr><td>★</td><td>2026-10-26</td><td>深圳龙岗国产算力集群集成服务及配套物资框架</td><td>深圳</td><td>设备</td><td>未披露金额</td><td>直接采购公示</td><td>中国电信采购平台；GDDYLYCGGS2026102619</td><td>核心：国产算力集群集成</td></tr><tr><td>★</td><td>2026-10-26</td><td>广州IDC信息安全管理体系认证</td><td>广州</td><td>总承包</td><td>未披露金额</td><td>比选中</td><td>中国电信采购平台；GDBXWJ20261026016</td><td>核心：信息安全管理认证</td></tr><tr><td>★</td><td>2026-10-26</td><td>韶关沙湖目标局消火栓灭火系统施工服务成交候选人公示</td><td>韶关</td><td>总承包</td><td>未披露金额</td><td>候选人公示</td><td>中国电信采购平台；公告编号—</td><td>配套：消防隐患治理</td></tr><tr><td>★</td><td>2026-10-23</td><td>珠海通信中心IDC改造工程一期总承包</td><td>珠海</td><td>总承包</td><td>未披露金额</td><td>招标中</td><td>中国移动采购与招标网；公告编号—</td><td>核心：通信中心机房改造</td></tr><tr><td>★</td><td>2026-10-23</td><td>浈江园区通信管廊工程监理服务中标结果</td><td>韶关</td><td>土建</td><td>未披露金额</td><td>中标结果</td><td>中国电信采购平台；公告编号—</td><td>核心：管廊工程监理</td></tr><tr><td></td><td>2026-10-22</td><td>江门分公司模块化机房建设服务</td><td>江门</td><td>土建</td><td>未披露金额</td><td>询比中</td><td>中国电信采购平台；GDBXWJ20261022035</td><td>配套：模块化机房建设</td></tr><tr><td></td><td>2026-10-22</td><td>韶关数据中心5土建及机电新建工程第三方检测服务</td><td>韶关</td><td>土建</td><td>未披露金额</td><td>中选候选人</td><td>中国联通采购与招标网；公告编号—</td><td>配套：新建工程检测</td></tr><tr><td></td><td>2026-10-21</td><td>粤海集团云信创算力资源扩容华为等设备采购</td><td>广东</td><td>总承包</td><td>未披露金额</td><td>直接采购公示</td><td>中国电信采购平台；FBDYLYCGGS2026102101</td><td>核心：信创算力扩容</td></tr><tr><td></td><td>2026-10-21</td><td>广州分公司冷冻水型机房专用空调框架</td><td>广州</td><td>机电</td><td>未披露金额</td><td>询比中</td><td>中国电信采购平台；GDBXWJ20261021022</td><td>配套：制冷设备框架</td></tr><tr><td></td><td>2026-10-20</td><td>韶塘园区自建220千伏变电站10kV并联电容器装置采购</td><td>韶关</td><td>机电</td><td>未披露金额</td><td>招标中</td><td>中国电信采购平台；GDZBGG20261020001</td><td>核心：高压供电配套</td></tr><tr><td></td><td>2026-10-20</td><td>浈江园区自建220千伏变电站10kV并联电容器装置重新招标</td><td>韶关</td><td>机电</td><td>未披露金额</td><td>招标中</td><td>中国电信采购平台；GDZBGG20261020003</td><td>核心：高压供电配套</td></tr><tr><td></td><td>2026-10-20</td><td>佛山三山AIDC机房改造土建装修及消防改造工程</td><td>佛山</td><td>土建</td><td>未披露金额</td><td>招标中</td><td>中国联通采购与招标网；公告编号—</td><td>核心：AIDC改造施工</td></tr><tr><td></td><td>2026-10-20</td><td>沙溪等数据中心机房等级认证服务</td><td>广州</td><td>总承包</td><td>未披露金额</td><td>询比中</td><td>中国电信采购平台；GDBXWJ20261020018</td><td>核心：机房等级认证</td></tr><tr><td></td><td>2026-10-19</td><td>深圳电信IDC机房配套电源设备框架采购中标结果</td><td>深圳</td><td>机电</td><td>未披露金额</td><td>中标结果</td><td>中国电信采购平台；公告编号—</td><td>核心：IDC电源设备</td></tr><tr><td></td><td>2026-10-19</td><td>湛江遂溪IDC机楼双路市电隐患改造高可靠性供电费</td><td>湛江</td><td>机电</td><td>未披露金额</td><td>直接采购公示</td><td>中国电信采购平台；GDDYLYCGGS2026101922</td><td>核心：双路市电隐患治理</td></tr><tr><td></td><td>2026-10-16</td><td>中国电信创新孵化（南方）基地智算中心节能审查</td><td>广州</td><td>征地</td><td>19.82亿元</td><td>审查通过</td><td>广东省能源局；粤能许可〔2026〕85号</td><td>核心：19.82亿元智算中心项目</td></tr><tr><td></td><td>2026-10-12</td><td>浈江园区220kV变压器设备集中采购中标结果</td><td>韶关</td><td>机电</td><td>未披露金额</td><td>中标结果</td><td>中国电信采购平台；公告编号—</td><td>核心：220kV主变设备</td></tr><tr><td></td><td>2026-10-10</td><td>韶关数据中心管道施工服务框架中标结果</td><td>韶关</td><td>土建</td><td>未披露金额</td><td>中标结果</td><td>中国电信采购平台；公告编号—</td><td>核心：数据中心管道施工</td></tr><tr><td></td><td>2026-10-09</td><td>中国移动广东数据中心机电工程设计施工一体化框架中标结果</td><td>广东</td><td>机电</td><td>未披露金额</td><td>中标结果</td><td>中国移动采购与招标网；公告编号—</td><td>核心：数据中心机电EPC框架</td></tr><tr><td></td><td>2026-09-30</td><td>浈江园区通信管廊工程EPC总承包</td><td>韶关</td><td>土建</td><td>未披露金额</td><td>招标中</td><td>中国电信采购平台；GDZBGG20260930003</td><td>核心：核心枢纽管廊建设</td></tr></table><p>近一月公告显示，广东项目已经形成“浈江园区连续推进、韶关集群新增建设、珠三角存量改造”三类节奏。浈江园区通信管廊EPC于9月30日招标，10月23日监理服务中标，10月29日EPC中标候选人公示；同一园区在10月12日至10月20日连续完成220kV变压器、GIS、10kV开关柜、并联电容器等采购或结果发布，说明土建施工与高压供电并行推进。韶关方面，10月10日数据中心管道施工框架中标，10月22日数据中心5土建及机电第三方检测出现中选候选人，10月23日和10月29日通信管廊监理及EPC结果继续落地，形成新建集群的施工配套链条。珠三角则以广州、佛山、肇庆、珠海的机楼改造、制冷升级、等级认证为主，采购颗粒度更小、交付周期更短。</p><p>本周运营商采购动向出现两个值得调整经营策略的信号。第一，机电采购由单一空调转向动环数据、制冷控制柜、冷冻水空调、供电安全和高压设备组合并行。例如10月27日沙溪IDC启动2026—2029年动环数据升级改造，10月28日广州芳村等机楼采购空调控制柜，10月26日佛山采购冷冻水型机房专用空调，10月29日广州同类空调框架询比失败，说明需求真实释放，但供应组织仍可能因响应不足而反复。第二，总承包和认证类采购增多。珠海IDC改造总承包、沙溪等级认证、鮀浦AIDC结构鉴定与汕头消防施工，说明运营商已把交付能力、机房等级和结构安全纳入智算中心招采前置条件，不再只采购服务器或单一机电设备。省公司应将这类小而急的改造需求纳入区域资源池，通过框架化响应覆盖多地项目，避免逐单组织采购拉长交付周期。</p></div>
 </div>
 
 <div class="section">
 <h2>8-3 按城市汇总</h2>
-<div class="content-body"><h4>8-3-1 城市分布总览</h4>
-<p>本期信息表收录的24条建设与备案动态覆盖<strong>韶关、广州（含黄埔）、深圳、惠州、汕头、湛江、肇庆</strong>七地。分布上呈现明显的"一超多强"：韶关以10条（3条原有主体条目+7条本周补录园区公告）占据绝对主战场，广州以5条（含粤海云信创算力扩容直接采购2条）承接低时延应用侧需求，汕头2条、深圳/惠州/湛江/肇庆各1条布局区域特色，另有移动240V高压直流设备集采1条跨广州/汕头/湛江三地。此外，经监控台2026-10-23重新聚合检索补录的13条公告中，7条落在韶关（浈江/韶塘园区变电站设备、土建审计、定制机房机电与管廊监理），2条落在广州（粤海云信创算力扩容直接采购），1条落在深圳（IDC机房配套电源框架）、1条落在汕头（鮀浦AIDC改造结构检测）、1条落在肇庆（黄岗机楼制冷能效优化），1条覆盖广州/汕头/湛江三地（移动240V高压直流设备集采），韶关作为建设主战场的招标活跃度得到公告数据直接印证。</p>
-<table>
-<thead><tr><th>城市</th><th>本期收录条目</th><th>主导项目类型</th><th>代表项目与规模</th><th>在建/投用规模口径</th><th>时间维度</th></tr></thead>
-<tbody>
-<tr><td>韶关</td><td>10条（含本周新增公告7条）</td><td>集群整体建设 + 土建EPC + 新建备案 + 园区设备/审计/监理公告</td><td>粤港澳大湾区电算协同一体化智算中心一期（24.75亿元备案、3.3万架、82.5MW）；中国电信浈江园区2.2期A3A4工程（4.07亿元、7.31万㎡、工期297天）；集群26个签约项目</td><td>已签约26个项目、总投资1116亿元（备案口径）、规划超169万架；7个项目21万架已投用，上架智能算力5.1万P</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>广州（含黄埔）</td><td>5条（含粤海云信创扩容公告2条）</td><td>算力新基建开工 + 推理算力中心备案 + 算力设备直接采购</td><td>黄埔首批4个算力新基建（48.39亿元、新增智算超4万P、2026年4月开工）；图灵新智运推理算力中心（约9.5亿元备案、不低于4000 PFlops@FP16、100%国产设备）</td><td>黄埔区现有智能算力供给已超15000P，综合算力居全市各区首位；"十五五"力争新增超5万P</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>深圳</td><td>1条（IDC配套电源）</td><td>IDC机房配套电源设备框架</td><td>本周新增：深圳电信IDC机房配套电源设备框架采购中标结果公示（2026-10-19，金额未公示）；前海人工智能算力中心（二期）等项目已在前期披露，本期沿用不重复计入</td><td>前海已落成前海信息枢纽大厦、赤湾博大等高品质数据中心；河套已建设国际主流智能算力超4680P、可调度算力超42000P</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>惠州</td><td>1条</td><td>机电EPC框架下属子项目</td><td>粤港澳大湾区（惠州）数据产业园数据中心一期，总投资约9.057亿元，机架4572个、总功率41440kW，达产后8496 PFLOPS，2030年12月投产；节能报告2026-06-24获批</td><td>依托四栋已有建筑改造扩建，属存量建筑承载智算的路径，投资强度低于新建土建</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>汕头</td><td>2条</td><td>数据中心新建/扩容 + 绿电直连 + AIDC改造</td><td>广东移动粤东数据中心二期，总投资11.9亿元、IT功耗45.4MW，80%用电来自海上风电绿电，2026年9月全面投运；本周新增鮀浦AIDC改造项目二期通信机楼结构安全性检测及鉴定服务询比（2026-10-22，询比失败，将重新组织采购）；配套汕头国际海缆登陆站</td><td>一期投产机架7499个，二期投产后机柜超2万个；2026年4月完成全国首个城市级"词元出海"全链路商业化闭环验证</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>湛江</td><td>1条</td><td>算力+装备一体化备案</td><td>湛智算畅科AI智造及数智应用一体化项目，备案25亿元、占地10万㎡、建设周期2026年3月至2028年2月；另含广东移动湛江数据中心机电EPC框架</td><td>含AI设备与智能机器人生产线、AI算力中心及AI研究院与技能培训学校，是粤西唯一"算力+制造+人才"闭环项目</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>肇庆</td><td>1条（本周新增公告）</td><td>城域机楼绿色焕新/机架能力提升</td><td>黄岗机楼制冷系统能效优化工程集成服务询比（2026-10-21，金额未公示），属机楼绿色焕新及机架能力提升（一期）项目</td><td>以存量城域机楼制冷改造释放机架承载能力，为智算业务向地市下沉提供低成本载体</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</tbody></table>
-<div class="analysis-box" style="background:linear-gradient(135deg,#22c55e 0%,#0ea5e9 100%);color:white;">
-<h4>深度分析（按城市）</h4>
-<p style="margin:8px 0 0;">韶关以10条条目（含本周补录的浈江/韶塘园区7条工程公告）、1116亿元备案投资和169万架规划承载全省七成以上的智算建设量，是本期唯一具备"国家级集群"体量的城市，其建设逻辑是<strong>国家枢纽牌照+富余电力+低时延</strong>的组合，本周新增的舜通24.75亿元备案进一步把高新区地块的供给能力补齐到了3.3万架规模。广州则以5条占据第二位，其中黄埔3条主体条目的性质与韶关完全不同：48.39亿元的4个新基建对应的是自动驾驶、工业质检这类<strong>时延敏感型推理需求</strong>，图灵新智运的100%国产设备加液冷方案也直指推理侧而非训练侧，另2条为粤海云信创算力扩容的IT设备直接采购。</p>
-<p style="margin:8px 0 0;">深圳、惠州、汕头、湛江、肇庆五城合计仅6条，却各有一条清晰主线：深圳新增1条IDC机房配套电源设备框架中标（10月19日，金额未公示），前海的推理侧快交付路径并未改变；惠州走存量建筑改造路径降低单位机架投资；汕头在绿电与跨境推理之外，新增鮀浦AIDC改造二期结构检测询比（10月22日，询比失败后需重新采购）；湛江把算力与智能机器人产线捆绑，追求"算力+制造"的就地转化；肇庆以黄岗机楼制冷系统能效优化切入"机架能力提升"，代表城域存量机楼的焕新路径。<strong>对读者的判断是</strong>：广东算力建设已明显分层，韶关解决"算力便宜"，广深解决"响应快"，汕头与湛江解决"绿电与场景"，短期内这三类角色不会互相替代。</p>
-</div>
-</div>
+<div class="content-body"><h3>城市差异来自项目阶段而非单纯需求强弱：广州公告密度最高，韶关承载集群级新建</h3><table><tr><th>城市</th><th>项目数（近一月）</th><th>本周新增</th><th>投资额</th><th>主要环节</th><th>本周新变化</th></tr><tr><td>广州</td><td>27</td><td>5</td><td>19.82亿元</td><td>机电、总承包、设备、征地</td><td>10月29日沙溪等级认证成交候选人与广州空调框架询比失败同时出现</td></tr><tr><td>深圳</td><td>11</td><td>1</td><td>未披露金额</td><td>机电、设备</td><td>10月26日GDDYLYCGGS2026102619启动龙岗国产算力集群集成服务及配套物资采购</td></tr><tr><td>韶关</td><td>10</td><td>5</td><td>未披露金额</td><td>土建、机电、总承包</td><td>10月29日GDZBGG对应浈江园区通信管廊EPC进入中标候选人公示阶段</td></tr><tr><td>佛山</td><td>9</td><td>1</td><td>未披露金额</td><td>机电、土建、总承包</td><td>10月26日GDBXWJ20261026025采购绿色焕新项目冷冻水型专用空调</td></tr><tr><td>汕头</td><td>6</td><td>1</td><td>未披露金额</td><td>总承包</td><td>10月29日GDBXWJ20261029027重新采购鮀浦AIDC二期结构安全鉴定</td></tr><tr><td>江门</td><td>4</td><td>0</td><td>未披露金额</td><td>土建</td><td>本周无新增公开招标，GDBXWJ20261022035模块化机房建设服务仍以前期采购为主</td></tr><tr><td>茂名</td><td>3</td><td>1</td><td>未披露金额</td><td>土建</td><td>10月28日GDZBGG20261028006启动局房土建装修及机房整治施工框架</td></tr><tr><td>湛江</td><td>3</td><td>0</td><td>未披露金额</td><td>机电</td><td>本周无新增公开招标，GDDYLYCGGS2026101922遂溪IDC双路市电改造为近月重点</td></tr><tr><td>东莞</td><td>3</td><td>1</td><td>未披露金额</td><td>总承包</td><td>10月28日东莞农村商业银行IDC租用机房扩容项目进入成交候选人阶段</td></tr><tr><td>肇庆</td><td>2</td><td>1</td><td>未披露金额</td><td>机电</td><td>10月29日黄岗机楼制冷系统能效优化工程出现成交候选人</td></tr><tr><td>珠海</td><td>2</td><td>1</td><td>未披露金额</td><td>总承包</td><td>10月23日珠海通信中心IDC机房改造一期工程总承包启动招标</td></tr><tr><td>中山</td><td>1</td><td>0</td><td>未披露金额</td><td>设备</td><td>本周无新增公开招标，近一月素材未披露具体项目名或编号</td></tr><tr><td>惠州</td><td>1</td><td>0</td><td>未披露金额</td><td>总承包</td><td>本周无新增公开招标，近一月素材未披露具体项目名或编号</td></tr><tr><td>云浮</td><td>1</td><td>0</td><td>未披露金额</td><td>总承包</td><td>本周无新增公开招标，近一月素材未披露具体项目名或编号</td></tr></table><p>广州近一月有27条素材，本周新增5条，数量均居首，但公告密集主要来自广州既有数据中心多项目并行：沙溪动环升级、芳村动力设施配套、机房等级认证、信息安全认证和制冷设备采购同时存在。其公开投资额为19.82亿元，来自中国电信创新孵化（南方）基地智算中心，而不是上述改造项目的合同金额。因此，广州的特点是“存量改造密度高、公开大额项目已进入审批后期”，而非所有近期公告均对应新增机楼容量。深圳近一月11条、本周1条，本周核心是国产算力集群集成及配套物资采购，说明深圳的采购重点已从机房土建进一步转向算力集群落地。</p><p>韶关近一月10条、本周5条，数量仅次于广州，但项目权重明显更高。10月28日启动的中国移动粤港澳（韶关）数据中心二期总建筑面积9万平方米，算力规模78.6兆瓦，拟新增3.2万标准机架和3万P智算能力，计划2027年6月建成交付；同期还有浈江园区管廊EPC、监理和检测采购。佛山、珠海、汕头等城市的公告则多围绕既有AIDC或通信机楼改造，项目颗粒度小、交付要求快；广州的制冷和动环项目、佛山的绿色焕新项目、肇庆的能效优化项目均说明存量机房通过制冷、监控和供电改造释放机架能力。</p><p>城市差异主要由建设阶段、产业基础和项目权属共同决定。韶关具备国家枢纽节点和土地电力要素集聚条件，适合承载集群级新建；广州、深圳拥有成熟客户、算力服务商和存量机房，因此采购更偏向设备集成、认证和运营支撑；珠海、佛山、汕头等城市当前以特定机房改造为主；江门、湛江、茂名等城市则以局房建设、供电隐患治理和模块化机房为主。投资端除广州公开的19.82亿元外，其余城市公告未披露金额，无法比较实际投资强度。对运营商而言，城市策略应分层：韶关侧重集群供电、液冷和工程总包，广州侧重动环、等级认证和能效服务，珠海、佛山、肇庆、汕头侧重改造交付与结构安全，湛江、茂名侧重供电可靠性和局房标准化。</p></div>
 </div>
 
 <div class="section">
 <h2>8-4 按招标类型汇总</h2>
-<div class="content-body"><h4>8-4-1 招标与备案类型分布</h4>
-<p>本期24条动态中，原有11条按建设与采购类型归类为<strong>备案类4条、招标/中标类3条、开工投运类3条、统计口径类1条</strong>。需要注意"计划总投资（备案口径）"与"中标金额/框架上限（招标口径）"分属不同量纲，不可加总。本周补录的13条招投标公告按类型为：设备/工程招标及询比公告4条、中标结果与中标候选人公示6条、算力设备直接采购公示2条、询比失败公示1条，金额均未在公示环节披露，待合同公示后补齐。</p>
-<table>
-<thead><tr><th>类型</th><th>条目数</th><th>金额区间</th><th>代表项目</th><th>发包逻辑</th><th>时间维度</th></tr></thead>
-<tbody>
-<tr><td>新建备案（计划总投资口径）</td><td>4条</td><td>4亿元 — 25亿元</td><td>舜通智算中心一期24.75亿元；湛江AI智造一体化25亿元；图灵新智推理算力中心约9.5亿元；前海二期4亿元</td><td>备案是投资额度的登记，招标金额通常低于备案额；备案项目从登记到发包一般滞后3—9个月</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>机电EPC框架（含分批订单）</td><td>2条</td><td>不含税上限 9.30亿元 / 15.3559亿元</td><td>广东移动数据中心机电EPC框架服务第二批（14.13亿+14.07亿）；广东移动湛江、汕头机电EPC框架（上限9.30亿元）</td><td>以框架锁定服务商再下订单，避免每批次重复走完整招标流程；双份额分配分散交付风险</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>土建EPC总承包</td><td>1条</td><td>4.07亿元（第一候选人报价）</td><td>中国电信浈江园区2.2期A3A4工程，A3/A4两栋智算中心、总建筑面积约7.31万㎡、工期297天</td><td>土建按楼栋分期发包，设计院+央企建筑联合体是运营商土建EPC的主流组合</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>算力新基建开工/投产</td><td>2条</td><td>48.39亿元 / 11.9亿元（均为项目总投资）</td><td>广州黄埔4个算力新基建（新增智算超4万P）；汕头粤东数据中心二期（IT功耗45.4MW、机柜超2万个）</td><td>此类项目已完成立项与审批，进入实体建设阶段，招标拆分为机电包分批释放</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>集群建设统计（政府披露）</td><td>1条</td><td>签约总投资1116亿元（备案口径）</td><td>韶关数据中心集群：26个签约项目、规划超169万架、7个项目21万架已投用、上架5.1万P、签约订单3.2GW</td><td>非单项目招标，为区域供给能力的总量披露，反映集群整体建设进度</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>本周新增招投标公告（招标/公示类）</td><td>13条</td><td>金额均未公示</td><td>浈江/韶塘园区220kV变电站设备链（GIS中标+电容器招标）、浈江土建A3-A4/A8-A11全过程跟踪审计、韶塘定制机房SHU空调、移动240V高压直流设备候选人、粤海云信创算力扩容直接采购×2、深圳IDC配套电源框架、鮀浦AIDC改造检测（询比失败）、黄岗机楼制冷能效优化</td><td>公告口径覆盖招标、中标候选人、中标结果、单一来源与询比失败五类环节，金额需待合同公示补齐</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>电力与网络配套（在建）</td><td>背景项</td><td>未单独公示招标价</td><td>深广韶数据大通道（空芯光纤）开工；韶关起步区电网配套持续投入</td><td>外电与传输通道类工程多由电网企业与运营商单独组织，不在常规政采公告序列</td><td><span class="time-dim">持续</span></td></tr>
-</tbody></table>
-<div class="analysis-box" style="background:linear-gradient(135deg,#f59e0b 0%,#ef4444 100%);color:white;">
-<h4>深度分析（按招标类型）</h4>
-<p style="margin:8px 0 0;">本期类型分布透露出一个明确信号：<strong>广东智算建设的资金投放重心正在从土建向机电迁移</strong>。备案类4条合计名义投资超63亿元，但真正进入发包阶段的是机电EPC框架——单是广东移动一个框架的不含税上限就达15.3559亿元，覆盖广州、惠州两地合计11962个机架、约11.9万kW的IT功率，其体量已超过浈江园区2.2期土建EPC（4.07亿元）的三倍。</p>
-<p style="margin:8px 0 0;">原因在于高功率AI机房的成本结构已经改变：40kW—80kW高密机柜使供配电、冷源、液冷CDU与后备电源成为决定成败的核心环节，机电配套投资在单个项目中往往超过土建本身。<strong>对读者的判断是</strong>——跟踪广东智算投资景气度，与其盯土建招标数量，不如盯机电EPC框架的中标金额与份额分配，那才是资金真正落地的刻度。</p>
-</div>
-</div>
+<div class="content-body"><h3>公开金额不足以计算五类标的占比，采购结构显示设备与总承包更接近运营商可直接获取的增量市场</h3><p>按现有定稿数据，近一月唯一明确披露的建设投资额为19.82亿元，对应广州中国电信创新孵化（南方）基地智算中心节能审查；该金额属于整体项目投资，而不是土建、机电、监理、设计或设备采购中的单一合同金额。其余招标、候选人公示和中标结果公告均未披露预算或中标金额，因此五类标的的金额占比不能据公告条数计算。若直接用公告数量代替金额占比，会把多次结果公示、重新采购和同一项目的不同采购包重复计权，结论将失真。</p><p>从可确认的结构信号看，本周土建3条、机电5条、总承包6条、设备1条，另有信息安全管理认证1条。土建方面，茂名局房整治、浈江通信管廊EPC及配套监理审计构成近期主线，需求主要来自韶关集群新建和地市局房改造。土建金额没有公开，但建设周期通常与总建筑面积、地下管廊长度、施工范围和结构加固要求相关；韶关二期9万平方米建筑面积、3.2万标准机架和78.6兆瓦规模决定其将带动更长的机电与设备采购链。</p><p>机电5条是本周最清晰的可获取方向。沙溪动环数据升级、佛山冷冻水专用空调、广州空调控制柜以及广州制冷框架询比失败，构成制冷、监控和控制设备的需求组合。浈江及韶塘园区的220kV变压器、GIS、10kV开关柜和并联电容器采购，则说明供电设备仍是新园区的主要机电支出。设备采购本周有深圳龙岗国产算力集群集成服务及配套物资框架，但数量仅1条，现阶段更接近算力集群集成采购的信号，尚不足以判断大规模设备集中采购已经启动。</p><p>监理和设计未形成独立金额样本。浈江通信管廊监理、韶关数据中心5第三方检测和土建全过程审计均附着于具体工程包，公开标题不能拆出独立合同金额；设计信息也主要嵌入机电EPC或总承包标段。由此，运营商最容易获取的不是新建园区全部资本开支，而是四类可拆分、可复用的订单：存量机房制冷与动环改造、供配电设备及运维、国产算力集群集成服务、检测认证与安全改造。土建总包更依赖属地施工资源、资质和履约案例，适合与本地建设伙伴联合获取；监理、检测和认证适合以区域框架覆盖；设备和集成则应围绕韶关二期液冷及电力方舱、广州和佛山存量能效改造形成组合方案。</p><p>趋势上，机电需求从单点设备采购转向系统改造与能效提升，总承包需求从新建房体扩展到既有机房全生命周期改造，设备需求开始与国产算力集群形成配套。金额占比暂时不可得，不妨碍采购部门调整策略：在项目立项阶段要求区域团队补录预算和合同额，在中标后补录中标金额，并把制冷、供配电、动环、服务器集成、等级认证拆分到统一口径。后续周报只有形成同口径金额底表，才能判断不同环节的真实价值量和运营商收入贡献；当前更可靠的判断依据是公告链条连续性，而不是未经披露的金额估算。</p></div>
 </div>
 
 <div class="section">
 <h2>8-5 征地、土建、机电工程分类动态</h2>
-<div class="content-body"><h4>8-5-1 征地与用地动态</h4>
-<p>本期唯一的征地用地增量来自韶关高新区。<strong>广东舜通大数据</strong>申报的"粤港澳大湾区电算协同一体化智算中心算力基础设施项目（一期）"于2026年10月15日备案申报并当日复核通过，<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>。项目地块为韶关市韶关高新区ZC0201A-28号地块（GSY，犁市镇狮塘路东侧），总占地64220.0平方米、建筑面积112571.8平方米，IT负荷82.5MW，对应3.3万个标准机架，计划总投资24.75亿元（备案口径），项目起止年限自2026年10月1日起。</p>
-<table>
-<thead><tr><th>城市/地块</th><th>用地面积</th><th>建筑面积</th><th>IT负荷/机架</th><th>计划总投资（备案口径）</th><th>用地性质与批复状态</th><th>时间维度</th></tr></thead>
-<tbody>
-<tr><td>韶关高新区 ZC0201A-28号地块（犁市镇狮塘路东侧）</td><td>64220 ㎡</td><td>112571.8 ㎡</td><td>82.5MW / 3.3万标准机架</td><td>24.75 亿元</td><td>2026-10-15备案申报并当日复核通过（状态：办结），配套室外综合管廊管沟、园区道路场地、绿化景观及运维配套用房</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>韶关浈江韶塘片区、武江龙归片区（扩区建设）</td><td>新增约1万亩发展空间</td><td>—</td><td>—</td><td>未单独公示</td><td>起步区已规划6277亩，另同步推进两个片区扩区建设，为后续项目预留载体</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>广州黄埔区中新知识城九龙工业园区</td><td>—</td><td>3栋数据中心机楼</td><td>77386 kW / 7390机架，达产28224 PFLOPS</td><td>20.3 亿元（项目总投资）</td><td>2026-06-26获广东省能源局节能审查意见，用地已落实</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>惠东县白花镇 粤港澳大湾区（惠州）数据产业园</td><td>—</td><td>依托四栋已有建筑</td><td>41440 kW / 4572机架，达产8496 PFLOPS</td><td>约 9.057 亿元（项目总投资）</td><td>2026-06-24节能报告获批复，走存量建筑改造路径，不新增建设用地</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>湛江市霞山区</td><td>10 万 ㎡</td><td>含AI算力中心、机器人生产线、AI研究院</td><td>—</td><td>25 亿元（备案口径）</td><td>建设周期2026年3月至2028年2月，属备案在建的产业综合体</td><td><span class="time-dim">持续</span></td></tr>
-</tbody></table>
-<div class="analysis-box" style="background:linear-gradient(135deg,#0f172a 0%,#334155 100%);color:white;">
-<h4>深度分析（征地/用地）</h4>
-<p style="margin:8px 0 0;">本期用地端最值得关注的不是面积，而是<strong>单位用地的功率密度发生了跃迁</strong>。舜通项目总占地64220㎡、建筑面积112571.8㎡，容积率约1.75，属于典型的高密度数据中心用地；其82.5MW的IT负荷对应3.3万标准机架，单瓦备案投资约3.0万元（备案口径24.75亿元/82.5MW）。这条数据说明韶关高新区地块的定价与配套已按智算而非传统IDC标准设计。</p>
-<p style="margin:8px 0 0;">另一条线索是惠州的路径差异：惠州一期依托四栋已有建筑建设4572个机架，新增建设用地为零，属于典型的"存量建筑承载智算"，投资强度约1.98万元/kW但受制于既有结构与层高限制，短期内无法承接超节点级超高密机柜。<strong>对读者的判断是</strong>——未来12个月广东新增智算用地的边际供应主要来自韶关两片区扩区，惠深的存量改造只能填补中小规模推理需求。</p>
-</div>
-<h4>8-5-2 土建工程动态</h4>
-<p>土建侧本期唯一有明确招标价格的是中国电信粤港澳大湾区一体化数据中心（浈江园区）2.2期A3A4工程，<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>。该项目于2026年9月17日公示中标候选人，第一候选人为广东省电信规划设计院与中建一局组成的联合体，报价<strong>4.07亿元</strong>，负责建设A3、A4两栋智算中心，总建筑面积约7.31万平方米，工期297天。</p>
-<table>
-<thead><tr><th>项目</th><th>建设内容</th><th>建筑面积</th><th>工期</th><th>第一候选人/报价</th><th>时间维度</th></tr></thead>
-<tbody>
-<tr><td>中国电信浈江园区2.2期A3A4工程</td><td>A3、A4两栋智算中心土建EPC总承包，含动力中心配套</td><td>约7.31万㎡</td><td>297天</td><td>广东省电信规划设计院+中建一局联合体 / 4.07亿元</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>广州开发区黄埔区4个算力新基建</td><td>中国移动粤港澳（广州）数据中心、中国联通知识城机房数据中心、云下科技汇云数据中心、连云大数据二期</td><td>未公示</td><td>未公示</td><td>未公示（2026-04集体开工）</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>粤东数据中心二期</td><td>数据中心机房扩容，2026年9月全面投运</td><td>未公示</td><td>未公示</td><td>广东移动汕头分公司 / 总投资11.9亿元</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>舜通智算中心一期（1.1期）</td><td>算力中心、动力中心、运维楼及配套设施；1.1.1期14324.8㎡、1.1.2期约29162㎡</td><td>1.1期约4.3万㎡</td><td>未公示</td><td>未公示（2026-10-15备案）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-</tbody></table>
-<div class="analysis-box" style="background:linear-gradient(135deg,#8b5cf6 0%,#0ea5e9 100%);color:white;">
-<h4>深度分析（土建工程）</h4>
-<p style="margin:8px 0 0;">浈江园区2.2期A3A4工程的4.07亿元报价，对应约7.31万㎡建筑面积，折合<strong>每平方米土建造价约5570元</strong>，工期297天。这个单价低于数据中心常规土建造价区间，原因是A3、A4属于智算中心机楼主体，机电与冷源部分由另一批机电EPC包另行发包，土建包只承担结构与建筑本体。</p>
-<p style="margin:8px 0 0;">从工程组织看，"土建与机电分开发包"仍是运营商的主流做法，但这一模式正面临挑战：本期广东移动机电EPC框架把设计、施工图深化、设备深化与现场驻点技术支撑整体打包，实质是把设计责任前移到机电包内部，正是为了缓解土建与机电两张皮导致的高密机房返工。<strong>对读者的判断是</strong>——未来广东新增智算项目中，纯土建包的绝对金额会继续萎缩，投资者应把跟踪重心从EPC总包条数转向单个项目的机电投资强度。</p>
-</div>
-<h4>8-5-3 机电工程动态</h4>
-<p>机电工程是本期投资强度最高的环节。广东移动数据中心机电工程EPC框架服务第二批于2026年9月20日公示，<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>：中兴通讯与华信咨询设计研究院联合体获<strong>64.5%份额、14.13亿元</strong>，华为与广东省电信规划设计院联合体获<strong>35.5%份额、14.07亿元</strong>，该框架不含税上限15.3559亿元，服务期自合同签订之日起至2028年12月31日。本期经监控台补录的公告进一步显示，机电配套正沿两条线推进：一是浈江/韶塘两园区自建220千伏变电站设备链（GIS组合电器公示中标、10kV并联电容器装置相继招标），二是韶塘园区"某客户定制机房"第一批机电项目的SHU空调设备公示中标，定制机房模式意味着机电包正随客户订单分批释放。</p>
-<table>
-<thead><tr><th>框架/项目</th><th>覆盖范围</th><th>IT功率/规模</th><th>金额（中标/上限）</th><th>时间维度</th></tr></thead>
-<tbody>
-<tr><td>广东移动数据中心机电EPC框架（第二批）</td><td>广州数据中心二期 + 惠州数据中心一期的电气工程、通风空调、机房电源、智能化系统、机柜配套、柴油发电机组、建筑配套，含施工图设计、设备系统深化设计与现场驻点技术支撑</td><td>广州二期7390机架/77386kW，惠州一期4572机架/41440kW，合计11962机架/约11.9万kW</td><td>中标 14.13亿元（64.5%）+ 14.07亿元（35.5%）；框架不含税上限 15.3559亿元</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>广东移动湛江、汕头数据中心机电EPC框架</td><td>粤西与粤东两地数据中心机电工程框架集采</td><td>未公示</td><td>不含税上限 9.30亿元</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>中国移动粤港澳（广州）通信机楼二期工程（框架下子项目）</td><td>3栋数据中心机楼机电建设，液冷散热、异构计算、算电协同技术路线</td><td>77386 kW / 达产28224 PFLOPS</td><td>项目总投资 20.3 亿元；2027年12月投产</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>粤港澳大湾区（惠州）数据产业园一期（框架下子项目）</td><td>依托四栋已有建筑的智算机房机电配套</td><td>41440 kW / 达产8496 PFLOPS</td><td>项目总投资 约9.057 亿元；2030年12月投产</td><td><span class="time-dim">持续</span></td></tr>
-</tbody></table>
-<div class="analysis-box" style="background:linear-gradient(135deg,#22c55e 0%,#f59e0b 100%);color:white;">
-<h4>深度分析（机电工程）</h4>
-<p style="margin:8px 0 0;">用框架上限15.3559亿元除以11962个机架，可得<strong>每机架机电投资约12.8万元</strong>，每千瓦IT功率约1290元。这是本期最有参考价值的一个数——它意味着在高密液冷机柜成为标配之后，机电工程的单位造价已经从传统的每机架数万元，抬升到十余万元量级。</p>
-<p style="margin:8px 0 0;">双份额分配（64.5% / 35.5%）同样值得关注。中兴与华信咨询设计研究院联合体拿到接近三分之二的份额，反映设计院与主设备商的组合在评标中占据主导；而华为与广东省电信规划设计院联合体拿到35.5%，说明液冷技术路线本身已成为投标门槛。<strong>对读者的判断是</strong>——广东机电包未来的竞争不再是单纯的施工能力比拼，而是"设计院出方案 + 头部厂商供设备 + 联合体总协调"的全链路能力比拼，纯土建承包商已基本退出这一环节。</p>
-</div>
-</div>
+<div class="content-body"><h3>五环节显示建设重心已由“等待审批”转向“土建施工、机电改造与算力集成并行推进”</h3><h3>征地/前期：本周无新增公开招标，19.82亿元项目已通过节能审查但尚未进入开工</h3><p>本周征地及前期环节没有新增公开招标。近期最重要的前期信号仍是10月16日广东省能源局对中国电信创新孵化（南方）基地智算中心节能报告出具审查意见，文号为粤能许可〔2026〕85号。项目位于广州市黄埔区中新知识城ZSCN-D4-1地块，总投资19.82亿元，总功率71132 kW，折合28452.8个标准机架，算力规模26931.904 PFLOPS，PUE为1.198，计划2028年6月投产。该事项代表项目完成节能审查这一关键前期节点，但素材没有施工许可、开工或设备招标信息，不能将其表述为已经开工。</p><p>前期工作的传导在于设备规格必须尽早冻结。19.82亿元投资、28452.8个标准机架和71132 kW总功率意味着后续液冷、供配电、动环和网络接口具有较高一致性；若在土建招标后才发现容量或散热方式不匹配，将直接影响2028年6月投产目标。省公司应把节能审查参数与自身国产算力集群需求逐项映射，重点核对单机柜功率、液冷比例、备用供配电架构和算力网络接口。近期没有新的征地公告，也意味着本周无需重新评估土地储备增量，资源应转向已通过审查项目和浈江、韶塘园区的施工兑现。</p><h3>土建：韶关管廊与大型新建进入施工阶段，地市局房整治同步释放小规模需求</h3><p>本周土建相关新增3条，近一月则形成浈江园区通信管廊EPC、韶关数据中心管道施工、佛山三山AIDC装修消防、江门模块化机房和茂名局房整治等连续采购。10月29日，浈江园区通信管廊工程EPC总承包进入中标候选人公示；其监理服务于10月23日发布中标结果，说明施工项目的招采已进入交付阶段。10月28日，GDZBGG20261028006启动茂名局房土建装修及机房整治施工框架，计划服务2026—2027年度工程。10月23日，珠海通信中心IDC机房改造一期工程总承包启动招标，进一步表明存量机房土建仍持续释放。</p><p>韶关中国移动数据中心二期于10月28日启动建设，总建筑面积9万平方米，拟新增3.2万标准机架、3万P智算能力，计划2027年6月建成交付。尽管该素材未披露用地面积、具体投资额和机电容量，但9万平方米建筑面积与3.2万标准机架给出了土建工作量的量级。施工组织方面，项目采用液冷单元、电力方舱等机电模块化体系以及钢结构装配式建设，意味着土建与机电不是完全串行，接口预埋将直接影响后续设备进场。对运营商而言，韶关二期的机会窗口在土建启动后的机电深化和设备接口锁定，而不是等待厂房全部完工后再参与。</p><h3>机电：本周5条新增，存量制冷改造与新建高压供电共同构成主需求</h3><p>本周机电相关新增5条，是新增项目中最集中的环节。广州沙溪IDC于10月27日启动2026—2029年动环数据升级改造，GDBXWJ20261027012截止2026年10月31日；广州芳村等机楼于10月28日采购空调控制柜，GDBXWJ20261028027截止2026年11月2日；佛山于10月26日采购绿色焕新及信息大厦、季华空调系统改造所需冷冻水型专用空调，GDBXWJ20261026025截止2026年10月29日；肇庆黄岗机楼制冷系统能效优化工程于10月29日出现成交候选人；广州同类冷冻水空调框架于10月29日发布询比失败公示。需求从制冷设备延伸到控制柜和动环数据，存量机房改造已成为近期机电采购的主要形态。</p><p>新建园区的机电配套仍处密集采购期。10月12日，浈江园区220kV变压器中标结果发布；10月16日，220kV GIS和10kV移开式开关柜中标结果发布；10月20日，韶塘及浈江园区10kV框架式并联电容器分别启动招标，其中浈江项目为重新招标；10月19日，深圳电信IDC机房配套电源设备框架采购结果发布；10月19日，湛江遂溪IDC双路市电隐患改造进入高可靠性供电费采购。素材没有给出本期新增制冷容量、UPS容量或机柜功率，因此不能计算具体MW或kVA增量，但已明确出现220kV、10kV和240V设备采购。佛山10月23日投产的220千伏青云变电站使高明区220千伏变电容量增长47.46%，为区域智算负载增长提供了供电支撑。</p><h3>总承包：本周6条新增，改造、认证和检测被纳入综合交付</h3><p>本周总承包相关新增6条，数量最多。近月连续信号包括粤海集团云信创算力资源扩容、佛山三山AIDC主机房工程及屋面防水、东莞农村商业银行IDC租用机房扩容、广州沙溪等数据中心等级认证、汕头鮀浦AIDC结构鉴定、韶关消防施工及曲江监控机房升级。总承包需求已经从单纯房体施工延伸至算力资源集成、机房改造、消防和认证。深圳龙岗国产算力集群集成服务及配套物资框架虽然属于设备采购，但与上述总承包共同说明客户采购正转向可验收的综合交付。</p><p>该环节的关键风险不是工程量不足，而是多专业接口责任不清。总承包项目通常同时涉及土建、机电、消防、监控和认证，如果界面划分不完整，后续变更容易在施工与设备之间传导。汕头鮀浦AIDC结构安全鉴定于10月29日按GDBXWJ20261029027重新采购，说明既有建筑改造必须先完成结构安全判断；广州冷冻水空调框架询比失败，则反映供应响应不足可能造成采购流程回退。省公司应在投标或合作阶段前置核对建筑结构、制冷承载力、供电冗余、动环采集点及消防验收条件，并推动总包方提供可追溯的设备清单和接口矩阵。</p><h3>设备：本周新增1条，国产算力集群配套采购启动但尚未形成集中放量</h3><p>本周设备环节新增1条，即10月26日深圳电信龙岗分公司国产算力集群集成服务及配套物资框架直接采购公示，编号GDDYLYCGGS2026102619，截止2026年10月29日。近一月还出现粤海集团云信创算力资源扩容的华为等设备采购和联想C86服务器采购，但相关公告以算力资源扩容整体项目为主，未披露设备数量、服务器单价、国产算力芯片型号或合同金额。因此，当前只能确认设备需求已随信创扩容和国产集群落地释放，不能判断设备金额占比或采购规模。</p><p>设备环节与前序建设的衔接正在加强。深圳龙岗采购说明国产算力集群已进入集成服务采购阶段；韶关二期拟新增3万P智算能力，并采用液冷单元、电力方舱和风液融合技术，为后续服务器、液冷机柜、供配电及网络设备采购提供明确需求锚点；广州创新孵化（南方）基地规划26931.904 PFLOPS算力、28452.8个标准机架和71132 kW总功率，则提供更大的中长期设备空间。当前设备采购的主要约束不是需求不足，而是Q4公开招标数量仍少。运营商应在韶关二期启动后立即组织液冷、电力和算力网络联合方案验证，并与深圳国产算力集群项目形成设备与集成能力复用，避免韶关建设启动后再从零验证供应商。</p></div>
 </div>
 
 <div class="section">
 <h2>8-6 本周/本月建设深度分析专题</h2>
-<div class="content-body"><h4>8-6-1 专题：广东"训推分层"格局下的算力经济学</h4>
-<p>本期最值得花时间拆解的，不是新增了哪一栋楼，而是广东算力供给正在形成的<strong>三层价格带</strong>。第一层是韶关，代表训练与批量推理的规模成本；第二层是广州黄埔与深圳前海，代表时延敏感型推理的场景溢价；第三层是汕头，代表以绿电与跨境链路为支点的出口型推理。三层之间不是简单的地域划分，而是<strong>三种截然不同的单位算力成本结构</strong>。</p>
-<p>先看第一层。据公开测算，韶关电价全省最低，每度电比珠三角城市低约0.11元，叠加算力券后算力成本与贵州等西部集群持平，经中国信通院测算综合成本仅为大湾区的<strong>60%左右</strong>。这条价差是韶关"6个万卡集群、上架5.1万P"的直接原因——训练任务对时延不敏感、对成本极其敏感，因此天然向韶关集中。</p>
-<h4>8-6-2 第二层：为什么推理必须留在广深</h4>
-<p>但训练业务一旦进入推理阶段，时延约束会立刻变成硬约束。智能驾驶、工业质检、远程医疗这类业务无法容忍毫秒级的额外往返，这正是广州黄埔把48.39亿元投向4个算力新基建的原因。黄埔区现有智能算力供给已超15000P，综合算力居全市各区首位，"十五五"期间力争新增超<strong>5万P</strong>；4个项目中，中国移动粤港澳（广州）数据中心是广州首个单体"万P"级新型智算中心，直接对应6G研发与工业元宇宙需求。</p>
-<p>这层的价格结构与韶关截然不同。推理算力的成本中，机房租赁与带宽占比高于电费，且客户愿意为低时延与本地化服务支付溢价。图灵新智运约9.5亿元、规划不低于4000 PFlops@FP16 的推理算力中心，占地仅约9000㎡，采用100%国产设备加液冷，正是为这一层定制的产物。</p>
-<h4>8-6-3 第三层：汕头的"词元经济学"</h4>
-<p>第三层是本期最容易被忽略、但单位算力价值最高的一层。汕头2026年4月完成全国首个城市级"词元出海"全链路商业化闭环验证，到9月词元日调用量已超1000亿，综合价格比海外主流算力平台低30%至50%。支撑这一模式的是三件事：一是汕头国际海缆登陆站出口带宽占中国大陆一半以上，到新加坡时延低至32.7毫秒；二是粤东海上风电已并网120万千瓦，粤东数据中心二期80%用电来自海上风电绿电；三是"来数加工"政策提供了合规通道。</p>
-<p>算一笔账：国内一度电成本约0.5元，经算力加工成词元出口后价值可达11元，实现约22倍跃升；若以海上风电价格并部署热门闭源模型，价值跃升可超60倍。对比韶关卖的是"低价的算力小时"，汕头卖的是"带合规出口属性的词元"，两者的毛利结构完全不同。</p>
-<h4>8-6-4 三层格局的脆弱点：电与网是同一枚硬币</h4>
-<p>三层格局看似稳固，但它们共用同一组底层约束——电与网。韶关每年富余电量约100亿千瓦时、新能源已开发装机513万千瓦，到广深单向时延1.3ms与1.66ms；汕头依赖120万千瓦已并网海风与海缆登陆站；广州黄埔则必须接受更高电价，并把PUE压到更低水平以求对冲。</p>
-<p>这带来三个脆弱点。<strong>其一，韶关的价差优势会随时间收敛。</strong>韶关起步区电网配套自2022年以来已投入7.4亿元、建成3座110kV及以上变电站、供电容量达840兆伏安，当集群总需求逼近电网承载上限，边际供电成本将快速上升，"0.11元价差"不可能长期维持。</p>
-<p><strong>其二，深广韶数据大通道的时延增益存在不确定性。</strong>该项目2026年6月启动，建成后到广深时延预计再降约30%，延伸至香港将军澳、预计2027年一季度投产。若空芯光纤试验线路的实测增益达到预期，韶关的推理承接能力将显著增强，训推边界会向韶关侧移动；若实测不及预期，推理业务仍会滞留在广深。</p>
-<p><strong>其三，订单与上架之间存在时间差。</strong>韶关已签约入驻26个项目、总投资1116亿元（备案口径）、规划超169万架，但在韶企业签约订单3.2GW，对应的是签约而非上架；已建成投用的7个项目、21万架对应上架智能算力5.1万P。签约订单与已上架规模之间的缺口，正是当前韶关从"建设期"转入"运营期"最需要验证的部分。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></p>
-<h4>8-6-5 对读者的四条跟踪建议</h4>
-<p><strong>建议一：把跟踪刻度从"机架数"换成"单位机电造价"。</strong>本期广东移动机电EPC框架上限15.3559亿元对应11962个机架，折合每机架约12.8万元、每千瓦IT功率约1290元。这个数比"新增多少机架"更早反映高密液冷时代的建设成本变化。</p>
-<p><strong>建议二：区分"备案投资额"与"中标金额"，建立两个独立台账。</strong>本期24条信息中，原有11条里备案口径名义投资超63亿元（舜通24.75亿、湛江25亿、图灵新智9.5亿、前海前期4亿），而招标口径可确认的仅4.07亿元（土建EPC）与约28.2亿元（机电EPC双份额）；本周补录的13条公告金额均未在公示环节披露，台账中应单列"待补齐"。二者量纲不同，混用会严重高估当期实际发包规模。</p>
-<p><strong>建议三：盯住上架率与签约订单的收敛速度。</strong>韶关21万架已投用对应5.1万P上架、签约订单3.2GW。下一期若上报数据中"上架P"增速明显快于"签约GW"增速，说明需求正在兑现；反之则说明存在订单落地障碍。这一比值是判断广东智算景气度是否虚高的最佳单一指标。</p>
-<p><strong>建议四：关注推理侧国产化项目的落地节奏。</strong>图灵新智运100%国产算力设备加液冷、广州移动算力新基建采用液冷散热与异构计算，都指向同一件事：推理侧对国产算力卡的容忍度已经打开。广州全市已备案195款大模型中深圳64款、广州114款，其中相当比例的推理需求最终会落在国产卡池子里，这对国产算力卡的产能消化是一条现实出路。</p>
-<div class="analysis-box" style="background:linear-gradient(135deg,#764ba2 0%,#667eea 100%);color:white;">
-<h4>专题小结</h4>
-<p style="margin:8px 0 0;">广东智算建设在本期完成了一次口径上的转折：从"建了多少机架"转向"多少算力被真正上架、多少订单被真正兑现"。韶关用6个万卡集群与5.1万P上架承接了规模，广州黄埔用48.39亿元的四个新基建承接了时延，汕头用11.9亿元的粤东数据中心二期承接了跨境词元。三者不是竞争关系，而是把同一份大湾区需求切成了成本敏感、时延敏感与合规敏感三类。</p>
-<p style="margin:8px 0 0;">对产业参与者而言，这意味着广东市场已经不存在单一的"广东方案"。做训练的客户看韶关的电价与交付速度；做推理的客户看广深的时延与国产化适配；做出口的客户看汕头的绿电与跨境合规。<strong>能够同时把这三类客户装进自己产品线的厂商，才有资格分享广东这一轮1116亿元备案投资的兑现红利。</strong></p>
-</div>
-</div>
+<div class="content-body"><div class="deep-event"><div class="deep-event-title">专题：本周最值得跟踪的广东项目</div><h4>项目概况</h4><p>本专题选择中国电信创新孵化（南方）基地园区智算中心算力基础设施项目。广东省能源局于2026年10月16日发布节能审查意见，文件号为粤能许可〔2026〕85号。项目建设单位为中国电信股份有限公司广东分公司，项目位于广州市黄埔区中新知识城ZSCN-D4-1地块，总投资19.82亿元，总功率71132 kW，折合28452.8个标准机架，算力规模26931.904 PFLOPS（FP16），设计PUE为1.198，计划于2028年6月投产。该项目已经不是一般机房改造，而是广州东部面向智算集群的大型新建基础设施。当前公开状态为通过节能审查，属于开工前审批，不代表土建已开工或设备已采购。其核心价值在于，审批文件同时给出了投资、机架、功率、算力和能效指标，可以作为广东智算中心投资强度、供电规模与液冷技术路线比较的基准项目。</p><h4>关键数据</h4><p>项目总投资19.82亿元，建设规模为28452.8个标准机架，总功率71132 kW，算力规模26931.904 PFLOPS（FP16），PUE为1.198，计划投产时间为2028年6月。投资额与规模数据来源于广东省能源局《广东省能源局关于中国电信创新孵化（南方）基地园区智算中心算力基础设施项目节能报告的审查意见》，发布日期为2026年10月16日，文号粤能许可〔2026〕85号。由于投资额属于整体项目口径，不能直接视为服务器、供配电或制冷设备的单项采购预算；71132 kW和28452.8个标准机架则可用于后续与韶关二期78.6兆瓦、3.2万标准机架进行规模对照，但两者建设主体、交付时间和设计口径不同，不能直接推导单位投资。</p><h4>深度分析</h4><p>第一，审批通过意味着项目进入设备选型窗口，而不是收入兑现窗口。节能审查已经把总功率和PUE约束前置，后续设备选型必须同时满足算力负荷、散热和供电效率要求。若在后续招标中才发现单机柜功率、液冷比例或备用电源架构与采购需求不一致，项目可能面临设计返工。19.82亿元总投资、28452.8个标准机架和26931.904 PFLOPS算力之间，需要通过明确的PUE口径、功率边界和机架负载假设建立对应关系。省公司应在土建和机电招标前完成需求复核，避免只依据总机架数配置低功率存量方案。</p><p>第二，PUE为1.198使该项目成为广东智算中心能效竞争的重要参照。随着机架功率提高，传统风冷方案的制冷冗余和供配电损耗更容易放大，PUE指标会直接影响运营成本和客户上架意愿。广州已有沙溪动环升级、芳村空调控制柜、佛山及肇庆制冷改造需求，说明珠三角存量机房正在围绕能效和可观测性释放改造订单。该新建项目与存量改造可形成两类机会：一类是面向韶关和广州新建项目的液冷、供配电和算力网络方案；另一类是面向佛山、肇庆等存量机楼的能效优化、动环数据采集和制冷控制服务。两者产品不同，但共同要求供应商证明运行效率、故障切换和扩容能力。</p><p>第三，从运营商经营角度，价值不只在设备销售，还在算力网络接入、运维和客户承载。26931.904 PFLOPS算力达到集群级规模，项目投产后对低时延专线、算力调度、容灾和安全运营均会形成配套需求。10月16日的审查意见明确PUE为1.198，说明项目从建设阶段已经把能效作为约束，而非投产后优化项。省公司若仅参与服务器或机电采购，难以获得后续算力运营关系；若在前期同步参与液冷、供配电、网络和运维接口设计，则可以在2028年6月投产前形成对客户选址、专线带宽和算力服务的联合方案。</p><h4>对省公司的建议</h4><p>建议广东公司建立该项目专项跟踪表，并在10月28日韶关数据中心二期启动后同步对比两座项目的机架、功率、液冷和交付要求。近期动作包括：在沙溪动环改造采购于10月31日截止、佛山冷冻水空调采购于10月29日截止之前，汇总现有存量机房的制冷和动环接口，形成可用于广州新项目的标准产品；针对韶关二期3.2万标准机架、3万P智算能力，提前锁定液冷、电力方舱和算力网络联合验证；按10月16日节能审查参数逐项核对28452.8个标准机架、71132 kW总功率和PUE 1.198的设计边界，待土建或机电招标公告发布后立即组织接口比对。省公司还应将项目与深圳龙岗国产算力集群采购GDDYLYCGGS2026102619联动，把国产硬件适配、集成测试和运维认证纳入同一交付方案。</p></div></div>
 </div>
 
-<div class="data-source">
-<p>📌 <strong>数据来源：</strong></p>
-<ul>
-<li>广东省人民政府门户网站 gz.gov.cn（广州首批4个算力新基建落子黄埔，2026-10检索）</li>
-<li>南方日报《智算之城构筑 算产协同新高地》2026-10-17（韶关6个万卡集群、26个项目、1116亿元）</li>
-<li>21世纪经济报道《广东AI发展敢冲又合规！已备案195款大模型位居全国前列》2026-10-17</li>
-<li>广东省投资项目在线审批监管平台（经21世纪经济报道/观点网转载的备案信息，2026-10-15）</li>
-<li>中国电信阳光采购网 caigou.chinatelecom.com.cn（经通福智会tfidea.cn招标监控系统聚合检索，2026-10；2026-10-23重新核验，补录本期浈江/韶塘园区变电站、土建审计、定制机房机电等公告）</li>
-<li>中国移动采购与招标网 b2b.10086.cn（广东移动机电EPC框架服务第二批中标公示，2026-09-20；2026-10-23检索新增240V高压直流设备中标候选人公示，2026-10-19）</li>
-<li>中国政府采购网 ccgp.gov.cn / 全国公共资源交易平台 ggzy.gov.cn（EPC与机电类项目检索）</li>
-<li>广东省发展改革委、省能源局节能审查意见公告（广州二期2026-06-26、惠州一期2026-06-24）</li>
-<li>广州市人民政府办公厅 穗府办函〔2026〕10号《广州市促进人工智能产业高质量发展实施方案》</li>
-<li>韶关市人民政府门户网 / 韶关市发改局公开披露数据（集群承载力、上架算力、用电量）</li>
-<li>深圳市人民政府门户网 sz.gov.cn / 广东省人民政府侨务办公室 qb.gd.gov.cn</li>
-<li>IDC与浪潮信息《2026年中国人工智能计算力发展评估报告》（2026-09发布）</li>
-</ul>
+<div class="section refs-section">
+<h2>数据来源与参考</h2>
+<div class="refs-body">
+<div class="refs-note">按正文引用顺序编号，共 12 条，其中 12 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<ol class="refs-list">
+<li class="ref-item"><span class="ref-org">广东省能源局</span><a class="ref-title" href="https://drc.gd.gov.cn/xmgg/content/post_4967642.html" target="_blank" rel="noopener">创新孵化南方基地智算中心节能审查意见</a><span class="ref-date">2026-10-16</span><span class="ref-badge b-policy">政策文件</span><p class="ref-desc">粤能许可〔2026〕85号：项目总投资19.82亿元，规划28452.8个标准机架、26931.904 PFLOPS算力，计划2028年6月投产。</p></li>
+<li class="ref-item"><span class="ref-org">韶关发布</span><a class="ref-title" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuvct9388221.shtml" target="_blank" rel="noopener">中国移动韶关数据中心二期项目启动</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">韶关发布10月28日消息，项目建筑面积9万平方米，拟新增3.2万标准机架、3万P智算能力，计划2027年6月建成交付。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191706422156945&amp;type=1&amp;docTypeCode=TenderAnnouncement&amp;securityViewCode=5cd3bc3c2200357eca54da9f808cb590" target="_blank" rel="noopener">茂名局房土建及机房整治施工框架招标</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-28 招标公告 GDZBGG20261028006：采购2026—2027年度茂名分公司局房土建装修及机房整治工程施工服务框架。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191707237958694&amp;type=3&amp;docTypeCode=CompareSelect&amp;securityViewCode=f0f4f93c7ad5d40dafcd51bd643dc8b3" target="_blank" rel="noopener">广州沙溪IDC动环数据升级改造比选</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-27 比选公告 GDBXWJ20261027012：实施2026—2029年沙溪<a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a>动环数据升级改造，截止2026-10-31。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191707439287953&amp;type=3&amp;docTypeCode=CompareSelect&amp;securityViewCode=6d4af9586f72d26181f50c4a01ebb8c6" target="_blank" rel="noopener">广州芳村等机楼空调控制柜采购</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-28 比选公告 GDBXWJ20261028027：采购2025年广州芳村等机楼动力设施搬迁及花地机楼等配套项目空调控制柜。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191707080607112&amp;type=3&amp;docTypeCode=CompareSelect&amp;securityViewCode=2cf892e47af667e54e56dcf1cea98c53" target="_blank" rel="noopener">佛山机房冷冻水专用空调采购</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-26 比选公告 GDBXWJ20261026025：采购佛山分公司绿色焕新及信息大厦、季华空调系统改造所需冷冻水型机房专用空调。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191707560930746&amp;type=3&amp;docTypeCode=CompareSelect&amp;securityViewCode=be3294eb2f34573c3616af75fa891dd5" target="_blank" rel="noopener">汕头鮀浦AIDC结构安全鉴定采购</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-29 比选公告 GDBXWJ20261029027：重新采购鮀浦A<a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a>改造项目二期通信机楼结构安全性检测及鉴定服务。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=191707112127794&amp;type=2&amp;docTypeCode=PurchaseAnnounceBasic&amp;securityViewCode=e5e85e0f908acdd8b7eaf739c56d6478" target="_blank" rel="noopener">深圳龙岗国产算力集群配套采购</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-26 单一来源采购公告 GDDYLYCGGS2026102619：采购深圳龙岗分公司国产算力集群集成服务及配套物资框架。</p></li>
+<li class="ref-item"><span class="ref-org">中国移动广东有限公司</span><a class="ref-title" href="https://b2b.10086.cn/#/noticeDetail?publishId=2113568620680290306&amp;publishUuid=cec36177f4ee44ea96d82987ab645fab&amp;publishType=null&amp;publishOneType=null" target="_blank" rel="noopener">珠海通信中心IDC改造工程总承包招标</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国移动 2026-10-23 招标公告，素材公告编号为—：珠海分公司通信中心<a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a>机房改造项目一期工程总承包，截止2026-10-29。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=4873982725230682112&amp;type=7&amp;docTypeCode=ResultAnnounc&amp;securityViewCode=45d7950465369cf3fa1a895ae72e8b43" target="_blank" rel="noopener">浈江园区220kV变压器中标结果</a><span class="ref-date">2026-10-12</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-12 采购结果，素材公告编号为—：浈江园区自建220千伏变电站220kV变压器设备集中采购项目中标结果公示。</p></li>
+<li class="ref-item"><span class="ref-org">中国电信广东分公司</span><a class="ref-title" href="https://caigou.chinatelecom.com.cn/DeclareDetails?id=4876529742809128960&amp;type=7&amp;docTypeCode=ResultAnnounc&amp;securityViewCode=b0360edefbd5eb62b43d16d118d2a1ae" target="_blank" rel="noopener">深圳IDC电源设备框架采购结果</a><span class="ref-date">2026-10-19</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信 2026-10-19 采购结果，素材公告编号为—：2026年深圳电信IDC机房配套电源设备框架采购项目中标结果公示。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://www.21jingji.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">21世纪经济报道</a></span><a class="ref-title" href="https://www.21jingji.com/article/20261023/herald/e7f50168243e116f7848520f1ab16b12.html" target="_blank" rel="noopener">佛山首宗拿地即开工电网工程投产</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">10月23日佛山220千伏青云变电站投产；高明区220千伏变电容量增长47.46%，规划许可办理较常规程序节约6个月。</p></li>
+</ol>
+</div>
 </div>
 
 </div><!-- end container -->
 <footer>
-<p>© 2026 中国智能算力周报 | 第40期 | 数据更新：2026-10-22</p>
+<p>© 2026 中国智能算力周报 | 第41期 | 数据更新：2026-10-29</p>
 </footer>
+<div class="container">
 <div class="chapter-nav">
     <a href="应用场景分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="结论与建议报告.html" class="nav-next">下一章 ➡️</a>
 </div>
+</div>
+<script>
+(function () {
+  /* 环节彩色标签 / 本周星标 / 「未披露」弱化 —— 页面加载后一次性处理 */
+  var MAP = [["征地", "chip-land"], ["土建", "chip-civil"], ["机电", "chip-mep"],
+             ["总承包", "chip-epc"], ["设备", "chip-equip"]];
+  document.querySelectorAll("table").forEach(function (tbl) {
+    var firstRow = tbl.querySelector("tr");
+    if (!firstRow) return;
+    var ths = Array.prototype.slice.call(firstRow.children);
+    var envIdx = -1, wkIdx = -1;
+    ths.forEach(function (th, i) {
+      var t = (th.textContent || "").trim();
+      if (envIdx < 0 && t.indexOf("环节") >= 0) envIdx = i;
+      if (i === 0 && t.indexOf("本周") === 0) wkIdx = 0;
+    });
+    Array.prototype.slice.call(tbl.querySelectorAll("tr")).forEach(function (tr) {
+      if (tr === firstRow) return;
+      if (envIdx >= 0 && tr.children[envIdx]) {
+        var td = tr.children[envIdx], html = td.innerHTML.split("、").join("");
+        MAP.forEach(function (p) {
+          html = html.split(p[0]).join('<span class="chip ' + p[1] + '">' + p[0] + "</span>");
+        });
+        td.innerHTML = html;
+      }
+      if (wkIdx === 0 && tr.children[0] &&
+          (tr.children[0].textContent || "").indexOf("★") >= 0) {
+        tr.children[0].classList.add("star");
+      }
+      Array.prototype.slice.call(tr.children).forEach(function (cell) {
+        var t = (cell.textContent || "").trim();
+        if (/^(未披露(金额|预算|中标金额)?|—)$/.test(t)) cell.classList.add("muted");
+      });
+    });
+  });
+
+  /* 正文数字锚点：给「数字+单位」包 span.num，让文字墙有视觉落点。
+     只处理段落/列表项；含链接或表格的容器跳过，避免破坏标签结构。 */
+  var UNIT = /(¥?\d[\d,\.]*)\s*(亿元|万元|标准机架|个标准机架|PFLOPS|kW|MW|EFLOPS|平方米|亩|万P)/g;
+  document.querySelectorAll(
+    ".content-body p, .content-body li, section > p, .overview-text p, .overview-text li"
+  ).forEach(function (el) {
+    if (el.querySelector("a, table")) return;
+    var html = el.innerHTML;
+    if (html.indexOf("<") >= 0 && html.indexOf("亿元") < 0 && html.indexOf("标准机架") < 0) return;
+    el.innerHTML = html.replace(UNIT, '<span class="num">$1$2</span>');
+  });
+})();
+</script>
 </body></html>
