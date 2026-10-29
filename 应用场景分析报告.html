@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>七、应用场景分析 | 第40期</title>
+    <title>七、应用场景分析 | 第41期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -92,14 +92,60 @@ tr.week-highlight { background: #fff8e1; }
 .overview-text strong { color: #0f3460; }
 .overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
-    </style>
+    .section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
+
+
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
+</style>
 </head>
 <body>
 
 <header>
-<div class="week-badge">第40期</div>
+<div class="week-badge">第41期</div>
 <h1>七、应用场景分析</h1>
-<div class="subtitle">2026.1016-2026.1022 | 中国智能算力报告</div>
+<div class="subtitle">2026-10-23—2026-10-29 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -122,38 +168,49 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><strong>本期（第40期，2026.1016-2026.1022）应用场景板块的核心特征是「场景供给政策密集落地、需求侧数据以年度累计为主」。</strong>10月20日永州发布首批34个"人工智能+"开放应用场景，覆盖智慧教育、文旅文创、智慧农业、交通治理、社会治理、智能制造、智慧医疗七大领域，适配具身智能、AIGC微短剧与游戏、跨境电商、AI硬件制造、AI智能体五大赛道，同日与京东科技签约智算基础设施共建。10月21日湖北省数据局启动2026年场景券申报，统筹1000万元省级资金。10月16日中国信通院发布Token服务智算基础设施报告，明确地方政策试点正从"建设补贴"转向"Token服务采购"。需求侧，本周无同源周度词元量披露，最新可得口径为9月21-27日累计62.22万亿词元（约为美国4倍）；工信部披露电子信息制造业前三季度增加值增速15.8%、1—8月利润总额8475亿元同比增长109.9%。</div>
+<div class="overview-text"><p class="ov-lead">本周应用侧呈现“模型调用高增、视频预算高耗、医疗转向运营、工业AI规模化验证”四类增量。</p><ul class="ov-points"><li><strong>大模型调用：</strong>10月19日至25日，中国AI大模型在OpenRouter平台的周调用量达93.54万亿Token，周环比增长18.14%；DeepSeek V4.1-Flash-1017单模型调用量达33.6万亿Token，周环比增长801%，连续3周位居全球第1。</li><li><strong>医疗付费：</strong>讯飞医疗2026年上半年营收4.46亿元，同比增长49.4%，AI健康助手板块增速74.9%，但鹰瞳科技同期收入为6729万元、同比下降19.6%，医院采购正由单点模型测试转向设备入口、平台运营与持续效果付费。</li><li><strong>工业与视频：</strong>浙江移动在宁波得力制笔工厂部署的AI质检系统可识别15类缺陷，质检效率提升8倍；抖音上半年新上线AI短剧22万部，业界估算一部12集短剧算力成本接近20万元，视频生成仍是单任务算力成本较高的场景。</li></ul><p class="ov-note"><strong>对运营商含义：</strong>建议本周将推理资源优先投向大模型API、政务智能体和工业质检等已形成调用量或项目验收依据的场景；医疗场景应优先绑定设备、接口和运维合同，核验持续付费能力；AIGC视频采用按任务量、分辨率和时长核算的弹性资源池，并分别记录平台测算口径与字节跳动关于视频算力占比约10%的口径差异。</p></div>
 </div>
 
-<div class="data-note">
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-10-16—2026-10-22）应用场景趋势变化，优先使用真实周变化/日变化数据；若无短粒度变化数据，则追溯月/季度/年数据，时间维度在表格中明确标注。<br>
-<strong>时间维度说明：</strong>日环比=比前一天、周环比=比前一周、月环比=比上月、季环比=比上季度、年同比=比去年同期。变化幅度 &gt; 5% 为"显著变化"（标绿）；1%-5% 为"一般变化"；&lt; 1% 为"持平"。<br>
-<strong>数据卡片说明：</strong>change字段格式为"时间戳 上期值 | ↑/↓ 幅度（时间维度）"，如"4/6-12 5.80万亿 | ↓23.8%（周变化）"。
+<div class="data-meta">
+<span class="dm"><b>数据周期</b><span>2026-10-23—2026-10-29（第41期）</span></span>
+<span class="dm"><b>数据来源</b><span>OpenRouter、每日经济新闻、21 世纪经济报道、北京广播电视台采购公告等</span></span>
+<span class="dm"><b>口径说明</b><span>Token 调用量为平台口径（未覆盖自有 API、私有化部署）；日/周/月/年维度分列，变化 >5% 为显著</span></span>
 </div>
+
 
 <!-- 7-1 本周应用场景核心数据速览 -->
 <div class="section">
 <h2>7-1 本周应用场景核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">本周新增开放应用场景</div>
-    <div class="value">34 个<span class="unit"></span></div>
-    <div class="change">↑新增·永州首批</div>
+    <div class="label">中国模型调用量</div>
+    <div class="value">93.54<span class="unit">万亿Token/周</span></div>
+    <div class="change"></div>
 </div>
 <div class="data-card">
-    <div class="label">国产大模型周处理词元</div>
-    <div class="value">62.22 万亿<span class="unit">词元/周</span></div>
-    <div class="change">沿用9月第三周口径</div>
+    <div class="label">DeepSeek调用量</div>
+    <div class="value">33.6<span class="unit">万亿Token/周</span></div>
+    <div class="change"></div>
 </div>
 <div class="data-card">
-    <div class="label">电子信息制造业前三季度增加值增速</div>
-    <div class="value">15.8<span class="unit">%</span></div>
-    <div class="change">季维度·工信部10.20披露</div>
+    <div class="label">讯飞医疗半年营收</div>
+    <div class="value">4.46<span class="unit">亿元</span></div>
+    <div class="change"></div>
 </div>
 <div class="data-card">
-    <div class="label">AI手机/电脑新品发布</div>
-    <div class="value">20+<span class="unit">款</span></div>
-    <div class="change">年度累计·本周披露</div>
+    <div class="label">AI质检提效</div>
+    <div class="value">8<span class="unit">倍</span></div>
+    <div class="change"></div>
+</div>
+<div class="data-card">
+    <div class="label">单部短剧算力成本</div>
+    <div class="value">20<span class="unit">万元/部</span></div>
+    <div class="change"></div>
+</div>
+<div class="data-card">
+    <div class="label">边缘芯片算力</div>
+    <div class="value">256<span class="unit">TOPS</span></div>
+    <div class="change"></div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -170,68 +227,52 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>中国AI模型周处理词元量</strong></td>
-    <td>周维度（沿用9月第三周口径）</td>
-    <td>9月21-27日 62.22万亿词元</td>
-    <td>本周无同源披露 万亿词元</td>
-    <td>无可比周数据</td>
-    <td>本周公开信源未出现同源周度词元量披露。最新可得口径为2026年9月21-27日一周累计处理62.22万亿词元，是同期美国模型4倍以上（南方企业新闻网2026-10-12）。该数据距本期约4周，属月维度，不得标注为本周变化，故本周填报为沿用口径。</td>
+    <td><strong>中国大模型周调用量</strong></td>
+    <td>周环比</td>
+    <td>79.18</td>
+    <td>93.54 万亿Token</td>
+    <td>+18.14%</td>
+    <td>10月19日至25日，中国AI大模型在OpenRouter平台的周调用量由按18.14%增幅反推的79.18万亿Token增至93.54万亿Token，且连续26周超过美国。调用量增长说明通用模型推理已形成可观测的算力消耗，但该平台不覆盖厂商自有API、云平台、私有化部署和直接面向消费者的应用，因此运营商应以93.54万亿Token作为平台侧需求信号，而非完整市场份额，并重点承接API网关、弹性推理和模型路由资源。</td>
 </tr>
 <tr>
-    <td><strong>永州绿能智算集群规模</strong></td>
-    <td>年维度（年底目标）</td>
-    <td>已投用2000卡（移动1000+电信1000）</td>
-    <td>年底目标1.8万卡/9千P 卡/P</td>
-    <td>规划目标</td>
-    <td>10月20日永州市委副书记刘厚披露：移动1000卡、电信1000卡已投用，联影医疗1000卡11月投产，百度1万卡、华为1000卡年内落地，年底形成1.8万卡、9千P集群。属规划目标而非实际投产，兑现度需Q4跟踪。</td>
+    <td><strong>DeepSeek单模型调用量</strong></td>
+    <td>周环比</td>
+    <td>3.73</td>
+    <td>33.6 万亿Token</td>
+    <td>+801%</td>
+    <td>DeepSeek V4.1-Flash-1017在10月19日至25日周调用量达33.6万亿Token，由按801%增幅反推的3.73万亿Token增至当前水平，并连续3周位居OpenRouter全球第1。短周期调用跃升对应推理、编程、自动化和视觉任务需求集中释放，运营商在10月下旬配置通用模型推理实例时，应把突发调用弹性放在固定训练集群之前，同时区分自有API与OpenRouter路由流量。</td>
 </tr>
 <tr>
-    <td><strong>电子信息制造业前三季度增加值增速</strong></td>
-    <td>季维度</td>
+    <td><strong>讯飞医疗半年营收</strong></td>
+    <td>年同比</td>
+    <td>2.99</td>
+    <td>4.46 亿元</td>
+    <td>+49.4%</td>
+    <td>讯飞医疗2026年上半年营收4.46亿元，同比增长49.4%，按增幅反推上年同期约2.99亿元；AI健康助手板块增速为74.9%。收入增长说明患者管理由一次性项目交付向平台运营切换，但同期鹰瞳科技收入为6729万元、同比下降19.6%，表明医疗AI付费能力高度分化。运营商承接医疗智能体项目时，应把续费率、运维费和临床工作流嵌入情况作为算力续约条件。</td>
+</tr>
+<tr>
+    <td><strong>L2辅助驾驶渗透率</strong></td>
+    <td>年同比</td>
+    <td>70</td>
+    <td>70.5 %</td>
+    <td>+0.5个百分点</td>
+    <td>工信部装备工业一司在2026世界智能网联汽车大会披露，L2级组合驾驶辅助功能乘用车渗透率已由上周基准70%升至70.5%，同期NOA新车渗透率为34.2%。高渗透率意味着端侧推理、数据回传和仿真验证已从样车测试转为规模供给，但素材未给出周度新增量；运营商布局车联网边缘节点时，应优先覆盖持续回传和模型更新频繁的量产车型。</td>
+</tr>
+<tr>
+    <td><strong>边缘AI芯片算力</strong></td>
+    <td>月环比</td>
+    <td>256</td>
+    <td>256 TOPS</td>
+    <td>持平</td>
+    <td>爱芯元智AX8860边缘AI芯片提供256 TOPS混合精度算力，与上周基准256 TOPS持平，月环比没有变化。持平原因是10月20日披露内容给出了芯片算力、128 GB内存和273 GB/s带宽等产品规格，但未披露后续月度产品迭代或量产规模变化。对运营商而言，当前扩容重点应放在云边端协同、工业视觉部署和模型迁移效率，而非按算力数字重复采购同类节点。</td>
+</tr>
+<tr>
+    <td><strong>12集AI短剧算力成本</strong></td>
+    <td>年同比</td>
     <td>—</td>
-    <td>15.8 %</td>
-    <td>季维度披露</td>
-    <td>工信部2026-10-20披露，前三季度增加值增速15.8%。为季度累计口径，无同源周度/月度可比值，仅作产业需求侧背景，不计入周变化。</td>
-</tr>
-<tr>
-    <td><strong>电子信息制造业1-8月利润总额</strong></td>
-    <td>月维度（累计）</td>
-    <td>—</td>
-    <td>8475亿元（同比+109.9%） 亿元</td>
-    <td>月累计+109.9%</td>
-    <td>工信部2026-10-20披露，1—8月利润总额8475亿元、同比增长109.9%。利润高增反映算力外溢效应向上游硬件传导，但其中含存储涨价等周期性因素，需与AI需求口径区分。</td>
-</tr>
-<tr>
-    <td><strong>上半年国内PCB新增披露投资</strong></td>
-    <td>半年维度</td>
-    <td>—</td>
-    <td>约1691亿元（同比增长4倍以上） 亿元</td>
-    <td>半年+4倍以上</td>
-    <td>工信部2026-10-20披露，上半年国内PCB新增披露投资约1691亿元、较去年同期增长4倍以上。4倍级增幅部分源于AI服务器高多层板需求集中释放，属结构性而非普涨。</td>
-</tr>
-<tr>
-    <td><strong>湖北省级场景券资金</strong></td>
-    <td>年维度（2026年）</td>
-    <td>—</td>
-    <td>1000万元 万元</td>
-    <td>新增</td>
-    <td>湖北省数据局2026-10-21发布通知，统筹省数字经济发展专项资金1000万元发放场景券，支持场景机会方/能力方在真实场景开展AI新产品新服务测试验证。资金规模达千万级，说明场景券由试点转常态化财政科目。</td>
-</tr>
-<tr>
-    <td><strong>国产大模型基准跑分差距（中美）</strong></td>
-    <td>年维度</td>
-    <td>年初15%</td>
-    <td>3% 百分点差</td>
-    <td>年维度收窄</td>
-    <td>南方企业新闻网2026-10-12披露，中美顶尖大模型基准跑分差距从年初15%缩减至3%，为历史最小差值。属年度累计趋势，反映供给追赶速度，不构成本周变化。</td>
-</tr>
-<tr>
-    <td><strong>人形机器人上半年全球出货</strong></td>
-    <td>半年维度</td>
-    <td>—</td>
-    <td>接近2.5万台（同比+432%） 台</td>
-    <td>半年+432%</td>
-    <td>2026年上半年全球人形机器人出货接近2.5万台、同比暴涨432%。半年维度口径，与永州开放果蔬采摘/带电作业等具身智能场景形成需求呼应。</td>
+    <td>20 万元/部</td>
+    <td>未披露同口径同比</td>
+    <td>素材估算一部12集AI短剧的算力成本接近20万元，但未提供同口径上期值和同比增速，因此不反推变化率。该成本说明视频生成具有高并发、高显存和长时任务特征，适合按任务批次配置弹性GPU；同时不能把“55%的Token用于视频生成”直接外推到全部市场，因为字节跳动称其总算力中仅约10%用于视频生成训练与推理。</td>
 </tr>
 </tbody>
 </table>
@@ -244,70 +285,58 @@ tr.week-highlight { background: #fff8e1; }
 <h2>7-2 一周应用场景动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">10月22日</div>
-    <div class="timeline-title">国家发改委公布首批136个标志性重大应用场景</div>
-    <div class="timeline-source">中国电力报/CPEM</div>
-    <div class="timeline-impact">南方电网"绿电直供与算力协同应用场景"入选，广州棠下"七站合一、算电储融合"试点年节电超700万千瓦时、节约用地30%~40%、绿电供应100%，试点地用电成本平均下降48%。国家级场景清单为地方场景开放提供上位牵引。</div>
+    <div class="timeline-date">10-29</div>
+    <div class="timeline-title">讯飞发布医疗大模型V3.7</div>
+    <div class="timeline-source">格隆汇，10-29</div>
+    <div class="timeline-impact">讯飞星火医疗大模型V3.7基于全国产算力底座发布，并同步推出AI患者管理平台3.0；讯飞医疗2026年上半年营收4.46亿元，同比增长49.4%。对运营商而言，本周新增需求并非单次模型采购，而是医疗语义、影像、语音全链条推理和患者持续管理运营，应优先评估国产算力适配、接口调用量及平台续费合同。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月22日</div>
-    <div class="timeline-title">"远景天机"气象大模型ECMWF榜单综合第一</div>
-    <div class="timeline-source">证券日报</div>
-    <div class="timeline-impact">中国气象AI跻身全球前列，"远景天机"在气温、降水、气压综合指标排名第一，力压近20支顶尖团队；此前已摘得国家电网AI负荷预测比赛、南方电网业务比赛桂冠。属垂直行业模型落地的标志性成果。</div>
+    <div class="timeline-date">10-29</div>
+    <div class="timeline-title">浙江移动展示15类缺陷质检</div>
+    <div class="timeline-source">人民网浙江频道，10-29</div>
+    <div class="timeline-impact">浙江移动“移动天工”在宁波得力制笔工厂部署AI质检系统，可识别划痕、缺墨、笔夹缺失等15类缺陷，质检效率提升8倍，并沉淀2万条标准化工业知识。该本周动态表明工业AI已具备可验收的效率指标，运营商规划应把边缘推理、模型分发和工业知识服务纳入同一项目包，扩容依据可由8倍效率替代笼统场景判断。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月21日</div>
-    <div class="timeline-title">湖北省数据局组织2026年场景券申报</div>
-    <div class="timeline-source">湖北省数据局</div>
-    <div class="timeline-impact">统筹省数字经济发展专项资金1000万元发放省级场景券，支持领域含人工智能、智能制造、绿色化工、现代服务业、智慧农业。依据鄂政办发〔2025〕43号与〔2026〕18号，行动名为"数智+场景育新"。</div>
+    <div class="timeline-date">10-29</div>
+    <div class="timeline-title">苏州企小服申报10余项</div>
+    <div class="timeline-source">金台资讯，10-29</div>
+    <div class="timeline-impact">苏州工业园区“企小服”AI服务体已帮助企业自动匹配政策并成功申报10余项惠企项目，江苏省“人工智能+”典型应用场景项目也通过申报。政务侧由此形成政策解析、企业画像匹配和申报提醒的连续智能体需求，对运营商意味着算力负载更贴近高频小请求和数据库调用，规划时应优先配置共享推理及低时延政务云资源。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月21日</div>
-    <div class="timeline-title">沐曦曦云C系列完成Sage-A1.5 Day 0适配</div>
-    <div class="timeline-source">北京商报</div>
-    <div class="timeline-impact">上海人工智能实验室发布35B混合专家智能体模型Sage-A1.5，沐曦曦云C系列GPU同日完成Day 0适配，成为率先支持的国产算力平台。标志国产算力从"发布后适配"走向"发布即运行"，降低场景迁移成本。</div>
+    <div class="timeline-date">10-28</div>
+    <div class="timeline-title">迈瑞推动医疗AI嵌入设备</div>
+    <div class="timeline-source">新浪科技，10-28</div>
+    <div class="timeline-impact">迈瑞医疗提出医疗AI应从医院既有设备、流程和数据环境中生长，并需跨过技术、临床、组织和支付4道门槛。素材虽未披露采购金额或调用量，但本周释放了明确的产品路径：算力需求将从独立系统推理转向设备侧推理和院内工作流调用，运营商若仅提供项目制算力而未接入设备接口，将难以形成持续付费与续约。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月21日</div>
-    <div class="timeline-title">合肥城市云与海光信息签署战略合作</div>
-    <div class="timeline-source">海光信息</div>
-    <div class="timeline-impact">双方聚焦湖南人工智能算力数据中心建设，基于海光CPU+DCU打造万卡国产算力集群，在智算中心、算力服务、Token运营及AI应用领域深化合作。</div>
+    <div class="timeline-date">10-27</div>
+    <div class="timeline-title">医疗AI收入与支付分化</div>
+    <div class="timeline-source">虎嗅，10-27</div>
+    <div class="timeline-impact">鹰瞳科技2026年上半年收入6729万元、同比下降19.6%，亏损约4886万元；讯飞医疗同期收入4.46亿元、同比增长49.4%。同一周披露的数据表明医院正压缩难以单独核算收益的AI采购，并向平台化、集约化采购迁移。运营商应在医疗算力合同中设置使用率、临床结果和运维续费条款，降低项目结束后资源闲置风险。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月21日</div>
-    <div class="timeline-title">谷歌云Vera Rubin NVL72 A5X实例下月商用</div>
-    <div class="timeline-source">界面新闻</div>
-    <div class="timeline-impact">谷歌云与英伟达宣布搭载Vera Rubin NVL72的A5X实例下月开放并计划扩展至欧洲，谷歌云计划在多站点部署多达96万块Rubin GPU，为AI智能体推理和强化学习提供基础设施。海外算力供给扩张对国内市场构成竞争性参照。</div>
+    <div class="timeline-date">10-26</div>
+    <div class="timeline-title">DeepSeek调用量全球第1</div>
+    <div class="timeline-source">每日经济新闻，10-26</div>
+    <div class="timeline-impact">10月19日至25日，DeepSeek V4.1-Flash-1017周调用量达33.6万亿Token，周环比增长801%，连续3周位居全球第1；同期中国大模型周调用量93.54万亿Token，环比增长18.14%。本周新增流量以通用模型推理为主，运营商需要预留可快速扩缩的API推理池，并避免将OpenRouter平台流量误认为厂商自有API和私有部署的全部需求。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月20日</div>
-    <div class="timeline-title">永州发布首批34个"人工智能+"开放应用场景</div>
-    <div class="timeline-source">中国新闻网</div>
-    <div class="timeline-impact">覆盖智慧教育6个、文旅文创3个、智慧农业4个、智能制造10个等共七大领域34个场景，适配具身智能、AIGC微短剧与游戏、跨境电商、AI硬件制造、AI智能体五大赛道。同日永州与京东科技就智算基础设施共建等签约，京东科技省级运营中心及人工智能创新中心落地永州。</div>
+    <div class="timeline-date">10-23</div>
+    <div class="timeline-title">2.5万辆无人出租车计划推进</div>
+    <div class="timeline-source">DOIT，10-23</div>
+    <div class="timeline-impact">英伟达参与2.5万辆无人出租车计划的工程方案，显示L4级自动驾驶正从单点测试向车队规模部署推进。车队扩张将同步拉动车端推理、仿真训练、地图更新和运营回传需求，运营商本周应提前对接车联网专线及边缘节点容量，但素材未披露单车算力、合同金额和交付日期，现阶段只宜按2.5万辆规划场景规模，不宜据此确认收入。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月20日</div>
-    <div class="timeline-title">深圳福田发布53项金融AI解决方案</div>
-    <div class="timeline-source">南方+</div>
-    <div class="timeline-impact">2026深圳金融与人工智能场景对接大会在福田举行，160余人参会，集中发布53项金融AI解决方案推动金融机构与科技企业精准对接。全球金融中心指数（GFCI）中香港金融科技列第一、深圳列第三。</div>
+    <div class="timeline-date">10-23</div>
+    <div class="timeline-title">L2渗透率升至70.5%</div>
+    <div class="timeline-source"><a data-portal="1" href="https://www.21jingji.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">21世纪经济报道</a>，10-23</div>
+    <div class="timeline-impact">L2级组合驾驶辅助乘用车渗透率达到70.5%，NOA新车渗透率达到34.2%，L4级自动驾驶单车存储需求预计超过300 GB。量产渗透为车端推理和数据回传提供持续负载，也意味着车企面临存储供货与AI数据中心争夺高端产能。运营商可围绕车队回传、仿真和模型分发形成算力服务，但需核验量产车型实际在线率。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10月20日</div>
-    <div class="timeline-title">工信部披露电子信息制造业与AI终端数据</div>
-    <div class="timeline-source">工信部（国新办发布会）</div>
-    <div class="timeline-impact">前三季度增加值增速15.8%，1—8月利润总额8475亿元、同比增长109.9%；上半年国内PCB新增披露投资约1691亿元、同比增长4倍以上；超20款AI手机和电脑新品发布，超百款终端符合L3辅助级能力要求。</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">10月19日</div>
-    <div class="timeline-title">中国联通亮相2026人工智能产业大会（济南）</div>
-    <div class="timeline-source">中新网</div>
-    <div class="timeline-impact">山东省内机架总数19678架、算力储备5199P、能耗储备200MW，落地省内首个万卡级国产算力集群（济南大模型工场）。元景万悟工业智能体沉淀200多个工业场景小模型、200多个组件库、50多个智能体模板，日均处理Token达百亿级，已上线工业场景智能体150多个、服务21个细分工业行业。</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">10月16日</div>
-    <div class="timeline-title">中国信通院发布Token服务智算基础设施报告</div>
-    <div class="timeline-source">人民邮电报</div>
-    <div class="timeline-impact">《面向词元（Token）服务的智算基础设施发展研究报告（2026年）》提出地方政策试点正从"建设补贴"转向"Token服务采购"，政策侧重点由建设规模转向服务效能；训练算力向枢纽集聚、推理算力靠近需求的"训推分层"空间格局加快形成。</div>
+    <div class="timeline-date">10-23</div>
+    <div class="timeline-title">南威推进算力与智能体业务</div>
+    <div class="timeline-source">经济参考网，10-23</div>
+    <div class="timeline-impact">南威软件在2026年半年报中披露智启智能体、公安和水利智能体等项目，并推进北京七星园数字经济产业智算中心建设；其健康大模型智能体、智能穿戴和自研健康食品业务合计收入不足1500万元，占2025年营收比例未超过2%。这表明政务和企业侧已有全栈投入，但消费端付费尚未形成，运营商扩池应优先绑定可验收的G端、B端项目。</div>
 </div>
 </div>
 </div>
@@ -315,73 +344,31 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 7-3 本周应用场景深度解读 -->
 <div class="section">
 <h2>7-3 本周应用场景深度解读</h2>
-<h3>7.3.1 场景开放从"给补贴"转向"给订单"：永州模式的结构性意义</h3>
-<p>10月20日永州市委副书记刘厚在"智赋永州·算赢未来"开放场景发布会上明确，永州的定位是湖南向南开放的"南大门"、对接粤港澳大湾区的"连接点"和对接东盟的"桥头堡"，这批场景"立足永州绿能智算禀赋，既精准对接产业真实需求，又以'人工智能+'深度赋能重点行业"。这句话点破了本周场景政策最重要的转向：<strong>场景不再是补贴的附属品，而成为算力投资的需求前置条件</strong>。</p>
-<p>永州本周同步开放七大领域首批34个场景，结构分布值得注意：智能制造10个（梯度培育智能工厂、工业互联网融合、工业质检巡检机器人、纺织业自动化机器人、工业机器人、特种作业机器人、带电作业机器人、无励磁调档机器人、果蔬采摘机器人）、智慧教育6个（校园食品安全、学生心理健康、智慧教学、校园安全、智慧教务、AI第二课堂）、智慧农业4个（特色作物精准种植、智慧养殖、农产品高效销售、农产品全流程溯源）、文旅文创3个（游客精准服务、资源智能保护、品牌高效推广），另有交通治理、社会治理、智慧医疗各等共34个。</p>
-<p>适配的五大赛道更值得留意：具身智能、AIGC微短剧与游戏、跨境电商、AI硬件制造、AI智能体。<strong>其中"果蔬采摘机器人""带电作业机器人""特种作业机器人"三个场景同时指向具身智能，说明地方场景开放正在从软件类需求扩展到硬件类需求</strong>——这与传统认知中"地方只买软件不买硬件"形成反差。</p>
-<p><strong>永州的算力底账与场景开放是配套的</strong>：全市电源总装机1224万千瓦，其中新能源装机768万千瓦、储能83万千瓦，可稳定保障超20万卡算力集群运行；至粤港澳大湾区时延5毫秒以内、至东盟15毫秒以内；道县、东安、陆港新质产业园三大载体可实现企业即来即建。产业生态方面，移动1000卡、电信1000卡算力已顺利投用，联影医疗1000卡将于11月投产，百度1万卡、华为1000卡可在年内落地，预计年底形成<strong>1.8万卡、9千P</strong>的绿能智算集群。湖南省"十五五"规划明确支持永州联合长沙共同申报国家算力互联互通M节点。</p>
-<p><strong>同日，永州与京东科技就智算基础设施共建、人工智能应用场景落地、实体经济数字化升级、产业招商引智签约</strong>，京东科技省级运营中心及人工智能创新中心相继落地永州。永州官方提出的闭环是"绿电变算力、算力引产业、产业育生态"。</p>
-<p><strong>需要警惕的风险：</strong>场景开放与场景落地之间存在时间差。34个场景的"开放"是发布清单，"落地"要看三个月后的中标率与实际调用量。当前各地场景券、场景开放清单密集发布，容易形成"发布数量"的竞争而非"落地质量"的竞争。建议观察指标：年底1.8万卡集群的实际上架率，而非机柜建成数。</p>
-
+<div class="deep-event"><div class="deep-event-title">专题：DeepSeek调用量跃升，通用推理成为本周最确定的应用增量</div><h4>事件与背景</h4><p>10月19日至25日，中国AI大模型在OpenRouter平台的周调用量达到93.54万亿Token，周环比增长18.14%；其中，DeepSeek V4.1-Flash-1017单模型调用量达到33.6万亿Token，周环比增长801%，并连续3周位居全球第1。该结果出现在模型更新后的首个完整观察周，说明应用侧增量已经由模型发布直接传导至API调用，但平台路由数据不能等同于厂商自有API、云平台、私有化部署和直接面向消费者的全部流量。更值得注意的是，调用量增长并非伴随明显的场景扩散证据，而是集中于少数通用模型，因而本周更应把其判断为推理资源需求放量，而不是所有AI应用同步繁荣。</p><h4>关键数据</h4><p>据每日经济新闻基于OpenRouter数据测算，10月19日至25日中国AI大模型周调用量为93.54万亿Token，上周为79.18万亿Token；DeepSeek V4.1-Flash-1017周调用量为33.6万亿Token，上周为3.73万亿Token。模型更新方面，DeepSeek于10月17日发布V4.1-Flash-1017，重点改善推理、编程、自动化及视觉任务表现。需求侧的高增也伴随高成本场景：抖音上半年新上线22万部AI短剧，业界估算一部12集短剧算力成本接近20万元。对比不同口径，业界曾估计视频生成消耗较高Token，但字节跳动方面表示，其总算力中约10%用于视频生成模型训练与推理，两种口径不能直接拼接。</p><h4>深度分析</h4><p>调用量跃升首先反映推理需求的边际成本正在下降。DeepSeek V4.1-Flash-1017并非单纯以更高资源消耗换取调用规模，而是在推理、编程、自动化和视觉任务能力提升的同时强调性能与费用的组合优化。对于API聚合平台，模型调用具有网络效应：更多开发者采用会提高路由覆盖和现成工具链兼容性，更多工具链适配又会反向降低调用门槛。93.54万亿Token的周调用量说明通用推理已形成可观测的规模化流量，运营商配置推理集群时，应优先保障在线服务的并发弹性、低时延调度和突发流量承接，而不能按传统离线训练的固定利用率配置资源。</p><p>但高调用量不必然对应高利润。OpenRouter榜单中海外模型虽然调用排名靠后，但商业模式和计费体系不同，说明Token规模、价格与收入之间存在明显落差。中国模型连续保持领先，为国产推理服务打开市场窗口，却也会加剧价格竞争。运营商需要把模型调用量转换为可管理的经营指标：一方面跟踪有效调用、峰值并发和续用率，避免以免费试用或低质量请求虚增规模；另一方面按模型、区域和客户拆分单位Token成本与收入，观察高速增长的模型能否形成正向毛利。</p><p>本周需求还呈现显著的结构分化。通用文本和自动化任务可以通过API快速扩张，视频生成则保持单任务高耗特征。浙江移动在宁波得力制笔工厂部署的AI质检系统可识别15类缺陷，质检效率提升8倍，其价值来自固定产线、稳定缺陷类型和可验收效率，而不是开放式生成。相较之下，12集AI短剧接近20万元的算力成本更接近项目预算和资源调度问题。运营商因此应采用两套资源经营逻辑：面向大模型API建设共享推理底座，面向视频生成建设按任务量、分辨率和时长计费的弹性资源池。</p><h4>可复制性判断</h4><p>通用推理的高增可以复制到政务智能体、企业知识管理和软件开发等高频文本场景，因为这些场景具有接口标准化、调用可计量和任务可自动化的共同特征。苏州工业园区“企小服”AI服务体已帮助企业通过数字画像匹配政策并申报10余项惠企项目，说明政务智能体具备由政策检索扩展至流程服务的路径。视频生成的高成本不宜简单复制到医疗和工业场景；医疗AI必须嵌入设备、工作流与支付机制，工业AI必须依靠缺陷类别、检测效率和验收责任形成闭环。运营商可复制的是“模型能力加场景数据加运营合同”的组合方法，而不是对所有行业采用统一的Token采购或算力供给模式。</p></div>
 </div>
 
 <!-- 7-4 应用场景算力需求周变化分析 -->
 <div class="section">
 <h2>7-4 应用场景算力需求周变化分析</h2>
-<h3>7.4.1 需求侧总量：词元调用量本周无可比周数据，须用最新可得口径</h3>
-<p>本周公开信源中<strong>未出现"中国AI模型周处理词元量"的同源周度披露</strong>。当前最新可得口径为2026年9月21日至27日一周，中国AI模型累计处理<strong>62.22万亿词元</strong>，是同期美国模型处理量的4倍以上（来源：南方企业新闻网2026年10月12日报道，援引行业公开数据）。该数据距本期已约4周，<strong>属"月维度"而非"周维度"，不得标注为本周变化</strong>。本周该指标标注为"无可比周数据（沿用9月第三周口径）"。</p>
-<h3>7.4.2 模型侧供给：国产模型登顶全球榜首</h3>
-<p>同一口径下，国产大模型在通用大模型人气周榜中<strong>首次登顶全球榜首</strong>，打破海外模型长期占据头部位置的格局。2026年7月至9月，国内十家主要AI企业累计发布20个大语言模型，其中<strong>9月单月16个</strong>集中上线，远超今年第一季度全年仅2个的发布量。中美顶尖大模型基准跑分差距已从年初的15%缩减至<strong>3%</strong>，为历史最小差值。以上均为月/季度维度，反映的是供给节奏而非本周变化。</p>
-<h3>7.4.3 终端侧需求：AI硬件外溢效应显性化</h3>
-<p>本周需求侧最硬的产业数据来自工信部（10月20日）：电子信息制造业前三季度增加值增速<strong>15.8%</strong>，1—8月利润总额<strong>8475亿元</strong>、同比增长<strong>109.9%</strong>；上半年国内PCB新增披露投资金额约<strong>1691亿元</strong>、较去年同期增长<strong>4倍以上</strong>；同期超<strong>20款</strong>AI手机和电脑新品发布，已有超<strong>百款</strong>终端符合L3辅助级能力要求。前两项为季/月累计口径，第三、四项为本周披露的年度累计口径，均需明确标注。</p>
-
+<h3>训练需求保持审慎，推理调用成为本周最明确的增量</h3><p>本周可量化扩张首先出现在推理端。10月19日至25日，中国AI大模型在OpenRouter平台的周调用量达到93.54万亿Token，周环比增长18.14%；DeepSeek V4.1-Flash-1017单模型调用量达到33.6万亿Token，周环比增长801%，并连续3周位居全球第1。这说明大模型API、自动化流程和开发者工具正在吸收更多在线推理负载。边缘侧则呈现平稳状态，爱芯元智AX8860提供256 TOPS混合精度算力，较上周256 TOPS月环比持平；公开信息未显示本周新增规模化部署，因而短期不宜据此判断边缘推理再次加速。运营商的训练资源仍应围绕明确项目排产，优先承接模型微调、行业适配和持续推理训练，避免因调用量高增而同步扩张通用训练池；在线推理则需提高突发流量调度和多模型路由能力。</p><h3>医疗AI从模型测试转向运营付费，但收入分化要求审慎扩容</h3><p>医疗场景本周的核心变化不是模型发布数量增加，而是采购逻辑从单点测试转向设备入口、平台运营和持续效果付费。10月29日，讯飞发布基于全国产算力底座的星火医疗大模型V3.7，并推出AI患者管理平台3.0；讯飞医疗2026年上半年营收4.46亿元，同比增长49.4%，AI健康助手板块增速74.9%。但10月27日披露的同期数据同时显示，鹰瞳科技收入为6729万元，同比下降19.6%。两组数据表明，医疗AI需求仍在，但价值正在向掌握设备入口、临床工作流和持续运营入口的主体集中。运营商不宜以模型精度作为唯一采购依据，应优先核验设备覆盖、接口复用、责任边界、运维责任和续费来源，并把算力合同与使用量、效果指标及运营周期绑定。</p><h3>金融与政务智能体由政策匹配走向服务执行，付费逻辑开始成形</h3><p>金融及政务相关场景本周呈现从信息查询向办事流程延伸的趋势。10月29日，苏州工业园区披露“企小服”AI服务体通过拆解政策条目、匹配企业数字画像和自动提醒申报条件，已帮助苏州鼎级数字技术有限公司通过该服务体申报10余项惠企项目；其中，江苏省“人工智能+”典型应用场景项目成功通过。南威软件同期也在推进“算力、大模型、智能体”全栈能力，研发项目覆盖政务、公安、水利和多模态材料审核等方向。此类需求的算力消耗不如视频生成集中，但具有多轮检索、知识匹配、文档生成和流程触发等复合任务特征，对推理服务质量、权限隔离和审计留痕提出更高要求。对运营商而言，金融与政务智能体的价值在于持续服务而非一次性模型交付，宜以API并发量、知识库更新频率、流程成功率和政企续用情况配置资源，并将智能体运行平台与本体算力、云资源和运维服务组合报价。</p><h3>工业质检形成可验收指标，边缘与云协同具备复制条件</h3><p>工业场景在本周出现了比模型发布更强的验收证据。10月29日，浙江移动展示宁波得力制笔工厂AI质检系统，系统可识别划痕、缺墨、笔夹缺失等15类缺陷，质检效率提升8倍，资深工匠经验还被沉淀为2万条标准化工业知识。该项目的需求结构与通用大模型调用不同：缺陷类别相对明确，生产节拍稳定，质检结果能够与效率和漏检责任对应，因此运营商可采用边缘实时检测加中心模型迭代的组合方式。边缘AI芯片算力为256 TOPS，月环比持平，说明本周增量主要来自既有算力上的模型适配与应用扩展，而非普遍更换硬件。后续资源规划应围绕产线数量、相机节点、缺陷类别和响应时延测算，避免仅依据终端设备数量估算总算力。</p><h3>L2规模化与无人出租车计划并行，自动驾驶需求由渗透率转向工程交付</h3><p>自动驾驶方面，10月23日披露的L2级组合驾驶辅助功能乘用车渗透率达到70.5%，较上周70%年同比口径继续上升；同日，无人出租车计划报道提出2.5万辆规模。渗透率提升意味着端侧推理、数据回传、仿真训练和远程运营支撑需求同步扩大，但车辆侧算力与数据中心侧训练需求不能混同。运营商在自动驾驶场景中的机会主要位于仿真环境、车路协同、模型训练、数据治理和车队运营，而不宜直接按车辆渗透率推导同量级数据中心资源需求。无人出租车计划还涉及持续运营、复杂场景迭代和安全责任，只有在车辆投放、运营区域和责任机制明确后，数据回传与训练增量才会转化为稳定合同。建议本周以L2车型数据回流、无人出租车运营进度和仿真任务量作为触发采购的验证指标。</p>
 </div>
 
 <!-- 7-5 应用场景趋势周变化对比分析 -->
 <div class="section">
 <h2>7-5 应用场景趋势周变化对比分析</h2>
-<h3>7.5.1 政策工具：场景券从"广撒网"转向"精准滴灌"</h3>
-<p>本周地方场景政策出现标志性样本。10月21日湖北省数据局发布《关于组织开展2026年场景券申报工作的通知》，统筹省数字经济发展专项资金<strong>1000万元</strong>发放省级场景券，支持场景机会方与场景能力方以人工智能创新应用为重点，在真实场景环境开展数智新产品、新服务测试验证与示范应用。支持领域聚焦产业升级场景：人工智能（大模型、机器视觉、智能体等）、智能制造（AI质检、工艺参数优化、数字孪生工厂等）、绿色化工、现代服务业（智慧物流、供应链协同等）、智慧农业（高标准农田、低空农事作业等）。</p>
-<p>政策依据是《湖北省加快场景培育与应用实施方案》（鄂政办发〔2025〕43号）与《湖北省三四季度长短结合促进经济稳中向好若干措施》（鄂政办发〔2026〕18号），行动名为"数智+场景育新"。值得注意的是<strong>1000万元的规模与34个场景（永州）的量级相比并不小</strong>——湖北一省单年省级场景券资金即达千万级，说明场景券正在从试点工具转为常态化财政科目。</p>
-<h3>7.5.2 国家级牵引：新华网案例征集 + 首批136个重大应用场景</h3>
-<p>本周国家级场景牵引同步发力。其一，新华网启动2026"人工智能+"行业应用创新案例征集，<strong>截止时间10月30日</strong>，征集范围覆盖装备制造、政务与城市治理、民生服务、现代农业、商贸金融、绿色低碳、科技创新、算力数据八大方向（其中"算力数据"方向明确包含智算集群、算电协同、国产AI芯片/算力平台、行业高质量数据集、可信数据空间），联合申报单位不超过3家，拟于12月初2026企业家博鳌论坛发布"人工智能+"行业应用研究报告。其二，10月22日国家发改委公布<strong>首批136个标志性重大应用场景</strong>，南方电网"绿电直供与算力协同应用场景"入选。</p>
-<h3>7.5.3 行业专项场景指引密集出台</h3>
-<p>本周及前一周，行业主管部门的场景指引密集。10月14日交通运输部办公厅印发《水运领域人工智能应用场景指引》，提出建设安全管理智能体、构建人机交叉作业场景化风险推演与定量评估模型。此外国家能源局发布《煤矿人工智能大模型通用技术要求》（MT/T 1372—2026），规定煤矿AI大模型的通用模型、功能、接口、数据、软硬件平台与部署要求。<strong>行业级场景指引的密集出台，说明"人工智能+"正在从综合性政策下沉为可执行的行业操作规范</strong>。</p>
-
+<table><tr><th>场景</th><th>需求增速</th><th>付费能力</th><th>落地难度</th><th>本周变化</th></tr><tr><td>训练</td><td>本周无明确新增规模指标，边缘AI芯片算力维持256 TOPS，月环比持平</td><td>依赖专项项目预算，回报依赖模型成果转化</td><td>高，涉及数据治理、模型适配和交付周期</td><td>通用推理调用放大，但训练扩容仍应按项目排产</td></tr><tr><td>推理</td><td>中国大模型周调用量93.54万亿Token，周环比增长18.14%；DeepSeek单模型调用量33.6万亿Token，周环比增长801%</td><td>API调用可计量，但高速增长与降价竞争并存</td><td>中，技术成熟度较高，难点在成本、并发和稳定性</td><td>成为本周最明确的高增长场景，连续3周全球第1的模型强化调用预期</td></tr><tr><td>医疗</td><td>讯飞医疗2026年上半年营收4.46亿元，同比增长49.4%；AI健康助手板块增速74.9%</td><td>平台运营和持续效果付费增强，设备入口更有利于留存</td><td>高，涉及临床工作流、责任机制和支付边界</td><td>星火医疗大模型V3.7发布，采购逻辑从单点模型测试转向运营</td></tr><tr><td>金融与政务</td><td>苏州“企小服”已支持企业申报10余项惠企项目</td><td>政企项目预算及流程续用可形成收入，但需验收驱动</td><td>中高，涉及政策规则更新、数据授权和审计</td><td>智能体由政策匹配向申报提醒和流程服务延伸</td></tr><tr><td>工业</td><td>浙江移动AI质检系统识别15类缺陷，质检效率提升8倍</td><td>效率提升和缺陷减少可直接验收，项目付费基础较强</td><td>中，需适配产线、数据闭环和责任分工</td><td>形成可量化验收证据，边缘与云协同需求增加</td></tr><tr><td>自动驾驶</td><td>L2渗透率升至70.5%，无人出租车计划涉及2.5万辆规模</td><td>取决于车队运营、车型装配和数据服务合同</td><td>高，涉及安全责任、仿真验证和持续运营</td><td>需求由单车功能验证转向规模化运营与工程交付</td></tr><tr><td>视频生成</td><td>抖音上半年新上线22万部AI短剧，供给扩张快</td><td>单任务成本高，项目预算约束明显</td><td>中高，商业价值与算力口径争议并存</td><td>一部12集短剧算力成本接近20万元，弹性资源池需求突出</td></tr></table><p>对比可见，本周各场景的需求形态差异显著。训练端没有出现可确认的新增规模扩张，边缘AI芯片算力维持256 TOPS且月环比持平；推理端则形成93.54万亿Token周调用量和DeepSeek单模型801%周环比增长，增长斜率最陡。医疗场景的收入增速较高，但鹰瞳科技同期收入6729万元、同比下降19.6%，说明支付能力并未在行业内同步改善；工业场景则以15类缺陷识别和8倍质检效率形成明确验收依据。视频生成供给扩张快，但接近20万元的单部12集短剧算力成本使其更适合项目制弹性采购，而不是长期包量。</p><p>下一季度增量主要来自通用模型API与工业智能质检两类场景。通用模型API的依据是调用量已经形成规模，DeepSeek V4.1-Flash-1017连续3周位居全球第1，运营商可通过API网关、弹性推理和算网调度承接需求；工业智能质检的依据是效率收益可计量，浙江移动项目已把模型能力转化为15类缺陷识别和8倍效率，适合通过边缘节点、行业知识库和运维服务形成组合收入。视频生成可作为第三增长极，但其成本波动和算力占比口径差异要求采用任务级核算；医疗场景宜优先选择拥有设备入口和持续运营合同的主体，再随续费证据扩大投入。</p>
 </div>
 
 <!-- 7-6 应用场景驱动因素周变化分析 -->
 <div class="section">
 <h2>7-6 应用场景驱动因素周变化分析</h2>
-<h3>7.6.1 驱动因素一：政策从"建设补贴"转向"服务采购"（↑增强）</h3>
-<p>10月16日中国信通院规划所发布《面向词元（Token）服务的智算基础设施发展研究报告（2026年）》，明确提出地方政策试点正从"建设补贴"转向<strong>"Token服务采购"</strong>，政策侧重点由建设规模转向服务效能。这与本周湖北场景券（1000万元）、永州34个场景开放形成共振——财政资金正从补贴机柜建设，转向购买场景中的实际服务与算力调用。</p>
-<h3>7.6.2 驱动因素二：训推分层格局加快形成（↑增强）</h3>
-<p>同一报告提出，<strong>训练算力向枢纽集聚、推理算力靠近需求</strong>的"训推分层"空间格局加快形成。这一判断在本周多个信号中得到印证：永州明确承接"AI推理、数字渲染、直播电商等热数据业务"，其至大湾区时延5毫秒内的低时延优势正是推理业务所需；而训练任务则继续向乌兰察布、张家口等大电力低成本枢纽集中。</p>
-<h3>7.6.3 驱动因素三：制造与能源场景的AI渗透加速（↑显著增强）</h3>
-<p>本周工业与能源场景出现多项可量化落地：中国联通山东展示轮胎X光质检漏判率低于0.15%、节省70%人工质检成本；卷材表面检测精度最高0.02毫米、缺陷检出率超99%；砂石骨料行业局域电网项目实现综合节能7.65%（行业首个局域电网侧节能标杆）；新材料企业能源管理项目预计厂区综合能耗降低5%—10%。南方电网"绿电直供与算力协同"试点披露：广州棠下"七站合一、算电储融合"试点年节电超700万千瓦时、节约用地30%~40%、绿电供应100%，试点地用电成本平均下降48%。</p>
-<h3>7.6.4 驱动因素四：场景供给侧生态成型（↑增强）</h3>
-<p>本周生态侧信号密集：中国联通山东元景万悟工业智能体平台沉淀200多个工业场景小模型、200多个组件库、50多个智能体模板、覆盖研发设计/排产调度/工艺管控/设备运维全链路，<strong>日均处理Token达百亿级，已上线工业场景智能体150多个，服务21个细分工业行业</strong>。10月20日深圳福田发布53项金融AI解决方案。同期蚂蚁灵波LingBot-VLA 2.0在预训练阶段支持17个品牌、20种机器人构型，已在药房、物流、工业上下料等真实场景落地。</p>
-<h3>7.6.5 驱动因素五：算力底座国产化支撑场景成本下降（↑增强）</h3>
-<p>10月21日沐曦股份宣布旗下曦云C系列GPU完成上海人工智能实验室Sage-A1.5智能体模型（35B混合专家架构）的<strong>Day 0适配</strong>，成为率先支持该模型的国产算力平台。同日合肥城市云与海光信息签署战略合作协议，基于海光CPU+DCU打造万卡国产算力集群。Day 0适配的意义在于国产算力平台从"发布后适配"走向"发布即运行"，直接降低场景迁移的适配成本。</p>
-
+<h3>模型能力提升正在把调用量增长传导至通用推理，但持续性取决于任务留存</h3><p>本周模型侧最重要的变化，是DeepSeek V4.1-Flash-1017在推理、编程、自动化和视觉任务上的能力升级开始反映为真实调用。10月19日至25日，该模型周调用量达到33.6万亿Token，周环比增长801%，连续3周位居全球第1；同期中国AI大模型周调用量达到93.54万亿Token，周环比增长18.14%。量化影响是调用侧增长已经进入平台榜单，而不是停留在产品发布层面。该变化在短期内具有持续性，因为新模型发布后的调用迁移通常先发生在编程、自动化和开放API等高频任务；但若下周调用量不能维持，或者增长主要来自短期试用，则不能直接外推为长期训练需求。运营商应跟踪有效调用占比、续用率、峰值并发和单位Token贡献毛利，以判断能力升级能否形成稳定负载。</p><h3>成本下降仍体现在单位任务效率，资源经营需要从总量扩张转向口径校正</h3><p>本周没有出现可直接适用于全部场景的统一Token价格下降数据，成本变化主要体现为模型效率提升和单任务算力经济性改善。DeepSeek V4.1-Flash-1017强调性能与费用的组合优化，其调用量从上周3.73万亿Token升至33.6万亿Token；工业侧浙江移动AI质检系统识别15类缺陷，质检效率提升8倍，说明相同产线任务所需人工和计算资源均可能下降。反面是视频生成，一部12集短剧算力成本接近20万元，且业界与字节跳动方面对视频算力占比存在约10%和更高占比的不同口径。该变化可持续但必须分场景管理：文本API和固定质检适合随有效调用扩张，视频生成应按任务量、分辨率和时长核算，医疗则需将算力成本与设备入口和续费收入绑定，避免以口径变化误判价格趋势。</p><h3>政策从倡导转向场景执行，政务与工业落地速度出现分化</h3><p>政策与合规正在从原则性支持进入具体申报、验收和运营约束。10月29日，苏州工业园区“企小服”AI服务体已支持企业申报10余项惠企项目，其中江苏省“人工智能+”典型应用场景项目成功通过，政策资源开始通过智能体服务直达企业；同日，浙江移动在宁波得力制笔工厂展示AI质检成果，以15类缺陷和8倍效率形成工业场景的可验收结果。医疗侧则更强调支付边界与责任分工，单点模型即使具备技术效果，也必须进入设备、医生工作流和医院制度才能形成续费。该驱动的持续性较强，但场景间速度会分化：政务和工业可通过项目申报及效率验收较快转化为合同，医疗则需等待平台运营和持续付费证据。运营商应优先配置已有申报、验收或调用记录的场景，并将合规要求转化为日志、权限和审计能力。</p>
 </div>
 
 <!-- 7-7 下周趋势预判 -->
 <div class="section">
 <h2>7-7 下周趋势预判</h2>
-<h3>7.7.1 预判一：场景券与开放场景清单将密集出台（高概率）</h3>
-<p>本周湖北场景券（1000万元）与永州34个场景开放是地方场景政策的两个样本，而10月14日交通运输部《水运领域人工智能应用场景指引》与新华网案例征集（截止10月30日）表明中央牵引同步发力。Q4预计将有更多省份出台场景券资金与开放场景清单。<strong>跟踪信号：各省是否明确"场景券用于购买Token服务而非建设机柜"的资金用途限定</strong>——这是政策从建设补贴转向服务采购的关键判据。</p>
-<h3>7.7.2 预判二：推理算力向低时延节点集聚（高概率）</h3>
-<p>信通院"训推分层"判断叠加永州至大湾区5毫秒时延的现实优势，预计Q4更多低时延节点（含粤港澳、长三角、成渝本地）将主动承接推理与实时类场景，而训练类需求继续向乌兰察布、张家口、庆阳等低成本枢纽集中。区域算力分工将比"谁的规模大"更能决定未来收益。</p>
-<h3>7.7.3 预判三：具身智能场景成为地方开放新热点（中高概率）</h3>
-<p>永州34个场景中果蔬采摘机器人、带电作业机器人、特种作业机器人，以及"具身智能"被单列为适配赛道，蚂蚁灵波LingBot-VLA 2.0已支持20种机器人构型并在药房、物流、工业上下料落地。预计Q4更多地方开放清单会把具身智能列为独立赛道，但其商业化落地速度受制于硬件可靠性与成本，场景"开放"到"付费"仍有距离。</p>
-<h3>7.7.4 预判四：国产算力支撑场景成本下降（中高概率）</h3>
-<p>沐曦曦云C系列对Sage-A1.5的Day 0适配、合肥城市云与海光的万卡国产集群合作，标志国产算力平台适配能力提速。国产算力规模化部署将降低地方开放场景的算力采购成本，使"1000万元级场景券覆盖更多场景"成为可能。</p>
-<h3>7.7.5 预判五：需警惕场景发布数量与落地质量的脱节（风险提示）</h3>
-<p>当前地方场景政策密集，存在以"发布清单数量"竞争而非"落地中标率/实际调用量"竞争的倾向。本周永州年底1.8万卡集群目标、中国联通山东日均百亿级Token是较硬的落地证据，但多数地区尚未披露场景实际调用数据。Q4应重点跟踪已开放场景的三家中标率，而非新增清单数量。</p>
-<h3>7.7.6 下周重点关注</h3>
-<p>一是各省场景券资金用途是否明确限定为服务/Token采购；二是永州京东科技省级运营中心与联影医疗1000卡的11月投产进度；三是新华网案例征集10月30日截止前的申报情况；四是Text-to-Token的服务定价是否随国产算力部署而进一步下行。</p>
-
+<p><strong>下周判断一：通用推理调用继续主导增量，但资源采购将以有效调用而非榜单总量为依据。</strong>若DeepSeek V4.1-Flash-1017在下周仍保持全球前列、中国大模型周调用量未明显回落，运营商API网关和弹性推理池的扩容优先级将继续上升；若调用主要来自一次性试用、峰值贡献过大或单位Token毛利转负，则应收缩长期包量，转为按并发和有效任务结算。</p><p><strong>下周判断二：工业智能质检将比通用行业大模型更快形成可签约需求。</strong>若浙江移动在宁波得力制笔工厂的15类缺陷识别和8倍质检效率能够沉淀为交付模板，并在其他制造产线出现同类验收需求，工业边缘节点、行业知识库和模型运维需求将加快复制；若项目仍只停留在展示阶段，则不宜据此提前扩大边缘硬件采购。</p><p><strong>下周判断三：医疗AI扩容取决于运营合同，而非模型发布数量。</strong>若讯飞医疗大模型V3.7发布后，讯飞医疗上半年4.46亿元营收、49.4%同比增长及AI健康助手74.9%增速所体现的平台运营趋势继续获得合同或续费验证，医疗算力可向设备入口和患者管理平台倾斜；若医疗收入与支付分化延续、鹰瞳科技同期6729万元收入和19.6%下降所反映的单点变现压力扩大，则应控制独立模型部署规模。</p><p><strong>场景选择建议：</strong>运营商本周应把大模型API与工业质检列为第一优先级，以93.54万亿Token周调用量和15类缺陷识别、8倍质检效率分别作为“已有需求”和“已有验收”的筛选依据；医疗场景优先绑定设备、接口、临床工作流与运维合同，以持续付费能力决定扩容；政务智能体可围绕苏州“企小服”已实现的10余项申报流程拓展；视频生成维持弹性资源池，按任务量、分辨率和时长核算，并分别记录平台测算口径与字节跳动关于视频算力占比约10%的口径差异。自动驾驶暂按L2渗透率70.5%和2.5万辆无人出租车计划跟踪需求，等待运营区域、投放进度与数据合同明确后再配置长期资源。</p>
 </div>
 
 <!-- 7-8 一周要闻汇总表 -->
@@ -399,102 +386,91 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td>10月22日</td>
-    <td>国家发改委公布首批136个标志性重大应用场景</td>
-    <td>国家发改委</td>
-    <td>136个场景</td>
+    <td>10-29</td>
+    <td>讯飞发布星火医疗大模型V3.7及患者管理平台3.0</td>
+    <td>科大讯飞</td>
+    <td>2026年上半年营收4.46亿元</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>10月22日</td>
-    <td>"远景天机"气象大模型ECMWF榜单综合第一</td>
-    <td>远景科技</td>
-    <td>全球第一</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>10月21日</td>
-    <td>湖北省2026年场景券申报启动</td>
-    <td>湖北省数据局</td>
-    <td>1000万元</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>10月21日</td>
-    <td>沐曦曦云C系列完成Sage-A1.5 Day 0适配</td>
-    <td>沐曦股份</td>
-    <td>35B MoE</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>10月21日</td>
-    <td>合肥城市云与海光信息战略合作</td>
-    <td>海光信息</td>
-    <td>万卡集群</td>
-    <td><span class="change-new">★★★</span></td>
-</tr>
-<tr>
-    <td>10月21日</td>
-    <td>谷歌云Vera Rubin A5X实例下月商用</td>
-    <td>谷歌云/英伟达</td>
-    <td>96万块GPU</td>
-    <td><span class="change-new">★★★★</span></td>
-</tr>
-<tr>
-    <td>10月20日</td>
-    <td>永州发布首批34个"人工智能+"开放场景</td>
-    <td>永州市数据局</td>
-    <td>34个场景</td>
+    <td>10-29</td>
+    <td>浙江移动工业AI质检在得力制笔工厂落地</td>
+    <td>浙江移动</td>
+    <td>识别15类缺陷，效率提升8倍</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>10月20日</td>
-    <td>深圳福田发布53项金融AI解决方案</td>
-    <td>深圳市金融办</td>
-    <td>53项方案</td>
+    <td>10-29</td>
+    <td>苏州工业园区上线企小服AI服务体</td>
+    <td>苏州工业园区企业发展服务中心</td>
+    <td>已协助申报10余项惠企项目</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>10月20日</td>
-    <td>工信部披露电子信息制造业与AI终端数据</td>
-    <td>工信部</td>
-    <td>+109.9%</td>
+    <td>10-28</td>
+    <td>迈瑞医疗推动AI能力嵌入医院设备</td>
+    <td>迈瑞医疗</td>
+    <td>—</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>10-27</td>
+    <td>医疗AI企业收入分化与支付压力受到关注</td>
+    <td>鹰瞳科技、讯飞医疗</td>
+    <td>半年收入6729万元与4.46亿元</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr>
+    <td>10-26</td>
+    <td>DeepSeek V4.1-Flash-1017调用量登顶全球</td>
+    <td>DeepSeek</td>
+    <td>周调用量33.6万亿Token</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr>
-    <td>10月19日</td>
-    <td>中国联通亮相2026人工智能产业大会</td>
-    <td>中国联通山东</td>
-    <td>5199P/19678架</td>
-    <td><span class="change-new">★★★</span></td>
+    <td>10-23</td>
+    <td>英伟达参与2.5万辆无人出租车计划工程方案</td>
+    <td>英伟达</td>
+    <td>2.5万辆</td>
+    <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr>
-    <td>10月16日</td>
-    <td>中国信通院Token服务智算基础设施报告发布</td>
-    <td>中国信通院</td>
-    <td>训推分层</td>
+    <td>10-23</td>
+    <td>L2辅助驾驶渗透率升至70.5%</td>
+    <td>工信部装备工业一司</td>
+    <td>L2渗透率70.5%，NOA渗透率34.2%</td>
     <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr>
+    <td>10-23</td>
+    <td>南威软件推进政务智能体和产业智算中心</td>
+    <td>南威软件</td>
+    <td>健康相关业务收入不足1500万元</td>
+    <td><span class="change-new">★★★★</span></td>
 </tr>
 </tbody>
 </table>
 </div>
 
 <!-- 数据来源 -->
-<div class="section sources-section">
-<h2>数据来源</h2>
-<div class="sources-list">
-<span class="source-tag">工信部国新办新闻发布会（2026.10.20）</span>
-<span class="source-tag">中国新闻网（2026.10.20）永州34个开放场景</span>
-<span class="source-tag">湖北省数据局（2026.10.21）2026年场景券申报通知</span>
-<span class="source-tag">人民邮电报（2026.10.16）中国信通院Token服务智算基础设施报告</span>
-<span class="source-tag">中国电力报/CPEM（2026.10.22）国家发改委首批136个标志性重大应用场景</span>
-<span class="source-tag">北京商报（2026.10.21）沐曦曦云C系列Day 0适配</span>
-<span class="source-tag">界面新闻（2026.10.21）谷歌云Vera Rubin A5X实例</span>
-<span class="source-tag">中新网（2026.10.19）中国联通2026人工智能产业大会</span>
-<span class="source-tag">证券日报（2026.10.22）远景天机气象大模型</span>
-<span class="source-tag">南方企业新闻网（2026.10.12）2026年AI行业观察</span>
-<span class="source-tag">爱分析《2026爱分析·Data+AI应用实践报告》</span>
-<span class="source-tag">搜狐/今日永州（2026.10.21）永州开放场景发布会详情</span>
+<div class="section refs-section">
+<h2>数据来源与参考</h2>
+<div class="refs-body">
+<div class="refs-note">按正文引用顺序编号，共 12 条，其中 12 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<ol class="refs-list">
+<li class="ref-item"><span class="ref-org">格隆汇</span><a class="ref-title" href="https://wap.stockstar.com/detail/IG2026102900019829" target="_blank" rel="noopener">星火医疗大模型V3.7落地</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">讯飞发布星火医疗大模型V3.7及AI患者管理平台3.0，2026年上半年讯飞医疗营收4.46亿元，同比增长49.4%。</p></li>
+<li class="ref-item"><span class="ref-org">人民网浙江频道</span><a class="ref-title" href="http://zj.people.com.cn/n2/2026/1029/c370990-41736139.html" target="_blank" rel="noopener">浙江移动工业AI赋能智能制造升级</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">浙江移动AI质检系统可识别15类缺陷，质检效率提升8倍，并沉淀2万条标准化工业知识。</p></li>
+<li class="ref-item"><span class="ref-org">金台资讯</span><a class="ref-title" href="https://www.sohu.com/a/1094165603_120578424" target="_blank" rel="noopener">苏州工业园区推出政务AI管家</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">苏州工业园区“企小服”AI服务体已帮助企业匹配政策并成功申报10余项惠企项目。</p></li>
+<li class="ref-item"><span class="ref-org">新浪科技</span><a class="ref-title" href="https://tech.sina.cn/2026-10-28/detail-iniwttrx3885858.d.html?oid=%E8%B0%B7%E6%AD%8C%E5%A4%96%E6%8E%A8%E5%BC%95%E6%B5%81%E3%80%90%E7%94%B5%E6%8A%A5e10838%E3%80%91google%E6%8E%A8%E5%B9%BF%E7%95%99%E7%97%95.dbo&amp;vt=4" target="_blank" rel="noopener">迈瑞医疗让AI长在设备上</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">迈瑞医疗提出医疗AI需跨过技术、临床、组织和支付4道门槛，并从医院既有设备和工作流中落地。</p></li>
+<li class="ref-item"><span class="ref-org">虎嗅</span><a class="ref-title" href="https://www.huxiu.com/article/4900820.html" target="_blank" rel="noopener">医疗AI失声了</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">鹰瞳科技2026年上半年收入6729万元、同比下降19.6%，讯飞医疗收入4.46亿元、同比增长49.4%。</p></li>
+<li class="ref-item"><span class="ref-org">每日经济新闻</span><a class="ref-title" href="https://www.21jingji.com/article/20261026/herald/5ac15092decb55668b0434e2a055f505.html" target="_blank" rel="noopener">DeepSeek单周调用量登顶全球第一</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">10月19日至25日中国大模型周调用量93.54万亿Token，DeepSeek V4.1-Flash-1017调用量33.6万亿Token。</p></li>
+<li class="ref-item"><span class="ref-org">第一财经</span><a class="ref-title" href="https://m.yicai.com/news/103409676.html" target="_blank" rel="noopener">DeepSeek连续三周全球第一</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">OpenRouter口径下中国模型周调用量环比增长18.1%，DeepSeek V4.1-Flash-1017环比增长801%。</p></li>
+<li class="ref-item"><span class="ref-org">DOIT</span><a class="ref-title" href="https://www.doit.com.cn/software/862578295763013.html" target="_blank" rel="noopener">英伟达布局2.5万辆无人出租车</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">英伟达参与2.5万辆无人出租车计划的整套工程方案，自动驾驶车队化部署成为本周关注事件。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://www.21jingji.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">21世纪经济报道</a></span><a class="ref-title" href="https://www.21jingji.com/article/20261023/herald/3f163652ac6f56152af41df5d533f7a1.html" target="_blank" rel="noopener">AI先向车企收一笔过路费</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">L2级辅助驾驶乘用车渗透率达70.5%，NOA新车渗透率达34.2%，L4级单车存储需求预计超过300 GB。</p></li>
+<li class="ref-item"><span class="ref-org">经济参考网</span><a class="ref-title" href="https://finance.eastmoney.com/a/202610233906346189.html" target="_blank" rel="noopener">南威软件从政务智能体走向算力应用</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">南威软件推进多类政务智能体和北京七星园产业智算中心，健康相关业务收入不足1500万元。</p></li>
+<li class="ref-item"><span class="ref-org">SEMI大半导体产业网</span><a class="ref-title" href="https://www.semi.org.cn/site/semi/article/1d480aefde95464eba10c0912631a830.html" target="_blank" rel="noopener">大模型走向现场，边缘AI算落地账</a><span class="ref-date">2026-10-20</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">AX8860提供256 TOPS混合精度算力、128 GB内存和273 GB/s内存带宽，已完成260多个模型部署。</p></li>
+<li class="ref-item"><span class="ref-org">世界新闻网</span><a class="ref-title" href="https://www.worldjournal.com/wj/story/121339/9825514?zh-cn=" target="_blank" rel="noopener">半年上线22万部AI短剧</a><span class="ref-date">2026-10-21</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">抖音上半年新上线AI短剧22万部，一部12集短剧算力成本接近20万元；豆包称其视频算力占比约10%。</p></li>
+</ol>
 </div>
 </div>
 
@@ -503,10 +479,12 @@ tr.week-highlight { background: #fff8e1; }
 <footer class="footer">
 <p>© 2026 中国智能算力报告 | 应用场景分析章节 | 数据仅供参考，不构成投资建议</p>
 </footer>
+<div class="container">
 <div class="chapter-nav">
     <a href="供应商与产业格局分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="广东智算中心建设分析报告.html" class="nav-next">下一章 ➡️</a>
+</div>
 </div>
 </body>
 </html>
