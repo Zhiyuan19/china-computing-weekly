@@ -3,53 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中国智算市场周报 | 第 40 期 · 2026.10.22</title>
+    <title>中国智算市场周报 | 第 41 期 · 2026.10.29</title>
     <style>
 
-/* === 首页样式 === */
+/* === 版式基调：研报风（细线、克制配色、无卡片堆叠） ===
+   配色只有四层：墨色正文 / 次要灰 / 分隔线 / 深蓝主色，另加一个深红做强调。
+   强调色只用于「口径过期」这类需要警觉的信息，不做装饰。 */
+:root {
+    --ink: #1A2B3C;
+    --ink-2: #4A5A6A;
+    --ink-3: #8A97A6;
+    --line: #E6EBF1;
+    --line-2: #F0F3F7;
+    --brand: #2C5476;
+    --alert: #B3261E;
+    --bg: #F7F8FA;
+}
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
-.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif;
+    background: var(--bg); color: var(--ink);
+    font-size: 14px; line-height: 1.8;
+    -webkit-font-smoothing: antialiased;
+}
+.container { max-width: 1080px; margin: 0 auto; padding: 24px 20px 8px; }
 
-/* === Header === */
-.header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
-.header-period { font-size: 0.8em; opacity: 0.7; letter-spacing: 2px; margin-bottom: 12px; font-weight: 300; }
-.header h1 { font-size: 1.9em; font-weight: 700; margin-bottom: 6px; letter-spacing: 2px; }
-.header-subtitle { font-size: 0.85em; opacity: 0.65; margin-bottom: 18px; letter-spacing: 1px; font-style: italic; }
-.header-modules { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 16px; }
-.header-module { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 4px 14px; font-size: 0.78em; color: rgba(255,255,255,0.88); white-space: nowrap; cursor: default; }
-.header-module.active { background: rgba(102,126,234,0.5); border-color: rgba(102,126,234,0.8); color: white; }
-.header-period-bottom { font-size: 0.78em; opacity: 0.6; letter-spacing: 1px; }
-.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
-.kpi-card { background: white; border-radius: 10px; padding: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); text-align: center; }
-.kpi-card .kpi-label { font-size: 0.85em; color: #888; margin-bottom: 8px; }
-.kpi-card .kpi-value { font-size: 1.6em; font-weight: bold; margin-bottom: 4px; }
-.kpi-card .kpi-unit { font-size: 0.75em; color: #aaa; }
-.summary-box { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 20px; }
-.summary-box h2 { color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-bottom: 14px; font-size: 1.1em; }
-.summary-text { font-size: 0.9em; line-height: 1.8; color: #444; }  /* 方案A：line-height 2.2→1.8，配合 <br> 单换行收紧段间空行 */
-.summary-text p { margin: 0 0 10px 0; padding: 0; }  /* 段间距收紧（备用，目前结构为单 <p> 内 <br>，暂未命中） */
-.summary-text .s-label { font-weight: bold; }
-.s-label-1 { color: #e53935; }  /* 红色 - 政策 */
-.s-label-2 { color: #f59e0b; }  /* 橙色 - 市场 */
-.s-label-3 { color: #10b981; }  /* 绿色 - 区域 */
-.s-label-4 { color: #0ea5e9; }  /* 蓝色 - 国产 */
-.s-label-5 { color: #8b5cf6; }  /* 紫色 - 推理 */
-.s-label-6 { color: #ef4444; }  /* 深红 - 供应链 */
-.s-label-7 { color: #667eea; }  /* 靛蓝 - 应用 */
-.s-label-8 { color: #db2777; }  /* 玫红 - 第8章广东智算（与前7色区分，呼应"收尾重点"） */
-.toc-box { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); margin-bottom: 20px; }
-.toc-box h2 { color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; margin-bottom: 14px; font-size: 1.1em; }
+/* === 页头：深蓝满块（封面识别，保留） === */
+.header {
+    background: var(--brand); color: #fff;
+    padding: 30px 28px 26px; text-align: center;
+    border-radius: 4px; margin-bottom: 14px;
+}
+.header-period { font-size: 12px; letter-spacing: 3px; opacity: .62; margin-bottom: 14px; }
+.header h1 { font-size: 25px; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; }
+.header-subtitle {
+    font-size: 12px; opacity: .55; letter-spacing: 1.5px;
+    text-transform: uppercase; margin-bottom: 16px;
+}
+.header-modules {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 0; margin-bottom: 16px; font-size: 12.5px; opacity: .8;
+}
+.header-module { padding: 0 10px; border-right: 1px solid rgba(255,255,255,.22); }
+.header-module:last-child { border-right: none; }
+.header-period-bottom {
+    font-size: 12px; opacity: .55; letter-spacing: .5px;
+    padding-top: 12px; border-top: 1px solid rgba(255,255,255,.14);
+}
+
+/* === 数据说明：一条浅色提示，不用色块抢视线 === */
+.data-note {
+    background: #fff; border: 1px solid var(--line); border-radius: 4px;
+    padding: 11px 16px; margin-bottom: 14px;
+    font-size: 12.5px; color: var(--ink-2); line-height: 1.75;
+}
+.data-note strong { color: var(--ink); font-weight: 600; }
+
+/* === KPI：一块白底 + 细线分栏，替代六张卡片 === */
+.kpi-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    background: #fff; border: 1px solid var(--line); border-radius: 4px;
+    margin-bottom: 14px; overflow: hidden;
+}
+.kpi-card {
+    padding: 18px 20px 16px; text-align: center;
+    border-right: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2);
+}
+.kpi-card:nth-child(3n) { border-right: none; }
+.kpi-card:nth-last-child(-n+3) { border-bottom: none; }
+.kpi-card .kpi-label {
+    font-size: 12px; color: #6A7681; margin-bottom: 6px;
+    letter-spacing: .2px; display: flex; align-items: center; justify-content: center;
+}
+/* 章节色小方点：与执行摘要里 ①-⑧ 同一套色，起呼应作用 */
+.kpi-mark {
+    display: inline-block; width: 6px; height: 6px; border-radius: 1px;
+    margin-right: 7px; flex: none; opacity: .85;
+    background: var(--c, var(--brand));
+}
+.kpi-card .kpi-value {
+    font-size: 22px; font-weight: 600; color: var(--c, #2B4257);
+    font-variant-numeric: tabular-nums; letter-spacing: -.3px; line-height: 1.3;
+}
+.kpi-card .kpi-unit { font-size: 11.5px; color: var(--ink-3); }
+.kpi-meta { font-size: 11px; color: #6B7783; margin-top: 4px; line-height: 1.55; }
+.kpi-meta.is-stale { color: var(--alert); }
+.kpi-meta.is-up { color: #8C4A42; }    /* 涨（国内习惯用红，压到低饱和） */
+.kpi-meta.is-down { color: #40695A; }  /* 跌 */
+.kpi-meta.is-flat { color: var(--ink-3); }
+
+/* === 通用区块 === */
+.panel {
+    background: #fff; border: 1px solid var(--line); border-radius: 4px;
+    padding: 22px 26px 24px; margin-bottom: 14px;
+}
+.panel-title {
+    display: flex; align-items: baseline; justify-content: space-between;
+    padding-bottom: 10px; border-bottom: 1px solid var(--line); margin-bottom: 16px;
+}
+.panel-title h2 { font-size: 15px; font-weight: 600; color: var(--ink); letter-spacing: .5px; }
+.panel-title h2::before {
+    content: ""; display: inline-block; width: 3px; height: 14px;
+    background: var(--brand); margin-right: 9px; vertical-align: -2px;
+}
+.panel-title .en {
+    font-size: 10.5px; color: #B0BAC6; letter-spacing: 1.5px;
+    text-transform: uppercase; font-weight: 400;
+}
+
+/* === 执行摘要：三层结构（小标题 / 判断 / 事实），靠字号+字重+颜色拉开反差 === */
+.summary-text { font-size: 13.5px; color: #3D4C5A; }
+.summary-item {
+    position: relative; padding-left: 15px; margin-bottom: 25px; text-align: justify;
+}
+.summary-item:last-child { margin-bottom: 0; }
+/* 左侧竖线用该章主题色（--c 由渲染时写入），把八段在视觉上切开 */
+.summary-item::before {
+    content: ""; position: absolute; left: 0; top: 2px; bottom: 2px;
+    width: 3px; border-radius: 1.5px;
+    background: var(--c, var(--brand)); opacity: .62;
+}
+.summary-item .item-head {
+    font-size: 12.5px; font-weight: 600; color: var(--c, var(--brand));
+    letter-spacing: .8px; line-height: 1.6;
+}
+.summary-item .item-lead {
+    font-size: 15px; font-weight: 600; color: #2B4257;
+    line-height: 1.65; margin: 5px 0 0;
+}
+.summary-item .item-body {
+    font-size: 13px; color: #6A7681; line-height: 2.05; margin: 7px 0 0;
+}
+.summary-item .num { font-weight: 600; color: var(--c, var(--brand)); opacity: .9; }
+/* 八个主题统一同色，不再做七彩循环（研报里强调色只用于风险提示） */
+/* 八个主题：同一套低饱和色（明度 38–45%，饱和度 30–42%），比初版亮一档但仍柔和 */
+.s-label-1 { color: #3A6285; }  /* 政策 · 蓝 */
+.s-label-2 { color: #9A6A3B; }  /* 市场 · 赭 */
+.s-label-3 { color: #467B5D; }  /* 区域 · 绿 */
+.s-label-4 { color: #6B5589; }  /* 竞争 · 紫 */
+.s-label-5 { color: #377A8F; }  /* 技术 · 青 */
+.s-label-6 { color: #AB5949; }  /* 供应链 · 砖 */
+.s-label-7 { color: #54709A; }  /* 应用 · 黛蓝 */
+.s-label-8 { color: #886E33; }  /* 广东 · 橄榄 */
+
+/* === 目录：序号等宽淡色，行间细线 === */
 .toc-list { list-style: none; }
-.toc-item { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+.toc-item { border-bottom: 1px solid var(--line-2); }
 .toc-item:last-child { border-bottom: none; }
-.toc-item a { display: flex; justify-content: space-between; align-items: center; text-decoration: none; color: #333; font-size: 1em; padding: 4px 0; }
-.toc-item a:hover { color: #0ea5e9; }
-.toc-item .toc-num { color: #667eea; font-weight: bold; margin-right: 8px; }
-.toc-item .toc-arrow { color: #ccc; font-size: 0.9em; }
-.toc-item:hover .toc-arrow { color: #667eea; }
-.footer { text-align: center; color: #aaa; font-size: 0.8em; padding: 20px 0; }
-.data-note { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 12px 18px; margin-bottom: 20px; border-radius: 4px; font-size: 0.85em; color: #333; }
+.toc-item a {
+    display: flex; align-items: center; text-decoration: none;
+    color: var(--ink); font-size: 13.5px; padding: 11px 2px;
+}
+.toc-item a:hover { color: var(--brand); }
+.toc-num {
+    color: #B0BAC6; font-weight: 400; margin-right: 14px; min-width: 22px;
+    font-variant-numeric: tabular-nums; font-size: 12.5px;
+}
+.toc-item .toc-name { flex: 1; }
+.toc-period { font-size: 11.5px; color: var(--ink-3); margin-left: 8px; font-weight: 400; }
+.toc-arrow { color: #B3BECB; font-size: 13px; }
+.toc-item a:hover .toc-arrow { color: var(--brand); }
+
+.footer {
+    text-align: center; color: var(--ink-3); font-size: 11.5px;
+    padding: 18px 0 22px; line-height: 1.9;
+}
+
+@media (max-width: 720px) {
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .kpi-card:nth-child(3n) { border-right: 1px solid var(--line-2); }
+    .kpi-card:nth-child(2n) { border-right: none; }
+    .header h1 { font-size: 20px; }
+}
 
     </style>
 </head>
@@ -57,139 +182,125 @@ body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f
 <div class="container">
 
 <div class="header">
-    <div class="header-period">第 40 期 · 2026.10.22</div>
-    <h1>🖥️ 中国智能算力市场深度分析周报</h1>
+    <div class="header-period">第 41 期 · 2026.10.29</div>
+    <h1>中国智能算力市场深度分析周报</h1>
     <div class="header-subtitle">China AI Computing Market Intelligence Weekly</div>
     <div class="header-modules">
-        <span class="header-module">🏛️ 政策环境</span>
-        <span class="header-module">📊 市场规模</span>
-        <span class="header-module">🗺️ 区域算力</span>
-        <span class="header-module">⚔️ 竞争格局</span>
-        <span class="header-module">⚡ 技术趋势</span>
-        <span class="header-module">🔧 供应商</span>
-        <span class="header-module">💡 应用场景</span>
-        <span class="header-module">🏗️ 广东建设</span>
-        <span class="header-module">🎯 结论建议</span>
+        <span class="header-module">政策环境</span>
+        <span class="header-module">市场规模</span>
+        <span class="header-module">区域算力</span>
+        <span class="header-module">竞争格局</span>
+        <span class="header-module">技术趋势</span>
+        <span class="header-module">供应商</span>
+        <span class="header-module">应用场景</span>
+        <span class="header-module">广东建设</span>
+        <span class="header-module">结论建议</span>
     </div>
-    <div class="header-period-bottom">数据周期：2026-10-16 — 2026-10-22</div>
+    <div class="header-period-bottom">数据周期　2026-10-23 — 2026-10-29</div>
 </div>
 
 <div class="data-note">
-    <strong>数据说明：</strong>本报告数据来自Tavily权威检索，政府公告及权威媒体。KPI卡片数据取自各章节提取，如需最新数据请查阅各章节详情。
+    <strong>数据说明　</strong>本期数据来自公开检索、政府公告与权威媒体；KPI 取自各章数据卡片，口径时点见卡片标注。逐条出处见各章末「数据来源与参考」。
 </div>
 
 <div class="kpi-grid">
-        <div class="kpi-card">
-            <div class="kpi-label">全国智能算力规模（工信部口径）</div>
-            <div class="kpi-value" style="color:#667eea">2592EFLOPS</div>
-            
-            
-            <div style="font-size:0.75em;color:#888;margin-top:4px;">上周 2185 EFLOPS | ↑ +18.6%（月环比）</div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-label">全国智能算力规模同比增速</div>
-            <div class="kpi-value" style="color:#0ea5e9">146%</div>
-            
-            
-            <div style="font-size:0.75em;color:#888;margin-top:4px;">上周 177 % | ↓ -17.5%（月环比）</div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-label">中国AI加速卡出货份额</div>
-            <div class="kpi-value" style="color:#10b981">33.8%</div>
-            
-            <div style="font-size:0.7em;color:#999;margin-top:2px;">口径：2026H1</div>
-            <div style="font-size:0.75em;color:#888;margin-top:4px;">↓ | 英伟达IDC 2026H1口径33.8%（10/13披露），上半年出货67.8万颗同比-44%</div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-label">华为昇腾中国AI芯片份额</div>
-            <div class="kpi-value" style="color:#f59e0b">28.0%</div>
-            
-            <div style="font-size:0.7em;color:#999;margin-top:2px;">口径：2026H1</div>
-            <div style="font-size:0.75em;color:#888;margin-top:4px;">↑ | IDC 2026H1口径，出货57.2万颗同比近翻倍，份额较2025全年约20%提升8pct</div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-label">国产大模型周处理词元</div>
-            <div class="kpi-value" style="color:#8b5cf6">62.22 万亿词元/周</div>
-            
-            
-            <div style="font-size:0.75em;color:#888;margin-top:4px;">沿用9月第三周口径</div>
-        </div>
-        <div class="kpi-card">
-            <div class="kpi-label">电子信息制造业前三季度增加值增速</div>
-            <div class="kpi-value" style="color:#ef4444">15.8%</div>
-            
-            
-            <div style="font-size:0.75em;color:#888;margin-top:4px;">季维度·工信部10.20披露</div>
-        </div>
+<div class="kpi-card" style="--c:#9A6A3B"><div class="kpi-label"><span class="kpi-mark"></span>Lium H100 80GB按需租赁价格</div><div class="kpi-value">1.60美元/卡时</div><div class="kpi-meta is-flat">上周 — 美元/卡时 | — 持平（周环比）</div></div>
+<div class="kpi-card" style="--c:#9A6A3B"><div class="kpi-label"><span class="kpi-mark"></span>Silicon Data H100租赁指数</div><div class="kpi-value">2.88美元/卡时</div><div class="kpi-meta is-flat">上周 2.00 美元/卡时 | ↑ +44.0%（周环比）</div></div>
+<div class="kpi-card" style="--c:#6B5589"><div class="kpi-label"><span class="kpi-mark"></span>英伟达份额</div><div class="kpi-value">34%</div><div class="kpi-meta">口径　2026H1</div><div class="kpi-meta is-down">2026H1实测 | 出货67.8万颗，同比下降44%；较昇腾高6pct</div></div>
+<div class="kpi-card" style="--c:#6B5589"><div class="kpi-label"><span class="kpi-mark"></span>昇腾份额</div><div class="kpi-value">28%</div><div class="kpi-meta">口径　2026H1</div><div class="kpi-meta is-flat">2026H1实测 | 出货57.2万颗，上年同期30余万颗</div></div>
+<div class="kpi-card" style="--c:#3A6285"><div class="kpi-label"><span class="kpi-mark"></span>上海单项补贴</div><div class="kpi-value">最高500万元</div></div>
+<div class="kpi-card" style="--c:#3A6285"><div class="kpi-label"><span class="kpi-mark"></span>湖北场景券资金</div><div class="kpi-value">1000万元</div></div>
 </div>
 
-<div class="summary-box">
-    <h2>📋 执行摘要</h2>
-    <p class="summary-text"><span class="s-label s-label-1">①政策重磅：</span>10月16日习近平总书记考察乌兰察布，明确「确保已建成项目高效运行」并置于「如期完成后续项目建设」之前，工程重心由增量扩容转向存量提效。10月20日工信部披露全国智能算力规模2592 EFLOPS、同比增长146%。<br><span class="s-label s-label-2">②市场规模：</span>Q3中国智能算力中心产业投资约7288亿元、同比增34.4%，其中拟建筹备5217亿元、同比增99.1%，而交付投产仅993.6亿元，投资前置与运营滞后错配明显。<br><span class="s-label s-label-3">③区域扩张：</span>八大枢纽九大集群合计243.6万P，九个统计行周变化全部持平，因本周无同源同粒度新增投运披露。增量集中在签约与股权：世纪互联中卫2000亩AIDC框架协议落地。<br><span class="s-label s-label-4">④竞争格局：</span>IDC显示2026上半年中国AI加速器出货200.8万颗，英伟达份额33.8%（同比-44%），华为昇腾28.0%，国产合计约47%首超英伟达单一厂商。<br><span class="s-label s-label-5">⑤技术趋势：</span>10月16日中国电信与华为落地全球首个昇腾950DT万卡池，中国移动落地千卡超节点，超节点规模由384卡升至8192卡。<br><span class="s-label s-label-6">⑥供应链：</span>10月19日华为工程师进驻DeepSeek共研下一代昇腾，年底拟用950DT预训练。路透披露字节、阿里、腾讯合计订购超300万块英伟达RTX PRO 5500、总值逾350亿美元。<br><span class="s-label s-label-7">⑦应用商业化：</span>10月16日中国信通院报告明确地方政策从「建设补贴」转向「Token服务采购」。10月20日永州发布首批34个「人工智能+」开放场景，湖北启动1000万元场景券。<br><span class="s-label s-label-8">⑧广东智算中心建设：</span>本期信息表收录24条项目，运营商侧19条（电信13、移动6），政府及其他5条。关键节点：10月17日韶关已建成6个万卡智算集群，上架智能算力5.1万P、签约订单3.2GW（为去年同期64倍）；电信浈江2.2期A3A4工程EPC报价4.07亿元；黄埔4个算力新基建总投资48.39亿元。</p>
+<div class="panel">
+    <div class="panel-title">
+        <h2>执行摘要</h2>
+        <span class="en">Executive Summary</span>
+    </div>
+    <div class="summary-text"><div class="summary-item" style="--c:#3A6285"><div class="item-head">① 政策重磅</div><p class="item-lead">算力政策正从扩容转向能效约束。</p><p class="item-body">10月28日贵州要求2026—2030年算力设施PUE控制在1.2以下，并推广绿电交易；10月29日上海提出保供稳价及优化算力中心用电价格，算力消费最高可获<span class="num">30%</span>补贴，采购还需同时满足国产算力比例门槛。</p></div>
+<div class="summary-item" style="--c:#9A6A3B"><div class="item-head">② 市场规模</div><p class="item-lead">H100租赁价格出现明显分层。</p><p class="item-body">10月28日Lium将H100 80GB按需租赁低位推至<span class="num">1.60美元</span>/卡时，10月公开挂牌约2—<span class="num">12美元</span>；10月27日H100中位租金降至约<span class="num">3.4美元</span>，部分中小算力卡跌幅超过<span class="num">40%</span>，成本测算不能采用单一低价。</p></div>
+<div class="summary-item" style="--c:#467B5D"><div class="item-head">③ 区域扩张</div><p class="item-lead">枢纽供给由规划转入交付。</p><p class="item-body">10月28日中国移动韶关二期启动，测算规模78.6兆瓦，拟新增3.2万标准机架、<span class="num">3万P</span>智算能力；同日庆阳披露算力<span class="num">30.6万P</span>、内蒙古项目进入交付阶段，但新增规模、上架率及电价均未披露。</p></div>
+<div class="summary-item" style="--c:#6B5589"><div class="item-head">④ 竞争格局</div><p class="item-lead">国产加速卡已形成规模化替代。</p><p class="item-body">10月26日披露昇腾384超节点部署超750套；2026年上半年英伟达、昇腾份额分别为<span class="num">34%</span>、<span class="num">28%</span>。2025年国产加速卡出货<span class="num">165万张</span>、份额约<span class="num">41%</span>，而2026年全球AI服务器预计出货<span class="num">266万台</span>，采购需兼顾双栈验证与整机排期。</p></div>
+<div class="summary-item" style="--c:#377A8F"><div class="item-head">⑤ 技术趋势</div><p class="item-lead">技术竞争转向集群能效与协同能力。</p><p class="item-body">10月28日微纳核芯3款3D-CIM芯片全部投片，宣称算力密度提升4—6倍、能效比提升5—10倍；10月27日KDDI与博通启动CPO验证，英伟达与Meta同期扩大Vera Rubin部署，采购应考核有效吞吐和单位Token能耗。</p></div>
+<div class="summary-item" style="--c:#AB5949"><div class="item-head">⑥ 供应链博弈</div><p class="item-lead">HBM与先进封装成为交付硬约束。</p><p class="item-body">10月29日披露2026年国产AI芯片需求约<span class="num">420万颗</span>、供给约<span class="num">260万颗</span>，<span class="num">160万颗</span>缺口主要来自HBM配给；10月28日CoWoS设备交期由3—6个月延至6—8个月，AI服务器又挤占ODM产能，整机档期需提前锁定。</p></div>
+<div class="summary-item" style="--c:#54709A"><div class="item-head">⑦ 应用商业化</div><p class="item-lead">应用需求已出现可量化验收指标。</p><p class="item-body">10月29日浙江移动工业质检可识别15类缺陷，效率提升8倍并沉淀2万条工业知识；同日讯飞发布国产算力医疗大模型V3.7，上半年营收<span class="num">4.46亿元</span>、同比增长<span class="num">49.4%</span>，政务侧“企小服”已成功申报10余项惠企项目。</p></div>
+<div class="summary-item" style="--c:#886E33"><div class="item-head">⑧ 广东智算</div><p class="item-lead">广东建设转向新建扩容与存量改造并行。</p><p class="item-body">本期按<span class="num">17条</span>素材合并后新增<span class="num">16个项目</span>；10月28日韶关二期拟新增3.2万标准机架、<span class="num">3万P</span>，2027年6月建成交付；10月27日中国电信启动沙溪IDC动环改造，并推进佛山、肇庆制冷采购，前期项目仍按未开工口径管理。</p></div></div>
 </div>
 
-<div class="toc-box">
-    <h2>📑 报告目录</h2>
+<div class="panel">
+    <div class="panel-title">
+        <h2>报告目录</h2>
+        <span class="en">Contents</span>
+    </div>
     <ul class="toc-list">
         <li class="toc-item">
             <a href="政策环境分析报告.html">
-                <span><span class="toc-num">01.</span>一、政策环境分析 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">01</span>
+                <span class="toc-name">一、政策环境分析</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="市场规模发展分析报告.html">
-                <span><span class="toc-num">02.</span>二、市场规模分析 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">02</span>
+                <span class="toc-name">二、市场规模分析</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="区域算力发展分析报告.html">
-                <span><span class="toc-num">03.</span>三、区域算力发展分析 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">03</span>
+                <span class="toc-name">三、区域算力发展分析</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="竞争格局发展分析报告.html">
-                <span><span class="toc-num">04.</span>四、竞争格局分析 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">04</span>
+                <span class="toc-name">四、竞争格局分析</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="技术趋势发展分析报告.html">
-                <span><span class="toc-num">05.</span>五、技术趋势分析 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">05</span>
+                <span class="toc-name">五、技术趋势分析</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="供应商与产业格局分析报告.html">
-                <span><span class="toc-num">06.</span>六、供应商与产业格局 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">06</span>
+                <span class="toc-name">六、供应商与产业格局</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="应用场景分析报告.html">
-                <span><span class="toc-num">07.</span>七、应用场景分析 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">07</span>
+                <span class="toc-name">七、应用场景分析</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="广东智算中心建设分析报告.html">
-                <span><span class="toc-num">08.</span>八、广东智算中心建设 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">08</span>
+                <span class="toc-name">八、广东智算中心建设</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
         <li class="toc-item">
             <a href="结论与建议报告.html">
-                <span><span class="toc-num">09.</span>九、结论与建议 </span>
-                <span class="toc-arrow">→</span>
+                <span class="toc-num">09</span>
+                <span class="toc-name">九、结论与建议</span>
+                <span class="toc-arrow">›</span>
             </a>
         </li>
     </ul>
 </div>
 
 <div class="footer">
-    中国智算市场周报 · 第 40 期 · 2026.10.22 · 每周三更新 · 2026-10-16 至 2026-10-22 数据
+    中国智算市场周报 · 第 41 期 · 2026.10.29 · 每周三更新 · 2026-10-23 至 2026-10-29 数据
 </div>
 
 </div>
