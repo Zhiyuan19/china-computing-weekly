@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="zh-CN>
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>三、区域算力发展分析周报 | 第40期</title>
+    <title>区域算力发展分析周报 | 第41期</title>
     <style>
 /* === 全局样式 === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
-/* === 头部 === */
+/* === 头部（与其余八章统一：期号徽标 + 中文序号标题 + 日期副标题） === */
 .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 40px 20px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
 .header h1 { font-size: 1.8em; margin-bottom: 8px; }
 .header p { font-size: 0.95em; opacity: 0.9; }
+header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
+header h1 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
+header .subtitle { font-size: 14px; color: #aab; margin-top: 6px; }
+.week-badge { display: inline-block; background: #e53935; color: white; font-size: 11px; padding: 3px 10px; border-radius: 10px; margin-bottom: 6px; }
 
 /* === 数据说明 === */
 .data-note { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 12px 18px; margin-bottom: 20px; border-radius: 4px; font-size: 0.85em; color: #333; }
@@ -95,6 +99,7 @@ tr:hover { background: #e8f4fd; }
 .chapter-tab:last-child .chapter-tab-sep { display: none; }
 
 .chapter-nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-top: 2px solid #0f3460; margin-top: 24px; }
+.footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
 .chapter-nav a { padding: 10px 20px; border-radius: 6px; text-decoration: none; font-size: 13px; font-weight: 500; color: white; }
 .chapter-nav a.disabled { background: #ccc; pointer-events: none; }
 .nav-home { background: #1a1a2e; }
@@ -107,10 +112,59 @@ tr:hover { background: #e8f4fd; }
 .overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
 
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
+
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
+
     </style>
 </head>
 <body>
-<div class="header"><h1>三、区域算力发展分析周报</h1><p>周期：2026.1016-2026.1022（第第40期期）</p><p style="margin-top:8px;font-size:0.85em;opacity:0.8;">信源：Tavily搜索 · 权威媒体 · 各地政府公告</p></div>
+<header>
+<div class="week-badge">第41期</div>
+<h1>三、区域算力发展分析</h1>
+<div class="subtitle">2026-10-23—2026-10-29 | 中国智能算力报告</div>
+</header>
 
 <div class="container">
 
@@ -129,37 +183,43 @@ tr:hover { background: #e8f4fd; }
 </div>
 </div>
 
-<!-- 本章关键概述 -->
+<!-- 报告关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><strong>本期（第40期，2026.1016-2026.1022）是区域算力板块<em>规格最高、投运数据最静</em>的一周。</strong>10月16日习近平总书记考察内蒙古乌兰察布察哈尔高新技术开发区绿色算力产业展示厅，明确要求注重<strong>「算电协同」「算水协同」</strong>，并寄语算力中心有关人员「有高远目标，更有耐心有定力」，为西部枢纽定下「十五五」期间的长期主义基调。本周八大枢纽<em>无新增同口径投运算力披露</em>，全部周变化为持平；增量集中在<strong>签约、会议、股权与研究框架</strong>四条线：世纪互联2000亩电粒微网+GW级AIDC框架协议落地中卫（10.11签约/10.19披露）、兰州10.22召开AIDC与算电协同（西北）零碳发展大会并发布《AIDC与新能源协同发展蓝皮书（2026）》、中联数据怀来项目80%股权交予GIC、京张10.22披露53个算力中心/107万机架/智能算力31万P。</div>
+<div class="overview-text"><p class="ov-lead">本周区域算力呈现东部项目扩容、西部规模披露加速、利用率成为竞争分化的三条主线。</p><ul class="ov-points"><li><a class="src-link" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuvct9388221.shtml" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>粤港澳扩容：</strong>中国移动粤港澳（韶关）数据中心二期10月28日启动建设，项目总建筑面积9万平方米、算力规模78.6兆瓦，计划2027年6月建成交付，将新增3.2万标准机架和3万P智算能力。</a></li><li><a class="src-link" href="https://timeline.sohu.com/news/Ld5xEbQw4I?from=news" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>西部规模释放：</strong>庆阳本周披露算力规模达到30.6万P、智算占比近100%；中卫2026年新增算力15.31万P，已签约8个超大型智算中心项目，总投资1885亿元。</a></li><li><strong>利用率分化：</strong>优刻得披露乌兰察布智算中心机柜利用率超过95%，同期行业资料显示算力租赁盈亏平衡点普遍落在60%至70%上架率，东部一线城市高端训练算力仍存在一卡难求，西部部分机房利用率偏低。</li></ul><p class="ov-note"><strong>对运营商含义：</strong>本周新增供给主要集中于韶关和西部资源型枢纽，区域竞争不能只看机架和P数，应同步核验客户上架、跨区网络时延、绿电可追溯能力及电价；东西部可比电价绝对值本周未披露，暂不能据此测算区域价差。</p></div>
 </div>
 
-<div class="data-note">
-  <strong>数据口径说明：</strong>各枢纽总算力包含智算+通算混合口径；"万P"为每秒10^15次浮点运算；周变化指<span style="color:#e53935">与上期对比</span>；<span style="color:#2e7d32">绿色标注</span>为显著变化（&gt;5000P或&gt;5%）；PUE为数据中心能效比（越低越好）。
+<div class="data-meta">
+<span class="dm"><b>数据周期</b><span>上期 vs 本期（第41期）</span></span>
+<span class="dm"><b>数据来源</b><span>各省发展改革委与大数据局、工业和信息化部、<a data-portal="1" href="https://www.cls.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">财联社</a>、科技日报、人民日报客户端等</span></span>
+<span class="dm"><b>口径说明</b><span>各枢纽总算力含智算与通算混合口径；1 万 P＝10^15 次浮点运算/秒；周变化与上期对比；东西部电价差未披露不量化</span></span>
 </div>
 
 <div class="data-cards" id="brief">
-<div class="data-card"><div class="label">本周新增区域算力动态</div><div class="value">8 条</div><div class="sub">2026.1016-2026.1022 · 第40期</div></div>
-<div class="data-card"><div class="label">八大枢纽九大集群合计</div><div class="value">243.6万P</div><div class="sub">本期口径 · 八集群周变化全部持平</div></div>
-<div class="data-card"><div class="label">最高层级定调</div><div class="value">10.16 乌兰察布考察</div><div class="sub">习近平强调算电协同/算水协同</div></div>
-<div class="data-card"><div class="label">跨省算电协同实测（10月）</div><div class="value">Token成本 -31%</div><div class="sub">沪/新/皖/鄂四地 · 单卡利用率+40%</div></div>
+<div class="data-card"><div class="label">韶关二期新增</div><div class="value">3.2万标准机架</div><div class="sub">中国移动项目启动，计划2027年6月交付；同期新增3万P智算能力</div></div>
+<div class="data-card"><div class="label">庆阳算力规模</div><div class="value">30.6万P</div><div class="sub">截至本周披露口径，智算占比近100%，超11万标准机架投运</div></div>
+<div class="data-card"><div class="label">中卫新增算力</div><div class="value">15.31万P</div><div class="sub">2026年新增口径，已签约8个超大型智算中心项目</div></div>
+<div class="data-card"><div class="label">全国设施上架率</div><div class="value">71.4%</div><div class="sub">截至2026年6月底行业统计口径，约三成算力资源仍处于闲置状态</div></div>
+<div class="data-card"><div class="label">乌兰察布利用率</div><div class="value">95%以上</div><div class="sub">优刻得2026年三季报披露，为本期信号但早于本周</div></div>
+<div class="data-card"><div class="label">和林格尔绿电</div><div class="value">36万千瓦</div><div class="sub">一期风光电场及配套储能已并网，全部完成后规划装机86万千瓦</div></div>
 
 </div>
 
 <div class="section" id="timeline">
-  <h2>⏱️ 本周重大时间线（2026.1016-2026.1022）</h2>
+  <h2>⏱️ 本周重大时间线（10月23日 — 10月29日）</h2>
   <div class="timeline">
-<div class="timeline-item"><div class="timeline-date">10-16</div><div class="timeline-title">习近平总书记考察内蒙古乌兰察布察看绿色算力产业展示厅</div><div class="timeline-source">来源：新华社/人民日报客户端</div><div class="timeline-impact">明确要求注重「算电协同」「算水协同」，评价乌兰察布绿色算力「发展速度很快，未来很有潜力」，寄语算力中心有关人员「有高远目标，更有耐心有定力」——为西部枢纽确立「十五五」长期主义基调，本周区域算力最高层级事件。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-16</div><div class="timeline-title">中国信通院规划所发布《面向词元（Token）服务的智算基础设施发展研究报告（2026年）》</div><div class="timeline-source">来源：人民邮电报</div><div class="timeline-impact">提出地方政策试点正从「建设补贴」转向「Token服务采购」，政策侧重点由建设规模转向服务效能；训练算力向枢纽集聚、推理算力靠近需求的「训推分层」空间格局加快形成。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-17</div><div class="timeline-title">华商韬略《什么是乌兰察布？》披露乌兰察布算力总账</div><div class="timeline-source">来源：虎嗅网</div><div class="timeline-impact">截至2026年8月，乌兰察布签约算力项目109个、投运算力17.2万P、智算占比超95%、总投资超5000亿元、签约机架超700万架；DeepSeek拟新增约1GW（部分2027年底至2028年初投运），2026年算力产业营收目标突破80亿元。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-18</div><div class="timeline-title">2026内江市泛半导体（封测）及数据产业生态发展大会签约17个项目</div><div class="timeline-source">来源：人民网·四川频道</div><div class="timeline-impact">江苏常友科技「成渝中心算力枢纽先进计算与词元生产基地」为现场投资规模最大项目；内江算力规模稳居四川全省前三，2025年泛半导体产值137.5亿元（+38.9%）、人工智能产业营收113.31亿元（+42.1%）。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">中卫2000亩算力项目披露：世纪互联联手「电粒微网+GW级AIDC」</div><div class="timeline-source">来源：腾讯新闻</div><div class="timeline-impact">世纪互联与中卫市人民政府、中核汇能宁夏新能源于10月11日签署战略合作框架协议，规划用地2000亩；当前处于<strong>签约</strong>而非开工/投产阶段。中卫集群已引进31家数据中心企业、9个大型产业园、23万标准机架、算力规模13万P，稳定数字信息产业从业人员2085人。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">国家发改委公布首批136个标志性重大应用场景，南方电网「绿电直供与算力协同」入选</div><div class="timeline-source">来源：中国电力报 / CPEM</div><div class="timeline-impact">南方电网「绿电直供与算力协同应用场景」入选，广州棠下「七站合一、算电储融合」试点年节电超700万千瓦时、节约用地30%~40%、绿电供应100%；研发国内首套电碳算协同运营系统，试点地用电成本平均下降48%。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-21</div><div class="timeline-title">兰州AIDC与算电协同（西北）零碳发展大会发布参会指南</div><div class="timeline-source">来源：世纪储能 / 新浪财经</div><div class="timeline-impact">由中国开发区协会零碳园区专业委员会、世纪新能源网主办，弘元绿能/江苏尚德/甘肃省新能源协会联办，10月22日在兰州甘肃宁卧庄宾馆全天举办；重点议题含沙戈荒大基地、AIDC智算中心、算电协同调度机制、「东数西算」西部算力枢纽建设。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">《AIDC与新能源协同发展蓝皮书（2026）》在兰州发布</div><div class="timeline-source">来源：新浪财经</div><div class="timeline-impact">深度拆解「源—网—荷—储—碳」一体化算电协同技术架构，系统梳理光伏、风电、储能、绿电直连融合路径——西北零碳算电从「概念」转入「可复制工程模板」阶段。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">北京日报披露张家口算力总账：53个中心/107万机架/智能算力31万P</div><div class="timeline-source">来源：北京日报客户端</div><div class="timeline-impact">张家口建成投运算力中心53个、投运标准机架107万架、通用算力1.1万P、智能算力31万P，京张算力网络传输时延稳定控制在2毫秒以内；截至8月底可再生能源累计装机突破4500万千瓦、占总装机88.85%，已批复秦淮数据等4个绿电直连项目。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">2026 AIDC供电及储能技术交流会暨算力网建设大会在杭州启幕</div><div class="timeline-source">来源：CPEM（10.22-23）</div><div class="timeline-impact">预计1000+专业观众、50+重磅嘉宾、30+议题，聚焦800V HVDC与±400V对称直流、固态变压器（SST）10kV级商业化、AIDC备电与新型储能、Token级实时功耗感知——东部枢纽算电协同议题首次以供电架构为主线集中呈现。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">中国移动韶关二期启动建设</div><div class="timeline-source">来源：中国移动、韶关发布，10-28</div><div class="timeline-impact">韶关数据中心二期启动建设，项目算力规模78.6兆瓦，计划新增3.2万标准机架和3万P智算能力，并于2027年6月建成交付；当前韶关算力集群已落地26个数据中心项目、建成21万标准机架，新增项目将扩大湾区实时算力承载，但交付和上架节奏仍需跟踪。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">庆阳算力规模达到30.6万P</div><div class="timeline-source">来源：央视新闻客户端、浙江在线，10-28</div><div class="timeline-impact">甘肃庆阳数据中心集群披露算力规模达到30.6万P，超11万标准机架投运，智算占比近100%；本周信息确认庆阳继续保持西部高智算密度，但素材未披露新增规模、上架率或电价，运营商需区分总盘子和本周增量，避免将30.6万P直接计入新增供给。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">内蒙古智算中心进入交付阶段</div><div class="timeline-source">来源：央视新闻客户端、浙江在线，10-28</div><div class="timeline-impact">内蒙古枢纽一批由民营企业主导的智算中心进入交付阶段，项目占地约200亩，服务方向为京津冀提供新一代智算服务；这一进展把内蒙古供给侧从规划建设推进到交付验证阶段，但素材未披露P数、功率、投产批次和上架率，短期应按项目交付跟踪，不宜直接折算为有效算力。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">长三角3个月新增12家Token中心</div><div class="timeline-source">来源：上观新闻、新浪财经，10-28</div><div class="timeline-impact">长三角自2026年7月以来已密集成立12家Token运营中心，反映算力服务入口和模型调用需求正在增加；本周素材未披露这些中心的总机架、算力规模、实际上架率和客户结构，运营商投资判断应优先核验稳定计费规模，避免把平台注册数量等同于可交付算力。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-27</div><div class="timeline-title">西南清洁能源大会聚焦算电协同</div><div class="timeline-source">来源：国际能源网、新浪新闻，10-27</div><div class="timeline-impact">2026清洁能源大基地（西南）高质量发展大会定于11月19日在成都举行，议题覆盖水风光基地、跨省绿电交易、算力园区绿电配套及成渝零碳产业；会议将为成渝枢纽补充绿电供给和算电协同政策接口，但截至本周尚未公布具体PUE、绿电比例或电价优惠标准。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-24</div><div class="timeline-title">十五五规划强调算力电力网络协同</div><div class="timeline-source">来源：财联社，10-24</div><div class="timeline-impact">《国家信息化“十五五”规划》提出加快构建全国一体化算力网，推动算力、电力、网络协同发展；政策把调度、能源和算力放进同一体系，为西部绿电算力和东部需求调度提供统一框架，但本周没有新增地方PUE、补贴或电价数值，运营商仍需等待区域配套细则。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-23</div><div class="timeline-title">中卫新增算力达15.31万P</div><div class="timeline-source">来源：搜狐时间线、财联社背景资料，10-23</div><div class="timeline-impact">中卫2026年新增算力15.31万P，超过往年总和，已签约8个超大型智算中心项目，总投资1885亿元；新增规模与总投资显示西部资源型枢纽的供给扩张速度较快，但项目投资额不等于当期有效上架，运营商应结合客户签约、设备交付和计费规模评估供给兑现。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-23</div><div class="timeline-title">八大枢纽利用率矛盾加剧</div><div class="timeline-source">来源：搜狐时间线，10-23</div><div class="timeline-impact">截至2026年6月底，全国算力设施整体上架率为71.4%，行业资料显示算力租赁盈亏平衡点普遍为60%至70%上架率；与此同时，东部一线城市高端训练算力仍存在一卡难求，西部部分中低端机房出现闲置，说明区域之间不是简单供给不足，而是算力等级、客户和网络条件错配。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-23</div><div class="timeline-title">成熟智算中心上架率超90%</div><div class="timeline-source">来源：21经济网，10-23</div><div class="timeline-impact">润泽科技截至2026年6月末成熟算力中心上架率超过90%，在建工程151.72亿元、较上年末增长115.07%；这说明高密度项目在客户明确、交付顺畅时可以较快形成上架，但爬坡周期通常为3至9个月，区域供给评估应采用交付至稳定计费的时间窗，而非只看投产节点。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">乌兰察布机柜利用率超过95%</div><div class="timeline-source">来源：上海证券报、中国证券网、东方财富网，10-22</div><div class="timeline-impact">优刻得披露乌兰察布智算中心机柜利用率超过95%，公司前三季度营业收入15.91亿元，同比增长29.67%；高利用率证明西部项目在客户和业务匹配时具备较强消化能力，但该数据属于本期信号、早于本周，不能表述为10月23日至29日新增利用率。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">内江布局封测与算力双赛道</div><div class="timeline-source">来源：搜狐，10-22</div><div class="timeline-impact">内江提出建设成渝地区重要算力枢纽，并力争到2030年累计培育泛半导体封测企业超过200户；该事件体现成渝以产业需求牵引算力建设，但素材未披露内江当前机架、P数、投资额和上架率，现阶段不能据此量化新增枢纽供给。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">江苏部署200个典型应用场景</div><div class="timeline-source">来源：南京广播电视电视台、荔枝网，10-20</div><div class="timeline-impact">江苏部署2026年数据十大重点任务，计划培育200个典型应用场景，并启动首批2110家数据企业入库培育；政策重点从单纯扩充机架转向数据集、语料库和AI机器人应用落地，有望提升长三角算力需求，但本周未披露对应的算力采购量和补贴金额。</div></div>
 
   </div>
 </div>
@@ -168,83 +228,95 @@ tr:hover { background: #e8f4fd; }
   <h2>📊 八大枢纽周变化汇总表（上期 vs 本期）</h2>
   <table>
     <tr><th>枢纽</th><th>上期（万P）</th><th>本期（万P）</th><th>周变化</th><th>变化率</th><th>绿电%</th><th>主要驱动</th></tr>
-<tr class="week-highlight"><td>内蒙古-乌兰察布</td><td>20.6万P</td><td>20.6万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>86%</td><td>10.16 总书记考察并强调「算电协同」「算水协同」【周维度·10.16-10.22】；10.17披露截至2026.08投运17.2万P、签约109个项目、总投资超5000亿【月维度·2026.08】</td></tr>
-<tr><td>内蒙古-和林格尔</td><td>17.5万P</td><td>17.5万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>82%</td><td>本周无同口径新增投运披露【周维度】；快手超百亿、华为云750亿、火山引擎「火山云谷」等2026.08签约项目持续推进【月维度·2026.08】</td></tr>
-<tr><td>宁夏-中卫</td><td>28.7万P</td><td>28.7万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>85%</td><td>10.19披露世纪互联2000亩「电粒微网+GW级AIDC」框架协议（10.11签约）【周维度·10.19】；集群31家企业/9产业园/23万架/13万P为2025年底口径</td></tr>
-<tr><td>甘肃-庆阳</td><td>25.2万P</td><td>25.2万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>92%</td><td>10.22兰州AIDC与算电协同（西北）零碳发展大会举办、《AIDC与新能源协同发展蓝皮书（2026）》发布【周维度·10.22】；中科超级云12.003亿EPC二次招标10.28截标【月维度·2026.10】</td></tr>
-<tr><td>贵州-贵安</td><td>94.5万P</td><td>94.5万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>68%</td><td>本周无同口径新增投运披露；10.17披露贵州数据标注从业人员首次达300人奖100万、最高1000万【年维度·2026】；招商银行160亩项目持续【月维度】</td></tr>
-<tr><td>广东-韶关</td><td>13.4万P</td><td>13.4万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>80%</td><td>10.16中国网专题复核：6个万卡集群投产、17万标准机架、上半年用电+409.1%全省第一【年维度·2026】；深广韶空芯光纤预计2027Q1投产【年维度】；本周无新增投运</td></tr>
-<tr><td>安徽-芜湖</td><td>8.5万P</td><td>8.5万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>45%</td><td>10.20芜湖经开区与紫光未来科技签约服务器产线项目、预计年产值10亿元、全市首个服务器项目【周维度·10.20】；算力算法大赛成果转化中【月维度】</td></tr>
-<tr><td>京津冀-廊坊</td><td>21.5万P</td><td>21.5万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>30%</td><td>10.20《京津冀发展报告（2026）》建议发行城市群级「算力券」、建面向中小企业「AI工厂」共享算力服务平台【周维度·10.20】；润泽A区7万高功率机柜、绿电占比85%</td></tr>
-<tr><td>成渝</td><td>13.7万P</td><td>13.7万P</td><td><span class="change-flat">持平</span></td><td>-</td><td>83%</td><td>10.18内江签约17个项目含常友科技「成渝中心算力枢纽先进计算与词元生产基地」【周维度·10.18】；遂宁2026-2027算力网方案逐项落地【月维度】</td></tr>
-<tr class="week-highlight"><td>京津冀-张家口（新口径单列）</td><td>未单列</td><td>32.1万P</td><td><span class="change-flat">NEW</span></td><td>新增行</td><td>88.85%</td><td>10.22北京日报披露：建成投运算力中心53个、投运标准机架107万架、通用算力1.1万P+智能算力31万P、京张时延≤2毫秒；已批复秦淮数据等4个绿电直连项目【周维度·10.22·新披露口径，不与上期同源比较】</td></tr>
+<tr><td>京津冀</td><td>未披露（上周无基准）</td><td>张家口31万P</td><td><span class="change-flat">—（本周未披露新增规模）</span></td><td>—</td><td>未披露</td><td>京津冀需求牵引交付</td></tr>
+<tr><td>长三角</td><td>未披露（上周无基准）</td><td>12家Token运营中心</td><td><span class="change-flat">—（本周未披露算力增量）</span></td><td>—</td><td>未披露</td><td>Token中心密集落地</td></tr>
+<tr class="week-highlight"><td>粤港澳（含韶关）</td><td>3.1GW（总中标算力口径）</td><td>21万标准机架</td><td><span class="change-flat">新增3.2万架、3万P项目启动</span></td><td>—（统计口径不同）</td><td>未披露</td><td>中国移动二期启动</td></tr>
+<tr><td>成渝</td><td>未披露（上周无基准）</td><td>未披露</td><td><span class="change-flat">—（本周未披露）</span></td><td>—</td><td>未披露</td><td>算电协同政策酝酿</td></tr>
+<tr><td>内蒙古（和林格尔）</td><td>4.8万P（全部建成后规划）</td><td>4.8万P（规划总量）</td><td><span class="change-flat">—（全部建成后规划口径）</span></td><td>—</td><td>未披露</td><td>绿电项目分期建设</td></tr>
+<tr class="week-highlight"><td>宁夏（中卫）</td><td>15.31万P（2026年新增）</td><td>15.31万P（2026年新增口径）</td><td><span class="change-up">+15.31万P（年度新增口径）</span></td><td>—</td><td>未披露</td><td>8个超大项目签约</td></tr>
+<tr><td>甘肃（庆阳）</td><td>30.6万P（上周无基准）</td><td>30.6万P</td><td><span class="change-flat">—（本周披露，无新增规模）</span></td><td>—</td><td>未披露</td><td>智算占比近100%</td></tr>
+<tr><td>贵州（贵安）</td><td>未披露（上周无基准）</td><td>未披露</td><td><span class="change-flat">—（本周未披露）</span></td><td>—</td><td>未披露</td><td>本周无具体项目披露</td></tr>
 
   </table>
   <div class="analysis-box">
     <h3>📈 深度分析：周变化特征</h3>
-    <p><strong>本期周变化的核心特征是「投运静、动作密、层级升」。</strong>第一，八大枢纽九大集群本期合计仍为243.6万P，九个统计行周变化<strong>全部为持平</strong>——原因不是建设停滞，而是本期公开信源中<strong>无任何枢纽发布与第39期同源、同粒度的新增投运算力数字</strong>，因此本周不填报变化值，避免用月/季/年数据冒充周数据。第二，动作密度不低：本周新增可跟踪节点8个，其中签约类3个（中卫2000亩世纪互联框架协议、内江17项目含常友科技成渝中心算力枢纽基地、芜湖紫光未来科技服务器产线）、会议/蓝皮书类3个（兰州AIDC与算电协同西北零碳大会与《AIDC与新能源协同发展蓝皮书（2026）》、杭州AIDC供电及储能技术交流会、国家发改委首批136个标志性重大应用场景中南方电网「绿电直供与算力协同」入选）、股权类1个（中联数据怀来项目80%股权交予GIC）。第三，层级明显上移：10月16日习近平总书记在乌兰察布察看绿色算力产业展示厅后提出「算电协同」「算水协同」，把西部枢纽的政策语言从「东数西算」工程推进期正式切换到<strong>算电/算水协同的长期主义阶段</strong>，与本周中国信通院《面向词元服务的智算基础设施发展研究报告》提出的「地方政策从建设补贴转向Token服务采购」、以及南方电网试点地用电成本平均下降48%的产业实测形成同向共振。第四，<strong>口径分裂是本期最需警惕的问题</strong>：张家口10.22披露的智能算力31万P（合计32.1万P）与上期廊坊21.5万P并非同一集群、同一统计源，本报告将其单列为新口径行并标注不可直接比较；中卫「13万P」为2025年底口径、和林格尔「15万P」为2026上半年口径，均只作为趋势参考，不计入周变化。</p>
+    <p><h3>东部扩容与需求集中</h3><p>本周最明确的新增供给来自粤港澳。10月28日，中国移动粤港澳（韶关）数据中心二期启动建设，算力规模78.6兆瓦，计划新增3.2万标准机架和3万P智算能力，并于2027年6月建成交付。韶关集群目前已落地26个数据中心项目、建成21万标准机架，说明大湾区需求型枢纽仍在扩大物理承载。同期长三角自2026年7月以来成立12家Token运营中心，江苏提出培育200个典型应用场景、首批2110家数据企业入库培育。东部的共同特征不是单纯增加机架，而是把算力嵌入模型服务、机器人和制造场景；但素材未披露新增机架对应的实际上架率和采购规模，因此不能把平台数量直接折算为有效需求。</p><h3>西部规模披露加快</h3><p>西部本周以存量规模披露和项目交付为主。庆阳算力规模达到30.6万P、超11万标准机架投运，智算占比近100%；中卫2026年新增15.31万P，已签约8个超大型智算中心项目，总投资1885亿元。内蒙古一批智算中心进入交付阶段，但未披露P数；和林格尔仍以4.8万P全部建成后规划为口径，一期36万千瓦风光电场及储能已并网，全部完成后的风光装机规划为86万千瓦。规模指标需要区分年度新增、规划总量、在用规模和项目交付状态，庆阳30.6万P、中卫15.31万P及和林格尔4.8万P不能直接相加作为本周有效供给。</p><h3>利用率与价格分化</h3><p>本周素材没有披露可按区域直接比较的电价，因此无法计算东西部电价绝对价差；但供给利用率已经出现可量化分化。优刻得乌兰察布智算中心机柜利用率超过95%，润泽科技截至2026年6月末成熟算算中心上架率超过90%，而行业资料显示截至2026年6月底全国算力设施整体上架率为71.4%，算力租赁盈亏平衡点普遍为60%至70%。东部一线城市高端训练算力仍存在一卡难求，西部部分中低端机房则因网络和客户错配处于闲置，说明低价或低PUE不能自动转化为高上架率。</p><h3>租赁价格承压与运营商策略</h3><p>价格端同样出现快速下行。行业资料显示，H100中位租金由2024年初的7美元以上降至2026年年中的3.4美元左右，2026年10月Token价格较2023年3月基准下降84%，上半年部分中小型算力卡租赁价格跌幅超过40%；这些数据并非东西部区域报价，但反映算力供给扩张和API替代正在压低标准化租赁价格。运营商不宜以扩容规模作为唯一经营目标，应优先锁定高等级智算、稳定大客户和跨区调度需求，并建立从设备交付到客户验收、稳定计费的上架率口径。</p></p>
   </div>
 </div>
 
 <div class="section" id="detail">
   <h2>📍 重点枢纽深度分析</h2>
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">3-1. 内蒙古枢纽：乌兰察布—和林格尔：本周最高层级关注地 ·「算电协同」写入考察要求 </h3>
-<p style="font-size:0.85em;line-height:1.8;">2026.1016-2026.1022是内蒙古算力板块规格最高的一周。10月16日习近平总书记在乌兰察布考察，察看察哈尔高新技术开发区绿色算力产业展示厅与黄旗海，明确要求注重「算电协同」「算水协同」，评价当地绿色算力「发展速度很快，未来很有潜力」，并寄语算力中心有关人员「有高远目标，更有耐心有定力」。10.17华商韬略披露：截至2026年8月，乌兰察布签约算力项目109个、投运算力17.2万P、智算占比超95%、总投资超5000亿元、签约机架超700万架；DeepSeek拟新增约1GW算力。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">粤港澳（含韶关）：运营商二期扩容承接湾区需求 <span class="tag-new">NEW</span></h3>
+<p style="font-size:0.85em;line-height:1.8;">10月28日，中国移动粤港澳（韶关）数据中心二期项目启动建设。项目总建筑面积9万平方米，算力规模78.6兆瓦，计划2027年6月建成交付，将新增3.2万标准机架和3万P智算能力，定位为承接广深实时算力需求并服务国家“东数西算”战略。历经4年多建设，韶关算力集群已落地26个数据中心项目、建成21万标准机架。截至2026年8月，另有口径显示集群签约入驻23个智算中心项目、总投资超过1116亿元，其中6个项目投产，形成17万标准机架承载能力，总中标算力规模3.1GW。项目采用液冷单元、电力方舱和风液融合技术，但本周未披露PUE、绿电比例及实际上架率。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
+<tr><td>算力规模</td><td>3万P</td><td><span class="change-flat">新增</span></td><td>中国移动韶关数据中心二期计划新增，2027年6月交付</td></tr>
+<tr><td>机架规模</td><td>3.2万标准机架</td><td><span class="change-flat">新增</span></td><td>项目启动后新增物理承载口径</td></tr>
+<tr><td>集群存量</td><td>21万标准机架</td><td><span class="change-flat">—</span></td><td>已落地26个数据中心项目后的集群口径</td></tr>
+<tr><td>集群投资</td><td>1116亿元</td><td><span class="change-flat">—</span></td><td>截至2026年8月23个签约项目总投资口径</td></tr>
+<tr><td>绿电比例</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周项目稿未披露绿电比例</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：「算电协同」从工程口径升格为政治口径</h3>
-<p>本期内蒙古的真正变化不在算力吨位，而在话语权层级。乌兰察布自2022年获批枢纽以来，第一次在国家最高层级的现场考察中被以「算电协同」「算水协同」定义发展方向——这把此前由企业侧「绿电直连」「源网荷储」自发探索的算电协同模式，上升为西部枢纽的建设总要求。三点值得注意：<strong>一是「耐心有定力」定调与当前投产节奏吻合</strong>，109个签约项目、700万签约机架与17.2万P已投运算力之间高达数十倍的落差，说明乌兰察布已进入「签得多、等得久」的兑现期，考核口径将从签约规模转向实际上架率与Token产出；<strong>二是「算水协同」是新增量</strong>，黄旗海生态治理与数据中心用水、散热、余热回收的耦合被首次并列提出，将成为资源承载力约束下的新政策抓手；<strong>三是和林格尔承担「转化」而非「产算力」角色</strong>，乌兰察布产算力、呼和浩特做转化的分工本期无变化，62家算力中心/15万P为2026上半年口径，不构成本周增量。能源硬约束同步显性化：2026年乌兰察布算力产业用电量预计达90亿度（2025年43亿度），在109个项目陆续投运后，消纳能力将取代土地成为更硬的瓶颈。</p>
+<h3>💡 深度解读：湾区需求拉动二期扩容</h3>
+<p>韶关二期把运营商在粤港澳的算力供给从集群存量竞争推进到新增容量竞争，3.2万标准机架和3万P预计于2027年6月交付，交付前仍需观察设备到货、液冷系统能效、客户上架和稳定计费进度。对运营商而言，粤港澳的优势是靠近广深实时业务，但项目本身未披露绿电比例和PUE，扩张规模不能直接代表绿色竞争力。规划上应把一期已形成的21万标准机架与二期新增规模分开统计，并将3.1GW总中标算力口径与机架口径分列，避免跨口径推算上架率或投资强度。</p>
 </div>
 
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">3-2. 宁夏枢纽：中卫：2000亩GW级AIDC框架协议落地 · 电粒微网新范式 </h3>
-<p style="font-size:0.85em;line-height:1.8;">本期中卫最值得跟踪的信号是10月19日腾讯新闻披露的2000亩算力项目：世纪互联与中卫市人民政府、中核汇能宁夏新能源于10月11日签署战略合作框架协议，在中卫布局「电粒微网＋GW级AIDC」，规划土地2000亩。需要严格区分口径——2000亩为协议规划用地规模，<strong>当前处于签约阶段而非开工或投产</strong>。同期披露的还有中卫集群产业底数：已引进31家数据中心企业、创建9个大型数据中心产业园、标准机架23万架、算力规模13万P（2025年底口径）；带动建筑装修/线路整理/保洁等配套用工1.2万人，而稳定的数字信息产业从业人员为2085人。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">甘肃（庆阳）：高智算密度存量盘扩大 </h3>
+<p style="font-size:0.85em;line-height:1.8;">10月28日披露的信息显示，甘肃庆阳数据中心集群经过5年建设，已有超11万个标准机架投运，算力规模达到30.6万P，智算占比近100%，多个数据中心仍在持续建设。庆阳是“东数西算”八大枢纽中起步较晚但算力增速较快的节点，存量已形成较高智算密度。本周素材没有披露新增机架、新增P数、投资额、上架率、利用率、绿电比例或PUE，因此30.6万P只能作为当前披露的总规模，不能认定为本周新增。运营商评估庆阳时，应把建设规模与客户上架分开，并向项目方补核跨区域带宽、低时延业务占比和绿电供给结构。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
+<tr><td>机架规模</td><td>11万标准机架</td><td><span class="change-flat">—</span></td><td>超11万标准机架已投运，未披露本周增量</td></tr>
+<tr><td>算力规模</td><td>30.6万P</td><td><span class="change-flat">—</span></td><td>本周披露的集群总规模，非本周新增</td></tr>
+<tr><td>智算占比</td><td>近100%</td><td><span class="change-flat">—</span></td><td>庆阳集群披露口径</td></tr>
+<tr><td>上架率</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周素材未提供</td></tr>
+<tr><td>绿电比例</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周素材未提供</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：「电粒微网＋GW级AIDC」与中卫就业结构的双重刻度</h3>
-<p>中卫本周的增量是<strong>技术路线</strong>而非算力吨位。「电粒微网＋GW级AIDC」把储能与算力放在同一规划单元内，回应了中卫既有的「光伏直连＋风电交易＋电网备容」绿电聚合供应模式——从「电供算」升级为「电算一体规划」，逻辑上可减少电力波动对高密智算设备的冲击。但三点风险必须写清：<strong>一是阶段风险</strong>，从框架协议到供地、开工、机电、通电调试再到运营尚有多个环节，2000亩目前是意向而非产能，中卫「全程代办、签约到开工不足百天」的高效经验能否在GW级项目上复制仍待验证；<strong>二是外资合规约束</strong>，IDC属增值电信业务、外资股比受限（试点仅限北上深海），世纪互联与中核汇能的合作结构需以项目公司层面安排落地；<strong>三是就业乘数有限</strong>，31家企业/9产业园/23万机架对应稳定技术岗仅2085人，说明中卫算力产业的就业拉动仍以施工与配套为主，运营期岗位释放节奏滞后于产能扩张，这是「算力大区」向「算力强区」转型中尚未解决的结构问题。中卫既有禀赋未变：到户电价稳定在0.36元/千瓦时、新建数据中心绿电使用比例80%以上、集群上架率超80%。</p>
+<h3>💡 深度解读：规模领先仍需验证上架</h3>
+<p>庆阳30.6万P和近100%的智算占比说明其已跨过早期通用算力建设阶段，但本周未披露新增量，无法判断供给继续加速还是仅确认既有规模。运营商规划侧应重点核验高智算占比是否对应训练客户、模型服务客户或低时延业务，因为全国算力设施整体上架率为71.4%，规模领先与商业化仍可能存在差距。庆阳与和林格尔、中卫同属西部资源型枢纽，若项目同时具备稳定绿电、低PUE和可调度带宽，才可能把成本优势转化为跨区域订单；本周这些运营指标均未披露，不能据30.6万P直接形成区域采购结论。</p>
 </div>
 
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">3-3. 京津冀枢纽：张家口—廊坊环京走廊：53个算力中心/107万机架/智能算力31万P · 京张≤2毫秒 </h3>
-<p style="font-size:0.85em;line-height:1.8;">10月22日北京日报客户端《张北有朵「智慧的云」，京冀携手共建环京算力供给走廊》首次完整披露张家口算力总账：全市建成投运算力中心53个、投运标准机架107万架、通用算力1.1万P、智能算力31万P（合计32.1万P）；京张之间算力网络传输时延稳定控制在2毫秒以内。能源侧，截至8月底可再生能源累计装机突破4500万千瓦、占电力总装机88.85%、年可发绿电720亿度以上；张北大数据产业绿电使用率上半年达50%；已批复秦淮数据、张北云联、张北榕泰、中明能源四个绿电直连项目。10月20日《京津冀发展报告（2026）》发布，提出发行城市群级「算力券」、建设面向中小企业的「AI工厂」共享算力服务平台。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">宁夏（中卫）：年度新增规模与投资同步放大 </h3>
+<p style="font-size:0.85em;line-height:1.8;">本周披露的背景资料显示，中卫2026年新增算力规模15.31万P，超过往年总和，已签约8个超大型智算中心项目，总投资1885亿元。亚马逊、阿里巴巴、字节跳动、腾讯、美团和百度等企业先后落地，全国算力行业前10企业中6家在宁夏落户。中卫以源网荷储和产业项目为承接基础，是西部资源型枢纽中商业客户基础较强的节点。当前数字属于2026年新增及项目签约口径，并非10月23日至29日单周投产量；素材也未披露本周上架率、利用率、绿电比例和区域电价。对运营商而言，1885亿元是签约项目总投资，不能等同于已完成资本开支或已形成计费收入。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
+<tr><td>新增算力</td><td>15.31万P</td><td><span class="change-up">+15.31万P</span></td><td>2026年年度新增口径，超过往年总和</td></tr>
+<tr><td>项目数量</td><td>8个</td><td><span class="change-flat">—</span></td><td>已签约超大型智算中心项目</td></tr>
+<tr><td>项目投资</td><td>1885亿元</td><td><span class="change-flat">—</span></td><td>8个已签约项目总投资口径</td></tr>
+<tr><td>上架率</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周素材未提供</td></tr>
+<tr><td>绿电比例</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周素材未提供</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：河北双高地分工：廊坊争「近」、张家口争「绿」</h3>
-<p>京津冀枢纽本期是<strong>「口径补全」而非「规模跃升」</strong>的一周。张家口32.1万P与上期廊坊21.5万P并非同一集群、同一统计源，本报告已单列新口径行并禁止直接相减。其结构性意义在于：张家口以智能算力31万P对通用算力1.1万P的极端配比（智算占比约96.8%），加上88.85%的可再生装机占比和4个绿电直连批复，构成了全国唯一「国家级可再生能源示范区＋AI算力集群」的叠加形态；而廊坊以0.33毫秒直连北京、单向时延1毫秒以内、全数据中心36个，牢牢占据实时推理与金融算力位置。政策端的新变量是《京津冀发展报告（2026）》提出的<strong>城市群级「算力券」</strong>——由京津冀协同发展基金联合出资、定向投放区域内中小企业与科研机构，这是「算力券」从单省市工具升级为城市群工具的首个明确信号，与本周中国信通院提出的「政策从建设补贴转向Token服务采购」方向一致。资本端同步活跃：10月20日披露中联数据将33亿元怀来数据中心项目80%股权交予GIC、自留20%共控，中联数据全国规划IT总负荷5GW、已运营加在建约2GW；张家口已建成数据中心49个、投运标准机架81万架（2026年初口径），市场拥挤度与资本退出口径同步抬升。风险点：张家口数据中心平均PUE约1.25，怀来项目具体能耗与上架率未披露，IDC外资股比限制意味着GIC买的是持有不动产的项目公司而非牌照主体。</p>
+<h3>💡 深度解读：大额签约转入交付验证</h3>
+<p>中卫15.31万P年度新增和1885亿元项目投资表明西部供给扩张仍在加速，且头部客户覆盖度高于单纯依靠能源成本的项目。但规划部门应把签约、开工、设备到位、验收和稳定计费分成5个节点，1885亿元不能直接计入本周投资完成额。若项目按3至9个月完成上架爬坡，2026年内后续季度可能逐步释放有效供给；触发条件是设备交付和客户验收按期完成。当前未披露中卫电价、PUE、绿电比例及上架率，无法将其与韶关或乌兰察布进行同口径成本和利用率比较，应优先补齐运营数据。</p>
 </div>
 
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">3-4. 甘肃枢纽：庆阳与西北零碳算电协同：兰州大会落地 +《AIDC与新能源协同发展蓝皮书（2026）》发布 </h3>
-<p style="font-size:0.85em;line-height:1.8;">10月21-22日，由中国开发区协会零碳园区专业委员会、世纪新能源网主办，弘元绿能、江苏尚德、甘肃省新能源协会联办，中国开发区协会指导的「2026新能源大基地发展与运营（甘肃）大会暨AIDC与算电协同（西北）零碳发展大会」在兰州甘肃宁卧庄宾馆全天举办，主题为「聚力沙戈荒基地，共议西北算电协同零碳未来」。会议发布<strong>《AIDC与新能源协同发展蓝皮书（2026）》</strong>，深度拆解「源—网—荷—储—碳」一体化算电协同技术架构，梳理光伏、风电、储能、绿电直连融合路径。庆阳侧在建项目按计划推进：庆阳中科超级云智算中心EPC二次招标（总投资12.003亿元、842台机柜、306台48kW高功率智算柜）投标截止10月28日。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">内蒙古（和林格尔）：绿电直供叠加智算交付 <span class="tag-new">NEW</span></h3>
+<p style="font-size:0.85em;line-height:1.8;">本周资料显示，内蒙古枢纽一批由民营企业主导的智算中心进入交付阶段，项目占地约200亩，将面向京津冀提供新一代智算服务。和林格尔数据中心集群绿色能源供给示范项目通过专用线路将风光绿电直接送往数据中心，一期36万千瓦风光电场及配套储能已经并网发电，二期、三期计划于2026年底建成，全部完成后风光装机规模将达到86万千瓦，对应算力总规模4.8万P。该4.8万P是项目全部建成后的规划口径，并非本周新增；同时，本周未披露绿电占比、PUE、投资额和上架率。运营商可将其视为绿电供给与算力交付协同推进，但需要按并网、交付和上架分别核算。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
+<tr><td>规划算力</td><td>4.8万P</td><td><span class="change-flat">—</span></td><td>全部建成后对应算力总规模</td></tr>
+<tr><td>绿电装机</td><td>36万千瓦</td><td><span class="change-flat">—</span></td><td>一期风光电场及配套储能已并网</td></tr>
+<tr><td>全部装机</td><td>86万千瓦</td><td><span class="change-flat">—</span></td><td>二期、三期完成后的风光装机规划</td></tr>
+<tr><td>建设进度</td><td>二期、三期计划2026年底建成</td><td><span class="change-flat">—</span></td><td>计划节点，非已完成规模</td></tr>
+<tr><td>绿电比例</td><td>未披露</td><td><span class="change-flat">—</span></td><td>仅披露装机规模，未披露数据中心用电占比</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：西北零碳算电从「概念」进入「可复制工程模板」阶段</h3>
-<p>兰州大会的战略含金量在于<strong>它把西北三省区（甘肃、宁夏、新疆）的算电协同从各自试点拉到同一张桌子上</strong>。会议重点议题同时覆盖光储风氢一体化、沙戈荒大基地开发建设、AIDC智算中心、算电协同调度机制创新、绿电消纳与数据中心深度融合、源网荷储一体化、「东数西算」西部算力枢纽建设——这是一份西部算电协同的议题清单，也是庆阳、中卫、乌兰察布三地下一阶段竞争与协同的接口。《AIDC与新能源协同发展蓝皮书（2026）》的「源—网—荷—储—碳」五段式框架，恰好对应了庆阳绿电聚合试点二期250MW光伏、中卫大唐200万千瓦风光储、乌兰察布30万千瓦风光直连三条已落地路径的抽象，对西部枢纽从「各建各的」走向「标准互认」有直接意义。产业经济性上，10月21-22日证券时报测算给出了明确锚点：2025年全国算力中心总用电量1700亿千瓦时、占全社会用电量1.6%，2030年预计突破7000亿千瓦时、占比升至5%以上；绿电直连实际电价乌兰察布约0.25元/度（公共电网0.35元/度），但申万宏源IRR测算显示——复用既有接入设施IRR为10.8%、增建35kV工程降至8.4%、增建110kV工程仅5.9%。<strong>这意味着甘肃庆阳等「从零起步」的枢纽若以新增110kV工程获取绿电直连，财务回报显著低于复用既有设施的枢纽</strong>，投资节奏需据此重估。庆阳自身优势仍在绿电聚合与低电价（绿电占比超85%、电价低至0.398元/度），「十五五」末机架、算力双30万目标未变。</p>
-</div>
-
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">3-5. 其余四枢纽：贵安 / 韶关 / 芜湖 / 成渝：本周增量集中在「硬件本地化」与「词元工厂」两条支线 </h3>
-<p style="font-size:0.85em;line-height:1.8;"><strong>贵安（贵州）</strong>：10.17披露贵州为把数据标注产业做起来，企业从业人员首次达到300人即可获100万元奖励、最高1000万元；贵安—成渝单向时延控制在6毫秒以内，2026年目标全省算力190EFLOPS、贵安集群新建数据中心PUE均值达1.2、平均上架率70%以上。<strong>韶关（粤港澳）</strong>：10.16中国网专题复核确认已投产电信/移动/华韶/真武/华为昇腾/移动昆仑芯6个万卡集群、17万标准机架承载能力、2026上半年数据中心用电量同比+409.1%居全省第一；深广韶空芯光纤预计2027Q1投产。<strong>芜湖（长三角）</strong>：10.20芜湖经开区与紫光未来科技（杭州）签署服务器产线项目投资合同，预计年产值10亿元，为芜湖全市首个服务器项目。<strong>成渝</strong>：10.18内江泛半导体及数据产业生态大会签约17个项目，常友科技「成渝中心算力枢纽先进计算与词元生产基地」为现场最大投资项目。</p>
-<table style="margin-top:12px;">
-<tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
-</table>
-<div class="analysis-box">
-<h3>💡 深度解读：从「建机房」到「造机器」：四枢纽的产业链纵深</h3>
-<p>四个枢纽本周的共同主线是<strong>把算力产业链从下游「建机房」向上游「造机器」延伸</strong>。芜湖紫光未来科技服务器产线是本期唯一新增的本地化制造项目——年产值10亿元体量不大，但填补了芜湖「有算力中心、无服务器产线」的空白，与民生芯片、朗科科技鲲鹏/昇腾一体机共同构成长三角西部算力硬件的闭环；内江常友科技项目把「先进计算与词元生产基地」直接挂靠成渝中心算力枢纽，说明成渝正在被纳入词元生产的版图，与10.16中国信通院「训练向枢纽集聚、推理靠近需求」的训推分层判断方向一致。贵州的动作最具政策杠杆：用100万—1000万元的数据标注人才奖励对冲「算力大省、产业弱省」的结构性矛盾，本质是在补算力价值链的下游。韶关则继续走「稳态放量」路线——6个万卡集群、17万机架、上半年用电+409.1%说明产能已过爬坡期，其增长动能将来自深广韶空芯光纤2027Q1投产后到广深时延再降30%的网络红利，以及已获批的「来数加工」跨境算力专区。共同风险是四地均未在本周披露新增同口径投运算力，PUE/上架率等运营指标的披露频次远低于建设规模披露频次，建议下期起将「实际上架率」纳入八大枢纽统一观测口径。</p>
+<h3>💡 深度解读：绿电规模须转成可用供给</h3>
+<p>和林格尔的36万千瓦一期绿电装机和86万千瓦全部建成规划，与京津冀需求导入形成资源与市场两端衔接，方向上符合算电协同。但86万千瓦是风光装机，不是数据中心绿电消费比例；4.8万P也是全部建成后的规划总量。本周另一批约200亩智算中心进入交付阶段，却未披露P数与上架率，运营商无法判断新增供给规模和交付节奏。2026年底是二期、三期计划建成的时间窗，后续应跟踪实际并网容量、专线投运、算力中心投运和客户上架4项指标，只有4项连续兑现后才能确认区域有效供给。</p>
 </div>
 
 </div>
 
 <div class="section" id="policy">
   <h2>📋 政策动态：全国PUE政策全景图</h2>
-  <p style="font-size:0.85em;margin-bottom:12px;">本周重要政策进展：本周无新增政策动态（请检索后填写）</p>
+  <p style="font-size:0.85em;margin-bottom:12px;">本周重要政策进展：本周政策增量集中在算力网、电力和网络协同，而非新增统一的全国PUE或绿电比例。10月24日披露的《国家信息化“十五五”规划》提出加快构建全国一体化算力网，推动算力、电力、网络协同发展；10月27日发布的西南清洁能源大会信息聚焦水风光基地、跨省绿电交易、算力园区绿电配套及成渝零碳产业；10月20日江苏部署2026年数据十大重点任务，计划培育200个典型应用场景并启动首批2110家数据企业入库培育。本周素材未给出新的地方PUE上限、绿电比例硬指标、算力补贴金额或电价优惠数值，现阶段应以国家协同框架和地方应用、清洁能源配套政策为准，不将会议议题视为已经生效的补贴标准。</p>
   <table>
     <tr><th>区域</th><th>新建大型项目PUE要求</th><th>绿电/其他</th><th>核心补贴政策</th></tr>
+<tr><td>全国</td><td>未披露</td><td>推动算力、电力、网络协同发展，未披露全国统一比例</td><td>未披露</td></tr>
+<tr><td>内蒙古（和林格尔）</td><td>未披露</td><td>一期36万千瓦风光装机已并网；全部规划86万千瓦，未披露占比</td><td>未披露</td></tr>
+<tr><td>成渝</td><td>未披露</td><td>推动水风光基地、跨省绿电交易及算力园区绿电配套，未披露比例</td><td>11月19日清洁能源大会，未披露补贴金额</td></tr>
+<tr><td>长三角（江苏）</td><td>未披露</td><td>未披露</td><td>计划培育200个典型应用场景、首批2110家数据企业入库，未披露资金金额</td></tr>
 
   </table>
 </div>
@@ -253,30 +325,54 @@ tr:hover { background: #e8f4fd; }
   <h2>📰 本周供应链与产业生态要闻</h2>
   <table class="news-table">
     <tr><th style="width:60px;">日期</th><th style="width:180px;">事件</th><th>涉及主体</th><th style="width:80px;">重要性</th></tr>
+<tr><td>10-28</td><td>中国移动韶关数据中心二期启动，新增3万P</td><td>中国移动、韶关发布</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-28</td><td>庆阳算力规模达到30.6万P</td><td>央视新闻客户端</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-28</td><td>内蒙古一批智算中心进入交付阶段</td><td>央视新闻客户端</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-28</td><td>3个月内在长三角成立12家Token运营中心</td><td>上观新闻</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>10-27</td><td>西南清洁能源大会将于11月19日在成都举行</td><td>国际能源网</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>10-24</td><td>十五五规划提出构建全国一体化算力网</td><td>财联社</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-23</td><td>中卫2026年新增算力15.31万P</td><td>财联社背景资料</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-23</td><td>全国算力设施整体上架率为71.4%</td><td>工业和信息化部数据</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-23</td><td>成熟智算中心上架率超过90%</td><td>润泽科技</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-22</td><td>乌兰察布智算中心机柜利用率超过95%</td><td>优刻得</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-22</td><td>内江布局封测基地与算力枢纽双赛道</td><td>内江市政府</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>10-20</td><td>江苏计划培育200个典型应用场景</td><td>江苏省相关主管部门</td><td style="color:#f59e0b">★★★</td></tr>
 
   </table>
 </div>
 
-<div id="sources" class="sources">
-  <h3 style="margin-bottom:8px;">📚 数据来源</h3>
-  <ol>
-    <li>新华社/人民日报客户端（2026.10.16）— 习近平总书记考察乌兰察布绿色算力产业展示厅，强调算电协同、算水协同</li>
-    <li>人民邮电报（2026.10.16）— 中国信通院《面向词元（Token）服务的智算基础设施发展研究报告（2026年）》</li>
-    <li>虎嗅网（2026.10.17）— 乌兰察布算力总账：109个签约项目、17.2万P、总投资超5000亿元</li>
-    <li>人民网·四川频道（2026.10.18）— 内江签约17个项目，内江算力规模居四川前三</li>
-    <li>腾讯新闻（2026.10.19）— 世纪互联中卫2000亩电粒微网+GW级AIDC框架协议</li>
-    <li>中国电力报/CPEM（2026.10.20）— 国家发改委首批136个标志性重大应用场景，南方电网绿电直供与算力协同入选</li>
-    <li>世纪储能/新浪财经（2026.10.21-22）— 兰州AIDC与算电协同（西北）零碳发展大会及《AIDC与新能源协同发展蓝皮书（2026）》</li>
-    <li>北京日报客户端（2026.10.22）— 张家口53个算力中心/107万机架/智能算力31万P</li>
-    <li>CPEM（2026.10.22-23）— 2026 AIDC供电及储能技术交流会暨算力网建设大会在杭州启幕</li>
-
-  </ol>
+<div id="sources" class="section refs-section">
+  <h2>数据来源与参考</h2>
+  <div class="refs-body">
+<div class="refs-note">按正文引用顺序编号，共 11 条，其中 11 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<ol class="refs-list">
+<li class="ref-item"><span class="ref-org">韶关发布、中国移动</span><a class="ref-title" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuvct9388221.shtml" target="_blank" rel="noopener">中国移动粤港澳（韶关）数据中心二期项目启动建设</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">韶关二期算力规模78.6兆瓦，计划新增3.2万标准机架和3万P，2027年6月交付；集群已建成21万标准机架。</p></li>
+<li class="ref-item"><span class="ref-org">央视新闻客户端、浙江在线</span><a class="ref-title" href="http://china.zjol.com.cn/gnxw/202610/t20261028_31993238.shtml" target="_blank" rel="noopener">1556万架标准机架、智能算力规模全球第二</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">庆阳算力规模30.6万P、超11万标准机架投运，智算占比近100%；内蒙古一批智算中心进入交付阶段。</p></li>
+<li class="ref-item"><span class="ref-org">上观新闻、<a data-portal="1" href="https://finance.sina.com.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">新浪财经</a></span><a class="ref-title" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwttsa6646777.shtml" target="_blank" rel="noopener">3个月12家Token中心扎堆长三角</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">2026年7月以来长三角密集成立12家Token运营中心，算力平台和产业入口竞争升温。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://www.cls.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">财联社</a></span><a class="ref-title" href="https://www.cls.cn/detail/2514208" target="_blank" rel="noopener">国家信息化“十五五”规划落地，智算企业进入交付验证期</a><span class="ref-date">2026-10-24</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">规划提出构建全国一体化算力网并推动算力、电力、网络协同；韶关截至2026年8月总中标算力3.1GW。</p></li>
+<li class="ref-item"><span class="ref-org">工业和信息化部数据、<a data-portal="1" href="https://www.cls.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">财联社</a>背景资料</span><a class="ref-title" href="https://timeline.sohu.com/news/Ld5xEbQw4I?from=news" target="_blank" rel="noopener">从乌兰察布到雄安，算力之战背后的国家棋局</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">截至2026年6月底全国算力设施整体上架率71.4%；中卫2026年新增15.31万P，8个项目总投资1885亿元。</p></li>
+<li class="ref-item"><span class="ref-org">潮起网</span><a class="ref-title" href="https://www.ichaoqi.com/guandian/2026/1023/89039.html" target="_blank" rel="noopener">从乌兰察布到雄安，算力之战背后的国家棋局</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">京津冀、长三角、粤港澳和成渝呈需求型特征，内蒙古、贵州、甘肃和宁夏呈资源型特征，区域上架率存在错配。</p></li>
+<li class="ref-item"><span class="ref-org">21经济网</span><a class="ref-title" href="https://www.21jingji.com/article/20261023/herald/5b284a4947c4e1f224009a55335f9216.html" target="_blank" rel="noopener">AI公司排队买算力，润泽科技加速盖机房</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-finance">财报</span><p class="ref-desc">润泽科技截至2026年6月末成熟算力中心上架率超过90%，在建工程151.72亿元，较上年末增长115.07%。</p></li>
+<li class="ref-item"><span class="ref-org">上海证券报、中国证券网、东方财富网</span><a class="ref-title" href="https://finance.eastmoney.com/a/202610223904387852.html" target="_blank" rel="noopener">优刻得乌兰察布智算中心机柜利用率超过95%</a><span class="ref-date">2026-10-22</span><span class="ref-badge b-finance">财报</span><p class="ref-desc">优刻得乌兰察布智算中心机柜利用率超过95%，前三季度营业收入15.91亿元，同比增长29.67%。</p></li>
+<li class="ref-item"><span class="ref-org">国际能源网、新浪新闻</span><a class="ref-title" href="https://k.sina.com.cn/article_5952915705_162d248f906703rrb4.html?from=news" target="_blank" rel="noopener">2026清洁能源大基地（西南）大会将在成都举行</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">大会定于11月19日举行，议题包括跨省绿电交易、算力园区绿电配套和成渝零碳产业。</p></li>
+<li class="ref-item"><span class="ref-org">南京广播电视电视台、荔枝网</span><a class="ref-title" href="https://www.nbs.cn/news/7/202610/t20261020_798007.html" target="_blank" rel="noopener">江苏以数据赋能AI机器人产业</a><span class="ref-date">2026-10-20</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">江苏部署2026年数据十大重点任务，计划培育200个典型应用场景并启动首批2110家数据企业入库培育。</p></li>
+<li class="ref-item"><span class="ref-org">虎嗅网</span><a class="ref-title" href="https://www.huxiu.com/article/4900698.html" target="_blank" rel="noopener">囤卡三年：卡多了，债多了，钱却没了</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">H100中位租金由2024年初7美元以上降至2026年年中3.4美元左右，部分中小型算力卡租赁价格跌幅超过40%。</p></li>
+</ol>
+  </div>
 </div>
 
+</div><!-- end container -->
+
+<footer class="footer">
+<p>© 2026 中国智能算力报告 | 区域算力分析章节 | 数据仅供参考，不构成投资建议</p>
+</footer>
+
+<div class="container">
 <div class="chapter-nav">
     <a href="市场规模发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="竞争格局发展分析报告.html" class="nav-next">下一章 ➡️</a>
-</div><!-- end container -->
+</div>
+</div>
 </body>
 </html>
