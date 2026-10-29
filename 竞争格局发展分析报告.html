@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>四、竞争格局分析 | 40</title>
+    <title>四、竞争格局分析 | 第41期</title>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
@@ -67,7 +67,7 @@ tr.week-highlight { background: #fff8e1; }
 .data-card .value .unit { font-size: 12px; font-weight: 400; opacity: 0.8; }
 .data-card .change { font-size: 11px; opacity: 0.75; margin-top: 4px; }
 /* ---------- 柱状图（咨询/行业报告风格，LRN-20260910-006） ---------- */
-.chart-container { background: #ffffff; border: 1px solid #E6EAF0; border-radius: 6px; padding: 16px 18px 12px 18px; margin: 14px 0; }
+.chart-container { background: #FCFDFF; border: 1px solid #E6EAF0; border-radius: 8px; padding: 18px 20px 14px 20px; margin: 16px 0; }
 .chart-title { font-size: 14px; font-weight: 600; color: #1a1a2e; margin-bottom: 10px; line-height: 1.4; }
 /* 绘图区：左侧刻度列 + 右侧柱区（含背景网格线） */
 .chart-plot { display: flex; align-items: flex-start; }
@@ -78,12 +78,12 @@ tr.week-highlight { background: #fff8e1; }
 .chart-gridlines { position: absolute; left: 0; right: 0; top: 0; height: 280px; pointer-events: none; }
 .chart-gridline { position: absolute; left: 0; right: 0; height: 1px; background: #EFF2F6; }
 .chart-gridline.is-base { background: #D8DEE7; }
-.vbar-list { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 22px; height: 280px; padding: 0; }
-.vbar-item { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 1; max-width: 96px; }
+.vbar-list { position: relative; display: flex; align-items: flex-end; justify-content: center; gap: 32px; height: 280px; padding: 0; }
+.vbar-item { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; flex: 0 0 76px; width: 76px; }
 .vbar-pct { font-size: 11.5px; font-weight: 600; color: #4A5568; text-align: center; white-space: nowrap; order: 1; margin-bottom: 5px; }
 .vbar-bar-wrap { width: 54px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; order: 2; }
 /* 标签区固定高度：厂商名折行时不会把该列柱子顶高，保证所有柱基线与底边对齐（LRN-20260910-005） */
-.vbar-lbl { font-size: 11px; color: #3C4858; text-align: center; order: 3; height: 40px; padding-top: 6px; line-height: 1.5; }
+.vbar-lbl { font-size: 11px; color: #3C4858; text-align: center; order: 3; height: 40px; padding-top: 6px; line-height: 1.35; white-space: nowrap; }
 .vbar-bar { width: 54px; border-radius: 2px 2px 0 0; transition: all 0.3s; min-height: 3px; }
 .chapter-overview { background: #ffffff; border-radius: 12px; padding: 24px 32px; margin: 20px 16px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); border: 1px solid #e8ecf0; }
 .overview-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
@@ -110,16 +110,85 @@ tr.week-highlight { background: #fff8e1; }
 .time-dim { font-size: 10px; padding: 1px 6px; border-radius: 8px; }
 .chart-note-ok { background: #e8f5e9; border-left: 4px solid #2e7d32; padding: 8px 12px; margin: 8px 0 12px; font-size: 11px; color: #2e7d32; border-radius: 4px; line-height: 1.6; }
 .chart-note-info { background: #e8f4fd; border-left: 4px solid #2196F3; padding: 8px 12px; margin: 8px 0 12px; font-size: 11px; color: #1565c0; border-radius: 4px; line-height: 1.6; }
+.chart-signal { background: #FDECEA; border-left: 4px solid #E53935; padding: 8px 12px; margin: 8px 0 12px; font-size: 11px; color: #B3261E; border-radius: 4px; line-height: 1.6; }
 .chart-note-warn { background: #fff8e1; border-left: 4px solid #f57f17; padding: 8px 12px; margin: 8px 0 12px; font-size: 11px; color: #e65100; border-radius: 4px; line-height: 1.6; }
-@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
+@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }.section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
+
+/* 实测 vs 推测 双柱图（周度份额推测） */
+.chart-updated { font-size: 10.5px; color: #8A94A6; margin: -4px 0 10px; letter-spacing: .2px; }
+.ebar-plot { display: flex; align-items: flex-start; margin-top: 4px; }
+.ebar-axis { position: relative; flex: 0 0 42px; width: 42px; height: 300px; }
+.ebar-tick { position: absolute; right: 8px; font-size: 10px; color: #8A94A6; transform: translateY(50%); }
+.ebar-axis-unit { position: absolute; left: 0; top: 0; font-size: 10px; color: #8A94A6; }
+.ebar-body { position: relative; flex: 1; min-width: 0; }
+.ebar-gridlines { position: absolute; left: 0; right: 0; top: 0; bottom: 0; }
+.ebar-gridline { position: absolute; left: 0; right: 0; height: 1px; background: #F0F3F8; }
+.ebar-gridline.is-base { background: #DDE3EC; }
+.ebar-groups { position: relative; display: flex; align-items: flex-end; justify-content: space-around; height: 300px; padding-bottom: 40px; }
+.ebar-group { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+.ebar-cols { display: flex; align-items: flex-end; gap: 6px; }
+.ebar-col { position: relative; width: 30px; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; }
+.ebar-bar { width: 30px; border-radius: 2px 2px 0 0; min-height: 3px; }
+.ebar-bar.is-actual { background: linear-gradient(180deg,#35618F,#24476B); }
+.ebar-bar.is-est { background: linear-gradient(180deg,#AFC4DA,#8AA6C4); }
+.ebar-err { position: absolute; left: 50%; width: 0; border-left: 1px dashed #1a1a2e; transform: translateX(-50%); }
+.ebar-err::before, .ebar-err::after { content: ""; position: absolute; left: -5px; width: 10px; height: 1px; background: #1a1a2e; }
+.ebar-err::before { top: 0; }
+.ebar-err::after { bottom: 0; }
+.ebar-val { font-size: 10px; line-height: 1.2; margin-bottom: 2px; color: #24476B; }
+.ebar-val.is-est { color: #7B97B5; }
+.ebar-lbl { font-size: 11px; color: #444; margin-top: 4px; text-align: center; }
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
 </style>
 </head>
 <body>
 
 <header>
-<div class="week-badge">40</div>
+<div class="week-badge">第41期</div>
 <h1>四、竞争格局分析</h1>
-<div class="subtitle">2026-10-16—2026-10-22 | 中国智能算力报告</div>
+<div class="subtitle">2026-10-23—2026-10-29 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -141,43 +210,44 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><strong>本周（第40期，2026.1016-2026.1022）竞争格局呈现两条主线同时推进的罕见局面：一边是英伟达在华合规产品订单的爆发式回潮，一边是国产算力在模型训练端首次获得顶级模型公司的公开背书。</strong>路透10月20日报道，字节、阿里、腾讯合计订购超300万块英伟达RTX PRO 5500工作站GPU，单块约1.14万美元，总值逾350亿美元；中国客户订单总量已超600万块，而英伟达2027年全球产量上限仅300万块，合作伙伴可能只拿到申请量的5%至10%。这是一年前RTX 6000D在华遇冷后的彻底反转，说明出口管制常态化之后，需求方已把合规降规芯片从「备选」重新定位为「主供」。与此同时，DeepSeek在昇腾社区开源了基于昇腾950超节点的V4.1-Flash预训练系统参考实现，并采用华为联合定义的UBL128组网方案（128卡单层交换互联，可扩展至256K卡两层组网）。这意味着国产芯片不再只是推理选项，而是被写进了前沿模型的预训练工程栈。需求侧数据同样印证了扩容仍在加速：工信部10月20日披露，截至9月底全国智能算力规模达2592 EFLOPS、同比增长146%，较6月底的2185 EFLOPS三个月净增407 EFLOPS、环比约+18.6%。这一增速远高于英伟达在华出货-44%的降速，供给缺口正被非GPU加速器系统性填补。IDC 2026H1口径下，华为昇腾28%、平头哥7%、寒武纪5%、昆仑芯4%、海光3%，五家国产厂商合计约47%，首次反超英伟达的33.8%。风险信号同样明确：美国10月19日依PAIPA将5家中国实体列入NS-MBS名单，同日DHS命令联邦机构移除DeepSeek并禁止采购（含第三方衍生产品），管制从芯片层蔓延到模型与金融层；供给端国产芯片产能缺口仍达约40%（需求约420万颗、中芯N+2供给约260万颗），部分产品交付排期已延至一年以后。资本面上，10月22日算力硬件股集体重挫、创业板指跌超4%，市场定价逻辑已从「算力增量」切换到「算力回报率」。综合判断：国产替代的中期趋势未变，但竞争强度与节奏将在未来一个季度显著加剧。</div>
+<div class="overview-text"><p class="ov-lead">国产加速器继续挤压英伟达，整机扩产订单集中于少数头部厂商。</p><ul class="ov-points"><li><strong>芯片份额：</strong><a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a> 2026H1实测显示，英伟达在中国数据中心AI加速器市场份额为34%，华为昇腾为28%，差距缩至6个百分点；英伟达出货67.8万颗、同比下降44%，昇腾出货57.2万颗、上年同期为30余万颗。</li><li><a class="src-link" href="https://drc.gd.gov.cn/xmgg/content/post_4967642.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>结构迁移：</strong>2026H1中国AI加速器总出货200.8万颗，其中非GPU加速器101.6万颗、同比增长近80%，GPU为99.1万颗、同比下降26%；平头哥、寒武纪、昆仑芯和海光信息份额分别为7%、5%、4%和3%。</a></li><li><a class="src-link" href="https://www.toutiao.com/article/7698270375452410406" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>整机扩产：</strong>DIGITIMES预测2026年全球AI服务器出货266万台、同比增长46.4%，其中高阶AI服务器237万台；Google与Celestica组合、鸿海、浪潮和戴尔预测出货分别为79.4万台、52.2万台、32.4万台和29.9万台。</a></li></ul><p class="ov-note"><strong>对运营商含义：</strong>截至10-26，素材未提供阿里云、腾讯云、华为云及运营商云的份额，也未提供算力租赁、MaaS、整柜托管价格和毛利数据，本章不作量化判断。采购侧应同时考察芯片供给、集群效率、软件迁移和整柜交付，以英伟达与昇腾34%和28%的实测份额设置双栈验证，并依据鸿海52.2万台、浪潮32.4万台的整机预测出货规模评估供应弹性。</p></div>
 </div>
 
-<strong>数据说明：</strong>本周报聚焦最近7天（2026-10-16—2026-10-22）竞争格局变化。数据均来自权威机构公开披露。<br>
-<strong>时间维度标注规则：</strong>
-<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化</span> = 本周内（≤7天）直接观测到的变化；
-<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span> = 最近一个月的数据对比；
-<span class="time-dim" style="background:#fce4ec;color:#c62828">季变化/年变化</span> = 季度或年度数据作为背景参考。
+<div class="data-meta">
+<span class="dm"><b>数据周期</b><span>2026-10-23—2026-10-29（第41期）</span></span>
+<span class="dm"><b>数据来源</b><span>IDC、DIGITIMES、路透社、申万宏源研究、厂商公告与财联社等</span></span>
+<span class="dm"><b>口径说明</b><span>芯片为数据中心 AI 加速器出货口径（不含消费级 GPU）；服务器为 IDC 品牌商营收口径；两类份额不可相加或相减</span></span>
+</div>
+
 
 <!-- 4-1 本周竞争格局核心数据速览 -->
 <div class="section">
 <h2>4-1 本周竞争格局核心数据速览</h2>
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">中国AI加速卡出货份额</div>
-    <div class="value">33.8%<span class="unit"></span></div>
-    <div class="change">↓ | 英伟达IDC 2026H1口径33.8%（10/13披露），上半年出货67.8万颗同比-44%</div>
+    <div class="label">英伟达份额</div>
+    <div class="value">34<span class="unit">%</span></div>
+    <div class="change">2026H1实测 | 出货67.8万颗，同比下降44%；较昇腾高6pct</div>
 </div>
 <div class="data-card">
-    <div class="label">华为昇腾中国AI芯片份额</div>
-    <div class="value">28.0%<span class="unit"></span></div>
-    <div class="change">↑ | IDC 2026H1口径，出货57.2万颗同比近翻倍，份额较2025全年约20%提升8pct</div>
+    <div class="label">昇腾份额</div>
+    <div class="value">28<span class="unit">%</span></div>
+    <div class="change">2026H1实测 | 出货57.2万颗，上年同期30余万颗</div>
 </div>
 <div class="data-card">
-    <div class="label">国产AI芯片合计份额</div>
-    <div class="value">约47%<span class="unit"></span></div>
-    <div class="change">↑ | 华为+平头哥+昆仑芯+寒武纪+海光合计约47%，首超英伟达34%（IDC 2026H1）</div>
+    <div class="label">加速器总量</div>
+    <div class="value">200.8<span class="unit">万颗</span></div>
+    <div class="change">2026H1实测 | GPU同比下降26%，非GPU同比近80%</div>
 </div>
 <div class="data-card">
-    <div class="label">智能算力规模</div>
-    <div class="value">2592 EFLOPS<span class="unit"></span></div>
-    <div class="change">↑ | 工信部10/20披露，截至9月底同比+146%；截至6月底为2185 EFLOPS</div>
+    <div class="label">非GPU出货</div>
+    <div class="value">101.6<span class="unit">万颗</span></div>
+    <div class="change">2026H1实测 | 同比增长近80%，超过GPU的99.1万颗</div>
 </div>
 <div class="data-card">
-    <div class="label">三大厂英伟达订单</div>
-    <div class="value">超300万块<span class="unit"></span></div>
-    <div class="change">↑ | 路透10/20：字节+阿里+腾讯订购RTX PRO 5500逾300万块，总值逾350亿美元，单价约1.14万美元</div>
+    <div class="label">AI服务器出货</div>
+    <div class="value">266<span class="unit">万台</span></div>
+    <div class="change">2026年预测 | 同比增长46.4%，高阶AI服务器237万台</div>
 </div>
 </div>
 <div class="data-table-wrapper">
@@ -194,41 +264,57 @@ tr.week-highlight { background: #fff8e1; }
 </thead>
 <tbody>
 <tr>
-    <td><strong>中国AI加速卡总出货（IDC口径）</strong></td>
-    <td>200.8万颗（2026H1）</td>
-    <td>200.8万颗（2026H1，本期无新口径）</td>
-    <td><span class="time-dim">半年变化</span></td>
-    <td class="change-flat">→ →持平</td>
-    <td>IDC于10月13日披露2026年上半年中国数据中心AI加速器出货200.8万颗，为目前最新可核验总量口径。本周未取得2026Q3新数据。但结构剧变：GPU出货99.1万颗同比-26%，非GPU加速器101.6万颗同比近+80%，首次在数量上反超GPU，标志着推理时代芯片选型逻辑已从通用算力转向专用算力。下期需关注IDC 2026Q3报告发布窗口。</td>
+    <td><strong>AI芯片-英伟达</strong></td>
+    <td>—（首期无基准）</td>
+    <td>34%</td>
+    <td><span class="time-dim">年同比（2026H1）</span></td>
+    <td class="change-flat">→ —（首期无基准）</td>
+    <td>IDC 2026H1中国数据中心AI加速器出货口径显示，英伟达出货67.8万颗，同比下降44%，市场份额为34%，与华为昇腾的差距为6个百分点。该数据是截至10-26最近披露的完整实测份额，并非周度变化。先进芯片出口限制压缩可售型号，国产替代由政府、互联网及运营商项目承接。运营商不宜继续单一锁定英伟达供货，应将昇腾兼容性、现货期限和替代交付责任纳入2026年四季度采购合同。</td>
 </tr>
 <tr>
-    <td><strong>英伟达在华合规芯片在手订单</strong></td>
-    <td>RTX 6000D 首批遇冷，部分企业拒单（2025年中）</td>
-    <td>超300万块RTX PRO 5500待交付（2026/10/20路透）</td>
-    <td><span class="time-dim">月变化</span></td>
-    <td class="change-up">↑ 需求由冷转爆</td>
-    <td>路透10月20日报道，字节、阿里、腾讯合计订购超300万块RTX PRO 5500，单价约1.14万美元，总值逾350亿美元；中国客户订单总量已超600万块，而英伟达2027年全球产量上限仅300万块，渠道商可能只能拿到申请量的5%-10%。对比一年前RTX 6000D在华遇冷的冷遇，合规芯片已从备选变为主供，反映出口管制常态化后需求方务实下移。</td>
+    <td><strong>AI芯片-华为昇腾</strong></td>
+    <td>—（首期无基准）</td>
+    <td>28%</td>
+    <td><span class="time-dim">年同比（2026H1）</span></td>
+    <td class="change-flat">→ —（首期无基准）</td>
+    <td>IDC 2026H1实测显示，华为昇腾出货57.2万颗，上年同期为30余万颗，份额达到28%，与英伟达相差6个百分点；10-26开源证券报告进一步披露昇腾384超节点已部署750余套。份额与超节点规模同步扩张，说明竞争已由单卡参数延伸至集群交付。运营商采购时除比较芯片价格外，还应核查750余套部署对应的集群利用率、故障率、软件版本及模型迁移工时。</td>
 </tr>
 <tr>
-    <td><strong>全国智能算力规模（工信部口径）</strong></td>
-    <td>2185 EFLOPS（2026年6月底）</td>
-    <td>2592 EFLOPS（2026年9月底）</td>
-    <td><span class="time-dim">月变化</span></td>
-    <td class="change-up">↑ +18.6%环比 / 同比+146%</td>
-    <td>工信部10月20日国新办发布会披露，截至9月底全国智能算力规模达2592 EFLOPS，同比增长146%。以6月底2185 EFLOPS为基准，三个月净增407 EFLOPS、环比约+18.6%。这一扩张速度意味着国产芯片出货仍处爬坡通道：算力总盘增速远高于英伟达在华出货-44%的降速，供给缺口正被非GPU加速器填充，是国产替代最直接的量化背书。</td>
+    <td><strong>AI芯片-阿里平头哥</strong></td>
+    <td>—（首期无基准）</td>
+    <td>7%</td>
+    <td><span class="time-dim">年同比（2026H1）</span></td>
+    <td class="change-flat">→ —（首期无基准）</td>
+    <td>IDC 2026H1中国数据中心AI加速器口径下，阿里平头哥份额为7%，对应约14.1万颗，位居英伟达和华为之后。本周10-19至10-26素材未披露新的阿里云、平头哥份额或算力租赁价格，7%仅作为最近实测基线。平头哥份额主要依托阿里云内部应用及外部服务，运营商引入该路线时不能只比较卡价，还需验证云API开放程度、模型迁移成本和跨平台运维能力。</td>
 </tr>
 <tr>
-    <td><strong>国产AI芯片在运营商推理集采中标包份额</strong></td>
-    <td>昆仑芯中标70%/70%/100%（2026年，移动十亿级推理集采）</td>
-    <td>昆仑芯三标包70%/70%/100%（2026年10月复查，无新公示）</td>
-    <td><span class="time-dim">月变化</span></td>
-    <td class="change-flat">→ →持平</td>
-    <td>本周运营商侧未公示新一轮推理型AI设备集采中标结果，最近可核验的仍是昆仑芯在中国移动十亿级推理型集采三个标包分别拿下70%、70%、100%份额。对照中国移动2026-2027推理型通用计算设备中CANN路线设备含税金额约34亿元、占总规模67%以上，国产路线已占运营商推理采购的三分之二。本周新信号来自供给端：中移动RoCE交换机集采自主可控占比提至80%、上限40亿元。</td>
+    <td><strong>AI芯片-寒武纪</strong></td>
+    <td>—（首期无基准）</td>
+    <td>5%</td>
+    <td><span class="time-dim">年同比（2026H1）</span></td>
+    <td class="change-flat">→ —（首期无基准）</td>
+    <td>IDC 2026H1统计中，寒武纪占中国数据中心AI加速器市场5%，对应约10万颗，并进入华为、平头哥、昆仑芯和寒武纪合计占非GPU市场95%的第一阵营。10-26素材未披露寒武纪本周新增份额、售价或毛利，因此5%维持为最近实测值。独立芯片厂商形成第二供应来源，有助于降低单一供应商风险，但运营商仍需通过小规模训推混合集群验证单位Token成本、供货连续性及软件栈稳定性。</td>
+</tr>
+<tr>
+    <td><strong>AI服务器整机-鸿海</strong></td>
+    <td>—（首期无基准）</td>
+    <td>19.62%</td>
+    <td><span class="time-dim">年同比（2026年预测）</span></td>
+    <td class="change-flat">→ —（首期无基准）</td>
+    <td>DIGITIMES于10-19预测2026年全球AI服务器出货266万台，其中鸿海出货52.2万台、同比增长88%，按总量折算份额为19.62%。这是全球整机出货预测口径，不是中国AI服务器品牌商实测份额，也不能与IDC芯片份额并列解读。运营商评估ODM直供能力时，应把52.2万台对应的产能兑现率、液冷系统交付和GB300机柜排期写入合同，而非只依据预测份额扩大备货。</td>
+</tr>
+<tr>
+    <td><strong>AI服务器整机-浪潮</strong></td>
+    <td>—（首期无基准）</td>
+    <td>12.18%</td>
+    <td><span class="time-dim">年同比（2026年预测）</span></td>
+    <td class="change-flat">→ —（首期无基准）</td>
+    <td>DIGITIMES 10-19预测2026年全球AI服务器出货266万台，浪潮出货32.4万台、同比增长56%，按总量折算份额为12.18%，处于全球头部整机厂序列。该值为预测出货量折算结果，并非季度实测品牌商份额，也不得与总体服务器浪潮27.5%的其他口径混用。运营商可把32.4万台预测规模作为供应弹性参照，并将整机排产、液冷验收和交付周期与芯片锁价条款联动。</td>
 </tr>
 </tbody>
 </table>
 </div>
-<p class="source">数据来源：IDC中国、C114通信网、券商研究报告及公开信息整理</p>
+<p class="source">数据来源：IDC中国、<a data-portal="1" href="https://www.c114.com.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">C114</a>通信网、券商研究报告及公开信息整理</p>
 </div>
 
 <!-- 4-2 一周竞争格局动态综述 -->
@@ -236,52 +322,40 @@ tr.week-highlight { background: #fff8e1; }
 <h2>4-2 一周竞争格局动态综述</h2>
 <div class="timeline">
 <div class="timeline-item">
-    <div class="timeline-date">10-22</div>
-    <div class="timeline-title">算力硬件股集体重挫，光模块'易中天'领跌；创业板指跌超4%</div>
-    <div class="timeline-source">界面新闻/新浪财经（10/22收盘）</div>
-    <div class="timeline-impact">上证跌1.48%、创业板指跌超4%（较6月高点回撤超40%），全市场近5000只个股下跌，成交1.54万亿元。光通信、CPO、算力板块重挫，浪潮信息、深信服、腾讯控股跌超3%，中科曙光小幅上涨。资金从硬件前置涨幅切向应用，'算力回报率'取代'算力增量'成为定价主线，但份额层面的产业事实未改变。</div>
+    <div class="timeline-date">10-26</div>
+    <div class="timeline-title">昇腾384超节点部署超750套</div>
+    <div class="timeline-source">开源证券，10-26</div>
+    <div class="timeline-impact">开源证券10-26报告披露，华为昇腾384超节点已部署750余套，并引用IDC 2026H1数据称昇腾份额达到28%、英伟达为34%。超节点规模化部署将国产芯片竞争从单卡参数推进到集群交付。运营商应要求厂商提供750余套部署对应的故障率、集群利用率和软件版本记录，再据此确定国产集群扩容比例。</div>
 </div>
 <div class="timeline-item">
     <div class="timeline-date">10-21</div>
-    <div class="timeline-title">DeepSeek联手华为共研AI芯片，昇腾成为其预训练系统参考实现底座</div>
-    <div class="timeline-source">通信世界（10/20-10/21）；华为计算公众号9/30昇腾社区文章</div>
-    <div class="timeline-impact">DeepSeek在昇腾社区开源基于昇腾950超节点的V4.1-Flash预训练系统参考实现，并采用华为联合定义的UBL128组网（128卡单层交换，可扩展256K卡）。模型公司把训练侧工程押上国产算力，是国产芯片在训练端首次获得顶级模型公司的公开背书，直接削弱'国产芯片只能做推理'的旧共识。</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">10-20</div>
-    <div class="timeline-title">字节阿里腾讯合计订购超300万块英伟达RTX PRO 5500，总值逾350亿美元</div>
-    <div class="timeline-source">路透社（10/20首发，法新/RFI/联合早报/德国之声10/20-10/21转载）</div>
-    <div class="timeline-impact">中国客户订单总量已超600万块，英伟达2027年全球产量上限仅300万块，合作伙伴可能只拿到申请量的5%-10%。单块约1.14万美元，2027Q1才商业交付。合规芯片从去年遇冷变抢不到货，英伟达在华潜在份额存在回升窗口，国产替代短期承压、中期不变。</div>
-</div>
-<div class="timeline-item">
-    <div class="timeline-date">10-20</div>
-    <div class="timeline-title">工信部：截至9月底全国智能算力规模达2592 EFLOPS，同比增长146%</div>
-    <div class="timeline-source">工信部信息通信管理局局长谢存，国新办10/20发布会</div>
-    <div class="timeline-impact">较6月底2185 EFLOPS三个月净增407 EFLOPS、环比约+18.6%。总盘增速远超英伟达在华出货-44%的降速，说明供给缺口正由非GPU加速器填补，为国产替代提供需求端量化背书。</div>
+    <div class="timeline-title">国产加速卡2025年出货165万张</div>
+    <div class="timeline-source">界面新闻，10-21</div>
+    <div class="timeline-impact">界面新闻10-21报道援引IDC《2025年度中国云端AI加速器市场报告》，中国AI加速卡总交付约400万张，其中国产厂商约165万张、份额约41%，英伟达约220万张、份额55%。该数据用于确认国产替代起点，不替代2026H1的34%和28%实测份额。运营商可据此设置英伟达与国产芯片双供应商体系。</div>
 </div>
 <div class="timeline-item">
     <div class="timeline-date">10-19</div>
-    <div class="timeline-title">美OFAC依PAIPA将5家中国实体列入NS-MBS名单；美方指示联邦机构停用DeepSeek</div>
-    <div class="timeline-source">美国国务院/OFAC 10/19公告；美国国土安全部命令（编号2026-01）10/19联邦公报公布、10/20生效</div>
-    <div class="timeline-impact">上海至算科技、奇绩创坛及其3只关联基金被制裁，涉及财产冻结、跨境融资与美元交易限制。同步的DeepSeek联邦禁用令覆盖第三方衍生产品，合规边界未定义。制裁首次从芯片出口蔓延到模型层，国产芯片的'确定性溢价'与国产模型的'自主可控叙事'同步强化。</div>
+    <div class="timeline-title">全球AI服务器预计出货266万台</div>
+    <div class="timeline-source">DIGITIMES，10-19</div>
+    <div class="timeline-impact">DIGITIMES 10-19预测2026年全球AI服务器出货266万台、同比增长46.4%，其中高阶AI服务器237万台。Google与Celestica组合出货79.4万台，鸿海52.2万台，浪潮32.4万台，戴尔29.9万台。头部厂商出货规模差距意味着扩产订单集中于少数供应链，运营商应将整机排产、液冷交付和网络扩容同步纳入采购计划。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10-19</div>
-    <div class="timeline-title">AIDC高速互连厂商披露：产品收入结构随超节点放量快速迁移</div>
-    <div class="timeline-source">江苏安澜万锦公告（10/21上交所披露）</div>
-    <div class="timeline-impact">上半年AIDC应用高速线缆收入占比由2023年54.32%升至85.76%，224Gbps产品占比升至57.89%，56Gbps以下传统IDC占比降至14.24%。上游互连环节的营收结构已完成代际切换，佐证超节点从'0到1'进入规模部署，是芯片—整机—网络—线缆全链条放量最直接的财务侧证据。</div>
+    <div class="timeline-date">10-18</div>
+    <div class="timeline-title">非GPU出货101.6万颗超过GPU</div>
+    <div class="timeline-source">搜狐科技，10-18</div>
+    <div class="timeline-impact">搜狐科技10-18报道援引IDC数据，2026H1中国数据中心AI加速器总出货200.8万颗，其中非GPU加速器101.6万颗、同比增长近80%，GPU为99.1万颗、同比下降26%。非GPU首次在数量上超过GPU，意味着运营商推理负载的国产设备进入规模部署阶段。规划时应按训推分线配置资源，并将模型适配和集群调度列为扩容前置条件。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10-17</div>
-    <div class="timeline-title">乌兰察布披露DeepSeek拟新增约1GW算力，部分2027年底至2028年初投运</div>
-    <div class="timeline-source">媒体报道（网易/搜狐时间线，10/17）；DeepSeek官网乌兰察布IDC与采购岗招聘可佐证</div>
-    <div class="timeline-impact">模型公司自建算力的边界从'租云'延伸到'建机房'。乌兰察布累计签约算力项目109个、签约IT负荷超25GW、签约机架超700万架、算力运行规模19万P、智算占比超90%，到户电价0.32-0.36元/千瓦时。芯片选型将直接受'确定性优先'驱动。</div>
+    <div class="timeline-date">10-14</div>
+    <div class="timeline-title">平头哥与寒武纪份额达7%和5%</div>
+    <div class="timeline-source">电子工程专辑，10-14</div>
+    <div class="timeline-impact">电子工程专辑10-14报道IDC 2026H1口径，阿里平头哥占中国数据中心AI加速器市场7%，寒武纪占5%，百度昆仑芯占4%，海光信息占3%，相关产品已被政府机构、互联网公司和电信运营商采用。国产厂商由头部芯片向二线芯片分散，有利于运营商建立多芯片池，但各厂商生态成熟度不一，不能仅按5%至7%的份额直接替换存量平台。</div>
 </div>
 <div class="timeline-item">
-    <div class="timeline-date">10-16</div>
-    <div class="timeline-title">习近平考察乌兰察布强调'算电协同''算水协同'</div>
-    <div class="timeline-source">央视新闻/人民日报/国家数据局（10/16考察，10/17-10/18报道）</div>
-    <div class="timeline-impact">算力网被列为国家'六张网'之一。乌兰察布算力中心PUE平均1.16、签约绿电直连项目14个、新能源装机546万千瓦。政策定调从'建多少算力'转向'单位能耗能产出多少Token'，能效指标将成为下一轮集采与智算中心审批的硬约束，重塑芯片与机房选型权重。</div>
+    <div class="timeline-date">10-13</div>
+    <div class="timeline-title">英伟达出货降44%份额降至34%</div>
+    <div class="timeline-source">芯东西，10-13</div>
+    <div class="timeline-impact">芯东西10-13报道，IDC统计2026H1英伟达在中国数据中心AI加速器出货67.8万颗，同比下降44%，份额降至34%；华为出货57.2万颗、份额28%，差距为6个百分点。供给约束扩大国产芯片议价空间，运营商应在2026年四季度采购中同时锁定现货、价格上限及替代芯片交付责任，降低单一进口型号延期对训练任务的影响。</div>
 </div>
 </div>
 </div>
@@ -289,151 +363,202 @@ tr.week-highlight { background: #fff8e1; }
 <!-- 4-3 本周竞争格局深度解读 -->
 <div class="section">
 <h2>4-3 本周竞争格局深度解读</h2>
-<div class="deep-event">
-<div class="deep-event-title">专题：350亿美元订单与1GW自建算力——本周中国AI算力供给的两极拉扯</div>
-
-<h4>核心背景</h4>
-<p>本周出现了两个方向完全相反、却在同一周内发生的事件。10月20日路透社报道，字节跳动、阿里巴巴、腾讯三家合计订购超过300万块英伟达RTX PRO 5500工作站GPU，按每块约1.14万美元的标价计算，潜在订单总值超过350亿美元（约合人民币2337亿元）。而仅仅两天前的10月17日，媒体报道称DeepSeek计划在乌兰察布新增约1GW算力，部分将在2027年底至2028年初投入运行。一个在买英伟达，一个在自建机房，中国AI算力供给的结构性矛盾被压缩到了同一周。</p>
-
-<h4>关键数据</h4>
-<p>英伟达侧：三家订单超300万块，中国客户订单总量超600万块，而英伟达2027年全球产量上限为300万块，合作伙伴可能只能拿到申请量的5%至10%。RTX 5500计划2026年12月提供早期样品、2027年第一季度商业交付。另有深圳上市的天阳科技于10月13日公告，同意采购2万块RTX PRO 5500。DeepSeek侧：乌兰察布已累计签约算力项目109个、签约机架超700万架、签约IT负荷超25GW、算力运行规模19万P（其中智能算力占比超90%），到户电价0.32-0.36元/千瓦时，全年1-8月实现营收56.8亿元。</p>
-<h4>深度分析</h4>
-<p><b>要点一：合规芯片已从「备选」翻转为「主供」。</b>一年前英伟达降规版RTX 6000D刚推出时，中国大型科技公司兴趣寥寥、部分企业直接拒单，理由是性能与高价不匹配，且当时普遍预期美方会放宽更强芯片的出口。这一预期在2026年已彻底破灭——Blackwell架构的B300对中国买家不可售，Hopper架构的H200需逐案审查且获准部分占英伟达数据中心业务营收不足1%。当「明天可能还有更好的卡」变成「明年可能一颗都拿不到」，采购决策的权重就从峰值性能切换到了供货确定性。RTX 6000D目前已停产，其在中国市场价格翻了一番，正是这种稀缺定价的直接体现。</p>
-<p><b>要点二：350亿美元订单的真实规模需要打折看待。</b>路透明确指出，订单量与供应数据均来自同一消息源，且英伟达已告知客户与合作伙伴「无法保证满足相关订单」。更关键的是价格结构：单块1.14万美元、350亿美元是对300万块标价的简单乘算，而非已确认收入；实际可交付量可能只有申请量的5%-10%。此外，RTX PRO 5500是面向工作站的产品，84GB ECC GDDR7显存、1398GB/s带宽、600W功耗，性能与RTX 6000D相近，并非为大规模互联训练设计。这意味着这笔订单的定位是推理补位——三家采购主体以运行已训练模型为主，而非训练前沿大模型。</p>
-<p><b>要点三：DeepSeek自建1GW，是芯片格局之外更值得关注的信号。</b>模型公司直接下场建机房，把竞争从「买谁的卡」提升到「谁来供电力、制冷与运维」。DeepSeek官网的招聘信息显示，其正在招募IDC数据中心团队和采购团队，工作地点之一即乌兰察布——招聘动作比媒体报道更具指示性。配合本周10月16日习近平考察乌兰察布提出的「算电协同」「算水协同」要求，以及当地PUE均值1.16、到户电价0.32-0.36元的成本优势，西部枢纽正在从「承接东部溢出需求」转变为「直接孵化本土模型公司的算力底座」。</p>
-<h4>周变化分析</h4>
-<p>与上期（第39期）相比，本周竞争格局的边际变化有三点。其一，英伟达在华叙事从「份额被国产替代挤压至34%」反转为「合规产品在手订单超600万块、供给却只有300万块」，短期看份额承压的局面可能被逆转。其二，国产阵营的主战场从推理向训练延伸——DeepSeek在昇腾社区开源V4.1-Flash预训练系统参考实现，采用华为联合定义的UBL128组网（128卡单层交换、可扩展256K卡两层组网），这是国产芯片首次进入顶级模型公司的训练工程栈。其三，管制的攻击面从芯片扩展到模型与金融：10月19日美OFAC依PAIPA将上海至算科技、奇绩创坛及其3只关联基金列入NS-MBS名单，同日DHS命令联邦民事机构IT系统移除DeepSeek并禁止采购（含第三方衍生产品）。</p>
-<h4>对下周预判</h4>
-<p>下周需重点跟踪三个变量：一是英伟达是否就RTX PRO 5500的中国进口许可或配额分配作出官方回应，若北京方面放行字节采购，国产芯片在头部互联网客户的份额将面临直接冲击；二是IDC 2026Q3中国AI加速器份额跟踪报告的发布窗口（按惯例约11月中旬），若Q3英伟达份额回升至35%以上，则第39期报告的国产替代加速结论需要修正；三是DeepSeek在乌兰察布1GW项目的具体选址、电力配套与芯片路线披露，这将直接决定1GW规模对应的是昇腾、国产其他方案还是混合架构。</p>
-</div>
+<div class="deep-event"><div class="deep-event-title">专题：本周最关键的格局变化</div><h4>核心背景</h4><p>本周竞争格局的核心变化，不是单周份额的涨跌，而是国产替代已经由“单卡可替代”推进到“集群可交付”。IDC 2026H1实测显示，中国数据中心AI加速器总出货达到200.8万颗，其中英伟达出货67.8万颗、份额34%，同比下降44%；华为昇腾出货57.2万颗、份额28%，较上年同期30余万颗接近翻倍，两者差距缩小至6个百分点。结构上，非GPU加速器出货101.6万颗、同比增长近80%，首次超过GPU的99.1万颗。开源证券10-26进一步披露，昇腾384超节点已部署750余套，说明竞争单元正由芯片参数转向超节点交付、集群利用率和软件适配效率。对运营商而言，这一变化要求采购决策同步从单一进口GPU转向“国产可交付、进口可保供、软件可迁移”的组合策略。</p><h4>关键数据</h4><p>芯片端，IDC 2026H1口径下，英伟达以34%居首，华为昇腾以28%居次，平头哥、寒武纪、昆仑芯和海光信息分别为7%、5%、4%和3%；IDC跟踪的11家中国芯片企业中9家出货增长。年度基线方面，2025年中国AI加速卡总交付约400万张，其中国产厂商约165万张、份额约41%，英伟达约220万张、份额55%。整机端，DIGITIMES 10-19预测2026年全球AI服务器出货266万台、同比增长46.4%，其中高阶AI服务器237万台；Google与Celestica组合、鸿海、浪潮和戴尔预计分别出货79.4万台、52.2万台、32.4万台和29.9万台。芯片实测份额与整机年度预测属于不同口径，不能混作周度变化。</p><h4>深度分析</h4><p>供给约束是格局重排的第一推动力。英伟达2026H1在华出货同比下降44%，使运营商新增项目面对现货窗口缩短、型号替代和交付延期风险；昇腾同期出货接近翻倍，则表明国产方案已经具备承接批量集群需求的基础。但份额接近并不等于能力完全对等。昇腾384超节点已部署750余套证明其具备项目复制能力，真正决定后续份额的仍是节点故障率、跨卡互联效率、集群调度、软件版本一致性以及模型迁移工时。国产替代由单卡试点进入集群采购后，采购风险从“芯片能否点亮”转为“系统能否稳定达到合同利用率”。</p><p>需求结构也在推动芯片路线分化。2026H1非GPU出货101.6万颗、同比增长近80%，GPU出货99.1万颗、同比下降26%，说明专用加速器已从补充资源转为增量主力。IDC预计2026年中国AI加速器总出货同比增长19%，GPU出货同比下降9%，这一组合意味着市场并非简单缩量，而是新增负载更多流向非GPU方案。运营商若继续仅以GPU单卡峰值和统一软件栈评估设备，将低估非GPU在推理及训推混合场景中的成本优势，也会低估更换软件栈的隐性迁移成本。</p><p>整机侧同样不是平均分配红利。DIGITIMES预计全球AI服务器出货266万台，Google与Celestica组合规模为79.4万台，明显高于鸿海52.2万台、浪潮32.4万台和戴尔29.9万台。订单向少数品牌商与ODM集中，意味着液冷、网络、电力和机柜交付能力可能成为比名义份额更硬的约束。运营商据此判断供应商时，应把产能兑现率、关键部件配额、整机验收周期和集群联调责任写入合同，而不能只依据厂商公布的年度出货目标排序。</p><h4>下周预判</h4><p>下周可验证的信号有三项：其一，是否出现2026H1之后的周度或季度芯片份额更新，重点核对英伟达是否仍在34%、昇腾是否仍在28%；其二，昇腾384超节点部署规模是否继续高于750余套，以及是否同步披露集群利用率或故障数据；其三，DIGITIMES预测的266万台整机出货是否获得厂商排产或订单更新。若昇腾份额继续上升且超节点披露从数量扩展到效率指标，国产替代将正式从供给安全逻辑转为系统能力竞争；若份额停滞而整机排产继续向鸿海、浪潮集中，则运营商应保留双栈采购，并把国产部署重点放在推理和训推混合场景。</p></div>
 </div>
 
 <!-- 4-4 AI芯片供应商竞争格局周变化 -->
 <div class="section">
 <h2>4-4 AI芯片供应商竞争格局周变化</h2>
-<h3>4-4-1 AI芯片供应商市场份额</h3>
+<h3>4-4-1 中国AI加速卡出货份额</h3>
 <div class="chart-container">
-<div class="chart-title">中国AI加速卡出货份额（2026H1）</div>
-<div class="chart-note-warn"><strong>⚠️ 口径未更新：</strong>本期口径时点（2026H1）与上期相同，本周未取得新一期份额数据（IDC 2026Q3中国AI加速器份额跟踪报告尚未发布（通常滞后约1个季度，预期11月中旬披露）；本期已检索运营商集采公示、单月出货披露均未取得全国口径新份额数据，故主口径沿用2026H1并以L1信号补足）；不代表份额已重估，本周新增信号见下方表格。</div>
+<div class="chart-title">中国数据中心AI加速器出货份额（实测）（2026年H1）</div>
+<div class="chart-note-ok"><strong>✅ 数据口径：</strong>2026年H1（2026 年最新可核验份额）</div>
+
+<div class="chart-signal"><strong>本期新增信号（最新一周）：</strong>10-18，东吴证券周报引用 IDC 数据：2026H1 英伟达在中国数据中心 AI 加速器份额 34%（出货 67.8 万颗、同比下降 44%）、华为昇腾 28%；本周（10-23—10-29）无新增份额披露。</div>
 <div class="chart-plot">
 <div class="chart-axis">
 <div class="chart-axis-unit">%</div>
 <div class="chart-axis-tick" style="bottom:40px">0</div>
 <div class="chart-axis-tick" style="bottom:99px">10</div>
 <div class="chart-axis-tick" style="bottom:158px">20</div>
-<div class="chart-axis-tick" style="bottom:218px">30</div>
+<div class="chart-axis-tick" style="bottom:216px">30</div>
 </div>
 <div class="chart-body">
 <div class="chart-gridlines">
 <div class="chart-gridline is-base" style="bottom:40px"></div>
 <div class="chart-gridline" style="bottom:99px"></div>
 <div class="chart-gridline" style="bottom:158px"></div>
-<div class="chart-gridline" style="bottom:218px"></div>
+<div class="chart-gridline" style="bottom:216px"></div>
 </div>
 <div class="vbar-list">
 <div class="vbar-item">
-<div class="vbar-pct">33.8%</div>
+<div class="vbar-pct">34%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:200px;background:linear-gradient(180deg,#C0462C,#962F1C)"></div>
+<div class="vbar-bar" style="height:200px;background:linear-gradient(180deg,#35618F,#24476B)"></div>
 </div>
 <div class="vbar-lbl">英伟达</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">28.0%</div>
+<div class="vbar-pct">28%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:166px;background:linear-gradient(180deg,#35618F,#24476B)"></div>
+<div class="vbar-bar" style="height:165px;background:linear-gradient(180deg,#2E7A8C,#1F5968)"></div>
 </div>
 <div class="vbar-lbl">华为昇腾</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">7.0%</div>
+<div class="vbar-pct">7%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:41px;background:linear-gradient(180deg,#2E7A8C,#1F5968)"></div>
+<div class="vbar-bar" style="height:41px;background:linear-gradient(180deg,#6B8F45,#4E6B31)"></div>
 </div>
-<div class="vbar-lbl">平头哥</div>
+<div class="vbar-lbl">阿里平头哥</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">5.0%</div>
+<div class="vbar-pct">5%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:30px;background:linear-gradient(180deg,#6B8F45,#4E6B31)"></div>
+<div class="vbar-bar" style="height:29px;background:linear-gradient(180deg,#B5893A,#8C6727)"></div>
 </div>
 <div class="vbar-lbl">寒武纪</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">4.0%</div>
+<div class="vbar-pct">4%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:24px;background:linear-gradient(180deg,#B5893A,#8C6727)"></div>
+<div class="vbar-bar" style="height:24px;background:linear-gradient(180deg,#8A5578,#663E58)"></div>
 </div>
-<div class="vbar-lbl">昆仑芯</div>
+<div class="vbar-lbl">百度昆仑芯</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">3.0%</div>
+<div class="vbar-pct">3%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:18px;background:linear-gradient(180deg,#8A5578,#663E58)"></div>
+<div class="vbar-bar" style="height:18px;background:linear-gradient(180deg,#5C6B7A,#414D59)"></div>
 </div>
 <div class="vbar-lbl">海光信息</div>
-</div>
-<div class="vbar-item">
-<div class="vbar-pct">19.2%</div>
-<div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:114px;background:linear-gradient(180deg,#5C6B7A,#414D59)"></div>
-</div>
-<div class="vbar-lbl">其他厂商</div>
 </div>
 </div>
 </div>
 </div>
 
-<div class="data-note"><strong>图表说明：</strong>口径为上半年出货量份额，非年度；本周新增信号见4-4-1表格L1列；柱高按图内相对比例展示（最高柱代表 33.8%），仅用于图内比较</div>
-<p class="source">数据来源：IDC《2026年上半年中国数据中心AI加速器市场统计》，路透社2026-10-13引用</p>
+<div class="data-note"><strong>图表说明：</strong>口径为IDC 2026年上半年中国数据中心AI加速器出货量份额，实测值而非周度变化；英伟达出货67.8万颗、昇腾57.2万颗；柱高按图内相对比例展示（最高柱代表 34%），仅用于图内比较</div>
+<p class="source">数据来源：IDC，2026-10-18（东吴证券周报引用；原表口径为 2026H1 实测）</p>
+</div><p><strong>国产阵营已扩大供给来源，但本期份额重排仍以英伟达和昇腾拉开差距为主线。</strong>IDC 2026H1实测显示，英伟达份额为34%，华为昇腾为28%，前者仍高6个百分点；英伟达出货67.8万颗，同比下降44%，昇腾出货57.2万颗，较上年同期30余万颗接近翻倍。同期阿里平头哥、寒武纪、百度昆仑芯和海光信息分别为7%、5%、4%和3%。从规模背景看，2026H1中国数据中心AI加速器总出货200.8万颗，非GPU达到101.6万颗、同比增长近80%，GPU为99.1万颗、同比下降26%。因此，本期不是国产厂商全面压缩英伟达，而是国产头部扩大份额、二线厂商形成补充，同时新增市场明显偏向非GPU。IDC还预计2026年中国AI加速器总出货同比增长19%，GPU出货同比下降9%，这意味着增量需求正在成为国产方案扩大规模的主要载体。</p><table><tr><th>厂商</th><th>本期份额</th><th>上期份额</th><th>变化</th><th>本周新增信号（L1）</th></tr><tr><td>英伟达</td><td>34%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>2026H1出货67.8万颗，同比下降44%；本周无新增份额披露</td></tr><tr><td>华为昇腾</td><td>28%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>2026H1出货57.2万颗，较上年同期30余万颗接近翻倍；10-26披露昇腾384超节点已部署750余套</td></tr><tr><td>阿里平头哥</td><td>7%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>依托阿里云内部需求及外部算力服务形成第三梯队供给，本周无新增实测份额</td></tr><tr><td>寒武纪</td><td>5%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>进入非GPU头部阵营，本周无新增实测份额</td></tr><tr><td>百度昆仑芯</td><td>4%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>依托百度体系形成规模化应用，本周无新增实测份额</td></tr><tr><td>海光信息</td><td>3%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>以差异化路线进入国内主要供应商序列，本周无新增实测份额</td></tr></table>
+<div class="chart-container">
+<div class="chart-title">本周芯片份额推测：实测 vs 推测（锚点 2026H1 / 信号覆盖 2026-10-23至2026-10-29）</div>
+<div class="chart-note-ok"><strong>✅ 读法：</strong>深色柱＝IDC 2026H1 实测份额（数据中心AI加速器出货口径）；浅色柱＝本周信号推测点估计；竖虚线＝推测区间（上下界）。推测值合计=100%。</div>
+<div class="chart-updated">更新于：实测 2026-10-13（IDC） · 推测 2026-10-27（本周信号）</div>
+<div class="chart-signal"><strong>本周有效信号：</strong>10-26，华为昇腾384超节点已部署750余套；华为昇腾有集群规模信号但无新增份额披露，英伟达无新增份额披露，阿里平头哥无新增份额披露，寒武纪无新增份额披露，百度昆仑芯无新增份额披露，海光信息无新增份额披露。</div>
+<div class="ebar-plot">
+<div class="ebar-axis">
+<div class="ebar-axis-unit">%</div>
+<div class="ebar-tick" style="bottom:99px">10</div><div class="ebar-tick" style="bottom:158px">20</div><div class="ebar-tick" style="bottom:216px">30</div>
 </div>
-<p style="font-size:11.5px;color:#666;margin:6px 0 10px 0;">口径说明：下表「最新可核验份额」与上方图表同源于 IDC 2026H1（2026-10-13 由路透社披露）。本期未取得 2026Q3 全国口径新份额数据（IDC 季度追踪报告按惯例约 11 月中旬发布），故主口径沿用 2026H1，并以「本周新增信号（L1）」列逐厂商补足本周可核验信号。信号只进表格、不进图表。</p>
-<table class="data-table">
-<thead><tr><th>厂商</th><th>最新可核验份额（口径+时点）</th><th>时间维度</th><th>较上期变化</th><th>本周新增信号（L1）</th><th>变化分析</th></tr></thead>
-<tbody>
-<tr class="week-highlight"><td><b>华为昇腾</b></td><td>~28.0%（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>+8pct vs 2025全年约20%</td><td>DeepSeek在昇腾社区开源V4.1-Flash预训练参考实现；950PR已上市、950DT年底或明年初规模供货</td><td>上半年出货57.2万颗、同比近翻倍，份额升至28%，与英伟达差距收窄至6pct。本周最大增量来自训练端背书：DeepSeek采用华为联合定义的UBL128组网（128卡单层交换、可扩展256K卡），国产芯片首次进入顶级模型预训练工程栈。徐直军明确表态制约放量的已不是需求而是供货能力。</td></tr>
-<tr><td><b>英伟达</b></td><td>~33.8%（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>−21pct vs 2025全年约55%</td><td>字节+阿里+腾讯订购超300万块RTX PRO 5500、总值逾350亿美元；RTX 6000D已停产在华价格翻倍</td><td>上半年出货67.8万颗、同比-44%，份额从2025全年约55%降至33.8%。但本周信号方向逆转：中国客户订单总量超600万块而2027年全球产量上限仅300万块，渠道商或只拿到申请量5%-10%。合规产品从去年遇冷翻转为抢不到货，H200获准部分占其数据中心营收不足1%。</td></tr>
-<tr><td><b>阿里平头哥</b></td><td>~7.0%（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（7%）</td><td>字节/阿里/腾讯同期订购英伟达逾300万块，自研与外采并行；真武V900计划2027Q1量产</td><td>份额7%居国产第三，与寒武纪、昆仑芯差距拉大。吴泳铭3月披露平头哥芯片年化营收已达百亿元级，9月云栖大会发布真武V900并计划2027Q1量产商业化；真武M890外部客户超650家、覆盖20多个行业。本周阿里同时大手笔外采英伟达，说明自研消化与外部采购仍并行。</td></tr>
-<tr><td><b>百度昆仑芯</b></td><td>~4.0%（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（4%）</td><td>中国移动十亿级推理集采三标包拿下70%/70%/100%；天池超节点实现全栈国产</td><td>份额4%，虽低于平头哥但在运营商侧转化能力突出：中国移动十亿级推理型集采中三个标包分别拿下70%、70%、100%份额，是国产芯片在集采中份额最高的单厂商案例。昆仑芯P800已在百度内部全面验证后再推向外部，天池超节点实现全栈国产，天池256已上市、天池512计划下半年推出。</td></tr>
-<tr><td><b>寒武纪</b></td><td>~5.0%（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（5%）</td><td>连续第二次在DeepSeek新模型发布首日完成Day 0适配；产能缺口下分到中芯N+2约9%-11%</td><td>份额5%，与昆仑芯并列第三。2026上半年营收59.96亿元、净利润23.11亿元，正式进入盈利兑现期。在产能分配上华为以五年长约锁定约43%产能，寒武纪分到9%-11%，供给约束明显。软件侧连续两次在DeepSeek新模型发布首日交卷，生态跟进速度是其核心竞争点。</td></tr>
-<tr><td><b>海光信息</b></td><td>~3.0%（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（3%）</td><td>曙光8000（登峰）十万卡全国产超集群落成并接入国家超算互联网，芯片采用海光等国产方案</td><td>份额3%，以CPU+DCU双轮差异化路线跻身前五。曙光宣布国内首个全国产十万卡AI超集群曙光8000落成，算力基础设施由万卡级迈向十万卡级，芯片采用海光等国产方案。海光上半年营收同比增长约67%，CPU与DCU双线放量，但在大规模训练集群中承担的主要是CPU角色，AI加速份额仍受限于DCU单线供给。</td></tr>
-<tr><td><b>摩尔线程/沐曦/天数智芯等</b></td><td>摩尔线程~2.8%（2026H1 IDC）</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>新上市（摩尔线程）</td><td>京东云宣布建设10万张摩尔线程GPU算力集群；壁仞9/23中标青海昆仑领奕智算中心1.74亿元</td><td>国产GPU前三为摩尔线程、沐曦、天数智芯。摩尔线程上半年出货5.6万颗、份额2.8%，营收17.36亿元同比+147.42%，净亏损由2.71亿元收窄至1156万元。本周新增信号是京东云10万卡集群——国内大型AI云厂商首次把国产GPU部署进10万卡级核心集群。壁仞港股市值约989亿港元，上半年收入12.36亿元同比+1997.6%。</td></tr>
-</tbody></table>
-<h3>4-4-1 深度分析：中国AI芯片份额格局总览与走向</h3>
-<div class="analysis-box">
-<p><b>格局总览。</b>2026年上半年中国数据中心AI加速器总出货200.8万颗，国产厂商合计出货份额首次突破四成。IDC数据显示，英伟达份额从2025年全年的约55%降至33.8%，华为昇腾升至28%，两家差距仅6个百分点。更具结构意义的是GPU与非GPU的分化：GPU出货99.1万颗、同比-26%，非GPU加速器101.6万颗、同比近+80%，非GPU在数量上首次反超GPU。三年前这个市场九成以上份额握在海外巨头手中，如今华为、平头哥、昆仑芯、寒武纪四家已占非GPU细分市场约95%。</p>
+<div class="ebar-body">
+<div class="ebar-gridlines">
+<div class="ebar-gridline is-base" style="bottom:40px"></div><div class="ebar-gridline" style="bottom:99px"></div><div class="ebar-gridline" style="bottom:158px"></div><div class="ebar-gridline" style="bottom:216px"></div>
 </div>
-<div class="analysis-box">
-<p><b>头部玩家。</b>华为昇腾从2025年约20%升至28%，核心驱动是政策、生态、价格三维合力：政策端国家算力网列入「六张网」；生态端CANN全面开源、上线67个社区项目日均下载6万次、对齐2300多个PyTorch API，9月上海PyTorch大会上成为PyTorch官方支持的首个中国算力底座；价格端国产替代需求下供需失衡。英伟达份额下降却仍居首，本质是出口管制的反噬——B300不可售、H200逐案审查，获准部分占其数据中心业务营收不足1%。</p>
+<div class="ebar-groups">
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">34%</div>
+<div class="ebar-bar is-actual" style="height:200px"></div>
 </div>
-<div class="analysis-box">
-<p><b>国产替代进程。</b>三家的差异化路径已清晰分层：寒武纪走推理性价比路线，2026上半年营收59.96亿元、净利23.11亿元进入盈利期，并连续两次在DeepSeek新模型发布首日完成Day 0适配；平头哥走云内消化再外销，真武M890外部客户超650家、V900计划2027Q1量产；昆仑芯则在运营商集采侧转化能力最强，中国移动十亿级推理集采三标包拿下70%/70%/100%。本周DeepSeek把V4.1-Flash预训练系统参考实现开源到昇腾社区，标志着国产阵营的边界正从推理向训练延伸。</p>
+<div class="ebar-col">
+<div class="ebar-val is-est">34%</div>
+<div class="ebar-err" style="bottom:188px;height:12px"></div>
+<div class="ebar-bar is-est" style="height:200px"></div>
 </div>
-<div class="analysis-box">
-<p><b>新进入者威胁。</b>摩尔线程上半年出货5.6万颗、份额2.8%，营收17.36亿元同比+147.42%，净亏损收窄至1156万元，距盈亏平衡仅一步；本周京东云宣布建设10万张摩尔线程GPU集群，是国内大型AI云厂商首次把国产GPU部署进10万卡级核心集群，资金（已上市）、生态（夸娥万卡平台）、客户（头部云厂商）三维齐备。沐曦、壁仞亦在加速：壁仞上半年收入12.36亿元同比+1997.6%、毛利率42.7%，并于9/23中标青海昆仑领奕智算中心1.74亿元。但产能仍是硬约束——2026年国产AI芯片需求约420万颗、中芯N+2供给约260万颗，缺口约40%。</p>
 </div>
-<div class="analysis-box">
-<p><b>下周预判。</b>预计IDC 2026Q3份额报告发布前，全国口径仍将维持2026H1；若11月中旬Q3数据显示英伟达份额回升至35%以上，则国产替代加速的判断需修正。反之，若英伟达因RTX PRO 5500供货缺口被迫让出配额，昇腾将继续扩大领先。短期看，产能而非需求是国产份额的天花板。</p>
+<div class="ebar-lbl">英伟达</div>
 </div>
-<h3>4-4-2 芯片价格与供应链周变化</h3>
-<table class="data-table">
-<thead><tr><th>芯片/产品</th><th>上期价格</th><th>本期价格</th><th>时间维度</th><th>周环比</th><th>驱动因素</th></tr></thead>
-<tbody>
-<tr><td>英伟达RTX PRO 5500</td><td>未上市（2026年10月前无公开报价）</td><td>约$11,400/块预购价（10/20路透）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">月变化</span></td><td>→新定价</td><td>中国客户订单超600万块、2027年全球产量上限仅300万块，供不应求预期推高预购价；12月出样品、2027Q1商业交付。</td></tr>
-<tr><td>英伟达RTX 6000D</td><td>在华价格翻番前（2026年中）</td><td>已停产，在华价格约翻一番（10/20路透）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>↑大涨</td><td>合规芯片供给收紧，渠道转向RTX PRO 5500，6000D退出致存量价格上行。</td></tr>
-<tr><td>英伟达H100（国际租赁）</td><td>约$4.50/h/GPU（Nebius 10/1起）</td><td>约$4.50/h/GPU（10月公开行情未变）</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>→持平</td><td>Nebius 9/17通知10/1起H100从$3.85涨至$4.50、B200从$7.15涨至$8.50（涨17%-21%），本周无新调价。</td></tr>
-<tr><td>昇腾950PR / 国产算力卡</td><td>持续上涨（2026年内）</td><td>供给紧张、可产多少供多少（10月）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>↑供给紧张</td><td>国产AI芯片需求约420万颗、供给缺口约40%，HBM采购成本上升，部分交付排期延至一年后。</td></tr>
-<tr><td>寒武纪思元590</td><td>稳定（2026年三季度）</td><td>稳定（2026年10月，未见公开调价）</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>→持平</td><td>产能优先保障战略客户，价格非主要竞争手段，以高毛利维持投入。</td></tr>
-</tbody></table>
-<div class="analysis-box">
-<p><b>合规芯片涨价驱动逻辑。</b>RTX PRO 5500预购价约$11,400，对比RTX 6000D刚上市时中国大厂兴趣寥寥甚至拒单，如今却出现超600万块排队、而2027年产能上限仅300万块的极端供需倒挂。买方在买不到B300、H200逐案审查的背景下，把合规降规芯片从「备选」重定位为「主供」，议价能力完全转移到卖方。NVIDIA已放话2027年起把台积电大部分产能让给Rubin平台而非该产品，供给只会更紧，价格上行是必然。谁在买？字节、阿里、腾讯三家头部互联网+深圳天阳科技等。议价能力更强的显然是英伟达——它甚至不承诺足额交付。</p>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">28%</div>
+<div class="ebar-bar is-actual" style="height:165px"></div>
 </div>
-<div class="analysis-box">
-<p><b>昇腾涨价可持续性。</b>国产替代需求叠加供给硬约束——2026年国产AI芯片需求约420万颗、中芯N+2供给约260万颗、缺口约40%，部分产品交付排期延至一年以后，HBM采购成本上升又推高成本底。徐直军明确表态「制约昇腾放量的已经不是需求，而是供货能力，现在能产多少就供多少」。这说明当前是卖方市场，涨价的驱动力来自供给稀缺而非需求过热。下游接受度阈值在于「确定性能否换性能」——当单卡代差被超节点系统级能力（昇腾960可扩展4096卡、8EFLOPS FP8）摊薄时，客户对单卡溢价的容忍度会提高，但超过某个临界点仍会转向性价比方案或转向英伟达合规芯片。</p>
+<div class="ebar-col">
+<div class="ebar-val is-est">28%</div>
+<div class="ebar-err" style="bottom:153px;height:12px"></div>
+<div class="ebar-bar is-est" style="height:165px"></div>
 </div>
-<div class="analysis-box">
-<p><b>价格战预警。</b>寒武纪思元590价格保持稳定，战略意图并非以价换量。上半年寒武纪营收59.96亿元、净利润23.11亿元已盈利，供应紧张下更倾向以价格维持高毛利、优先保障战略客户，而非主动挑起价格战。对整体价格体系的影响：当前供给短缺主导下，头部厂商均无降价动机，价格体系呈「坚挺甚至上行」态势；但需警惕两个拐点——一是英伟达RTX PRO 5500若2027年实际产能超预期释放，合规芯片降价将挤压国产卡的相对性价比；二是产能缺口从约40%收敛后，供给宽松可能触发国产厂商主动降价抢份额。建议关注HBM价格走势与国产卡交付排期作为价格拐点的先行指标。</p>
 </div>
+<div class="ebar-lbl">华为昇腾</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">7%</div>
+<div class="ebar-bar is-actual" style="height:41px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">7%</div>
+<div class="ebar-err" style="bottom:35px;height:6px"></div>
+<div class="ebar-bar is-est" style="height:41px"></div>
+</div>
+</div>
+<div class="ebar-lbl">阿里平头哥</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">5%</div>
+<div class="ebar-bar is-actual" style="height:29px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">5%</div>
+<div class="ebar-err" style="bottom:24px;height:5px"></div>
+<div class="ebar-bar is-est" style="height:29px"></div>
+</div>
+</div>
+<div class="ebar-lbl">寒武纪</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">4%</div>
+<div class="ebar-bar is-actual" style="height:24px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">4%</div>
+<div class="ebar-err" style="bottom:18px;height:6px"></div>
+<div class="ebar-bar is-est" style="height:24px"></div>
+</div>
+</div>
+<div class="ebar-lbl">百度昆仑芯</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">3%</div>
+<div class="ebar-bar is-actual" style="height:18px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">3%</div>
+<div class="ebar-err" style="bottom:12px;height:6px"></div>
+<div class="ebar-bar is-est" style="height:18px"></div>
+</div>
+</div>
+<div class="ebar-lbl">海光信息</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">19%</div>
+<div class="ebar-bar is-actual" style="height:112px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">19%</div>
+<div class="ebar-err" style="bottom:100px;height:12px"></div>
+<div class="ebar-bar is-est" style="height:112px"></div>
+</div>
+</div>
+<div class="ebar-lbl">其他厂商</div>
+</div>
+</div>
+</div>
+</div>
+<div class="data-note"><strong>图表说明：</strong>实测口径覆盖中国数据中心AI加速器出货；推测只反映10-23至10-29可核验信号对2026H1份额结构的潜在扰动，不改变半年度统计边界。当前仅1条可用信号，不抬升点估计和上界；推测不等于实测，不可对外引用，且不得用于第九章定量判断。</div>
+<p class="source">数据来源：IDC实测数据出处：芯东西，2026-10-13；本周信号出处：开源证券，2026-10-26</p>
+</div><p><strong>推测判断集中于国产供给继续上量，但各家的份额持续性和生态依赖度不同。</strong>英伟达仍以34%居首，推测区间以34%为中枢，方向为受先进芯片出口限制和GPU全年出货下降9%的约束而偏弱；不过，其在存量集群、软件迁移成本和高端训练需求中的优势决定了份额下行不会与出货同比降幅完全同步。华为昇腾以28%为中枢，开口方向偏上，依据不仅是2026H1出货接近翻倍，还包括昇腾384超节点已部署750余套；其增量能否转化为持续份额，取决于超节点运行效率和运营商模型迁移成本。平头哥以7%为中枢，方向偏上但内部需求依赖度较高，外部放量需要云API、模型工具链和运维体系进一步开放。寒武纪以5%为中枢，方向偏上，专业芯片路线能够补充英伟达供给，但客户集中、生态适配和持续交付能力仍是份额上限。昆仑芯和海光信息分别以4%和3%为中枢，方向均为温和偏上，前者依赖百度生态场景扩散，后者依靠CPU与加速器差异化路线突破。</p><p><strong>本期背离在于芯片出货增长并不自动转化为同等强度的外部客户份额。</strong>IDC 2026H1数据显示，11家中国芯片企业中9家出货增长，非GPU出货同比增长近80%，但英伟达与昇腾合计仍占62%，说明头部集中度并未因国产厂商普遍增长而同步下降。另一处背离是昇腾出货接近翻倍与超节点部署750余套同时出现，但前者衡量芯片销售，后者衡量集群交付，两者之间仍隔着整机适配、互联、调度和持续运维。运营商不能用出货量直接代替可用算力，也不能用集群数量直接代替集群效率。因此，采购比选应从单卡峰值转向模型迁移后的单位Token成本、节点故障率、集群利用率和软件版本兼容范围。</p><p><strong>采购条款应把芯片供给与系统交付责任绑定，下期重点验证份额和效率两类信号。</strong>对昇腾、平头哥、寒武纪等国产方案，框架采购应设置分批交付、现货承诺、替代型号责任和软件迁移费用上限；对英伟达方案，应约定合规型号变化后的价格保护、交付延期和替代迁移责任。对整机采购，芯片到货不能替代集群验收，运营商应要求供应商按实际训练或推理负载测试有效算力、故障恢复时间、跨节点通信效率及持续压测结果。下期第一项验证信号是是否出现英伟达、昇腾份额的新实测更新，而非继续沿用2026H1数据；第二项验证信号是昇腾384超节点是否披露750余套部署规模之外的利用率、故障率或版本信息。若只有出货增长而没有集群效率披露，国产份额提升仍应按供给安全红利定价，不能按成熟生态溢价定价。</p><h3>4-4-2 国产替代进度与制程约束</h3><p><strong>国产替代的主要瓶颈已从芯片可得性转向系统效率和软件迁移成本。</strong>2025年中国AI加速卡总交付约400万张，其中国产厂商约165万张、份额约41%，英伟达约220万张、份额55%；到2026H1，非GPU出货已达到101.6万颗并超过GPU，昇腾出货57.2万颗、份额28%。这组数据说明，制程和出口约束正在把国产芯片从政策备份推向规模商用，但并未消除先进制程、软件生态、多卡互联、集群调度和整体基础设施效率之间的差距。IDC 2026H1所称“非GPU”，主要反映产品路线和出货结构，并不意味着每一种非GPU方案都具备高端训练的同等级能力。素材同时指出，高端训练芯片在性能和先进制程、软件生态、系统级能力等方面仍存在差距，因此国产替代不宜按单卡参数直接映射为整机可用算力。</p><p><strong>运营商应按训练、推理和混合负载分层配置国产资源，而不是用同一验收标准覆盖所有芯片。</strong>推理业务可优先考察单位Token成本、并发能力、模型兼容和长期供货稳定性；训练业务必须增加节点级互联、故障恢复、长时间稳定性和调度效率测试。对已建成的英伟达平台，应保留双栈接口和模型服务层，避免在国产方案仅完成基础适配时直接迁移全部生产负载。采购合同还应要求供应商披露芯片代际、供货周期和软件版本支持周期；当英伟达GPU全年出货预计下降9%而市场总出货预计增长19%时，新增资源向非GPU倾斜具有现实基础，但扩容比例应由实际业务需求和验收性能决定。制程约束带来的国产替代窗口，应转化为可量化的双栈迁移路线，而不是以年度份额变化替代项目级技术验证。</p>
 </div>
 
 <!-- 4-5 AI服务器供应商竞争格局周变化 -->
@@ -441,8 +566,10 @@ tr.week-highlight { background: #fff8e1; }
 <h2>4-5 AI服务器供应商竞争格局周变化</h2>
 <h3>4-5-1 AI服务器供应商市场份额</h3>
 <div class="chart-container">
-<div class="chart-title">中国AI服务器（超融合）市场份额（2026H1）</div>
-<div class="chart-note-warn"><strong>⚠️ 口径未更新：</strong>本期口径时点（2026H1）与上期相同，本周未取得新一期份额数据（IDC AI服务器整机口径季度份额报告本期未发布；本期可核验的最新整机厂份额为IDC 2026H1超融合整体市场口径（10/15发布），属同源厂商结构的最细颗粒公开榜单，故以此替代，避免复读年度数据）；不代表份额已重估，本周新增信号见下方表格。</div>
+<div class="chart-title">全球AI服务器整机出货份额（预测）（2026年预期）</div>
+<div class="chart-note-info"><strong>ℹ️ 预测口径：</strong>2026年预期 为机构预测值（非已发布实测份额），须与实测口径区分，不得表述为"最新可核验份额"；本周新增信号见下方表格。</div>
+
+<div class="chart-signal"><strong>本期新增信号（最新一周）：</strong>10-19，DIGITIMES预测2026年全球AI服务器出货266万台，其中高阶AI服务器237万台。</div>
 <div class="chart-plot">
 <div class="chart-axis">
 <div class="chart-axis-unit">%</div>
@@ -458,185 +585,206 @@ tr.week-highlight { background: #fff8e1; }
 </div>
 <div class="vbar-list">
 <div class="vbar-item">
-<div class="vbar-pct">18.5%</div>
+<div class="vbar-pct">29.85%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:124px;background:linear-gradient(180deg,#35618F,#24476B)"></div>
+<div class="vbar-bar" style="height:200px;background:linear-gradient(180deg,#35618F,#24476B)"></div>
 </div>
-<div class="vbar-lbl">深信服</div>
+<div class="vbar-lbl">Google+Celestica</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">15.5%</div>
+<div class="vbar-pct">19.62%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:104px;background:linear-gradient(180deg,#C0462C,#962F1C)"></div>
+<div class="vbar-bar" style="height:131px;background:linear-gradient(180deg,#2E7A8C,#1F5968)"></div>
 </div>
-<div class="vbar-lbl">华为</div>
+<div class="vbar-lbl">鸿海</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">14.8%</div>
+<div class="vbar-pct">12.18%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:99px;background:linear-gradient(180deg,#2E7A8C,#1F5968)"></div>
+<div class="vbar-bar" style="height:82px;background:linear-gradient(180deg,#6B8F45,#4E6B31)"></div>
 </div>
-<div class="vbar-lbl">新华三</div>
+<div class="vbar-lbl">浪潮</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">14.2%</div>
+<div class="vbar-pct">11.24%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:95px;background:linear-gradient(180deg,#6B8F45,#4E6B31)"></div>
+<div class="vbar-bar" style="height:75px;background:linear-gradient(180deg,#B5893A,#8C6727)"></div>
 </div>
-<div class="vbar-lbl">浪潮信息</div>
+<div class="vbar-lbl">戴尔</div>
 </div>
 <div class="vbar-item">
-<div class="vbar-pct">7.2%</div>
+<div class="vbar-pct">4.85%</div>
 <div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:48px;background:linear-gradient(180deg,#B5893A,#8C6727)"></div>
+<div class="vbar-bar" style="height:32px;background:linear-gradient(180deg,#8A5578,#663E58)"></div>
+</div>
+<div class="vbar-lbl">纬颖</div>
+</div>
+<div class="vbar-item">
+<div class="vbar-pct">3.76%</div>
+<div class="vbar-bar-wrap">
+<div class="vbar-bar" style="height:25px;background:linear-gradient(180deg,#5C6B7A,#414D59)"></div>
+</div>
+<div class="vbar-lbl">Supermicro</div>
+</div>
+<div class="vbar-item">
+<div class="vbar-pct">1.32%</div>
+<div class="vbar-bar-wrap">
+<div class="vbar-bar" style="height:9px;background:linear-gradient(180deg,#4A6E9C,#2F5170)"></div>
 </div>
 <div class="vbar-lbl">联想</div>
 </div>
-<div class="vbar-item">
-<div class="vbar-pct">29.8%</div>
-<div class="vbar-bar-wrap">
-<div class="vbar-bar" style="height:200px;background:linear-gradient(180deg,#8A5578,#663E58)"></div>
-</div>
-<div class="vbar-lbl">其他厂商</div>
-</div>
 </div>
 </div>
 </div>
 
-<div class="data-note"><strong>图表说明：</strong>口径为超融合整体市场（一体机+软件集成），非AI加速服务器出货口径，仅反映整机厂格局；柱高按图内相对比例展示（最高柱代表 29.8%），仅用于图内比较</div>
-<p class="source">数据来源：IDC《中国软件定义存储（SDS）及超融合系统（HCI）市场季度跟踪报告 2026Q2》，2026-10-15发布</p>
+<div class="data-note"><strong>图表说明：</strong>口径为DIGITIMES对2026年全球AI服务器整机出货量的预测，包含品牌商、ODM及Google与Celestica组合，不是中国AI服务器品牌商实测份额；各项份额按预测出货量除以266万台计算。预测不等于实测，不可对外引用；柱高按图内相对比例展示（最高柱代表 29.85%），仅用于图内比较</div>
+<p class="source">数据来源：DIGITIMES，2026-10-19</p>
+</div><p><strong>全球AI服务器处于扩容阶段，但订单和出货增量明显向少数品牌商与ODM集中。</strong>DIGITIMES 10-19预测2026年全球AI服务器出货266万台、同比增长46.4%，其中高阶AI服务器237万台、同比增长55.9%，一般AI服务器29万台、同比仅增长0.7%。高阶产品占绝大多数，说明本轮扩张主要来自高算力、高功耗和整机柜级交付需求，而不是传统服务器普涨。按预测出货量折算，Google与Celestica组合份额为29.85%，鸿海19.62%，浪潮12.18%，戴尔11.24%；Google与Celestica组合预计出货79.4万台，鸿海52.2万台，浪潮32.4万台，戴尔29.9万台。头部之间已形成27.2万台的出货差距，鸿海与浪潮之间也相差19.8万台。因此，本期应判断为“扩容中的重排”，而非缩量博弈。</p><table><tr><th>厂商或组合</th><th>本期同口径份额</th><th>上期份额</th><th>变化</th><th>本周新增信号</th></tr><tr><td>Google与Celestica</td><td>29.85%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>预计出货79.4万台、同比增长28%，仍居首位</td></tr><tr><td>鸿海</td><td>19.62%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>预计出货52.2万台、同比增长88%，扩产增速领先头部</td></tr><tr><td>浪潮</td><td>12.18%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>预计出货32.4万台、同比增长56%，国内品牌商保持头部位置</td></tr><tr><td>戴尔</td><td>11.24%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>预计出货29.9万台、同比增长162%，受云端订单及企业需求拉动</td></tr><tr><td>纬颖</td><td>4.85%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>预计出货12.9万台、同比增长63%，预计升至第五</td></tr><tr><td>Supermicro</td><td>3.76%</td><td>—（首期无基准）</td><td>—（首期无基准）</td><td>预计出货10.0万台、同比增长23%，被纬颖超过</td></tr></table>
+<div class="chart-container">
+<div class="chart-title">本周服务器份额推测：预测 vs 推测（锚点 2026年预期 / 信号覆盖 2026-10-23至2026-10-29）</div>
+<div class="chart-note-ok"><strong>✅ 读法：</strong>深色柱＝DIGITIMES 2026年预期份额（全球AI服务器整机出货口径）；浅色柱＝本周信号推测点估计；竖虚线＝推测区间（上下界）。推测值合计=100%。</div>
+<div class="chart-updated">更新于：实测 2026-10-19（DIGITIMES） · 推测 2026-10-27（本周信号）</div>
+<div class="chart-signal"><strong>本周有效信号：</strong>10-26，公开券商周报继续将DIGITIMES的2026年全球AI服务器266万台预测作为整机扩产背景，未披露新的整机厂商份额；Google与Celestica组合无新增份额披露，鸿海无新增份额披露，浪潮无新增份额披露，戴尔无新增份额披露，纬颖无新增份额披露，Supermicro无新增份额披露，联想无新增份额披露。</div>
+<div class="ebar-plot">
+<div class="ebar-axis">
+<div class="ebar-axis-unit">%</div>
+<div class="ebar-tick" style="bottom:107px">10</div><div class="ebar-tick" style="bottom:174px">20</div>
 </div>
-<p style="font-size:11.5px;color:#666;margin:6px 0 10px 0;">口径说明：下表与上方图表同源于 IDC《中国软件定义存储（SDS）及超融合系统（HCI）市场季度跟踪报告 2026Q2》（2026-10-15 发布）的 2026H1 超融合整体市场份额，为本期可核验的最新整机厂公开份额口径。需提示：该口径为超融合整体市场（一体机出货+软件集成系统），<b>不等于AI加速服务器出货份额</b>，仅反映整机厂在服务器/存储基础设施侧的结构。AI服务器整机口径的季度份额报告本期未发布。本周新增信号见L1列。</p>
-<table class="data-table">
-<thead><tr><th>厂商</th><th>最新可核验份额（口径+时点）</th><th>时间维度</th><th>较上期变化</th><th>本周新增信号（L1）</th><th>变化分析</th></tr></thead>
-<tbody>
-<tr class="week-highlight"><td><b>华为</b></td><td>~15.5%（2026H1 IDC超融合整体）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（15.5%）</td><td>昇腾超节点累计部署超1000套；中国移动RoCE集采自主可控占比提至80%、上限40亿元</td><td>以芯片+整机+云垂直整合切入，份额稳居第二。昇腾超节点累计部署已超1000套，384超节点商用落地750多套覆盖20多个行业，960超节点（NPO近封装光学、可扩展4096卡）于9月发布。整机侧受益于运营商全栈国产化采购导向，FusionCube配鲲鹏服务器主攻政企信创与运营商市场。</td></tr>
-<tr><td><b>新华三</b></td><td>~14.8%（2026H1 IDC超融合整体）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（14.8%）</td><td>持续中标运营商RoCE交换机集采；S80000整机多框超节点方案入围</td><td>与华为、浪潮三家份额非常接近（14.8%/15.5%/14.2%），排位随时可能变化。新华三受益于运营商网络设备国产化，在RoCE交换机等集采中表现突出；其S80000属于「整机多框超节点」形态，计算节点与交换节点解耦、部署灵活。硬件成本优势与节点选择多是其主要竞争点，行业渗透深、政企市场基础扎实。</td></tr>
-<tr><td><b>浪潮信息</b></td><td>~14.2%（2026H1 IDC超融合整体）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（14.2%，四家中最稳定）</td><td>前三季净利预增156.4%-176.64%（10/13预告）；9月抛出90亿定增；本周股价跌超3%</td><td>份额四家中最稳定、一直排第四，但AI加速服务器市场出货规模国内第一（份额约三成）。10月13日预告前三季归母净利38-41亿元、同比+156.4%-176.64%，但经营现金流-74.93亿元、存货526.79亿元，利润越好垫得越重。9月90亿定增中27亿补流，实体清单下被迫转向国产芯片、先款后货的卖方市场。</td></tr>
-<tr><td><b>深信服</b></td><td>~18.5%（2026H1 IDC超融合整体，位列第一）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（18.5%）</td><td>一站式集成计算/存储/网络/安全；托管云Sangfor MCS强化智能与安全</td><td>以「一站式方案集成计算、存储、网络与安全」在中小企业及托管云市场取胜，收入13.8亿元居首。需注意其份额口径来自超融合而非AI服务器——在AI加速服务器赛道并非第一阵营。这是典型的「基础设施份额领先但AI算力份额不突出」的结构差异，也说明超融合口径与AI服务器口径不能直接互换解读。</td></tr>
-<tr><td><b>联想</b></td><td>~7.2%（2026H1 IDC超融合整体）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>→持平（7.2%）</td><td>ISG 2026报告中国大陆唯一进入 Integrated AI Infrastructure Systems 象限Leader组别；Neptune液冷方案</td><td>以ThinkSystem机架级AI系统、Neptune海神液冷方案、Hybrid AI Factory模块化机架输出机架级整套AI基础设施，对整机柜系统整体交付结果负责。凭借全球制造与交付服务体系，在跨国多区域同步部署项目中具优势。曾在IDC加速服务器销售额口径位列前三（与浪潮、新华三合计近50%），但超融合细分中份额较低。</td></tr>
-<tr><td><b>宁畅/超聚变/曙光等</b></td><td>份额暂缺（未单独披露超融合口径）</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>曙光昇格（曙光8000十万卡集群落成）</td><td>曙光8000（登峰）十万卡全国产AI超集群落成并接入国家超算互联网；中国移动大云磐石超节点</td><td>曙光在超融合口径未单列，但算力基础设施侧动作重大：国内首个全国产十万卡AI超集群曙光8000落成，算力由万卡级迈向十万卡级，芯片采用海光等国产方案。宁畅在2025上半年IDC加速服务器出货台数口径曾列前三（约43%合计）。超聚变、中国移动大云磐石则在运营商整机多框超节点路线形成新的第三极。</td></tr>
-</tbody></table>
-<h3>4-4-2 之后：4-5-1 深度分析：整机厂格局、利润困境与模式分化</h3>
-<div class="analysis-box">
-<p><b>格局总览。</b>从本期可核验的 IDC 2026H1 口径看，整机基础设施侧呈「深信服领跑、华为新华三浪潮三强紧咬、联想跟随」的一超多强格局：深信服18.5%、华为15.5%、新华三14.8%、浪潮14.2%、联想7.2%。华为、新华三、浪潮三家份额差仅1.3个百分点，排位随时可能易手。但在AI加速服务器赛道，格局与超融合并不一致——2025上半年IDC口径下浪潮、新华三、联想按销售额占据近50%、浪潮出货台数国内第一（约三成）。两个口径的差异说明：超融合份额反映的是渠道与集成能力，AI服务器份额反映的是芯片获取与交付能力，后者才是真正的算力主战场。</p>
+<div class="ebar-body">
+<div class="ebar-gridlines">
+<div class="ebar-gridline is-base" style="bottom:40px"></div><div class="ebar-gridline" style="bottom:107px"></div><div class="ebar-gridline" style="bottom:174px"></div>
 </div>
-<div class="analysis-box">
-<p><b>利润率崩塌警示。</b>浪潮信息去年1648亿营收中1546亿来自服务器（占93.8%），毛利率仅4.52%，净利率约1.5%——一千五百亿流水只赚24亿的搬箱辛苦钱。结构性问题有三：定制化溢价低（服务器标准化程度高、差异化难）、人力成本高、芯片采购受制于人。2025年3月美国商务部将旗下多家子公司列入实体清单后，浪潮买不到英伟达，只能转向国产芯片，而国产芯片产能紧、供应商直接要求先款后货。现金流的代价立刻显现：上半年经营现金流-74.93亿元、存货526.79亿元（其中原材料440.90亿元，较年初多约190亿元），利润29.52亿元与现金净流出74.93亿元相差一百多亿。这是典型的「增收不增利、增利不增现」。</p>
+<div class="ebar-groups">
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">29.85%</div>
+<div class="ebar-bar is-actual" style="height:200px"></div>
 </div>
-<div class="analysis-box">
-<p><b>华为模式分析。</b>华为走的是「昇腾芯片+整机+云+全栈」的垂直整合：芯片端用达芬奇架构与CANN软件栈，整机端用昇腾超节点（384已商用750多套、超节点累计部署超1000套、960可达4096卡），云端用华为云承接，三层互相锁定。竞争优势在于两点：一是能对运营商与政企客户提供「交钥匙」全栈方案，把芯片与整机的利润都留在体系内；二是当芯片成为瓶颈时，华为能用整机产能去换取芯片优先供给——徐直军明确表示现在「能产多少就供多少」，配额优先供体系内整机与超节点。相比纯整机厂只能被动接受上游定价，这个模式的议价权有本质差异。</p>
+<div class="ebar-col">
+<div class="ebar-val is-est">29.85%</div>
+<div class="ebar-err" style="bottom:187px;height:13px"></div>
+<div class="ebar-bar is-est" style="height:200px"></div>
 </div>
-<div class="analysis-box">
-<p><b>新进入者与第三方搅动。</b>安擎计算机正冲刺港股IPO，此前已有明确的收入高增信号；本周更值得关注的是「整机多框超节点」路线的兴起——中国移动大云磐石、新华三S80000均属此类，与华为昇腾384的矩阵级形态形成路线分化。同时联想以 ISG 2026 报告中国大陆唯一 Integrated AI Infrastructure Systems 象限 Leader 身份切入，主打全球交付能力，对跨国客户形成错位竞争。这类新进入者短期难以撼动「第一梯队+其他」的存量格局，但在细分场景（液冷、全球交付、运营商整机多框）中能持续分流订单，构成分份额意义上的边际扰动。</p>
 </div>
-<div class="analysis-box">
-<p><b>下周预判。</b>预计超节点规模放量（2026年为放量元年、2027年渗透率加速提升）将把整机厂竞争焦点从「机架数量」推向「系统交付能力与交换芯片配套」。华为、新华三、浪潮三家的份额差在1.3个百分点内，下季度极可能出现排名易位；资本面上算力硬件板块波动加大，市场会更倾向给现金流稳健、芯片绑定更深的厂商估值。</p>
+<div class="ebar-lbl">Google+Celestica</div>
 </div>
-
-<h3>4-5-2 运营商/云厂商自研服务器与超节点动态</h3>
-<table class="data-table">
-<thead><tr><th>主体</th><th>自研路线</th><th>本周/近期动态</th><th>时间维度</th><th>规模/进度</th></tr></thead>
-<tbody>
-<tr><td><b>阿里（平头哥）</b></td><td>自研芯片+外采并行</td><td>真武M890已上线阿里云乌兰察布超节点实例、支持企业在线采购；真武V900计划2027Q1量产商业化；同时阿里与腾讯字节合计订购英伟达超300万块</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>M890外部客户超650家、覆盖20多个行业；磐久AL128单柜128加速器</td></tr>
-<tr><td><b>百度（昆仑芯）</b></td><td>自研芯片+云内消化</td><td>天池256超节点已上市、天池512计划下半年推出；昆仑芯P800在百度内部全面验证后外销</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>中国移动十亿级推理集采三标包70%/70%/100%份额</td></tr>
-<tr><td><b>字节跳动</b></td><td>自研+外采并行</td><td>大禹2.0超节点逐步进入量产；芯片研发团队超千人；本周订购英伟达RTX PRO 5500超300万块（与阿里腾讯合计）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>订单逾350亿美元（与阿里腾讯合计）；大禹2.0量产推进</td></tr>
-<tr><td><b>腾讯（紫霄）</b></td><td>自研推理芯片</td><td>7月推出紫霄2.0，主要供自家业务使用，计划年底推进十万卡部署</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>十万卡部署目标（年底）</td></tr>
-<tr><td><b>中国移动（大云磐石）</b></td><td>整机多框超节点</td><td>大云磐石整机多框超节点方案成型（计算节点与交换节点解耦）；RoCE交换机集采2450台、上限超40亿元、自主可控占80%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>RoCE上限40亿元；自主可控1960台/2450台</td></tr>
-<tr><td><b>三大运营商万卡集群</b></td><td>国产路线为主</td><td>2024年5月191亿元AI训练服务器集采全部采用国产AI处理器；2025-2026推理型通用计算设备中CANN路线含税约34亿元、占总规模67%以上</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">年变化</span></td><td>国产路线占运营商推理采购约2/3</td></tr>
-</tbody></table>
-<div class="analysis-box">
-<p><b>自研芯片vs外采服务器的战略逻辑。</b>阿里、字节、腾讯选择自研+外采并行，核心动机是摊薄研发费用并用自家真实流量打磨芯片：先在自家云和业务里跑通、摊薄研发成本，再把验证过的产品卖给相似场景客户——阿里平头哥芯片年化营收已达百亿元级、百度昆仑芯P800在百度内部全面验证后才外销，都遵循这一逻辑。华为则走芯片+整机+云垂直整合，因为华为的芯片同时要卖给运营商、政企、互联网，必须解决跨客户的系统级适配与统一运维问题。CAPEX差异在于：自研路线前期投入集中在芯片流片与软件栈（长期摊销），外采整机则把CAPEX压到芯片采购（随用随付但议价权在供应商）；风险差异在于自研芯片产能受代工约束（国产芯片供给缺口约40%），外采则受出口管制约束（英伟达合规芯片供给上限300万块/年）。两条路线本质上都是把「单一外部依赖」变成「双重约束」。</p>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">19.62%</div>
+<div class="ebar-bar is-actual" style="height:131px"></div>
 </div>
-<div class="analysis-box">
-<p><b>运营商万卡集群的战略意义。</b>三大运营商的资本开支正在从「上服务器、扩机柜」转向「算网设备系统升级+国产产业链规模催熟」。以中国移动为例，2026-2027年RoCE交换机集采2450台、上限超40亿元（自主可控占80%），2026-2027年智算存储集采640套、上限约23.35亿元，分布式存储集采641套、上限近11亿元；而Q3三家AIDC基础设施招标合计超225个项目、预算约365.88亿元，九成落子八大枢纽。这组数据说明：运营商在算力网络中的角色已从需求方变为国产产业链的孵化器——2024年191亿元AI训练服务器集采全部采用国产AI处理器、推理型采购中国产CANN路线占67%以上，运营商用真金白银的规模订单为国产芯片提供量产验证场景。这对国家AI基础设施格局意味着：算力底座的控制权正在向三家央企+八大枢纽节点集中。</p>
+<div class="ebar-col">
+<div class="ebar-val is-est">19.62%</div>
+<div class="ebar-err" style="bottom:118px;height:13px"></div>
+<div class="ebar-bar is-est" style="height:131px"></div>
 </div>
-<div class="analysis-box">
-<p><b>字节「算力储备」预判。</b>字节与阿里、腾讯合计订购超300万块RTX PRO 5500、总值逾350亿美元，这一储备的用途值得推敲。判断依据有三：其一，RTX PRO 5500是工作站GPU、并非为大规模互联训练设计，84GB显存定位于运行已训练模型，即推理补位；其二，三家同时巨额下单而非分散，说明是共识性的推理算力囤积，应对模型调用量增长；其三，DeepSeek同期在乌兰察布自建约1GW，印证推理需求膨胀倒逼算力储备。综合判断，字节的算力储备以自用推理为主、部分可能对外出租，但不会改变算力租赁市场格局（目前总量占比有限）。真正值得关注的是：字节同时自研大禹2.0超节点并量产、芯片团队超千人，说明其长期目标是自研替代外采，当前英伟达大单更像「在自研成熟前的过渡性采购」。</p>
 </div>
+<div class="ebar-lbl">鸿海</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">12.18%</div>
+<div class="ebar-bar is-actual" style="height:82px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">12.18%</div>
+<div class="ebar-err" style="bottom:68px;height:14px"></div>
+<div class="ebar-bar is-est" style="height:82px"></div>
+</div>
+</div>
+<div class="ebar-lbl">浪潮</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">11.24%</div>
+<div class="ebar-bar is-actual" style="height:75px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">11.24%</div>
+<div class="ebar-err" style="bottom:62px;height:13px"></div>
+<div class="ebar-bar is-est" style="height:75px"></div>
+</div>
+</div>
+<div class="ebar-lbl">戴尔</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">4.85%</div>
+<div class="ebar-bar is-actual" style="height:32px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">4.85%</div>
+<div class="ebar-err" style="bottom:26px;height:6px"></div>
+<div class="ebar-bar is-est" style="height:32px"></div>
+</div>
+</div>
+<div class="ebar-lbl">纬颖</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">3.76%</div>
+<div class="ebar-bar is-actual" style="height:25px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">3.76%</div>
+<div class="ebar-err" style="bottom:18px;height:7px"></div>
+<div class="ebar-bar is-est" style="height:25px"></div>
+</div>
+</div>
+<div class="ebar-lbl">Supermicro</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">1.32%</div>
+<div class="ebar-bar is-actual" style="height:9px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">1.32%</div>
+<div class="ebar-err" style="bottom:7px;height:2px"></div>
+<div class="ebar-bar is-est" style="height:9px"></div>
+</div>
+</div>
+<div class="ebar-lbl">联想</div>
+</div>
+<div class="ebar-group">
+<div class="ebar-cols">
+<div class="ebar-col">
+<div class="ebar-val">17.18%</div>
+<div class="ebar-bar is-actual" style="height:115px"></div>
+</div>
+<div class="ebar-col">
+<div class="ebar-val is-est">17.18%</div>
+<div class="ebar-err" style="bottom:115px;height:2px"></div>
+<div class="ebar-bar is-est" style="height:115px"></div>
+</div>
+</div>
+<div class="ebar-lbl">其他厂商</div>
+</div>
+</div>
+</div>
+</div>
+<div class="data-note"><strong>图表说明：</strong>锚点为DIGITIMES对2026年全球AI服务器整机出货量的预测，包含品牌商、ODM及Google与Celestica组合，不是中国AI服务器品牌商实测份额。当前没有新的厂商级排产份额信号，维持点估计和上界不变并放宽下界；推测不等于实测，不可对外引用，且不得用于第九章定量判断。</div>
+<p class="source">数据来源：预测出处：DIGITIMES，2026-10-19；本周信号出处：开源证券，2026-10-26</p>
+</div><p><strong>厂商预测显示规模扩张与局部排序变化同时发生，份额不能脱离出货基数和客户结构解释。</strong>Google与Celestica组合以29.85%为中枢，预计出货79.4万台、同比增长28%，开口方向偏上，核心支撑来自云端整机柜级需求，其领先来自绝对规模，而非本轮最快增速。鸿海以19.62%为中枢，预计出货52.2万台、同比增长88%，方向偏强；其扩产受益于ODM订单和高阶服务器需求，运营商采用直供方案时仍应核查产能兑现率、液冷交付和机柜排期。浪潮以12.18%为中枢，预计出货32.4万台、同比增长56%，方向偏上；国内品牌商身份和超大规模客户承接能力构成优势，但12.18%是全球预测折算值，不能等同于国内运营商集采份额。</p><p><strong>戴尔的预测份额是本轮最明显的“增速高、排名仍后”组合。</strong>戴尔以11.24%为中枢，预计出货29.9万台、同比增长162%，增速在前四家中最高，但绝对规模仍低于鸿海52.2万台和浪潮32.4万台，因此份额开口方向偏上而排名提升有限。这一背离说明市场不是简单按增速重新排序：头部客户订单、整机柜交付能力和供应体系仍决定最终规模。纬颖预计出货12.9万台、同比增长63%，开口方向偏上并超过Supermicro的10.0万台，主要由云端定制和液冷系统需求支撑；Supermicro则处于份额被挤压状态，运营商若采用其方案，应通过锁单、备件和交期条款对冲。</p><p><strong>采购与投拨资应按交付能力而非预测份额排序，下期用排产和客户扩散两类信号验证。</strong>运营商在立项阶段应把266万台全球预测拆成高阶AI服务器237万台、一般AI服务器29万台两套产能假设，分别配置液冷、网络和电力条件，避免使用统一机柜密度。对鸿海、浪潮、戴尔及ODM厂商，合同应同时约定交付批次、关键部件配额、延期赔偿、整机柜验收和备件响应；对Google与Celestica组合等云端定制型供给，应关注其是否向运营商客户开放标准机柜及跨区域部署。下期第一项验证信号是266万台预测是否被厂商订单或排产数据修正，尤其是高阶AI服务器237万台的产能去向；第二项验证信号是戴尔29.9万台、浪潮32.4万台等预测能否转化为可交付机柜，而不只是芯片或模组备货。若年度预测上修但季度排产没有同步增加，运营商不应据此提前扩大机房和供电投资。</p><h3>4-5-2 代工与排产分析</h3><p><strong>AI服务器扩产已从单机制造转向整机柜系统排产，液冷、网络和供电正在成为交付瓶颈。</strong>DIGITIMES预计2026年全球AI服务器出货266万台，其中高阶AI服务器237万台；Google与Celestica组合、鸿海和戴尔预计分别出货79.4万台、52.2万台和29.9万台。品牌商负责架构、认证和客户协同，ODM承担规模制造与供应链整合，但高阶机柜必须同时完成计算节点、液冷系统、高速网络和供电模块联调，任何单一环节延迟都会推迟整柜验收。运营商在排产评审中应要求供应商提供周度关键部件齐套率、整柜出厂测试周期和现场联调计划，并将液冷漏液保护、断电恢复和故障节点替换写入验收条款。</p><p><strong>扩产订单集中还会放大供应商产能兑现与客户迁移风险。</strong>Google与Celestica组合、鸿海、浪潮和戴尔预计出货79.4万台、52.2万台、32.4万台和29.9万台，头部供应商承接的规模显著高于其他厂商。运营商若在同一窗口扩充多个品牌，应避免把各家的年度预测简单相加形成机房需求，而应按供应商实际排产分别设置资源释放节奏。合同层面还应区分芯片、模组、整机和集群联调的责任边界，并约定交付延期时替换品牌、调整交付批次或延期机房投资的处理机制。只有当芯片齐套、液冷就绪、网络带宽和供电容量同时满足，高阶AI服务器237万台的预测才能转化为运营商可用产能。</p>
 </div>
 
 <!-- 4-6 云服务商与算力平台竞争格局周变化 -->
 <div class="section">
 <h2>4-6 云服务商与算力平台竞争格局周变化</h2>
-<h3>4-6-1 综合云厂商动态</h3>
-<table class="data-table">
-<thead><tr><th>厂商</th><th>市场份额/地位</th><th>时间维度</th><th>本周价格/算力事件</th><th>格局影响</th></tr></thead>
-<tbody>
-<tr><td><b>阿里云</b></td><td>中国公有云前三；MaaS侧AI座舱市场份额第二（2026H1 IDC）</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>与腾讯字节合计订购英伟达超300万块（10/20）；真武M890超节点乌兰察布上线</td><td>「芯片负责生产Token，云负责把Token送到每一个需要它的地方」——吴泳铭的三基石表述落地。自研+外采双轨，本周大额外采英伟达强化推理算力供给，但真武V900 2027Q1量产将逐步替代。</td></tr>
-<tr><td><b>华为云</b></td><td>昇腾生态核心承载方；昇腾384超节点商用750+套、累计部署超1000套</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>本周无公开调价；DeepSeek V4.1-Flash预训练参考实现开源至昇腾社区（10/21）</td><td>「Ascend芯片+云+模型」全栈封闭生态锁定效应持续增强。DeepSeek训练侧工程押上国产算力，是华为云生态最具说服力的增量背书。周跃峰提出智能体时代基础设施核心是Token效率。</td></tr>
-<tr><td><b>腾讯云</b></td><td>中国公有云前三；自研紫霄2.0推理芯片</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>与阿里字节合计订购英伟达超300万块；紫霄2.0计划年底十万卡部署</td><td>自研+外采并行，紫霄2.0主供自家业务。对燧原科技的扶持为芯片自研提供真实任务与采购规模。本周腾讯控股股价跌超3%，算力板块回调。</td></tr>
-<tr><td><b>天翼云</b></td><td>中国电信旗下；AI座舱/政企云市场份额居前</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>本周无重大价格调整；韶关电信韶塘数据中心等万卡集群在建</td><td>韶关已建成电信、移动、华韶、真武、昇腾超节点、昆仑芯等6个万卡集群，上架智算5.1万P（去年6月的10倍），在韶企业签约订单3.2GW（去年同期64倍）。国资身份使其价格调整不如私企灵活。</td></tr>
-</tbody></table>
-<div class="analysis-box">
-<p><b>涨价经济学。</b>本周云厂商没有出现新的公开调价事件，但价格信号在产业链另一端已经明确：英伟达RTX PRO 5500预购价约$11,400且供不应求，RTX 6000D停产在华价格翻番。这构成云厂商成本端的刚性上移压力。其核心逻辑不是简单的成本转嫁，而是筛选高价值客户+提升毛利的组合动作：一方面，合规高端算力稀缺迫使云厂商优先保障愿意为推理Token付费的高价值客户；另一方面，Token经济量价齐升——IDC数据显示火山引擎在AI座舱市场份额达45%居首、百度AI座舱客户日均Token消耗200亿，Token调用量爆发意味着单位算力成本下降与总营收上升同时发生，形成「量增价稳」的财务模型。这解释了为何阿里、腾讯、字节在RTX PRO 5500这种「供给远小于需求」的产品上敢下350亿美元的重注——因为算力从成本项变成了可计价的Token生产资料。</p>
-</div>
-<div class="analysis-box">
-<p><b>华为云涨价能力来源。</b>华为云凭借「昇腾芯片+CANN软件栈+整机超节点+云服务」的全栈封闭生态获得强锁定效应：客户一旦在昇腾上完成模型适配与算子调优，迁移到其他平台的成本极高（全栈适配涉及框架、算子、通信、运维全链条）。昇腾超节点累计部署超1000套、384超节点商用落地750多套覆盖20多个行业、昇腾成为PyTorch官方支持的首个中国算力底座、CANN全面开源对齐2300多个PyTorch API——这套组合拳让华为云在算力紧张时具备提价底气：客户因生态锁定难以用脚投票，且国产替代的政策导向也支持华为的溢价定位。更关键的是，当英伟达合规芯片供给上限仅300万块时，昇腾的稀缺性反而成为华为云的定价权来源。</p>
-</div>
-<div class="analysis-box">
-<p><b>腾讯云盈利路径。</b>腾讯通过裁撤百亿低利润业务、聚焦高价值算力与MaaS实现首次规模化盈利，路径是典型的「减肥增肌」。其优势在IM/social入口：可将AI助手直接嵌入社交场景做token分发。但本周腾讯与阿里字节同下单英伟达逾300万块，也说明其算力自给不足、仍高度依赖外采，AI算力优势尚未真正建立——紫霄2.0虽计划年底十万卡部署，但主供自家业务，对外供给能力有限。这种「入口强、算力弱」的结构，决定了腾讯云短期难以在算力市场与阿里云、华为云形成正面对抗。</p>
-</div>
-<div class="analysis-box">
-<p><b>天翼云「稳定」背后与下周预判。</b>天翼云价格稳定的真实原因是国资身份——中国电信作为央企、政企客户为主，价格调整需平衡国有资产保值与产业扶持双重考量，灵活度不如私企。这对政企客户是优势（长期价格承诺、可信度高），对市场份额扩张是劣势（缺乏价格弹性吸引互联网大客户）。韶关万卡集群（智算5.1万P、在韶签约订单3.2GW）的超常规增速，显示其在华南枢纽的政策红利极强。下周预判：云厂商公开调价仍将缺席，压力主要通过「限量供应+客户分级」隐性传导；成本上行叠加算力期货在中国尚未落地（CFTC对CME H100/B200算力期货审查延至11月9日），云厂商将更依赖长约锁量而非价格对冲。</p>
-</div>
-<h3>4-6-2 专业算力租赁平台</h3>
-<table class="data-table">
-<thead><tr><th>平台/标的</th><th>本周动态</th><th>时间维度</th><th>价格/规模</th><th>竞争优势与格局影响</th></tr></thead>
-<tbody>
-<tr><td><b>CoreWeave（海外标杆）</b></td><td>Q2营收26亿美元同比+112%、积压订单超1040亿美元；债券收益率一度冲至15.7%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">季变化</span></td><td>Q3新签短约约$4000万/MW；债务超500亿美元、单季净利息6.4亿美元</td><td>全球算力租赁风向标。GPU抵押融资模式在租金上涨时转得快，一旦市场怀疑GPU残值链条就绷紧——本周债息冲高说明风险定价已启动。</td></tr>
-<tr><td><b>H100国际租赁</b></td><td>Nebius自10/1起H100涨至$4.50/h、B200涨至$8.50/h（涨17%-21%）；本周无新调价</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>H100约$4.50/h/GPU；年内第二轮提价（年初$2.95→$3.85涨超30%）</td><td>国际H100租金一年涨约60%。中国客户难以直接获得合规H100供给，该溢价主要体现在代工与跨境通道环节。</td></tr>
-<tr><td><b>天阳科技</b></td><td>10/13公告同意采购2万块RTX PRO 5500，同时提示供应短缺/交付延迟风险</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>2万块、约2.28亿美元（按$11,400估算）</td><td>国内算力服务商转售合规芯片的典型样本。公告主动提示交付风险，反映算力租赁的商业模式正从「囤卡出租」转向「锁单+锁价+风险提示」。</td></tr>
-<tr><td><b>硅基流动</b></td><td>入选IDC《中国AI安全技术发展路线图，2026》推荐厂商（Token/API聚合层）</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>不做算力自建，仅做API聚合</td><td>轻资产高毛利定位。多模型API整合屏蔽底层芯片差异，在英伟达与国产芯片分裂的背景下反而具备跨后端调度价值。</td></tr>
-</tbody></table>
-<div class="analysis-box">
-<p><b>算力租赁「量价齐升」逻辑。</b>海外标杆CoreWeave的财务结构最能说明问题：Q2营收26亿美元同比+112%、积压订单超1040亿美元，同时把GPU本身作为抵押品向银行与私募信贷融资扩表。这套「重资产融资—买卡—出租—回款再融资」的循环在租金上行期转得飞快。但本周其债券收益率一度冲至15.7%、市场隐含五年违约概率超六成，说明当租金预期转向时链条会同步绷紧——债务超500亿美元、单季净利息6.4亿美元，每年利息支出够买数万颗高端GPU。国内算力租赁企业（如协创数据、润泽科技）享受A股高估值的逻辑在于「重资产+长约客户+政策背书」，但国内没有成熟的公开算力定价指数，行业大量交易是私下谈的双边合同（经济观察报2026-10-20），风险只能在供需双方之间消化——这是与云厂商自持资产定价的本质差异。</p>
-</div>
-<div class="analysis-box">
-<p><b>H100租赁涨价对国产替代的倒逼。</b>国际H100租金一年上涨约60%，Nebius年内两次提价将H100从$2.95推到$4.50。这一溢价的传导路径在国内是间接的：中国客户本就难以直接获得合规H100供给，涨价主要体现在代工通道与跨境交付环节。但它客观上放大了国产芯片的相对性价比——当英伟达合规产品RTX PRO 5500预购价$11,400、且2027年产能上限300万块无法满足中国600万块订单时，客户的现实选择只剩三条：排队等英伟达、转向昇腾等国产方案、或降低模型规格。寒武纪、昆仑芯、平头哥承接的正是这波溢出需求，三家在非GPU市场合计已占95%。</p>
-</div>
-<div class="analysis-box">
-<p><b>硅基流动「聚合平台」定位。</b>硅基流动不做算力自建、只做API聚合，商业模式是典型的轻资产+高毛利：它不持有GPU资产、不承担折旧与融资成本，靠多模型API整合赚取服务费。护城河建立在两点：其一是模型接入广度——同时对接英伟达与国产多种后端，客户无需关心底层芯片；其二是跨后端调度能力——在英伟达合规芯片供给受限、国产芯片供给紧张的本周，这种「屏蔽差异」的价值反而放大。平台粘性的软肋在于模型侧迁移成本低（客户可随时换聚合商），因此长期看护城河来自流量入口与SLA稳定性，而非技术独占。IDC将其列入2026年AI安全技术发展路线图推荐厂商，说明其在Token/API层已进入合规可采购序列。</p>
-</div>
-<h3>4-6-3 跨界算力服务商</h3>
-<table class="data-table">
-<thead><tr><th>公司</th><th>跨界方向</th><th>本周/近期进展</th><th>时间维度</th><th>规模</th></tr></thead>
-<tbody>
-<tr><td><b>江苏安澜万锦</b></td><td>高速线缆→AIDC互连</td><td>10/21上交所公告：上半年AIDC应用收入占比由2023年54.32%升至85.76%，224Gbps占57.89%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>AIDC收入占比85.76%；224Gbps占57.89%</td></tr>
-<tr><td><b>壁仞科技（GPU新进入者）</b></td><td>AI芯片→超节点</td><td>9/23中标青海昆仑领奕智算中心包一1.74亿元；9/17中报收入12.36亿元同比+1997.6%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>1.74亿元中标；毛利率42.7%；港股市值约989亿港元</td></tr>
-<tr><td><b>广东韶关（区域）</b></td><td>算力枢纽→签约转化</td><td>10/17南方日报：已建成6个万卡集群、上架智算5.1万P（去年6月10倍）、在韶签约订单3.2GW（去年同期64倍）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>签约项目26个、总投资1116亿元；年底30万标准机架</td></tr>
-<tr><td><b>乌兰察布（区域）</b></td><td>能源→Token之都</td><td>10/16-17习近平考察强调算电协同；累计签约算力项目109个、签约IT负荷超25GW；DeepSeek拟新增约1GW</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>算力运行规模19万P、智算占比超90%；到户电价0.32-0.36元/度</td></tr>
-<tr><td><b>中金数据（乌兰察布）</b></td><td>绿电直连+算力</td><td>全国首个数据中心绿电直连源网荷储一体化项目，年自发自用绿电约8.48亿度、减碳58万吨</td><td><span class="time-dim" style="background:#888;color:#fff;">持续</span></td><td>配套30万千瓦绿电（风20万+光10万）、4.5万千瓦储能</td></tr>
-</tbody></table>
-<div class="analysis-box">
-<p><b>跨界算力的「故事 vs 现实」。b></b>本期跨界算力最值得看的不是传统建筑企业跨界，而是两条新路径：其一，上游互连厂商安澜万锦上半年AIDC收入占比从2023年的54.32%跃升至85.76%，224Gbps产品占比57.89%，传统IDC应用降至14.24%——这是产业链下游（超节点放量）向上游传导的财务实证，说明跨界者确实吃到了真实增量而非概念。其二，区域枢纽从「签约」走向「转化」：韶关签约订单3.2GW是去年同期的64倍、上架智算5.1万P是去年6月的10倍；乌兰察布签约IT负荷超25GW、算力运行规模19万P。判断标准应落在「资金≠技术≠客户关系」三角：安澜万锦的优势是已绑定英伟达、华为、谷歌等算力厂商的产品规格适配；壁仞9/23中标1.74亿元的超节点包一虽金额不大，但证明国产GPU已进入国资智算中心的采购清单。风险在于交付确定性——超节点涉及芯片、互联、液冷、运维多环节协同，签约不等于可交付。</p>
-</div>
-<div class="analysis-box">
-<p><b>壁仞的「超节点」护城河。</b>壁仞从芯片切入超节点的路径具备可持续性：其二代卡单卡HL-Link聚合带宽1.6TB/s、一个计算域支持8卡互联、多节点组网可构建32-256卡推理服务集群，把产品矩阵补齐到16卡标准服务器、128卡整机柜、1024卡光互连超节点三级，并在国内率先完成从电互连到NPO光互连的技术演进。商业信号是9/23中标青海昆仑领奕智算中心1.74亿元超节点包一（交货期45个日历日），并率先实现从电互连到NPO的演进。但护城河的软肋在产能——国产AI芯片供给缺口约40%、部分交付排期延至一年后，规模放量受制于晶圆与HBM供给。评估结论：技术路线清晰、订单已破零，但规模兑现节奏取决于代工产能分配。</p>
-</div>
-<div class="analysis-box">
-<p><b>西部枢纽布局的战略价值。</b>乌兰察布的竞争逻辑已超越「承接东部溢出需求」的定位，转为直接孵化本土模型公司的算力底座。核心成本优势：年均气温4.3℃、近10个月自然冷源、数据中心能耗节约约30%、PUE稳定在1.2以下（当地均值1.16）、WUE小于0.8（优刻得方案节水超92%）；区位优势：144芯双回路专用光缆把约240公里物理距离压缩为4.2毫秒时延、直通北京；电力优势：到户电价0.32-0.36元/千瓦时，阿里云测算1GW数据中心放乌兰察布一年可比其他城市省约50亿元电费。投入产出比的关键变量是DeepSeek的1GW——若按期在2027年底至2028年初投运，乌兰察布将从「算力输出地」升级为「模型公司自建底座的聚集地」，估值逻辑从土地电价差转为产业链招商能力。</p>
-</div>
+<h3>4-6-1 头部云厂商份额与调价</h3><p><strong>本周没有足以支持云厂商周度份额或价格调整的新数据，运营商不宜据传闻修改资源采购价格。</strong>现有可比基线是2026H1中国数据中心AI加速器总出货200.8万颗，非GPU达到101.6万颗、同比增长近80%，GPU为99.1万颗、同比下降26%。平头哥以7%份额、约14.1万颗出货量位居英伟达和昇腾之后，说明云厂商自研芯片已形成规模化外部供给基础；但现有素材没有给出本周云厂商收入份额、算力租赁挂牌价、成交价或具体调价幅度，因此本章不构造周环比价格结论。对运营商规划而言，当前可确认的方向是国产非GPU供给增加，云厂商的芯片选择将趋于多元，但芯片份额变化不能直接推导云服务降价。</p><p>运营商应在下一轮询价中把调价拆成3类指标：一是标准卡、国产卡和整柜托管资源的同口径月度报价；二是挂牌价与合同成交价差异；三是续租价格与新签价格差异。只有取得连续报价后，才能判断云厂商是在让利扩量，还是用短期折扣换取客户迁移。若非GPU供给增加而推理服务成交价持续下降，运营商应优先比较单位Token成本和模型迁移成本，而不是只看裸卡价格。</p><h3>4-6-2 运营商云的位置</h3><p><strong>运营商云的机会在网络、属地资源、政企交付和国产化适配，短板则集中在芯片供给、平台心智和模型生态。</strong>IDC 2026H1数据表明，政府机构、互联网公司和电信运营商已采用华为、平头哥、昆仑芯和寒武纪等非GPU产品；昇腾384超节点已部署750余套，说明运营商已具备国产算力从采购到集成的现实入口。中国电信全国产万卡训练集群上线，也表明运营商能够把网络、机房和集成交付能力转化为国产集群项目。相较互联网云厂商，运营商更容易连接政企本地化场景，并通过专线、云网安全和属地运维形成差异化；相较专业AI云，运营商具备网络和客户覆盖优势。</p><p>短板同样明确：互联网厂商掌握模型、框架与云API协同，能够在内部大规模负载上摊薄芯片适配成本；专业算力服务商在集群调度、模型服务和开发者工具上更聚焦。运营商若只销售通用算力，很容易被价格比较；若能围绕行业模型迁移、跨云调度、国产双栈和端网协同提供托管服务，则可把网络资产转化为服务黏性。建议采购评估同时设置国产芯片、进口GPU双栈验证，并要求集群交付方案披露模型迁移工时、有效算力和持续压测结果。</p><h3>4-6-3 专业算力服务商</h3><p><strong>专业算力服务商的价值正从提供闲置卡转向承接可复制的训推集群，但商业模式仍受客户集中和平台适配制约。</strong>昇腾384超节点已部署750余套，表明具备芯片、整机、调度和运维一体化能力的供应商更容易承接批量项目；阿里平头哥以7%份额依托阿里云内部需求和外部算力服务扩张，百度昆仑芯以4%份额依托自有生态，运营商采购这些方案时不能把集团内部规模等同于外部客户可获得的服务能力。专业服务商应公开节点级性能、资源利用率、故障恢复时间和数据隔离能力，运营商则应把服务等级、模型版本支持、跨平台迁移和退出时数据迁移写入合同。</p><p><strong>专业服务商能否从项目交付走向标准化服务，取决于客户结构能否由单一模型团队扩展到多行业客户。</strong>现有素材没有披露专业算力服务商的租赁单价、毛利率和客户集中度，不能对其经营质量作量化判断。运营商引入外部服务时，应分别核验芯片来源、集群调度平台、模型服务层和运维团队是否由同一主体控制，并设置资源可用率、故障替换、数据隔离和跨域调用边界。对拥有自研芯片生态的云系厂商，应额外验证外部客户能否获得与内部负载相同的软件版本、模型适配和运维响应；若内部能力无法外溢，7%或4%的芯片份额就不能直接转化为第三方可采购的算力服务供给。</p>
 </div>
 
 <!-- 4-7 商业模式演变周度追踪 -->
 <div class="section">
 <h2>4-7 商业模式演变周度追踪</h2>
-<h3>4-7 商业模式演变周度追踪</h3>
-<table class="data-table">
-<thead><tr><th>模式</th><th>定义</th><th>当前状态/证据</th><th>时间维度</th><th>变化</th><th>趋势判断</th></tr></thead>
-<tbody>
-<tr><td><b>IaaS（卖算力）</b></td><td>GPU云服务器/裸金属/整机柜租赁</td><td>供给受限且涨价：RTX PRO 5500中国订单超600万块 vs 2027产能上限300万块；国产芯片供给缺口约40%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17;">月变化</span></td><td>↑供给紧张</td><td>算力本身成为稀缺商品，卖方市场。但10/22算力硬件股集体重挫、创业板指跌超4%，市场定价逻辑已从「算力增量」切换到「算力回报率」，资本不再为扩产规模买单，只为利用率与变现效率买单。</td></tr>
-<tr><td><b>MaaS（算力+模型）</b></td><td>预训练大模型API/一站式模型服务</td><td>IDC数据：火山引擎AI座舱份额45%居首、百度第二；MaaS整体份额约49.5%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828;">半年变化</span></td><td>↑上升中</td><td>华为云提出「智能体时代基础设施核心是Token效率」，大厂自研芯片全部配套自家云与模型，说明MaaS正在成为算力的唯一变现出口。竞争焦点从模型参数转向Token单位成本与生态适配。</td></tr>
-<tr><td><b>API（卖Token）</b></td><td>按Token计费的推理服务</td><td>德勤预计2026年推理占AI计算量约2/3；百度泰康案例3500+智能体日均耗Token 200亿</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>↑↑爆发期</td><td>推理需求全面超越训练。字节、阿里、腾讯同周抢购300万块推理定位的工作站GPU，是Token爆发期最直接的需求证据。DeepSeek开源Flash版模型进一步降低算力门槛，价格战已从模型层传导至算力采购层。</td></tr>
-<tr><td><b>系统交付（卖超节点）</b></td><td>整机柜/超节点整体方案交付</td><td>2026年为超节点规模放量元年；安澜万锦AIDC收入占比升至85.76%；曙光8000十万卡集群落成</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20;">周变化</span></td><td>↑↑新模式</td><td>国联民生证券观点：客户资本开支正从「芯片采购」向「系统交付」倾斜。华为昇腾960单节点1024卡扩至4096卡，DeepSeek采用UBL128组网可扩展256K卡——竞争单位已从单卡变为逻辑整体。</td></tr>
-</tbody></table>
-<div class="analysis-box">
-<p><b>Token经济加速：从卖卡到卖Token的定价权转移。</b>本周三个数据把这条趋势钉死：其一，字节、阿里、腾讯在同一天抢购超300万块推理定位的工作站GPU，说明需求方已不再讨论「要不要买卡」，而是在讨论「抢不抢得到卡」——算力从预算项变成战略储备。其二，德勤预计2026年推理将占AI计算量约三分之二，而推理需求的特点是持续发生、高并发、长尾，正好匹配按Token计费的商业模式；百度泰康案例单个客户3500多个智能体日均消耗Token 200亿，说明Token消耗与智能体部署数量呈正比增长且不回落。其三，DeepSeek开源Flash版本模型主动压低算力门槛，看似自伤，实则是在把长尾需求做成Token流量的入口。</p>
-</div>
-<div class="analysis-box">
-<p><b>MaaS平台化与垂直整合加剧。</b>MaaS的价值不在模型本身，而在「算力—模型—场景」的闭环绑定。本周三个动作指向同一逻辑：华为把昇腾芯片、超节点、CANN软件栈与华为云打包对外，DeepSeek把预训练参考实现开源到昇腾社区、深度绑定昇腾超节点架构；阿里提出「芯片负责生产Token，云负责把Token送到每一个需要它的地方」的三基石，把真武芯片与阿里云强绑定；百度昆仑芯P800在百度内部全面验证后才推向外部。垂直整合的加剧带来一个副作用——客户的芯片选择空间正在收窄。当Token成本由芯片、整机、软件栈、模型四层共同决定时，谁掌握全栈，谁就掌握Token的最终定价权；而纯代工、纯组装的环节只能赚取加工费，其利润空间正被压缩到与浪潮4.52%毛利率同一量级。</p>
-</div>
+<h3>4-7-1 算力租赁：从按卡供给转向按有效算力交付</h3><p><strong>算力租赁的单价正在失去单独解释力，运营商采购应转向单位Token成本和有效利用率。</strong>2026H1非GPU加速器出货101.6万颗、同比增长近80%，GPU出货99.1万颗、同比下降26%，供给结构变化使租赁市场的同型号稀缺溢价逐步减弱，但素材没有披露本周各类卡挂牌价、成交价或毛利率，不能据此编写价格涨跌结论。客户结构正在从短期测试扩展到政府机构、互联网公司和电信运营商，采购目的也从获得单卡转为完成持续训练和推理服务。运营商选择租赁商时，应将裸卡时价转换为模型迁移后的单位Token成本，同时计入节点故障、等待时间、数据传输和退出迁移成本。</p><p>商业模式的变化体现在交付边界扩大：客户购买的已不再只是卡时，而是可用集群、持续运维和模型服务。昇腾384超节点已部署750余套，验证了按超节点组织供给的可行性。租赁商需要把芯片、互联、网络、存储和软件调度纳入统一SLA；运营商则应设置基础资源保底与弹性推理资源组合，降低长期包卡造成低利用率的风险。由于现有素材没有披露租赁毛利率，本章不判断具体毛利变化，应要求供应商在下期报价中分别披露裸卡、节点和托管资源的成本边界。</p><h3>4-7-2 MaaS：平台收入取决于模型迁移和服务复用</h3><p><strong>MaaS正在承接芯片替代后的迁移成本，平台价值不再只由底层卡数量决定。</strong>英伟达2026H1出货67.8万颗、同比下降44%，昇腾出货57.2万颗、份额28%，意味着客户模型需要同时适配不同软件栈；DeepSeek开源推理框架兼容英伟达与昇腾平台，也表明兼容层正在降低迁移摩擦。MaaS平台的客户因此从购买算力转向购买模型API、推理服务和工作流，客户结构由少数模型训练团队扩展到政企应用开发者。平台应按模型、上下文长度、并发量和SLA分级计价，而不能只按卡时统一定价。</p><p><strong>对运营商而言，MaaS是弥补模型生态短板的关键接口，但必须建立可验证的收入质量指标。</strong>运营商可将自研行业模型和算力调度能力组合成托管服务，收入考核从资源出租转向API调用、模型订阅和运维服务占比。由于素材没有披露MaaS毛利率，不宜给出具体数值；下一期应验证3项经营信号：国产平台承载的模型迁移项目数量、迁移后单位Token成本下降幅度、同一软件栈跨英伟达与昇腾复用的比例。若迁移工时下降但客户仍按裸卡采购，说明MaaS定价没有体现平台价值；若API调用和运维服务收入随项目增加，运营商才能把算力网络优势转化为持续性服务收入。</p><h3>4-7-3 整柜托管：规模交付放大收益，也放大运营责任</h3><p><strong>整柜托管将成为连接芯片采购与云服务收入的关键中间形态，其收益来自资源利用率，风险来自整柜故障责任集中。</strong>DIGITIMES预测2026年全球AI服务器出货266万台，高阶AI服务器237万台，Google与Celestica组合、鸿海、浪潮和戴尔预计分别出货79.4万台、52.2万台、32.4万台和29.9万台，显示整机柜级供给正在扩大。客户由零散租卡转向整柜托管后，托管商可统一完成液冷、网络、供电和调度，收入稳定性高于单卡零售；客户则减少自建机房和运维团队，但需承担长期占用成本及模型迭代后的配置过时风险。</p><p>整柜托管的毛利由芯片采购成本、液冷与网络折旧、利用率、客户期限和残值共同决定，现有素材没有披露本周租赁、整柜托管或MaaS的单价与毛利率，不能给出数值判断。运营商应采用基础保底加按量计费组合，在合同中约定设备代际升级、故障停机补偿、网络与电力边界以及提前解约条款。由于高阶AI服务器占预测出货的绝对主体，整柜托管扩张还会同步放大供电和液冷运维要求，只有当利用率、客户续约和迁移工时同步改善，托管收入才会转化为可持续利润，而不是重资产库存压力。</p>
 </div>
 
 <!-- 4-8 一周要闻汇总表 -->
@@ -653,67 +801,74 @@ tr.week-highlight { background: #fff8e1; }
 </tr>
 </thead>
 <tbody>
-<tr>
-    <td>10-22</td>
-    <td>算力硬件股集体重挫，创业板指跌超4%近5000股下跌</td>
-    <td>A股算力板块</td>
-    <td>成交1.54万亿元，易中天领跌</td>
-    <td><span class="change-new">★★★</span></td>
+<tr class="week-highlight">
+    <td>10-26</td>
+    <td>开源证券称昇腾384超节点已部署750余套</td>
+    <td>华为昇腾</td>
+    <td>750余套</td>
+    <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr class="week-highlight">
     <td>10-21</td>
-    <td>DeepSeek与华为共研芯片，开源昇腾950超节点V4.1-Flash预训练参考实现</td>
-    <td>DeepSeek/华为昇腾</td>
-    <td>UBL128组网，可扩展256K卡</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr>
-    <td>10-21</td>
-    <td>安澜万锦公告：上半年AIDC高速线缆收入占比升至85.76%</td>
-    <td>江苏安澜万锦（上交所披露）</td>
-    <td>224Gbps占57.89%，传统IDC降至14.24%</td>
-    <td><span class="change-new">★★★</span></td>
-</tr>
-<tr class="week-highlight">
-    <td>10-20</td>
-    <td>字节/阿里/腾讯合计订购超300万块RTX PRO 5500</td>
-    <td>英伟达/字节/阿里/腾讯</td>
-    <td>逾350亿美元，中国订单超600万块</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr class="week-highlight">
-    <td>10-20</td>
-    <td>美DHS命令联邦民事机构IT系统移除DeepSeek并禁止采购</td>
-    <td>美国国土安全部</td>
-    <td>命令编号2026-01，10/20生效</td>
-    <td><span class="change-new">★★★★★</span></td>
-</tr>
-<tr class="week-highlight">
-    <td>10-20</td>
-    <td>工信部披露截至9月底智能算力2592 EFLOPS、同比+146%</td>
-    <td>工业和信息化部</td>
-    <td>三个月净增407 EFLOPS，环比+18.6%</td>
+    <td>国产厂商2025年中国AI加速卡出货约165万张</td>
+    <td>国产AI芯片厂商</td>
+    <td>约165万张，份额约41%</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr class="week-highlight">
     <td>10-19</td>
-    <td>美OFAC依PAIPA将5家中国实体列入NS-MBS制裁名单</td>
-    <td>美国OFAC/上海至算/奇绩创坛</td>
-    <td>财产冻结+跨境融资+美元交易限制</td>
+    <td>DIGITIMES预测2026年全球AI服务器出货266万台</td>
+    <td>DIGITIMES</td>
+    <td>266万台，同比增长46.4%</td>
     <td><span class="change-new">★★★★★</span></td>
 </tr>
 <tr class="week-highlight">
-    <td>10-17</td>
-    <td>DeepSeek拟在乌兰察布新增约1GW算力，部分2027年底投运</td>
-    <td>DeepSeek/乌兰察布</td>
-    <td>1GW；当地签约IT负荷超25GW</td>
+    <td>10-19</td>
+    <td>鸿海2026年AI服务器出货预计52.2万台</td>
+    <td>鸿海</td>
+    <td>52.2万台，同比增长88%</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 <tr class="week-highlight">
-    <td>10-16</td>
-    <td>习近平考察乌兰察布强调算电协同、算水协同</td>
-    <td>国家层面/乌兰察布</td>
-    <td>算力网列入国家六张网；当地PUE均值1.16</td>
+    <td>10-19</td>
+    <td>浪潮2026年AI服务器出货预计32.4万台</td>
+    <td>浪潮</td>
+    <td>32.4万台，同比增长56%</td>
+    <td><span class="change-new">★★★★</span></td>
+</tr>
+<tr class="week-highlight">
+    <td>10-18</td>
+    <td>非GPU加速器2026H1出货超过GPU</td>
+    <td>中国非GPU加速器市场</td>
+    <td>101.6万颗，对比GPU 99.1万颗</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr class="week-highlight">
+    <td>10-14</td>
+    <td>IDC披露平头哥、寒武纪、昆仑芯和海光份额</td>
+    <td>中国AI芯片厂商</td>
+    <td>7%、5%、4%、3%</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr class="week-highlight">
+    <td>10-13</td>
+    <td>IDC确认英伟达2026H1在华AI加速器份额降至34%</td>
+    <td>英伟达</td>
+    <td>出货67.8万颗，同比下降44%</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr class="week-highlight">
+    <td>10-13</td>
+    <td>华为昇腾2026H1出货接近翻倍，份额升至28%</td>
+    <td>华为昇腾</td>
+    <td>57.2万颗，份额28%</td>
+    <td><span class="change-new">★★★★★</span></td>
+</tr>
+<tr class="week-highlight">
+    <td>10-13</td>
+    <td>IDC预计2026年中国AI加速器总出货增长19%</td>
+    <td>IDC</td>
+    <td>总出货同比增长19%</td>
     <td><span class="change-new">★★★★</span></td>
 </tr>
 </tbody>
@@ -721,19 +876,18 @@ tr.week-highlight { background: #fff8e1; }
 </div>
 
 <!-- 数据来源 -->
-<div class="section sources-section">
-<h2>数据来源</h2>
-<div class="sources-list">
-<span class="source-tag">路透社 2026-10-20《字节跳动、阿里巴巴和腾讯订购超300万块英伟达RTX PRO 5500》，RFI/联合早报/德国之声/凤凰网科技2026-10-20至10-22转载</span>
-<span class="source-tag">IDC《2026年上半年中国数据中心AI加速器市场统计》，经路透社2026-10-13引用；快科技、搜狐时间线2026-10-19转载</span>
-<span class="source-tag">工业和信息化部信息通信管理局局长谢存，国新办2026-10-20前三季度工业和信息化发展情况新闻发布会</span>
-<span class="source-tag">美国国务院/OFAC 2026-10-19依PAIPA制裁公告及NS-MBS名单；美国国土安全部命令编号2026-01（10/19联邦公报公布、10/20生效）</span>
-<span class="source-tag">央视新闻 2026-10-17《联播+｜考察绿色算力 总书记强调两个协同》；人民日报客户端内蒙古频道2026-10-17；国家数据局转载《内蒙古日报》2026-10-17</span>
-<span class="source-tag">通信世界 2026-10-20《DeepSeek联手华为 共研AI芯片》；华为计算公众号2026-09-30昇腾社区技术文章</span>
-<span class="source-tag">IDC《中国软件定义存储（SDS）及超融合系统（HCI）市场季度跟踪报告 2026Q2》，2026-10-15发布；IT之家2026-10-18转载</span>
-<span class="source-tag">江苏安澜万锦电子股份有限公司上交所披露公告（2026-10-21）</span>
-<span class="source-tag">界面新闻/新浪财经 2026-10-22 A股收盘算力硬件板块行情数据</span>
-<span class="source-tag">C114通信网/通信世界 2026-10-08至10-12《中国移动RoCE交换机集采》《Q3三大运营商AIDC基础设施招标监测》</span>
+<div class="section refs-section">
+<h2>数据来源与参考</h2>
+<div class="refs-body">
+<div class="refs-note">按正文引用顺序编号，共 6 条，其中 6 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<ol class="refs-list">
+<li class="ref-item"><span class="ref-org">开源证券</span><a class="ref-title" href="http://field.10jqka.com.cn/20261026/c681060212.shtml" target="_blank" rel="noopener">国产算力单芯片性能与集群规模同步跃升</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">报告称昇腾384超节点已部署750余套，并引用<a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a> 2026H1英伟达34%、昇腾28%的实测份额。</p></li>
+<li class="ref-item"><span class="ref-org">界面新闻</span><a class="ref-title" href="https://finance.sina.com.cn/jjxw/2026-10-21/doc-inivynsm5408784.shtml" target="_blank" rel="noopener">一张加速卡背后的国产算力突围战</a><span class="ref-date">2026-10-21</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">报道援引IDC 2025年度报告，中国AI加速卡约400万张，其中国产厂商约165万张、份额约41%。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://www.digitimes.com.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">DIGITIMES</a></span><a class="ref-title" href="https://caifuhao.eastmoney.com/news/20261019142557241919290" target="_blank" rel="noopener">2026年全球AI服务器出货量266万台</a><span class="ref-date">2026-10-19</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">预测2026年全球AI服务器出货266万台、同比增长46.4%，鸿海出货52.2万台、浪潮32.4万台。</p></li>
+<li class="ref-item"><span class="ref-org">搜狐科技</span><a class="ref-title" href="https://news.sohu.com/a/1089335516_120468014" target="_blank" rel="noopener">2026上半年中国AI加速器出货量</a><span class="ref-date">2026-10-18</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">报道<a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a> 2026H1中国AI加速器总出货200.8万颗，非GPU出货101.6万颗并超过GPU。</p></li>
+<li class="ref-item"><span class="ref-org">电子工程专辑</span><a class="ref-title" href="https://www.eet-china.com/news/202610142838.html" target="_blank" rel="noopener">IDC披露2026H1中国AI芯片份额</a><span class="ref-date">2026-10-14</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">报道平头哥、寒武纪、昆仑芯和海光信息份额分别为7%、5%、4%和3%。</p></li>
+<li class="ref-item"><span class="ref-org">芯东西</span><a class="ref-title" href="https://t.cj.sina.cn/articles/view/7310786248/1b3c1bec802001w7w0" target="_blank" rel="noopener">2026上半年中国AI加速器出货量</a><span class="ref-date">2026-10-13</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">报道<a data-portal="1" href="https://www.idc.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">IDC</a> 2026H1英伟达出货67.8万颗、份额34%，华为出货57.2万颗、份额28%。</p></li>
+</ol>
 </div>
 </div>
 
@@ -742,10 +896,12 @@ tr.week-highlight { background: #fff8e1; }
 <footer class="footer">
 <p>© 2026 中国智能算力报告 | 竞争格局分析章节 | 数据仅供参考，不构成投资建议</p>
 </footer>
+<div class="container">
 <div class="chapter-nav">
     <a href="区域算力发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="技术趋势发展分析报告.html" class="nav-next">下一章 ➡️</a>
+</div>
 </div>
 </body>
 </html>
