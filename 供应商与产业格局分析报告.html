@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>六、供应商与产业格局 | 第40期</title>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<title>六、供应商与产业格局 | 第41期</title>
 <style>
 
 
@@ -12,8 +11,10 @@
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
-header h1 { font-size: 1.7em; }
+header h1 { font-size: 26px; font-weight: 600; margin-bottom: 8px; }
 header p { margin-top: 8px; opacity: 0.9; }
+header .subtitle { font-size: 14px; color: #aab; margin-top: 6px; }
+.week-badge { display: inline-block; background: #e53935; color: white; font-size: 11px; padding: 3px 10px; border-radius: 10px; margin-bottom: 6px; }
 section { background: white; margin: 12px 0; padding: 22px; border-radius: 10px; box-shadow: 0 2 12px rgba(0,0,0,0.05); }
 section h2 { color: #0f172a; font-size: 1.4em; margin-bottom: 12px; border-bottom: 3px solid #0ea5e9; padding-bottom: 6px; }
 section h3 { color: #1e3a5f; font-size: 1.05em; margin: 20px 0 10px; border-left: 3px solid #38bdf8; padding-left: 8px; }
@@ -162,14 +163,104 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 @media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
 
 
+.section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
 
+
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
+
+.section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
 </style>
 </head>
 <body>
 <header>
-<h1>🏭 六、供应商与产业格局</h1>
-<p style="margin-top:8px;opacity:0.9;">智能算力产业链供应链深度解析 | 2026-10-16 — 2026-10-22</p>
-<p style="margin-top:4px;opacity:0.7;font-size:0.85em;">第40期 | 数据更新周期：2026-10-22</p>
+<div class="week-badge">第41期</div>
+<h1>六、供应商与产业格局</h1>
+<div class="subtitle">2026-10-23—2026-10-29 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -192,57 +283,46 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><p>本周（10.16—10.22）中国智能算力供应链出现了一条清晰的主线：国产算力从"单卡可用"跨入"系统可交付"。10月16日，中国电信与华为在内蒙古落地全球首个昇腾950DT万卡池，中国移动同日在北京落地昇腾950DT千卡超节点，华为超节点规模已从384卡升级到8192卡，下一代960超节点首发NPO方案并可扩展至4096卡。</p>
-<p>芯片份额同步收窄。IDC在10月中旬发布的数据显示，2026年上半年中国AI加速器总出货200.8万颗，英伟达67.8万颗、份额34%（同比-44%），华为昇腾57.2万颗、份额28%，两者差距收窄到6个百分点；平头哥、寒武纪、昆仑芯、海光分别占7%、5%、4%、3%，11家国产厂商中有9家出货同比增长。</p>
-<p>业绩层面，10月15日至19日是国产算力三季报的密集兑现窗口。沐曦股份预计前三季度营收同比增长105.60%至151.29%并扭亏为盈，海光信息第三季度单季营收58.56亿元创历史新高，浪潮信息预计前三季度归母净利润38亿至41亿元、同比增长156.40%至176.64%，中科曙光第三季度单季归母净利润7.53亿元、同比增长217%。</p>
-<p>中游同样被长单点燃。协创数据10月19日公告全资子公司签下不超过374.9亿元、服务期60个月的算力云服务协议，光环新网则拟对和林格尔智算中心追加投资不超过12.65亿元。与此同时，海外产能约束反向强化：路透报道字节、阿里、腾讯合计订购超300万块英伟达RTX PRO 5500，总额逾350亿美元。</p>
-</div>
+<div class="overview-text"><p class="ov-lead">本周智能算力供应链呈“内存与先进封装双紧、设备交期拉长”格局。</p><ul class="ov-points"><li><a class="src-link" href="https://www.tmtpost.com/8185837.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>HBM仍是硬约束：</strong>截至10月29日，2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制；三星、SK海力士和美光掌握全球95%以上DRAM产能，HBM占DRAM晶圆产能比重预计由2024年的12.3%升至2026年的20.8%，未来24个月供应紧张难以逆转。</a></li><li><a class="src-link" href="https://app.myzaker.com/news/article.php?pk=6ae198068e9f09449b1b9bfc" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>先进制程与封测同步涨价：</strong>10月27日至28日，台积电CoWoS封装报价拟上调10%-20%，芯片设备交期由3-6个月延长至6-8个月；台积电不同制程晶圆报价已上调3%-6%，三星先进制程代工订单价格最高上调15%，运营商采购成本与排产周期同时承压。</a></li><li><a class="src-link" href="https://m.36kr.com/p/4019942949295744" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>整机配套向高功率系统迁移：</strong>AI服务器订单占用了台系ODM大部分产能，液冷订单排期延伸至2027年，部分企业营收增速超过400%；机架功率已突破30kW、50kW，光模块订单同样排至2027年，散热、供电、光互联成为与GPU并列的交付约束。</a></li></ul><p class="ov-note"><strong>对运营商含义：</strong>10月下旬采购询价应分别锁定HBM或显存配额、CoWoS及服务器测试排期、液冷设备交付窗口，并在合同中区分设备交期6-8个月与服务器整机交期；对CoWoS拟涨价10%-20%、晶圆代工涨价3%-15%的报价，至少预留价格调整条款，并通过第二供应商和分批交付降低单一产能依赖。</p></div>
 </div>
 
-<div class="data-note" style="background:#e8f4fd;border-left:4px solid #2196F3;padding:12px 16px;margin:20px 0;font-size:12px;color:#555;border-radius:4px;">
-  📌 <strong>数据周期：</strong>2026-10-16 — 2026-10-22　|　<strong>数据来源：</strong>各厂商官网、CFM闪存市场、IDC、TrendForce、证券时报、财联社等　|　<strong>置信度：</strong>高
+<div class="data-meta">
+<span class="dm"><b>数据周期</b><span>2026-10-23—2026-10-29（第41期）</span></span>
+<span class="dm"><b>数据来源</b><span>各厂商官网、CFM 闪存市场、IDC、TrendForce、证券时报、<a data-portal="1" href="https://www.cls.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">财联社</a>等</span></span>
+<span class="dm"><b>口径说明</b><span>交期与产能为厂商披露口径；预测值单独标注，不与实测交付混用；订单金额与可交付量分列</span></span>
 </div>
+
 
 <div class="data-cards">
 <div class="data-card">
-    <div class="label">昇腾950DT万卡池</div>
-    <div class="value">全球首个</div>
-    <div class="tag up">周变化（本周）</div>    <div class="tag-note">10-16 中国电信×华为落地内蒙古</div>
+    <div class="label">HBM供货缺口</div>
+    <div class="value">160万颗</div>
+    <div class="tag flat">供给缺口</div>    <div class="tag-note">2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制</div>
 </div>
 <div class="data-card">
-    <div class="label">华为昇腾份额</div>
-    <div class="value">28%</div>
-    <div class="tag up">季变化</div>    <div class="tag-note">IDC 2026H1 57.2万颗，英伟达34%</div>
+    <div class="label">CoWoS封装报价</div>
+    <div class="value">10%-20%</div>
+    <div class="tag up">拟涨价幅度</div>    <div class="tag-note">台积电拟上调CoWoS封装报价，AI芯片测试周期延长进一步加剧封测产能压力</div>
 </div>
 <div class="data-card">
-    <div class="label">国产超节点市场</div>
-    <div class="value">759亿元</div>
-    <div class="tag up">持续</div>    <div class="tag-note">中金测算2026年，2027年2256亿元</div>
+    <div class="label">先进制程晶圆价</div>
+    <div class="value">3%-6%</div>
+    <div class="tag up">晶圆涨价幅度</div>    <div class="tag-note">台积电已确定按不同制程上调晶圆价格，三星先进制程代工订单价格最高上调15%</div>
 </div>
 <div class="data-card">
-    <div class="label">协创智算长单</div>
-    <div class="value">374.9亿元</div>
-    <div class="tag up">周变化（本周）</div>    <div class="tag-note">10-19 公告，服务期60个月</div>
+    <div class="label">芯片设备交期</div>
+    <div class="value">6-8个月</div>
+    <div class="tag up">交期</div>    <div class="tag-note">由此前3-6个月延长至6-8个月，芯片厂商为锁定交付排期而减少议价</div>
 </div>
 <div class="data-card">
-    <div class="label">光器件排单</div>
-    <div class="value">至2029年初</div>
-    <div class="tag up">月变化</div>    <div class="tag-note">Lumentum：2027年约70%需求未满足</div>
+    <div class="label">CoWoS月产能</div>
+    <div class="value">13万片晶圆/月</div>
+    <div class="tag flat">2026年月产能</div>    <div class="tag-note">预计2027年月产能进一步提升至20万片晶圆，但当前仍处于供不应求状态</div>
 </div>
 <div class="data-card">
-    <div class="label">HBM 2027均价</div>
-    <div class="value">同比+121%</div>
-    <div class="tag up">持续</div>    <div class="tag-note">集邦咨询2026年10月预测</div>
-</div>
-<div class="data-card">
-    <div class="label">超节点放量元年</div>
-    <div class="value">2026年</div>
-    <div class="tag up">月变化</div>    <div class="tag-note">中信建投10-22研判</div>
-</div>
-<div class="data-card">
-    <div class="label">英伟达RTX PRO 5500</div>
-    <div class="value">超300万块</div>
-    <div class="tag down">周变化（本周）</div>    <div class="tag-note">10-20 路透：字节阿里腾讯逾350亿美元</div>
+    <div class="label">液冷订单排期</div>
+    <div class="value">2027年</div>
+    <div class="tag flat">订单排期</div>    <div class="tag-note">多家AI服务器液冷企业订单排期延伸至2027年，部分企业营收增速超过400%，产能与交付缺口继续扩大</div>
 </div>
 
 </div>
@@ -250,21 +330,17 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <div class="section">
 <h2>⏱️ 本周供应商时间线</h2>
 <div class="timeline">
-<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">中信建投定调2026年为国产超节点放量元年，中金同步给出市场规模测算</div><div class="timeline-source">来源：中信建投、中金公司研报，2026-10-22</div><div class="timeline-impact">中信建投在10月22日的研报中判断，2026年将成为国产超节点批量放量的起点年；中金公司测算国产超节点市场规模2026年约759亿元，2027年将跃升至2256亿元。券商把超节点从技术概念正式列入可测算的产业规模，意味着整机、互连、光电合封与液冷环节的订单能见度被拉到两年以上。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">英伟达宣布三年内封装基板产能提至2.5倍，CPO光引擎2027年中扩至15倍</div><div class="timeline-source">来源：英伟达GTC柏林大会（腾讯新闻2026-10-22报道）</div><div class="timeline-impact">英伟达在10月21日的GTC柏林主题演讲后同步公布扩产表：未来三年封装基板产能提升至2.5倍，CPO光引擎产能到2027年中提升至当前15倍、2028年底再翻一番，京元电子获得11亿美元预付款。黄仁勋明确表示产能是最大瓶颈，这直接决定2027-2028年全球算力硬件的交付天花板。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-21</div><div class="timeline-title">英伟达发布Vera Rubin DSX POD模块化AI工厂，部署周期压缩至最快14天</div><div class="timeline-source">来源：英伟达GTC柏林大会（新浪财经2026-10-21）</div><div class="timeline-impact">黄仁勋在10月21日的柏林演讲中发布DSX POD全栈模块化AI工厂参考架构，计算、网络、供电与液冷在工厂内完成集成验证，运抵现场对接基础设施即可部署，交付周期由传统约6个月压缩至最快14天，戴尔、HPE、联想、施耐德、维谛加入生态，伙伴预计2027年初开始全球交付。同时披露建设1吉瓦AI数据中心整体成本约500亿美元。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">路透报道字节、阿里、腾讯合计订购超300万块英伟达RTX PRO 5500，总额逾350亿美元</div><div class="timeline-source">来源：路透社，2026-10-20</div><div class="timeline-impact">路透在10月20日报道称，字节跳动、阿里巴巴与腾讯合计向英伟达订购超过300万块RTX PRO 5500，总金额超过350亿美元。这是三家中国头部互联网企业在出口管制背景下罕见的超大规模联合采购，说明推理侧算力缺口仍然巨大，国产芯片短期内无法完全承接这部分需求。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">DeepInfer推理框架开源，实现英伟达与昇腾双兼容</div><div class="timeline-source">来源：开源社区发布，2026-10-20</div><div class="timeline-impact">10月20日上线的DeepInfer推理框架同时兼容英伟达CUDA生态与华为昇腾环境，为存量模型提供了一条不改代码即可双栈运行的迁移路径。推理框架层的兼容，直接决定客户在实际采购中能否把国产卡与英伟达卡混编在同一集群里调度。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">芜湖经开区签约紫光未来科技服务器产线项目，年产值约10亿元</div><div class="timeline-source">来源：芜湖经开区管委会，2026-10-20</div><div class="timeline-impact">芜湖经开区10月20日与紫光未来科技签约服务器产线项目，规划年产值约10亿元。紫光股份旗下新华三已在内蒙古投产，芜湖项目的落地说明服务器整机产能正在从一线城市向具备能耗与电价优势的中部枢纽扩散，区域算力装备配套体系加速成形。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">协创数据公告374.9亿元算力云服务协议，服务期长达60个月</div><div class="timeline-source">来源：协创数据公告（新浪财经2026-10-19）</div><div class="timeline-impact">协创数据10月19日晚间公告，全资子公司协创智算签署算力云服务协议，合同预计总金额不超过374.9亿元，服务周期5年。这是本周披露的最大单笔算力长单，叠加东阳光云智算7月落地的130亿至150亿元合同，两笔公开长单合计已达504.9亿至524.9亿元，中游算力运营商正在用长期合约锁定上游整机产能。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">海光信息发布三季报，第三季度营收58.56亿元创单季新高</div><div class="timeline-source">来源：海光信息688041三季报，2026-10-19</div><div class="timeline-impact">海光信息10月19日晚披露三季报，前三季度营收同比增长57.58%，第三季度单季营收58.56亿元刷新历史纪录。公司在公告中指出，国产化进程正由政策驱动全面转向市场驱动，下游客户对国产CPU与DCU的采购意愿和粘性持续增强。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">The Information披露华为工程师进驻DeepSeek，共研下一代昇腾</div><div class="timeline-source">来源：The Information，2026-10-19</div><div class="timeline-impact">The Information在10月19日报道，华为工程师已进驻DeepSeek办公室，把模型训练中的真实痛点直接写进下一代昇腾芯片设计。报道称华为年底拟用950DT做预训练，2027年量产的960DT大部分产能将优先供给DeepSeek，这是国产芯片从通用替代走向深度定制协同的标志性事件。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">协创数据拟定增募资不超80亿元，光环新网追加投资和林格尔智算中心</div><div class="timeline-source">来源：协创数据、光环新网公告（新浪财经2026-10-19）</div><div class="timeline-impact">在374.9亿元算力云服务协议落地的同时，协创数据宣布拟定增募资不超过80亿元，其中46.86亿元投向训推一体化智算中心；光环新网则拟对和林格尔智算中心追加投资不超过12.65亿元。二级市场资本正沿算力租赁赛道加速卡位，能否把投入转化为起租收入成为分水岭。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-18</div><div class="timeline-title">内江集中签约17个算力相关项目，常友科技词元生产基地为最大投资</div><div class="timeline-source">来源：内江市政府签约发布会，2026-10-18</div><div class="timeline-impact">四川内江10月18日集中签约17个项目，其中常友科技投建的成渝中心算力枢纽先进计算与词元生产基地是本批次最大投资项目。地方政府以整机、芯片与词元生产三类环节打包签约，标志算力产业链的招商重心正从机房土建转向硬件制造与运营一体。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-16</div><div class="timeline-title">中国电信联合华为落地全球首个昇腾950DT万卡池，中国移动落地千卡超节点</div><div class="timeline-source">来源：上海有色网SMM快讯2026-10-21引述，2026-10-16</div><div class="timeline-impact">10月16日，中国电信与华为在内蒙古落地全球首个昇腾950DT万卡池，中国移动同日在北京落地昇腾950DT千卡超节点。华为超节点规模已从384卡升级至8192卡，下一代960超节点首发NPO方案并可扩展至4096卡，国产算力正式进入万卡级系统交付阶段。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-16</div><div class="timeline-title">源杰科技12.51亿元光芯片二期项目推进，预计2026年底形成产能</div><div class="timeline-source">来源：源杰科技688498公告，2026-10-16</div><div class="timeline-impact">源杰科技10月16日公告，斥资约12.51亿元的光电通信半导体芯片和器件研发生产基地二期项目土建与部分洁净室已建成，首批生产设备近期进厂，预计2026年底至2027年初开始形成产能。叠加10月12日披露的8月新项目，公司已把产能排布锁定到2028年。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-15</div><div class="timeline-title">沐曦股份发布业绩预告，前三季度营收同比增长105.60%至151.29%</div><div class="timeline-source">来源：沐曦股份688802公告，2026-10-15</div><div class="timeline-impact">沐曦股份10月15日晚发布业绩预告，预计前三季度营收同比增长105.60%至151.29%，归母净利润实现扭亏为盈。加上尚未披露三季报的寒武纪（上半年营收同比+108.13%）与摩尔线程（上半年营收同比+147.42%），国产GPU阵营的高增长已经从预期进入报表兑现阶段。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-15</div><div class="timeline-title">阶跃星辰开源Step 5 Preview，昇腾等五家国产芯片实现Day 0适配</div><div class="timeline-source">来源：经济观察报，2026-10-22；阶跃星辰发布2026-10-15</div><div class="timeline-impact">阶跃星辰10月15日开源新一代模型Step 5 Preview，华为昇腾、摩尔线程、沐曦、壁仞科技与海光DCU在开源当天全部完成适配。Day 0适配已在头部国产芯片厂商中普及，模型侧生态红利趋于均摊，厂商之间的差异化重新回到供货稳定性与系统效率。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-29</div><div class="timeline-title">国产AI芯片缺口受HBM制约</div><div class="timeline-source">来源：钛媒体，10-29</div><div class="timeline-impact">2026年中国国产AI芯片需求约420万颗，供给约260万颗，160万颗缺口主要来自HBM配给，而不是芯片设计或逻辑制程产能。长鑫存储HBM3到年底前后才进入小批量量产，运营商采购国产GPU整机时，显存规格、供给配额与整机交付需同步核验。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">CoWoS设备交期延至8个月</div><div class="timeline-source">来源：21世纪经济报道，10-28</div><div class="timeline-impact">AI芯片测试周期延长叠加CoWoS需求由GPU扩展至服务器CPU和定制ASIC，芯片设备交期由3-6个月拉长至6-8个月。台积电虽持续扩产，CoWoS仍供不应求，运营商新建集群应把封测排期与GPU到货计划联动，不能仅按晶圆投片时间估算整机上线周期。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">AI服务器挤占ODM产能</div><div class="timeline-source">来源：电子工程专辑，10-28</div><div class="timeline-impact">大型代工厂产能被利润率更高的AI数据中心服务器订单占满，促使惠普、华硕、宏碁将部分PC产能迁回中国。广达和纬创的服务器营收占比均已超过80%，说明服务器代工资源向高价值订单集中，运营商应提前锁定整机档期并避免与消费电子旺季共用同一代工资源。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-26</div><div class="timeline-title">HBM占用DRAM产能继续上升</div><div class="timeline-source">来源：36氪，10-26</div><div class="timeline-impact">三星、SK海力士和美光合计掌握全球95%以上DRAM产能，HBM占DRAM晶圆产能比重预计从2025年的17.1%升至2026年的20.8%。AI服务器内存需求约为普通服务器的8-10倍，通用DRAM与HBM的结构性挤占将继续传导至服务器内存和整机物料成本。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-24</div><div class="timeline-title">液冷订单延伸至2027年</div><div class="timeline-source">来源：36氪，10-24</div><div class="timeline-impact">AI机柜功率已突破30kW、50kW，传统风冷接近工程落地边界，多家液冷企业的AI服务器订单排期延伸至2027年，部分企业营收增速超过400%。商用IDC和算力租赁项目对一次性投入及交付周期更敏感，运营商应提前完成液冷路线验证，避免机房交付后等待冷板和 CDU。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-23</div><div class="timeline-title">处理器与上游材料继续涨价</div><div class="timeline-source">来源：电子行业研究周报，10-23</div><div class="timeline-impact">英特尔、高通和AMD因先进制程及晶圆代工成本上涨而调涨CPU报价，高盛和摩根士丹利预计台积电2027年先进制程价格还将上涨5%-10%。同期AI服务器MLCC用量为普通服务器的10倍以上，服务器BOM中的处理器、存储和被动元件将形成叠加涨价压力。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">力积电逻辑代工拟涨10%-20%</div><div class="timeline-source">来源：每日经济新闻，10-22</div><div class="timeline-impact">力积电预计2027年逻辑代工价格可能上涨10%-20%，其第三季度DRAM已占营收60%以上，存储晶圆从投片到产出约需4个月。价格预期与生产周期共同上升，意味着运营商采购预算不能只覆盖GPU本体，还要计入晶圆制造、存储和测试环节的成本与排产风险。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-21</div><div class="timeline-title">MLCC交期延长至52周</div><div class="timeline-source">来源：华尔街见闻，10-21</div><div class="timeline-impact">三星电机MLCC订单交付周期已延长至52周，AI服务器使用的高容量MLCC原厂涨幅普遍为15%-35%，而AI服务器MLCC数量是普通服务器的10倍以上。长达1年的被动元件交期可能成为整机交付尾项，运营商应把MLCC和电源部件纳入服务器关键物料统一跟踪。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">光模块与智算存储订单延伸</div><div class="timeline-source">来源：通信世界，10-20</div><div class="timeline-impact">高速光模块组件订单已排至2027年底，中国电信109亿元室外光缆集采落地，中国移动宁夏中卫数据中心相关EPC累计超过82.4406亿元，640套智算存储集采最高投标限价约23.35亿元。网络和存储配套订单规模同步扩张，运营商交付约束正由单颗GPU扩展至光互联、存储与机房工程。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">服务器价值量预测上调</div><div class="timeline-source">来源：36氪，10-20</div><div class="timeline-impact">高盛将全球服务器价值TAM在2027年和2028年的预测分别上调31%和45%，2026-2028E机架级AI服务器出货预测为6.3万、11万和16.4万架。云服务商资本开支、芯片出货与晶圆代工产能同步上行，意味着上游争夺的仍是同一批交付资源，运营商应扩大长周期采购覆盖范围。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">出口管制延伸至关键材料</div><div class="timeline-source">来源：清华大学国际金融与经济研究中心，10-19</div><div class="timeline-impact">截至2026年8月17日，美国已限制英伟达H20及同等性能芯片出口，并将142个实体加入实体清单，取消部分韩国和中国台湾企业在华晶圆厂的设备及耗材免许可安排。截至2026年6月，中国对日本出口的部分受管制关键矿产仍为零或微量，供应链风险已由算力芯片延伸至材料和设备。</div></div>
 </div>
 </div>
 
@@ -282,388 +358,67 @@ footer { text-align: center; padding: 15px; color: #64748b; font-size: 0.85em; }
 <tr><td><strong>下游</strong></td><td>大模型训练、AI应用、数字化转型</td><td>互联网企业、政企客户、科研机构</td><td><span class="time-dim">持续</span></td></tr>
 </table>
 
-<div class="content-body"><h3>6.1.2 本周供应链环节景气度分布</h3>
-<p>本周上游环节的景气度呈现明显分层：芯片与光互连环节由出货量与订单排期驱动，整机环节由超节点形态切换驱动，中游算力租赁环节由长单签署驱动。三个环节在同一周内同时出现可量化的正向信号，这是过去两年供应链报告中少见的同步节奏。</p>
-<h4>本周供应链各环节关键指标</h4>
-<table>
-<tr><th>环节</th><th>本周关键进展</th><th>关键数据</th><th>时间维度</th></tr>
-<tr><td><strong>AI芯片</strong></td><td>昇腾950DT万卡池落地内蒙古</td><td>昇腾份额28%，英伟达34%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td><strong>服务器整机</strong></td><td>三季报密集兑现</td><td>浪潮信息归母38亿—41亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td><strong>光互连</strong></td><td>光器件排单至2029年初</td><td>2027年约70%需求未满足</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td><strong>液冷散热</strong></td><td>Rubin NVL144转向100%液冷</td><td>进液温度提升至45℃</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td><strong>存储/HBM</strong></td><td>DRAM合约价继续上行</td><td>2026Q4环比涨10%—15%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td><strong>算力租赁</strong></td><td>协创数据签374.9亿元长单</td><td>服务期60个月</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：供应链本周的三重同步</h4>
-<p>本周最值得关注的现象是三个环节在同一周内交出可量化信号。芯片端，昇腾950DT万卡池在内蒙古落地，把国产卡的交付形态从千卡级推到万卡级；整机端，浪潮信息预计前三季度归母净利润同比增长156.40%至176.64%，公司明确表示第三季度订单开始向超节点切换、第四季度交付放量后业绩增速有望上行；租赁端，协创数据374.9亿元长单把五年算力需求一次性锁定。</p>
-<p>三重同步意味着产业周期的传导链路已经打通：国产卡有了万卡级的系统承载能力，整机厂有能力承接超节点形态的订单，而中游运营商敢于用60个月的长约去锁定上游产能。过去的瓶颈在芯片供给，本周的瓶颈已经转移到互连、光模块与液冷这些配套环节。</p>
-</div>
-<h3>6.1.3 国产算力占比抬升对供应链的重构效应</h3>
-<p>IDC在10月中旬发布的跟踪数据显示，2026年上半年中国AI加速器总出货200.8万颗，英伟达67.8万颗、份额34%且同比下滑44%，华为昇腾57.2万颗、份额28%，两者差距收窄至6个百分点。平头哥、寒武纪、昆仑芯、海光分别占7%、5%、4%、3%，11家国产厂商中有9家出货同比增长。</p>
-<h4>2026年上半年中国AI加速器出货与份额</h4>
-<table>
-<tr><th>厂商</th><th>出货量（万颗）</th><th>市场份额</th><th>同比变化</th><th>时间维度</th></tr>
-<tr><td>英伟达</td><td>67.8</td><td>34%</td><td>-44%</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>华为昇腾</td><td>57.2</td><td>28%</td><td>增长</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>阿里平头哥</td><td>—</td><td>7%</td><td>增长</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>寒武纪</td><td>—</td><td>5%</td><td>增长</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>昆仑芯</td><td>—</td><td>4%</td><td>增长</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>海光信息</td><td>—</td><td>3%</td><td>增长</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td><strong>合计</strong></td><td><strong>200.8</strong></td><td><strong>100%</strong></td><td>11家国产厂商9家增长</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-</table>
-<p style="font-size:0.8em;color:#64748b;">数据来源：IDC《中国AI加速器市场跟踪报告》，2026年10月中旬发布，覆盖2026年上半年统计口径。</p>
-<div class="analysis-box">
-<h4>深度分析：6个百分点差距背后的供应链含义</h4>
-<p>英伟达34%对昇腾28%的6个百分点差距，其意义不在数字本身，而在于两者绝对量的接近：57.2万颗对67.8万颗，单代产品的交付规模已站在同一量级。这直接改变了国产供应链的配套逻辑——当国产卡的部署规模足以支撑万卡池，配套环节就必须提供万卡级的高速互连、供电与散热方案。</p>
-<p>更重要的是国产厂商之间的份额开始分化：平头哥7%、寒武纪5%、昆仑芯4%、海光3%，第二梯队的差距只有几个百分点。东吴证券在10月的研报中指出，单卡硬件参数差距正在收窄，真正决定实际产出的是算力的调用效率。份额数据背后的竞争已经从"有没有卡"转为"系统能不能高效跑起来"。</p>
-</div>
-</div>
+<div class="content-body"><h3>供给约束已从单颗芯片扩散至HBM、先进封装与高功率整机</h3><p>本周供应链的核心变化不是某一类芯片短缺，而是算力硬件交付条件同步恶化：芯片设计端仍有国产产品推进，逻辑制造端出现涨价，先进封装与设备产能持续偏紧，HBM配给成为国产GPU规模交付的直接约束，服务器整机又被高功率液冷、光模块、电源和被动元件反向制约。运营商因此不能继续沿用“GPU到货即完成集群部署”的线性排期，而应把HBM配额、晶圆投片、CoWoS封测、服务器测试、液冷安装和光互联联调纳入同一交付链路。</p><table><tr><th>产业环节</th><th>本周关键变化</th><th>对交付的含义</th></tr><tr><td>芯片设计</td><td>截至10月29日，2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制。</td><td>设计能力不能直接转化为可交付数量，采购时需核验显存配置和配额。</td></tr><tr><td>制造</td><td>台积电按不同制程上调晶圆价格3%-6%，三星先进制程代工订单价格最高上调15%；存储晶圆从投片到产出约需4个月。</td><td>晶圆投片后仍需经历生产周期，投片时间不能等同于可出货时间。</td></tr><tr><td>封测</td><td>台积电拟将CoWoS报价上调10%-20%，2026年月产能预计突破13万片晶圆，2027年预计提升至20万片晶圆。</td><td>封测报价和测试周期共同影响整机档期，价格调整与排产确认需同步谈判。</td></tr><tr><td>HBM</td><td>三星、SK海力士和美光掌握全球95%以上DRAM产能，HBM占DRAM晶圆产能比重预计由2024年的12.3%升至2026年的20.8%。</td><td>通用DRAM被结构性挤占，HBM配额成为GPU和服务器内存交付的共同前置条件。</td></tr><tr><td>整机</td><td>AI服务器订单占用大型代工厂大部分产能，广达和纬创服务器营收占比均超过80%；液冷订单排期延伸至2027年。</td><td>整机档期不能只依据芯片到货，还需覆盖液冷、电源、MLCC、光模块和服务器测试资源。</td></tr><tr><td>云与租赁</td><td>高速光模块组件订单已排至2027年底，中国移动640套智算存储集采最高投标限价约23.35亿元。</td><td>算力服务扩张正在提前锁定光互联、存储和机房资源，运营商采购窗口前移。</td></tr></table><p><strong>第一类瓶颈在存储端，而且是“数量约束”与“产能结构约束”叠加。</strong>2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制，并非芯片设计或逻辑制程产能不足。AI服务器内存需求约为普通服务器的8-10倍，而HBM持续占用DRAM晶圆产能，导致高端AI内存、普通DRAM和服务器整机物料之间发生资源竞争。对运营商而言，即便某型号国产GPU完成设计验证，若HBM规格、层数、容量或供应商配额没有写入合同，整机仍可能停留在小批量阶段。</p><p><strong>第二类瓶颈在先进制造端，价格、交期和测试周期形成叠加约束。</strong>芯片设备交期由3-6个月延长至6-8个月，CoWoS需求又从GPU扩展至服务器CPU和定制ASIC，测试周期进一步拉长。台积电CoWoS报价拟上调10%-20%，晶圆价格则已上调3%-6%，三星先进制程代工订单价格最高上调15%。这意味着运营商即使获得GPU采购额度，也要承担代工、封装、测试多环节的排队和涨价风险；只比较GPU本体报价，无法得到整机上架时间。</p><p><strong>第三类瓶颈已经延伸到机房基础设施，交付约束由算力芯片扩展为系统工程。</strong>AI机柜功率突破30kW、50kW，传统风冷接近工程落地边界，多家液冷企业订单排至2027年；三星电机MLCC交付周期延长至52周，AI服务器高容量MLCC原厂涨幅普遍为15%-35%，且AI服务器MLCC用量为普通服务器的10倍以上。光模块组件订单排至2027年底，意味着集群上线前的网络联调同样可能成为尾项。对运营商的建议是，对新建项目按关键物料设置里程碑：先锁HBM或显存配额，再锁晶圆与CoWoS排产，随后确认液冷、MLCC、电源和光模块到货周，最后以整机测试通过作为集群可商用条件。</p></div>
 </div>
 
 <div class="section">
 <h2>6.2 上游供应链：核心硬件供应态势</h2>
-<div class="content-body"><h3>6.2.1 AI芯片供应格局</h3>
-<p>本周芯片供应格局的核心变量是昇腾超节点的规模化交付。10月16日，中国电信与华为在内蒙古落地全球首个昇腾950DT万卡池，中国移动同日在北京落地昇腾950DT千卡超节点。10月15日，首台1024卡Atlas 950 SuperPoD液冷超节点完成通电，并同步完成阶跃星辰Step 5 Preview的0Day适配。</p>
-<div class="box yellow">
-<h4 style="margin:0 0 6px 0;font-size:0.95em;">配套环节提示</h4>
-<p style="margin:0;font-size:0.9em;">领益智造子公司立敏达已成为Rubin架构分水器的中国大陆供应商，鼎通科技的液冷连接器进入英伟达MGX生态。液冷订单的确认节奏通常滞后于整机排产1至2个季度，供应商的产能爬坡进度是四季度需要跟踪的核心变量。</p>
-</div>
-<p>另一条本周披露的重要线索来自The Information。该媒体10月19日报道，华为工程师已进驻DeepSeek办公室，把模型训练中的真实痛点写进下一代昇腾设计；报道同时称华为年底拟用950DT做预训练，2027年量产的960DT大部分产能将优先供给DeepSeek。定制化协同意味着芯片厂商的客户关系正在从标准化交付转向深度绑定。</p>
-<h4>国产AI芯片厂商最新经营与交付数据</h4>
-<table>
-<tr><th>厂商</th><th>本周披露内容</th><th>核心数据</th><th>时间维度</th></tr>
-<tr><td>华为昇腾</td><td>950DT万卡池落地</td><td>超节点384卡→8192卡</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>海光信息</td><td>10-19发布三季报</td><td>Q3营收58.56亿元创新高</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>沐曦股份</td><td>10-15发布业绩预告</td><td>前三季度营收+105.60%—151.29%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>寒武纪</td><td>三季报未发布</td><td>2026H1营收同比+108.13%</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>摩尔线程</td><td>三季报未发布</td><td>2026H1营收同比+147.42%</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>壁仞科技</td><td>Step 5 Preview完成适配</td><td>开源当日完成</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：芯片环节竞争烈度上升</h4>
-<p>本周芯片端出现两条并行的驱动。华为侧靠超节点形态把单卡交付升级为系统交付，万卡池的落地使昇腾的可用性从演示走向生产；其余国产厂商侧靠业绩兑现，沐曦预计前三季度营收翻倍并扭亏，海光第三季度单季营收创58.56亿元新高，寒武纪与摩尔线程上半年营收分别增长108.13%与147.42%。</p>
-<p>与此同时，海外供给缺口仍然显著。路透10月20日报道，字节跳动、阿里巴巴与腾讯合计订购超过300万块英伟达RTX PRO 5500，总额超过350亿美元。这说明国产份额的提升是相对替代而非绝对替代，头部互联网企业对推理算力的需求增速快于国产芯片的供给增速。</p>
-</div>
-<h3>6.2.2 服务器供应格局与整机厂商业绩</h3>
-<p>整机环节本周进入超节点形态切换的关键节点。浪潮信息在业绩预告中明确表示，第三季度开始订单向超节点切换，第四季度起交付放量后业绩增速有望加速上行。公司预计前三季度归母净利润为38亿至41亿元，同比增长156.40%至176.64%，利润端增速显著快于收入端，反映AI服务器收入占比提升带来的产品结构优化与规模效应。</p>
-<h4>AI服务器与整机厂商本周业绩对比</h4>
-<table>
-<tr><th>厂商</th><th>业绩口径</th><th>业绩数据</th><th>同比</th><th>时间维度</th></tr>
-<tr><td>浪潮信息</td><td>前三季度（预告）</td><td>归母38.00亿—41.00亿元</td><td>+156.40%—176.64%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>中科曙光</td><td>Q3单季</td><td>归母7.53亿元，营收47.73亿元</td><td>归母+217%，营收+61%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>紫光股份</td><td>前三季度（预告）</td><td>归母24.2亿—30.6亿元</td><td>+72%—118%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>行云科技</td><td>前三季度（预告）</td><td>归母2.4亿—2.9亿元</td><td>由亏损7232万元转盈</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>杰创智能</td><td>前三季度（预告）</td><td>归母3670万—4940万元</td><td>+61.16%—116.93%</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：整机环节受益顺序已清晰</h4>
-<p>本周披露的业绩预告把整条链路的受益顺序讲得很清楚。上游AI服务器整机厂商率先承接集群招标，浪潮信息、中科曙光、紫光股份的利润增速普遍在70%以上；中游算力运营商在起租后确认租金，行云科技由上年同期亏损7232.30万元转为盈利2.4亿至2.9亿元；配套软硬件与集成企业随后释放，杰创智能归母净利润同比增长61.16%至116.93%。</p>
-<p>这条顺序对采购方有直接含义：整机厂的排产能力决定交付时间，交付时间决定运营商的起租时点，起租时点才决定租赁商的利润确认。因此在超节点放量元年，整机产能而非芯片产能，正在成为下游算力服务收入确认的约束条件。</p>
-</div>
-<h3>6.2.3 液冷设备供应商格局</h3>
-<p>液冷从选配变成必选，驱动因素来自机柜功率密度的跃升。英伟达Vera Rubin NVL144采用100%液冷架构，机柜不再配置风扇，进液温度提升到45℃；GPU热设计功耗从A100的400瓦升到B300的1400瓦，传统冷板的毫米级流道已经无法承压，微通道冷板把流道收窄到200至800微米。</p>
-<h4>液冷设备供应商本周状态</h4>
-<table>
-<tr><th>厂商</th><th>产品与进展</th><th>本周状态</th><th>时间维度</th></tr>
-<tr><td>英维克</td><td>冷板、快接头、CDU全产品线</td><td>UQD系列快接头进入英伟达MGX生态</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>申菱环境</td><td>柜外CDU</td><td>批量交付北美云厂商，冷量50kW—600kW</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>高澜股份</td><td>冷板产品</td><td>供给海内外智算中心</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>银轮股份</td><td>数据中心液冷与多场景热管理</td><td>关注冷板、Manifold、CDU配套</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>澄天伟业</td><td>微通道盖板与液冷模组</td><td>核心客户2026Q4需求预测约5048万元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>中科曙光</td><td>浸没式液冷专利储备</td><td>配套高密度智算集群落地</td><td><span class="time-dim">持续</span></td></tr>
-</table>
-</div>
-<div class="content-body"><h3>6.2.4 HBM与存储供应链：涨价周期仍未见顶</h3>
-<p>存储是本周供应链中最明确的高景气环节。集邦咨询在2026年10月更新的测算显示，2026年第四季度一般型DRAM合约价将环比上涨10%至15%，原厂持续把先进制程投向服务器用的高性能产品，市场整体仍维持供不应求，只是涨势有所放缓；集邦同时预计2027年HBM整体平均售价同比增幅可达121%。</p>
-<p>经济观察报在10月22日的报道中引述行业观点指出，AI芯片离不开高性能存储，而存储芯片持续紧缺，供货的稳定性和连续性正逐渐成为国产算力芯片厂商的一项竞争力。相关厂商负责人表示，从晶圆到基板，芯片上游都面临价格上升的压力，其中影响最大的是内存，因此新产品会在尽量不增加成本的前提下兼容更多类型的内存。</p>
-<h4>存储与HBM价格与产能指标</h4>
-<table>
-<tr><th>指标</th><th>数值</th><th>发布方</th><th>时间维度</th></tr>
-<tr><td>2026Q4一般型DRAM合约价</td><td>环比+10%—15%</td><td>集邦咨询（2026-10）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>2027年HBM平均售价</td><td>同比增幅可达+121%</td><td>集邦咨询（2026-10）</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>2026Q1 AI算力需求</td><td>同比+417%</td><td>中国信通院</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>2026Q1 AI算力供给</td><td>同比+128%</td><td>中国信通院</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>2025年国内智能算力用算占比</td><td>约36.8%</td><td>中国信通院（2026-10）</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">年变化</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：存储成为国产芯片的新瓶颈</h4>
-<p>需求与供给的增速差决定了存储的定价权。中国信通院数据显示2026年第一季度AI算力需求同比增长417%，而供给增速只有128%，缺口持续走阔；集邦咨询据此判断DRAM原厂把先进制程集中投向服务器用高性能产品，导致一般型DRAM与HBM持续争夺有限的先进制程和晶圆产能。</p>
-<p>对国产算力芯片厂商而言，存储约束的杀伤力大于先进制程约束。当内存价格高企且供给不稳，芯片设计就必须预留更大的内存兼容冗余，这既抬高了BOM成本，也拖慢了新品迭代节奏。经济观察报在10月22日的报道中把存储供给列为当前制约国产AI芯片的主要瓶颈之一，同时判断随着国产存储厂商技术进步与产量提升，这一瓶颈有望逐步缓解。</p>
-</div>
-<h3>6.2.5 光互连：订单能见度已延伸到2029年</h3>
-<p>光互连是本周产能争夺最激烈的环节。Lumentum首席执行官表示，公司光器件供货排期已延续至2029年初，部分产品在2027年仍有约70%的需求无法满足，另有部分产品直到2028年仍存在约30%的需求缺口。国内厂商同步扩产：源杰科技10月16日公告约12.51亿元的光芯片二期项目取得进展，预计2026年底至2027年初形成产能。</p>
-<h4>光芯片与光模块厂商产能与订单情况</h4>
-<table>
-<tr><th>厂商</th><th>本周动态</th><th>关键数据</th><th>时间维度</th></tr>
-<tr><td>源杰科技</td><td>10-16二期项目公告</td><td>投资12.51亿元，2026年底形成产能</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>中际旭创</td><td>客户给出2028年需求指引</td><td>覆盖1.6T、2.4T、NPO产品</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>新易盛</td><td>LPO与CPO双线布局</td><td>800G/1.6T同步推进</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>天孚通信</td><td>1.6T光引擎已量产</td><td>激光器模块、FAU、ELS外置光源</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>Lumentum</td><td>供货排期延伸</td><td>2027年约70%需求未满足</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>矽品精密</td><td>与英伟达合作扩产CPO</td><td>2027年中产能提至15倍</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：光互连产能争夺提前两年展开</h4>
-<p>本周21世纪经济报道和新浪财经的追踪显示，光通信产业链的产能竞赛已经从当季延伸到2028年。源杰科技在10月12日的投资者交流中表示未来两年客户需求能见度很高，并已在推进2027年下半年导入设备的扩产计划；中际旭创则披露部分重点客户已提供2028年新产品需求指引，涉及1.6T、2.4T与NPO产品。</p>
-<p>英伟达在10月21日GTC柏林大会公布的扩产表把这场竞赛推向全球：CPO光引擎产能计划2027年中提升至当前的15倍、2028年底再翻一番。国盛证券判断，NPO的导入节奏与时间路线已具备较高确定性，预计2027年进入市场、2028年实现大规模普及。真正的胜负手在于供应商能否在几个月内把产能拉升到十万级规模并维持高良率。</p>
-</div>
-</div>
+<div class="content-body"><h3>制程与封测同时收紧，采购成本上升已先于新增产能释放</h3><p>先进制程和先进封装正在由制造约束转化为报价约束。台积电已确定按不同制程上调晶圆价格3%-6%，三星先进制程代工订单价格最高上调15%；同时，台积电拟将CoWoS封装报价上调10%-20%。两类涨价对应的约束并不相同：晶圆价格反映逻辑制造产能与上游材料成本，CoWoS涨价则主要反映高端封装、测试周期和设备扩张速度。运营商若只依据芯片厂商给出的“锁价期”编制投资测算，将遗漏代工和封装环节的二次涨价风险。</p><p>产能扩张虽在推进，但不足以立即缓解当前紧张。台积电2026年CoWoS月产能预计突破13万片晶圆，2027年预计提升至20万片晶圆，当前仍处于供不应求状态；芯片设备交期则由此前3-6个月延长至6-8个月。设备先于产线形成约束，意味着供应商即使锁定新增晶圆厂或封测线投资，也无法在短期内同步补齐设备、洁净室、工艺验证和客户认证。力积电预计2027年逻辑代工价格可能上涨10%-20%，而存储晶圆从投片到产出约需4个月，进一步说明扩产、价格和交付周期正在同步上行。</p><p>对运营商而言，价格条款应至少拆分到晶圆、先进封装、测试和基板等环节，并为拟涨价区间设置上限或调整触发条件。排产计划则应区分“芯片厂商确认晶圆投片”“封测完成”“整机下线”3个节点，不能用投片日期替代上线日期。对跨年度项目，应把2027年月产能提升至20万片晶圆的预期视为中期缓解信号，而不是2026年新增项目可以立即依赖的可用产能；采购合同还需要写入关键工艺节点未按期完成时的延期责任和转单条件。</p><h3>先进封测是当前最需要前置锁档的环节</h3><p>CoWoS已从GPU封装扩展至服务器CPU和定制ASIC，而AI芯片测试周期更长，使需求强度与单颗产品占用的测试资源同步上升。客户在报价上涨时转向“只要能承诺交期便下单”，说明行业定价权已经由价格竞争转向交期竞争。对集群建设而言，封装排期不仅影响芯片到货，还影响GPU与CPU、内存、交换芯片之间的系统验证。一旦封装档期改变，后续的裸板测试、主板装配和整机老化测试都需要重新排队，延迟会在供应链中逐级放大。</p><p>运营商应将CoWoS或同类先进封装产能确认写入项目主计划，并要求供应商披露从晶圆到封装完成、再到可测试主板的关键节点。若项目依赖定制ASIC或服务器CPU，也应纳入同一封装资源池核验，不能只锁定GPU。对报价拟上调10%-20%的情况，采购谈判宜采用“基准报价加调整上限”的结构，并将供应商扩产、设备到货和客户认证进度与价格调整挂钩，以减少项目在封测环节单点失效的风险。</p><h3>光模块向2027年排产，网络配套正成为集群上线新瓶颈</h3><p>高速光模块组件订单已排至2027年底，表明AI集群建设对光互联的需求已经提前锁产。与此同时，中国电信109亿元室外光缆集采落地，中国移动宁夏中卫数据中心相关EPC累计超过82.4406亿元，640套智算存储集采最高投标限价约23.35亿元。网络、光缆、存储和机房工程同步扩张，运营商争夺的并非单一GPU，而是可形成完整集群的配套资源。</p><p>光模块排期对项目的影响具有并行特征：即使GPU整机提前到货，缺少匹配速率和接口规格的光模块仍会阻断网络联调；光缆、EPC和存储若晚于服务器交付，则机房无法形成可调度资源。运营商应将光模块组件订单周期、光缆集采交付和智算存储到货纳入集群上线倒排计划，并分别设置供应品牌和批次替代条件。对跨区域节点，应先完成网络底座与机房底座，再安排大规模GPU集中到货，避免服务器集中在不具备联调条件的机房。</p><h3>电源、散热与MLCC共同抬高整机交付尾项风险</h3><p>高功率机柜已突破30kW、50kW，液冷由可选配套转为高密度机房的刚性条件，多家AI服务器液冷企业订单排期延伸至2027年，部分企业营收增速超过400%。但订单口径中存在框架协议和意向订单，不能把排期直接等同于已验收收入。对运营商而言，应要求液冷供应商区分合同订单、框架协议和交付计划，并核实冷板、CDU、管路及现场调试的可用产能，避免机房已交付而散热设备仍在排产。</p><p>被动元件同样可能成为尾项。三星电机MLCC订单交付周期已延长至52周，AI服务器高容量MLCC原厂涨幅普遍为15%-35%，而AI服务器MLCC用量为普通服务器的10倍以上。长达52周的交付周期意味着，即使芯片和服务器主板已到位，关键料不齐仍无法完成整机。运营商应把MLCC、电源部件和散热部件纳入服务器关键物料清单，要求整机厂提供BOM级齐套证明；任何交付节点均应以关键料齐套、整机测试通过和集群联调完成三者共同确认，不能只依据厂商给出的生产完成通知。</p></div>
+<div class="content-body"><h3>HBM仍是国产AI芯片规模交付的第一约束，配给比单卡性能更关键</h3><p>本周可确认的供给格局是：三星、SK海力士和美光合计掌握全球95%以上DRAM产能，但这95%代表的是DRAM总产能，不能直接等同于三家公司的HBM供货份额。本周定稿数据没有给出三家HBM厂商的逐家供货比例、订单份额或客户配额，因此不能据此编造排名。更可靠的判断是，HBM产能高度集中叠加晶圆面积占用较高，使运营商面对的核心问题从“能否买到GPU”转向“能否获得与GPU配套的HBM配额”。</p><p>产能结构显示短期矛盾仍将延续。HBM占DRAM晶圆产能比重预计从2024年的12.3%升至2025年的17.1%、2026年的20.8%，2027年预计达到22.5%；同时，AI服务器内存需求约为普通服务器的8-10倍。HBM对晶圆的占用不仅压缩通用DRAM供给，也把存储价格传导到服务器内存和整机物料。行业判断供应紧张至少还将持续24个月，2026年至2027年仍是卖方市场，这意味着运营商不能用短期现货采购替代长期配额安排。</p><h3>HBM3开始小批量导入，HBM4仍处预研与标准协同阶段</h3><p>国产存储的时间表显示，长鑫存储于2026年9月初开始试产HBM3，年底前后才进入小批量量产，月产能目标约6万片晶圆；其DRAM月产能预计到2026年底达到约35万片，2028年目标为50万片，但HBM4仍处于预研阶段。长鑫在HBM技术上落后头部厂商约3-4年，因此国产供给即使在2026年开始补充，也难以立即覆盖160万颗的AI芯片需求缺口。</p><p>英伟达下一代定制HBM方案进一步强化了标准统一趋势。2026年10月22日界面新闻援引行业信息称，英伟达已公布NVHBM，并要求三星、SK海力士和美光研究采用台积电3纳米工艺制造基础裸片、使用第六代DRAM工艺制造核心裸片；相关制造安排尚未得到各厂商正式确认，订单规模、供应比例和量产时间也未公布。报道还称，NVHBM基于HBM4E架构，相比标准HBM4E可提供最高30%的额外内存带宽，功耗最多降低15%。这些参数对应英伟达定制方案，不能直接套用于通用HBM3E或国产GPU的显存规格。</p><p>本周素材没有给出HBM3E的确定带宽、功耗、层数、量产节点及三家供应商供货比例，因此本节不将HBM4E参数替代为HBM3E参数，也不据此判断HBM3E已进入规模量产。对运营商采购的直接含义是，单卡标称算力必须与显存容量、带宽、功耗、互连协议及供应配额同时核验。若GPU模型已经通过验证，但HBM版本与主板功耗设计或软件栈不匹配，可用芯片仍不能转化为可用算力。</p><h3>单卡算力受显存带宽与容量共同约束，HBM缺口会降低集群有效利用率</h3><p>HBM对单卡算力的约束并非仅在于“有没有显存”。训练和推理任务需要高带宽持续供给数据，显存容量不足会限制模型或批处理规模，HBM堆叠与先进封装不匹配则会影响芯片最终良率和可测试性。2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制，这意味着即使国产芯片设计与逻辑制程能够按计划供给，集群仍可能因显存配置不齐而无法达到设计卡数。</p><p>运营商应在采购合同中把“GPU芯片、HBM、基板、整机测试”设为联动交付项，并要求供应商提供配置级证明，而非仅提供芯片序列号。对训练集群，应在交付验收中同时核验卡数、可用显存和互连带宽；对推理集群，也需按模型规模验证批次与吞吐。HBM配给不足时，以整机可用率而非到货卡数评估集群投产进度，可避免账面资源与可调度算力之间出现缺口。</p></div>
 </div>
 
 <div class="section">
 <h2>6.3 中游：算力服务商竞争格局</h2>
-<div class="content-body"><h3>6.3.1 综合云厂商竞争格局：从拼机房转向拼回报率</h3>
-<p>本周云厂商格局的关键词是资本效率。摩根士丹利在10月20日发布的报告预测，中国核心云厂商及主要互联网公司2026年资本开支将达9950亿元，同比增长121%，2026至2030年累计约8.5万亿元，推动国内算力总容量到2030年达到约81吉瓦，其中本土新增约55吉瓦。</p>
-<h4>头部云厂商资本开支与AI收入情况</h4>
-<table>
-<tr><th>厂商</th><th>资本开支</th><th>AI业务表现</th><th>时间维度</th></tr>
-<tr><td>字节跳动</td><td>2026全年上调至超2000亿元</td><td>投入强度居国内首位</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>阿里巴巴</td><td>Q2资本开支676.8亿元，同比+75%</td><td>云外部商业化收入同比+45%</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>腾讯</td><td>Q2资本开支528亿元，同比+176%</td><td>自由现金流-138亿元首次转负</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>百度</td><td>与阿里腾讯合计Q2自由现金流-664.24亿元</td><td>三家合计净流出664.24亿元</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>摩根士丹利测算</td><td>2026年全行业9950亿元，同比+121%</td><td>2026-2030累计8.5万亿元</td><td><span class="time-dim">持续</span></td></tr>
-</table>
-<p style="font-size:0.8em;color:#64748b;">数据来源：各公司2026年第二季度财报、摩根士丹利《燃烧吧Token，Agentic Cloud时代云厂商的资本效率大考》（2026-10-20至10-21）。</p>
-<div class="analysis-box">
-<h4>深度分析：云厂商的考核指标已经换表</h4>
-<p>过去的云扩张比的是机房面积与服务器数量，核心是规模经济；这一轮比的是单位算力能产出多少Token、单位Token能承载多少智能体，核心是能力密度。摩根士丹利在报告中给出三条路径的回报率对比：自建IaaS约44%的营业利润率与13%的投入资本回报率，现金回收期约3年；纯租赁的Neocloud虽无资本开支，但营业利润率仅约20%；MaaS自研第一方模型可达成53%的营业利润率与19%的投入资本回报率，回收期2.5年。</p>
-<p>值得注意的是现金流层面的压力测试。摩根士丹利同时指出，国内单台服务器的资本开支约为美国同类配置的三倍，直接推高了折旧成本，因此国产芯片替代是回报率能否追赶的关键变量。这也解释了为什么本周腾讯、字节仍在加码英伟达采购，而国产卡的采购占比目标被设定在65%以上。</p>
-</div>
-<h3>6.3.2 专业算力租赁平台：长单锁定成为主流打法</h3>
-<p>本周算力租赁赛道最大的信号来自协创数据。公司10月19日晚间公告，全资子公司协创智算签署算力云服务协议，合同预计总金额不超过374.9亿元，服务周期长达60个月。叠加东阳光云智算7月落地的130亿至150亿元合同，仅这两笔公开披露的长单，合计金额区间已达504.9亿至524.9亿元。</p>
-<h4>算力租赁与配套环节本周签约情况</h4>
-<table>
-<tr><th>企业</th><th>签约内容</th><th>金额</th><th>时间维度</th></tr>
-<tr><td>协创智算</td><td>算力云服务协议，服务期60个月</td><td>不超过374.9亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>东阳光云智算</td><td>算力服务合同</td><td>130亿—150亿元</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>行云科技</td><td>存量订单租赁价格协商上调</td><td>前三季度归母2.4亿—2.9亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>杰创智能</td><td>算力配套软硬件与智算集成</td><td>前三季度归母3670万—4940万元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>光环新网</td><td>和林格尔智算中心追加投资</td><td>不超过12.65亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>协创数据</td><td>拟定增投训推一体化智算中心</td><td>募资不超80亿元，含46.86亿元投向</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：长单改变了租赁行业的定价方式</h4>
-<p>374.9亿元、服务期60个月的长单，其意义不只是金额。行云科技在业绩预告中提到，公司基于算力市场行情及服务质量，对存量已签订单协商上调了租赁价格，这直接增厚了业务毛利，并推动前三季度归母净利润从上年同期亏损7232.30万元转为盈利2.4亿至2.9亿元。当上游整机产能被超节点排产占满，租赁商议价权正在从买方转向卖方。</p>
-<p>但风险同样清晰。资本卡位不等于收入兑现，协创数据拟定增募资不超过80亿元、光环新网追加12.65亿元，都需要在设备到货后转成起租收入。摩根士丹利测算Neocloud模式的营业利润率仅约20%，明显低于自建IaaS的44%，长单能否摊薄这一差距，取决于实际利用率。参照当前全国智算中心平均利用率仅20%至30%的现状，租赁商的核心变量仍是起租速度而非签约规模。</p>
-</div>
-</div>
-<div class="content-body"><h3>6.3.3 MaaS平台格局：计费模式正在从卡时转向词元</h3>
-<p>本周中游格局的第三条线索来自计费模式变革。中国信通院指出，算力服务的计费模式正在从按卡时、机柜租赁，转向按Token消耗量计费与结果化交付，产品形态也从GPU裸金属租赁迭代出Token即服务、智能体即服务、结果即服务三类新形态。云厂商由此从设备包租公变成价值工厂主。</p>
-<h4>MaaS平台规模与盈利指标</h4>
-<table>
-<tr><th>平台/厂商</th><th>指标</th><th>数值</th><th>时间维度</th></tr>
-<tr><td>阿里百炼MaaS</td><td>AI模型与应用服务ARR</td><td>2026财年Q4突破80亿元</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>阿里云AI相关产品</td><td>连续三位数增长</td><td>已持续12个季度</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>德银测算</td><td>MaaS与AIaaS现金毛利率差</td><td>约高10个百分点</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>德银测算</td><td>MaaS占比每提升10%</td><td>综合AI产品利润率提升1%</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>阿里云目标</td><td>算力服务回本周期</td><td>压缩至2—2.5年</td><td><span class="time-dim">持续</span></td></tr>
-</table>
-<div class="box purple">
-<h4 style="margin:0 0 6px 0;font-size:0.95em;">本周生态侧信号</h4>
-<p style="margin:0;font-size:0.9em;">10月20日上线的DeepInfer推理框架同时兼容英伟达CUDA与华为昇腾环境；10月15日阶跃星辰开源Step 5 Preview后，昇腾、摩尔线程、沐曦、壁仞、海光DCU当天全部完成适配。开源框架的双栈兼容，是MaaS平台降低客户迁移成本的前提条件。</p>
-</div>
-<div class="analysis-box">
-<h4>深度分析：MaaS是当前唯一能同时提价与提毛利的环节</h4>
-<p>MaaS的利润率高于IaaS，原因在于模型调用的边际成本远低于算力租赁的资本开支摊薄。德银测算MaaS的现金毛利率比AI基础设施服务高约10个百分点，MaaS收入占比每提升10%，综合AI产品利润率提升1%。阿里云给出了样本：2026年第二季度外部商业化收入同比增长45%，AI相关产品收入保持连续12个季度三位数增长。</p>
-<p>约束来自国产算力的实际吞吐能力。摩根士丹利测算，第三方模型API因需分成且吞吐量较低，回报率虽可达29%，但国内推理受限于芯片性能（仅为海外服务器的20%至40%），初期投入资本回报率显著偏低，后续随效率提升存在改善空间。这意味着国产芯片的效率提升不只是供应问题，而是直接决定MaaS业务能否盈利的变量。</p>
-</div>
-</div>
+<div class="content-body"><h3>服务器ODM资源已被AI订单主导，竞争焦点转向整机档期而非芯片报价</h3><p>本周中游竞争最明确的变化，是服务器代工产能向高价值AI订单集中。大型代工厂产能被AI数据中心服务器订单占满，惠普、华硕、宏碁已将部分PC产能迁回中国；广达和纬创的服务器营收占比均已超过80%，笔记本营收占比不足两成。资源迁移说明，ODM厂商正在用消费电子产线利润换取AI服务器订单，运营商与云厂商争夺的将是同一批整机组装、测试和系统集成档期。</p><p>需求侧仍有继续上修的信号。高盛将全球服务器价值TAM在2027年和2028年的预测分别上调31%和45%，2026年至2028年机架级AI服务器出货预测分别为6.3万架、11万架和16.4万架。价值量上调幅度高于架数增幅，意味着机架化提高了GPU、散热、供电和高速互连在单机价值中的占比，也意味着服务器厂商的利润来源已从通用服务器组装转向复杂系统交付。运营商在比选整机厂时，应优先核验高密度机架交付、液冷集成、网络互联和现场验收能力，而不是只比较通用服务器报价。</p><p>订单排产已成为竞争壁垒。当前GPU、CoWoS、液冷和光模块均处于不同长度的排产周期，单纯获得芯片分配并不能保证整机按时交付。运营商应要求供应商提供从GPU分配、HBM配给、CoWoS排期、主板装配、液冷预装、整机测试到发运的逐段计划，并披露可能替代的芯片或整机方案。对2027年交付的液冷订单，应区分框架协议与不可取消订单，防止以排期可见性替代产能承诺。</p><h3>云厂商需求继续吸收上游产能，算力服务商之间的比较转向交付兑现</h3><p>本周定稿数据没有给出云厂商在国产算力服务、GPU租赁或机架级AI服务器上的逐家份额，因此不能形成具体份额排名。可以确认的是，云服务商资本开支、机架级AI服务器出货和晶圆代工产能同步上行，头部云厂商与大型智算集群运营商优先考虑长期稳定运行，并愿意投入较长周期验证液冷方案。由此形成的需求虹吸，会把具备GPU、HBM、液冷和网络协同交付能力的厂商置于竞争前列。</p><p>对运营商而言，云厂商订单增加意味着“等现货”的空间进一步收窄。运营商需要在采购合同中争取整机价格有效期、延期责任和分批交付权，并提前锁定网络与存储，而不是等GPU到货后再启动配套。竞争服务商若只披露框架数量、规划算力或园区机柜数，而不披露已验收、可调度、已通电和已上线的资源，不能与运营商自有集群直接比较。建议运营商将可用算力定义为完成软硬件适配、进入资源池并可承接任务的单元，把在建和已采购设备单列管理。</p><h3>机架化提高价值密度，也把整机厂的网络与散热能力变成报价的一部分</h3><p>2026年至2028年机架级AI服务器出货预测为6.3万架、11万架和16.4万架，机架化正在把单机竞争从服务器主板扩展到整套机柜。机架功率突破30kW、50kW后，液冷和供电不再是交付后的附属工程；高速光模块组件订单排至2027年底，又使网络侧能力影响集群可上线时间。整机品牌的差异因此不再局限于CPU与GPU组合，而在于能否协调芯片、封装、液冷、光互联、电源和测试资源。</p><p>运营商应要求整机商对机架级交付单独承诺里程碑：关键物料齐套、机柜工厂预组装、现场液冷联调、光网络互通、集群验收分阶段设责。对代工厂之间的切换，应比较迁移后的重新认证工作量，而不是只看是否拥有类似机框。广达和纬创服务器营收占比均超过80%，说明头部资源会优先服务高确定性订单；合同中的取消条款、延迟赔偿和替代料认证责任，将直接决定运营商在资源紧张周期中的议价能力。</p></div>
+<div class="content-body"><h3>租赁市场缺少可核验的周度价格数据，运营商应把资源可用性置于租金判断之前</h3><p>本周已定稿数据没有提供算力租赁挂牌单价、成交单价、上架率、平均租约期限或客户结构变化，因此不能给出周环比结论，也不能把HBM或服务器硬件涨价幅度直接等同于租赁价格涨幅。在首期无上周基准的情况下，本节不补造租赁市场基线。对运营商规划更有意义的是识别租金背后的资源约束：当HBM、CoWoS、液冷和光模块排期同时延长时，新上架资源的形成时间可能晚于合同需求，即使报价尚未上涨，也会减少可立即承接项目的现货供给。</p><p>租赁单价通常由GPU型号、显存配置、交付时间、租期、带宽和运维等级共同决定。当前2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制；这意味着租赁资源是否可上架，首先取决于能否获得可用的显存配置和整机档期。硬件制造成本方面，台积电CoWoS报价拟上调10%-20%，晶圆价格上调3%-6%，三星先进制程代工订单价格最高上调15%；这些变化会提高新租户的成本底线，但既有租赁资源是否存在调价，仍须依据实际合同和出租方动作判断，不能由制造成本直接外推。</p><p>上架率也不能仅按园区机柜数推算。液冷订单排至2027年，部分企业营收增速超过400%，但液冷披露中存在框架协议和意向订单；AI机柜功率突破30kW、50kW后，只有完成液冷、供电和网络联调的机柜才构成可出租资源。运营商评估外部租赁供给时，应要求出租方区分已上电、已完成服务器测试、已安装液冷、已接入网络和已进入可调度资源池的单元，并逐项核验上架率，而非接受园区机柜数或规划规模作为替代口径。</p><p>租约期限方面，本周材料没有提供行业平均值和周度变化，不能判断长租是否正在替代短租。运营商若采用租赁补充自有算力，应在合同中写入设备到货窗口、显存规格、可用率、故障替换、网络和电力边界以及提前解约责任，避免以固定租金锁定尚未到货的远期资源。客户结构变化同样缺乏可量化数据，但上游已呈现两类分化：头部云厂商和大型智算集群运营商重视稳定运行及方案验证，商用IDC更关注落地成本和改造兼容，新建算力项目对交付周期与一次性投入更敏感。运营商租赁采购可分别设置长期稳定资源框架和短期弹性资源池，降低单一期限与单一客户策略变化带来的闲置风险。</p><p>本周最可执行的结论不是租金涨跌，而是资源形成速度下降。对项目滚动计划，应按“可立即调用资源”和“未来到货资源”分别建账；前者决定近期业务承接，后者只能用于中长期容量规划。对外询价时，应要求供应商同时披露挂牌价、实际成交价、上架日期、租期和退出条件，并保留周度更新机制，以建立可用于周环比的后续基线。</p></div>
 </div>
 
 <div class="section">
 <h2>6.4 供应链对智能算力建设的影响</h2>
-<div class="content-body"><h3>6.4.1 当前供应链的三重硬约束</h3>
-<p>本周供应链面临的约束可以归为三类：存储与光器件的物料约束、超节点形态下的产能约束，以及算力利用率偏低带来的效率约束。三者当中，物料约束最直接，产能约束本周最突出，效率约束则贯穿始终。</p>
-<h4>供应链约束指标本周状态</h4>
-<table>
-<tr><th>约束类型</th><th>具体表现</th><th>关键数据</th><th>时间维度</th></tr>
-<tr><td>存储物料</td><td>DRAM与HBM争夺先进制程</td><td>2027年HBM均价同比+121%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>光器件</td><td>海外龙头排单至2029年初</td><td>2027年约70%需求未满足</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>封装基板</td><td>英伟达三年产能提至2.5倍</td><td>揖斐电大野工厂目标3倍</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>CPO光引擎</td><td>2027年中产能提至15倍</td><td>2028年底再翻一番</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>算力利用率</td><td>全国智算中心平均利用率偏低</td><td>仅20%—30%</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：产能瓶颈的表述在本周发生转向</h4>
-<p>英伟达首席执行官黄仁勋在10月21日的GTC柏林主题演讲中明确表示，产能是当前最大的瓶颈。这句话的份量在于，它来自需求方的最高负责人。当出货瓶颈从先进制程前移到封装基板、光引擎与测试环节，产业的主要矛盾已经从"能不能造出来"转为"能不能按期交出来"。</p>
-<p>测试环节的付款方式印证了这一点：京元电子获得英伟达11亿美元预付款用于在美国新建测试厂房和购置设备，英伟达整体测试产能计划在2026至2027年间翻倍，新加坡扩建测试产线预计2027年2月大规模投产。预付款是需求方对产能稀缺性最直接的价格信号。</p>
-</div>
-<h3>6.4.2 效率约束：投入与产出的剪刀差</h3>
-<p>供应链的另一半压力来自算力利用率。五矿证券研报统计，五家头部云厂商的AI资本开支与对应收入之比，从2023年的59.2%飙升至2026年上半年的128.3%，资本投入已经超过对应收入的两倍。腾讯云张晋在MWC26智能数据中心峰会上公开提到，全国智算中心平均利用率仅20%至30%，部分企业级智算中心利用率不足10%。</p>
-<h4>算力供需与利用效率指标</h4>
-<table>
-<tr><th>指标</th><th>数值</th><th>发布方</th><th>时间维度</th></tr>
-<tr><td>2025年国内智能算力用算占比</td><td>约36.8%</td><td>中国信通院</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">年变化</span></td></tr>
-<tr><td>全国智算中心平均利用率</td><td>20%—30%</td><td>腾讯云（MWC26）</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>头部云厂商资源利用率</td><td>可达90%</td><td>中国信通院、浪潮AI研究院</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>我国智算云化率</td><td>约42%</td><td>罗兰贝格</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">年变化</span></td></tr>
-<tr><td>在用智算中心数量</td><td>超500个（在建规划近400个）</td><td>国家数据局（截至2026-06）</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>智能算力规模</td><td>2185 EFLOPS（FP16），同比+177%</td><td>工信部（截至2026-06）</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>云厂商AI资本开支/收入比</td><td>128.3%（2023年为59.2%）</td><td>五矿证券</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：效率分化正在替代规模成为主矛盾</h4>
-<p>规模领先与效率分化正在同时出现。工业和信息化部数据显示，截至2026年6月我国智能算力规模达2185 EFLOPS（FP16），同比增长177%，全球第二，全国算力设施整体上架率71.4%；但中国信通院与浪潮人工智能研究院的调研显示，部分地方智算中心的GPU平均利用率只有30%至40%，而头部云厂商凭借成熟调度体系利用率可达90%。</p>
-<p>这组数据解释了为什么罗兰贝格测算我国智算云化率仅约42%，远低于发达国家超过70%的平均水平——大量算力建在地方机房，但没有进入可计价的调度池。2026年"算电协同"首次写入《政府工作报告》，正是针对这一错配。供应链侧的结论是：下一轮订单不会平均分配，而是向能把算力转化为Token的调度能力集中。</p>
-</div>
-</div>
-<div class="content-body"><h3>6.4.3 供应链国产化趋势：从政策驱动转向市场驱动</h3>
-<p>国产化进程的驱动因素在本周发生了一次明确的切换。海光信息在三季报公告中指出，国产化进程已由政策驱动全面转向市场驱动，下游客户对国产CPU与DCU的采购意愿与粘性将持续增强。这句话与本周超节点落地、Day 0适配普及的产业事实互为印证。</p>
-<h4>国产化替代进展与市场空间</h4>
-<table>
-<tr><th>维度</th><th>本周进展</th><th>关键数据</th><th>时间维度</th></tr>
-<tr><td>国产份额</td><td>IDC上半年跟踪数据</td><td>昇腾28%，英伟达34%</td><td><span class="time-dim" style="background:#e0e0e0;color:#555">季变化</span></td></tr>
-<tr><td>超节点市场</td><td>中信建投、中金测算</td><td>2026年759亿元，2027年2256亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>采购占比目标</td><td>腾讯国产芯片采购规划</td><td>提升至65%以上</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>机构预测</td><td>高盛服务器部署占比判断</td><td>国产AI芯片达70%—85%</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>安全可靠评估</td><td>最高安全等级芯片清单</td><td>7家企业9款芯片获评</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>模型适配</td><td>阶跃星辰Step 5 Preview</td><td>5家国产芯片Day 0适配</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="box green">
-<h4 style="margin:0 0 6px 0;font-size:0.95em;">超节点放量元年的产业含义</h4>
-<p style="margin:0;font-size:0.9em;">中信建投在10月22日研报中判断，2026年将成为国产超节点放量元年；中金公司同步测算2026年与2027年市场规模分别为759亿元与2256亿元。两年接近三倍的增量，意味着整机柜交付能力与超节点配套部件（高速铜缆、光电合封、微通道冷板）将在2027年之前集中兑现。</p>
-</div>
-<div class="analysis-box">
-<h4>深度分析：国产化的瓶颈已从"能不能用"转向"够不够用"</h4>
-<p>生态侧的进展最为明显。10月15日阶跃星辰开源Step 5 Preview后，华为昇腾、摩尔线程、沐曦、壁仞科技与海光DCU全部在当天完成适配，这种Day 0适配已在头部国产芯片厂商中逐渐普及。经济观察报在10月22日的报道中指出，模型适配带来的差异化优势正在逐渐收窄，国产厂商之间的竞争日趋充分。</p>
-<p>这意味着2027年的关键变量不再是模型能不能跑，而是供货够不够、价格贵不贵、系统效率高不高。高盛判断国产AI芯片在服务器中的部署占比有望达到70%至85%，但摩根士丹利同时测算国内单台服务器的资本开支约为美国同类配置的三倍。在国产推理性能仅为海外服务器20%至40%的现实下，国产化能否真正改善投入产出比，仍取决于超节点架构带来的效率增益能否覆盖这部分差距。</p>
-</div>
-</div>
+<div class="content-body"><h3>设备交期拉长已从交付风险转化为投产节奏与回收期风险</h3><p>当前芯片设备交期由3-6个月延长至6-8个月，CoWoS报价拟上调10%-20%，液冷订单排至2027年，高速光模块组件订单排至2027年底。即使运营商已经锁定GPU采购额度，服务器仍可能因HBM、封测、液冷或光模块中的任一尾项延期。项目排期若继续以GPU到货为起点，将系统性低估集群可商用时间，并造成机房折旧、通信网络和运维人员提前投入，而收入能力不能同步释放。</p><p>对新建智算项目，投资回收敏感性首先来自“有效投产月份减少”。设备价格上升会抬高初始资本开支，交期延后则使资产从合同签订到开始计费的等待期拉长；两者共同作用，会降低项目内部收益率。本周材料没有提供运营商项目资本开支、利用率、算力价格和融资成本，无法可靠计算IRR下降的具体百分点，因此不能采用“交期延4周、IRR下降某一数值”的假设示例。规划模型应把芯片、封测、液冷、光互联和整机测试分别设为延迟变量，并按关键路径自动顺延投产日期。</p><p>项目节奏应采用“晚到货但可联调”与“早到货但不可联调”两种情景分别评估。前者会造成建设周期延长，但设备规格和测试环境可控；后者会形成高额在库设备占用，并可能增加存储损耗、维护和资金占用。运营商应要求服务器厂商只在GPU、HBM、主板、液冷和电源关键料齐套后安排发运，工厂端完成整机测试后再入库，避免把未齐套设备计为可用资产。</p><p>价格回收方面，CoWoS拟涨价10%-20%、晶圆涨价3%-6%、三星先进制程代工最高上调15%，以及MLCC原厂涨幅15%-35%，说明单机BOM可能承受多环节叠加，而不是单一GPU价格变化。对租赁模式，运营商应提高转租价格调整频率并缩短固定价承诺；对自营模式，应在项目收益测算中同时纳入设备涨价和投产推迟，并在采购合同中争取价格调整上限、延期赔偿及替代供应商切换权。CoWoS月产能预计由2026年的13万片晶圆提升至2027年的20万片晶圆，为后续缓解提供线索，但2026年项目仍应按现有限制排产。</p><p>建议将项目里程碑从“设备到货”改为“资源可商用”：依次核验HBM配给、晶圆和封测排产、整机齐套、液冷与网络联调、资源池上线和业务负载验证。只有最后一环完成后，设备才进入有效资产和收入测算。对于2027年交付项目，应把液冷和光模块排期作为独立风险项，不假设其随GPU同步到货。</p></div>
+<div class="content-body"><h3>国产GPU供给增长受HBM卡住，替代重心应从芯片数量转向可用集群交付</h3><p>国产替代已经出现产品和商业化进展，但本周最可靠的量化结论仍是供给缺口，而非单厂商交付排名。2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制，而非芯片设计或逻辑制程产能不足。这意味着国产GPU的替代进度不能用设计发布、样片数量或规划产能替代，必须以带HBM、通过整机测试并可进入算力池的交付量衡量。</p><p>国产存储端正处于从试产到小批量爬坡的阶段。长鑫存储于2026年9月初开始试产HBM3，年底前后才进入小批量量产，月产能目标约6万片晶圆；其DRAM月产能预计到2026年底达到约35万片，2028年目标为50万片，但HBM4仍处于预研阶段。国产存储在HBM技术上落后头部厂商约3-4年，因此短期替代重点应是保障DRAM供给改善和HBM3小批量验证，而不是预设HBM4能够快速形成规模供应。</p><p>本周定稿数据没有给出国产GPU整机交付量、晶圆良率、CoWoS认证良率或生态软件迁移周期，因此不能填入具体交付台数或良率比例。对运营商项目验收，应要求供应商提供设计冻结、晶圆投片、封装完成、整机测试和客户验收的分层数据，并将“芯片可用”“整机可用”“集群可用”分开统计。芯片到达但HBM配置不符，或整机完成但软件栈和算子适配不足，都不能计入有效替代量。</p><p>生态短板正在由单一芯片兼容转向跨环节协同。国产芯片不仅需要硬件稳定性，还要适配编译器、算子库、通信库、框架和上层模型；不同架构在功能覆盖、调试工具和性能迁移上的差异，会提高集群异构调度难度。近期产业实践显示，统一调度平台正在尝试覆盖壁仞、摩尔线程、燧原等国产GPU，说明碎片化适配已是产业共性问题。运营商应在采购时同时验收硬件兼容性和统一调度能力，避免建设多套彼此封闭的算力池。</p><p>供应链政策风险也由芯片延伸至设备和材料。截至2026年8月17日，美国已限制英伟达H20及同等性能芯片出口，将142个实体加入实体清单，并取消部分韩国和中国台湾企业在华晶圆厂的设备及耗材免许可安排；截至2026年6月，中国对日本出口的部分受管制关键矿产仍为零或微量。国产化替代不能只建立第二芯片来源，还应对晶圆设备、耗材、关键材料、HBM、封装测试和软件工具分别设置替代路径与验证周期。</p><p>运营商可采用两阶段替代策略：近期对已验证的国产GPU实行小规模并行部署，以真实模型负载比较吞吐、时延、故障率和运维成本；中期再依据HBM3小批量量产、整机交付和生态适配结果扩大占比。扩容触发条件不应只有芯片价格，而应同时满足供货配额可确认、整机交期可执行、软件栈通过生产验证和集群可用率达到项目要求。</p></div>
 </div>
 
 <div class="section">
 <h2>6.5 供应商动态与产业格局变化</h2>
-<div class="content-body"><h3>6.5.1 本周供应商重要动态汇总</h3>
-<p>本周供应商层面的动态集中在三类：生态共建、项目签约与产能扩张。生态共建以华为与DeepSeek的深度合作为代表，项目签约以芜湖经开区和内江的集中签约为代表，产能扩张则以源杰科技12.51亿元二期项目与英伟达全球扩产计划为代表。</p>
-<h4>本周供应商重大动态</h4>
-<table>
-<tr><th>类型</th><th>主体</th><th>事件</th><th>时间维度</th></tr>
-<tr><td>生态共建</td><td>华为 × DeepSeek</td><td>工程师进驻共研下一代昇腾</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>项目签约</td><td>芜湖经开区 × 紫光未来科技</td><td>服务器产线项目，年产值约10亿元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>项目签约</td><td>四川内江</td><td>17个项目集中签约</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>产能扩张</td><td>源杰科技</td><td>12.51亿元光芯片二期项目推进</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>产能扩张</td><td>英伟达</td><td>三年封装基板产能提至2.5倍</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>开源生态</td><td>DeepInfer</td><td>推理框架双兼容英伟达与昇腾</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>订单落地</td><td>协创智算</td><td>374.9亿元算力云服务协议</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>战略采购</td><td>字节、阿里、腾讯</td><td>超300万块RTX PRO 5500，逾350亿美元</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<h3>6.5.2 市场份额变化与竞争格局</h3>
-<p>本周市场份额层面最重要的信号来自IDC的半年度跟踪数据。2026年上半年中国AI加速器总出货200.8万颗，英伟达67.8万颗占34%且同比下滑44%，华为昇腾57.2万颗占28%，两者差距收窄至6个百分点。值得注意的是英伟达份额的下滑幅度（-44%）远大于其份额绝对值的下降，说明国产厂商的增长正在实质性挤压存量市场。</p>
-<div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px;margin:15px 0;">
-<h4 style="margin:0 0 10px 0;font-size:0.95em;color:#1e3a5f;">2026年上半年中国AI加速器市场份额分布</h4>
-<canvas id="shareChart" width="640" height="300"></canvas>
-<p style="font-size:0.78em;color:#64748b;margin-top:8px;">数据来源：IDC《中国AI加速器市场跟踪报告》，2026年10月中旬发布。单位：市场份额（%）。</p>
-</div>
-<script>
-new Chart(document.getElementById('shareChart'), {
-type: 'bar',
-data: {labels: ['英伟达','华为昇腾','阿里平头哥','寒武纪','昆仑芯','海光信息'],
-datasets: [{label: '市场份额(%)', data: [34,28,7,5,4,3],
-backgroundColor: ['#0ea5e9','#ef4444','#22c55e','#f59e0b','#8b5cf6','#64748b']}]},
-options: {responsive: true, scales: {y: {beginAtZero: true, title: {display: true, text: '份额(%)'}}}}
-});
-</script>
-<div class="analysis-box">
-<h4>深度分析：份额数据的三个解读</h4>
-<p>第一，国产替代已经从"增量市场"进入"存量替换"。英伟达上半年出货同比下滑44%，而其34%的份额对应67.8万颗绝对量，说明被替代掉的是实际在跑的存量卡。第二，第二梯队的竞争进入贴身阶段，平头哥7%、寒武纪5%、昆仑芯4%、海光3%，四个厂商加起来不到五分之一份额，任何一家的产品力提升都可能在短期内改变排名。</p>
-<p>第三，份额提升与盈利改善并不同步。摩根士丹利测算国内单台服务器资本开支约为美国同类配置的三倍，这部分成本会直接压制国产卡的毛利空间。因此国产化的竞争焦点不只在份额，还在单位算力的综合拥有成本能否随着超节点架构落地而下降。</p>
-</div>
-<h3>6.5.3 国产替代进展：区域落地模式已经成型</h3>
-<p>本周区域侧的落地信号密集。内蒙古已明确部署华为昇腾、寒武纪、海光信息、壁仞科技、天数智芯、昆仑芯等多类国产芯片，芯片国产化率超过85%，内蒙古服务器产能达到30万台每年，超聚变与新华三均已落地投产；呼和浩特节点已承接寒武纪芯片实验室，是本次签约中唯一以芯片实验室形式落地的AI芯片企业。</p>
-<div class="box yellow">
-<p style="margin:0;font-size:0.9em;"><strong>数据来源提示：</strong>内蒙古芯片国产化率超85%、服务器产能30万台/年等数据来自东方财富财富号2026年10月17日基于公开政策文件的产业梳理，属二级整理口径，建议以地方政府正式公告与上市公司定期报告为准。</p>
-</div>
-</div>
+<div class="content-body"><h3>供应商动作由单纯扩产转向保交期、提价和跨环节绑定</h3><p>本周上游厂商的核心动作具有一致性：面对AI需求，不愿以价格换订单，而是把稀缺产能转化为涨价和排期权。台积电拟将CoWoS报价上调10%-20%，并按不同制程上调晶圆价格3%-6%；三星先进制程代工订单价格最高上调15%。设备交期由3-6个月延长至6-8个月后，芯片厂商为锁定交付档期减少议价，客户转向以“承诺交期”为首要条件。产业格局由年度价格竞争转为短期交付权竞争。</p><p>存储环节继续提高集中度。HBM占DRAM晶圆产能比重预计从2024年的12.3%升至2026年的20.8%，三星、SK海力士和美光掌握全球95%以上DRAM产能。行业供应紧张预计至少持续24个月，2026年至2027年保持卖方市场。与此同时，国产存储逐步补位：长江存储在2026年第二季度NAND Flash出货份额达到17%，长鑫存储HBM3从2026年9月初开始试产并计划在年底前后小批量量产。国产化因此呈现分化：NAND和通用DRAM供给改善更快，HBM及先进封装仍明显落后。</p><p>设备与材料环节的约束进一步加深。台积电2026年CoWoS月产能预计突破13万片晶圆，2027年预计提升至20万片晶圆，但设备交期已延长至6-8个月；截至2026年8月17日，美国取消部分韩国和中国台湾企业在华晶圆厂的设备及耗材免许可安排，供应链风险从算力芯片向关键设备和耗材扩散。扩产项目能否按期形成有效产能，不仅取决于厂房和资金，还取决于设备取得、工艺认证、关键材料保障和良率爬坡。</p><p>服务器与基础设施厂商则在加速资源集中。AI服务器订单占满大型代工厂产能，惠普、华硕、宏碁将部分PC产能迁回中国；广达和纬创的服务器营收占比均超过80%。液冷订单排至2027年，部分企业营收增速超过400%；高速光模块组件订单排至2027年底。整机、液冷和网络厂商由配套供应商转为算力基础设施的主导者，能够同时协调多环节交付的品牌将获得更高议价权。</p><p>对运营商的格局含义是，单一供应商绑定风险上升。采购谈判应由芯片报价比较转为“产能份额加交付责任”管理：HBM按配置锁定，CoWoS按排产锁定，液冷和光模块按项目窗口锁定，整机厂按齐套和验收责任锁定；同时保留第二来源，但替代认证时间必须计入计划。合同还应覆盖CoWoS涨价10%-20%、晶圆涨价3%-15%和MLCC涨价15%-35%的传导，设置调价上限和延期责任。</p><p>产业利润池也在从单一GPU向系统配套迁移。全球服务器价值TAM在2027年和2028年的预测分别上调31%和45%，机架级AI服务器出货预测在2026年至2028年分别为6.3万架、11万架和16.4万架。运营商应避免只对GPU供应商做价格谈判，而应把HBM、封装、服务器、液冷、存储和光互联纳入一体化供应计划，优先保障关键路径上的交付确定性。</p></div>
 </div>
 
 <div class="section">
 <h2>6.6 本周供应链深度分析专题</h2>
-<div class="content-body"><h3>6.6.1 专题：昇腾950DT万卡池落地与"超节点放量元年"</h3>
-<p>如果只选一个事件代表本周的中国算力供应链，答案毫无悬念是10月16日的昇腾950DT万卡池。同日，中国电信与华为在内蒙古落地全球首个昇腾950DT万卡池，中国移动在北京落地昇腾950DT千卡超节点；前一天，首台1024卡Atlas 950 SuperPoD液冷超节点完成通电，并同步完成阶跃星辰Step 5 Preview的0Day适配。</p>
-<div class="box green">
-<h4 style="margin:0 0 6px 0;font-size:0.95em;">下周观察要点</h4>
-<p style="margin:0;font-size:0.9em;">① 寒武纪、摩尔线程三季报正式披露时点与全年指引；② 昇腾960超节点NPO方案的供应商名单；③ 2026Q4一般型DRAM合约价实际成交落地情况；④ 协创数据374.9亿元长单的首批设备到货与起租节奏；⑤ 中信建投所称"国产超节点放量元年"在四季度财报中的订单验证。</p>
-</div>
-<h4>昇腾超节点演进路径</h4>
-<table>
-<tr><th>节点</th><th>形态</th><th>标志性事件</th><th>时间维度</th></tr>
-<tr><td>384卡</td><td>单柜级超节点</td><td>华为超节点上一代规模</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>8192卡</td><td>当前主力规模</td><td>华为超节点规模升级</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>1024卡</td><td>Atlas 950 SuperPoD液冷</td><td>10-15通电并完成Day 0适配</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>万卡池</td><td>集群级</td><td>10-16内蒙古全球首个落地</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>4096卡（960超节点）</td><td>下一代，首发NPO方案</td><td>2027年方向</td><td><span class="time-dim">持续</span></td></tr>
-<tr><td>灵衢昇腾950集群</td><td>华为云商用集群</td><td>09-30国内商用</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：超节点为什么能补上单卡性能的差距</h4>
-<p>超节点的价值在于靠系统架构创新提升算力效率。由于超节点把计算集成得更密，芯片内存可以统一编址、直接访问，与传统横向扩展（靠增加服务器数量扩大规模）相比，能把通信损耗从30%至40%降到10%以内，算力利用率从60%至70%提升到90%以上，万亿参数级模型的训练周期也能从数月缩短到数周。</p>
-<p>这条路径的现实基础也在本周得到验证。7月开源的Kimi K3参数规模达到2.8万亿，月之暗面官方建议本地部署时使用64个及以上加速器组成的超节点。分析师判断超节点在2026年第三季度已迎来批量放量的拐点，2027年的渗透率有望加速提升。中信建投在10月22日把2026年定义为国产超节点放量元年，中金公司测算市场规模2026年约759亿元、2027年约2256亿元。</p>
-</div>
-<h3>6.6.2 专题：华为与DeepSeek的深度协同</h3>
-<p>The Information在10月19日报道，华为工程师已进驻DeepSeek办公室，把模型训练中碰到的真实痛点直接写进下一代昇腾芯片的设计里。报道同时称，华为年底拟用950DT做预训练，2027年量产的960DT大部分产能将优先供应DeepSeek。</p>
-<div class="box purple">
-<h4 style="margin:0 0 6px 0;font-size:0.95em;">协同模式的配套进展</h4>
-<p style="margin:0;font-size:0.9em;">10月20日上线的DeepInfer推理框架同时兼容英伟达CUDA与华为昇腾环境，为存量模型提供不改代码即可双栈运行的迁移路径；此前DeepSeek已在9月底开源昇腾版的TileLang工具链、矩阵计算与MoE专家通信等底层组件。软硬件协同的完整度，是国产算力从"能用"走向"好用"的关键。</p>
-</div>
-<div class="analysis-box">
-<h4>深度分析：定制协同改变了国产芯片的定价逻辑</h4>
-<p>过去国产芯片的竞争逻辑是"性能对标"，即用单卡峰值算力与英伟达同级产品比较，这种比较对厂商不利，因为制程差距是结构性的。深度协同改变了比较维度：华为不再需要把芯片卖给所有人，而是围绕DeepSeek一类头部模型厂商做定向优化，用软件栈的适配深度换取硬件规格上的宽容度。</p>
-<p>这种模式的产业影响有两点。其一，它把芯片厂商的竞争从发布会参数转移到客户实际产出，对第二梯队厂商而言意味着差异化空间被压缩，因此各家都在强化供货稳定性。其二，它形成了产能绑定——2027年960DT大部分产能优先供DeepSeek，意味着头部客户已经通过预售锁定了明年的产能。对于其他客户而言，拿到货的时间不确定性因此上升。</p>
-</div>
-<h3>6.6.3 专题：英伟达全球扩产潮与中国供应链的映射</h3>
-<p>本周的另一条主线来自英伟达。10月21日GTC柏林主题演讲上，黄仁勋公布了一组扩产数字：未来三年封装基板产能提升至2.5倍，CPO光引擎产能2027年中提升至当前15倍、2028年底再翻一番，京元电子获得11亿美元预付款，英伟达整体测试产能计划在2026至2027年间翻倍。他同时判断产能是当前最大的瓶颈。</p>
-<h4>英伟达扩产计划与A股供应商映射</h4>
-<table>
-<tr><th>扩产环节</th><th>英伟达计划</th><th>国内对应供应商</th><th>时间维度</th></tr>
-<tr><td>封装基板</td><td>三年提至2.5倍，揖斐电大野工厂目标3倍</td><td>深南电路ABF载板批量出货</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>覆铜板</td><td>Rubin机架PCB成本增量比GB300高约233%</td><td>生益科技（M9认证唯一大陆厂商）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>整机PCB</td><td>承接Rubin整机PCB全球50%—55%</td><td>胜宏科技（UBB基板约70%）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>光引擎</td><td>2027年中产能提至15倍</td><td>天孚通信1.6T光引擎已量产</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>液冷</td><td>Vera Rubin NVL144为100%液冷</td><td>英维克UQD快接头进入MGX生态</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>服务器代工</td><td>谷歌云计划部署96万块Rubin GPU</td><td>工业富联（英伟达全球AI服务器核心代工厂）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：扩产潮把"交付能力"变成新的护城河</h4>
-<p>英伟达扩产的重点环节——封装基板、光引擎、测试——恰好是中国供应商过去两年最难突破的三环。原因在于这三环的共同特征是良率爬坡周期长、设备投入前置、认证周期不可压缩。京元电子拿到11亿美元预付款、沃特与矽品把CPO光引擎产能提到15倍，都是在用资金换取确定产能。</p>
-<p>对中国供应链而言，这波扩产既是机会也是提醒。机会在于，海外龙头扩产会释放出设备与材料的外溢订单；提醒在于，当全球算力硬件的交付瓶颈统一收敛到2027至2028年，中国2027年的新增需求同样要排队。摩根士丹利预测头部云厂商数据中心资本开支增速将从2027年约60%回落至2028年12%，这意味着2027年既是产能集中释放的窗口，也是需求增速见顶的拐点。</p>
-</div>
-</div>
+<div class="content-body"><div class="deep-event"><div class="deep-event-title">专题：本周最关键的供应链变化</div><h4>事件与背景</h4><p>本周最关键的供应链变化，是智能算力瓶颈由单一GPU供给不足升级为HBM配给、先进封装、液冷、被动元件和光互联共同限制整机交付。截至10月29日，2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制，而非芯片设计或逻辑制程产能不足。与此同时，台积电拟将CoWoS报价上调10%-20%，芯片设备交期由3-6个月延长至6-8个月；AI机柜功率突破30kW、50kW，液冷订单排至2027年；三星电机MLCC交付周期延长至52周，高速光模块组件订单排至2027年底。供应商行为也随之改变：先进制程和封测环节提高报价，客户把可承诺交期置于价格谈判之前。对运营商而言，这一变化的关键不是每个环节分别涨价，而是多个长周期约束在集群上线前叠加，使“设备交付”不再等同于“算力投产”。</p><h4>关键数据</h4><p>价格方面，台积电CoWoS报价拟上调10%-20%，不同制程晶圆价格已上调3%-6%，三星先进制程代工订单价格最高上调15%，AI服务器高容量MLCC原厂涨幅普遍为15%-35%。产能与交期方面，CoWoS月产能预计由2026年的13万片晶圆提升至2027年的20万片晶圆，但当前仍供不应求；芯片设备交期由3-6个月延长至6-8个月，存储晶圆从投片到产出约需4个月，MLCC交付周期达到52周。需求方面，2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制；HBM占DRAM晶圆产能比重预计由2024年的12.3%升至2026年的20.8%，AI服务器内存需求约为普通服务器的8-10倍。上述数据分别来自钛媒体10月29日、21世纪经济报道与新浪财经10月27日至28日、36氪10月24日至26日、电子行业研究周报10月23日、每日经济新闻10月22日及华尔街见闻10月21日。</p><h4>传导路径</h4><p>第一条传导路径是成本路径。晶圆、CoWoS和服务器物料同时涨价，运营商采购成本不是单一GPU价格的线性结果。即使GPU报价保持稳定，封装和关键部件成本上升仍会抬高整机BOM；若供应商要求把涨价传导到租赁合同，项目回收期将随固定成本增加而延长。对自营项目，预算若只覆盖GPU和服务器本体，会在封测、液冷和关键料阶段出现预算缺口。对租赁项目，则需要区分历史存量租约和新签租约，不能直接用制造成本变化推导存量租金涨跌。</p><p>第二条传导路径是时间路径。HBM配给决定芯片能否形成完整配置，CoWoS排产决定先进处理器何时完成封装，液冷、MLCC和光模块则决定整机何时具备上电与联调条件。多个环节的排产周期叠加后，即使其中个别环节提前，集群仍可能因其他尾项延期。液冷订单已排至2027年，MLCC交期为52周，光模块组件订单排至2027年底，说明运营商新建项目的机房、服务器和网络不能按同一到货周管理。项目收入起点后移，而机房折旧、网络投入和运维人员成本可能先行发生，进而降低资产利用效率并延后投资回收。</p><p>第三条传导路径是供应集中和生态路径。三星、SK海力士和美光掌握全球95%以上DRAM产能，HBM产能继续上升并挤占通用DRAM；国产HBM则仍处试产和小批量量产阶段。长鑫存储于2026年9月初开始试产HBM3，年底前后才进入小批量量产，HBM4仍处预研阶段。国产GPU在设计能力逐步接近的情况下，市场分水岭转向适配、交付和商务兑现。运营商如果只准备物理备选芯片，而没有同步建设兼容的软件栈、统一调度和第二套验证环境，替代芯片即使到货也难以快速补足有效算力。</p><h4>对运营商的建议</h4><p>立即行动方面，10月下旬新建和扩建项目应把询价拆分为HBM或显存配额、晶圆与CoWoS排产、服务器齐套、液冷交付、光互联和机房机电6条关键路径，每条路径分别记录承诺日期和变更条件。合同中应对CoWoS拟涨价10%-20%、晶圆代工涨价3%-15%设置价格调整上限，对设备延期设置责任和退出权。资源规划方面，以“完成联调并进入资源池”为投产口径，不把GPU到货或机柜上电计为有效算力。2026年内项目按6-8个月芯片设备交期、52周MLCC交期及液冷与光模块排产至2027年的现实约束编制计划；对2027年扩容，只在第二来源完成认证、HBM配额可确认且服务器整机交付周期可承诺后纳入基准方案。</p></div></div>
 </div>
 
-<div class="data-source">
-<p>📌 <strong>数据来源：</strong></p>
-<ul>
-<li>IDC《中国AI加速器市场跟踪报告》（2026年10月中旬发布，2026年上半年数据）</li>
-<li>The Information（2026-10-19，华为与DeepSeek共研昇腾报道）</li>
-<li>路透社 Reuters（2026-10-20，RTX PRO 5500采购报道）</li>
-<li>上海有色网 SMM 快讯（2026-10-21，昇腾950DT万卡池与1024卡超节点）</li>
-<li>经济观察报（2026-10-22，国产算力芯片三季报与Day 0适配）</li>
-<li>中信建投证券、中金公司研报（2026-10-22，国产超节点市场空间测算）</li>
-<li>东吴证券、国盛证券、兴业证券、华龙证券研报（2026年10月）</li>
-<li>海光信息688041三季报（2026-10-19）</li>
-<li>沐曦股份688802业绩预告（2026-10-15）</li>
-<li>浪潮信息000977三季报业绩预告（2026年10月）</li>
-<li>协创数据300857算力云服务协议公告（2026-10-19）</li>
-<li>源杰科技688498扩产公告（2026-10-16、2026-10-12）</li>
-<li>集邦咨询 TrendForce（2026年10月，DRAM与HBM价格预测）</li>
-<li>新浪财经（2026-10-19至10-21，算力租赁与光通信产能追踪）</li>
-<li>21世纪经济报道（2026-10-21，光芯片与光模块产能争夺2028年）</li>
-<li>腾讯新闻（2026-10-22，英伟达扩产潮与A股配套龙头）</li>
-<li>摩根士丹利中国AI发展路径报告（2026-10-20）</li>
-<li>中国信息通信研究院（2026年，算力供给与用算量数据）</li>
-<li>工业和信息化部（截至2026年6月，智能算力规模2185 EFLOPS）</li>
-<li>网易财经、ZAKER新闻（2026-10-17至10-22，算力基础设施ETF跟踪）</li>
-</ul>
+<div class="section refs-section">
+<h2>数据来源与参考</h2>
+<div class="refs-body">
+<div class="refs-note">按正文引用顺序编号，共 12 条，其中 12 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<ol class="refs-list">
+<li class="ref-item"><span class="ref-org">钛媒体</span><a class="ref-title" href="https://www.tmtpost.com/8185837.html" target="_blank" rel="noopener">摩尔线程单季扣非净利润首次转正，国产GPU生意走到哪一步了？</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">2026年中国国产AI芯片需求约420万颗、供给约260万颗，160万颗缺口主要受HBM配给限制。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://www.21jingji.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">21世纪经济报道</a></span><a class="ref-title" href="https://app.myzaker.com/news/article.php?pk=6ae198068e9f09449b1b9bfc" target="_blank" rel="noopener">台积电据传拟将先进封装价格最高上调20%</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">CoWoS报价拟上调10%-20%，芯片设备交期由3-6个月延长至6-8个月。</p></li>
+<li class="ref-item"><span class="ref-org">电子工程专辑</span><a class="ref-title" href="https://www.eet-china.com/news/202610287109.html" target="_blank" rel="noopener">AI推高存储成本，传惠普、华硕、宏碁PC产能部分迁回中国</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">AI服务器订单占满大型代工厂产能，广达和纬创服务器营收占比均超过80%。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://finance.sina.com.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">新浪财经</a></span><a class="ref-title" href="https://finance.sina.com.cn/roll/2026-10-27/doc-iniwruyt8899853.shtml" target="_blank" rel="noopener">台积电CoWoS拟提价10%-20%</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-finance">财报</span><p class="ref-desc">台积电2026年CoWoS月产能预计突破13万片晶圆，2027年提升至20万片。</p></li>
+<li class="ref-item"><span class="ref-org">36氪</span><a class="ref-title" href="https://m.36kr.com/p/4018076009010823" target="_blank" rel="noopener">华强北内存条暴涨300%</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">三星、SK海力士和美光掌握全球95%以上DRAM产能，HBM占DRAM晶圆产能比重2026年预计为20.8%。</p></li>
+<li class="ref-item"><span class="ref-org">36氪</span><a class="ref-title" href="https://m.36kr.com/p/4019942949295744" target="_blank" rel="noopener">算力基建的战争，才刚刚在液冷赛道上演</a><span class="ref-date">2026-10-24</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">AI机柜功率突破30kW、50kW，液冷订单排至2027年，部分企业营收增速超过400%。</p></li>
+<li class="ref-item"><span class="ref-org">电子行业研究周报</span><a class="ref-title" href="https://www.jinguxun.com/article/news/10952600" target="_blank" rel="noopener">龙头官宣CCL相关产品涨价</a><span class="ref-date">2026-10-23</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">机构预计台积电2027年先进制程价格上涨5%-10%，长江存储2026年二季度NAND出货份额为17%。</p></li>
+<li class="ref-item"><span class="ref-org">每日经济新闻</span><a class="ref-title" href="https://www.mrjjxw.com/articles/2026-10-22/4613367.html" target="_blank" rel="noopener">力积电预计明年逻辑代工再涨价10%至20%</a><span class="ref-date">2026-10-22</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">力积电预计2027年逻辑代工涨价10%-20%，存储晶圆从投片到产出约需4个月。</p></li>
+<li class="ref-item"><span class="ref-org">华尔街见闻</span><a class="ref-title" href="https://wallstreetcn.com/articles/3784141" target="_blank" rel="noopener">华尔街见闻早餐FM-Radio</a><span class="ref-date">2026-10-21</span><span class="ref-badge b-finance">财报</span><p class="ref-desc">三星电机MLCC交付周期延长至52周，AI服务器高容量MLCC原厂涨幅普遍为15%-35%。</p></li>
+<li class="ref-item"><span class="ref-org">36氪</span><a class="ref-title" href="https://m.36kr.com/p/4033627785024643" target="_blank" rel="noopener">高盛再次大幅上调全球AI服务器预测</a><span class="ref-date">2026-10-20</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">全球服务器价值TAM在2027年和2028年的预测分别上调31%和45%，机架级AI服务器预测持续上修。</p></li>
+<li class="ref-item"><span class="ref-org">通信世界</span><a class="ref-title" href="https://news.qq.com/rain/a/20261020A09P4J00" target="_blank" rel="noopener">AI算力重写通信底座：光模块订单排到2027</a><span class="ref-date">2026-10-20</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">中国电信109亿元室外光缆集采落地，中国移动640套智算存储集采最高限价约23.35亿元。</p></li>
+<li class="ref-item"><span class="ref-org">清华大学国际金融与经济研究中心</span><a class="ref-title" href="https://cifer.pbcsf.tsinghua.edu.cn/info/1136/3737.htm" target="_blank" rel="noopener">2026年中美贸易争端大事记</a><span class="ref-date">2026-10-19</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">美国限制H20及同等性能芯片出口，将142个实体加入实体清单，并调整晶圆厂设备免许可安排。</p></li>
+</ol>
+</div>
 </div>
 
 </div><!-- end container -->
 <footer>
-<p>© 2026 中国智能算力周报 | 第40期 | 数据更新：2026-10-22</p>
+<p>© 2026 中国智能算力周报 | 第41期 | 数据更新：2026-10-29</p>
 </footer>
+<div class="container">
 <div class="chapter-nav">
     <a href="技术趋势发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="应用场景分析报告.html" class="nav-next">下一章 ➡️</a>
+</div>
 </div>
 </body></html>
