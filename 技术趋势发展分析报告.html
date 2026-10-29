@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>五、技术趋势分析 | 第40期</title>
+    <title>五、技术趋势分析 | 第41期</title>
     <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: #f5f7fa; color: #2c3e50; font-size: 0.7em; line-height: 1.8; }
 .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); color: white; padding: 32px 24px 24px; text-align: center; border-radius: 12px; margin-bottom: 20px; }
-header h1 { font-size:1.7em; }
+header h1 { font-size:26px; font-weight:600; margin-bottom:8px; }
 header p { margin-top:8px; opacity:0.9; font-size:0.95em; }
+header .subtitle { font-size:14px; color:#aab; margin-top:6px; }
+.week-badge { display:inline-block; background:#e53935; color:white; font-size:11px; padding:3px 10px; border-radius:10px; margin-bottom:6px; }
 section { background:white; margin:12px 0; padding:22px; border-radius:10px; box-shadow:0 2px 12px rgba(0,0,0,0.05); }
 section h2 { color:#0f172a; font-size:1.4em; margin-bottom:12px; border-bottom:3px solid #0ea5e9; padding-bottom:6px; }
 section h3 { color:#1e3a5f; font-size:1.05em; margin:20px 0 10px; border-left:3px solid #38bdf8; padding-left:8px; }
@@ -97,14 +99,61 @@ tr:hover td { background:#e8f4fd; }
 .overview-text { font-size: 13px; line-height: 2; color: #333; text-align: justify; }
 .overview-text strong { color: #0f3460; }
 .overview-text em { color: #667eea; font-style: normal; font-weight: 600; }
-@media (max-width: 768px) { .chapter-tabs { flex-direction: column; }
-    </style>
+@media (max-width: 768px) { .chapter-tabs { flex-direction: column; } }
+    .section > p:not(.source) { text-indent: 2em; text-align: justify; margin-bottom: 10px; }
+
+
+/* REFS_CSS_START 数据来源与参考（统一版式 · 咨询报告参考文献风格） */
+.refs-section { background: #FFFFFF; border-radius: 12px; padding: 24px 24px 18px; margin: 20px 0; box-shadow: 0 2px 10px rgba(23,55,94,0.06); }
+.refs-section h2 { font-size: 17px; color: #1a1a2e; margin: 0 0 8px; padding-bottom: 10px; border-bottom: 2px solid #0f3460; }
+.refs-note { font-size: 10.5px; color: #7A879B; line-height: 1.7; margin: 0 0 12px; }
+.refs-body { margin-top: 2px; }
+.refs-list { list-style: none; margin: 0; padding: 0; counter-reset: refitem; }
+.ref-item { position: relative; padding: 10px 0 10px 44px; border-bottom: 1px solid #EDF1F7; counter-increment: refitem; font-size: 11.5px; line-height: 1.75; }
+.ref-item:last-child { border-bottom: none; padding-bottom: 4px; }
+.ref-item::before { content: "[" counter(refitem) "]"; position: absolute; left: 12px; top: 10px; color: #93A0B4; font-size: 10.5px; font-variant-numeric: tabular-nums; }
+.ref-org { font-weight: 700; color: #1a1a2e; margin-right: 6px; }
+.ref-title { color: #1F4E79; text-decoration: none; border-bottom: 1px solid rgba(31,78,121,0.35); }
+.ref-title:hover { color: #0B2E4F; border-bottom-color: #0B2E4F; background: #EEF4FB; }
+.ref-title.is-plain { color: #44546A; border-bottom: none; }
+.ref-date { color: #8A94A6; font-size: 10.5px; margin-left: 7px; white-space: nowrap; }
+.ref-badge { display: inline-block; font-size: 9.5px; line-height: 1.6; padding: 0 5px; border-radius: 3px; margin-left: 6px; vertical-align: 1px; }
+.ref-badge.b-policy { background: #FDECEA; color: #B3261E; }
+.ref-badge.b-media { background: #E8F4FD; color: #1565C0; }
+.ref-badge.b-inst { background: #EDF7EE; color: #2E7D32; }
+.ref-badge.b-report { background: #F3EFFA; color: #5E35B1; }
+.ref-badge.b-finance { background: #FFF6E5; color: #B26A00; }
+.ref-desc { margin: 3px 0 0; color: #5A6678; font-size: 11px; line-height: 1.7; }
+@media print { .ref-title { color: #000; border-bottom: none; } }
+/* REFS_CSS_END */
+/* OVX_CSS_START 本章关键概述（统一版式 · 咨询报告要点式） */
+.chapter-overview { background: #FFFFFF; border-radius: 12px; padding: 22px 26px 18px; margin: 20px 16px; box-shadow: 0 2px 10px rgba(23,55,94,0.06); border-top: 3px solid #0f3460; }
+.overview-title { font-size: 15px; font-weight: 700; color: #1a1a2e; margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #E6EAF0; letter-spacing: .2px; }
+.overview-text { font-size: 12.5px; line-height: 1.95; color: #333; text-align: justify; }
+.overview-text h3 { display: none; }
+.overview-text p { margin: 0 0 8px; font-size: 12.5px; line-height: 1.95; color: #333; }
+.overview-text p.ov-lead { font-size: 13px; font-weight: 700; color: #0f3460; line-height: 1.85; margin-bottom: 10px; padding-left: 10px; border-left: 3px solid #4A6E9C; }
+.overview-text ul.ov-points { list-style: none; margin: 0 0 10px; padding: 0; }
+.overview-text ul.ov-points li { position: relative; padding-left: 18px; margin: 7px 0; font-size: 12px; line-height: 1.9; color: #3f4a5a; }
+.overview-text ul.ov-points li::before { content: ""; position: absolute; left: 4px; top: 9px; width: 5px; height: 5px; border-radius: 50%; background: #4A6E9C; }
+.overview-text ul.ov-points li strong { color: #1F4E79; font-weight: 700; }
+.overview-text p.ov-note { margin-top: 10px; padding-top: 9px; border-top: 1px dashed #E6EAF0; font-size: 11.5px; line-height: 1.85; color: #6b7686; }
+.overview-text p.ov-note strong { color: #4A6E9C; }
+/* OVX_CSS_END */
+/* DMETA_CSS_START 数据周期横条（统一版式） */
+.data-meta { display: flex; flex-wrap: wrap; gap: 6px 20px; background: #F5F8FC; border-left: 3px solid #4A6E9C; border-radius: 8px; padding: 10px 16px; margin: 4px 16px 14px; font-size: 11.5px; line-height: 1.8; color: #4A5666; }
+.data-meta .dm { display: flex; gap: 6px; align-items: baseline; max-width: 100%; }
+.data-meta .dm b { flex: none; font-size: 10px; font-weight: 700; color: #3C6E9E; background: #E8F1FA; border-radius: 3px; padding: 1px 6px; letter-spacing: .3px; }
+.data-meta .dm span { color: #4A5666; }
+/* DMETA_CSS_END */
+</style>
 </head>
 <body>
 
 <header>
-  <h1>⚙️ 第五章 技术趋势分析</h1>
-  <p>智能算力关键技术演进与未来发展方向深度研究</p>
+<div class="week-badge">第41期</div>
+<h1>五、技术趋势分析</h1>
+<div class="subtitle">2026-10-23—2026-10-29 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -127,192 +176,66 @@ tr:hover td { background:#e8f4fd; }
 <!-- 本章关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><p>本周（2026.1016-2026.1022）中国智算技术主线出现一次<strong>结构性转折</strong>：国产算力的核心命题从"有没有卡"切换为"卡能不能把前沿模型真正跑起来"。10月19日The Information报道华为工程师进驻DeepSeek共研下一代昇腾芯片设计，DeepSeek计划最早2026年底以昇腾950DT开展预训练；10月20日DeepSeek开源推理框架DeepInfer，同时兼容英伟达与华为昇腾。模型厂商反向定义芯片，标志软硬件协同的主导权发生转移，CUDA生态的迁移壁垒首次被实质性松动。</p>
-<p>配套地，系统侧超节点由方案验证转入规模交付。中信建投10月22日研报将2026年定义为国产超节点放量元年：昇腾超节点累计部署超1000套，Atlas 950 SuperPoD液冷超节点9月上市，中金测算2026/2027年国产超节点机柜市场规模约759亿元与2256亿元。能效侧，液冷从选配变为必配——Vera Rubin NVL144实现100%液冷，国内首部冷板式液冷国家标准落地实施，首台适配800V液冷架构的AI服务器下线。需求侧的量化信号同样明确：中国信通院预测2026年推理算力占比将达70.5%，产业效率标尺正从峰值算力（FLOPS）切换为<em>每瓦词元产出</em>。</p>
-</div>
+<div class="overview-text"><p class="ov-lead">本周技术主线是存算一体降推理能耗、光互联降网络功耗。</p><ul class="ov-points"><li><strong>芯片：</strong>10月28日，微纳核芯披露其3D-CIM架构SRAM存算一体方案较冯·诺伊曼架构提升4-6倍算力密度、5-10倍能效比，第一代LP-CIM与PCIe-CIM系列共3颗芯片已投片，预计2027年初送测；10月27日，东方算芯披露DF1000经过24个月研发，已完成百卡级训练集群部署，形成从3D近存计算芯片到训练系统的工程闭环。</li><li><a class="src-link" href="http://www.iccsz.com/site/cn/News/2026/10/27/20261027004439763034.htm" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>互联：</strong>10月27日，KDDI与博通启动CPO验证，采用Tomahawk 6以太网交换芯片和Davisson光引擎，在分布式训练、推理负载下测试功耗、丢包、拥塞控制和有效吞吐量；10月26日披露的Rubin文档对比显示，Vera Rubin超级芯片HBM4带宽由44TB/s调整为38.5TB/s，网络带宽则有所提升，选型需同步核算内存带宽与网络扩展能力。</a></li><li><a class="src-link" href="https://www.jiemian.com/article/15220888.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>散热与推理：</strong>10月21日，曙光数创MW级相变浸没液冷整机柜方案C8000 V3.0入选GMVPS案例；10月28日，OpenAI称GPT-6.1 Terra标准API价格较GPT-5.6 Terra和GPT-6.1 Sol低50%。推理侧竞争已由单芯片性能转向算力密度、能效、散热和单位Token成本的联合优化。</a></li></ul><p class="ov-note"><strong>对运营商含义：</strong>训练集群应优先验证DF1000等百卡方案的稳定性、软件适配和单位Token成本；推理集群可对3D-CIM芯片安排2027年初送测前的样片验证。10月26日发布的HVDC 800V转50V 30KW PDB设计规范可作为800V直流供电预研接口，同时以CPO实测功耗和有效吞吐量决定光互联路线，并把PUE、单位Token电耗、液冷改造投入纳入同一投资测算。</p></div>
 </div>
 
-<div class="data-note"><strong>数据说明：</strong>本章聚焦最近7天（2026-10-16—2026-10-22）技术趋势变化，对比上月/季度数据（<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>）及年度数据（<span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span>）进行对照分析。时间维度标注：绿色=本周有直接数据；黄色=月内数据；灰色=季度/年度数据。</div>
+<div class="data-meta">
+<span class="dm"><b>数据周期</b><span>2026-10-23—2026-10-29（第41期）</span></span>
+<span class="dm"><b>数据来源</b><span>NVIDIA、OCP、BIS、CFM 闪存市场、DOIT、华尔街见闻、讯石光通讯网等</span></span>
+<span class="dm"><b>口径说明</b><span>时间标注：绿色＝本周直接数据、黄色＝月内数据、灰色＝季度或年度数据；参数以厂商公布口径为准</span></span>
+</div>
+
 
 <!-- TIMELINE -->
 <section>
 <h2>⏱️ 本周技术时间线</h2>
 <div class="timeline">
-<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">中信建投研报：2026年是国产超节点放量元年</div><div class="timeline-source">来源：中信建投研报（东方财富/21经济网）</div><div class="timeline-impact">超节点行业由方案验证进入规模化交付阶段，服务器整机、交换芯片、交换机、连接器率先受益，PCB、液冷、电源同步受益。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-21</div><div class="timeline-title">英伟达柏林GTC大会公布三年扩产计划</div><div class="timeline-source">来源：腾讯新闻2026-10-21</div><div class="timeline-impact">未来三年封装基板产能提至2.5倍，CPO光引擎2027年中产能做到现在的15倍，黄仁勋称产能是最大瓶颈。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">DeepSeek开源推理框架DeepInfer，双兼容英伟达与昇腾</div><div class="timeline-source">来源：新浪科技2026-10-20</div><div class="timeline-impact">内部推理框架首次对外开源并同时适配两个平台，同步开源deepseek-recipe，大幅降低推理侧的生态迁移成本。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">美国国土安全部第2026-01号排除与移除令正式生效</div><div class="timeline-source">来源：《联邦公报》2026-10-19公布，10-20生效</div><div class="timeline-impact">联邦民事机构禁止采购DeepSeek及关联企业产品，并清理基于其开发的第三方衍生产品，第三方云托管与授权分成渠道承压。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-19</div><div class="timeline-title">华为派工程师进驻DeepSeek，参与下一代昇腾芯片设计</div><div class="timeline-source">来源：The Information 2026-10-19</div><div class="timeline-impact">国产训练卡从推理替代走向训练可用；DeepSeek计划最早年底用昇腾950DT预训练，2027年960DT大部分产能优先供应DeepSeek。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-18</div><div class="timeline-title">全国高性能计算学术大会：推理算力占比2026年将达70.5%</div><div class="timeline-source">来源：澎湃新闻2026-10-18</div><div class="timeline-impact">中国日均Token消耗从2024年1000亿升至2026年8月500万亿，市场关注点由抢卡数转向单位Token成本。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-17</div><div class="timeline-title">DeepSeek-V4.1-Flash-1017上线，MIT协议开源价格不变</div><div class="timeline-source">来源：新浪财经2026-10-18</div><div class="timeline-impact">11项测试拿下4项第一，Terminal-Bench得分由31.2提升至42.3，成本领先叠加编程Agent专精。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-16</div><div class="timeline-title">中国信通院发布《面向词元服务的智算基础设施发展研究报告（2026年）》</div><div class="timeline-source">来源：人民邮电报/川渝本地消息2026-10-16</div><div class="timeline-impact">明确产业核心驱动力从训练转向推理，效率标尺由峰值算力转向每瓦词元产出；地方政策试点从建设补贴转向Token服务采购。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">微纳核芯3款3D-CIM芯片全部投片</div><div class="timeline-source">来源：36氪，10-28</div><div class="timeline-impact">微纳核芯披露，其SRAM存算一体架构较冯·诺伊曼架构提升4-6倍算力密度和5-10倍能效比，LP-CIM与PCIe-CIM系列共3颗芯片已全部投片，预计2027年初送测并启动批量供货。运营商若面向持续化推理场景评估该路线，应预留芯片送测、编译器适配及端云方案验证窗口，不能把2027年供货计划视为当前可用产能。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">英伟达与Meta扩大Vera Rubin部署</div><div class="timeline-source">来源：每日经济新闻，10-28</div><div class="timeline-impact">英伟达与Meta于10月27日宣布扩大Muse系列模型合作，Meta将扩大Vera Rubin AI算力集群与Vera CPU部署，并采用Spectrum-X以太网和BlueField-4 DPU。该组合显示新一代智算集群的竞争范围已扩展到CPU、加速器、DPU与网络协同，运营商采购评估应由单机峰值算力转向集群有效吞吐、互联利用率和模型任务完成效率。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-27</div><div class="timeline-title">KDDI与博通启动CPO交换机验证</div><div class="timeline-source">来源：讯石光通讯网，10-27</div><div class="timeline-impact">KDDI将在AI数据中心引入搭载博通Tomahawk 6交换芯片和Davisson光引擎模块的CPO交换机，并于10月27日至28日展示验证环境。验证覆盖功耗下降、丢包、拥塞控制和有效吞吐量，并模拟分布式训练与推理负载。运营商可据此设置CPO准入门槛，要求在自身网络和模型流量下同时验证能耗与通信性能，不能仅以样机展示作为替换依据。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-27</div><div class="timeline-title">DF1000完成百卡训练集群部署</div><div class="timeline-source">来源：DOIT，10-27</div><div class="timeline-impact">东方算芯披露，DF1000 3D近存计算芯片自2024年启动研发后，历时24个月完成芯片、全栈软件适配及百卡级训练集群部署闭环，并已稳定运行多个大模型训练任务。该结果证明近存计算已从单芯片验证进入系统验证阶段，但千卡级交付的性能、能效、稳定性与成本仍需在实际任务中复核，现阶段更适合列入国产训练集群比选清单。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-27</div><div class="timeline-title">算力中心储能选型国标正式发布</div><div class="timeline-source">来源：界面新闻，10-27</div><div class="timeline-impact">GB/Z 273.1—2026覆盖电化学、热能、飞轮、压缩空气、抽水蓄能、超级电容器和氢能等7种储能类型，并按性能、可靠性、安全性、成本、可扩展性等维度给出选型框架，标准还收录8个典型案例。运营商新建算力中心可把该标准纳入储能与供配电联合设计，减少设备选型完成后才发现功率响应、空间和可靠性不匹配的风险。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-26</div><div class="timeline-title">GCC发布9项规范并启动2项项目</div><div class="timeline-source">来源：新华网，10-26</div><div class="timeline-impact">2026全球计算大会发布《HVDC 800V转50V 30KW PDB设计规范》等9项团体标准及技术规范，并启动Open UXM和《XPU模组管理规范》2项重点项目；GMVPS收录38个实践案例，另有59项进入案例资源库，累计沉淀250余个全球价值案例。运营商可据30KW PDB和XPU管理接口提前约束整机柜供电及设备管理接口，降低后续异构设备接入改造成本。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-26</div><div class="timeline-title">Rubin HBM4带宽调整至38.5TB/s</div><div class="timeline-source">来源：中华网，10-26</div><div class="timeline-impact">根据NVIDIA今年10月文档与6月文档对比，Vera Rubin超级芯片HBM4 GPU内存带宽由此前44TB/s调整为38.5TB/s，NVLink带宽亦有调整，网络带宽则有所提升。该变化会直接影响大模型加载、内存访问和节点协同，运营商应依据训练或推理实测任务重新测算通信、内存与网络瓶颈，并采用最新交付规格而非沿用早期标称参数。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-22</div><div class="timeline-title">兆瓦级浸没液冷C8000入选案例</div><div class="timeline-source">来源：界面新闻，10-22</div><div class="timeline-impact">曙光数创于10月21日展示MW级相变浸没液冷整机柜及基础设施整体解决方案C8000 V3.0，并入选GMVPS技术创新类算力基础设施案例。素材明确其目标是把散热、供配电和空间布局协同优化，以降低制冷辅助用电和单位词元电费。运营商应同步测试PUE、单位Token电耗、机房承重、管路和供电改造投入，而非只比较液冷设备报价。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-20</div><div class="timeline-title">RISC-V服务器与智算芯片集中亮相</div><div class="timeline-source">来源：科创板日报，10-20</div><div class="timeline-impact">10月18日至20日举行的RISC-V中国峰会上，中兴微砺睿微披露面向智算中心的珠峰200高性能RISC-V CPU，进迭时空发布符合RISC-V服务器级规范的V100芯片，阿里达摩院发布车规增强E908A。运营商开展国产智算选型时，应把服务器规范完整性、编译器工具链和模型适配能力与芯片指标一并评估，避免异构CPU因生态迁移成本推高总体投入。</div></div>
 </div>
 </section>
 
 <!-- CONTENT_5_1 -->
 <section>
 <h2>5-1 AI芯片技术发展趋势</h2>
-<h3>5-1-1 训练、推理与训推一体：算力供给结构被需求侧重新定义</h3>
-<p>本周技术侧最清晰的一条主线，是算力供给结构正在被需求侧重新定义。中国信通院产业与规划研究所发布的《面向词元（Token）服务的智算基础设施发展研究报告（2026年）》明确指出，人工智能产业核心驱动力正从模型训练转向推理服务，传统以峰值算力（FLOPS）为价值标尺的"算力工厂"模式，难以满足推理时代低延迟、高吞吐、弹性调度的要求；新范式以词元为计量单元、以每瓦词元产出为核心效率指标。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></p>
-<table>
-<tr><th>技术方向</th><th>本周关键进展</th><th>技术状态</th><th>时间维度</th></tr>
-<tr><td>训练芯片</td><td>DeepSeek计划最早2026年底用昇腾950DT开展预训练，华为已派工程师进驻DeepSeek共研芯片设计</td><td>国产训练卡从"能推理"迈向"可训练"，但万卡通信稳定性仍待验证</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>推理芯片</td><td>DeepSeek开源推理框架DeepInfer，同时兼容英伟达与华为昇腾双平台，并同步开源deepseek-recipe编解码组件</td><td>推理侧软件栈成为国产卡替代的关键抓手</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>ASIC推理专用芯片</td><td>业内判断2026年已涌现一批ASIC推理创业团队，2027年数量将更多，定制化推理性能有望达同功耗GPU的10-20倍</td><td>大模型架构收敛后ASIC窗口打开</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>训推一体</td><td>范式智能与睿思智联开源一站式部署平台ModelSphere，统一混合调度昇腾、天数智芯、摩尔线程、海光DCU等算力，系统极限吞吐效率较基准提升约285%</td><td>异构算力统一调度层正在从工具走向平台</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>推理占比</td><td>信通院预测2026年推理算力占比将达70.5%，2026年AI推理计算需求已达训练需求的4-5倍</td><td>推理首次成为算力结构主导项</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>驱动力（<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>）</h4>
-<p>本周三条芯片侧新闻指向同一个结论：国产算力的瓶颈已从"有没有卡"转向"卡能不能把前沿模型跑起来"。The Information于10月19日报道，华为已派工程师分阶段进驻DeepSeek办公地点，把训练中的任务分配、芯片间数据传输等底层需求直接纳入下一代昇腾芯片设计；DeepSeek则计划最早2026年底用昇腾950DT做预训练。10月20日DeepSeek开源的DeepInfer推理框架同时兼容英伟达与昇腾，说明软件栈迁移成本正在被主动摊薄。</p>
-</div>
-<div class="analysis-box">
-<h4>对竞争格局意味着什么（<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>）</h4>
-<p>模型厂商反向参与芯片定义，意味着国产算力的价值锚点从"对标英伟达单卡参数"切换为"单位Token成本"。这对竞争格局有三重影响：一是头部模型厂锁单将挤占昇腾有限产能，二线模型厂与云厂商的推理需求可能外溢至寒武纪、沐曦、壁仞等芯片；二是统一调度平台（如ModelSphere）成为新一层生态入口，谁掌握异构算力的"操作系统层"，谁就能在芯片份额分散化时代保持议价权；三是推理占比升至70.5%后，单卡峰值算力的重要性下降，单位功耗下的有效吞吐与每瓦Token产出将取代FLOPS成为新的选型指标。</p>
-</div>
-
+<h3>5-1-1 芯片竞争由单卡峰值转向密度与能效，存算一体成为本周最明确的技术增量</h3><p><strong>结论先行：</strong>本周芯片技术并非简单追求更高峰值算力，而是围绕减少数据搬运、压缩集群能耗和提升有效吞吐展开调整。10月28日，微纳核芯披露，其SRAM存算一体架构相较冯·诺伊曼架构提升4-6倍算力密度、5-10倍能效比；第一代LP-CIM与PCIe-CIM系列共3颗芯片已全部投片，预计2027年初送测并启动批量供货。该组数据表明，推理芯片的评价体系正在从“每卡每秒完成多少次计算”转向“在受限供配电和散热条件下可以承载多少有效Token”。</p><p>存算一体的直接价值在于缩短计算单元与存储单元之间的数据路径。对长上下文、检索增强和模型参数密集访问类负载，数据搬运往往比计算单元本身更容易形成等待；减少搬运可同时缓解带宽压力与能耗。因此，4-6倍算力密度和5-10倍能效比并非对所有模型都能线性兑现的结论，而是厂商基于多次流片实测给出的架构指标，仍需在真实模型、批量规模和编译映射条件下复核。</p><p>对运营商而言，3颗芯片已经投片不等于当前具备可用产能。规划侧应把送测、编译器适配、算子覆盖、端云方案验证和批量供货拆开设置准入门槛，并从2027年初样片测试开始预留验证窗口；采购测算则应按有效Token产出和单位Token电耗比较，而不能把厂商口径的能效比直接转换为现网收益。</p><h3>5-1-2 DF1000完成百卡闭环，国产近存计算由芯片验证进入系统工程验证</h3><p><strong>结论先行：</strong>东方算芯DF1000的价值不只是实现一种新架构，而是用24个月完成从3D近存计算芯片、全栈软件适配到百卡级训练集群部署的闭环。东方算芯于10月27日披露，DF1000自2024年启动研发，历时24个月完成上述闭环，并已稳定运行多个大模型训练任务。这一进展使国产近存计算不再停留在单芯片演示，而是进入可以观察集群调度、故障恢复和模型任务完成效率的工程阶段。</p><p>从训练系统角度看，百卡规模是架构能否形成有效算力的第一道检验。芯片必须与内存、互联、集合通信、编译器及算子库共同工作，任何一层失配都会降低实际吞吐。DF1000目前已经证明百卡级系统可以运行大模型训练任务，但素材没有披露单卡FP16或FP8算力、显存容量与带宽、整机功耗、训练吞吐和单位Token成本，因此不能仅凭“3D近存计算”判断其综合性能。</p><p>运营商现阶段应把DF1000列入国产训练集群比选清单，但比选任务应设置实际模型、有效训练吞吐、故障恢复时间、迁移成本和单位Token成本等联合指标。千卡级交付时的通信拥塞、散热和故障域管理仍需另行验证；在这些数据披露前，百卡闭环可以证明路线具备工程可行性，不能直接证明规模采购的经济性。</p><h3>5-1-3 Vera Rubin规格调整暴露系统瓶颈，内存带宽与网络能力必须联动核算</h3><p><strong>结论先行：</strong>英伟达Vera Rubin最新文档调整表明，单看加速器标称算力已不足以判断集群效率。10月26日披露的对比显示，Vera Rubin超级芯片的HBM4 GPU内存带宽由此前44TB/s调整为38.5TB/s，NVLink带宽亦有调整，网络带宽则有所提升。内存带宽下调与网络带宽提升同时发生，说明系统设计正在重新分配数据传输路径：部分通信负载向网络侧迁移，但计算节点内部的模型加载、内存访问和同步效率仍直接决定任务完成时间。</p><p>英伟达与Meta于10月27日宣布扩大Vera Rubin AI算力集群和Vera CPU部署，并采用Spectrum-X以太网及BlueField-4 DPU。该组合将CPU、加速器、DPU和网络纳入同一系统范围，说明新一代集群的主要约束不再只是芯片数量。Spectrum-X承担以太网扩展，BlueField-4参与数据处理与网络控制，Vera CPU和Vera Rubin共同构成计算平台；如果其中任何环节利用率不足，标称网络带宽也难转化为训练或推理的有效吞吐。</p><p>运营商采购因此需要按实际业务模型重算瓶颈。模型加载和权重访问密集的任务应优先核对内存带宽与本地缓存；集合通信和跨节点任务应同步核对NVLink及网络扩展能力；推理任务还应加入并发、批量、时延和单位Token成本。规格发生调整时，应采用最新交付文档重算容量，不能继续沿用早期标称参数造成网络、供电和散热配置偏差。</p><h3>5-1-4 RISC-V向智算中心延伸，生态成熟度将决定芯片参数能否转化为集群产出</h3><p><strong>结论先行：</strong>RISC-V正在由嵌入式市场向智算中心高价值场景扩展，但本周亮相产品仍处于生态导入早期。10月18日至20日举行的RISC-V中国峰会上，中兴微砺睿微首次展示面向智算中心的高性能RISC-V CPU“珠峰200”，进迭时空发布符合RISC-V服务器级规范的V100芯片，阿里达摩院发布车规增强E908A。多款芯片集中亮相说明国产指令集生态正在扩大产品供给，但服务器规范完整性、编译器工具链和模型适配能力仍是落地门槛。</p><p>对运营商而言，RISC-V的价值不应只用芯片峰值性能衡量。异构CPU进入智算集群后，还要承担调度、存储管理、网络控制和模型框架适配等任务；若生态迁移导致算子无法编译、驱动不完整或运维工具缺位，硬件层面的开放性可能被额外改造成本抵消。因此，珠峰200、V100和E908A进入采购视野前，应先完成服务器规范符合性、主流框架适配、驱动稳定性和统一管理接口验证，并与成熟CPU平台进行总拥有成本比较。</p>
 </section>
 
 <!-- CONTENT_5_2 -->
 <section>
 <h2>5-2 国际AI芯片厂商产品矩阵（2025-2026年最新）</h2>
-<h3>5-2-1 国际AI芯片产品代际矩阵</h3>
-<table>
-<tr><th>产品</th><th>架构要点</th><th>关键参数</th><th>本周动态</th><th>时间维度</th></tr>
-<tr><td>GB200/GB300 NVL72</td><td>Blackwell双die，72 GPU+36 Grace CPU，铜缆Cable Tray做Scale-up互联</td><td>柜内72卡，铜连接价值量约占GPU价值量4%</td><td>仍为国内云厂商采购主力，GB300交换板用M8级CCL</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td></tr>
-<tr><td>Vera Rubin NVL144</td><td>100%液冷架构，机柜取消风扇，进液温度提升至45℃</td><td>GPU热设计功耗由B300的1400W级维持高位，推理每瓦效能可达Blackwell平台10倍</td><td>10月21日柏林GTC大会确认计划2026年秋季量产</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>Vera Rubin NVL288 / NVL576</td><td>更大NVLink域、正交背板、柜间光互联</td><td>NVL576方案交换芯片用量较72卡方案翻倍</td><td>中信建投10月22日研报列为海外演进主线</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<h3>5-2-2 国产AI芯片全矩阵</h3>
-<table>
-<tr><th>芯片/系统</th><th>关键参数</th><th>本周/近期进展</th><th>时间维度</th></tr>
-<tr><td>昇腾950DT</td><td>FP8算力1 PFLOPS、FP4 2 PFLOPS、144GB自研HBM（HiZQ 2.0）、显存带宽4TB/s、片间互联2TB/s，水平约在H20与B200之间</td><td>DeepSeek计划年底用于预训练，测试推进中</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>昇腾960</td><td>单节点规模由1024卡扩至4096卡，首次采用NPO近封装光学</td><td>960芯片2027年一季度准备就绪；华为计划将960DT大部分产能优先供应DeepSeek</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>昇腾910C / 超节点形态</td><td>910C超节点已部署超1000套，设计上最多可搭载100万颗NPU</td><td>昇腾超节点累计部署已达1000多套（华为2026年9月披露）</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>国产其他路线</td><td>寒武纪思元系列训推一体；昆仑芯超节点；海光DCU；沐曦、摩尔线程、燧原、壁仞；天数智芯</td><td>ModelSphere已实现昇腾/天数智芯/摩尔线程/海光DCU统一混合调度</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-</table>
-<h3>5-2-3 中国市场AI芯片份额拐点</h3>
-<table>
-<tr><th>厂商</th><th>2026H1中国数据中心AI芯片份额</th><th>出货量</th><th>同比变化</th><th>时间维度</th></tr>
-<tr><td>英伟达</td><td>34%</td><td>约67.8万颗</td><td>同比下降44%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>华为昇腾</td><td>28%</td><td>57.2万颗</td><td>接近翻倍</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>差距</td><td>由2025H1约35个百分点收窄至6个百分点</td><td>—</td><td>英伟达高端训练卡对华出口管制为主因，可售H200占其数据中心业务营收不足1%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td></tr>
-</table>
-<div class="data-source">数据来源：IDC 2026年10月中旬统计报告（2026年上半年中国数据中心AI加速器市场）；份额差距为2025H1与2026H1对比。</div>
-<div class="analysis-box">
-<h4>深度分析（<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>）</h4>
-<p>IDC数据把过去一年的追赶浓缩成一个数字：6个百分点。但更值得关注的是追赶的"含金量"发生了变化——2025年昇腾的增量主要来自推理替代，2026年开始向训练渗透。10月19日The Information披露的芯片共研，以及DeepSeek年底启用950DT预训练的计划，意味着国产训练卡的验证场景从"跑通Demo"升级为"跑前沿模型"。短板同样清晰：950DT性能约在H20与B200之间，且据业内调研，Kimi前沿预训练约70%仍放在海外租用的GB200/GB300上，国产卡主要承担后训练。技术追赶的时间表因此被拉到2027年之后。</p>
-</div>
-
+<p>本周国际AI芯片产品的共同变化，是厂商开始强调系统协同而非孤立参数。英伟达与Meta扩大Vera Rubin、Vera CPU、Spectrum-X及BlueField-4的组合部署，说明加速器性能只有进入CPU、内存、DPU和网络协同后，才能转化为模型任务的实际完成效率。由于已定稿素材没有完整披露各型号的FP16或FP8算力、显存容量和功耗，矩阵对缺失项统一标记为“未披露”，避免用旧规格补齐。</p><table><tr><th>厂商</th><th>型号</th><th>FP16或FP8算力</th><th>显存规格</th><th>功耗</th><th>量产时间</th><th>本周动态</th></tr><tr><td>英伟达</td><td>Vera Rubin超级芯片</td><td>未披露</td><td>HBM4；GPU内存带宽38.5TB/s</td><td>未披露</td><td>未披露</td><td>Meta于10月27日宣布扩大Vera Rubin集群与Vera CPU部署，并采用Spectrum-X以太网和BlueField-4 DPU</td></tr><tr><td>英伟达</td><td>GH200</td><td>未披露</td><td>未披露</td><td>未披露</td><td>未披露</td><td>据每日经济新闻10月20日报道，英伟达团队使用8192块GH200在JUPITER超算上完成104量子比特容错计算模拟，并验证物理量子比特需求减少约90%的相关路线</td></tr></table><p><strong>产品矩阵解读：</strong>Vera Rubin本周的确定性变化是内存带宽与网络能力重新配置。10月26日披露的文档对比显示，Vera Rubin超级芯片HBM4 GPU内存带宽由此前44TB/s调整为38.5TB/s，NVLink带宽亦有调整，网络带宽则有所提升。对运营商而言，这意味着不能依据单一互联指标判断系统上限：本地内存带宽更直接影响权重加载和算子执行，网络带宽则影响跨节点数据移动、集合通信和数据预处理。两类瓶颈必须结合模型结构、并行策略与流量分布共同测算。</p><p>Meta扩大部署进一步证明，国际主流路线正由“加速器加网络”升级为完整平台协同。Vera CPU承担通用计算，Vera Rubin承担加速任务，Spectrum-X负责以太网扩展，BlueField-4 DPU处理网络数据路径。运营商建设类似集群时，采购边界应覆盖主机、网络、网卡、驱动、集合通信库和运维平台，并使用同一模型、同一批量和同一网络流量测试有效吞吐、拥塞恢复与故障切换，避免各部件分别达标但组合后效率偏低。</p><p><strong>应用解读：</strong>GH200的8192卡量子计算模拟说明，大规模同构加速器在科研计算中能够承载超大规模并行任务，但该案例是经典超算模拟，不等同于通用生成式AI商业推理，也不能直接外推集群利用率。Vera Rubin则面向更广泛的AI工作负载，但目前仍缺少公开的FP16或FP8算力、显存容量、功耗和量产时间。对运营商而言，现阶段应把Vera Rubin列为新一代平台验证对象，把GH200的超大规模应用视为并行计算能力参照，而不应把两类案例直接转换为采购数量。</p><p>产品替代决策还需要加入软件迁移成本。Vera Rubin进入Meta部署体系意味着软件栈、集群调度和互连生态将同步成熟，而国产或RISC-V平台即使具备单卡指标，也需要补齐编译器、算子库、故障诊断和统一运维接口。建议采购比选至少设置3类任务：长上下文模型加载与推理、分布式训练通信、常规高并发在线服务；每类任务同时记录有效吞吐、首Token时延、任务完成时间、故障恢复和单位Token成本。只有在这些指标形成连续任务数据，才能判断产品矩阵升级是否真正改善集群投资产出。</p>
 </section>
 
 <!-- CONTENT_5_3 -->
 <section>
 <h2>5-3 超节点技术演进</h2>
-<h3>5-3-1 从方案验证到规模化交付：2026年是国产超节点放量元年</h3>
-<p>中信建投10月22日研报指出，超节点通过扩大Scale-up互联域、统一内存编址并提升柜内互联效率，以系统工程能力突破传统八卡服务器在跨节点通信上的瓶颈；行业已由方案验证正式进入规模化交付阶段，<strong>2026年有望成为国产超节点放量元年</strong>。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></p>
-<table>
-<tr><th>厂商</th><th>超节点产品</th><th>关键规格</th><th>交付进展</th><th>时间维度</th></tr>
-<tr><td>华为昇腾</td><td>CM384（Atlas 384）、Atlas 950 SuperPoD液冷超节点、Atlas 850E风冷超节点、Atlas 960</td><td>CM384卡数为GB200 NVL72的5.3倍、算力性能1.7倍；960单节点1024→4096卡，首用NPO近封装光学</td><td>CM384累计商用超750套（2026 WAIC披露）；昇腾超节点累计部署1000多套；950系列2026年9月上市，960风冷2027Q2、液冷2027Q3</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>中科曙光</td><td>ScaleX640、曙光8000（登峰）十万卡AI超集群</td><td>ScaleX640以640张GPU堆叠实现超600 PFLOPS算力；曙光8000为国内首个全国产十万卡集群，国产芯片异构架构</td><td>曙光8000于2026年建成投用，接入国家超算互联网并落地郑州核心节点，上线首周满载；10月WEC2026真机亮相</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>阿里巴巴</td><td>磐久AL128 / AL64 / AL144，真武M890</td><td>AL128单柜128个AI加速器，M890显存144GB、片间互联800GB/s，配ICN Switch 1.0，单柜带宽达PB/s级</td><td>M890超节点已具备支撑2万亿参数模型推理，三季度规模化上架阿里云；8月M890实例在乌兰察布上线支持在线采购</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>百度昆仑芯</td><td>天池256、天池512</td><td>天池256已上市，天池512计划下半年推出</td><td>昆仑芯超节点已率先实现量产交付</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>中兴通讯 / 新华三 / 超聚变</td><td>中兴OEX、新华三S80000、超聚变整机柜超节点</td><td>OEX主打三零线缆开放架构、支持壁仞与沐曦GPU混插；S80000单机柜最高128卡、覆盖32-1024卡、PUE低于1.04；超聚变单柜128卡、第五代原生液冷、PUE约1.06</td><td>OEX于2026年7月发布，S80000于2026年5月发布</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td></tr>
-<tr><td>浪潮信息 / 开源开放路线</td><td>元脑SD200；ODCC ETH-X（信通院与腾讯牵头）；字节大禹2.0</td><td>ETH-X采用RoCE开放方案，单超节点64卡含16计算托盘+8交换托盘，柜内GPU互联带宽204.8Tbps，交换侧合计409.6Tbps</td><td>浪潮2026年10月审议通过90亿元定增预案，其中26亿元投向新一代AI基础设施含超节点整机柜；中国移动2026-2027超节点集采涉及6208张AI加速卡、约776套计算节点</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>市场空间测算与产业链再分配（<span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span>）</h4>
-<p>中金测算，若2026、2027年国产AI芯片中以超节点形式出货的比例分别为12%、25%，按64卡单柜、单价1100万元并假设年降计算，对应国产超节点机柜市场规模约为759亿元与2256亿元。超节点重塑的不只是交付形态，更是整条硬件链的价值分配：Scale-up模式使交换芯片与GPU的配比从H100集群时代的约5%提升至约25%，中兴微自研"凌云"交换芯片交换容量达51.2Tbps，盛科通信2026年9月披露48亿元定增预案、其中31.81亿元投向交换芯片；铜缆、光模块、PCB背板、液冷与供电环节同步扩容。</p>
-</div>
-<div class="analysis-box">
-<h4>互联标准：多路线并行的长期博弈（<span class="time-dim" style="background:#888;color:#fff">持续</span>）</h4>
-<p>本周展会与研报同时暴露出标准层面的分歧：英伟达坚持NVLink私有域加柜间光互联，华为采用超节点分布式并行组件加铜光混合互联，而ETH-X等ODCC开放方案选择RoCE以太路线。开放式路线的价值在于打破单一厂商绑定，但代价是互联效率与调优难度。产业影响是：互联标准尚未收敛时，具备"芯片+互联协议+整机"垂直整合能力的厂商（华为、阿里）短期占优，而纯开放方案的机会窗口取决于头部客户是否愿意为生态兼容支付溢价。</p>
-</div>
-
+<p><strong>结论先行：</strong>超节点正在把计算、内存、互联和供电从服务器边界推向整机柜边界，其收益是降低大规模训练中的通信与内存访问开销，但同时放大故障域、散热和运维责任。东方算芯DF1000已经完成百卡级训练集群部署，证明百卡协同可以形成训练系统；全球计算联盟10月26日发布的《HVDC 800V转50V 30KW PDB设计规范》以及曙光数创MW级相变浸没液冷整机柜C8000 V3.0，则表明兆瓦级整机柜的基础设施接口开始标准化。</p><p>当前素材没有披露Vera Rubin、DF1000超节点的具体Scale-up卡数、Scale-up互联带宽及完整机柜功率密度，因此不能补写未经确认的参数。可确认的对比是：Vera Rubin超级芯片HBM4 GPU内存带宽由此前44TB/s调整为38.5TB/s，网络带宽有所提升；DF1000完成了百卡级部署，但百卡集群并不等同于单一Scale-up域；基础设施侧已经出现30KW PDB规范和MW级液冷整机柜方案。由此看，超节点的竞争重点正在从“能否连接更多卡”转向“能否在目标卡数下维持可预测的有效吞吐与稳定运行”。</p><p>超节点扩大故障域的主要机制是把更多加速器、内存、交换芯片、网卡、供电路径和冷却回路纳入统一调度与健康检查范围。单卡故障可能通过检查点恢复从局部事件转化为跨节点任务回退；互联拥塞可能使大量计算单元等待数据；供配电或冷却单元异常也可能同时影响一组节点。运营商如果仍沿用传统机柜级监控和逐卡排障方式，会出现告警数量增加、根因定位时间延长以及维护窗口不足的问题。</p><p>因此，Scale-up规模扩大必须与故障域设计同步。集群管理平台应能识别加速器、内存、互联、供电和液冷回路之间的依赖关系，并把健康检查粒度与任务调度策略联动；训练任务需要验证节点退出后的检查点恢复效率，推理池需要验证单节点故障时服务迁移、连接保持和批量重排。互联准入则应同时记录丢包、拥塞控制、有效吞吐和故障恢复，不能以峰值带宽作为唯一验收指标。</p><p>对运营商的具体建议是把超节点作为独立基础设施单元进行规划，而不是若干服务器的简单聚合。机房设计需要同步校核30KW PDB接口、供电冗余、管路布置和承重条件；采购验收需要把DF1000百卡系统、Vera Rubin集群和CPO验证环境纳入统一任务集。若后续候选系统公开Scale-up卡数、互联带宽与机柜功率密度，再以这些数据重算故障域规模和扩容边界，避免在硬件参数尚不完整时提前锁定高密度机房方案。</p>
 </section>
 
 <!-- CONTENT_5_4 -->
 <section>
 <h2>5-4 数据中心冷却技术：液冷 vs 风冷</h2>
-<h3>5-4-1 三类液冷技术路线对比</h3>
-<table>
-<tr><th>技术路线</th><th>原理与特点</th><th>PUE水平</th><th>市场占比</th><th>时间维度</th></tr>
-<tr><td>传统风冷</td><td>空气换热，改造成本最低，适配低密度机柜</td><td>约1.3-1.5</td><td>存量为主</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td></tr>
-<tr><td>冷板式液冷</td><td>金属导热板精准冷却发热部件，兼容性强、改造成本低，适配中高密度机柜</td><td>约1.04-1.25</td><td>占主流60%以上</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>浸没式液冷</td><td>设备完全浸入冷却液，PUE可低至1.03，需专用密封设计与高成本氟化液，适配超算与超高热密度场景</td><td>低至1.03</td><td>增速35%以上，2026年同比增速超110%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">年变化</span></td></tr>
-<tr><td>喷淋式液冷</td><td>定向喷射蒸发吸热，技术成熟度低、泄漏风险显著</td><td>—</td><td>仅边缘计算等特定场景试点</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-</table>
-<div class="data-source">数据来源：赛迪市场情报2026年10月测算，冷板式占比与浸没式增速为2026年市场数据；能效对比参考行业测算——全浸没式计算一度电的任务额外需0.15度电散热，传统风冷需额外0.3-0.5度电。</div>
-<h3>5-4-2 本周液冷关键动态</h3>
-<table>
-<tr><th>动态</th><th>关键数据</th><th>时间维度</th></tr>
-<tr><td>英伟达Vera Rubin NVL144全液冷标配</td><td>机柜取消风扇、进液温度提至45℃；GPU热设计功耗从A100的400W升至B300的1400W，冷板流道需由毫米级收到200-800微米微通道</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>国内首部冷板式液冷国家标准落地实施</td><td>为液冷系统设计、部署、运维提供统一依据，产业从技术试点迈入标准化规模化阶段</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>国内首台适配800V液冷架构AI服务器下线</td><td>单机柜散热能力支持140kW高密度算力，预计四季度启动批量交付</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>液冷供应链订单与产能</td><td>兴瑞科技三季度液冷高精密快接头营收同比增长221%；曙光数创前三季度液冷中标量同比增长超120%；中国制冷学会数据显示2026年三季度液冷行业订单交付率达94%、头部厂商产能利用率超95%</td><td><span class="time-dim" style="background:#fce4ec;color:#c62828">季变化</span></td></tr>
-<tr><td>市场规模</td><td>中金测算2026年全球智算液冷市场规模达1147亿元、同比增长273%，国内液冷数据中心市场232.5亿元，2028年有望突破470亿元；集邦咨询称2026年国内新建规模化智算中心液冷配置率已突破90%，全行业AI服务器液冷渗透率达53%</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>国产整机PUE实测</td><td>新华三S80000 PUE低于1.04；超聚变整机柜超节点PUE约1.06；联想第六代问天海神液冷将数据中心PUE降至1.04</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：液冷从选配变成必配（<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>）</h4>
-<p>本周液冷领域最具象征意义的事件，是国内首部冷板式液冷国家标准正式落地实施，以及首台适配800V高压直流液冷架构的AI服务器下线。技术驱动力来自单机柜功耗的刚性抬升：当Rubin级柜热设计功耗达到130-140kW、国产超节点机柜迈向128卡规模，传统冷板的毫米级流道在传热上已到物理极限，微通道冷板成为必选项，行业由此从"是否液冷"的路线之争，转向"液冷供应链能否跟上放量节奏"的产能之争。行业仍面临周期错位——需求预期先行但收入确认滞后，2026年市场周期与头部厂商业绩兑现之间存在时滞。</p>
-</div>
-
+<p><strong>结论先行：</strong>液冷已经从配套设备上升为兆瓦级智算中心的基础设施主线，但本周素材没有公开C8000 V3.0的单柜功率上限、PUE区间、初投资金额和改造周期，运营商不能依据厂商案例直接形成采购定额。曙光数创10月21日展示MW级相变浸没液冷整机柜及基础设施整体方案C8000 V3.0，并入选GMVPS技术创新类案例；该方案的工程方向是把散热、供配电、空间布局和单位Token电费统一优化。</p><p>液冷与风冷的本质差异在换热能力和设施耦合方式。风冷依靠空气带走热量，受温差、换热面积和气流组织约束；当单GPU芯片功耗超过1000W时，素材已判断传统风冷难以适配。这里的1000W是单GPU散热压力线，不是所有机柜必须采用液冷的统一分界，因为相同芯片密度下，不同服务器风道、机柜结构和辅助冷却设计会形成不同结果。兆瓦级整机柜则已经超出传统风冷机房围绕单机散热再汇总到房间制冷的设计逻辑。</p><p>可执行的判断线应采用“双阈值”：当设备侧出现超过1000W的GPU，并且集群部署正在向MW级机柜演进时，应将液冷纳入强制方案比选；当机柜密度仍处于风冷可覆盖区间时，可保留风冷与液冷的经济性比较。该方法避免用缺乏依据的固定单柜功率作伪精确判断，同时把必须采用液冷和必须采用浸没式液冷区分开来。冷板式、相变浸没式和基础设施整体方案仍需按设备形态及维护条件分别评估。</p><p>投资测算不能只比较液冷设备报价。C8000 V3.0强调散热、供配电和空间协同，意味着初投资应覆盖服务器适配、冷板或浸没容器、CDU或相变回路、二次侧管路、供配电改造、承重和施工；改造周期则应根据机房现状、停机窗口、管路施工和供电切换分别测算。素材没有给出统一金额与周期，规划侧应使用本地机房基线逐项测算，避免引用不存在的行业通用工期。</p><p>运维复杂度同样不能被PUE掩盖。浸没式方案需要建立介质管理、密封、泄漏监测、材料兼容和巡检流程，冷板方案需要管理冷板结露风险、泵组、换热器、流量与漏液监测。运营商应将PUE、单位Token电耗、故障隔离时间、介质维护和备件策略纳入同一评价表。10月26日发布的30KW PDB规范可作为供电预研接口，C8000 V3.0可作为工程样本，但两者都不能替代本地负载测试。</p>
 </section>
 
 <!-- CONTENT_5_5 -->
 <section>
 <h2>5-5 推理场景深度分析与芯片选择</h2>
-<h3>5-5-1 五类推理场景与芯片选型</h3>
-<table>
-<tr><th>推理场景</th><th>核心负载特征</th><th>推荐芯片/方案</th><th>关键选型指标</th><th>时间维度</th></tr>
-<tr><td>云端大模型推理</td><td>超大规模并发、长上下文、吞吐优先</td><td>训推一体大集群（昇腾Atlas 950 SuperPoD、阿里磐久AL128、昆仑芯天池256）</td><td>单位Token成本、集群有效吞吐、PD分离与AF分离调度能力</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>AI Agent应用</td><td>多轮调用、上下文重算密集、延迟敏感</td><td>高带宽显存+PD分离架构；国产可用昇腾950DT配DeepInfer推理框架</td><td>首Token延迟、KV Cache命中效率、并发会话数</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>多模态/文生视频</td><td>图像视频解码算力密集、显存占用大</td><td>高容量显存卡+多卡并行；国产可考虑昇腾与寒武纪思元系列</td><td>显存容量与带宽、单位任务能耗</td><td><span class="time-dim" style="background:#fff9c4;color:#f57f17">月变化</span></td></tr>
-<tr><td>边缘推理</td><td>低功耗、低成本、高可靠、数据就近处理</td><td>端侧/边缘小算力卡与ASIC推理芯片</td><td>整机功耗、部署成本、数据合规</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-<tr><td>垂直行业/AI4S</td><td>负载稳定、可预测，重视合规与国产化</td><td>国产训推一体卡（昇腾910B/910C、海光DCU）+行业调度平台</td><td>生态兼容性、信创适配、国产化率、TCO</td><td><span class="time-dim" style="background:#888;color:#fff">持续</span></td></tr>
-</table>
-<h3>5-5-2 本周推理侧技术突破</h3>
-<table>
-<tr><th>技术/事件</th><th>实测效果</th><th>主体</th><th>时间维度</th></tr>
-<tr><td>DeepInfer推理框架开源</td><td>集成高性能算子与深度优化推理引擎，支撑V4.1 Flash大规模服务，同时兼容英伟达与华为昇腾双平台，并同步开源deepseek-recipe与官方API处理逻辑对齐</td><td>DeepSeek（10月20日）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>集群调度优化</td><td>首Token延迟降低32.4%</td><td>是石科技（10月20日）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>PD分离+FP4专家并行</td><td>多项技术叠加，板卡吞吐最高可提升约20倍；DeepSeek双路径KV Cache加载让数据读取与GPU计算并行，在线智能体运行效率提升1.96倍</td><td>行业实践（10月18日全国高性能计算学术大会）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-<tr><td>结构性错配化解路径</td><td>商汤大装置提出以PD分离、AF分离把闲置算力重新应用于推理新需求，认为国产算力正从"能用"走向"好用"</td><td>商汤（10月20-22日大会）</td><td><span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></td></tr>
-</table>
-<div class="analysis-box">
-<h4>深度分析：推理选型逻辑已经改写（<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span>）</h4>
-<p>本周多场会议传递出同一个判断：寒暄已经从"机器有多少PFLOPS"、"能抢到多少张卡"，升级为"能调到多少Token、生成一个Token的成本是多少"。需求端，中国每天平均Token消耗从2024年的1000亿跃升到2026年8月的500万亿，智能体单次任务Token消耗可达普通对话的几十倍甚至上百倍。供给端，软件优化正在部分替代硬件堆叠——PD分离、FP4精度下的专家并行、双路径KV Cache加载等技术叠加可带来最高约20倍的板卡吞吐提升。这对选型结论有两点含义：一是短期内"买更多卡"的经济性下降，调度与软件栈能力成为硬指标；二是ASIC推理芯片的窗口临近，一旦大模型架构收敛，定制化推理芯片在同功耗下的性能优势可能达10-20倍，采购策略需要预留这一技术路线切换的余量。</p>
-</div>
-
+<p><strong>结论先行：</strong>运营商自建推理池不应押注单一芯片，而应按长上下文、高并发和低时延分别设置硬件与软件验证条件。芯片选择的核心指标应从峰值算力切换为单位Token成本、有效吞吐、首Token时延和持续时延；同等硬件在不同并行策略与流量模型下可能产生完全不同的经济结果。</p><p>长上下文场景首先受内存带宽和容量约束。Vera Rubin超级芯片HBM4 GPU内存带宽由此前44TB/s调整为38.5TB/s，说明长上下文相关容量和带宽规划必须采用最新交付规格，并同时验证模型权重加载、KV Cache占用、批量大小与并发请求之间的平衡。国产路线中，DF1000已经完成百卡级训练集群部署，但素材未披露其显存容量、带宽和长上下文吞吐，因此不能把训练集群闭环等同于推理优势。运营商应选取自身最长业务上下文做端到端测试，记录首Token时延、持续输出速度、并发容量和单位Token电耗，再决定是否采用通用GPU或专用存算一体方案。</p><p>高并发场景更看重单位设备可承载的有效请求和能效。微纳核芯SRAM存算一体架构相较冯·诺伊曼架构提升4-6倍算力密度、5-10倍能效比，第一代LP-CIM与PCIe-CIM系列共3颗芯片已投片，预计2027年初送测。其架构方向适合持续化推理，但当前不能计入现网可用产能。运营商可在2027年初送测窗口安排样片验证，重点测试批量推理下的吞吐、编译映射、算子覆盖、持续运行和单位Token成本；若实测不能覆盖现网模型，则保留通用GPU作为生产兜底。</p><p>低时延场景不能脱离网络与调度独立选卡。Meta扩大Vera Rubin集群、Vera CPU、Spectrum-X以太网和BlueField-4 DPU部署，说明端到端时延由计算、内存访问、数据路径和调度共同决定。KDDI与博通10月27日启动CPO验证，采用Tomahawk 6交换芯片和Davisson光引擎，测试功耗、丢包、拥塞控制和有效吞吐量。低时延推理池应将前处理、跨节点通信、批量排队和后处理同时纳入压测，尤其要验证拥塞状态下的尾时延，不能以平均时延掩盖局部拥塞。</p><p>单位Token成本需要统一口径。OpenAI于10月28日称，GPT-6.1 Terra标准API价格较GPT-5.6 Terra和GPT-6.1 Sol低50%；该比例可以用于判断模型服务采购的调用成本变化，但属于厂商API价格口径，不能直接转换为自建集群的电费节省。自建池应按“折旧加运维加电力与冷却除以有效Token产出”计算完整成本，并以真实业务质量、并发和时延约束为前提。</p><p>落地建议是建立分层推理池：成熟通用GPU承担主流模型和兜底流量，存算一体样片用于持续化、高并发任务的对照验证，网络与DPU方案负责跨节点数据路径。每层分别验收单位Token成本、有效吞吐、首Token时延、持续时延和故障恢复。若样片在2027年初送测后达到业务门槛，再进入小规模生产部署；若编译适配、吞吐或稳定性不达标，则不因4-6倍算力密度和5-10倍能效比的厂商口径改变生产架构。</p>
 </section>
 
 <!-- CONTENT_5_6 -->
 <section>
 <h2>5-6 本周技术深度分析专题</h2>
-<div class="deep-event">
-<div class="deep-event-title">专题：模型公司开始反向定义芯片——DeepSeek参与昇腾设计的产业含义</div>
-<p>本周最具技术含量的事件，是国产算力生态中第一次出现"模型—芯片联合定义"的闭环。三条线索在10月17日至20日之间密集落地：</p>
-<p><strong>其一，10月17日</strong>，DeepSeek-V4.1-Flash-1017正式上线，网页、App、API同步切换，权重以MIT协议开源、价格不变。在编程与自动化等11项测试中拿下4项第一，Terminal-Bench得分从31.2提升至42.3。<span class="time-dim" style="background:#c8e6c9;color:#1b5e20">周变化（本周）</span></p>
-<p><strong>其二，10月19日</strong>，据The Information报道，华为已派工程师分阶段进驻DeepSeek办公地点，把大模型训练中的任务分配方式、处理器间数据传输等底层需求直接纳入计划于明年年初推出的芯片设计。DeepSeek计划最早于2026年底开始使用昇腾950DT进行预训练，相关测试仍在推进；到2027年，华为计划将下一代960DT芯片的大部分产能优先供应给DeepSeek，用于训练和推理。</p>
-<p><strong>其三，10月20日</strong>，DeepSeek全面开源内部推理框架DeepInfer，该框架支撑了V4.1 Flash的大规模服务，并同时兼容英伟达与华为昇腾双平台，配套开源deepseek-recipe编解码组件与官方API处理逻辑完整对齐。此前9月底，DeepSeek已将TileLang编译工具及配套计算、通信组件适配到昇腾平台，训练中每一个TileLang算子均已在昇腾上完成高性能实现。</p>
-<div class="analysis-box">
-<h4>技术含义</h4>
-<p>这一变化的本质，是软硬件协同迭代的主导权发生转移。过去二十年是"芯片厂商定义硬件、模型厂商被动适配"，CUDA的护城河正建立在这一顺序上；现在DeepSeek从模型架构和训练需求出发反向影响下一代昇腾设计，等于在CUDA体系之外，开辟了一条以模型需求牵引芯片定义的路径。配套的TileLang、DeepGEMM、FlashMLA、DeepEP等组件一一对应移植并开源，进一步降低了从CUDA生态迁移到昇腾的代码改写成本——迁移壁垒的松动比单颗芯片性能提升更具决定性。</p>
-</div>
-<div class="analysis-box">
-<h4>对竞争格局的含义与验证节点</h4>
-<p>正面看，这是国产算力从"推理够用"迈向"训练可用"的关键一跳，若DeepSeek能在昇腾上训出前沿模型，国内前沿训练对英伟达的依赖将从"必须"变成"可选"，IDC数据显示的两家6个百分点份额差距有望继续收敛。风险同样明确：难点不在单卡性能，而在万卡规模下的通信与稳定性，DeepSeek自己也将其称为"最大一场豪赌"。公开信息显示，年底昇腾预训练目前仍是计划方向，具体实施、上规模落地与效果评估都要等到2027年，全面交付并看到整体效果则可能要到2028年。产能约束下的外溢效应也需关注——头部客户锁单会进一步挤占昇腾有限产能，二线模型厂与云厂商的推理拿卡难度上升，需求可能外溢到寒武纪、沐曦、壁仞等其他国产芯片。</p>
-</div>
-<div class="box purple">
-<h4>本周技术趋势四点小结</h4>
-<ul>
-<li><strong>模型侧：</strong>国产开源模型进入"同代竞技"节奏，DeepSeek-V4.1-Flash-1017（10.17）与MiniMax M3.1 Flash相继发布，GLM-5.5（传参数2.5万亿-3.5万亿）、Qwen 4.0、Kimi K3.1预计在10月下旬至11月上旬密集落地，参数规模持续推高对超节点与高带宽互联的刚性需求。</li>
-<li><strong>芯片侧：</strong>IDC数据显示2026年上半年昇腾份额升至28%、与英伟达差距收窄至6个百分点，芯片共研标志训练场景开始破局。</li>
-<li><strong>系统侧：</strong>超节点由方案验证转入规模交付，2026年被机构定义为国产超节点放量元年，Scale-up互联、交换芯片、液冷与供电成为确定性增量环节。</li>
-<li><strong>能效侧：</strong>液冷从选配变为必配，首部冷板式液冷国标落地、800V液冷架构服务器下线，智算基础设施的竞争指标正从峰值算力切换为每瓦词元产出。</li>
-</ul>
-</div>
-
+<div class="deep-event"><div class="deep-event-title">专题：CPO验证从样机展示转向有效吞吐考核，光互联路线尚不能直接替换</div><h4>技术要点</h4><p>KDDI与博通于10月27日启动CPO交换机验证，KDDI将在AI数据中心测试环境中引入搭载博通Tomahawk 6以太网交换芯片和Davisson光引擎模块的CPO交换机，并在10月27日至28日展示验证环境。验证目标不是单独确认光引擎能否点亮，而是同时考察功耗下降、丢包、拥塞控制和有效吞吐量，并模拟分布式训练与推理负载。CPO的技术机制是把光引擎放置在处理数据的交换芯片附近，缩短电信号传输距离，以降低AI数据中心内GPU间网络的光电转换功耗。其工程难点由单一器件性能转向光引擎、交换芯片、先进封装、热管理、驱动软件和故障维护的联合优化。</p><h4>关键数据</h4><p>本周可确认的关键组合为Tomahawk 6、Davisson、CPO交换机和KDDI AI数据中心测试环境，验证周期为10月27日至28日，核心指标包括功耗下降、丢包、拥塞控制与有效吞吐量。素材没有披露交换端口速率、光互连带宽、整机功耗、丢包率、拥塞恢复时间或训练与推理吞吐结果，因此不能把CPO的功耗优势换算为具体百分比。另据电子工程专辑10月20日报道，CPO在2026年下半年进入小量交付阶段，但硅光设计、先进封装与热管理仍是约束；该信息只能用于判断产业化阶段，不能替代运营商实测数据。</p><h4>产业影响</h4><p>CPO首先改变的是超节点的功率分配和网络工程边界。传统可插拔光模块需要在交换芯片与外部光模块之间处理较长电连接，CPO把光引擎靠近交换芯片后，目标是缩短高速电链路并降低网络功耗。在机柜功率密度上升的背景下，这一变化会影响交换区供电、散热和维护设计，也会影响可插拔光模块、连接器与先进封装之间的价值分配。因此，运营商不能只把CPO视为交换机换代，而应把它纳入整机柜供电、液冷和备件体系联合规划。</p><p>产业影响还体现在采购验收权责变化。传统光模块可以按单只器件测试，CPO则把风险集中到交换芯片、光引擎、封装、热管理和控制软件的共同失效。验证环境若只使用理想流量，无法暴露拥塞控制、丢包恢复和高负载下的有效吞吐问题；若只测训练而忽略推理，持续在线流量、尾时延和连接稳定性可能无法反映。因此，KDDI在10月27日至28日同时模拟分布式训练和推理负载的测试框架值得运营商借鉴，将其转化为自身准入测试的最低要求。</p><p>对国产光通信产业链而言，小量交付并不等于规模成熟。电子工程专辑10月20日材料指出，CPO瓶颈涉及硅光设计、先进封装和热管理，且先进封装产能还会与AI芯片和高性能计算竞争。运营商若在没有稳定交付和可维护性的情况下大规模替换可插拔方案，可能承担备件不足、现场热故障定位困难和单一供应源锁定等风险。可插拔与CPO更可能长期并存，路线选择应依据机柜密度、互联距离、有效吞吐和全生命周期成本，而不是依据技术标签。</p><p>落地预判：</p><p>若KDDI验证同时证明CPO在目标训练与推理流量下降低功耗，并且有效吞吐量、丢包和拥塞控制满足运营商门槛，运营商可在2026年下半年开展CPO与可插拔方案的同环境对比，2027年再依据实测结果扩展到高密度机柜。若验证只证明低负载功耗下降，却在持续训练、推理并发或故障切换中出现性能回退，则CPO应保留为预研和小规模验证路线，不应替代现网可插拔方案。规划部门当前应建立3类门槛：持续负载有效吞吐不低于现网基线、拥塞恢复不恶化任务完成时间、供电与散热改造后总拥有成本下降；任何单一功耗样本都不足以触发规模替换。</p></div>
 </section>
 
 <!-- NEWS_TABLE -->
@@ -321,59 +244,53 @@ tr:hover td { background:#e8f4fd; }
 <div class="news-table">
 <table>
 <tr><th>日期</th><th>事件</th><th>涉及主体</th><th>重要性</th></tr>
-<tr><td>10-22</td><td>中信建投研报定调2026年为国产超节点放量元年，超节点成为国产算力下一个主战场</td><td>中信建投 / 国产算力产业链</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>10-21</td><td>英伟达公布三年扩产：封装基板产能2.5倍，CPO光引擎2027年中15倍</td><td>英伟达 / 供应链</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-20</td><td>DeepInfer开源，兼容英伟达与华为昇腾双平台，同步开源deepseek-recipe</td><td>DeepSeek</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>10-20</td><td>是石科技集群调度优化使首Token延迟降低32.4%</td><td>是石科技</td><td style="color:#f59e0b">★★★</td></tr>
-<tr><td>10-20</td><td>国内首部冷板式液冷国家标准落地实施，产业进入标准化规模化阶段</td><td>中国数据中心产业联盟 / 行业</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-20</td><td>首台适配800V液冷架构AI服务器下线，单柜支持140kW，四季度批量交付</td><td>国内头部AI服务器厂商</td><td style="color:#f59e0b">★★★</td></tr>
-<tr><td>10-19</td><td>DeepSeek参与华为昇腾芯片设计，年底拟用昇腾950DT开展预训练</td><td>DeepSeek / 华为</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>10-18</td><td>信通院预测2026年推理算力占比达70.5%，日均Token消耗升至500万亿</td><td>中国信通院</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-17</td><td>DeepSeek-V4.1-Flash-1017上线，MIT协议开源，价格不变</td><td>DeepSeek</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-16</td><td>信通院发布Token服务智算基础设施报告，地方试点转向Token服务采购</td><td>中国信通院产业与规划研究所</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-16</td><td>范式智能开源ModelSphere部署平台，极限吞吐效率较基准提升约285%</td><td>范式智能 / 睿思智联</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>10-28</td><td>微纳核芯3款3D-CIM推理芯片全部投片，预计2027年初送测</td><td>微纳核芯</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-28</td><td>Meta扩大Vera Rubin集群、Vera CPU、Spectrum-X与BlueField-4部署</td><td>英伟达与Meta</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-28</td><td>GPT-6.1 Terra标准API价格较两款对比模型低50%</td><td>OpenAI</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-27</td><td>KDDI与博通以Tomahawk 6和Davisson启动CPO验证</td><td>KDDI与博通</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-27</td><td>DF1000用24个月完成芯片、软件及百卡训练集群闭环</td><td>东方算芯</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-27</td><td>算力中心储能选型国标覆盖7种储能与8个应用案例</td><td>GB/Z 273.1—2026</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-26</td><td>GCC发布9项团体标准并启动2项重点项目</td><td>全球计算联盟</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-26</td><td>Vera Rubin HBM4带宽由44TB/s调整为38.5TB/s</td><td>英伟达</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>10-21</td><td>MW级相变浸没液冷整机柜C8000 V3.0入选GMVPS案例</td><td>曙光数创</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>10-20</td><td>珠峰200与V100等RISC-V服务器及智算芯片亮相峰会</td><td>RISC-V中国峰会参展企业</td><td style="color:#f59e0b">★★★</td></tr>
 </table>
 </div>
 </section>
 
 <!-- SOURCES -->
-<section>
-<h2>📚 数据来源</h2>
-<ul>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">IDC，2026年10月中旬统计报告：2026年上半年中国数据中心AI加速器市场，英伟达份额34%（约67.8万颗，同比-44%）、华为昇腾28%（57.2万颗）</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">The Information，2026-10-19：DeepSeek参与华为下一代AI芯片设计，计划年底用昇腾950DT预训练</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">中国信通院产业与规划研究所，2026-10-16：《面向词元（Token）服务的智算基础设施发展研究报告（2026年）》</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">中信建投研报，2026-10-22：《国产算力的下一个主战场》，2026年为国产超节点放量元年</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">中信建投研报，2026-10-22：《2026年成中国国产超节点放量元年》</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">新浪科技/AI透视镜，2026-10-20：DeepSeek开源DeepInfer推理框架，兼容英伟达与华为昇腾</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">新浪财经，2026-10-18：DeepSeek-V4.1-Flash-1017上线，MIT协议开源</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">澎湃新闻，2026-10-18：2026全国高性能计算学术大会，推理算力占比2026年将达70.5%</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">新浪财经，2026-10-21：商汤杨惠谦谈国产算力闲置属结构性失衡，PD分离/AF分离化解路径</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">赛迪市场情报，2026年10月：液冷数据中心市场2025年159.8亿元、2026年232.5亿元、2028年470.4亿元</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">中金公司研报，2026-10-14：2026年全球智算液冷市场规模1147亿元，同比增长273%</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">集邦咨询，2026-10-13：2026年国内AI服务器液冷渗透率达53%</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">慧博智能投研深度报告，2026年10月：国产超节点市场测算与产业链价值分配</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">明远投研，2026-10-19：超节点三种形态、华为节点时间表与放量节奏</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">腾讯新闻，2026-10-22：英伟达柏林GTC大会扩产计划（封装基板2.5倍、CPO光引擎15倍）</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">中国基金报，2026-10-15：英伟达Vera Rubin平台MGX生态合作伙伴名单</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">凤凰网，2026年10月：WEC2026世界算力博览会，中科曙光曙光8000真机、联想海神液冷亮相</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">观点新媒体，2026-10-16：范式智能与睿思智联开源ModelSphere部署平台</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">量子位，2026-10-20：是石科技集群调度使首Token延迟降低32.4%</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">快科技，2026-10-21：智谱GLM-5.5参数规模2.5万亿至3.5万亿，预计月底发布</li>
-<li style="padding:5px 0;font-size:12px;color:#555;border-bottom:1px solid #f0f0f0;">Industry Insider / 财途信号灯，2026-10-22：美国DHS第2026-01号排除与移除令10月20日生效</li>
-</ul>
-</section>
+<div class="section refs-section">
+<h2>数据来源与参考</h2>
+<div class="refs-body">
+<div class="refs-note">按正文引用顺序编号，共 11 条，其中 11 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<ol class="refs-list">
+<li class="ref-item"><span class="ref-org">36氪</span><a class="ref-title" href="https://www.36kr.com/p/4043987462083456" target="_blank" rel="noopener">微纳核芯完成超20亿元融资并推进量产</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-finance">财报</span><p class="ref-desc">微纳核芯3D-CIM架构实现4-6倍算力密度和5-10倍能效比，3颗芯片已投片，预计2027年初送测。</p></li>
+<li class="ref-item"><span class="ref-org">每日经济新闻</span><a class="ref-title" href="https://www.mrjjxw.com/articles/2026-10-27/4620686.html" target="_blank" rel="noopener">英伟达与Meta扩大Muse系列合作</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">Meta扩大Vera Rubin集群和Vera CPU部署；GPT-6.1 Terra标准API价格较两款对比模型低50%。</p></li>
+<li class="ref-item"><span class="ref-org">DOIT</span><a class="ref-title" href="https://www.doit.com.cn/computing/863993615401029.html" target="_blank" rel="noopener">东方算芯以3D近存计算推进百卡训练</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">东方算芯经过24个月完成DF1000芯片、全栈软件及百卡级训练集群部署闭环。</p></li>
+<li class="ref-item"><span class="ref-org">存储在线</span><a class="ref-title" href="https://www.dostor.com/p/101342.html" target="_blank" rel="noopener">DF1000完成百卡级训练集群部署</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">DF1000 3D近存计算芯片已用于百卡训练集群，并实现多个大模型训练任务稳定运行。</p></li>
+<li class="ref-item"><span class="ref-org">界面新闻</span><a class="ref-title" href="https://www.jiemian.com/article/15247003.html" target="_blank" rel="noopener">算力中心储能系统选型国标发布</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">GB/Z 273.1—2026梳理7种储能类型和8个典型应用案例，形成全过程选型框架。</p></li>
+<li class="ref-item"><span class="ref-org">讯石光通讯网</span><a class="ref-title" href="http://www.iccsz.com/site/cn/News/2026/10/27/20261027004439763034.htm" target="_blank" rel="noopener">KDDI与博通启动CPO验证</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">CPO验证采用Tomahawk 6和Davisson，测试功耗、丢包、拥塞控制及有效吞吐量。</p></li>
+<li class="ref-item"><span class="ref-org">新华网</span><a class="ref-title" href="https://www.xinhuanet.com/digital/20261026/51d2a2320b4f4feda3b51a2a240b849f/c.html" target="_blank" rel="noopener">2026全球计算大会在深圳举行</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">大会发布9项标准规范、启动2个项目，GMVPS收录38个案例并累计沉淀250余个案例。</p></li>
+<li class="ref-item"><span class="ref-org">中华网</span><a class="ref-title" href="https://tech.china.com/article/20261026/202610261969147.html" target="_blank" rel="noopener">英伟达调整Rubin HBM与NVLink带宽</a><span class="ref-date">2026-10-26</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">Vera Rubin超级芯片HBM4带宽由44TB/s调整为38.5TB/s，网络带宽有所提升。</p></li>
+<li class="ref-item"><span class="ref-org">界面新闻</span><a class="ref-title" href="https://www.jiemian.com/article/15220888.html" target="_blank" rel="noopener">曙光数创展示兆瓦级浸没液冷方案</a><span class="ref-date">2026-10-22</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">MW级相变浸没液冷整机柜C8000 V3.0入选GMVPS案例，重点优化散热、供配电与单位词元电费。</p></li>
+<li class="ref-item"><span class="ref-org">电子工程专辑</span><a class="ref-title" href="https://www.eet-china.com/mp/a532332.html" target="_blank" rel="noopener">光模块供应紧张与CPO量产进展</a><span class="ref-date">2026-10-20</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">材料显示CPO在2026年下半年进入小量交付阶段，瓶颈涉及硅光设计、先进封装与热管理。</p></li>
+<li class="ref-item"><span class="ref-org">科创板日报</span><a class="ref-title" href="https://m.cls.cn/detail/2510349" target="_blank" rel="noopener">RISC-V加速进入智算高价值赛道</a><span class="ref-date">2026-10-20</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">珠峰200、V100和E908A等芯片在10月18日至20日RISC-V中国峰会集中亮相。</p></li>
+</ol>
+</div>
+</div>
 
 </div><!-- end container -->
 
+<div class="container">
 <div class="chapter-nav">
     <a href="竞争格局发展分析报告.html" class="nav-prev">⬅️ 上一章</a>
     <a href="report_index.html" class="nav-home">🏠 首页</a>
     <a href="供应商与产业格局分析报告.html" class="nav-next">下一章 ➡️</a>
 </div>
+</div>
 
 <footer>
-  <p>中国智能算力报告 · 技术趋势分析 · 第40期 · 2026-10-22</p>
+  <p>中国智能算力报告 · 技术趋势分析 · 第41期 · 2026-10-29</p>
 </footer>
 
 </body>
