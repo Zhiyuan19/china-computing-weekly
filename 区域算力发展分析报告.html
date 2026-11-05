@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>区域算力发展分析周报 | 第42期</title>
+    <title>区域算力发展分析周报 | 第43期</title>
     <style>
 /* === 全局样式 === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -46,6 +46,9 @@ h2 { color: #1a1a2e; border-bottom: 2px solid #0f3460; padding-bottom: 8px; marg
 table { width: 100%; border-collapse: collapse; font-size: 0.7em; margin-top: 10px; }
 th { background: #1a1a2e; color: white; padding: 10px 8px; text-align: left; }
 td { padding: 9px 8px; border-bottom: 1px solid #e2e8f0; }
+/* 短文本列与徽标锁定单行，防自动布局把窄列挤成逐字竖排（LRN-20261103-002） */
+th { white-space: nowrap; }
+.time-dim, .change-up, .change-down, .change-flat, .change-new, .tag-new, .tag-month, .tag-continue, .tag-review, .policy-tag { white-space: nowrap; }
 tr:nth-child(even) { background: #f8f9fc; }
 tr:hover { background: #e8f4fd; }
 
@@ -94,7 +97,6 @@ tr:hover { background: #e8f4fd; }
 .chapter-tab.home-tab { background: #1a1a2e; color: white; }
 .chapter-tab-num { font-size: 11px; font-weight: 700; color: #667eea; }
 .chapter-tab.active .chapter-tab-num { color: rgba(255,255,255,0.8); }
-.chapter-tab-title { }
 .chapter-tab-sep { color: #ccc; font-size: 11px; margin-left: 4px; }
 .chapter-tab:last-child .chapter-tab-sep { display: none; }
 
@@ -161,9 +163,9 @@ tr:hover { background: #e8f4fd; }
 </head>
 <body>
 <header>
-<div class="week-badge">第42期</div>
+<div class="week-badge">第43期</div>
 <h1>三、区域算力发展分析</h1>
-<div class="subtitle">2026-10-28—2026-11-03 | 中国智能算力报告</div>
+<div class="subtitle">2026-10-30—2026-11-05 | 中国智能算力报告</div>
 </header>
 
 <div class="container">
@@ -186,37 +188,36 @@ tr:hover { background: #e8f4fd; }
 <!-- 报告关键概述 -->
 <div class="chapter-overview">
 <div class="overview-title">📋 本章关键概述</div>
-<div class="overview-text"><p class="ov-lead">本周枢纽增量集中于粤港澳、甘肃和内蒙古，东西部价差与上架率分化进一步显性化。</p><ul class="ov-points"><li><a class="src-link" href="https://www.sohu.com/a/1094003761_121106875" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>建设端：</strong>中国移动粤港澳（韶关）数据中心二期10月28日启动，规划新增3.2万标准机架、3万P智算能力，计划2027年6月建成交付；当前韶关已落地26个项目、建成21万标准机架。</a></li><li><a class="src-link" href="https://www.szzg.gov.cn/2026/szzg/xyzx/202610/t20261028_5386707.htm" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>供给端：</strong>甘肃庆阳已有超11万标准机架投运、算力规模30.6万P，另有超1.2万架标准机柜即将全面投运；内蒙古和林格尔26座算力中心进入大规模建设阶段，约200亩智算中心进入交付阶段。</a></li><li><a class="src-link" href="https://www.beijing.gov.cn/fuwu/lqfw/gggs/202611/t20261101_4926908.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>需求端：</strong>廊坊智算规模突破21万P，单栋B1智算中心可支撑13万卡集群，环京算力走廊继续承接北京需求；长三角3个月密集成立12家Token运营中心，算力服务由资源供给向Token运营延伸。</a></li></ul><p class="ov-note"><strong>对运营商含义：</strong>东部枢纽应优先对接低时延训练、推理和Token运营需求，西部枢纽应围绕绿电、规模交付和跨区调度组织算力供给；其中韶关新增3万P须按2027年6月交付节点滚动校准省内供需，庆阳超1.2万架机柜则需在全面投运前锁定客户和上架计划。</p></div>
+<div class="overview-text"><p class="ov-lead">本周算力建设由新增机架转向电力、Token调度与区域协同，西部继续扩容、东部强化低时延服务。</p><ul class="ov-points"><li><a class="src-link" href="http://finance.sina.com.cn/roll/2026-11-01/doc-inixfers4095532.shtml" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>西部供给：</strong>甘肃庆阳超1.2万架标准机柜即将全面投运，内蒙古和林格尔26座算力中心进入大规模建设阶段，宁夏中卫西部云基地为应对订单增长启动冬季施工。</a></li><li><a class="src-link" href="https://m.21jingji.com/article/20261103/herald/a350831f2a70204213deb8c2b1b2946c_zaker.html" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px dotted #A9BBCE;"><strong>广东增量：</strong>韶关已建成6个万卡集群，签约入驻智算中心项目24个，总投资超1000亿元；大工业电价低至0.55元/度，较珠三角低0.134元/度，跨境算力专区使用成本最高可降低20%。</a></li><li><strong>需求转化：</strong>内江东兴区推出总额100万元「词元券」，单个主体最高补贴5万元；廊坊智算规模突破21万P，已建36个数据中心、投运标准机柜55.13万架。</li></ul><p class="ov-note"><strong>对运营商含义：</strong>东部枢纽应重点承接低时延推理和港澳跨境专线，西部枢纽则需把机柜、算力和绿电同步转成可调度资源；11月内应以廊坊、韶关、内江项目为3个资源池，优先核验上架率、PUE、绿电比例和跨域专线交付能力。</p></div>
 </div>
 
 <div class="data-meta">
-<span class="dm"><b>数据周期</b><span>上期 vs 本期（第42期）</span></span>
+<span class="dm"><b>数据周期</b><span>上期 vs 本期（第43期）</span></span>
 <span class="dm"><b>数据来源</b><span>各省发展改革委与大数据局、工业和信息化部、<a data-portal="1" href="https://www.cls.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">财联社</a>、科技日报、人民日报客户端等</span></span>
 <span class="dm"><b>口径说明</b><span>各枢纽总算力含智算与通算混合口径；1 万 P＝10^15 次浮点运算/秒；周变化与上期对比；东西部电价差未披露不量化</span></span>
 </div>
 
 <div class="data-cards" id="brief">
-<div class="data-card"><div class="label">全国在用机架</div><div class="value">1556万架</div><div class="sub">截至2026年6月，全国智能算力规模位居全球第二</div></div>
-<div class="data-card"><div class="label">庆阳智算规模</div><div class="value">30.6万P</div><div class="sub">超11万标准机架已投运，另有超1.2万架机柜待投运</div></div>
-<div class="data-card"><div class="label">廊坊智算规模</div><div class="value">突破21万P</div><div class="sub">润泽国际信息港已投产8栋IDC和4栋AIDC</div></div>
-<div class="data-card"><div class="label">韶关二期新增</div><div class="value">3.2万架</div><div class="sub">同步新增3万P智算，计划2027年6月建成交付</div></div>
-<div class="data-card"><div class="label">长三角Token中心</div><div class="value">12家</div><div class="sub">2026年7月以来密集成立，算力服务入口加快落地</div></div>
-<div class="data-card"><div class="label">和林格尔电价</div><div class="value">0.35元/千瓦时</div><div class="sub">东部工业用电均价为0.6元至1.0元，区间价差0.25元至0.65元</div></div>
+<div class="data-card"><div class="label">全国智能算力</div><div class="value">2592EFLOPS</div><div class="sub">截至2026年9月底口径，同比增长146%，用于判断本周新增需求的全国供给底盘</div></div>
+<div class="data-card"><div class="label">枢纽用电增速</div><div class="value">39.5%</div><div class="sub">近3年八大枢纽节点算力用电平均增长率，算力增量继续集中于枢纽</div></div>
+<div class="data-card"><div class="label">廊坊智算规模</div><div class="value">21万P</div><div class="sub">本周披露的累计规模；当地已建36个数据中心、投运55.13万架标准机柜</div></div>
+<div class="data-card"><div class="label">韶关工业电价</div><div class="value">0.55元/度</div><div class="sub">本周披露；较珠三角低0.134元/度，周环比挂牌价变化未披露</div></div>
+<div class="data-card"><div class="label">内江词元券</div><div class="value">100万元</div><div class="sub">内江东兴区面向园区企业发放，单个主体最高补贴5万元</div></div>
+<div class="data-card"><div class="label">庆阳待投机柜</div><div class="value">超1.2万架</div><div class="sub">标准机柜即将全面投运，将用于大模型训练和推理</div></div>
 
 </div>
 
 <div class="section" id="timeline">
-  <h2>⏱️ 本周重大时间线（10月28日 — 11月03日）</h2>
+  <h2>⏱️ 本周重大时间线（10月30日 — 11月5日）</h2>
   <div class="timeline">
-<div class="timeline-item"><div class="timeline-date">11-02</div><div class="timeline-title">中国电信四大万卡集群超119EFLOPS</div><div class="timeline-source">来源：浙江在线，11-02</div><div class="timeline-impact">中国电信披露其算力布局遵循“4+4+31+X”框架，已率先部署4个全国产液冷万卡集群，智算总规模超过119EFLOPS，并在浙江形成杭州、嘉兴、宁波、金华4个算力枢纽。对运营商而言，这直接扩大长三角可调度的国产液冷算力供给，但本周素材未披露新增上架率或对外可用规模，不能把119EFLOPS等同于可售产能。</div></div>
-<div class="timeline-item"><div class="timeline-date">11-02</div><div class="timeline-title">庆阳30.6万P支撑京冀服务</div><div class="timeline-source">来源：新闻联播，11-02</div><div class="timeline-impact">甘肃庆阳已有超11万标准机架投运，算力规模达到30.6万P，智算占比近100%，多个数据中心仍在建设；内蒙古约200亩智算中心进入交付阶段，将面向京津冀提供新一代智算服务。两项进展共同增加西部低成本智算供给，但素材未披露本批设备的投运日期、电价和上架率，现阶段更适合按在建产能而非已上架产能纳入规划。</div></div>
-<div class="timeline-item"><div class="timeline-date">11-01</div><div class="timeline-title">廊坊智算突破21万P</div><div class="timeline-source">来源：北京日报，11-01</div><div class="timeline-impact">廊坊当地智算总规模突破21万P，润泽国际信息港已投产8栋IDC、4栋AIDC，行业首例单体200兆瓦B1智算中心已向客户交付，单栋可支撑13万卡集群。廊坊距北京南五环约40公里、数据交互不到1毫秒，可继续承接大模型训练和实时推理需求，但200兆瓦项目的实际上架率及客户结构本周未披露。</div></div>
-<div class="timeline-item"><div class="timeline-date">11-01</div><div class="timeline-title">庆阳超1.2万架机柜待投运</div><div class="timeline-source">来源：央视网，11-01</div><div class="timeline-impact">甘肃庆阳东数西算产业园新增数据中心加紧建设，超1.2万架标准机柜即将全面投运，新增算力将面向大模型训练和推理，并把智能驾驶大模型迭代周期从按月压缩至按小时。若项目按报道进度投运，庆阳30.6万P存量之外将增加一批智算供给，但本周没有披露新增P规模、电力指标和首批客户，不能直接计入可用产能。</div></div>
-<div class="timeline-item"><div class="timeline-date">11-01</div><div class="timeline-title">中卫西部云基地转入冬施</div><div class="timeline-source">来源：央视网，11-01</div><div class="timeline-impact">宁夏中卫西部云基地算力中心已启动冬季施工模式，以应对2026年订单增长并抢抓建设进度。当前中卫机架规模已突破23万架，但素材没有披露西部云基地新增机架、算力及上架率，因此本周变化只能认定为在建提速；运营商若评估中卫承载能力，应以项目具体交付批次和客户签约上架进度为准。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-29</div><div class="timeline-title">和林格尔绿电占比超85%</div><div class="timeline-source">来源：搜狐，10-29</div><div class="timeline-impact">本周披露的八大枢纽口径显示，内蒙古和林格尔集群绿电占比超过85%，张家口至北京单向网络时延稳定控制在2毫秒以内。和林格尔以绿电和西部成本优势承接京津冀需求，但该材料未同步给出新增P规模或新增上架率，不能据此判断供给增量；其绿电比例可作为后续东部业务低碳迁移的筛选条件。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-29</div><div class="timeline-title">长三角3个月新增12家Token中心</div><div class="timeline-source">来源：解放日报，10-29</div><div class="timeline-impact">2026年7月以来，长三角密集成立12家Token运营中心，其中扬州仪征液冷设备项目投产4个月后订单已排满，说明算力需求正在由机柜和P规模向Token消费及场景运营转化。12家中心与上周基准持平，本周变化来自商业模式扩散而非新增中心数量；对运营商而言，应优先推动算力、模型、数据和API计费协同，避免平台数量扩张但调用规模不足。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">韶关二期新增3万P启动建设</div><div class="timeline-source">来源：韶关发布，10-28</div><div class="timeline-impact">中国移动粤港澳（韶关）数据中心二期10月28日启动，总建筑面积9万平方米、算力规模78.6兆瓦，计划2027年6月建成交付，将新增3.2万标准机架和3万P智算能力。当前韶关已落地26个数据中心项目、建成21万标准机架，二期相当于现有机架规模增加15.2%，但交付期距报告日约19个月，应按2027年节点管理产能而非当前可用资源。</div></div>
-<div class="timeline-item"><div class="timeline-date">10-28</div><div class="timeline-title">内蒙古26座中心扩大建设</div><div class="timeline-source">来源：央视网，10-28</div><div class="timeline-impact">内蒙古和林格尔新区26座算力中心进入大规模建设阶段，一批面向特色产业的智能应用同步落地，包括牧草垂直大模型和牛脸识别系统。与上周26座中心在建相比，本周没有披露新增中心数量，因此变化仍为持续建设；其价值在于将大规模训练、推理能力与农牧业应用结合，但算力规模、资本开支和上架率需等待项目级数据确认。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-04</div><div class="timeline-title">如东350亿元智算项目待入驻</div><div class="timeline-source">来源：新华网江苏频道，11-04</div><div class="timeline-impact">如东600亩绿色智算集聚区已完成土地平整和路网贯通，规划引入总投资超350亿元项目，并以海上风电绿电和LNG冷能配套数据中心。若项目按计划落地，长三角新增供给将同时具备沿海算力需求和低碳能源条件，但本周未披露设备采购、机架数量及投运日期。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-04</div><div class="timeline-title">内江东兴区投放100万元词元券</div><div class="timeline-source">来源：四川在线，11-04</div><div class="timeline-impact">内江东兴区面向人工智能和服务外包产业园企业发放总额100万元词元券，单个主体最高5万元。已运营算力达到7300P、园区企业增至78家，补贴将直接拉动Token调用需求，但实际核销率和新增算力需求仍取决于企业应用落地。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-04</div><div class="timeline-title">八大枢纽建设进展集中披露</div><div class="timeline-source">来源：见道网，11-04</div><div class="timeline-impact">本周信息显示，和林格尔26座算力中心进入大规模建设阶段，庆阳超1.2万架机柜即将投运，贵安新增数据中心在建。中卫西部云基地则因订单增长转入冬季施工，西部建设由规划机架向电力施工和设备交付推进，区域供给节奏开始出现分化。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-03</div><div class="timeline-title">韶关签约24个智算项目</div><div class="timeline-source">来源：21世纪经济报道，11-03</div><div class="timeline-impact">韶关已建成6个万卡集群，签约智算中心项目24个，总投资超1000亿元，规划标准机架超140万架；工业电价低至0.55元/度，较珠三角低0.134元/度。粤港澳需求可部分留在省内处理，但当前上架率未披露，扩容能否转化为有效供给取决于模型迁移和专线订单。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-02</div><div class="timeline-title">京津冀数据产业联盟成立</div><div class="timeline-source">来源：北京市人民政府门户网站，11-03</div><div class="timeline-impact">京津冀国家级经开区数据产业联盟吸纳北京、天津、武清等7个经开区的31家成员单位，并建立跨区域沙盒审批互认机制。该机制减少创新项目重复申请和重复评估，为算力调度、数据治理等数字经济项目提供制度通道，但材料未披露新增算力规模或机架数量。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-02</div><div class="timeline-title">廊坊智算突破21万P</div><div class="timeline-source">来源：北京日报客户端，11-02</div><div class="timeline-impact">廊坊已建36个数据中心、投运标准机柜55.13万架，智算总规模突破21万P；润泽国际信息港已投产8栋IDC和4栋AIDC，单体200兆瓦B1智算中心已交付。环京供给走廊由此具备低时延承载基础，但整体上架率与本期新增规模未披露。</div></div>
+<div class="timeline-item"><div class="timeline-date">11-01</div><div class="timeline-title">上海临港海底算力商业运行</div><div class="timeline-source">来源：新浪财经，11-01</div><div class="timeline-impact">上海临港风电直连海底数据中心近日实现全面商业运行，国内运营商及头部AI大模型企业已接入，开展国产大模型推理和科学计算。该模式补充长三角高密度城区之外的绿色算力节点，可承接推理业务，但商业运行后的机架规模、利用率和客户数量本周未披露。</div></div>
+<div class="timeline-item"><div class="timeline-date">10-30</div><div class="timeline-title">国家能源局发布算力用电预测</div><div class="timeline-source">来源：中国青年报，11-03</div><div class="timeline-impact">国家能源局在10月30日例行发布会提出，十五五时期全国算力用电量年均新增1000亿千瓦时以上，2030年达到8000亿千瓦时、占全社会用电量约6%。八大枢纽节点近3年算力用电平均增长39.5%，后续扩容约束将更多落在绿电供给、电网接入和算电协同调度。</div></div>
 
   </div>
 </div>
@@ -225,93 +226,96 @@ tr:hover { background: #e8f4fd; }
   <h2>📊 八大枢纽周变化汇总表（上期 vs 本期）</h2>
   <table>
     <tr><th>枢纽</th><th>上期（万P）</th><th>本期（万P）</th><th>周变化</th><th>变化率</th><th>绿电%</th><th>主要驱动</th></tr>
-<tr><td>京津冀·廊坊</td><td>智算规模突破21万P</td><td>智算规模突破21万P</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>环京需求与低时延交付</td></tr>
-<tr><td>长三角</td><td>3个月成立12家Token运营中心</td><td>3个月成立12家Token运营中心</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>Token运营与需求转化</td></tr>
-<tr class="week-highlight"><td>粤港澳·韶关</td><td>26个项目；建成21万标准机架</td><td>26个项目；建成21万标准机架；二期新增3.2万架、3万P在建</td><td><span class="change-up">+3.2万架、+3万P（计划2027年6月交付）</span></td><td>+15.2%（按机架规模测算）</td><td>未披露</td><td>中国移动二期启动</td></tr>
-<tr><td>成渝</td><td>本周项目规模未披露</td><td>项目规模未披露</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>跨区算电协同</td></tr>
-<tr class="week-highlight"><td>内蒙古·和林格尔</td><td>26座算力中心在建；约200亩中心交付</td><td>26座算力中心在建；约200亩中心进入交付阶段</td><td><span class="change-flat">—</span></td><td>—</td><td>超85%</td><td>绿电智算交付京津冀</td></tr>
-<tr><td>宁夏·中卫</td><td>机架突破23万架；西部云基地在建</td><td>机架突破23万架；西部云基地启动冬季施工</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>订单增长推动冬施</td></tr>
-<tr class="week-highlight"><td>甘肃·庆阳</td><td>超11万标准机架；30.6万P</td><td>超11万标准机架；30.6万P；超1.2万架机柜待投运</td><td><span class="change-up">+超1.2万架（待投运）</span></td><td>—</td><td>未披露</td><td>新增机柜即将投运</td></tr>
-<tr><td>贵州·贵安</td><td>50个重点数据中心；179EFLOPS</td><td>50个重点数据中心；179EFLOPS；新增数据中心在建</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>新增数据中心建设</td></tr>
+<tr class="week-highlight"><td>京津冀·廊坊</td><td>智算规模突破21万P</td><td>智算规模突破21万P；已建36个数据中心、投运55.13万架标准机柜</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>环京低时延与数据中心交付</td></tr>
+<tr><td>长三角</td><td>3个月成立12家Token运营中心</td><td>如东600亩智算集聚区待入驻，项目总投资超350亿元</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>绿电与沿海需求协同</td></tr>
+<tr class="week-highlight"><td>粤港澳·韶关</td><td>26个项目；建成21万标准机架；二期新增3.2万架、3万P在建</td><td>已建6个万卡集群、签约24个项目，总投资超1000亿元、规划超140万架</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>跨境专线与工业电价</td></tr>
+<tr><td>成渝·内江</td><td>项目规模未披露</td><td>稳定运营算力7300P；词元券总额100万元</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>词元补贴拉动需求</td></tr>
+<tr><td>内蒙古·和林格尔</td><td>26座算力中心在建；约200亩中心进入交付阶段</td><td>26座算力中心进入大规模建设阶段；京蒙绿算项目超200亿元</td><td><span class="change-flat">—</span></td><td>—</td><td>超85%（上周口径）</td><td>绿电进京与算力协作</td></tr>
+<tr><td>宁夏·中卫</td><td>机架突破23万架；西部云基地启动冬季施工</td><td>西部云基地为应对订单增长启动冬季施工</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>订单增长推动赶工</td></tr>
+<tr><td>甘肃·庆阳</td><td>超11万标准机架；30.6万P；超1.2万架机柜待投运</td><td>超1.2万架标准机柜即将全面投运</td><td><span class="change-flat">待投运超1.2万架</span></td><td>—</td><td>未披露</td><td>大模型训练推理扩容</td></tr>
+<tr><td>贵州·贵安</td><td>50个重点数据中心；179EFLOPS；新增数据中心在建</td><td>新增数据中心加快建设，面向智能驾驶、智慧交通和智能养老</td><td><span class="change-flat">—</span></td><td>—</td><td>未披露</td><td>民生场景牵引建设</td></tr>
 
   </table>
   <div class="analysis-box">
     <h3>📈 深度分析：周变化特征</h3>
-    <p><h3>供给增量向西部集中</h3><p>本周可量化的新增供给主要出现在西部和粤港澳。甘肃庆阳已有超11万标准机架投运、算力规模30.6万P，另有超1.2万架标准机柜即将全面投运；内蒙古和林格尔26座算力中心继续大规模建设，约200亩智算中心进入交付阶段，并明确服务京津冀。宁夏中卫西部云基地因订单增长启动冬季施工，说明西部枢纽的需求不再只体现为机架库存，而是开始驱动项目抢工。上述项目中，只有庆阳超1.2万架机柜给出了明确数量，其余未披露新增P和上架率，运营商在2026年资源池中仍应按“已投运、待投运、在建”分层管理。</p><h3>东部价值向低时延交付集中</h3><p>粤港澳和京津冀的本周进展更偏向客户与场景。韶关已落地26个项目、建成21万标准机架，中国移动二期启动后规划新增3.2万架和3万P，预计2027年6月交付；廊坊智算规模突破21万P，润泽国际信息港已投产8栋IDC和4栋AIDC，单体200兆瓦的B1智算中心已经交付，可支撑13万卡集群。两者分别对应省内大湾区实时需求和环京训练推理需求，新增价值不仅来自P规模，还来自光纤时延、园区能源和客户订单的匹配。</p><h3>东西部价差仍在，上架率决定收益</h3><p>和林格尔数据中心平均到户电价约0.35元/千瓦时，而东部工业用电均价普遍为0.6元至1元，单价区间相差0.25元至0.65元；其集群上架率为75.8%，绿电占比超过85%。东部成熟智算中心上架率超过90%，但该数据来自2026年10月27日投资材料，只作为近一月对照，不标作本周变化。同期行业材料显示，部分内蒙古市场化智算园区全年综合利用率不足50%，新建10万卡国产智算预留机架上架率不足20%，全国2025年智能算力使用率为36.8%。因此，西部低电价并不自动对应高回报，只有绿电、时延、客户签约和上架率同步成立时，低电价才能转化为运营商可结算的算力收入。</p><h3>广东供给节奏需按节点管理</h3><p>韶关当前21万标准机架是华南已成规模，10月28日启动的中国移动二期再增加3.2万架和3万P，但计划交付期为2027年6月，不能提前计入2026年可用资源。对广东省内规划而言，韶关可继续承担粤港澳实时算力和全省AI产业的西部供给节点，但项目采用风液融合和模块化建设，省内网络侧应同步校准广州、深圳至韶关的算力调度、专线时延和客户接入方案。庆阳、和林格尔则可作为跨省训练和低碳算力补充，最终以实际交付、客户上架和单位算力成本决定调用比例。</p></p>
+    <p><h3>建设节奏由规划转向交付</h3><p>本周八大枢纽的共同特征是项目继续向施工、设备和场景落地推进，但不同枢纽所处的交付环节并不一致。甘肃庆阳超1.2万架标准机柜即将全面投运，已经进入运营准备阶段；内蒙古和林格尔26座算力中心处于大规模建设阶段；宁夏中卫西部云基地因订单增长启动冬季施工；贵州贵安新增数据中心仍在建设。甘肃素材将新增机柜用途明确为大模型训练和推理，庆阳本地供给的首要承接对象应是推理、训练和智能驾驶任务，而不是等待泛化机柜租赁需求。</p><h3>成本分化仍然显著</h3><p>本周能够直接比较的区域电价信号来自韶关：大工业电价低至0.55元/度，比珠三角低0.134元/度；韶关6个万卡集群、24个签约项目对应总投资超1000亿元。东部核心城区的土地、电力和制冷余量约束，仍会把高密度推理、数据加工和跨境业务推向韶关。与此同时，全国算力中心整体上架率仅有2026年6月底的71.4%存量口径，本周没有披露八大枢纽与非枢纽的分区上架率，因此不能据此判断某一周需求突然转弱。运营商采购西部资源时，应把低价与上架率分开核验，避免低电价掩盖闲置机柜和回款周期风险。</p><h3>广东需求可形成省内闭环</h3><p>韶关已形成6个万卡集群和24个签约项目，跨境算力专区日均AI处理量约1.5亿至2亿词元，与港澳企业在本地采购算力相比，使用成本最高可降低20%。这使粤港澳大湾区需求具备从港澳数据中转、跨境专线到国产算力调度的完整链条。对广东省内规划而言，11月应重点核验跨境专线可用性、国产加速卡适配率、专属调度平台并发能力和客户迁移周期，不能只按规划标准机架超140万架测算有效供给。</p><h3>需求侧政策开始替代单点扩容</h3><p>内江东兴区投放总额100万元词元券，单个主体最高5万元，叠加已运营7300P算力和78家园区企业，显示成渝枢纽开始通过补贴盘活现有产能。内蒙古方向上，京蒙每年送京绿电超150亿千瓦时、落地绿算项目超200亿元，说明绿算合作正在从单次交付转向长期交易。运营商应在11月把电力容量、Token调用、网络时延和上架率放入统一资源池：东部侧争取推理与跨境专线订单，西部侧用长周期负载提升26座中心及超1.2万架待投机柜的利用率。</p></p>
   </div>
 </div>
 
 <div class="section" id="detail">
   <h2>📍 重点枢纽深度分析</h2>
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">内蒙古·和林格尔：绿电智算进入集中交付期 </h3>
-<p style="font-size:0.85em;line-height:1.8;">内蒙古枢纽本周继续推进26座算力中心建设，由民营企业主导、占地约200亩的智算中心进入交付阶段，将以高密度、高功率服务器服务京津冀新一代智算需求。和林格尔近期口径显示，集群绿电占比超过85%，平均到户电价约0.35元/千瓦时，上架率75.8%，年自然制冷期超过200天。近一个多月内，4家头部企业智算项目相继开工，总投资约152亿元，占地约706亩，但该投资为存量背景口径，并非本周新增投资。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">京津冀·廊坊：环京低时延供给走廊持续扩容 </h3>
+<p style="font-size:0.85em;line-height:1.8;">廊坊本周披露智算总规模突破21万P，已建36个数据中心、投运标准机柜55.13万架。润泽国际信息港已投产8栋IDC和4栋AIDC，行业首例单体200兆瓦智算中心B1已向客户交付，单栋可支撑13万卡集群。廊坊距北京南五环约40公里，数据中心整体响应时间在1毫秒以内，已承载北京互联网企业的大模型推理、流量调度和实时数据交互需求。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
-<tr><td>在建中心</td><td>26座</td><td><span class="change-flat">持续建设</span></td><td>与上周基准相比未披露新增中心数量</td></tr>
-<tr><td>交付项目</td><td>约200亩</td><td><span class="change-flat">进入交付阶段</span></td><td>主要面向京津冀提供新一代智算服务</td></tr>
-<tr><td>绿电占比</td><td>超85%</td><td><span class="change-flat">—</span></td><td>本周八大枢纽介绍口径</td></tr>
-<tr><td>平均到户电价</td><td>0.35元/千瓦时</td><td><span class="change-flat">—</span></td><td>2026年绿色算力指数报告近一月口径</td></tr>
-<tr><td>集群上架率</td><td>75.8%</td><td><span class="change-flat">—</span></td><td>全国十大数据中心集群中排名第二</td></tr>
+<tr><td>智算规模</td><td>突破21万P</td><td><span class="change-flat">—</span></td><td>本周披露累计规模，未披露周环比增量</td></tr>
+<tr><td>标准机柜</td><td>55.13万架</td><td><span class="change-flat">—</span></td><td>当地已建36个数据中心并投运</td></tr>
+<tr><td>单体电力容量</td><td>200兆瓦</td><td><span class="change-flat">已交付</span></td><td>润泽B1智算中心已向客户交付</td></tr>
+<tr><td>端到端时延</td><td>1毫秒以内</td><td><span class="change-flat">—</span></td><td>支撑北京模型推理和实时数据交互</td></tr>
+<tr><td>上架率</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周材料未给出廊坊整体上架率</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：绿电优势等待上架转化</h3>
-<p>和林格尔本周的核心变化不是机架数字增长，而是约200亩项目由建设转入交付，并明确面向京津冀承接高密度、高功率智算需求。其0.35元/千瓦时到户电价较东部0.6元至1元工业用电均价低0.25元至0.65元，叠加超85%绿电和75.8%上架率，具备承接非实时训练、模型预训练和可容忍跨区时延业务的条件。运营商应在项目交付后重点核验客户上架批次、液冷改造、跨区网络成本和可用算力口径，避免把绿电优势直接等同于商业利用率。</p>
+<h3>💡 深度解读：京冀算力就地服务</h3>
+<p>廊坊21万P与55.13万架标准机柜说明其价值不只是承接外溢需求，而是已经形成可交付的环京智算基础设施。200兆瓦单体智算中心和1毫秒以内响应，使其适合大模型推理、实时流量调度等对网络敏感的业务；36个数据中心则为客户跨运营商接入和多AZ部署提供选择。对运营商规划而言，11月应优先核验B1等新投运项目的客户上架进度、国产加速卡适配率和跨区域专线利用率。如果新增机柜能够与北京模型推理负载同步上架，廊坊将继续强化东部低时延区域中心的地位；若机架增速快于客户迁入，则需通过长周期推理任务填充闲置容量。</p>
 </div>
 
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">甘肃·庆阳：超1.2万架机柜进入投运前夜 <span class="tag-new">NEW</span></h3>
-<p style="font-size:0.85em;line-height:1.8;">庆阳作为八大枢纽中起步较晚但算力增速较快的集群，已有超11万个标准机架投运，算力规模达到30.6万P，智算占比近100%。本周披露的新数据中心正在建设，超1.2万架标准机柜即将全面投运，面向大模型训练和推理，可将智能驾驶大模型迭代周期从按月压缩到按小时。庆阳同时以国产芯片为核心底座，承担大模型训练任务，但新增机柜对应的P规模、上架率和交付日期在素材中均未披露。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">粤港澳·韶关：跨境算力与低成本电力并进 </h3>
+<p style="font-size:0.85em;line-height:1.8;">韶关已建成6个万卡集群，签约入驻智算中心项目24个，总投资超1000亿元，规划建设标准机架超140万架。粤港澳大湾区「来数加工」跨境算力专区部署昇腾910B、昆仑P800系列服务器，日均AI处理量约1.5亿至2亿词元，与港澳企业在本地采购算力相比，使用成本最高可降低20%。本地大工业电价低至0.55元/度，较珠三角低0.134元/度。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
-<tr><td>投运机架</td><td>超11万架</td><td><span class="change-flat">—</span></td><td>经过5年建设形成存量规模</td></tr>
-<tr><td>算力规模</td><td>30.6万P</td><td><span class="change-flat">—</span></td><td>智算占比近100%</td></tr>
-<tr><td>待投运机柜</td><td>超1.2万架</td><td><span class="change-flat">即将全面投运</span></td><td>新增供给面向大模型训练和推理</td></tr>
+<tr><td>万卡集群</td><td>6个</td><td><span class="change-flat">—</span></td><td>韶关已建成，支撑模型训练与推理</td></tr>
+<tr><td>签约项目</td><td>24个</td><td><span class="change-flat">—</span></td><td>总投资超1000亿元</td></tr>
+<tr><td>规划标准机架</td><td>超140万架</td><td><span class="change-flat">—</span></td><td>为签约及规划项目总体口径</td></tr>
+<tr><td>工业电价</td><td>0.55元/度</td><td><span class="change-flat">较珠三角低0.134元/度</span></td><td>本周未披露周环比挂牌价变化</td></tr>
+<tr><td>跨境日处理量</td><td>约1.5亿至2亿词元</td><td><span class="change-flat">—</span></td><td>跨境专区日均AI处理量</td></tr>
+<tr><td>绿电比例</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周材料未提供比例</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：增量先于上架成为变量</h3>
-<p>庆阳本周最明确的供给变量是超1.2万架标准机柜即将全面投运，若按报道进度完成交付，将在30.6万P存量基础上继续扩大西部训练算力。其国产芯片、大模型训练和智能驾驶场景已经形成需求闭环，迭代周期由按月缩短到按小时，需求强度高于一般备用型算力。运营商规划时应把这批机柜列为近期资源池候选，同时核验新增P规模、客户签约比例、国产芯片适配效率和东西区网络调度成本，防止在投运节点与上架节点之间形成供需错配。</p>
+<h3>💡 深度解读：粤港澳需求省内转化</h3>
+<p>韶关本周的核心变化是算力供给形态从机柜建设转向可销售服务：6个万卡集群提供国产算力底座，跨境专线、100%物理隔离和低时延回传把港澳需求转化为Token处理量，0.55元/度工业电价则进一步降低训练和推理成本。规划超140万架只是远期供给上限，不能直接等同于本周可用资源。对广东省内运营商，11月应围绕「港澳数据中转—韶关专区处理—结果按原路返回」建立端到端方案，核验专线带宽、国产芯片软件栈、数据合规和跨域调度能力。成本最高降低20%的客户价值需要由真实并发和可用算力支撑，若上架率不足，产业生态和服务器供应链集聚将慢于机架规划。</p>
 </div>
 
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">粤港澳·韶关：中国移动二期加码湾区智算 <span class="tag-new">NEW</span></h3>
-<p style="font-size:0.85em;line-height:1.8;">韶关算力集群经过4年多建设，已落地数据中心项目26个、建成21万标准机架，成为华南规模领先的智能算力集群。10月28日，中国移动粤港澳（韶关）数据中心二期启动，总建筑面积9万平方米、算力规模78.6兆瓦，计划2027年6月建成交付，将新增3.2万标准机架和3万P智算能力。项目采用液冷单元、电力方舱和风液融合技术，主要承接广深实时算力需求并服务粤港澳大湾区。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">甘肃·庆阳：大模型专用机柜进入投运前夜 </h3>
+<p style="font-size:0.85em;line-height:1.8;">甘肃庆阳东数西算产业园新增数据中心正在建设，超1.2万架标准机柜即将全面投运，新增能力将用于大模型训练和推理，并可把智能驾驶大模型迭代周期从按月压缩到按小时。上周口径显示园区已有超11万标准机架和30.6万P算力，区域供给基数较大。本周新增信息的重点不是规划规模，而是超1.2万架机柜接近全面投运，后续将转向设备上架、客户承载和电力利用率检验。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
-<tr><td>项目数</td><td>26个</td><td><span class="change-flat">—</span></td><td>韶关集群已落地数据中心项目</td></tr>
-<tr><td>建成机架</td><td>21万架</td><td><span class="change-flat">—</span></td><td>当前为已建成存量</td></tr>
-<tr><td>二期新增机架</td><td>3.2万架</td><td><span class="change-up">+15.2%</span></td><td>相对当前21万架测算，项目计划2027年6月交付</td></tr>
-<tr><td>二期新增智算</td><td>3万P</td><td><span class="change-flat">—</span></td><td>与3.2万标准机架同步规划</td></tr>
-<tr><td>项目规模</td><td>78.6兆瓦</td><td><span class="change-flat">启动建设</span></td><td>总建筑面积9万平方米</td></tr>
+<tr><td>待投运机柜</td><td>超1.2万架</td><td><span class="change-flat">即将全面投运</span></td><td>用于大模型训练和推理</td></tr>
+<tr><td>园区算力</td><td>30.6万P</td><td><span class="change-flat">—</span></td><td>上周基准口径，本周未披露新增</td></tr>
+<tr><td>园区标准机架</td><td>超11万架</td><td><span class="change-flat">—</span></td><td>上周基准口径</td></tr>
+<tr><td>上架率</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周未披露待投运机柜的客户上架比例</td></tr>
+<tr><td>PUE</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周素材没有量化PUE要求</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：韶关增量列入2027资源表</h3>
-<p>韶关本周启动的中国移动二期将新增3.2万架和3万P，按现有21万架测算，机架规模增幅为15.2%，是本期可量化且体量最大的单体项目增量。但项目计划2027年6月建成交付，短期作用主要是锁定机房、电力和液冷资源，而非立即增加广东省内可调用算力。运营商应以2026年在建、2027年交付和实际上架3个时间层分别建账，并围绕广州、深圳至韶关的实时业务需求配置专线、算网协同和故障迁移能力，防止远期机架供给与近期客户需求错配。</p>
+<h3>💡 深度解读：庆阳进入上架验证期</h3>
+<p>庆阳超1.2万架机柜即将全面投运，意味着西部枢纽新增供给将从建设统计转向经营统计。已有30.6万P和超11万架机架提供规模基础，但素材未披露新增机柜对应的客户数量、卡数、服务器功率和上架率，运营商不能把「即将投运」直接计入可售算力。11月核验应聚焦4项：设备是否完成上电、单柜功率与液冷能力是否匹配、可承接的模型训练时长以及跨区域传输时延。智能驾驶模型迭代从按月压缩到按小时具有明确场景价值，但必须配套稳定的模型、数据和算力调度服务，才能把西部低成本电力转化为高利用率业务。</p>
 </div>
 
-<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">京津冀·廊坊：环京智算走廊扩容交付 </h3>
-<p style="font-size:0.85em;line-height:1.8;">廊坊本周继续形成面向北京的智算供给走廊，当地智算总规模突破21万P。润泽科技、华为、万国数据等企业在当地布局，润泽国际信息港已投产8栋IDC和4栋AIDC，行业首例单体200兆瓦B1智算中心已向客户交付，单栋可支撑13万卡规模智能算力集群。廊坊距北京南五环约40公里，数据交互不到1毫秒，已承接外卖订单、模型推理、流量调度以及医疗影像、工业质检等场景。</p>
+<h3 style="color:#1e3a5f;border-left:3px solid #38bdf8;padding-left:8px;margin:20px 0 10px;">成渝·内江：词元券拉动存量算力消化 </h3>
+<p style="font-size:0.85em;line-height:1.8;">内江人工智能和服务外包产业园启动词元券补贴宣传，面向园区企业发放总额100万元，单个主体最高补贴5万元。园区内并济科技运营的成渝中心算力枢纽智能运算中心稳定运行算力达到7300P；东兴开发区成渝枢纽智算中心及人工智能配套产业园项目占地75亩，规划建筑面积约7.4万平方米。园区企业已扩展至78家，政策重点由扩充硬件转向激活模型调用需求。</p>
 <table style="margin-top:12px;">
 <tr><th>指标</th><th>当前值</th><th>变化</th><th>说明</th></tr>
-<tr><td>智算规模</td><td>突破21万P</td><td><span class="change-flat">—</span></td><td>与上周基准口径一致</td></tr>
-<tr><td>已投产楼宇</td><td>8栋IDC、4栋AIDC</td><td><span class="change-flat">—</span></td><td>润泽国际信息港存量</td></tr>
-<tr><td>B1智算中心</td><td>单体200兆瓦</td><td><span class="change-flat">已向客户交付</span></td><td>单栋可支撑13万卡集群</td></tr>
-<tr><td>北京时延</td><td>不到1毫秒</td><td><span class="change-flat">—</span></td><td>廊坊距离北京南五环约40公里</td></tr>
+<tr><td>稳定运营算力</td><td>7300P</td><td><span class="change-flat">—</span></td><td>并济科技成渝中心算力枢纽</td></tr>
+<tr><td>词元券总额</td><td>100万元</td><td><span class="change-flat">本周启动发放</span></td><td>单个主体最高补贴5万元</td></tr>
+<tr><td>智算产业园用地</td><td>75亩</td><td><span class="change-flat">在建</span></td><td>规划建筑面积约7.4万平方米</td></tr>
+<tr><td>园区企业</td><td>78家</td><td><span class="change-flat">—</span></td><td>业务覆盖客服、标注、软件开发及AI</td></tr>
+<tr><td>上架率</td><td>未披露</td><td><span class="change-flat">—</span></td><td>本周未披露7300P对应利用率</td></tr>
 </table>
 <div class="analysis-box">
-<h3>💡 深度解读：低时延交付承接环京订单</h3>
-<p>廊坊本周的供给价值体现为200兆瓦单体项目已完成客户交付，而非机架数量继续上升。21万P智算总规模、13万卡单栋承载能力和不到1毫秒的北京交互时延，使廊坊适合承接训练、推理和实时调度并行的环京需求。与内蒙古0.35元/千瓦时的低成本供给相比，廊坊的优势是客户距离近、网络确定性和交付成熟度；运营商应把廊坊定位为东部高价值实时与推理节点，并通过跨区调度承接可在内蒙古完成的训练任务，从而避免东部和西部仅按电价竞争。</p>
+<h3>💡 深度解读：成渝从扩容转向用模</h3>
+<p>内江100万元词元券与7300P存量算力结合，说明成渝枢纽的短期瓶颈更可能是模型应用需求和调用量，而不是机柜数量。园区已有78家企业，补贴覆盖算力应用、智能体开发、微调等场景，可在不立即扩建机房的情况下提高7300P利用率；在建75亩产业园则承担中期承载。对运营商而言，应把词元券申领企业转为可跟踪的算力客户，按企业提交量监测券后留存调用、并发时段和模型类型。若11月核销率上升但算力负载仍集中于少数平台，应转向客服、代码和数据标注企业设计套餐；若算力扩容快于补贴需求，则继续增加园区将扩大闲置风险。</p>
 </div>
 
 </div>
 
 <div class="section" id="policy">
   <h2>📋 政策动态：全国PUE政策全景图</h2>
-  <p style="font-size:0.85em;margin-bottom:12px;">本周重要政策进展：本周素材未显示八大枢纽新发布统一的PUE上限、绿电比例或直接补贴标准，已披露的政策重点仍集中在既有算电协同和产业资金安排。和林格尔集群绿电占比超过85%，数据中心平均到户电价约0.35元/千瓦时，呼和浩特每年安排不低于1.28亿元绿色算力专项发展资金，并设立30亿元新一代信息技术产业基金；庆阳、和林格尔、韶关则继续以项目建设、机柜投运和场景承接推进供给。运营商在2026年11月进行政策映射时，应将PUE、绿电比例、电价和补贴分别核验，不能把项目建设进展当作地方政策更新。</p>
+  <p style="font-size:0.85em;margin-bottom:12px;">本周重要政策进展：本周没有素材显示全国或八大枢纽新增量化的PUE上限、绿电比例硬性要求，但算电协同政策约束进一步强化。国家能源局10月30日表示，十五五时期全国算力用电量年均新增1000亿千瓦时以上，2030年达到8000亿千瓦时、占全社会用电量约6%；截至9月底，全国智能算力规模达到2592EFLOPS，同比增长146%。地方层面，内江东兴区以总额100万元词元券、单主体最高5万元补贴模型调用；韶关《韶关市加快智能计算产业发展若干措施》继续覆盖算力应用、调度、大模型建设和数据要素流通，跨境算力专区配套算力券、调度补贴和大模型奖励，但具体金额未披露。如东600亩绿色智算集聚区以350亿元项目投资和绿电、冷能协同形成产业导入条件。运营商在11月项目审查中，应把PUE、绿电比例和电价作为存量及新增项目的必填核验项，不能因本周无统一新增阈值而降低审查标准。</p>
   <table>
     <tr><th>区域</th><th>新建大型项目PUE要求</th><th>绿电/其他</th><th>核心补贴政策</th></tr>
-<tr><td>内蒙古·和林格尔</td><td>未披露</td><td>超85%</td><td>每年不低于1.28亿元绿色算力资金；设立30亿元产业基金</td></tr>
-<tr><td>甘肃·庆阳</td><td>未披露</td><td>未披露</td><td>未披露</td></tr>
-<tr><td>粤港澳·韶关</td><td>未披露</td><td>未披露</td><td>未披露</td></tr>
-<tr><td>宁夏·中卫</td><td>未披露</td><td>未披露</td><td>未披露</td></tr>
-<tr><td>京津冀·廊坊</td><td>未披露</td><td>未披露</td><td>未披露</td></tr>
+<tr><td>全国</td><td>未披露</td><td>未披露</td><td>算电协同政策未披露直接补贴金额</td></tr>
+<tr><td>广东·韶关</td><td>未披露</td><td>未披露</td><td>算力券、调度补贴、大模型奖励及数据流通奖励，金额未披露</td></tr>
+<tr><td>四川·内江东兴区</td><td>未披露</td><td>未披露</td><td>词元券总额100万元，单个主体最高5万元</td></tr>
+<tr><td>江苏·如东</td><td>未披露</td><td>以海上风电绿电为协同方向，比例未披露</td><td>未披露直接补贴；绿色智算项目计划总投资超350亿元</td></tr>
 
   </table>
 </div>
@@ -320,17 +324,16 @@ tr:hover { background: #e8f4fd; }
   <h2>📰 本周供应链与产业生态要闻</h2>
   <table class="news-table">
     <tr><th style="width:60px;">日期</th><th style="width:180px;">事件</th><th>涉及主体</th><th style="width:80px;">重要性</th></tr>
-<tr><td>11-02</td><td>中国电信四大全国产液冷万卡集群上线，智算规模超119EFLOPS</td><td>中国电信</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>11-02</td><td>庆阳30.6万P智算集群持续建设，约200亩内蒙古智算中心进入交付</td><td>新闻联播</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>11-02</td><td>上海展示144卡国产超节点方案</td><td>天数智芯</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>11-01</td><td>廊坊智算规模突破21万P，单体200兆瓦中心完成交付</td><td>润泽科技</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>11-01</td><td>庆阳超1.2万架标准机柜即将全面投运</td><td>东数西算产业园</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>11-01</td><td>中卫西部云基地启动冬季施工以应对订单增长</td><td>西部云基地</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-29</td><td>和林格尔绿电占比超过85%</td><td>和林格尔集群</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>10-29</td><td>3个月密集成立12家Token运营中心</td><td>长三角</td><td style="color:#f59e0b">★★★★</td></tr>
-<tr><td>10-28</td><td>中国移动韶关数据中心二期启动，规划新增3.2万架和3万P</td><td>中国移动广东公司</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>10-28</td><td>和林格尔26座算力中心进入大规模建设阶段</td><td>和林格尔新区</td><td style="color:#f59e0b">★★★★★</td></tr>
-<tr><td>10-28</td><td>贵安新增数据中心加紧建设</td><td>贵安新区</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>11-04</td><td>如东600亩绿色智算集聚区待引入超350亿元项目</td><td>江苏如东</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>11-04</td><td>内江东兴区投放总额100万元词元券</td><td>内江东兴区</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>11-04</td><td>披露庆阳、和林格尔、贵安等枢纽建设进展</td><td>全国一体化算力网</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>11-03</td><td>韶关已建6个万卡集群并签约24个项目</td><td>韶关数据中心集群</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>11-03</td><td>国家能源局预测算力用电量2030年达8000亿千瓦时</td><td>国家能源局</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>11-03</td><td>京蒙落地绿算合作项目价值超200亿元</td><td>内蒙古与北京</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>11-02</td><td>京津冀经开区数据产业联盟吸收31家成员单位</td><td>京津冀国家级经开区</td><td style="color:#f59e0b">★★★</td></tr>
+<tr><td>11-02</td><td>廊坊智算突破21万P并投运55.13万架标准机柜</td><td>廊坊开发区</td><td style="color:#f59e0b">★★★★★</td></tr>
+<tr><td>11-01</td><td>上海临港风电直连海底数据中心实现商业运行</td><td>上海临港</td><td style="color:#f59e0b">★★★★</td></tr>
+<tr><td>11-02</td><td>三大运营商2026年前三季度营业收入合计14550.42亿元</td><td>中国移动、中国电信、中国联通</td><td style="color:#f59e0b">★★★</td></tr>
 
   </table>
 </div>
@@ -338,19 +341,20 @@ tr:hover { background: #e8f4fd; }
 <div id="sources" class="section refs-section">
   <h2>数据来源与参考</h2>
   <div class="refs-body">
-<div class="refs-note">按正文引用顺序编号，共 11 条，其中 11 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
+<div class="refs-note">按正文引用顺序编号，共 12 条，其中 12 条可直接跳转原文；标注为纯文本的条目，原文未公开或仅提供机构官网口径。本模块数据仅用于本报告分析，引用口径与时间以条目说明为准。</div>
 <ol class="refs-list">
-<li class="ref-item"><span class="ref-org">新闻联播</span><a class="ref-title" href="https://www.cpem.org.cn/list5/120196.html" target="_blank" rel="noopener">算力网加速织就，我国一批算力项目建设迎来新进展</a><span class="ref-date">2026-11-02</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">庆阳已有超11万标准机架、算力规模30.6万P，内蒙古约200亩智算中心进入交付阶段。</p></li>
-<li class="ref-item"><span class="ref-org">浙江在线</span><a class="ref-title" href="https://cs.zjol.com.cn/kzl/202611/t20261102_32003693.shtml" target="_blank" rel="noopener">中国电信硬核智能成果绽放2026世界互联网大会</a><span class="ref-date">2026-11-02</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">中国电信部署四大全国产液冷万卡集群，智算总规模超过119EFLOPS。</p></li>
-<li class="ref-item"><span class="ref-org">北京日报</span><a class="ref-title" href="https://xinwen.bjd.com.cn/content/s6ae6bdd9e4b0e42f8f02519f.html" target="_blank" rel="noopener">身在河北，服务北京！环京算力供给走廊加快构建</a><span class="ref-date">2026-11-01</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">廊坊智算规模突破21万P，B1智算中心已交付并可支撑13万卡集群。</p></li>
-<li class="ref-item"><span class="ref-org">央视网</span><a class="ref-title" href="https://finance.sina.com.cn/roll/2026-11-01/doc-inixferx3086604.shtml" target="_blank" rel="noopener">算力网加速织就 助力数字中国建设</a><span class="ref-date">2026-11-01</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">庆阳超1.2万架机柜待投运，中卫西部云基地转入冬季施工，内蒙古26座中心继续建设。</p></li>
-<li class="ref-item"><span class="ref-org">解放日报</span><a class="ref-title" href="https://timeline.sohu.com/news/GCBDAT34GS" target="_blank" rel="noopener">长三角3个月密集成立12家Token运营中心</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">2026年7月以来长三角密集成立12家Token运营中心，需求与平台建设同步加快。</p></li>
-<li class="ref-item"><span class="ref-org">搜狐</span><a class="ref-title" href="https://timeline.sohu.com/news/C09rVAX5Qa" target="_blank" rel="noopener">国家算力枢纽，为什么是这八个地方？</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">和林格尔绿电占比超过85%，张家口至北京单向网络时延稳定控制在2毫秒以内。</p></li>
-<li class="ref-item"><span class="ref-org">数字中国建设峰会</span><a class="ref-title" href="https://www.szzg.gov.cn/2026/szzg/xyzx/202610/t20261028_5386707.htm" target="_blank" rel="noopener">1556万架标准机架、智能算力规模全球第二</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">截至2026年6月全国在用标准机架1556万架，庆阳算力规模达到30.6万P。</p></li>
-<li class="ref-item"><span class="ref-org">韶关发布</span><a class="ref-title" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwuvct9388221.shtml" target="_blank" rel="noopener">中国移动粤港澳（韶关）数据中心二期项目启动建设</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-inst">机构数据</span><p class="ref-desc">韶关二期规划新增3.2万标准机架和3万P，计划2027年6月建成交付。</p></li>
-<li class="ref-item"><span class="ref-org">上观新闻</span><a class="ref-title" href="https://finance.sina.com.cn/jjxw/2026-10-28/doc-iniwttsa6646777.shtml" target="_blank" rel="noopener">3个月12家Token中心扎堆长三角</a><span class="ref-date">2026-10-28</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">长三角3个月成立12家Token运营中心，扬州相关液冷设备订单已排满。</p></li>
-<li class="ref-item"><span class="ref-org">环球老虎财经</span><a class="ref-title" href="https://m.sohu.com/a/1093493419_115708?scm=10001.325_13-325_13.0.0-0-0-0-0.5_1334" target="_blank" rel="noopener">算力账单上的和林格尔</a><span class="ref-date">2026-10-27</span><span class="ref-badge b-report">研究报告</span><p class="ref-desc">和林格尔平均到户电价0.35元/千瓦时、集群上架率75.8%，每年绿色算力资金不低于1.28亿元。</p></li>
-<li class="ref-item"><span class="ref-org">36氪</span><a class="ref-title" href="https://m.36kr.com/p/4027768097592961" target="_blank" rel="noopener">算力网4万亿之后，谁能把算力用起来</a><span class="ref-date">2026-10-29</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">2025年全国智能算力使用率36.8%，部分西部园区利用率不足50%，预留机架上架率不足20%。</p></li>
+<li class="ref-item"><span class="ref-org">新华网江苏频道</span><a class="ref-title" href="http://js.news.cn/20261104/5faea2b6afd24f949cb96ab452cc3b47/c.html" target="_blank" rel="noopener">如东：向海突围 谋胜未来</a><span class="ref-date">2026-11-04</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">如东600亩绿色智算集聚区土地平整、路网贯通，拟引入总投资超350亿元的绿色智算项目。</p></li>
+<li class="ref-item"><span class="ref-org">四川在线</span><a class="ref-title" href="https://sichuan.scol.com.cn/ggxw/202611/83351335.html" target="_blank" rel="noopener">最高5万元！内江市东兴区给企业发放词元券</a><span class="ref-date">2026-11-04</span><span class="ref-badge b-policy">政策文件</span><p class="ref-desc">东兴区发放总额100万元词元券，单个主体最高5万元；并济科技稳定运营算力7300P。</p></li>
+<li class="ref-item"><span class="ref-org">见道网</span><a class="ref-title" href="https://www.seetao.com/details/282719.html" target="_blank" rel="noopener">算力网加速织就，助力数字中国建设</a><span class="ref-date">2026-11-04</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">庆阳超1.2万架机柜待投运、和林格尔26座中心建设及贵安新增数据中心进展集中披露。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://www.21jingji.com/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">21世纪经济报道</a></span><a class="ref-title" href="https://www.21jingji.com/article/20261103/herald/a350831f2a70204213deb8c2b1b2946c.html" target="_blank" rel="noopener">智算之城进化：左手布产业，右手卖算力</a><span class="ref-date">2026-11-03</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">韶关已建6个万卡集群、签约24个项目、总投资超1000亿元，工业电价低至0.55元/度。</p></li>
+<li class="ref-item"><span class="ref-org">中国青年报</span><a class="ref-title" href="http://m.cyol.com/gb/news/articles/2026-11/03/content_mO4eVVhVLZ.html" target="_blank" rel="noopener">算力用电年均新增一千亿度以上，怎么接住？</a><span class="ref-date">2026-11-03</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">国家能源局10月30日预测2030年算力用电量达8000亿千瓦时，截至9月底智能算力达2592EFLOPS。</p></li>
+<li class="ref-item"><span class="ref-org">内蒙古新闻网</span><a class="ref-title" href="https://inews.nmgnews.com.cn/system/2026/11/02/030419441.shtml" target="_blank" rel="noopener">绿色协同开辟产业转型新赛道</a><span class="ref-date">2026-11-03</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">内蒙古每年绿电进京超150亿千瓦时，落地绿算合作项目总价值超200亿元。</p></li>
+<li class="ref-item"><span class="ref-org">北京市人民政府门户网站</span><a class="ref-title" href="https://www.beijing.gov.cn/ywdt/gzdt/202611/t20261103_4929616.html" target="_blank" rel="noopener">京津冀经开区沙盒审批互认机制落地</a><span class="ref-date">2026-11-03</span><span class="ref-badge b-policy">政策文件</span><p class="ref-desc">京津冀数据产业联盟吸纳7个经开区31家成员单位，并建立沙盒审批互认机制。</p></li>
+<li class="ref-item"><span class="ref-org">北京日报客户端</span><a class="ref-title" href="https://xinwen.bjd.com.cn/content/s6ae6bdd9e4b0e42f8f02519f.html" target="_blank" rel="noopener">身在河北，服务北京！环京算力供给走廊加快构建</a><span class="ref-date">2026-11-02</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">廊坊智算规模突破21万P，已建36个数据中心、投运55.13万架标准机柜。</p></li>
+<li class="ref-item"><span class="ref-org">中国日报网</span><a class="ref-title" href="https://qiye.chinadaily.com.cn/a/202611/02/WS6ae7fe87e4b09a165c792dad.html" target="_blank" rel="noopener">连续两年全国第一，读懂上海科创领跑的三重密码</a><span class="ref-date">2026-11-02</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">上海形成144卡超节点方案和百卡级国产算力训练集群部署能力。</p></li>
+<li class="ref-item"><span class="ref-org"><a data-portal="1" href="https://finance.sina.com.cn/" target="_blank" rel="noopener" style="color:#4A6E9C;text-decoration:none;border-bottom:1px dotted #9FB6CE;">新浪财经</a></span><a class="ref-title" href="http://finance.sina.com.cn/roll/2026-11-01/doc-inixfers4095532.shtml" target="_blank" rel="noopener">算力网加速织就 助力数字中国建设</a><span class="ref-date">2026-11-01</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">上海临港海底数据中心商业运行，庆阳超1.2万架机柜待投运，中卫西部云基地启动冬施。</p></li>
+<li class="ref-item"><span class="ref-org">今日广东侨刊乡讯国际供稿中心</span><a class="ref-title" href="http://www.mmgpmedia.com/static/content/HQ/2026-11-03/1567224339182690304.html" target="_blank" rel="noopener">从东数西算到港数韶算</a><span class="ref-date">2026-11-03</span><span class="ref-badge b-media">媒体报道</span><p class="ref-desc">韶关跨境算力专区日均处理约1.5亿至2亿词元，港澳本地采购成本最高可降低20%。</p></li>
+<li class="ref-item"><span class="ref-org">通信世界</span><a class="ref-title" href="https://news.qq.com/rain/a/20261102A09J6X00" target="_blank" rel="noopener">流量红利退潮，算力收入起势</a><span class="ref-date">2026-11-02</span><span class="ref-badge b-finance">财报</span><p class="ref-desc">三大运营商2026年前三季度营业收入分别为7802.95亿元、3801.00亿元和2946.47亿元。</p></li>
 </ol>
   </div>
 </div>
